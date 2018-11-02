@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Boar_Front_Leg.Boar_Front_Leg_C
-// 0x0000 (0x06F0 - 0x06F0)
+// 0x0000 (0x06F8 - 0x06F8)
 class ABoar_Front_Leg_C : public AEquipmentItem
 {
 public:

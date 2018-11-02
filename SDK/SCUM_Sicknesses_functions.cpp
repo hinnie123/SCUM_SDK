@@ -81,11 +81,11 @@ void USicknesses_C::UpdateSicknessCount()
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class USickness*               sicknessRef                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   sicknessName                   (Parm, OutParm)
+// struct FText                   SicknessName                   (Parm, OutParm)
 // struct FText                   sicknessState                  (Parm, OutParm)
 // struct FText                   sicknessPhase                  (Parm, OutParm)
 
-void USicknesses_C::SicknessToText(class USickness* sicknessRef, struct FText* sicknessName, struct FText* sicknessState, struct FText* sicknessPhase)
+void USicknesses_C::SicknessToText(class USickness* sicknessRef, struct FText* SicknessName, struct FText* sicknessState, struct FText* sicknessPhase)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.SicknessToText");
 
@@ -98,8 +98,8 @@ void USicknesses_C::SicknessToText(class USickness* sicknessRef, struct FText* s
 
 	fn->FunctionFlags = flags;
 
-	if (sicknessName != nullptr)
-		*sicknessName = params.sicknessName;
+	if (SicknessName != nullptr)
+		*SicknessName = params.SicknessName;
 	if (sicknessState != nullptr)
 		*sicknessState = params.sicknessState;
 	if (sicknessPhase != nullptr)
@@ -230,17 +230,17 @@ void USicknesses_C::AddSicknessLine(class UParameterLine_C* sicknessLineRef)
 // Function Sicknesses.Sicknesses_C.CreateSicknessLineFromText
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   sicknessName                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText                   SicknessName                   (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   SicknessTextValue              (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   SicknessMaxValue               (BlueprintVisible, BlueprintReadOnly, Parm)
-// class UParameterLine_C*        SicknessLine                   (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UParameterLine_C*        sicknessLine                   (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void USicknesses_C::CreateSicknessLineFromText(const struct FText& sicknessName, const struct FText& SicknessTextValue, const struct FText& SicknessMaxValue, class UParameterLine_C** SicknessLine)
+void USicknesses_C::CreateSicknessLineFromText(const struct FText& SicknessName, const struct FText& SicknessTextValue, const struct FText& SicknessMaxValue, class UParameterLine_C** sicknessLine)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.CreateSicknessLineFromText");
 
 	USicknesses_C_CreateSicknessLineFromText_Params params;
-	params.sicknessName = sicknessName;
+	params.SicknessName = SicknessName;
 	params.SicknessTextValue = SicknessTextValue;
 	params.SicknessMaxValue = SicknessMaxValue;
 
@@ -250,8 +250,8 @@ void USicknesses_C::CreateSicknessLineFromText(const struct FText& sicknessName,
 
 	fn->FunctionFlags = flags;
 
-	if (SicknessLine != nullptr)
-		*SicknessLine = params.SicknessLine;
+	if (sicknessLine != nullptr)
+		*sicknessLine = params.sicknessLine;
 }
 
 

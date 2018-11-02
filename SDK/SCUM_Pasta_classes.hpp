@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Pasta.Pasta_C
-// 0x0000 (0x07B8 - 0x07B8)
+// 0x0000 (0x07C0 - 0x07C0)
 class APasta_C : public AFoodItem
 {
 public:

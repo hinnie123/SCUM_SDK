@@ -13,13 +13,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Weapon_98k_Karabiner.BP_Weapon_98k_Karabiner_C
-// 0x0048 (0x1068 - 0x1020)
+// 0x0048 (0x1078 - 0x1030)
 class ABP_Weapon_98k_Karabiner_C : public AWeapon
 {
 public:
-	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule;                              // 0x1020(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FWeaponReloadData                           FinalReloadData;                                          // 0x1028(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FWeaponReloadData                           NewVar_1;                                                 // 0x1048(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
+	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule;                              // 0x1030(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FWeaponReloadData                           FinalReloadData;                                          // 0x1038(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FWeaponReloadData                           NewVar_1;                                                 // 0x1058(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Beenie_3_hole_01.Beenie_3_hole_01_C
-// 0x0000 (0x0750 - 0x0750)
+// 0x0000 (0x0758 - 0x0758)
 class ABeenie_3_hole_01_C : public AClothesItem
 {
 public:

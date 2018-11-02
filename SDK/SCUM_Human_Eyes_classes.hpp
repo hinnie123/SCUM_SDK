@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Human_Eyes.Human_Eyes_C
-// 0x0000 (0x06D8 - 0x06D8)
+// 0x0000 (0x06E0 - 0x06E0)
 class AHuman_Eyes_C : public AItem
 {
 public:

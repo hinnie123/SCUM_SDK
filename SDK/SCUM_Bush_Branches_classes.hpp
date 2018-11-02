@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bush_Branches.Bush_Branches_C
-// 0x0000 (0x06F0 - 0x06F0)
+// 0x0000 (0x06F8 - 0x06F8)
 class ABush_Branches_C : public AEquipmentItem
 {
 public:

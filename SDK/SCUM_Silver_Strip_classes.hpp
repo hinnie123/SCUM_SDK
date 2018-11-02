@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Silver_Strip.Silver_Strip_C
-// 0x0000 (0x06F0 - 0x06F0)
+// 0x0000 (0x06F8 - 0x06F8)
 class ASilver_Strip_C : public AEquipmentItem
 {
 public:

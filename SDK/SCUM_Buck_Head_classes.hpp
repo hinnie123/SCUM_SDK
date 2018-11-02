@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buck_Head.Buck_Head_C
-// 0x0000 (0x06F0 - 0x06F0)
+// 0x0000 (0x06F8 - 0x06F8)
 class ABuck_Head_C : public AEquipmentItem
 {
 public:

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Puffer_Jacket.Puffer_Jacket_C
-// 0x0000 (0x0750 - 0x0750)
+// 0x0000 (0x0758 - 0x0758)
 class APuffer_Jacket_C : public AClothesItem
 {
 public:

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Stew2.Stew2_C
-// 0x0000 (0x07C8 - 0x07C8)
+// 0x0000 (0x07D0 - 0x07D0)
 class AStew2_C : public ACookedFoodItem
 {
 public:

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Fire_Hand_Drill_new.Fire_Hand_Drill_new_C
-// 0x0000 (0x06F0 - 0x06F0)
+// 0x0000 (0x06F8 - 0x06F8)
 class AFire_Hand_Drill_new_C : public AEquipmentItem
 {
 public:

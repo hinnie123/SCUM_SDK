@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PrisonerPlayerController.BP_PrisonerPlayerController_C
-// 0x0010 (0x07A8 - 0x0798)
+// 0x0010 (0x07B0 - 0x07A0)
 class ABP_PrisonerPlayerController_C : public APrisonerPlayerController
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0798(0x0008) (Transient, DuplicateTransient)
-	class UUI_GameMenu_C*                              GameMenu;                                                 // 0x07A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x07A0(0x0008) (Transient, DuplicateTransient)
+	class UUI_GameMenu_C*                              GameMenu;                                                 // 0x07A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -4,10 +4,10 @@ SDK for the game SCUM
 Useful game info:
 ```
 Objects:
-0x33EF0A0 (already in sdk)
+0x343AA30 (already in sdk)
 
 TotalObjects: 
-0x33EF0B4 (already in sdk)
+0x343AA44 (already in sdk)
 
 GNames:
 48 89 05 ? ? ? ? 48 83 C4 28 C3

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Pate_01.Pate_01_C
-// 0x0000 (0x07B8 - 0x07B8)
+// 0x0000 (0x07C0 - 0x07C0)
 class APate_01_C : public AFoodItem
 {
 public:

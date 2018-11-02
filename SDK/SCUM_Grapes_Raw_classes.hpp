@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Grapes_Raw.Grapes_Raw_C
-// 0x0000 (0x07B8 - 0x07B8)
+// 0x0000 (0x07C0 - 0x07C0)
 class AGrapes_Raw_C : public AFoodItem
 {
 public:

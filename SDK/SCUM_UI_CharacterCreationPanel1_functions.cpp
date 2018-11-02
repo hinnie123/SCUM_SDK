@@ -12,6 +12,45 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.ApplyPenisAttributeModifiers
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UUI_CharacterCreationPanel1_C::ApplyPenisAttributeModifiers()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.ApplyPenisAttributeModifiers");
+
+	UUI_CharacterCreationPanel1_C_ApplyPenisAttributeModifiers_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.GetPenisSize
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float                          Size                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UUI_CharacterCreationPanel1_C::GetPenisSize(float* Size)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.GetPenisSize");
+
+	UUI_CharacterCreationPanel1_C_GetPenisSize_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Size != nullptr)
+		*Size = params.Size;
+}
+
+
 // Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.IsProfileNameInUse
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
@@ -1178,6 +1217,50 @@ void UUI_CharacterCreationPanel1_C::Keep_Server_Connection_Alive()
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.Keep Server Connection Alive");
 
 	UUI_CharacterCreationPanel1_C_Keep_Server_Connection_Alive_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__PenisSizeSlider_K2Node_ComponentBoundEvent_0_OnIndexChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          LeftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UUI_CharacterCreationPanel1_C::BndEvt__PenisSizeSlider_K2Node_ComponentBoundEvent_0_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__PenisSizeSlider_K2Node_ComponentBoundEvent_0_OnIndexChanged__DelegateSignature");
+
+	UUI_CharacterCreationPanel1_C_BndEvt__PenisSizeSlider_K2Node_ComponentBoundEvent_0_OnIndexChanged__DelegateSignature_Params params;
+	params.Index = Index;
+	params.LeftoverPercentage = LeftoverPercentage;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__ConcealedModeSlider_K2Node_ComponentBoundEvent_1_OnIndexChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          LeftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UUI_CharacterCreationPanel1_C::BndEvt__ConcealedModeSlider_K2Node_ComponentBoundEvent_1_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__ConcealedModeSlider_K2Node_ComponentBoundEvent_1_OnIndexChanged__DelegateSignature");
+
+	UUI_CharacterCreationPanel1_C_BndEvt__ConcealedModeSlider_K2Node_ComponentBoundEvent_1_OnIndexChanged__DelegateSignature_Params params;
+	params.Index = Index;
+	params.LeftoverPercentage = LeftoverPercentage;
 
 	auto flags = fn->FunctionFlags;
 

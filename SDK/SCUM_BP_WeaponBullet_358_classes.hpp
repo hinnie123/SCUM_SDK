@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WeaponBullet_358.BP_WeaponBullet_357_C
-// 0x0000 (0x04D8 - 0x04D8)
+// 0x0000 (0x04E0 - 0x04E0)
 class ABP_WeaponBullet_357_C : public AProjectile
 {
 public:

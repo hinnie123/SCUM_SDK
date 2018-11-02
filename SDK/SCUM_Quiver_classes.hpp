@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Quiver.Quiver_C
-// 0x0000 (0x06D8 - 0x06D8)
+// 0x0000 (0x06E0 - 0x06E0)
 class AQuiver_C : public AItem
 {
 public:

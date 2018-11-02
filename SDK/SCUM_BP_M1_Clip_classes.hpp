@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_M1_Clip.BP_M1_Clip_C
-// 0x0000 (0x06F8 - 0x06F8)
+// 0x0000 (0x0700 - 0x0700)
 class ABP_M1_Clip_C : public AWeaponAttachmentMagazine
 {
 public:

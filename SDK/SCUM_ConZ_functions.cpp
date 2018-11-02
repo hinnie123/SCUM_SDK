@@ -1502,24 +1502,6 @@ void AItem::Blink(float Duration)
 }
 
 
-// Function ConZ.AmmunitionBoxItem.OnRep_AmmoCount
-// (Final, Native, Private)
-
-void AAmmunitionBoxItem::OnRep_AmmoCount()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function ConZ.AmmunitionBoxItem.OnRep_AmmoCount");
-
-	AAmmunitionBoxItem_OnRep_AmmoCount_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function ConZ.AmmunitionItem.SetAmmoCount
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -1578,6 +1560,24 @@ int AAmmunitionItem::GetAmmoCount()
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function ConZ.AmmunitionBoxItem.OnRep_AmmoCount
+// (Final, Native, Private)
+
+void AAmmunitionBoxItem::OnRep_AmmoCount()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.AmmunitionBoxItem.OnRep_AmmoCount");
+
+	AAmmunitionBoxItem_OnRep_AmmoCount_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -6053,7 +6053,7 @@ int AWeapon::GetUsedAmmoCount()
 
 
 // Function ConZ.Weapon.GetSpread
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -6299,7 +6299,7 @@ int AWeapon::GetAmmoReloadCapacity(class AAmmunitionItem* ammo)
 
 
 // Function ConZ.Weapon.GetAmmoCount
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -7211,6 +7211,34 @@ void UCharacterCreationWidget::OnUserProfileCreated()
 }
 
 
+// Function ConZ.CharacterCreationWidget.ModifyAttributesByPenisSize
+// (Final, Native, Protected, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector4                Attributes                     (Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float                          PenisSize                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UCharacterCreationWidget::ModifyAttributesByPenisSize(float PenisSize, struct FVector4* Attributes)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.CharacterCreationWidget.ModifyAttributesByPenisSize");
+
+	UCharacterCreationWidget_ModifyAttributesByPenisSize_Params params;
+	params.PenisSize = PenisSize;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Attributes != nullptr)
+		*Attributes = params.Attributes;
+
+	return params.ReturnValue;
+}
+
+
 // Function ConZ.CharacterCreationWidget.GetRandomValuesInRangeAddingUpTo
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
@@ -7514,14 +7542,16 @@ void UCharacterStatsManager::RecalculateFameLevel(const struct FString& steamId)
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FString                 steamId                        (Parm, ZeroConstructor)
+// bool                           ignoreBannedPlayers            (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UCharacterStatsManager::HasStats(const struct FString& steamId)
+bool UCharacterStatsManager::HasStats(const struct FString& steamId, bool ignoreBannedPlayers)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.CharacterStatsManager.HasStats");
 
 	UCharacterStatsManager_HasStats_Params params;
 	params.steamId = steamId;
+	params.ignoreBannedPlayers = ignoreBannedPlayers;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -9042,14 +9072,14 @@ void UConsoleHelpers::STATIC_SetHasPendingChanges(bool Value)
 // Function ConZ.ConsoleHelpers.SetGraphicsPreset
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            Preset                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            preset                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void UConsoleHelpers::STATIC_SetGraphicsPreset(int Preset)
+void UConsoleHelpers::STATIC_SetGraphicsPreset(int preset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConsoleHelpers.SetGraphicsPreset");
 
 	UConsoleHelpers_SetGraphicsPreset_Params params;
-	params.Preset = Preset;
+	params.preset = preset;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -9290,6 +9320,26 @@ bool UConsoleHelpers::STATIC_GetConfigBool(const struct FString& Key)
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// DelegateFunction ConZ.ConsoleHelpers.ConsoleBoolChanged__DelegateSignature
+// (MulticastDelegate, Public, Delegate)
+// Parameters:
+// bool                           Value                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UConsoleHelpers::ConsoleBoolChanged__DelegateSignature(bool Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("DelegateFunction ConZ.ConsoleHelpers.ConsoleBoolChanged__DelegateSignature");
+
+	UConsoleHelpers_ConsoleBoolChanged__DelegateSignature_Params params;
+	params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -10257,6 +10307,108 @@ void AConZTeam::AddMember(class APrisoner* Prisoner)
 
 	AConZTeam_AddMember_Params params;
 	params.Prisoner = Prisoner;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.ConZVehicle4W.Server_SetHornActive
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+// Parameters:
+// bool                           Value                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void AConZVehicle4W::Server_SetHornActive(bool Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZVehicle4W.Server_SetHornActive");
+
+	AConZVehicle4W_Server_SetHornActive_Params params;
+	params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.ConZVehicle4W.Server_SetEngineTurnedOn
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+// Parameters:
+// bool                           Value                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void AConZVehicle4W::Server_SetEngineTurnedOn(bool Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZVehicle4W.Server_SetEngineTurnedOn");
+
+	AConZVehicle4W_Server_SetEngineTurnedOn_Params params;
+	params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.ConZVehicle4W.Server_Destroy
+// (Final, Net, NetReliable, Native, Event, Private, NetServer, NetValidate)
+
+void AConZVehicle4W::Server_Destroy()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZVehicle4W.Server_Destroy");
+
+	AConZVehicle4W_Server_Destroy_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.ConZVehicle4W.OnRep_HornActive
+// (Native, Protected)
+// Parameters:
+// bool                           OldValue                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void AConZVehicle4W::OnRep_HornActive(bool OldValue)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZVehicle4W.OnRep_HornActive");
+
+	AConZVehicle4W_OnRep_HornActive_Params params;
+	params.OldValue = OldValue;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.ConZVehicle4W.OnRep_EngineTurnedOn
+// (Native, Protected)
+// Parameters:
+// bool                           OldValue                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void AConZVehicle4W::OnRep_EngineTurnedOn(bool OldValue)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZVehicle4W.OnRep_EngineTurnedOn");
+
+	AConZVehicle4W_OnRep_EngineTurnedOn_Params params;
+	params.OldValue = OldValue;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -18996,6 +19148,27 @@ void UHelpers::STATIC_SortSkillsByLevelAndExperience(TArray<class USkill*>* Skil
 }
 
 
+// Function ConZ.Helpers.SetComponentNetAddressable
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UActorComponent*         Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UHelpers::STATIC_SetComponentNetAddressable(class UActorComponent* Component)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Helpers.SetComponentNetAddressable");
+
+	UHelpers_SetComponentNetAddressable_Params params;
+	params.Component = Component;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ConZ.Helpers.SendChatLineToAll
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -19401,6 +19574,30 @@ class UDataSingleton* UHelpers::STATIC_GetDataSingleton()
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Helpers.GetDataSingleton");
 
 	UHelpers_GetDataSingleton_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Helpers.GetClassDefaultObject
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UClass*                  ObjectClass                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UObject* UHelpers::STATIC_GetClassDefaultObject(class UClass* ObjectClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Helpers.GetClassDefaultObject");
+
+	UHelpers_GetClassDefaultObject_Params params;
+	params.ObjectClass = ObjectClass;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -23150,6 +23347,24 @@ void APrisoner::UpdateWristwatchVisibility()
 }
 
 
+// Function ConZ.Prisoner.UpdatePenisVisibility
+// (Final, Native, Public)
+
+void APrisoner::UpdatePenisVisibility()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.UpdatePenisVisibility");
+
+	APrisoner_UpdatePenisVisibility_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ConZ.Prisoner.UpdateMaterialsFadeAmount
 // (Final, Native, Private)
 // Parameters:
@@ -23161,6 +23376,24 @@ void APrisoner::UpdateMaterialsFadeAmount(float fadeAmount)
 
 	APrisoner_UpdateMaterialsFadeAmount_Params params;
 	params.fadeAmount = fadeAmount;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.Prisoner.UpdateDeluxePlayerStatus
+// (Final, Native, Private)
+
+void APrisoner::UpdateDeluxePlayerStatus()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.UpdateDeluxePlayerStatus");
+
+	APrisoner_UpdateDeluxePlayerStatus_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -23489,6 +23722,28 @@ void APrisoner::ShowSpawnScreen()
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.Prisoner.ShouldShowPenis
+// (Final, Native, Public, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APrisoner::ShouldShowPenis()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.ShouldShowPenis");
+
+	APrisoner_ShouldShowPenis_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 
@@ -24577,16 +24832,16 @@ void APrisoner::Server_SetScopingWithItemInHandsState(EScopingWithItemInHandsSta
 }
 
 
-// Function ConZ.Prisoner.Server_SetPlayingInstrumentInHandsState
+// Function ConZ.Prisoner.Server_SetPlayingInstrumentState
 // (Final, Net, NetReliable, Native, Event, Private, NetServer, NetValidate)
 // Parameters:
-// EPlayingInstrumentInHandsState Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// EPlayingInstrumentState        Value                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void APrisoner::Server_SetPlayingInstrumentInHandsState(EPlayingInstrumentInHandsState Value)
+void APrisoner::Server_SetPlayingInstrumentState(EPlayingInstrumentState Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.Server_SetPlayingInstrumentInHandsState");
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.Server_SetPlayingInstrumentState");
 
-	APrisoner_Server_SetPlayingInstrumentInHandsState_Params params;
+	APrisoner_Server_SetPlayingInstrumentState_Params params;
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
@@ -24741,6 +24996,33 @@ void APrisoner::Server_ReportClientReady()
 }
 
 
+// Function ConZ.Prisoner.Server_OnProjectileArrowStop
+// (Net, NetReliable, Native, Event, Public, NetServer, HasDefaults, NetValidate)
+// Parameters:
+// struct FHitResult              HitResult                      (ConstParm, Parm, ReferenceParm, IsPlainOldData)
+// struct FProjectileArrowData    ProjectileData                 (ConstParm, Parm, ReferenceParm)
+// struct FVector                 Location                       (ConstParm, Parm, ReferenceParm, IsPlainOldData)
+// struct FRotator                Rotation                       (ConstParm, Parm, ReferenceParm, IsPlainOldData)
+
+void APrisoner::Server_OnProjectileArrowStop(const struct FHitResult& HitResult, const struct FProjectileArrowData& ProjectileData, const struct FVector& Location, const struct FRotator& Rotation)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.Server_OnProjectileArrowStop");
+
+	APrisoner_Server_OnProjectileArrowStop_Params params;
+	params.HitResult = HitResult;
+	params.ProjectileData = ProjectileData;
+	params.Location = Location;
+	params.Rotation = Rotation;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ConZ.Prisoner.Server_LoadAmmoIntoMagazine
 // (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
 // Parameters:
@@ -24820,6 +25102,52 @@ void APrisoner::Server_InteractWithLadder(const struct FVector& traceOrigin, con
 	APrisoner_Server_InteractWithLadder_Params params;
 	params.traceOrigin = traceOrigin;
 	params.traceDirection = traceDirection;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.Prisoner.Server_InstrumentStopTone
+// (Final, Net, NetReliable, Native, Event, Private, NetServer, NetValidate)
+// Parameters:
+// EPlayableInstrumentTone        tone                           (Parm, ZeroConstructor, IsPlainOldData)
+// float                          timeOffset                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void APrisoner::Server_InstrumentStopTone(EPlayableInstrumentTone tone, float timeOffset)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.Server_InstrumentStopTone");
+
+	APrisoner_Server_InstrumentStopTone_Params params;
+	params.tone = tone;
+	params.timeOffset = timeOffset;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.Prisoner.Server_InstrumentPlayTone
+// (Final, Net, NetReliable, Native, Event, Private, NetServer, NetValidate)
+// Parameters:
+// EPlayableInstrumentTone        tone                           (Parm, ZeroConstructor, IsPlainOldData)
+// float                          timeOffset                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void APrisoner::Server_InstrumentPlayTone(EPlayableInstrumentTone tone, float timeOffset)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.Server_InstrumentPlayTone");
+
+	APrisoner_Server_InstrumentPlayTone_Params params;
+	params.tone = tone;
+	params.timeOffset = timeOffset;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -25465,14 +25793,50 @@ void APrisoner::OnRep_RightShoulderHolsteredItem()
 }
 
 
-// Function ConZ.Prisoner.OnRep_PlayingInstrumentInHandsState
+// Function ConZ.Prisoner.OnRep_PlayingInstrumentState
 // (Final, Native, Private)
 
-void APrisoner::OnRep_PlayingInstrumentInHandsState()
+void APrisoner::OnRep_PlayingInstrumentState()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.OnRep_PlayingInstrumentInHandsState");
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.OnRep_PlayingInstrumentState");
 
-	APrisoner_OnRep_PlayingInstrumentInHandsState_Params params;
+	APrisoner_OnRep_PlayingInstrumentState_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.Prisoner.OnRep_PenisSize
+// (Final, Native, Private)
+
+void APrisoner::OnRep_PenisSize()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.OnRep_PenisSize");
+
+	APrisoner_OnRep_PenisSize_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.Prisoner.OnRep_PenisModifier
+// (Final, Native, Private)
+
+void APrisoner::OnRep_PenisModifier()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.OnRep_PenisModifier");
+
+	APrisoner_OnRep_PenisModifier_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -25548,42 +25912,6 @@ void APrisoner::OnRep_LeftShoulderHolsteredItem()
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.OnRep_LeftShoulderHolsteredItem");
 
 	APrisoner_OnRep_LeftShoulderHolsteredItem_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function ConZ.Prisoner.OnRep_LastSafeLocation
-// (Final, Native, Public)
-
-void APrisoner::OnRep_LastSafeLocation()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.OnRep_LastSafeLocation");
-
-	APrisoner_OnRep_LastSafeLocation_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function ConZ.Prisoner.OnRep_LastCorpse
-// (Final, Native, Public)
-
-void APrisoner::OnRep_LastCorpse()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.OnRep_LastCorpse");
-
-	APrisoner_OnRep_LastCorpse_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -25900,6 +26228,27 @@ void APrisoner::OnEndMovingThroughNearbyFoliageInstance(const struct FPrisonerNe
 }
 
 
+// Function ConZ.Prisoner.OnConcealedModeChanged
+// (Final, Native, Public)
+// Parameters:
+// bool                           Value                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void APrisoner::OnConcealedModeChanged(bool Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.OnConcealedModeChanged");
+
+	APrisoner_OnConcealedModeChanged_Params params;
+	params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ConZ.Prisoner.OnBorderCrossingPenaltyChange
 // (Final, Native, Public)
 // Parameters:
@@ -26050,6 +26399,52 @@ void APrisoner::NetMulticast_RequestCharacterAction(const struct FCharacterActio
 	APrisoner_NetMulticast_RequestCharacterAction_Params params;
 	params.Value = Value;
 	params.ignoreAutonomousProxy = ignoreAutonomousProxy;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.Prisoner.NetMulticast_InstrumentStopTone
+// (Final, Net, NetReliable, Native, Event, NetMulticast, Private)
+// Parameters:
+// EPlayableInstrumentTone        tone                           (Parm, ZeroConstructor, IsPlainOldData)
+// float                          timeOffset                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void APrisoner::NetMulticast_InstrumentStopTone(EPlayableInstrumentTone tone, float timeOffset)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.NetMulticast_InstrumentStopTone");
+
+	APrisoner_NetMulticast_InstrumentStopTone_Params params;
+	params.tone = tone;
+	params.timeOffset = timeOffset;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.Prisoner.NetMulticast_InstrumentPlayTone
+// (Final, Net, NetReliable, Native, Event, NetMulticast, Private)
+// Parameters:
+// EPlayableInstrumentTone        tone                           (Parm, ZeroConstructor, IsPlainOldData)
+// float                          timeOffset                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void APrisoner::NetMulticast_InstrumentPlayTone(EPlayableInstrumentTone tone, float timeOffset)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.NetMulticast_InstrumentPlayTone");
+
+	APrisoner_NetMulticast_InstrumentPlayTone_Params params;
+	params.tone = tone;
+	params.timeOffset = timeOffset;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -26247,12 +26642,15 @@ void APrisoner::LeaveTeamOnServer()
 
 // Function ConZ.Prisoner.LeaveCombatMode
 // (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           PlayAnimation                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void APrisoner::LeaveCombatMode()
+void APrisoner::LeaveCombatMode(bool PlayAnimation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.LeaveCombatMode");
 
 	APrisoner_LeaveCombatMode_Params params;
+	params.PlayAnimation = PlayAnimation;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -27378,6 +27776,50 @@ class UPrisonerAnimInstance* APrisoner::GetPrisonerAnimInstance()
 }
 
 
+// Function ConZ.Prisoner.GetPenisSize
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float APrisoner::GetPenisSize()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.GetPenisSize");
+
+	APrisoner_GetPenisSize_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Prisoner.GetPenisMeshComponent
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class USkeletalMeshComponent*  ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class USkeletalMeshComponent* APrisoner::GetPenisMeshComponent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.GetPenisMeshComponent");
+
+	APrisoner_GetPenisMeshComponent_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ConZ.Prisoner.GetPartWetness
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -27414,6 +27856,28 @@ float APrisoner::GetPartWaterWeight(EPrisonerWettablePart part)
 
 	APrisoner_GetPartWaterWeight_Params params;
 	params.part = part;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Prisoner.GetNeckMeshComponent
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class USkeletalMeshComponent*  ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class USkeletalMeshComponent* APrisoner::GetNeckMeshComponent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.GetNeckMeshComponent");
+
+	APrisoner_GetNeckMeshComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -28917,6 +29381,24 @@ void APrisoner::CheckForDeluxeDLC()
 }
 
 
+// Function ConZ.Prisoner.CheckForCensoring
+// (Final, Native, Public)
+
+void APrisoner::CheckForCensoring()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.CheckForCensoring");
+
+	APrisoner_CheckForCensoring_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ConZ.Prisoner.CharacterAction_End
 // (Final, Native, Private)
 // Parameters:
@@ -30082,6 +30564,24 @@ void UPrisonerAnimInstance::AnimNotify_ThrowRelease(class UAnimNotify* Notify)
 }
 
 
+// Function ConZ.PrisonerAnimInstance.AnimNotify_TakePenis
+// (Native, Event, Protected, BlueprintEvent)
+
+void UPrisonerAnimInstance::AnimNotify_TakePenis()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PrisonerAnimInstance.AnimNotify_TakePenis");
+
+	UPrisonerAnimInstance_AnimNotify_TakePenis_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ConZ.PrisonerAnimInstance.AnimNotify_TakeItemInHands
 // (Final, Native, Protected)
 // Parameters:
@@ -30132,6 +30632,24 @@ void UPrisonerAnimInstance::AnimNotify_RemoveItemFromHands(class UAnimNotify* No
 
 	UPrisonerAnimInstance_AnimNotify_RemoveItemFromHands_Params params;
 	params.Notify = Notify;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.PrisonerAnimInstance.AnimNotify_ReleasePenis
+// (Native, Event, Protected, BlueprintEvent)
+
+void UPrisonerAnimInstance::AnimNotify_ReleasePenis()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PrisonerAnimInstance.AnimNotify_ReleasePenis");
+
+	UPrisonerAnimInstance_AnimNotify_ReleasePenis_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -30221,6 +30739,45 @@ void UPrisonerAnimInstance::ActivateFacialExpressionOnGameThread(EPrisonerFacial
 	params.Duration = Duration;
 	params.blendOutDuration = blendOutDuration;
 	params.blendWeightMultiplier = blendWeightMultiplier;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.PrisonerCorpse.OnRep_PenisShowing
+// (Final, Native, Private)
+
+void APrisonerCorpse::OnRep_PenisShowing()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PrisonerCorpse.OnRep_PenisShowing");
+
+	APrisonerCorpse_OnRep_PenisShowing_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.PrisonerCorpse.OnConcealedModeChanged
+// (Final, Native, Public)
+// Parameters:
+// bool                           Value                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void APrisonerCorpse::OnConcealedModeChanged(bool Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PrisonerCorpse.OnConcealedModeChanged");
+
+	APrisonerCorpse_OnConcealedModeChanged_Params params;
+	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -37772,18 +38329,58 @@ void APrisonerPlayerController::Client_RecieveCharacterStats(uint32_t ID, TArray
 }
 
 
-// Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ListAssets
+// Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ListTransports
 // (Net, NetReliable, Native, Event, Public, NetClient)
 // Parameters:
-// struct FString                 assetType                      (Parm, ZeroConstructor)
 // struct FString                 Filter                         (Parm, ZeroConstructor)
 
-void APrisonerPlayerController::Client_ProcessAdminCommand_ListAssets(const struct FString& assetType, const struct FString& Filter)
+void APrisonerPlayerController::Client_ProcessAdminCommand_ListTransports(const struct FString& Filter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ListAssets");
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ListTransports");
 
-	APrisonerPlayerController_Client_ProcessAdminCommand_ListAssets_Params params;
-	params.assetType = assetType;
+	APrisonerPlayerController_Client_ProcessAdminCommand_ListTransports_Params params;
+	params.Filter = Filter;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ListItems
+// (Net, NetReliable, Native, Event, Public, NetClient)
+// Parameters:
+// struct FString                 Filter                         (Parm, ZeroConstructor)
+
+void APrisonerPlayerController::Client_ProcessAdminCommand_ListItems(const struct FString& Filter)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ListItems");
+
+	APrisonerPlayerController_Client_ProcessAdminCommand_ListItems_Params params;
+	params.Filter = Filter;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ListCharacters
+// (Net, NetReliable, Native, Event, Public, NetClient)
+// Parameters:
+// struct FString                 Filter                         (Parm, ZeroConstructor)
+
+void APrisonerPlayerController::Client_ProcessAdminCommand_ListCharacters(const struct FString& Filter)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ListCharacters");
+
+	APrisonerPlayerController_Client_ProcessAdminCommand_ListCharacters_Params params;
 	params.Filter = Filter;
 
 	auto flags = fn->FunctionFlags;
@@ -38859,13 +39456,34 @@ void UPrisonerSoundComponent::OnBorderCrossingStateChanged(class APrisoner* Pris
 
 
 // Function ConZ.Projectile.OnStop
-// (Final, Native, Private)
+// (Native, Protected, HasOutParms)
+// Parameters:
+// struct FHitResult              HitResult                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void AProjectile::OnStop()
+void AProjectile::OnStop(const struct FHitResult& HitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Projectile.OnStop");
 
 	AProjectile_OnStop_Params params;
+	params.HitResult = HitResult;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.ProjectileArrow.UpdateParameters
+// (Native, Event, Public, BlueprintEvent)
+
+void AProjectileArrow::UpdateParameters()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ProjectileArrow.UpdateParameters");
+
+	AProjectileArrow_UpdateParameters_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -41639,6 +42257,145 @@ void AWeaponAttachmentScope::SetLoadedVariablesOnClient(int zoomLevel, int winda
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.WeaponBow.Server_SetPendingArrow
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+// Parameters:
+// class AAmmunitionArrow*        arrow                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void AWeaponBow::Server_SetPendingArrow(class AAmmunitionArrow* arrow)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.WeaponBow.Server_SetPendingArrow");
+
+	AWeaponBow_Server_SetPendingArrow_Params params;
+	params.arrow = arrow;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.WeaponBow.Server_SetDrawAmount
+// (Final, Net, NetReliable, Native, Event, Private, NetServer, NetValidate)
+// Parameters:
+// float                          drawAmount                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void AWeaponBow::Server_SetDrawAmount(float drawAmount)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.WeaponBow.Server_SetDrawAmount");
+
+	AWeaponBow_Server_SetDrawAmount_Params params;
+	params.drawAmount = drawAmount;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.WeaponBow.Server_SetBowState
+// (Final, Net, NetReliable, Native, Event, Private, NetServer, NetValidate)
+// Parameters:
+// EWeaponBowState                State                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void AWeaponBow::Server_SetBowState(EWeaponBowState State)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.WeaponBow.Server_SetBowState");
+
+	AWeaponBow_Server_SetBowState_Params params;
+	params.State = State;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.WeaponBow.OnRep_BowState
+// (Final, Native, Private)
+
+void AWeaponBow::OnRep_BowState()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.WeaponBow.OnRep_BowState");
+
+	AWeaponBow_OnRep_BowState_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.WeaponBow.OnRep_Arrow
+// (Final, Native, Private)
+
+void AWeaponBow::OnRep_Arrow()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.WeaponBow.OnRep_Arrow");
+
+	AWeaponBow_OnRep_Arrow_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.WeaponBow.GotoInsertArrowState
+// (Final, Native, Public, BlueprintCallable)
+
+void AWeaponBow::GotoInsertArrowState()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.WeaponBow.GotoInsertArrowState");
+
+	AWeaponBow_GotoInsertArrowState_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.WeaponBow.CanInsertArrow
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AWeaponBow::CanInsertArrow()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.WeaponBow.CanInsertArrow");
+
+	AWeaponBow_CanInsertArrow_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 

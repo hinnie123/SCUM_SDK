@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Hiking_Boots_01.Hiking_Boots_01_C
-// 0x0000 (0x0750 - 0x0750)
+// 0x0000 (0x0758 - 0x0758)
 class AHiking_Boots_01_C : public AClothesItem
 {
 public:

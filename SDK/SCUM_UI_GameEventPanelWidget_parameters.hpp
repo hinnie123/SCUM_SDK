@@ -25,18 +25,6 @@ struct UUI_GameEventPanelWidget_C_RestoreSelected_Params
 {
 };
 
-// Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.Get_NextEventBorder_BrushColor
-struct UUI_GameEventPanelWidget_C_Get_NextEventBorder_BrushColor_Params
-{
-	struct FLinearColor                                ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
-};
-
-// Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.Get_CurrentEventBorder_BrushColor
-struct UUI_GameEventPanelWidget_C_Get_CurrentEventBorder_BrushColor_Params
-{
-	struct FLinearColor                                ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
-};
-
 // Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.UpdateSelection
 struct UUI_GameEventPanelWidget_C_UpdateSelection_Params
 {
@@ -82,33 +70,14 @@ struct UUI_GameEventPanelWidget_C_AddAnnouncedEvent_Params
 	class AGameEventBase**                             gameEvent;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnUpdate
+struct UUI_GameEventPanelWidget_C_OnUpdate_Params
+{
+};
+
 // Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.Construct
 struct UUI_GameEventPanelWidget_C_Construct_Params
 {
-};
-
-// Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnCurrentEventComboBoxOpening
-struct UUI_GameEventPanelWidget_C_OnCurrentEventComboBoxOpening_Params
-{
-};
-
-// Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnNextEventComboBoxOpening
-struct UUI_GameEventPanelWidget_C_OnNextEventComboBoxOpening_Params
-{
-};
-
-// Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnCurrentEventComboBoxSelectionChanged
-struct UUI_GameEventPanelWidget_C_OnCurrentEventComboBoxSelectionChanged_Params
-{
-	struct FString                                     SelectedItem;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-	TEnumAsByte<ESelectInfo>                           SelectionType;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnNextEventsComboBoxSelectionChanged
-struct UUI_GameEventPanelWidget_C_OnNextEventsComboBoxSelectionChanged_Params
-{
-	struct FString                                     SelectedItem;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-	TEnumAsByte<ESelectInfo>                           SelectionType;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnOpened
@@ -118,16 +87,6 @@ struct UUI_GameEventPanelWidget_C_OnOpened_Params
 
 // Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnClosed
 struct UUI_GameEventPanelWidget_C_OnClosed_Params
-{
-};
-
-// Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnUpdate
-struct UUI_GameEventPanelWidget_C_OnUpdate_Params
-{
-};
-
-// Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnEventComboBoxOpening
-struct UUI_GameEventPanelWidget_C_OnEventComboBoxOpening_Params
 {
 };
 

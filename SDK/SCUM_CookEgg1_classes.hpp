@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass CookEgg1.CookEgg1_C
-// 0x0000 (0x07C8 - 0x07C8)
+// 0x0000 (0x07D0 - 0x07D0)
 class ACookEgg1_C : public ACookedFoodItem
 {
 public:

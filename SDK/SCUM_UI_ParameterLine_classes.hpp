@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass UI_ParameterLine.UI_ParameterLine_C
-// 0x0078 (0x0298 - 0x0220)
+// 0x0098 (0x02B8 - 0x0220)
 class UUI_ParameterLine_C : public UDesignableUserWidget
 {
 public:
@@ -36,6 +36,9 @@ public:
 	bool                                               _isUnderAlarm;                                            // 0x028D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x2];                                       // 0x028E(0x0002) MISSED OFFSET
 	class UUI_ExpandableContainer_C*                   ExpandableContainer;                                      // 0x0290(0x0008) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool                                               HasToolTip;                                               // 0x0298(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x7];                                       // 0x0299(0x0007) MISSED OFFSET
+	struct FText                                       ToolTip;                                                  // 0x02A0(0x0018) (Edit, BlueprintVisible)
 
 	static UClass* StaticClass()
 	{

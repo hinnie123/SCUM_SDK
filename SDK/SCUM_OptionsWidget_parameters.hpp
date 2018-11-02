@@ -518,6 +518,14 @@ struct UOptionsWidget_C_BndEvt__EnablePushToTalkSlider_K2Node_ComponentBoundEven
 	struct FText                                       Value;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
+// Function OptionsWidget.OptionsWidget_C.BndEvt__ConcealedMode_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature
+struct UOptionsWidget_C_BndEvt__ConcealedMode_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature_Params
+{
+	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                OldIndex;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       Value;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
 // Function OptionsWidget.OptionsWidget_C.ExecuteUbergraph_OptionsWidget
 struct UOptionsWidget_C_ExecuteUbergraph_OptionsWidget_Params
 {

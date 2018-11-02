@@ -14,6 +14,17 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.ApplyPenisAttributeModifiers
+struct UUI_CharacterCreationPanel1_C_ApplyPenisAttributeModifiers_Params
+{
+};
+
+// Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.GetPenisSize
+struct UUI_CharacterCreationPanel1_C_GetPenisSize_Params
+{
+	float                                              Size;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.IsProfileNameInUse
 struct UUI_CharacterCreationPanel1_C_IsProfileNameInUse_Params
 {
@@ -364,6 +375,20 @@ struct UUI_CharacterCreationPanel1_C_EndWaitingOnServerResponse_Params
 // Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.Keep Server Connection Alive
 struct UUI_CharacterCreationPanel1_C_Keep_Server_Connection_Alive_Params
 {
+};
+
+// Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__PenisSizeSlider_K2Node_ComponentBoundEvent_0_OnIndexChanged__DelegateSignature
+struct UUI_CharacterCreationPanel1_C_BndEvt__PenisSizeSlider_K2Node_ComponentBoundEvent_0_OnIndexChanged__DelegateSignature_Params
+{
+	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              LeftoverPercentage;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__ConcealedModeSlider_K2Node_ComponentBoundEvent_1_OnIndexChanged__DelegateSignature
+struct UUI_CharacterCreationPanel1_C_BndEvt__ConcealedModeSlider_K2Node_ComponentBoundEvent_1_OnIndexChanged__DelegateSignature_Params
+{
+	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              LeftoverPercentage;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.ExecuteUbergraph_UI_CharacterCreationPanel1

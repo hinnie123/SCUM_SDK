@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Trucker_Jacket_01.Trucker_Jacket_01_C
-// 0x0000 (0x0750 - 0x0750)
+// 0x0000 (0x0758 - 0x0758)
 class ATrucker_Jacket_01_C : public AClothesItem
 {
 public:

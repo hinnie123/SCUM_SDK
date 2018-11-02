@@ -202,6 +202,23 @@ void UMonitoredWindowsContent_C::GetDefaultPrisoner(class APrisoner** Prisoner)
 }
 
 
+// Function MonitoredWindowsContent.MonitoredWindowsContent_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UMonitoredWindowsContent_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MonitoredWindowsContent.MonitoredWindowsContent_C.Construct");
+
+	UMonitoredWindowsContent_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function MonitoredWindowsContent.MonitoredWindowsContent_C.OnPrisonerSet
 // (BlueprintCallable, BlueprintEvent)
 

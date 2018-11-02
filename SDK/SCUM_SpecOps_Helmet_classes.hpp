@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SpecOps_Helmet.SpecOps_Helmet_C
-// 0x0000 (0x0750 - 0x0750)
+// 0x0000 (0x0758 - 0x0758)
 class ASpecOps_Helmet_C : public AClothesItem
 {
 public:

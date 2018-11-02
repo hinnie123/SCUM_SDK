@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Tactical_Gloves_09.Tactical_Gloves_09_C
-// 0x0000 (0x0750 - 0x0750)
+// 0x0000 (0x0758 - 0x0758)
 class ATactical_Gloves_09_C : public AClothesItem
 {
 public:

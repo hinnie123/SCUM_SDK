@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Antiparasitics_03.Antiparasitics_03_C
-// 0x0000 (0x06E0 - 0x06E0)
+// 0x0000 (0x06E8 - 0x06E8)
 class AAntiparasitics_03_C : public AMedicationItem
 {
 public:

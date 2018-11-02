@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Prisoner_Left_Foot.Prisoner_Left_Foot_C
-// 0x0000 (0x06F0 - 0x06F0)
+// 0x0000 (0x06F8 - 0x06F8)
 class APrisoner_Left_Foot_C : public AEquipmentItem
 {
 public:

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BPC_BerettaM9.BPC_BerettaM9_C
-// 0x0000 (0x1020 - 0x1020)
+// 0x0000 (0x1030 - 0x1030)
 class ABPC_BerettaM9_C : public ABP_BerettaM9_C
 {
 public:

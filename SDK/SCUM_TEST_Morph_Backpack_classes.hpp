@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass TEST_Morph_Backpack.TEST_Morph_Backpack_C
-// 0x0000 (0x0750 - 0x0750)
+// 0x0000 (0x0758 - 0x0758)
 class ATEST_Morph_Backpack_C : public AClothesItem
 {
 public:

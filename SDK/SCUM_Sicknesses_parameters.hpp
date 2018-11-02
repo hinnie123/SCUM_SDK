@@ -38,7 +38,7 @@ struct USicknesses_C_UpdateSicknessCount_Params
 struct USicknesses_C_SicknessToText_Params
 {
 	class USickness*                                   sicknessRef;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FText                                       sicknessName;                                             // (Parm, OutParm)
+	struct FText                                       SicknessName;                                             // (Parm, OutParm)
 	struct FText                                       sicknessState;                                            // (Parm, OutParm)
 	struct FText                                       sicknessPhase;                                            // (Parm, OutParm)
 };
@@ -82,10 +82,10 @@ struct USicknesses_C_AddSicknessLine_Params
 // Function Sicknesses.Sicknesses_C.CreateSicknessLineFromText
 struct USicknesses_C_CreateSicknessLineFromText_Params
 {
-	struct FText                                       sicknessName;                                             // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText                                       SicknessName;                                             // (BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FText                                       SicknessTextValue;                                        // (BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FText                                       SicknessMaxValue;                                         // (BlueprintVisible, BlueprintReadOnly, Parm)
-	class UParameterLine_C*                            SicknessLine;                                             // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UParameterLine_C*                            sicknessLine;                                             // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function Sicknesses.Sicknesses_C.GetSicknesses

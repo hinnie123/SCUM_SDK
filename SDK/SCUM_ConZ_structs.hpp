@@ -148,6 +148,17 @@ enum class EItemRarity : uint8_t
 };
 
 
+// Enum ConZ.EConfigFile
+enum class EConfigFile : uint8_t
+{
+	None                           = 0,
+	Engine                         = 1,
+	GameUserSettings               = 2,
+	ServerSettings                 = 3,
+	EConfigFile_MAX                = 4
+};
+
+
 // Enum ConZ.EDoorStateFlags
 enum class EDoorStateFlags : uint8_t
 {
@@ -481,6 +492,26 @@ enum class ECharacterActionAckType : uint8_t
 };
 
 
+// Enum ConZ.EPlayableInstrumentTone
+enum class EPlayableInstrumentTone : uint8_t
+{
+	Ab                             = 0,
+	A                              = 1,
+	B                              = 2,
+	Bb                             = 3,
+	C                              = 4,
+	Db                             = 5,
+	D                              = 6,
+	Eb                             = 7,
+	E                              = 8,
+	F                              = 9,
+	Gb                             = 10,
+	G                              = 11,
+	Count                          = 12,
+	EPlayableInstrumentTone_MAX    = 13
+};
+
+
 // Enum ConZ.ETabMode
 enum class ETabMode : uint8_t
 {
@@ -533,14 +564,14 @@ enum class EPrisonerCommonSpawnLocation : uint8_t
 };
 
 
-// Enum ConZ.EPlayingInstrumentInHandsState
-enum class EPlayingInstrumentInHandsState : uint8_t
+// Enum ConZ.EPlayingInstrumentState
+enum class EPlayingInstrumentState : uint8_t
 {
 	None                           = 0,
-	Starting                       = 1,
-	Playing                        = 2,
-	Stopping                       = 3,
-	EPlayingInstrumentInHandsState_MAX = 4
+	Exiting                        = 1,
+	Idle                           = 2,
+	Playing                        = 3,
+	EPlayingInstrumentState_MAX    = 4
 };
 
 
@@ -1202,17 +1233,6 @@ enum class EAnimalMode : uint8_t
 };
 
 
-// Enum ConZ.EConfigFile
-enum class EConfigFile : uint8_t
-{
-	None                           = 0,
-	Engine                         = 1,
-	GameUserSettings               = 2,
-	ServerSettings                 = 3,
-	EConfigFile_MAX                = 4
-};
-
-
 // Enum ConZ.ECraftingItemCategory
 enum class ECraftingItemCategory : uint8_t
 {
@@ -1593,21 +1613,29 @@ enum class EIngredientUsageRule : uint8_t
 };
 
 
-// Enum ConZ.EPlayableInstrumentChord
-enum class EPlayableInstrumentChord : uint8_t
+// Enum ConZ.EPlayableInstrumentView
+enum class EPlayableInstrumentView : uint8_t
 {
-	Chord1                         = 0,
-	Chord2                         = 1,
-	EPlayableInstrumentChord_MAX   = 2
+	FirstPerson                    = 0,
+	ThirdPerson                    = 1,
+	EPlayableInstrumentView_MAX    = 2
 };
 
 
-// Enum ConZ.EPlayableInstrumentTone
-enum class EPlayableInstrumentTone : uint8_t
+// Enum ConZ.EPlayableInstrumentChord
+enum class EPlayableInstrumentChord : uint8_t
 {
-	Tone1                          = 0,
-	Tone2                          = 1,
-	EPlayableInstrumentTone_MAX    = 2
+	Count                          = 0,
+	EPlayableInstrumentChord_MAX   = 1
+};
+
+
+// Enum ConZ.EInstrumentEventType
+enum class EInstrumentEventType : uint8_t
+{
+	PlayTone                       = 0,
+	StopTone                       = 1,
+	EInstrumentEventType_MAX       = 2
 };
 
 
@@ -1863,8 +1891,10 @@ enum class EPrisonerAnimationSet : uint8_t
 	RifleRelaxed                   = 2,
 	UnarmedCombat                  = 3,
 	Handgun                        = 4,
-	Count                          = 5,
-	EPrisonerAnimationSet_MAX      = 6
+	BowRelaxed                     = 5,
+	Bow                            = 6,
+	Count                          = 7,
+	EPrisonerAnimationSet_MAX      = 8
 };
 
 
@@ -2114,6 +2144,32 @@ enum class EAnimalWaypointType : uint8_t
 };
 
 
+// Enum ConZ.EWeaponAnimationCurve
+enum class EWeaponAnimationCurve : uint8_t
+{
+	DrawAmount                     = 0,
+	StrengthAmount                 = 1,
+	Count                          = 2,
+	EWeaponAnimationCurve_MAX      = 3
+};
+
+
+// Enum ConZ.WeaponBowState
+enum class EWeaponBowState : uint8_t
+{
+	None                           = 0,
+	InsertArrow                    = 1,
+	RemoveArrow                    = 2,
+	Draw                           = 3,
+	CancelFiring                   = 4,
+	FireDummy                      = 5,
+	Fire                           = 6,
+	FireAndInsertArrow             = 7,
+	Active                         = 8,
+	WeaponBowState_MAX             = 9
+};
+
+
 // Enum ConZ.EWeaponActionNotifyType
 enum class EWeaponActionNotifyType : uint8_t
 {
@@ -2121,7 +2177,9 @@ enum class EWeaponActionNotifyType : uint8_t
 	ChamberOpened                  = 1,
 	ChamberClosed                  = 2,
 	ChamberOpenedClosed            = 3,
-	EWeaponActionNotifyType_MAX    = 4
+	BowInsertArrow                 = 4,
+	BowRemoveArrow                 = 5,
+	EWeaponActionNotifyType_MAX    = 6
 };
 
 
@@ -2153,8 +2211,9 @@ enum class EWeaponType : uint8_t
 {
 	Rifle                          = 0,
 	Handgun                        = 1,
-	Count                          = 2,
-	EWeaponType_MAX                = 3
+	Bow                            = 2,
+	Count                          = 3,
+	EWeaponType_MAX                = 4
 };
 
 
@@ -2548,8 +2607,8 @@ struct FCharacterTemplate
 	int                                                SkinColorIndex;                                           // 0x002C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	int                                                HeadTattooIndex;                                          // 0x0030(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	int                                                BodyTattooIndex;                                          // 0x0034(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                TeamIndex;                                                // 0x0038(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
+	float                                              PenisSize;                                                // 0x0038(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                TeamIndex;                                                // 0x003C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	struct FString                                     BirthDate;                                                // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	struct FString                                     ArrestDate;                                               // 0x0050(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	TArray<struct FSkillTemplate>                      Skills;                                                   // 0x0060(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
@@ -2647,7 +2706,7 @@ struct FCharacterSpawnerData
 };
 
 // ScriptStruct ConZ.CharacterStats
-// 0x0024
+// 0x0028
 struct FCharacterStats
 {
 	float                                              FamePoints;                                               // 0x0000(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -2659,6 +2718,8 @@ struct FCharacterStats
 	int                                                EventSuicides;                                            // 0x0018(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	int                                                EventAssists;                                             // 0x001C(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	int                                                EventHeadshots;                                           // 0x0020(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               IsBanned;                                                 // 0x0024(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0025(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct ConZ.CharacterStatsItem
@@ -2666,8 +2727,7 @@ struct FCharacterStats
 struct FCharacterStatsItem
 {
 	struct FString                                     PlayerName;                                               // 0x0000(0x0010) (BlueprintVisible, ZeroConstructor)
-	struct FCharacterStats                             CharacterStats;                                           // 0x0010(0x0024) (BlueprintVisible)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+	struct FCharacterStats                             CharacterStats;                                           // 0x0010(0x0028) (BlueprintVisible)
 };
 
 // ScriptStruct ConZ.ChoppingIngredient
@@ -3210,7 +3270,7 @@ struct FEnduranceSkillParametersPerSkillLevel
 // 0x0088
 struct FItemSpawnerDataBasedOnPreset
 {
-	class UClass*                                      Preset;                                                   // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      preset;                                                   // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               OverrideItemClasses;                                      // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               OverrideItemSpawnTypes;                                   // 0x0009(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               OverrideProbability;                                      // 0x000A(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
@@ -3671,6 +3731,17 @@ struct FPrisonerMeleeAttackTypes
 	struct FGameplayTag                                BashMeleeAttackType;                                      // 0x0078(0x0008) (Edit, BlueprintVisible)
 };
 
+// ScriptStruct ConZ.PrisonerAppearanceData
+// 0x0028
+struct FPrisonerAppearanceData
+{
+	class USkeletalMesh*                               HeadMesh;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UMaterialInstance*                           SkinMaterial;                                             // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UMaterialInstance*                           TorsoMaterial;                                            // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UMaterialInstance*                           HeadMaterial;                                             // 0x0018(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UMaterialInstance*                           PenisMaterial;                                            // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct ConZ.PrisonerNearbyFoliageInstanceInfo
 // 0x0050
 struct FPrisonerNearbyFoliageInstanceInfo
@@ -3706,6 +3777,15 @@ struct FPrisonerTeleportRequest
 struct FCharacterActionReplicationHelper
 {
 	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
+};
+
+// ScriptStruct ConZ.ProjectileArrowData
+// 0x0010
+struct FProjectileArrowData
+{
+	class UClass*                                      AmmunitionArrowClass;                                     // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ItemsDamage;                                              // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct ConZ.CharacterActionAck
@@ -4351,7 +4431,7 @@ struct FParticleCollisionDecalData
 };
 
 // ScriptStruct ConZ.HandsPoseCorrections
-// 0x0020
+// 0x0040
 struct FHandsPoseCorrections
 {
 	class UAnimSequenceBase*                           RightHand;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
@@ -4359,6 +4439,11 @@ struct FHandsPoseCorrections
 	class UAnimSequenceBase*                           RightFistInCombatMode;                                    // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              RightHandToIdleBlendAlpha;                                // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
+	class UAnimSequenceBase*                           LeftHand;                                                 // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimSequenceBase*                           LeftFist;                                                 // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimSequenceBase*                           LeftFistInCombatMode;                                     // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              LeftHandToIdleBlendAlpha;                                 // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct ConZ.TeamDeathmatchParameters
@@ -4644,6 +4729,13 @@ struct FMeshItemData
 struct FBodyPartInjury
 {
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
+};
+
+// ScriptStruct ConZ.InstrumentEvent
+// 0x000C
+struct FInstrumentEvent
+{
+	unsigned char                                      UnknownData00[0xC];                                       // 0x0000(0x000C) MISSED OFFSET
 };
 
 // ScriptStruct ConZ.WindowDetectionParams

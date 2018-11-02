@@ -1584,6 +1584,30 @@ void UOptionsWidget_C::BndEvt__EnablePushToTalkSlider_K2Node_ComponentBoundEvent
 }
 
 
+// Function OptionsWidget.OptionsWidget_C.BndEvt__ConcealedMode_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            OldIndex                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText                   Value                          (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UOptionsWidget_C::BndEvt__ConcealedMode_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature(int Index, int OldIndex, const struct FText& Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function OptionsWidget.OptionsWidget_C.BndEvt__ConcealedMode_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
+
+	UOptionsWidget_C_BndEvt__ConcealedMode_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature_Params params;
+	params.Index = Index;
+	params.OldIndex = OldIndex;
+	params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function OptionsWidget.OptionsWidget_C.ExecuteUbergraph_OptionsWidget
 // (HasDefaults)
 // Parameters:

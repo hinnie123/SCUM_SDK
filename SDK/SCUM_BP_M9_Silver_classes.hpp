@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_M9_Silver.BP_M9_Silver_C
-// 0x0000 (0x1028 - 0x1028)
+// 0x0000 (0x1038 - 0x1038)
 class ABP_M9_Silver_C : public ABP_M9_C
 {
 public:

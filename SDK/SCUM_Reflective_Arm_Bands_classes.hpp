@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Reflective_Arm_Bands.Reflective_Arm_Bands_C
-// 0x0000 (0x0750 - 0x0750)
+// 0x0000 (0x0758 - 0x0758)
 class AReflective_Arm_Bands_C : public AClothesItem
 {
 public:

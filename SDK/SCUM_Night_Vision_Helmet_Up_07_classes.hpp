@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Night_Vision_Helmet_Up_07.Night_Vision_Helmet_Up_07_C
-// 0x0000 (0x0750 - 0x0750)
+// 0x0000 (0x0758 - 0x0758)
 class ANight_Vision_Helmet_Up_07_C : public AClothesItem
 {
 public:

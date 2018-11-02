@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Chilli_Con_Carne_02.Chilli_Con_Carne_02_C
-// 0x0000 (0x07C8 - 0x07C8)
+// 0x0000 (0x07D0 - 0x07D0)
 class AChilli_Con_Carne_02_C : public ACookedFoodItem
 {
 public:

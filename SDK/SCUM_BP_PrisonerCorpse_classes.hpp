@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PrisonerCorpse.BP_PrisonerCorpse_C
-// 0x0000 (0x0530 - 0x0530)
+// 0x0000 (0x05A0 - 0x05A0)
 class ABP_PrisonerCorpse_C : public APrisonerCorpse
 {
 public:

@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Improvised_Lookout_01.BP_Improvised_Lookout_01_C
-// 0x0020 (0x06F8 - 0x06D8)
-class ABP_Improvised_Lookout_01_C : public AItem
+// 0x0020 (0x0700 - 0x06E0)
+class ABP_Improvised_Lookout_01_C : public ALookoutItem
 {
 public:
-	TArray<struct FLadderMarker>                       LadderMarkers;                                            // 0x06D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FWindowMarker>                       WindowMarkers;                                            // 0x06E8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FLadderMarker>                       LadderMarkers;                                            // 0x06E0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FWindowMarker>                       WindowMarkers;                                            // 0x06F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

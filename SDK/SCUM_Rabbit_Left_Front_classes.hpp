@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Rabbit_Left_Front.Rabbit_Left_Front_C
-// 0x0000 (0x06F0 - 0x06F0)
+// 0x0000 (0x06F8 - 0x06F8)
 class ARabbit_Left_Front_C : public AEquipmentItem
 {
 public:

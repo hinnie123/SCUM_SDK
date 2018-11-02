@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Javelin.Javelin_C
-// 0x0000 (0x0720 - 0x0720)
+// 0x0000 (0x0728 - 0x0728)
 class AJavelin_C : public AWeaponItem
 {
 public:

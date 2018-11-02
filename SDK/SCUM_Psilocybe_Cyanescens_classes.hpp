@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Psilocybe_Cyanescens.Psilocybe_Cyanescens_C
-// 0x0000 (0x07B8 - 0x07B8)
+// 0x0000 (0x07C0 - 0x07C0)
 class APsilocybe_Cyanescens_C : public AFoodItem
 {
 public:

@@ -67,6 +67,11 @@ struct UMonitoredWindowsContent_C_GetDefaultPrisoner_Params
 	class APrisoner*                                   Prisoner;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function MonitoredWindowsContent.MonitoredWindowsContent_C.Construct
+struct UMonitoredWindowsContent_C_Construct_Params
+{
+};
+
 // Function MonitoredWindowsContent.MonitoredWindowsContent_C.OnPrisonerSet
 struct UMonitoredWindowsContent_C_OnPrisonerSet_Params
 {

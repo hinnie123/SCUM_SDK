@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Crab_Right_Pincer.Crab_Right_Pincer_C
-// 0x0000 (0x07B8 - 0x07B8)
+// 0x0000 (0x07C0 - 0x07C0)
 class ACrab_Right_Pincer_C : public AFoodItem
 {
 public:

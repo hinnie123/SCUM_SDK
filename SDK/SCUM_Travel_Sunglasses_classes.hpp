@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Travel_Sunglasses.Travel_Sunglasses_C
-// 0x0000 (0x0750 - 0x0750)
+// 0x0000 (0x0758 - 0x0758)
 class ATravel_Sunglasses_C : public AClothesItem
 {
 public:

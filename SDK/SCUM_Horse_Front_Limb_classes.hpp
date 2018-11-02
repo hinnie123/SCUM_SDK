@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Horse_Front_Limb.Horse_Front_Limb_C
-// 0x0000 (0x06F0 - 0x06F0)
+// 0x0000 (0x06F8 - 0x06F8)
 class AHorse_Front_Limb_C : public AEquipmentItem
 {
 public:

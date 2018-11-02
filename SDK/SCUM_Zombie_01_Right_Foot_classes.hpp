@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Zombie_01_Right_Foot.Zombie_01_Right_Foot_C
-// 0x0000 (0x06F0 - 0x06F0)
+// 0x0000 (0x06F8 - 0x06F8)
 class AZombie_01_Right_Foot_C : public AEquipmentItem
 {
 public:

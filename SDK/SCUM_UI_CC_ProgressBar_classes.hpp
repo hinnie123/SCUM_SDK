@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass UI_CC_ProgressBar.UI_CC_ProgressBar_C
-// 0x0154 (0x0374 - 0x0220)
+// 0x0155 (0x0375 - 0x0220)
 class UUI_CC_ProgressBar_C : public UDesignableUserWidget
 {
 public:
@@ -62,6 +62,7 @@ public:
 	struct FScriptMulticastDelegate                    MouseUp;                                                  // 0x0350(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    MouseDown;                                                // 0x0360(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
 	float                                              SnapThreshold;                                            // 0x0370(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               ShouldTriggerOnIndexChangedAtConstruct;                   // 0x0374(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

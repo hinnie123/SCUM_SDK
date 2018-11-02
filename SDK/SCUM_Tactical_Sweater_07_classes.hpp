@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Tactical_Sweater_07.Tactical_Sweater_07_C
-// 0x0000 (0x0750 - 0x0750)
+// 0x0000 (0x0758 - 0x0758)
 class ATactical_Sweater_07_C : public AClothesItem
 {
 public:

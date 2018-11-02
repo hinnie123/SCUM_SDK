@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass VIP_Stab_Proof_Vest.VIP_Stab_Proof_Vest_C
-// 0x0000 (0x0750 - 0x0750)
+// 0x0000 (0x0758 - 0x0758)
 class AVIP_Stab_Proof_Vest_C : public AClothesItem
 {
 public:

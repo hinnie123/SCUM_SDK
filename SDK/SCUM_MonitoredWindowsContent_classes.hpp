@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass MonitoredWindowsContent.MonitoredWindowsContent_C
-// 0x0020 (0x0280 - 0x0260)
+// 0x0040 (0x02A0 - 0x0260)
 class UMonitoredWindowsContent_C : public UWindowsContent_C
 {
 public:
@@ -22,6 +22,9 @@ public:
 	bool                                               _isPrisonerSet;                                           // 0x0270(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0271(0x0007) MISSED OFFSET
 	struct FTimerHandle                                _updateContentTimer;                                      // 0x0278(0x0008) (Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                               HasToolTip;                                               // 0x0280(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0281(0x0007) MISSED OFFSET
+	struct FText                                       ToolTip;                                                  // 0x0288(0x0018) (Edit, BlueprintVisible)
 
 	static UClass* StaticClass()
 	{
@@ -39,6 +42,7 @@ public:
 	void SetDefaultPrisonerToMonitor(bool* Success);
 	void SetPrisonerToMonitor(class APrisoner* Prisoner, bool* Success);
 	void GetDefaultPrisoner(class APrisoner** Prisoner);
+	void Construct();
 	void OnPrisonerSet();
 	void UpdateContent();
 	void ExecuteUbergraph_MonitoredWindowsContent(int EntryPoint);

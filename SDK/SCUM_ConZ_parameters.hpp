@@ -442,11 +442,6 @@ struct AItem_Blink_Params
 	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function ConZ.AmmunitionBoxItem.OnRep_AmmoCount
-struct AAmmunitionBoxItem_OnRep_AmmoCount_Params
-{
-};
-
 // Function ConZ.AmmunitionItem.SetAmmoCount
 struct AAmmunitionItem_SetAmmoCount_Params
 {
@@ -462,6 +457,11 @@ struct AAmmunitionItem_OnRep_AmmoCount_Params
 struct AAmmunitionItem_GetAmmoCount_Params
 {
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.AmmunitionBoxItem.OnRep_AmmoCount
+struct AAmmunitionBoxItem_OnRep_AmmoCount_Params
+{
 };
 
 // Function ConZ.ConZCharacter.SetGender
@@ -2077,6 +2077,14 @@ struct UCharacterCreationWidget_OnUserProfileCreated_Params
 {
 };
 
+// Function ConZ.CharacterCreationWidget.ModifyAttributesByPenisSize
+struct UCharacterCreationWidget_ModifyAttributesByPenisSize_Params
+{
+	struct FVector4                                    Attributes;                                               // (Parm, OutParm, ReferenceParm, IsPlainOldData)
+	float                                              PenisSize;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function ConZ.CharacterCreationWidget.GetRandomValuesInRangeAddingUpTo
 struct UCharacterCreationWidget_GetRandomValuesInRangeAddingUpTo_Params
 {
@@ -2170,6 +2178,7 @@ struct UCharacterStatsManager_RecalculateFameLevel_Params
 struct UCharacterStatsManager_HasStats_Params
 {
 	struct FString                                     steamId;                                                  // (Parm, ZeroConstructor)
+	bool                                               ignoreBannedPlayers;                                      // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -2615,7 +2624,7 @@ struct UConsoleHelpers_SetHasPendingChanges_Params
 // Function ConZ.ConsoleHelpers.SetGraphicsPreset
 struct UConsoleHelpers_SetGraphicsPreset_Params
 {
-	int                                                Preset;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                preset;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.ConsoleHelpers.SetConfigVar
@@ -2684,6 +2693,12 @@ struct UConsoleHelpers_GetConfigBool_Params
 {
 	struct FString                                     Key;                                                      // (Parm, ZeroConstructor)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// DelegateFunction ConZ.ConsoleHelpers.ConsoleBoolChanged__DelegateSignature
+struct UConsoleHelpers_ConsoleBoolChanged__DelegateSignature_Params
+{
+	bool                                               Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.ConsoleHelpers.ApplyDynamicShadowsQuality
@@ -2962,6 +2977,35 @@ struct AConZTeam_GetMembers_Params
 struct AConZTeam_AddMember_Params
 {
 	class APrisoner*                                   Prisoner;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZVehicle4W.Server_SetHornActive
+struct AConZVehicle4W_Server_SetHornActive_Params
+{
+	bool                                               Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZVehicle4W.Server_SetEngineTurnedOn
+struct AConZVehicle4W_Server_SetEngineTurnedOn_Params
+{
+	bool                                               Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZVehicle4W.Server_Destroy
+struct AConZVehicle4W_Server_Destroy_Params
+{
+};
+
+// Function ConZ.ConZVehicle4W.OnRep_HornActive
+struct AConZVehicle4W_OnRep_HornActive_Params
+{
+	bool                                               OldValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZVehicle4W.OnRep_EngineTurnedOn
+struct AConZVehicle4W_OnRep_EngineTurnedOn_Params
+{
+	bool                                               OldValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.Corpse.OnRep_PoseData
@@ -5470,6 +5514,12 @@ struct UHelpers_SortSkillsByLevelAndExperience_Params
 	TArray<class USkill*>                              Skills;                                                   // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
+// Function ConZ.Helpers.SetComponentNetAddressable
+struct UHelpers_SetComponentNetAddressable_Params
+{
+	class UActorComponent*                             Component;                                                // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
 // Function ConZ.Helpers.SendChatLineToAll
 struct UHelpers_SendChatLineToAll_Params
 {
@@ -5594,6 +5644,13 @@ struct UHelpers_GetDefaultDedicatedServerResponsePort_Params
 struct UHelpers_GetDataSingleton_Params
 {
 	class UDataSingleton*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.Helpers.GetClassDefaultObject
+struct UHelpers_GetClassDefaultObject_Params
+{
+	class UClass*                                      ObjectClass;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function ConZ.Helpers.GetCircleYForX
@@ -6699,10 +6756,20 @@ struct APrisoner_UpdateWristwatchVisibility_Params
 {
 };
 
+// Function ConZ.Prisoner.UpdatePenisVisibility
+struct APrisoner_UpdatePenisVisibility_Params
+{
+};
+
 // Function ConZ.Prisoner.UpdateMaterialsFadeAmount
 struct APrisoner_UpdateMaterialsFadeAmount_Params
 {
 	float                                              fadeAmount;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.Prisoner.UpdateDeluxePlayerStatus
+struct APrisoner_UpdateDeluxePlayerStatus_Params
+{
 };
 
 // Function ConZ.Prisoner.UpdateChipLightColorIndex
@@ -6793,6 +6860,12 @@ struct APrisoner_StartComboMeleeAttack_Params
 // Function ConZ.Prisoner.ShowSpawnScreen
 struct APrisoner_ShowSpawnScreen_Params
 {
+};
+
+// Function ConZ.Prisoner.ShouldShowPenis
+struct APrisoner_ShouldShowPenis_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function ConZ.Prisoner.ShouldLookatMeleeTarget
@@ -7112,10 +7185,10 @@ struct APrisoner_Server_SetScopingWithItemInHandsState_Params
 	EScopingWithItemInHandsState                       Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function ConZ.Prisoner.Server_SetPlayingInstrumentInHandsState
-struct APrisoner_Server_SetPlayingInstrumentInHandsState_Params
+// Function ConZ.Prisoner.Server_SetPlayingInstrumentState
+struct APrisoner_Server_SetPlayingInstrumentState_Params
 {
-	EPlayingInstrumentInHandsState                     Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	EPlayingInstrumentState                            Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.Prisoner.Server_SetMeleeTargetSelectionMode
@@ -7159,6 +7232,15 @@ struct APrisoner_Server_ReportClientReady_Params
 {
 };
 
+// Function ConZ.Prisoner.Server_OnProjectileArrowStop
+struct APrisoner_Server_OnProjectileArrowStop_Params
+{
+	struct FHitResult                                  HitResult;                                                // (ConstParm, Parm, ReferenceParm, IsPlainOldData)
+	struct FProjectileArrowData                        ProjectileData;                                           // (ConstParm, Parm, ReferenceParm)
+	struct FVector                                     Location;                                                 // (ConstParm, Parm, ReferenceParm, IsPlainOldData)
+	struct FRotator                                    Rotation;                                                 // (ConstParm, Parm, ReferenceParm, IsPlainOldData)
+};
+
 // Function ConZ.Prisoner.Server_LoadAmmoIntoMagazine
 struct APrisoner_Server_LoadAmmoIntoMagazine_Params
 {
@@ -7184,6 +7266,20 @@ struct APrisoner_Server_InteractWithLadder_Params
 {
 	struct FVector                                     traceOrigin;                                              // (ConstParm, Parm, ReferenceParm, IsPlainOldData)
 	struct FVector                                     traceDirection;                                           // (ConstParm, Parm, ReferenceParm, IsPlainOldData)
+};
+
+// Function ConZ.Prisoner.Server_InstrumentStopTone
+struct APrisoner_Server_InstrumentStopTone_Params
+{
+	EPlayableInstrumentTone                            tone;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              timeOffset;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.Prisoner.Server_InstrumentPlayTone
+struct APrisoner_Server_InstrumentPlayTone_Params
+{
+	EPlayableInstrumentTone                            tone;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              timeOffset;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.Prisoner.Server_InitiateCraftedPlacement
@@ -7368,8 +7464,18 @@ struct APrisoner_OnRep_RightShoulderHolsteredItem_Params
 {
 };
 
-// Function ConZ.Prisoner.OnRep_PlayingInstrumentInHandsState
-struct APrisoner_OnRep_PlayingInstrumentInHandsState_Params
+// Function ConZ.Prisoner.OnRep_PlayingInstrumentState
+struct APrisoner_OnRep_PlayingInstrumentState_Params
+{
+};
+
+// Function ConZ.Prisoner.OnRep_PenisSize
+struct APrisoner_OnRep_PenisSize_Params
+{
+};
+
+// Function ConZ.Prisoner.OnRep_PenisModifier
+struct APrisoner_OnRep_PenisModifier_Params
 {
 };
 
@@ -7391,16 +7497,6 @@ struct APrisoner_OnRep_MeleeTarget_Params
 
 // Function ConZ.Prisoner.OnRep_LeftShoulderHolsteredItem
 struct APrisoner_OnRep_LeftShoulderHolsteredItem_Params
-{
-};
-
-// Function ConZ.Prisoner.OnRep_LastSafeLocation
-struct APrisoner_OnRep_LastSafeLocation_Params
-{
-};
-
-// Function ConZ.Prisoner.OnRep_LastCorpse
-struct APrisoner_OnRep_LastCorpse_Params
 {
 };
 
@@ -7491,6 +7587,12 @@ struct APrisoner_OnEndMovingThroughNearbyFoliageInstance_Params
 	struct FPrisonerNearbyFoliageInstanceInfo          instanceInfo;                                             // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
+// Function ConZ.Prisoner.OnConcealedModeChanged
+struct APrisoner_OnConcealedModeChanged_Params
+{
+	bool                                               Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function ConZ.Prisoner.OnBorderCrossingPenaltyChange
 struct APrisoner_OnBorderCrossingPenaltyChange_Params
 {
@@ -7535,6 +7637,20 @@ struct APrisoner_NetMulticast_RequestCharacterAction_Params
 {
 	struct FCharacterActionReplicationHelper           Value;                                                    // (ConstParm, Parm, ReferenceParm)
 	bool                                               ignoreAutonomousProxy;                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.Prisoner.NetMulticast_InstrumentStopTone
+struct APrisoner_NetMulticast_InstrumentStopTone_Params
+{
+	EPlayableInstrumentTone                            tone;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              timeOffset;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.Prisoner.NetMulticast_InstrumentPlayTone
+struct APrisoner_NetMulticast_InstrumentPlayTone_Params
+{
+	EPlayableInstrumentTone                            tone;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              timeOffset;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.Prisoner.NetMulticast_HandleLanded
@@ -7594,6 +7710,7 @@ struct APrisoner_LeaveTeamOnServer_Params
 // Function ConZ.Prisoner.LeaveCombatMode
 struct APrisoner_LeaveCombatMode_Params
 {
+	bool                                               PlayAnimation;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.Prisoner.IsPostFreeLookControllerRotationBlendActive
@@ -7907,6 +8024,18 @@ struct APrisoner_GetPrisonerAnimInstance_Params
 	class UPrisonerAnimInstance*                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function ConZ.Prisoner.GetPenisSize
+struct APrisoner_GetPenisSize_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.Prisoner.GetPenisMeshComponent
+struct APrisoner_GetPenisMeshComponent_Params
+{
+	class USkeletalMeshComponent*                      ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
 // Function ConZ.Prisoner.GetPartWetness
 struct APrisoner_GetPartWetness_Params
 {
@@ -7919,6 +8048,12 @@ struct APrisoner_GetPartWaterWeight_Params
 {
 	EPrisonerWettablePart                              part;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.Prisoner.GetNeckMeshComponent
+struct APrisoner_GetNeckMeshComponent_Params
+{
+	class USkeletalMeshComponent*                      ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
 // Function ConZ.Prisoner.GetNearbyFoliageInfo
@@ -8336,6 +8471,11 @@ struct APrisoner_CheckForDeluxeDLC_Params
 {
 };
 
+// Function ConZ.Prisoner.CheckForCensoring
+struct APrisoner_CheckForCensoring_Params
+{
+};
+
 // Function ConZ.Prisoner.CharacterAction_End
 struct APrisoner_CharacterAction_End_Params
 {
@@ -8672,6 +8812,11 @@ struct UPrisonerAnimInstance_AnimNotify_ThrowRelease_Params
 	class UAnimNotify*                                 Notify;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function ConZ.PrisonerAnimInstance.AnimNotify_TakePenis
+struct UPrisonerAnimInstance_AnimNotify_TakePenis_Params
+{
+};
+
 // Function ConZ.PrisonerAnimInstance.AnimNotify_TakeItemInHands
 struct UPrisonerAnimInstance_AnimNotify_TakeItemInHands_Params
 {
@@ -8687,6 +8832,11 @@ struct UPrisonerAnimInstance_AnimNotify_RFootDown_Params
 struct UPrisonerAnimInstance_AnimNotify_RemoveItemFromHands_Params
 {
 	class UAnimNotify*                                 Notify;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerAnimInstance.AnimNotify_ReleasePenis
+struct UPrisonerAnimInstance_AnimNotify_ReleasePenis_Params
+{
 };
 
 // Function ConZ.PrisonerAnimInstance.AnimNotify_LFootDown
@@ -8714,6 +8864,17 @@ struct UPrisonerAnimInstance_ActivateFacialExpressionOnGameThread_Params
 	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              blendOutDuration;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              blendWeightMultiplier;                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerCorpse.OnRep_PenisShowing
+struct APrisonerCorpse_OnRep_PenisShowing_Params
+{
+};
+
+// Function ConZ.PrisonerCorpse.OnConcealedModeChanged
+struct APrisonerCorpse_OnConcealedModeChanged_Params
+{
+	bool                                               Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.PrisonerHUD.ToggleHUDMode
@@ -10848,10 +11009,21 @@ struct APrisonerPlayerController_Client_RecieveCharacterStats_Params
 	int                                                rank;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ListAssets
-struct APrisonerPlayerController_Client_ProcessAdminCommand_ListAssets_Params
+// Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ListTransports
+struct APrisonerPlayerController_Client_ProcessAdminCommand_ListTransports_Params
 {
-	struct FString                                     assetType;                                                // (Parm, ZeroConstructor)
+	struct FString                                     Filter;                                                   // (Parm, ZeroConstructor)
+};
+
+// Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ListItems
+struct APrisonerPlayerController_Client_ProcessAdminCommand_ListItems_Params
+{
+	struct FString                                     Filter;                                                   // (Parm, ZeroConstructor)
+};
+
+// Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ListCharacters
+struct APrisonerPlayerController_Client_ProcessAdminCommand_ListCharacters_Params
+{
 	struct FString                                     Filter;                                                   // (Parm, ZeroConstructor)
 };
 
@@ -11170,6 +11342,12 @@ struct UPrisonerSoundComponent_OnBorderCrossingStateChanged_Params
 
 // Function ConZ.Projectile.OnStop
 struct AProjectile_OnStop_Params
+{
+	struct FHitResult                                  HitResult;                                                // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+};
+
+// Function ConZ.ProjectileArrow.UpdateParameters
+struct AProjectileArrow_UpdateParameters_Params
 {
 };
 
@@ -11969,6 +12147,45 @@ struct AWeaponAttachmentScope_SetLoadedVariablesOnClient_Params
 {
 	int                                                zoomLevel;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                windage;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.WeaponBow.Server_SetPendingArrow
+struct AWeaponBow_Server_SetPendingArrow_Params
+{
+	class AAmmunitionArrow*                            arrow;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.WeaponBow.Server_SetDrawAmount
+struct AWeaponBow_Server_SetDrawAmount_Params
+{
+	float                                              drawAmount;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.WeaponBow.Server_SetBowState
+struct AWeaponBow_Server_SetBowState_Params
+{
+	EWeaponBowState                                    State;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.WeaponBow.OnRep_BowState
+struct AWeaponBow_OnRep_BowState_Params
+{
+};
+
+// Function ConZ.WeaponBow.OnRep_Arrow
+struct AWeaponBow_OnRep_Arrow_Params
+{
+};
+
+// Function ConZ.WeaponBow.GotoInsertArrowState
+struct AWeaponBow_GotoInsertArrowState_Params
+{
+};
+
+// Function ConZ.WeaponBow.CanInsertArrow
+struct AWeaponBow_CanInsertArrow_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function ConZ.WeaponHolsterItem.OnRep_HolsteredWeapon

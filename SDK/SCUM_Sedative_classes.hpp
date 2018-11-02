@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Sedative.Sedative_C
-// 0x0000 (0x06E0 - 0x06E0)
+// 0x0000 (0x06E8 - 0x06E8)
 class ASedative_C : public AMedicationItem
 {
 public:

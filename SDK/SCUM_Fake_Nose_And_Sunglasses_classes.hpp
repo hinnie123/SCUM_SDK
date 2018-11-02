@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Fake_Nose_And_Sunglasses.Fake_Nose_And_Sunglasses_C
-// 0x0000 (0x0750 - 0x0750)
+// 0x0000 (0x0758 - 0x0758)
 class AFake_Nose_And_Sunglasses_C : public AClothesItem
 {
 public:

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Magazine_AKS_74U.BP_Magazine_AKS_74U_C
-// 0x0000 (0x06F8 - 0x06F8)
+// 0x0000 (0x0700 - 0x0700)
 class ABP_Magazine_AKS_74U_C : public AWeaponAttachmentMagazine
 {
 public:
