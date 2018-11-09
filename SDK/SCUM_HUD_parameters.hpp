@@ -270,11 +270,6 @@ struct UHUD_C_GetPrisonerLifeComponent_Params
 	class UPrisonerLifeComponent*                      LifeComponent;                                            // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
-// Function HUD.HUD_C.ToggleMonitorsVisibility
-struct UHUD_C_ToggleMonitorsVisibility_Params
-{
-};
-
 // Function HUD.HUD_C.OnPerformanceMonitorMaximized
 struct UHUD_C_OnPerformanceMonitorMaximized_Params
 {
@@ -332,6 +327,11 @@ struct UHUD_C_AddMessageWithColor_Params
 	struct FLinearColor                                Color;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 };
 
+// Function HUD.HUD_C.ToggleMonitorsVisibility
+struct UHUD_C_ToggleMonitorsVisibility_Params
+{
+};
+
 // Function HUD.HUD_C.ClearTeammateNames
 struct UHUD_C_ClearTeammateNames_Params
 {
@@ -374,14 +374,6 @@ struct UHUD_C_Construct_Params
 // Function HUD.HUD_C.Shake
 struct UHUD_C_Shake_Params
 {
-};
-
-// Function HUD.HUD_C.AddMessage
-struct UHUD_C_AddMessage_Params
-{
-	TEnumAsByte<EMessageType>                          Type;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FText                                       Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
-	float                                              Duration;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function HUD.HUD_C.SetMainCanvasVisibility
@@ -439,6 +431,14 @@ struct UHUD_C_Tick_Params
 {
 	struct FGeometry*                                  MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 	float*                                             InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function HUD.HUD_C.AddMessage
+struct UHUD_C_AddMessage_Params
+{
+	TEnumAsByte<EMessageType>                          Type;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
+	float                                              Duration;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function HUD.HUD_C.ExecuteUbergraph_HUD

@@ -201,14 +201,14 @@ void UOptionsWidget_C::SetDynamicShadowsQuality(int Value)
 // Function OptionsWidget.OptionsWidget_C.UpdateSupportedResolutions
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           Fullscreen                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           fullscreen                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UOptionsWidget_C::UpdateSupportedResolutions(bool Fullscreen)
+void UOptionsWidget_C::UpdateSupportedResolutions(bool fullscreen)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OptionsWidget.OptionsWidget_C.UpdateSupportedResolutions");
 
 	UOptionsWidget_C_UpdateSupportedResolutions_Params params;
-	params.Fullscreen = Fullscreen;
+	params.fullscreen = fullscreen;
 
 	auto flags = fn->FunctionFlags;
 

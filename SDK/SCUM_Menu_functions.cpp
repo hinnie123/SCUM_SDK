@@ -12,6 +12,43 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Menu.Menu_C.UpdateDroneVisual
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AMenu_C::UpdateDroneVisual()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Menu.Menu_C.UpdateDroneVisual");
+
+	AMenu_C_UpdateDroneVisual_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Menu.Menu_C.InpActEvt_Ctrl_D_K2Node_InputKeyEvent_1
+// (BlueprintEvent)
+// Parameters:
+// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void AMenu_C::InpActEvt_Ctrl_D_K2Node_InputKeyEvent_1(const struct FKey& Key)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Menu.Menu_C.InpActEvt_Ctrl_D_K2Node_InputKeyEvent_1");
+
+	AMenu_C_InpActEvt_Ctrl_D_K2Node_InputKeyEvent_1_Params params;
+	params.Key = Key;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Menu.Menu_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 

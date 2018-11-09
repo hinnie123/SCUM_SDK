@@ -13,11 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WeaponBullet_WoodenArrow.BP_WeaponBullet_WoodenArrow_C
-// 0x0008 (0x04F8 - 0x04F0)
+// 0x0010 (0x0500 - 0x04F0)
 class ABP_WeaponBullet_WoodenArrow_C : public AProjectileArrow
 {
 public:
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x04F0(0x0008) (Transient, DuplicateTransient)
+	class UParticleSystemComponent*                    ParticleSystem;                                           // 0x04F8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

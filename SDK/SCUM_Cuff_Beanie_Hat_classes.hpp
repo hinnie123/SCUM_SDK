@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Cuff_Beanie_Hat.Cuff_Beanie_Hat_C
-// 0x0000 (0x0758 - 0x0758)
+// 0x0000 (0x0760 - 0x0760)
 class ACuff_Beanie_Hat_C : public AClothesItem
 {
 public:

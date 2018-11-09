@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Open_Finger_Gloves_02.Open_Finger_Gloves_02_C
-// 0x0000 (0x0758 - 0x0758)
+// 0x0000 (0x0760 - 0x0760)
 class AOpen_Finger_Gloves_02_C : public AClothesItem
 {
 public:

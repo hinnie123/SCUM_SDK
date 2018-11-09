@@ -12,23 +12,6 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.ApplyPenisAttributeModifiers
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UUI_CharacterCreationPanel1_C::ApplyPenisAttributeModifiers()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.ApplyPenisAttributeModifiers");
-
-	UUI_CharacterCreationPanel1_C_ApplyPenisAttributeModifiers_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.GetPenisSize
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:

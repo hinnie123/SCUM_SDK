@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass HighTop_Shoes.HighTop_Shoes_C
-// 0x0000 (0x0758 - 0x0758)
+// 0x0000 (0x0760 - 0x0760)
 class AHighTop_Shoes_C : public AClothesItem
 {
 public:

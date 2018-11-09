@@ -48,17 +48,6 @@ struct ABP_Prisoner_C_DrawFootstep_Params
 	bool                                               flip;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BP_Prisoner.BP_Prisoner_C.ReceiveBeginPlay
-struct ABP_Prisoner_C_ReceiveBeginPlay_Params
-{
-};
-
-// Function BP_Prisoner.BP_Prisoner_C.ReceiveTick
-struct ABP_Prisoner_C_ReceiveTick_Params
-{
-	float*                                             DeltaSeconds;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function BP_Prisoner.BP_Prisoner_C.InitTextMeshFromName
 struct ABP_Prisoner_C_InitTextMeshFromName_Params
 {
@@ -96,6 +85,17 @@ struct ABP_Prisoner_C_BndEvt__VoiceChat_K2Node_ComponentBoundEvent_0_VoiceChatSt
 
 // Function BP_Prisoner.BP_Prisoner_C.BndEvt__VoiceChat_K2Node_ComponentBoundEvent_1_VoiceChatStateChangedSignature__DelegateSignature
 struct ABP_Prisoner_C_BndEvt__VoiceChat_K2Node_ComponentBoundEvent_1_VoiceChatStateChangedSignature__DelegateSignature_Params
+{
+};
+
+// Function BP_Prisoner.BP_Prisoner_C.ReceiveTick
+struct ABP_Prisoner_C_ReceiveTick_Params
+{
+	float*                                             DeltaSeconds;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_Prisoner.BP_Prisoner_C.ReceiveBeginPlay
+struct ABP_Prisoner_C_ReceiveBeginPlay_Params
 {
 };
 

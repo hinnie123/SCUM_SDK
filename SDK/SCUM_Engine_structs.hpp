@@ -3562,8 +3562,9 @@ enum class EAntiAliasingMethod : uint8_t
 	AAM_None                       = 0,
 	AAM_FXAA                       = 1,
 	AAM_TemporalAA                 = 2,
-	AAM_MSAA                       = 3,
-	AAM_MAX                        = 4
+	AAM_DLAA                       = 3,
+	AAM_MSAA                       = 4,
+	AAM_MAX                        = 5
 };
 
 

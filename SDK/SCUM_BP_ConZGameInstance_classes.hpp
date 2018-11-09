@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ConZGameInstance.BP_ConZGameInstance_C
-// 0x0008 (0x0198 - 0x0190)
+// 0x0008 (0x01A0 - 0x0198)
 class UBP_ConZGameInstance_C : public UConZGameInstance
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0190(0x0008) (Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0198(0x0008) (Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

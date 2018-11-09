@@ -75,7 +75,7 @@ struct UOptionsWidget_C_SetDynamicShadowsQuality_Params
 // Function OptionsWidget.OptionsWidget_C.UpdateSupportedResolutions
 struct UOptionsWidget_C_UpdateSupportedResolutions_Params
 {
-	bool                                               Fullscreen;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               fullscreen;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function OptionsWidget.OptionsWidget_C.ToggleCategory

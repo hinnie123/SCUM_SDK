@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Skateboard_Helmet.Skateboard_Helmet_C
-// 0x0000 (0x0758 - 0x0758)
+// 0x0000 (0x0760 - 0x0760)
 class ASkateboard_Helmet_C : public AClothesItem
 {
 public:

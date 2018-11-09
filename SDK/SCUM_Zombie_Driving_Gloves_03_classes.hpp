@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Zombie_Driving_Gloves_03.Zombie_Driving_Gloves_03_C
-// 0x0000 (0x0758 - 0x0758)
+// 0x0000 (0x0760 - 0x0760)
 class AZombie_Driving_Gloves_03_C : public AClothesItem
 {
 public:

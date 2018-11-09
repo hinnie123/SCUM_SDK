@@ -292,6 +292,18 @@ enum class EPrisonerBorderCrossingPenalty : uint8_t
 };
 
 
+// Enum ConZ.ETabMode
+enum class ETabMode : uint8_t
+{
+	None                           = 0,
+	Inventory                      = 1,
+	EventsAndQuests                = 2,
+	BCU                            = 3,
+	Crafting                       = 4,
+	ETabMode_MAX                   = 5
+};
+
+
 // Enum ConZ.EPrisonerCombatMode
 enum class EPrisonerCombatMode : uint8_t
 {
@@ -495,32 +507,21 @@ enum class ECharacterActionAckType : uint8_t
 // Enum ConZ.EPlayableInstrumentTone
 enum class EPlayableInstrumentTone : uint8_t
 {
-	Ab                             = 0,
-	A                              = 1,
-	B                              = 2,
-	Bb                             = 3,
-	C                              = 4,
-	Db                             = 5,
-	D                              = 6,
-	Eb                             = 7,
-	E                              = 8,
-	F                              = 9,
-	Gb                             = 10,
-	G                              = 11,
-	Count                          = 12,
-	EPlayableInstrumentTone_MAX    = 13
-};
-
-
-// Enum ConZ.ETabMode
-enum class ETabMode : uint8_t
-{
-	None                           = 0,
-	Inventory                      = 1,
-	EventsAndQuests                = 2,
-	BCU                            = 3,
-	Crafting                       = 4,
-	ETabMode_MAX                   = 5
+	C                              = 0,
+	Db                             = 1,
+	D                              = 2,
+	Eb                             = 3,
+	E                              = 4,
+	F                              = 5,
+	Gb                             = 6,
+	G                              = 7,
+	Ab                             = 8,
+	A                              = 9,
+	B                              = 10,
+	Bb                             = 11,
+	C2                             = 12,
+	Count                          = 13,
+	EPlayableInstrumentTone_MAX    = 14
 };
 
 
@@ -2122,6 +2123,15 @@ enum class EUnarmedCombatInput : uint8_t
 };
 
 
+// Enum ConZ.EVehicleSeatType
+enum class EVehicleSeatType : uint8_t
+{
+	Driver                         = 0,
+	Passenger                      = 1,
+	EVehicleSeatType_MAX           = 2
+};
+
+
 // Enum ConZ.EWaypointTraverseType
 enum class EWaypointTraverseType : uint8_t
 {
@@ -3123,7 +3133,7 @@ struct FGameEventRewardPoints
 };
 
 // ScriptStruct ConZ.GameEventParameters
-// 0x0180
+// 0x0188
 struct FGameEventParameters
 {
 	float                                              AnnounceDuration;                                         // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -3148,19 +3158,19 @@ struct FGameEventParameters
 	struct FGameEventRewardPoints                      PointsPerHeadshot;                                        // 0x0078(0x000C) (Edit, BlueprintVisible)
 	struct FGameEventRewardPoints                      PointsPerRoundWin;                                        // 0x0084(0x000C) (Edit, BlueprintVisible)
 	TArray<struct FGameEventRewardPoints>              PointsPerRank;                                            // 0x0090(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	float                                              ScoreToFameConversionFactor;                              // 0x00A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x00A4(0x0004) MISSED OFFSET
-	TArray<class UItemSelection*>                      PossiblePrimaryWeapons;                                   // 0x00A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UItemSelection*>                      PossibleSecondaryWeapons;                                 // 0x00B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UItemSelection*>                      PossibleTertiaryWeapons;                                  // 0x00C8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UItemSelection*>                      PossibleOutfits;                                          // 0x00D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UItemSelection*>                      PossibleSupportItems;                                     // 0x00E8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UItemSelection*>                      MandatoryGear;                                            // 0x00F8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FText                                       EventName;                                                // 0x0108(0x0018) (Edit, BlueprintVisible)
-	struct FText                                       EventDescription;                                         // 0x0120(0x0018) (Edit, BlueprintVisible)
-	struct FText                                       PrerequisitesText;                                        // 0x0138(0x0018) (Edit, BlueprintVisible)
-	struct FText                                       WeaponText;                                               // 0x0150(0x0018) (Edit, BlueprintVisible)
-	struct FText                                       RewardsText;                                              // 0x0168(0x0018) (Edit, BlueprintVisible)
+	struct FGameEventRewardPoints                      PointsForParticipation;                                   // 0x00A0(0x000C) (Edit, BlueprintVisible)
+	float                                              ScoreToFameConversionFactor;                              // 0x00AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<class UItemSelection*>                      PossiblePrimaryWeapons;                                   // 0x00B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UItemSelection*>                      PossibleSecondaryWeapons;                                 // 0x00C0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UItemSelection*>                      PossibleTertiaryWeapons;                                  // 0x00D0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UItemSelection*>                      PossibleOutfits;                                          // 0x00E0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UItemSelection*>                      PossibleSupportItems;                                     // 0x00F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UItemSelection*>                      MandatoryGear;                                            // 0x0100(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FText                                       EventName;                                                // 0x0110(0x0018) (Edit, BlueprintVisible)
+	struct FText                                       EventDescription;                                         // 0x0128(0x0018) (Edit, BlueprintVisible)
+	struct FText                                       PrerequisitesText;                                        // 0x0140(0x0018) (Edit, BlueprintVisible)
+	struct FText                                       WeaponText;                                               // 0x0158(0x0018) (Edit, BlueprintVisible)
+	struct FText                                       RewardsText;                                              // 0x0170(0x0018) (Edit, BlueprintVisible)
 };
 
 // ScriptStruct ConZ.CTFParameters
@@ -4267,18 +4277,21 @@ struct FPrisonerMovementSettings_Water
 };
 
 // ScriptStruct ConZ.PlayerLoginInfo
-// 0x0050
+// 0x0058
 struct FPlayerLoginInfo
 {
 	struct FString                                     UserId;                                                   // 0x0000(0x0010) (BlueprintVisible, ZeroConstructor)
 	struct FDbIntegerId                                UserProfileId;                                            // 0x0010(0x0008) (BlueprintVisible)
 	struct FString                                     UserProfileName;                                          // 0x0018(0x0010) (BlueprintVisible, ZeroConstructor)
-	struct FString                                     ServerName;                                               // 0x0028(0x0010) (BlueprintVisible, ZeroConstructor)
-	int                                                ServerResponsePort;                                       // 0x0038(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
-	struct FDbIntegerId                                ServerUserProfileId;                                      // 0x0040(0x0008) (BlueprintVisible)
-	float                                              TimeToRemainInGameAfterLeaveGameRequest;                  // 0x0048(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
+	bool                                               IsDeluxeUser;                                             // 0x0028(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               PlayAsDrone;                                              // 0x0029(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x002A(0x0006) MISSED OFFSET
+	struct FString                                     ServerName;                                               // 0x0030(0x0010) (BlueprintVisible, ZeroConstructor)
+	int                                                ServerResponsePort;                                       // 0x0040(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
+	struct FDbIntegerId                                ServerUserProfileId;                                      // 0x0048(0x0008) (BlueprintVisible)
+	float                                              TimeToRemainInGameAfterLeaveGameRequest;                  // 0x0050(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct ConZ.PrisonerInitialSkillInfo

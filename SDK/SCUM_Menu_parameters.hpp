@@ -14,6 +14,17 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Menu.Menu_C.UpdateDroneVisual
+struct AMenu_C_UpdateDroneVisual_Params
+{
+};
+
+// Function Menu.Menu_C.InpActEvt_Ctrl_D_K2Node_InputKeyEvent_1
+struct AMenu_C_InpActEvt_Ctrl_D_K2Node_InputKeyEvent_1_Params
+{
+	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
 // Function Menu.Menu_C.ReceiveBeginPlay
 struct AMenu_C_ReceiveBeginPlay_Params
 {

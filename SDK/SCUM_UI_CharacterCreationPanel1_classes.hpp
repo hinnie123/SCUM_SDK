@@ -145,7 +145,6 @@ public:
 	}
 
 
-	void ApplyPenisAttributeModifiers();
 	void GetPenisSize(float* Size);
 	void IsProfileNameInUse(const struct FString& Name, bool* Result);
 	void SetDefaultName();

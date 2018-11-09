@@ -14,11 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.ApplyPenisAttributeModifiers
-struct UUI_CharacterCreationPanel1_C_ApplyPenisAttributeModifiers_Params
-{
-};
-
 // Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.GetPenisSize
 struct UUI_CharacterCreationPanel1_C_GetPenisSize_Params
 {
