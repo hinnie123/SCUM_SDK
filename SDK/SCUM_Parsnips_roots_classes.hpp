@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Parsnips_roots.Parsnips_roots_C
-// 0x0000 (0x07C0 - 0x07C0)
+// 0x0000 (0x07E0 - 0x07E0)
 class AParsnips_roots_C : public AFoodItem
 {
 public:

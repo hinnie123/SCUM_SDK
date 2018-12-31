@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Jar.Jar_C
-// 0x0000 (0x06F8 - 0x06F8)
+// 0x0000 (0x0718 - 0x0718)
 class AJar_C : public AEquipmentItem
 {
 public:

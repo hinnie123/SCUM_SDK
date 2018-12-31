@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Currant.Currant_C
-// 0x0000 (0x07C0 - 0x07C0)
+// 0x0000 (0x07E0 - 0x07E0)
 class ACurrant_C : public AFoodItem
 {
 public:

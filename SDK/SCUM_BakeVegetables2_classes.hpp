@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BakeVegetables2.BakeVegetables2_C
-// 0x0000 (0x07D0 - 0x07D0)
+// 0x0000 (0x07F0 - 0x07F0)
 class ABakeVegetables2_C : public ACookedFoodItem
 {
 public:

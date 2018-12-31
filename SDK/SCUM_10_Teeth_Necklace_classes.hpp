@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass 10_Teeth_Necklace.10_Teeth_Necklace_C
-// 0x0000 (0x0760 - 0x0760)
+// 0x0000 (0x0780 - 0x0780)
 class A10_Teeth_Necklace_C : public AClothesItem
 {
 public:

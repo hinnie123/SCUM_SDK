@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Rare_03.Rare_03_C
-// 0x0000 (0x06E0 - 0x06E0)
+// 0x0000 (0x0700 - 0x0700)
 class ARare_03_C : public AItem
 {
 public:

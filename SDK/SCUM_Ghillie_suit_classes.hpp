@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Ghillie_suit.Ghillie_suit_C
-// 0x0000 (0x0760 - 0x0760)
+// 0x0000 (0x0780 - 0x0780)
 class AGhillie_suit_C : public AClothesItem
 {
 public:

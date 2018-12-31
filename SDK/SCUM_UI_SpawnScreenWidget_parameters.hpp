@@ -55,9 +55,6 @@ struct UUI_SpawnScreenWidget_C_GetButtonVisibility_Params
 // Function UI_SpawnScreenWidget.UI_SpawnScreenWidget_C.OnSpawnAccept
 struct UUI_SpawnScreenWidget_C_OnSpawnAccept_Params
 {
-	struct FGeometry                                   MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
-	struct FPointerEvent                               MouseEvent;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FEventReply                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
 // Function UI_SpawnScreenWidget.UI_SpawnScreenWidget_C.UpdateInfo

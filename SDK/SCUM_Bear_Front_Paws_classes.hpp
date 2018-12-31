@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bear_Front_Paws.Bear_Front_Paws_C
-// 0x0000 (0x06F8 - 0x06F8)
+// 0x0000 (0x0718 - 0x0718)
 class ABear_Front_Paws_C : public AEquipmentItem
 {
 public:

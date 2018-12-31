@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Lycoperdon_Gigantea.Lycoperdon_Gigantea_C
-// 0x0000 (0x07C0 - 0x07C0)
+// 0x0000 (0x07E0 - 0x07E0)
 class ALycoperdon_Gigantea_C : public AFoodItem
 {
 public:

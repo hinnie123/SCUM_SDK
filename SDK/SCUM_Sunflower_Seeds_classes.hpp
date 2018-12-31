@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Sunflower_Seeds.Sunflower_Seeds_C
-// 0x0000 (0x07C0 - 0x07C0)
+// 0x0000 (0x07E0 - 0x07E0)
 class ASunflower_Seeds_C : public AFoodItem
 {
 public:

@@ -6670,6 +6670,24 @@ struct ADefaultPawn_LookUpAtRate_Params
 	float                                              Rate;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Engine.SpringArmComponent.IsCollisionFixApplied
+struct USpringArmComponent_IsCollisionFixApplied_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.SpringArmComponent.GetUnfixedCameraPosition
+struct USpringArmComponent_GetUnfixedCameraPosition_Params
+{
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.SpringArmComponent.GetTargetRotation
+struct USpringArmComponent_GetTargetRotation_Params
+{
+	struct FRotator                                    ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
 // Function Engine.WorldSettings.OnRep_WorldGravityZ
 struct AWorldSettings_OnRep_WorldGravityZ_Params
 {
@@ -7380,24 +7398,6 @@ struct UCameraComponent_AddOrUpdateBlendable_Params
 {
 	TScriptInterface<class UBlendableInterface>        InBlendableObject;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              InWeight;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.SpringArmComponent.IsCollisionFixApplied
-struct USpringArmComponent_IsCollisionFixApplied_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.SpringArmComponent.GetUnfixedCameraPosition
-struct USpringArmComponent_GetUnfixedCameraPosition_Params
-{
-	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.SpringArmComponent.GetTargetRotation
-struct USpringArmComponent_GetTargetRotation_Params
-{
-	struct FRotator                                    ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
 };
 
 // Function Engine.ProjectileMovementComponent.StopSimulating
@@ -9711,7 +9711,7 @@ struct UGameplayStatics_RemovePlayer_Params
 // Function Engine.GameplayStatics.RebaseZeroOriginOntoLocal
 struct UGameplayStatics_RebaseZeroOriginOntoLocal_Params
 {
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     WorldContextObject;                                       // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     WorldLocation;                                            // (Parm, IsPlainOldData)
 	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
 };
@@ -9719,7 +9719,7 @@ struct UGameplayStatics_RebaseZeroOriginOntoLocal_Params
 // Function Engine.GameplayStatics.RebaseLocalOriginOntoZero
 struct UGameplayStatics_RebaseLocalOriginOntoZero_Params
 {
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     WorldContextObject;                                       // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     WorldLocation;                                            // (Parm, IsPlainOldData)
 	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
 };

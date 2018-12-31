@@ -14,6 +14,12 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function HUD.HUD_C.GetChatWidget
+struct UHUD_C_GetChatWidget_Params
+{
+	class UChatWidget*                                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
 // Function HUD.HUD_C.GetVisibility_1
 struct UHUD_C_GetVisibility_1_Params
 {
@@ -290,6 +296,7 @@ struct UHUD_C_AddMessageToScreen_Params
 {
 	struct FText*                                      Text;                                                     // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool*                                              beep;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor*                               Color;                                                    // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 };
 
 // Function HUD.HUD_C.AddTeammateName

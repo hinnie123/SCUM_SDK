@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Cal20mm_AmmoBoxOpen.Cal20mm_AmmoBoxOpen_C
-// 0x0000 (0x06F0 - 0x06F0)
+// 0x0000 (0x0710 - 0x0710)
 class ACal20mm_AmmoBoxOpen_C : public AAmmunitionItem
 {
 public:

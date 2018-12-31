@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Leather_Sheet.Leather_Sheet_C
-// 0x0000 (0x06F8 - 0x06F8)
+// 0x0000 (0x0718 - 0x0718)
 class ALeather_Sheet_C : public AEquipmentItem
 {
 public:

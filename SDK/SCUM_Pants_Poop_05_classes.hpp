@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Pants_Poop_05.Pants_Poop_05_C
-// 0x0000 (0x0760 - 0x0760)
+// 0x0000 (0x0780 - 0x0780)
 class APants_Poop_05_C : public AClothesItem
 {
 public:

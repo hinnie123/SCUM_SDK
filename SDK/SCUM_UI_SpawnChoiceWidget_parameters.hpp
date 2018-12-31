@@ -56,7 +56,7 @@ struct UUI_SpawnChoiceWidget_C_ExecuteUbergraph_UI_SpawnChoiceWidget_Params
 // Function UI_SpawnChoiceWidget.UI_SpawnChoiceWidget_C.OnClicked__DelegateSignature
 struct UUI_SpawnChoiceWidget_C_OnClicked__DelegateSignature_Params
 {
-	class UUI_SpawnChoiceWidget_C*                     this_no_u;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UUI_SpawnChoiceWidget_C*                     _this;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 }

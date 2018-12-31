@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Zombie_Woodcutter_Shirt_03.Zombie_Woodcutter_Shirt_03_C
-// 0x0000 (0x0760 - 0x0760)
+// 0x0000 (0x0780 - 0x0780)
 class AZombie_Woodcutter_Shirt_03_C : public AClothesItem
 {
 public:

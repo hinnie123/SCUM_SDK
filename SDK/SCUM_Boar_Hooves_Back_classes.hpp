@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Boar_Hooves_Back.Boar_Hooves_Back_C
-// 0x0000 (0x06F8 - 0x06F8)
+// 0x0000 (0x0718 - 0x0718)
 class ABoar_Hooves_Back_C : public AEquipmentItem
 {
 public:

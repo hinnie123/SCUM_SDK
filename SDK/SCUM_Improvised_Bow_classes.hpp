@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Improvised_Bow.Improvised_Bow_C
-// 0x0008 (0x1148 - 0x1140)
+// 0x0008 (0x1178 - 0x1170)
 class AImprovised_Bow_C : public AWeaponBow
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1140(0x0008) (Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1170(0x0008) (Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

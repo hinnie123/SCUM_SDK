@@ -97,6 +97,12 @@ struct UUI_VicinityItem_C_Tick_Params
 	float*                                             InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function UI_VicinityItem.UI_VicinityItem_C.OnItemDestroyed
+struct UUI_VicinityItem_C_OnItemDestroyed_Params
+{
+	class AActor*                                      Item;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function UI_VicinityItem.UI_VicinityItem_C.ExecuteUbergraph_UI_VicinityItem
 struct UUI_VicinityItem_C_ExecuteUbergraph_UI_VicinityItem_Params
 {

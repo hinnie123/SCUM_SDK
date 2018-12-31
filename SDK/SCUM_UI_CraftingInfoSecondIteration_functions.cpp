@@ -32,8 +32,30 @@ void UUI_CraftingInfoSecondIteration_C::Init(class AItem** itemCDO)
 }
 
 
+// Function UI_CraftingInfoSecondIteration.UI_CraftingInfoSecondIteration_C.SetCaptionAndDescription
+// (Event, Protected, HasOutParms, BlueprintEvent)
+// Parameters:
+// struct FText*                  Caption                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FText*                  Description                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UUI_CraftingInfoSecondIteration_C::SetCaptionAndDescription(struct FText* Caption, struct FText* Description)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingInfoSecondIteration.UI_CraftingInfoSecondIteration_C.SetCaptionAndDescription");
+
+	UUI_CraftingInfoSecondIteration_C_SetCaptionAndDescription_Params params;
+	params.Caption = Caption;
+	params.Description = Description;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function UI_CraftingInfoSecondIteration.UI_CraftingInfoSecondIteration_C.ExecuteUbergraph_UI_CraftingInfoSecondIteration
-// ()
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

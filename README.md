@@ -1,15 +1,15 @@
 # SCUM_SDK
 SDK for the game SCUM
 
-UPDATED FOR LATEST VERSION: 0.1.20.10186 [Nov 09, 2018]
+UPDATED FOR LATEST VERSION: 0.1.22.11076 [Dec 23, 2018]
 
 Useful game info:
 ```
 Objects:
-0x34592A0 (already in sdk)
+0x34E2EA0 (already in sdk)
 
 TotalObjects: 
-0x34592B4 (already in sdk)
+0x34E2EB4 (already in sdk)
 
 GNames:
 48 89 05 ? ? ? ? 48 83 C4 28 C3

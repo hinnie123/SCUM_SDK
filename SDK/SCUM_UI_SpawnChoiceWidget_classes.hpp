@@ -44,7 +44,7 @@ public:
 	void OnSynchronizeProperties();
 	void BndEvt__Button_0_K2Node_ComponentBoundEvent_139_OnButtonClickedEvent__DelegateSignature();
 	void ExecuteUbergraph_UI_SpawnChoiceWidget(int EntryPoint);
-	void OnClicked__DelegateSignature(class UUI_SpawnChoiceWidget_C* this_no_u);
+	void OnClicked__DelegateSignature(class UUI_SpawnChoiceWidget_C* _this);
 };
 
 

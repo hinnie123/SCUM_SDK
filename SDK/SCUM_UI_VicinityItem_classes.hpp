@@ -42,6 +42,7 @@ public:
 	void Construct();
 	void BndEvt__UI_InventoryItem_K2Node_ComponentBoundEvent_2_ExpandedStateChanged__DelegateSignature(class UUI_InventoryItem_C* inventoryItemWidget, bool IsExpanded);
 	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
+	void OnItemDestroyed(class AActor* Item);
 	void ExecuteUbergraph_UI_VicinityItem(int EntryPoint);
 };
 

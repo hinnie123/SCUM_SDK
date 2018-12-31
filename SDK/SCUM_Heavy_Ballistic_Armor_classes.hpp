@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Heavy_Ballistic_Armor.Heavy_Ballistic_Armor_C
-// 0x0000 (0x0760 - 0x0760)
+// 0x0000 (0x0780 - 0x0780)
 class AHeavy_Ballistic_Armor_C : public AClothesItem
 {
 public:

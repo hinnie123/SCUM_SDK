@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Salted_fish_02.Salted_fish_02_C
-// 0x0000 (0x07D0 - 0x07D0)
+// 0x0000 (0x07F0 - 0x07F0)
 class ASalted_fish_02_C : public ASaltedFoodItem
 {
 public:

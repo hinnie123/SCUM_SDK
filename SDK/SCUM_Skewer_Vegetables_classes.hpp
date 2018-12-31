@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Skewer_Vegetables.Skewer_Vegetables_C
-// 0x0000 (0x07D0 - 0x07D0)
+// 0x0000 (0x07F0 - 0x07F0)
 class ASkewer_Vegetables_C : public ACookedFoodItem
 {
 public:

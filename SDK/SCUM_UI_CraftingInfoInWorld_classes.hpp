@@ -33,6 +33,7 @@ public:
 
 
 	void Init(class AItem** itemCDO);
+	void SetCaptionAndDescription(struct FText* Caption, struct FText* Description);
 	void ExecuteUbergraph_UI_CraftingInfoInWorld(int EntryPoint);
 };
 

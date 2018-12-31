@@ -201,14 +201,14 @@ void UOptionsWidget_C::SetDynamicShadowsQuality(int Value)
 // Function OptionsWidget.OptionsWidget_C.UpdateSupportedResolutions
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           fullscreen                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Fullscreen                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UOptionsWidget_C::UpdateSupportedResolutions(bool fullscreen)
+void UOptionsWidget_C::UpdateSupportedResolutions(bool Fullscreen)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OptionsWidget.OptionsWidget_C.UpdateSupportedResolutions");
 
 	UOptionsWidget_C_UpdateSupportedResolutions_Params params;
-	params.fullscreen = fullscreen;
+	params.Fullscreen = Fullscreen;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1599,6 +1599,47 @@ void UOptionsWidget_C::BndEvt__ConcealedMode_K2Node_ComponentBoundEvent_2_OnValu
 	params.Index = Index;
 	params.OldIndex = OldIndex;
 	params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function OptionsWidget.OptionsWidget_C.BndEvt__RealTimeRadiosity_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            OldIndex                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText                   Value                          (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UOptionsWidget_C::BndEvt__RealTimeRadiosity_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature(int Index, int OldIndex, const struct FText& Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function OptionsWidget.OptionsWidget_C.BndEvt__RealTimeRadiosity_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature");
+
+	UOptionsWidget_C_BndEvt__RealTimeRadiosity_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature_Params params;
+	params.Index = Index;
+	params.OldIndex = OldIndex;
+	params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function OptionsWidget.OptionsWidget_C.BndEvt__FOVSlider_K2Node_ComponentBoundEvent_4_MouseUp__DelegateSignature
+// (BlueprintEvent)
+
+void UOptionsWidget_C::BndEvt__FOVSlider_K2Node_ComponentBoundEvent_4_MouseUp__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function OptionsWidget.OptionsWidget_C.BndEvt__FOVSlider_K2Node_ComponentBoundEvent_4_MouseUp__DelegateSignature");
+
+	UOptionsWidget_C_BndEvt__FOVSlider_K2Node_ComponentBoundEvent_4_MouseUp__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 

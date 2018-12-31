@@ -63,23 +63,6 @@ void ABP_RainController_C::UserConstructionScript()
 }
 
 
-// Function BP_RainController.BP_RainController_C.ShiftCam
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_RainController_C::ShiftCam()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_RainController.BP_RainController_C.ShiftCam");
-
-	ABP_RainController_C_ShiftCam_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_RainController.BP_RainController_C.BndEvt__LightningEmitter_K2Node_ComponentBoundEvent_0_ParticleSpawnSignature__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
@@ -134,6 +117,23 @@ void ABP_RainController_C::ReceiveDestroyed()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RainController.BP_RainController_C.ReceiveDestroyed");
 
 	ABP_RainController_C_ReceiveDestroyed_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_RainController.BP_RainController_C.ShiftCam
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_RainController_C::ShiftCam()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_RainController.BP_RainController_C.ShiftCam");
+
+	ABP_RainController_C_ShiftCam_Params params;
 
 	auto flags = fn->FunctionFlags;
 

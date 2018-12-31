@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Cal500SW_Ammoboxclosed.Cal500SW_Ammoboxclosed_C
-// 0x0000 (0x06F0 - 0x06F0)
+// 0x0000 (0x0710 - 0x0710)
 class ACal500SW_Ammoboxclosed_C : public AAmmunitionItem
 {
 public:

@@ -93,21 +93,21 @@ struct FEventReply UUI_MultipleProgressBar_C::OnMouseMove(struct FGeometry* MyGe
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Percentage1                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          percentage2                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          percentage3                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Percentage2                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Percentage3                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Percentage4                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          percentage5                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Percentage5                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_MultipleProgressBar_C::SetPercentages(float Percentage1, float percentage2, float percentage3, float Percentage4, float percentage5)
+void UUI_MultipleProgressBar_C::SetPercentages(float Percentage1, float Percentage2, float Percentage3, float Percentage4, float Percentage5)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_MultipleProgressBar.UI_MultipleProgressBar_C.SetPercentages");
 
 	UUI_MultipleProgressBar_C_SetPercentages_Params params;
 	params.Percentage1 = Percentage1;
-	params.percentage2 = percentage2;
-	params.percentage3 = percentage3;
+	params.Percentage2 = Percentage2;
+	params.Percentage3 = Percentage3;
 	params.Percentage4 = Percentage4;
-	params.percentage5 = percentage5;
+	params.Percentage5 = Percentage5;
 
 	auto flags = fn->FunctionFlags;
 

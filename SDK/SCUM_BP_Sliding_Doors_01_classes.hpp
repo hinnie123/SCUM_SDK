@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Sliding_Doors_01.BP_Sliding_Doors_01_C
-// 0x0000 (0x0410 - 0x0410)
+// 0x0000 (0x0458 - 0x0458)
 class ABP_Sliding_Doors_01_C : public ADoubleSlidingDoorStatic
 {
 public:

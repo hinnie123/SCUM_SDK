@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Zombie_Marine_Cap_06.Zombie_Marine_Cap_06_C
-// 0x0000 (0x0760 - 0x0760)
+// 0x0000 (0x0780 - 0x0780)
 class AZombie_Marine_Cap_06_C : public AClothesItem
 {
 public:

@@ -2985,6 +2985,45 @@ public:
 };
 
 
+// Class Engine.SpringArmComponent
+// 0x0080 (0x02C0 - 0x0240)
+class USpringArmComponent : public USceneComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0240(0x0008) MISSED OFFSET
+	struct FVector                                     TargetOffset;                                             // 0x0248(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	float                                              ProbeSize;                                                // 0x0254(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECollisionChannel>                     ProbeChannel;                                             // 0x0258(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0259(0x0003) MISSED OFFSET
+	unsigned char                                      bDoCollisionTest : 1;                                     // 0x025C(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bUsePawnControlRotation : 1;                              // 0x025C(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bInheritPitch : 1;                                        // 0x025C(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bInheritYaw : 1;                                          // 0x025C(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bInheritRoll : 1;                                         // 0x025C(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bEnableCameraLag : 1;                                     // 0x025C(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bEnableCameraRotationLag : 1;                             // 0x025C(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bUseCameraLagSubstepping : 1;                             // 0x025C(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bDrawDebugLagMarkers : 1;                                 // 0x025D(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData02[0x2];                                       // 0x025E(0x0002) MISSED OFFSET
+	float                                              CameraLagSpeed;                                           // 0x0260(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              CameraRotationLagSpeed;                                   // 0x0264(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              CameraLagMaxTimeStep;                                     // 0x0268(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              CameraLagMaxDistance;                                     // 0x026C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x50];                                      // 0x0270(0x0050) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Engine.SpringArmComponent");
+		return ptr;
+	}
+
+
+	bool IsCollisionFixApplied();
+	struct FVector GetUnfixedCameraPosition();
+	struct FRotator GetTargetRotation();
+};
+
+
 // Class Engine.PhysicsVolume
 // 0x0010 (0x0370 - 0x0360)
 class APhysicsVolume : public AVolume
@@ -3472,45 +3511,6 @@ public:
 	void RemoveBlendable(const TScriptInterface<class UBlendableInterface>& InBlendableObject);
 	void GetCameraView(float DeltaTime, struct FMinimalViewInfo* DesiredView);
 	void AddOrUpdateBlendable(const TScriptInterface<class UBlendableInterface>& InBlendableObject, float InWeight);
-};
-
-
-// Class Engine.SpringArmComponent
-// 0x0080 (0x02C0 - 0x0240)
-class USpringArmComponent : public USceneComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0240(0x0008) MISSED OFFSET
-	struct FVector                                     TargetOffset;                                             // 0x0248(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	float                                              ProbeSize;                                                // 0x0254(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ECollisionChannel>                     ProbeChannel;                                             // 0x0258(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0259(0x0003) MISSED OFFSET
-	unsigned char                                      bDoCollisionTest : 1;                                     // 0x025C(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bUsePawnControlRotation : 1;                              // 0x025C(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bInheritPitch : 1;                                        // 0x025C(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bInheritYaw : 1;                                          // 0x025C(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bInheritRoll : 1;                                         // 0x025C(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bEnableCameraLag : 1;                                     // 0x025C(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bEnableCameraRotationLag : 1;                             // 0x025C(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bUseCameraLagSubstepping : 1;                             // 0x025C(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bDrawDebugLagMarkers : 1;                                 // 0x025D(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData02[0x2];                                       // 0x025E(0x0002) MISSED OFFSET
-	float                                              CameraLagSpeed;                                           // 0x0260(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              CameraRotationLagSpeed;                                   // 0x0264(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              CameraLagMaxTimeStep;                                     // 0x0268(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              CameraLagMaxDistance;                                     // 0x026C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x50];                                      // 0x0270(0x0050) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Engine.SpringArmComponent");
-		return ptr;
-	}
-
-
-	bool IsCollisionFixApplied();
-	struct FVector GetUnfixedCameraPosition();
-	struct FRotator GetTargetRotation();
 };
 
 
@@ -21111,7 +21111,7 @@ public:
 class UTouchInterface : public UObject
 {
 public:
-	TArray<struct FTouchInputControl>                  Controls;                                                 // 0x0028(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FTouchInputControl>                  controls;                                                 // 0x0028(0x0010) (Edit, ZeroConstructor)
 	float                                              ActiveOpacity;                                            // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              InactiveOpacity;                                          // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              TimeUntilDeactive;                                        // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)

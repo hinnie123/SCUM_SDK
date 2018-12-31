@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Police_Zombie_helmet2.Police_Zombie_helmet2_C
-// 0x0000 (0x0760 - 0x0760)
+// 0x0000 (0x0780 - 0x0780)
 class APolice_Zombie_helmet2_C : public AClothesItem
 {
 public:

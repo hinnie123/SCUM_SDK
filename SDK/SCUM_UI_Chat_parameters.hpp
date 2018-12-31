@@ -14,6 +14,22 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function UI_Chat.UI_Chat_C.OnPreviewKeyDown
+struct UUI_Chat_C_OnPreviewKeyDown_Params
+{
+	struct FGeometry*                                  MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	struct FKeyEvent*                                  InKeyEvent;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FEventReply                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function UI_Chat.UI_Chat_C.OnKeyDown
+struct UUI_Chat_C_OnKeyDown_Params
+{
+	struct FGeometry*                                  MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	struct FKeyEvent*                                  InKeyEvent;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FEventReply                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
 // Function UI_Chat.UI_Chat_C.SetInputFocusIfNeeded
 struct UUI_Chat_C_SetInputFocusIfNeeded_Params
 {

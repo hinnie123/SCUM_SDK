@@ -22458,6 +22458,72 @@ void ADefaultPawn::LookUpAtRate(float Rate)
 }
 
 
+// Function Engine.SpringArmComponent.IsCollisionFixApplied
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USpringArmComponent::IsCollisionFixApplied()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.SpringArmComponent.IsCollisionFixApplied");
+
+	USpringArmComponent_IsCollisionFixApplied_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SpringArmComponent.GetUnfixedCameraPosition
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FVector USpringArmComponent::GetUnfixedCameraPosition()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.SpringArmComponent.GetUnfixedCameraPosition");
+
+	USpringArmComponent_GetUnfixedCameraPosition_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SpringArmComponent.GetTargetRotation
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FRotator USpringArmComponent::GetTargetRotation()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.SpringArmComponent.GetTargetRotation");
+
+	USpringArmComponent_GetTargetRotation_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.WorldSettings.OnRep_WorldGravityZ
 // (Native, Public)
 
@@ -24777,72 +24843,6 @@ void UCameraComponent::AddOrUpdateBlendable(const TScriptInterface<class UBlenda
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.SpringArmComponent.IsCollisionFixApplied
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool USpringArmComponent::IsCollisionFixApplied()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.SpringArmComponent.IsCollisionFixApplied");
-
-	USpringArmComponent_IsCollisionFixApplied_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SpringArmComponent.GetUnfixedCameraPosition
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
-
-struct FVector USpringArmComponent::GetUnfixedCameraPosition()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.SpringArmComponent.GetUnfixedCameraPosition");
-
-	USpringArmComponent_GetUnfixedCameraPosition_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SpringArmComponent.GetTargetRotation
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
-
-struct FRotator USpringArmComponent::GetTargetRotation()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.SpringArmComponent.GetTargetRotation");
-
-	USpringArmComponent_GetTargetRotation_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
 }
 
 
@@ -32542,7 +32542,7 @@ void UGameplayStatics::STATIC_RemovePlayer(class APlayerController* Player, bool
 // Function Engine.GameplayStatics.RebaseZeroOriginOntoLocal
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 WorldLocation                  (Parm, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
@@ -32568,7 +32568,7 @@ struct FVector UGameplayStatics::STATIC_RebaseZeroOriginOntoLocal(class UObject*
 // Function Engine.GameplayStatics.RebaseLocalOriginOntoZero
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 WorldLocation                  (Parm, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 

@@ -25,6 +25,7 @@ struct UMessage_C_Init_Params
 	struct FText                                       Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
 	TEnumAsByte<EMessageType>                          Type;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Duration;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                Color;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 };
 
 // Function Message.Message_C.Tick

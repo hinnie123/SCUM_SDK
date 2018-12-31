@@ -35,8 +35,9 @@ void UMessage_C::StartFade()
 // struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // TEnumAsByte<EMessageType>      Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Duration                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor            Color                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UMessage_C::Init(const struct FText& Text, TEnumAsByte<EMessageType> Type, float Duration)
+void UMessage_C::Init(const struct FText& Text, TEnumAsByte<EMessageType> Type, float Duration, const struct FLinearColor& Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Message.Message_C.Init");
 
@@ -44,6 +45,7 @@ void UMessage_C::Init(const struct FText& Text, TEnumAsByte<EMessageType> Type, 
 	params.Text = Text;
 	params.Type = Type;
 	params.Duration = Duration;
+	params.Color = Color;
 
 	auto flags = fn->FunctionFlags;
 

@@ -90,14 +90,19 @@ enum class EInteractionType : uint8_t
 	GestureYouAreDead              = 72,
 	GestureFY                      = 73,
 	GesturePoint                   = 74,
-	PlayInstrument                 = 75,
-	MakeUnconscious                = 76,
-	PacifyAnimal                   = 77,
-	TameAnimal                     = 78,
-	LearnAnimal                    = 79,
-	CommandAnimal                  = 80,
-	FeedAnimal                     = 81,
-	EInteractionType_MAX           = 82
+	GestureHeart                   = 75,
+	PlayInstrument                 = 76,
+	MakeUnconscious                = 77,
+	PacifyAnimal                   = 78,
+	TameAnimal                     = 79,
+	LearnAnimal                    = 80,
+	CommandAnimal                  = 81,
+	FeedAnimal                     = 82,
+	Buy                            = 83,
+	Maintain                       = 84,
+	Lockpick                       = 85,
+	AddUpgrade                     = 86,
+	EInteractionType_MAX           = 87
 };
 
 
@@ -167,7 +172,8 @@ enum class EDoorStateFlags : uint8_t
 	Locked                         = 2,
 	HasPower                       = 3,
 	ChangeSide                     = 4,
-	EDoorStateFlags_MAX            = 5
+	HasLock                        = 5,
+	EDoorStateFlags_MAX            = 6
 };
 
 
@@ -265,6 +271,16 @@ enum class ECharacterImpactSourceSoundCategory : uint8_t
 	Blunt_Metal                    = 8,
 	Sharp_Metal                    = 9,
 	ECharacterImpactSourceSoundCategory_MAX = 10
+};
+
+
+// Enum ConZ.EConZPxDominanceGroup
+enum class EConZPxDominanceGroup : uint8_t
+{
+	Default                        = 0,
+	MediumPawns                    = 1,
+	LargePawns                     = 2,
+	EConZPxDominanceGroup_MAX      = 3
 };
 
 
@@ -517,8 +533,8 @@ enum class EPlayableInstrumentTone : uint8_t
 	G                              = 7,
 	Ab                             = 8,
 	A                              = 9,
-	B                              = 10,
-	Bb                             = 11,
+	Bb                             = 10,
+	B                              = 11,
 	C2                             = 12,
 	Count                          = 13,
 	EPlayableInstrumentTone_MAX    = 14
@@ -536,8 +552,9 @@ enum class EWeaponCategory : uint8_t
 	Shotguns                       = 5,
 	AutomaticRifles                = 6,
 	SniperRifles                   = 7,
-	Count                          = 8,
-	EWeaponCategory_MAX            = 9
+	Bow                            = 8,
+	Count                          = 9,
+	EWeaponCategory_MAX            = 10
 };
 
 
@@ -620,6 +637,16 @@ enum class EDodgeDirectionType : uint8_t
 };
 
 
+// Enum ConZ.EHumanRace
+enum class EHumanRace : uint8_t
+{
+	Caucasian                      = 0,
+	Mongoloid                      = 1,
+	Negroid                        = 2,
+	EHumanRace_MAX                 = 3
+};
+
+
 // Enum ConZ.EChatType
 enum class EChatType : uint8_t
 {
@@ -658,11 +685,12 @@ enum class EClothesType : uint8_t
 	Legs                           = 11,
 	Feet                           = 12,
 	Underwear                      = 13,
-	Back                           = 14,
-	Waist                          = 15,
-	Suit                           = 16,
-	Count                          = 17,
-	EClothesType_MAX               = 18
+	PenisWarmer                    = 14,
+	Back                           = 15,
+	Waist                          = 16,
+	Suit                           = 17,
+	Count                          = 18,
+	EClothesType_MAX               = 19
 };
 
 
@@ -1455,7 +1483,8 @@ enum class EImpactSeverity : uint8_t
 	Light                          = 0,
 	Medium                         = 1,
 	Heavy                          = 2,
-	EImpactSeverity_MAX            = 3
+	Count                          = 3,
+	EImpactSeverity_MAX            = 4
 };
 
 
@@ -1866,9 +1895,11 @@ enum class EPrisonerMontage : uint8_t
 	GestureYouAreDead              = 39,
 	GestureFY                      = 40,
 	GesturePoint                   = 41,
-	CommitSuicide                  = 42,
-	Count                          = 43,
-	EPrisonerMontage_MAX           = 44
+	GestureHeart                   = 42,
+	CommitSuicide                  = 43,
+	LockpickRegular                = 44,
+	Count                          = 45,
+	EPrisonerMontage_MAX           = 46
 };
 
 
@@ -2076,7 +2107,9 @@ enum class ESkillReplicationID : uint8_t
 	CamouflageSkill                = 17,
 	TacticsSkill                   = 18,
 	ThrowingSkill                  = 19,
-	ESkillReplicationID_MAX        = 20
+	ArcherySkill                   = 20,
+	ThieverySkill                  = 21,
+	ESkillReplicationID_MAX        = 22
 };
 
 
@@ -2275,7 +2308,10 @@ enum class EWidgetType : uint8_t
 	GameEventMiniScoreboardWidgetClass = 31,
 	CircularMenuWidgetClass        = 32,
 	CircularMenuSegmentWidgetClass = 33,
-	EWidgetType_MAX                = 34
+	LockpickingWidgetClass         = 34,
+	DoorUpgradeWidgetClass         = 35,
+	UpgradeWidgetClass             = 36,
+	EWidgetType_MAX                = 37
 };
 
 
@@ -2437,6 +2473,21 @@ struct FInteractionStruct
 	unsigned char                                      UnknownData00[0x2F];                                      // 0x0001(0x002F) MISSED OFFSET
 };
 
+// ScriptStruct ConZ.HitEffects
+// 0x0038
+struct FHitEffects
+{
+	float                                              SpeedThreshold;                                           // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
+	class UParticleSystem*                             ParticleSystem;                                           // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     ParticlesScale;                                           // 0x0010(0x000C) (Edit, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
+	class UAkAudioEvent*                               AudioEvent;                                               // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      CameraShake;                                              // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              CameraShakeScale;                                         // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+};
+
 // ScriptStruct ConZ.MeleeWeaponDesc
 // 0x0028
 struct FMeleeWeaponDesc
@@ -2527,6 +2578,46 @@ struct FBruisePatch
 	struct FVector2D                                   Offset;                                                   // 0x0028(0x0008) (Edit, IsPlainOldData)
 	bool                                               Mute;                                                     // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
+};
+
+// ScriptStruct ConZ.WindowMarker
+// 0x0040
+struct FWindowMarker
+{
+	bool                                               IsVaultable;                                              // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               IsFortifiable;                                            // 0x0001(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x0002(0x0006) MISSED OFFSET
+	class UWindowFortificationsType*                   WindowFortificationsType;                                 // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<int>                                        AdditionalMarkerIndicesToModify;                          // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool                                               DidIFailToCorrectlyPlaceWindowMarkers;                    // 0x0020(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0021(0x0003) MISSED OFFSET
+	struct FVector                                     Vertex1;                                                  // 0x0024(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FVector                                     Vertex2;                                                  // 0x0030(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	float                                              FortificationOffset;                                      // 0x003C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct ConZ.WindowMarkerModifier
+// 0x0008
+struct FWindowMarkerModifier
+{
+	int                                                Index;                                                    // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	bool                                               IsVaultable;                                              // 0x0004(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               IsFortifiable;                                            // 0x0005(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0006(0x0002) MISSED OFFSET
+};
+
+// ScriptStruct ConZ.DbIntegerId
+// 0x0008
+struct FDbIntegerId
+{
+	int64_t                                            Value;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct ConZ.BuildingsArray
+// 0x0010
+struct FBuildingsArray
+{
+	TArray<class ABuilding*>                           _buildings;                                               // 0x0000(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct ConZ.BodyWeaponAnimation
@@ -2950,6 +3041,50 @@ struct FCharacterCreationMenuContext
 	struct FString                                     ServerAuthToken;                                          // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
+// ScriptStruct ConZ.ConZTeamMember
+// 0x0008
+struct FConZTeamMember
+{
+	struct FDbIntegerId                                UserProfileId;                                            // 0x0000(0x0008) (Edit, BlueprintVisible)
+};
+
+// ScriptStruct ConZ.VehicleSpawnParameters
+// 0x0024
+struct FVehicleSpawnParameters
+{
+	struct FVector                                     MinSpawnLocationOffset;                                   // 0x0000(0x000C) (Edit, IsPlainOldData)
+	struct FVector                                     MaxSpawnLocationOffset;                                   // 0x000C(0x000C) (Edit, IsPlainOldData)
+	struct FVector                                     AdminSpawnLocationOffset;                                 // 0x0018(0x000C) (Edit, IsPlainOldData)
+};
+
+// ScriptStruct ConZ.VehicleDamagedEffectsParameters
+// 0x0060
+struct FVehicleDamagedEffectsParameters
+{
+	struct FFloatRange                                 HealthRatioRange;                                         // 0x0000(0x0010) (Edit)
+	struct FTransform                                  Transform;                                                // 0x0010(0x0030) (Edit, IsPlainOldData)
+	class UParticleSystem*                             ParticleSystem;                                           // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               StartAudioEvent;                                          // 0x0048(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               StopAudioEvent;                                           // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DeactivationDelay;                                        // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct ConZ.VehicleImpactEffects
+// 0x0038
+struct FVehicleImpactEffects
+{
+	float                                              HitImpulseThreshold;                                      // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
+	class UParticleSystem*                             ParticleSystem;                                           // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     ParticlesScale;                                           // 0x0010(0x000C) (Edit, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
+	class UAkAudioEvent*                               AudioEvent;                                               // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      CameraShake;                                              // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              CameraShakeScale;                                         // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+};
+
 // ScriptStruct ConZ.ItemSpawningSettings
 // 0x0078
 struct FItemSpawningSettings
@@ -3048,11 +3183,12 @@ struct FPossibleItem
 };
 
 // ScriptStruct ConZ.CraftingItem
-// 0x0020
+// 0x0028
 struct FCraftingItem
 {
 	struct FString                                     Description;                                              // 0x0000(0x0010) (Edit, ZeroConstructor)
 	TArray<struct FPossibleItem>                       PossibleItems;                                            // 0x0010(0x0010) (Edit, ZeroConstructor)
+	class UAkAudioEvent*                               FillSound;                                                // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct ConZ.CraftingSkillLevelData
@@ -3064,6 +3200,13 @@ struct FCraftingSkillLevelData
 	float                                              Points;                                                   // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              Probability_Add;                                          // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              Probability_Multiply;                                     // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct ConZ.ItemClassesArray
+// 0x0010
+struct FItemClassesArray
+{
+	TArray<class UClass*>                              ItemClasses;                                              // 0x0000(0x0010) (Edit, ZeroConstructor)
 };
 
 // ScriptStruct ConZ.CraftingRecipeCraftableItem
@@ -3204,13 +3347,6 @@ struct FProjectileImpulseMultiplier
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
 
-// ScriptStruct ConZ.DbIntegerId
-// 0x0008
-struct FDbIntegerId
-{
-	int64_t                                            Value;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
 // ScriptStruct ConZ.DbUserServerHistoryItem
 // 0x0028
 struct FDbUserServerHistoryItem
@@ -3327,13 +3463,15 @@ struct FExamineItemSpawnerConstraint_MaxOccurrencesPerSpawnTypes
 };
 
 // ScriptStruct ConZ.ExamineItemSpawnerData
-// 0x00A0
+// 0x00A8
 struct FExamineItemSpawnerData
 {
 	int                                                MinQuantity;                                              // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	int                                                MaxQuantity;                                              // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FItemSpawnerDataBasedOnPreset               Spawner;                                                  // 0x0008(0x0088) (Edit)
-	TArray<struct FExamineItemSpawnerConstraint_MaxOccurrencesPerSpawnTypes> MaxOccurrencesPerSpawnTypes;                              // 0x0090(0x0010) (Edit, ZeroConstructor)
+	bool                                               AllowDuplicates;                                          // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
+	struct FItemSpawnerDataBasedOnPreset               Spawner;                                                  // 0x0010(0x0088) (Edit)
+	TArray<struct FExamineItemSpawnerConstraint_MaxOccurrencesPerSpawnTypes> MaxOccurrencesPerSpawnTypes;                              // 0x0098(0x0010) (Edit, ZeroConstructor)
 };
 
 // ScriptStruct ConZ.ExamineDataPerItemGroup
@@ -3377,7 +3515,7 @@ struct FFoliageEffectsData
 // 0x0060
 struct FGameEventTeamColours
 {
-	struct FLinearColor                                teamName;                                                 // 0x0000(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	struct FLinearColor                                TeamName;                                                 // 0x0000(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
 	struct FLinearColor                                ParticipantStatsDarker;                                   // 0x0010(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
 	struct FLinearColor                                ParticipantStatsLighter;                                  // 0x0020(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
 	struct FLinearColor                                ParticipantStatsHighlighted;                              // 0x0030(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
@@ -3415,17 +3553,9 @@ struct FLadderMarker
 	bool                                               HasEdge;                                                  // 0x0090(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               IsNarrow;                                                 // 0x0091(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EPhysicalSurface>                      PhysicalSurfaceForSounds;                                 // 0x0092(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xD];                                       // 0x0093(0x000D) MISSED OFFSET
-};
-
-// ScriptStruct ConZ.WindowMarker
-// 0x001C
-struct FWindowMarker
-{
-	bool                                               IsVaultable;                                              // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
-	struct FVector                                     Vertex1;                                                  // 0x0004(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FVector                                     Vertex2;                                                  // 0x0010(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x1];                                       // 0x0093(0x0001) MISSED OFFSET
+	float                                              Thickness;                                                // 0x0094(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x8];                                       // 0x0098(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct ConZ.PhysicalHitReactData
@@ -3742,14 +3872,16 @@ struct FPrisonerMeleeAttackTypes
 };
 
 // ScriptStruct ConZ.PrisonerAppearanceData
-// 0x0028
+// 0x0030
 struct FPrisonerAppearanceData
 {
-	class USkeletalMesh*                               HeadMesh;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UMaterialInstance*                           SkinMaterial;                                             // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UMaterialInstance*                           TorsoMaterial;                                            // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UMaterialInstance*                           HeadMaterial;                                             // 0x0018(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UMaterialInstance*                           PenisMaterial;                                            // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	EHumanRace                                         Race;                                                     // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
+	class USkeletalMesh*                               HeadMesh;                                                 // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UMaterialInstance*                           SkinMaterial;                                             // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UMaterialInstance*                           TorsoMaterial;                                            // 0x0018(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UMaterialInstance*                           HeadMaterial;                                             // 0x0020(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UMaterialInstance*                           PenisMaterial;                                            // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct ConZ.PrisonerNearbyFoliageInstanceInfo
@@ -3769,6 +3901,15 @@ struct FPrisonerNearbyFoliageInstanceInfo
 struct FPrisonerNearbyFoliageInfo
 {
 	TArray<struct FPrisonerNearbyFoliageInstanceInfo>  InstancesInfo;                                            // 0x0000(0x0010) (BlueprintVisible, ZeroConstructor)
+};
+
+// ScriptStruct ConZ.PrisonerMountReplication
+// 0x0010
+struct FPrisonerMountReplication
+{
+	bool                                               HasMountedSlot;                                           // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
+	class UObject*                                     MountedSlot;                                              // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct ConZ.PrisonerTeleportRequest
@@ -4381,14 +4522,15 @@ struct FRunningSkillParametersPerSkillLevel
 };
 
 // ScriptStruct ConZ.SearchPerItemData
-// 0x0018
+// 0x0028
 struct FSearchPerItemData
 {
 	class UClass*                                      ItemClass;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Probability;                                              // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                MinQuantity;                                              // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                MaxQuantity;                                              // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+	TArray<class UPhysicalMaterial*>                   NeededMaterials;                                          // 0x0008(0x0010) (Edit, ZeroConstructor)
+	float                                              Probability;                                              // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                MinQuantity;                                              // 0x001C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                MaxQuantity;                                              // 0x0020(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct ConZ.PatrolPoint
@@ -4468,6 +4610,49 @@ struct FTeamDeathmatchParameters
 	float                                              AreaRestrictionDuration;                                  // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              AreaRestrictionStep;                                      // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              BarrierHeatUpDuration;                                    // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct ConZ.VehicleCorpseBurningParticles
+// 0x0060
+struct FVehicleCorpseBurningParticles
+{
+	class UParticleSystem*                             Particles;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0008(0x0008) MISSED OFFSET
+	struct FTransform                                  ParticlesTransform;                                       // 0x0010(0x0030) (Edit, IsPlainOldData)
+	bool                                               HasHeatEmitter;                                           // 0x0040(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0041(0x0003) MISSED OFFSET
+	struct FHeatEmitter                                HeatEmitter;                                              // 0x0044(0x001C) (Edit)
+};
+
+// ScriptStruct ConZ.VehicleSpawnerDataBasedOnPreset
+// 0x0028
+struct FVehicleSpawnerDataBasedOnPreset
+{
+	class UClass*                                      preset;                                                   // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               OverrideVehicleClasses;                                   // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               OverrideProbability;                                      // 0x0009(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x000A(0x0006) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x10];                                      // 0x000A(0x0010) UNKNOWN PROPERTY: ArrayProperty ConZ.VehicleSpawnerDataBasedOnPreset.VehicleClasses
+	float                                              Probability;                                              // 0x0020(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct ConZ.VehicleSpawnerMarker
+// 0x0060
+struct FVehicleSpawnerMarker
+{
+	struct FTransform                                  Transform;                                                // 0x0000(0x0030) (Edit, IsPlainOldData)
+	struct FVehicleSpawnerDataBasedOnPreset            Spawner;                                                  // 0x0030(0x0028) (Edit)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0058(0x0008) MISSED OFFSET
+};
+
+// ScriptStruct ConZ.VehicleSpawnerData
+// 0x0018
+struct FVehicleSpawnerData
+{
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) UNKNOWN PROPERTY: ArrayProperty ConZ.VehicleSpawnerData.VehicleClasses
+	float                                              Probability;                                              // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct ConZ.Waypoint
@@ -4594,6 +4779,20 @@ struct FAnimalData
 	TArray<class ACorpse*>                             DeadAnimals;                                              // 0x0018(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
 };
 
+// ScriptStruct ConZ.FortificationMarkerParams
+// 0x0030
+struct FFortificationMarkerParams
+{
+	bool                                               IsValid;                                                  // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
+	int                                                MarkerIndex;                                              // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+	class UStaticMesh*                                 Mesh;                                                     // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Location;                                                 // 0x0010(0x000C) (IsPlainOldData)
+	struct FRotator                                    Rotation;                                                 // 0x001C(0x000C) (IsPlainOldData)
+	float                                              Scale;                                                    // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
+};
+
 // ScriptStruct ConZ.HitByMeleeImpactSoundsInfo
 // 0x0010
 struct FHitByMeleeImpactSoundsInfo
@@ -4668,6 +4867,13 @@ struct FHitReactResult
 struct FInstanceManager
 {
 	unsigned char                                      UnknownData00[0x58];                                      // 0x0000(0x0058) MISSED OFFSET
+};
+
+// ScriptStruct ConZ.VirtualizedItemDescription
+// 0x0008
+struct FVirtualizedItemDescription
+{
+	TWeakObjectPtr<class AItem>                        Item;                                                     // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct ConZ.LandingDamageEvent
@@ -4745,10 +4951,10 @@ struct FBodyPartInjury
 };
 
 // ScriptStruct ConZ.InstrumentEvent
-// 0x000C
+// 0x0010
 struct FInstrumentEvent
 {
-	unsigned char                                      UnknownData00[0xC];                                       // 0x0000(0x000C) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
 };
 
 // ScriptStruct ConZ.WindowDetectionParams

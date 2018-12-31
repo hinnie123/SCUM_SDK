@@ -158,14 +158,14 @@ void UCircularProgressBarSprites_C::ActivateNormalColor()
 // Function CircularProgressBarSprites.CircularProgressBarSprites_C.SetCircularBarColor
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            circularBarColor               (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FLinearColor            CircularBarColor               (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UCircularProgressBarSprites_C::SetCircularBarColor(const struct FLinearColor& circularBarColor)
+void UCircularProgressBarSprites_C::SetCircularBarColor(const struct FLinearColor& CircularBarColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.SetCircularBarColor");
 
 	UCircularProgressBarSprites_C_SetCircularBarColor_Params params;
-	params.circularBarColor = circularBarColor;
+	params.CircularBarColor = CircularBarColor;
 
 	auto flags = fn->FunctionFlags;
 
@@ -178,9 +178,9 @@ void UCircularProgressBarSprites_C::SetCircularBarColor(const struct FLinearColo
 // Function CircularProgressBarSprites.CircularProgressBarSprites_C.GetCircularBarColor
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            circularBarColor               (Parm, OutParm, IsPlainOldData)
+// struct FLinearColor            CircularBarColor               (Parm, OutParm, IsPlainOldData)
 
-void UCircularProgressBarSprites_C::GetCircularBarColor(struct FLinearColor* circularBarColor)
+void UCircularProgressBarSprites_C::GetCircularBarColor(struct FLinearColor* CircularBarColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.GetCircularBarColor");
 
@@ -192,22 +192,22 @@ void UCircularProgressBarSprites_C::GetCircularBarColor(struct FLinearColor* cir
 
 	fn->FunctionFlags = flags;
 
-	if (circularBarColor != nullptr)
-		*circularBarColor = params.circularBarColor;
+	if (CircularBarColor != nullptr)
+		*CircularBarColor = params.CircularBarColor;
 }
 
 
 // Function CircularProgressBarSprites.CircularProgressBarSprites_C.SetOuterCircleColor
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            OuterCircleColor               (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FLinearColor            outerCircleColor               (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UCircularProgressBarSprites_C::SetOuterCircleColor(const struct FLinearColor& OuterCircleColor)
+void UCircularProgressBarSprites_C::SetOuterCircleColor(const struct FLinearColor& outerCircleColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.SetOuterCircleColor");
 
 	UCircularProgressBarSprites_C_SetOuterCircleColor_Params params;
-	params.OuterCircleColor = OuterCircleColor;
+	params.outerCircleColor = outerCircleColor;
 
 	auto flags = fn->FunctionFlags;
 
@@ -220,9 +220,9 @@ void UCircularProgressBarSprites_C::SetOuterCircleColor(const struct FLinearColo
 // Function CircularProgressBarSprites.CircularProgressBarSprites_C.GetOuterCircleColor
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FLinearColor            OuterCircleColor               (Parm, OutParm, IsPlainOldData)
+// struct FLinearColor            outerCircleColor               (Parm, OutParm, IsPlainOldData)
 
-void UCircularProgressBarSprites_C::GetOuterCircleColor(struct FLinearColor* OuterCircleColor)
+void UCircularProgressBarSprites_C::GetOuterCircleColor(struct FLinearColor* outerCircleColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.GetOuterCircleColor");
 
@@ -234,8 +234,8 @@ void UCircularProgressBarSprites_C::GetOuterCircleColor(struct FLinearColor* Out
 
 	fn->FunctionFlags = flags;
 
-	if (OuterCircleColor != nullptr)
-		*OuterCircleColor = params.OuterCircleColor;
+	if (outerCircleColor != nullptr)
+		*outerCircleColor = params.outerCircleColor;
 }
 
 

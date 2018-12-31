@@ -134,8 +134,30 @@ void UUI_CraftingRecipe_C::SetIsSelected(bool* isSelected)
 }
 
 
+// Function UI_CraftingRecipe.UI_CraftingRecipe_C.SetTooltipFromCaptionAndDescription
+// (Event, Public, HasOutParms, BlueprintEvent)
+// Parameters:
+// struct FText*                  Caption                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FText*                  Description                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UUI_CraftingRecipe_C::SetTooltipFromCaptionAndDescription(struct FText* Caption, struct FText* Description)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingRecipe.UI_CraftingRecipe_C.SetTooltipFromCaptionAndDescription");
+
+	UUI_CraftingRecipe_C_SetTooltipFromCaptionAndDescription_Params params;
+	params.Caption = Caption;
+	params.Description = Description;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function UI_CraftingRecipe.UI_CraftingRecipe_C.ExecuteUbergraph_UI_CraftingRecipe
-// ()
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

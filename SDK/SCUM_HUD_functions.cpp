@@ -12,6 +12,27 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function HUD.HUD_C.GetChatWidget
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class UChatWidget*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UChatWidget* UHUD_C::GetChatWidget()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.GetChatWidget");
+
+	UHUD_C_GetChatWidget_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function HUD.HUD_C.GetVisibility_1
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -955,14 +976,16 @@ void UHUD_C::OnBCUBodyMonitorMaximized()
 // Parameters:
 // struct FText*                  Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // bool*                          beep                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           Color                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void UHUD_C::AddMessageToScreen(struct FText* Text, bool* beep)
+void UHUD_C::AddMessageToScreen(struct FText* Text, bool* beep, struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.AddMessageToScreen");
 
 	UHUD_C_AddMessageToScreen_Params params;
 	params.Text = Text;
 	params.beep = beep;
+	params.Color = Color;
 
 	auto flags = fn->FunctionFlags;
 

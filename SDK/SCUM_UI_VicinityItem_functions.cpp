@@ -281,6 +281,26 @@ void UUI_VicinityItem_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 }
 
 
+// Function UI_VicinityItem.UI_VicinityItem_C.OnItemDestroyed
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                  Item                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UUI_VicinityItem_C::OnItemDestroyed(class AActor* Item)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_VicinityItem.UI_VicinityItem_C.OnItemDestroyed");
+
+	UUI_VicinityItem_C_OnItemDestroyed_Params params;
+	params.Item = Item;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function UI_VicinityItem.UI_VicinityItem_C.ExecuteUbergraph_UI_VicinityItem
 // (HasDefaults)
 // Parameters:

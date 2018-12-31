@@ -29,11 +29,6 @@ struct ABP_RainController_C_UserConstructionScript_Params
 {
 };
 
-// Function BP_RainController.BP_RainController_C.ShiftCam
-struct ABP_RainController_C_ShiftCam_Params
-{
-};
-
 // Function BP_RainController.BP_RainController_C.BndEvt__LightningEmitter_K2Node_ComponentBoundEvent_0_ParticleSpawnSignature__DelegateSignature
 struct ABP_RainController_C_BndEvt__LightningEmitter_K2Node_ComponentBoundEvent_0_ParticleSpawnSignature__DelegateSignature_Params
 {
@@ -51,6 +46,11 @@ struct ABP_RainController_C_ReceiveEndPlay_Params
 
 // Function BP_RainController.BP_RainController_C.ReceiveDestroyed
 struct ABP_RainController_C_ReceiveDestroyed_Params
+{
+};
+
+// Function BP_RainController.BP_RainController_C.ShiftCam
+struct ABP_RainController_C_ShiftCam_Params
 {
 };
 

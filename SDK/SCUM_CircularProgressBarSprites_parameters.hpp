@@ -59,25 +59,25 @@ struct UCircularProgressBarSprites_C_ActivateNormalColor_Params
 // Function CircularProgressBarSprites.CircularProgressBarSprites_C.SetCircularBarColor
 struct UCircularProgressBarSprites_C_SetCircularBarColor_Params
 {
-	struct FLinearColor                                circularBarColor;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	struct FLinearColor                                CircularBarColor;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 };
 
 // Function CircularProgressBarSprites.CircularProgressBarSprites_C.GetCircularBarColor
 struct UCircularProgressBarSprites_C_GetCircularBarColor_Params
 {
-	struct FLinearColor                                circularBarColor;                                         // (Parm, OutParm, IsPlainOldData)
+	struct FLinearColor                                CircularBarColor;                                         // (Parm, OutParm, IsPlainOldData)
 };
 
 // Function CircularProgressBarSprites.CircularProgressBarSprites_C.SetOuterCircleColor
 struct UCircularProgressBarSprites_C_SetOuterCircleColor_Params
 {
-	struct FLinearColor                                OuterCircleColor;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	struct FLinearColor                                outerCircleColor;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 };
 
 // Function CircularProgressBarSprites.CircularProgressBarSprites_C.GetOuterCircleColor
 struct UCircularProgressBarSprites_C_GetOuterCircleColor_Params
 {
-	struct FLinearColor                                OuterCircleColor;                                         // (Parm, OutParm, IsPlainOldData)
+	struct FLinearColor                                outerCircleColor;                                         // (Parm, OutParm, IsPlainOldData)
 };
 
 // Function CircularProgressBarSprites.CircularProgressBarSprites_C.GetNormalColor

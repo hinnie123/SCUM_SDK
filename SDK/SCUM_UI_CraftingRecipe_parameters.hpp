@@ -51,6 +51,13 @@ struct UUI_CraftingRecipe_C_SetIsSelected_Params
 	bool*                                              isSelected;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function UI_CraftingRecipe.UI_CraftingRecipe_C.SetTooltipFromCaptionAndDescription
+struct UUI_CraftingRecipe_C_SetTooltipFromCaptionAndDescription_Params
+{
+	struct FText*                                      Caption;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FText*                                      Description;                                              // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+
 // Function UI_CraftingRecipe.UI_CraftingRecipe_C.ExecuteUbergraph_UI_CraftingRecipe
 struct UUI_CraftingRecipe_C_ExecuteUbergraph_UI_CraftingRecipe_Params
 {

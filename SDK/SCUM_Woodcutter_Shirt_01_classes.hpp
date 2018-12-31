@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Woodcutter_Shirt_01.Woodcutter_Shirt_01_C
-// 0x0000 (0x0760 - 0x0760)
+// 0x0000 (0x0780 - 0x0780)
 class AWoodcutter_Shirt_01_C : public AClothesItem
 {
 public:

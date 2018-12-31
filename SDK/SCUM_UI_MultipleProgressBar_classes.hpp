@@ -23,10 +23,10 @@ public:
 	class UMaterialInstanceDynamic*                    DynamicMaterial;                                          // 0x02B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UUI_CaloriesTooltip_C*                       ToolTip;                                                  // 0x02C0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	float                                              Percentage1;                                              // 0x02C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              percentage2;                                              // 0x02CC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              percentage3;                                              // 0x02D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Percentage2;                                              // 0x02CC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Percentage3;                                              // 0x02D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              Percentage4;                                              // 0x02D4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              percentage5;                                              // 0x02D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Percentage5;                                              // 0x02D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              MaxValue;                                                 // 0x02DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              limitMaxValue;                                            // 0x02E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x02E4(0x0004) MISSED OFFSET
@@ -53,7 +53,7 @@ public:
 	void SetDisplayValues(float value1, float value2, float value3, float value4, float value5);
 	void SetMaxValue(float MaxValue, float limitMaxValue, float DisplayMaxValue);
 	struct FEventReply OnMouseMove(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent);
-	void SetPercentages(float Percentage1, float percentage2, float percentage3, float Percentage4, float percentage5);
+	void SetPercentages(float Percentage1, float Percentage2, float Percentage3, float Percentage4, float Percentage5);
 	void OnSynchronizeProperties();
 	void Construct();
 	void ExecuteUbergraph_UI_MultipleProgressBar(int EntryPoint);

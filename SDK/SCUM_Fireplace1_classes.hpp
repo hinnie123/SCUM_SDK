@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Fireplace1.Fireplace1_C
-// 0x0008 (0x0758 - 0x0750)
+// 0x0008 (0x0778 - 0x0770)
 class AFireplace1_C : public AFireplaceItem
 {
 public:
-	class UPointLightComponent*                        PointLight;                                               // 0x0750(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UPointLightComponent*                        PointLight;                                               // 0x0770(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

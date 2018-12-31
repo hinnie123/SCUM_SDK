@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Weapon_Hunter85.BP_Weapon_Hunter85_C
-// 0x0028 (0x1058 - 0x1030)
+// 0x0028 (0x1088 - 0x1060)
 class ABP_Weapon_Hunter85_C : public AWeapon
 {
 public:
-	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule;                              // 0x1030(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FWeaponReloadData                           FinalReloadData;                                          // 0x1038(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
+	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule;                              // 0x1060(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FWeaponReloadData                           FinalReloadData;                                          // 0x1068(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

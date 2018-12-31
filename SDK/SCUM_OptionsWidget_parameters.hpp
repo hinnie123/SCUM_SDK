@@ -75,7 +75,7 @@ struct UOptionsWidget_C_SetDynamicShadowsQuality_Params
 // Function OptionsWidget.OptionsWidget_C.UpdateSupportedResolutions
 struct UOptionsWidget_C_UpdateSupportedResolutions_Params
 {
-	bool                                               fullscreen;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Fullscreen;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function OptionsWidget.OptionsWidget_C.ToggleCategory
@@ -524,6 +524,19 @@ struct UOptionsWidget_C_BndEvt__ConcealedMode_K2Node_ComponentBoundEvent_2_OnVal
 	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                OldIndex;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       Value;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function OptionsWidget.OptionsWidget_C.BndEvt__RealTimeRadiosity_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature
+struct UOptionsWidget_C_BndEvt__RealTimeRadiosity_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature_Params
+{
+	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                OldIndex;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       Value;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function OptionsWidget.OptionsWidget_C.BndEvt__FOVSlider_K2Node_ComponentBoundEvent_4_MouseUp__DelegateSignature
+struct UOptionsWidget_C_BndEvt__FOVSlider_K2Node_ComponentBoundEvent_4_MouseUp__DelegateSignature_Params
+{
 };
 
 // Function OptionsWidget.OptionsWidget_C.ExecuteUbergraph_OptionsWidget
