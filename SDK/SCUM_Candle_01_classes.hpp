@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Candle_01.Candle_01_C
-// 0x0008 (0x0770 - 0x0768)
+// 0x0008 (0x07A8 - 0x07A0)
 class ACandle_01_C : public AFireItem
 {
 public:
-	class UPointLightComponent*                        PointLight;                                               // 0x0768(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UPointLightComponent*                        PointLight;                                               // 0x07A0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

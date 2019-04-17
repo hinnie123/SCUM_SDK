@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -60,6 +60,7 @@ struct UUI_SpawnScreenWidget_C_OnSpawnAccept_Params
 // Function UI_SpawnScreenWidget.UI_SpawnScreenWidget_C.UpdateInfo
 struct UUI_SpawnScreenWidget_C_UpdateInfo_Params
 {
+	bool*                                              loadoutMenu;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UI_SpawnScreenWidget.UI_SpawnScreenWidget_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature
@@ -72,6 +73,12 @@ struct UUI_SpawnScreenWidget_C_Tick_Params
 {
 	struct FGeometry*                                  MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 	float*                                             InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UI_SpawnScreenWidget.UI_SpawnScreenWidget_C.EnableRespawnOption
+struct UUI_SpawnScreenWidget_C_EnableRespawnOption_Params
+{
+	ERespawnOption*                                    Option;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UI_SpawnScreenWidget.UI_SpawnScreenWidget_C.ExecuteUbergraph_UI_SpawnScreenWidget

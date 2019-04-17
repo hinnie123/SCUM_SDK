@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Rabbit_Right_Back.Rabbit_Right_Back_C
-// 0x0000 (0x0718 - 0x0718)
+// 0x0000 (0x0748 - 0x0748)
 class ARabbit_Right_Back_C : public AEquipmentItem
 {
 public:

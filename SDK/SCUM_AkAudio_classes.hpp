@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class AkAudio.AkAcousticPortal
-// 0x00D0 (0x0430 - 0x0360)
+// 0x0090 (0x03F0 - 0x0360)
 class AAkAcousticPortal : public AVolume
 {
 public:
@@ -21,7 +21,7 @@ public:
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0361(0x0003) MISSED OFFSET
 	float                                              ObstructionRefreshInterval;                               // 0x0364(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ECollisionChannel>                     ObstructionCollisionChannel;                              // 0x0368(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xC7];                                      // 0x0369(0x00C7) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x87];                                      // 0x0369(0x0087) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -132,31 +132,32 @@ public:
 class UAkComponent : public USceneComponent
 {
 public:
-	struct FString                                     EarlyReflectionAuxBusName;                                // 0x0240(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	int                                                EarlyReflectionOrder;                                     // 0x0250(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              EarlyReflectionBusSendGain;                               // 0x0254(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              EarlyReflectionMaxPathLength;                             // 0x0258(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ECollisionChannel>                     OcclusionCollisionChannel;                                // 0x025C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x025D(0x0007) MISSED OFFSET
-	unsigned char                                      EnableSpotReflectors : 1;                                 // 0x0264(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0265(0x0003) MISSED OFFSET
-	float                                              roomReverbAuxBusGain;                                     // 0x0268(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                diffractionMaxEdges;                                      // 0x026C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                diffractionMaxPaths;                                      // 0x0270(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              diffractionMaxPathLength;                                 // 0x0274(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      DrawFirstOrderReflections : 1;                            // 0x0278(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      DrawSecondOrderReflections : 1;                           // 0x0278(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      DrawHigherOrderReflections : 1;                           // 0x0278(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      DrawGeometricDiffraction : 1;                             // 0x0278(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      DrawSoundPropagation : 1;                                 // 0x0278(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0279(0x0003) MISSED OFFSET
-	bool                                               StopWhenOwnerDestroyed;                                   // 0x027C(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x027D(0x0003) MISSED OFFSET
-	float                                              AttenuationScalingFactor;                                 // 0x0280(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              OcclusionRefreshInterval;                                 // 0x0284(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               AkAudioEvent;                                             // 0x0288(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FString                                     EventName;                                                // 0x0290(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData04[0x180];                                     // 0x02A0(0x0180) MISSED OFFSET
+	class UAkAuxBus*                                   EarlyReflectionAuxBus;                                    // 0x0240(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FString                                     EarlyReflectionAuxBusName;                                // 0x0248(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	int                                                EarlyReflectionOrder;                                     // 0x0258(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              EarlyReflectionBusSendGain;                               // 0x025C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              EarlyReflectionMaxPathLength;                             // 0x0260(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECollisionChannel>                     OcclusionCollisionChannel;                                // 0x0264(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0265(0x0007) MISSED OFFSET
+	unsigned char                                      EnableSpotReflectors : 1;                                 // 0x026C(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x026D(0x0003) MISSED OFFSET
+	float                                              roomReverbAuxBusGain;                                     // 0x0270(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                diffractionMaxEdges;                                      // 0x0274(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                diffractionMaxPaths;                                      // 0x0278(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              diffractionMaxPathLength;                                 // 0x027C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      DrawFirstOrderReflections : 1;                            // 0x0280(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      DrawSecondOrderReflections : 1;                           // 0x0280(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      DrawHigherOrderReflections : 1;                           // 0x0280(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      DrawGeometricDiffraction : 1;                             // 0x0280(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      DrawSoundPropagation : 1;                                 // 0x0280(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x0281(0x0003) MISSED OFFSET
+	bool                                               StopWhenOwnerDestroyed;                                   // 0x0284(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x0285(0x0003) MISSED OFFSET
+	float                                              AttenuationScalingFactor;                                 // 0x0288(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              OcclusionRefreshInterval;                                 // 0x028C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               AkAudioEvent;                                             // 0x0290(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FString                                     EventName;                                                // 0x0298(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char                                      UnknownData04[0x178];                                     // 0x02A8(0x0178) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -168,6 +169,7 @@ public:
 	void UseReverbVolumes(bool inUseReverbVolumes);
 	void UseEarlyReflections(class UAkAuxBus* AuxBus, int Order, float BusSendGain, float MaxPathLength, bool SpotReflectors, const struct FString& AuxBusName);
 	void Stop();
+	void SetUseSpatialAudio(bool bNewValue);
 	void SetSwitch(const struct FString& SwitchGroup, const struct FString& SwitchState);
 	void SetStopWhenOwnerDestroyed(bool bStopWhenOwnerDestroyed);
 	void SetRTPCValue(const struct FString& RTPC, float Value, int InterpolationTimeMs);
@@ -287,6 +289,7 @@ public:
 	class UAkComponent* STATIC_SpawnAkComponentAtLocation(class UObject* WorldContextObject, class UAkAudioEvent* AkEvent, class UAkAuxBus* EarlyReflectionsBus, const struct FVector& Location, const struct FRotator& Orientation, bool AutoPost, const struct FString& EventName, const struct FString& EarlyReflectionsBusName, bool AutoDestroy);
 	void STATIC_SetSwitch(const struct FName& SwitchGroup, const struct FName& SwitchState, class AActor* Actor);
 	void STATIC_SetState(const struct FName& StateGroup, const struct FName& State);
+	void STATIC_SetSpeakerAngles(TArray<float> SpeakerAngles, float HeightAngle, const struct FString& DeviceShareset);
 	void STATIC_SetRTPCValue(const struct FName& RTPC, float Value, int InterpolationTimeMs, class AActor* Actor);
 	void STATIC_SetPanningRule(EPanningRule PanRule);
 	void STATIC_SetOutputBusVolume(float BusVolume, class AActor* Actor);
@@ -309,9 +312,12 @@ public:
 	void STATIC_LoadBank(class UAkAudioBank* Bank, const struct FString& BankName, const struct FLatentActionInfo& LatentInfo, class UObject* WorldContextObject);
 	bool STATIC_IsGame(class UObject* WorldContextObject);
 	bool STATIC_IsEditor();
+	void STATIC_GetSpeakerAngles(const struct FString& DeviceShareset, TArray<float>* SpeakerAngles, float* HeightAngle);
 	float STATIC_GetOcclusionScalingFactor();
 	class UAkComponent* STATIC_GetAkComponent(class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const struct FVector& Location, TEnumAsByte<EAttachLocation> LocationType);
+	void STATIC_ExecuteActionOnEvent(class UAkAudioEvent* AkEvent, EAkActionOnEventType ActionType, class AActor* Actor, int TransitionDuration, EAkCurveInterpolation FadeCurve, int PlayingID);
 	void STATIC_ClearBanks();
+	void STATIC_CancelEventCallback(const struct FScriptDelegate& PostEventCallback);
 	void STATIC_AddOutputCaptureMarker(const struct FString& MarkerText);
 };
 
@@ -582,22 +588,44 @@ public:
 
 
 // Class AkAudio.AkSettings
-// 0x0090 (0x00B8 - 0x0028)
+// 0x0080 (0x00A8 - 0x0028)
 class UAkSettings : public UObject
 {
 public:
 	unsigned char                                      MaxSimultaneousReverbVolumes;                             // 0x0028(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
 	struct FFilePath                                   WwiseProjectPath;                                         // 0x0030(0x0010) (Edit, Config)
-	struct FDirectoryPath                              WwiseWindowsInstallationPath;                             // 0x0040(0x0010) (Edit, Config)
-	struct FFilePath                                   WwiseMacInstallationPath;                                 // 0x0050(0x0010) (Edit, Config)
-	bool                                               bAutoConnectToWAAPI;                                      // 0x0060(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	bool                                               SuppressWwiseProjectPathWarnings;                         // 0x0061(0x0001) (ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x56];                                      // 0x0062(0x0056) MISSED OFFSET
+	struct FDirectoryPath                              WwiseSoundBankFolder;                                     // 0x0040(0x0010) (Edit, Config)
+	bool                                               bAutoConnectToWAAPI;                                      // 0x0050(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	bool                                               bEnableMultiCoreRendering;                                // 0x0051(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	TEnumAsByte<ECollisionChannel>                     DefaultOcclusionCollisionChannel;                         // 0x0052(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x5];                                       // 0x0053(0x0005) MISSED OFFSET
+	struct FDirectoryPath                              WwiseWindowsInstallationPath;                             // 0x0058(0x0010) (Config, Deprecated)
+	struct FFilePath                                   WwiseMacInstallationPath;                                 // 0x0068(0x0010) (Config, Deprecated)
+	unsigned char                                      UnknownData02[0x30];                                      // 0x0078(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class AkAudio.AkSettings");
+		return ptr;
+	}
+
+};
+
+
+// Class AkAudio.AkSettingsPerUser
+// 0x0028 (0x0050 - 0x0028)
+class UAkSettingsPerUser : public UObject
+{
+public:
+	struct FDirectoryPath                              WwiseWindowsInstallationPath;                             // 0x0028(0x0010) (Edit, Config)
+	struct FFilePath                                   WwiseMacInstallationPath;                                 // 0x0038(0x0010) (Edit, Config)
+	bool                                               SuppressWwiseProjectPathWarnings;                         // 0x0048(0x0001) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AkAudio.AkSettingsPerUser");
 		return ptr;
 	}
 

@@ -1,4 +1,4 @@
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -166,6 +166,27 @@ void UAkComponent::Stop()
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.Stop");
 
 	UAkComponent_Stop_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function AkAudio.AkComponent.SetUseSpatialAudio
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bNewValue                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAkComponent::SetUseSpatialAudio(bool bNewValue)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.SetUseSpatialAudio");
+
+	UAkComponent_SetUseSpatialAudio_Params params;
+	params.bNewValue = bNewValue;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -1073,6 +1094,31 @@ void UAkGameplayStatics::STATIC_SetState(const struct FName& StateGroup, const s
 }
 
 
+// Function AkAudio.AkGameplayStatics.SetSpeakerAngles
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// TArray<float>                  SpeakerAngles                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// float                          HeightAngle                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString                 DeviceShareset                 (Parm, ZeroConstructor)
+
+void UAkGameplayStatics::STATIC_SetSpeakerAngles(TArray<float> SpeakerAngles, float HeightAngle, const struct FString& DeviceShareset)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.SetSpeakerAngles");
+
+	UAkGameplayStatics_SetSpeakerAngles_Params params;
+	params.SpeakerAngles = SpeakerAngles;
+	params.HeightAngle = HeightAngle;
+	params.DeviceShareset = DeviceShareset;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function AkAudio.AkGameplayStatics.SetRTPCValue
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -1622,6 +1668,34 @@ bool UAkGameplayStatics::STATIC_IsEditor()
 }
 
 
+// Function AkAudio.AkGameplayStatics.GetSpeakerAngles
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// TArray<float>                  SpeakerAngles                  (Parm, OutParm, ZeroConstructor)
+// float                          HeightAngle                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FString                 DeviceShareset                 (Parm, ZeroConstructor)
+
+void UAkGameplayStatics::STATIC_GetSpeakerAngles(const struct FString& DeviceShareset, TArray<float>* SpeakerAngles, float* HeightAngle)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.GetSpeakerAngles");
+
+	UAkGameplayStatics_GetSpeakerAngles_Params params;
+	params.DeviceShareset = DeviceShareset;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (SpeakerAngles != nullptr)
+		*SpeakerAngles = params.SpeakerAngles;
+	if (HeightAngle != nullptr)
+		*HeightAngle = params.HeightAngle;
+}
+
+
 // Function AkAudio.AkGameplayStatics.GetOcclusionScalingFactor
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -1674,6 +1748,37 @@ class UAkComponent* UAkGameplayStatics::STATIC_GetAkComponent(class USceneCompon
 }
 
 
+// Function AkAudio.AkGameplayStatics.ExecuteActionOnEvent
+// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UAkAudioEvent*           AkEvent                        (Parm, ZeroConstructor, IsPlainOldData)
+// EAkActionOnEventType           ActionType                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// int                            TransitionDuration             (Parm, ZeroConstructor, IsPlainOldData)
+// EAkCurveInterpolation          FadeCurve                      (Parm, ZeroConstructor, IsPlainOldData)
+// int                            PlayingID                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAkGameplayStatics::STATIC_ExecuteActionOnEvent(class UAkAudioEvent* AkEvent, EAkActionOnEventType ActionType, class AActor* Actor, int TransitionDuration, EAkCurveInterpolation FadeCurve, int PlayingID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.ExecuteActionOnEvent");
+
+	UAkGameplayStatics_ExecuteActionOnEvent_Params params;
+	params.AkEvent = AkEvent;
+	params.ActionType = ActionType;
+	params.Actor = Actor;
+	params.TransitionDuration = TransitionDuration;
+	params.FadeCurve = FadeCurve;
+	params.PlayingID = PlayingID;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function AkAudio.AkGameplayStatics.ClearBanks
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 
@@ -1682,6 +1787,27 @@ void UAkGameplayStatics::STATIC_ClearBanks()
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.ClearBanks");
 
 	UAkGameplayStatics_ClearBanks_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function AkAudio.AkGameplayStatics.CancelEventCallback
+// (Final, BlueprintCosmetic, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FScriptDelegate         PostEventCallback              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UAkGameplayStatics::STATIC_CancelEventCallback(const struct FScriptDelegate& PostEventCallback)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.CancelEventCallback");
+
+	UAkGameplayStatics_CancelEventCallback_Params params;
+	params.PostEventCallback = PostEventCallback;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

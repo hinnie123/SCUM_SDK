@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Cal7_62x51mm_Ammobox_Open_3.Cal7_62x51mm_Ammobox_Open_2_C
-// 0x0000 (0x0718 - 0x0718)
+// 0x0000 (0x0748 - 0x0748)
 class ACal7_62x51mm_Ammobox_Open_2_C : public AAmmunitionBoxItem
 {
 public:

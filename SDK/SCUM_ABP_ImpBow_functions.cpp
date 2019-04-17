@@ -1,4 +1,4 @@
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,23 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function ABP_ImpBow.ABP_ImpBow_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ImpBow_AnimGraphNode_LookAt_C86820F24E0A1B857B96989A0456E41A
+// (BlueprintEvent)
+
+void UABP_ImpBow_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ImpBow_AnimGraphNode_LookAt_C86820F24E0A1B857B96989A0456E41A()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ABP_ImpBow.ABP_ImpBow_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ImpBow_AnimGraphNode_LookAt_C86820F24E0A1B857B96989A0456E41A");
+
+	UABP_ImpBow_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ImpBow_AnimGraphNode_LookAt_C86820F24E0A1B857B96989A0456E41A_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function ABP_ImpBow.ABP_ImpBow_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ImpBow_AnimGraphNode_BlendListByBool_331AC3E6415A02194111D9B10FFC7552
 // (BlueprintEvent)

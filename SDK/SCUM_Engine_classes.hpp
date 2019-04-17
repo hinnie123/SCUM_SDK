@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1951,6 +1951,36 @@ public:
 };
 
 
+// Class Engine.ReplicationDriver
+// 0x0000 (0x0028 - 0x0028)
+class UReplicationDriver : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Engine.ReplicationDriver");
+		return ptr;
+	}
+
+};
+
+
+// Class Engine.ReplicationConnectionDriver
+// 0x0000 (0x0028 - 0x0028)
+class UReplicationConnectionDriver : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Engine.ReplicationConnectionDriver");
+		return ptr;
+	}
+
+};
+
+
 // Class Engine.StaticMeshComponent
 // 0x0060 (0x05F0 - 0x0590)
 class UStaticMeshComponent : public UMeshComponent
@@ -3306,7 +3336,7 @@ public:
 	void DrawLine(float StartScreenX, float StartScreenY, float EndScreenX, float EndScreenY, const struct FLinearColor& LineColor, float LineThickness);
 	void Deproject(float ScreenX, float ScreenY, struct FVector* WorldPosition, struct FVector* WorldDirection);
 	void AddHitBox(const struct FVector2D& Position, const struct FVector2D& Size, const struct FName& InName, bool bConsumesInput, int Priority);
-	void AddDebugText(const struct FString& DebugText, class AActor* SrcActor, float Duration, const struct FVector& Offset, const struct FVector& DesiredOffset, const struct FColor& TextColor, bool bSkipOverwriteCheck, bool bAbsoluteLocation, bool bKeepAttachedToActor, class UFont* InFont, float FontScale, bool bDrawShadow);
+	void AddDebugText(const struct FString& debugText, class AActor* SrcActor, float Duration, const struct FVector& Offset, const struct FVector& DesiredOffset, const struct FColor& TextColor, bool bSkipOverwriteCheck, bool bAbsoluteLocation, bool bKeepAttachedToActor, class UFont* InFont, float FontScale, bool bDrawShadow);
 };
 
 
@@ -3593,6 +3623,27 @@ public:
 	void OnProjectileStopDelegate__DelegateSignature(const struct FHitResult& ImpactResult);
 	void OnProjectileBounceDelegate__DelegateSignature(const struct FHitResult& ImpactResult, const struct FVector& ImpactVelocity);
 	struct FVector LimitVelocity(const struct FVector& NewVelocity);
+};
+
+
+// Class Engine.BoxComponent
+// 0x0010 (0x0590 - 0x0580)
+class UBoxComponent : public UShapeComponent
+{
+public:
+	struct FVector                                     BoxExtent;                                                // 0x0580(0x000C) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x058C(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Engine.BoxComponent");
+		return ptr;
+	}
+
+
+	void SetBoxExtent(const struct FVector& InBoxExtent, bool bUpdateOverlaps);
+	struct FVector GetUnscaledBoxExtent();
+	struct FVector GetScaledBoxExtent();
 };
 
 
@@ -5383,27 +5434,6 @@ public:
 };
 
 
-// Class Engine.BoxComponent
-// 0x0010 (0x0590 - 0x0580)
-class UBoxComponent : public UShapeComponent
-{
-public:
-	struct FVector                                     BoxExtent;                                                // 0x0580(0x000C) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x058C(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Engine.BoxComponent");
-		return ptr;
-	}
-
-
-	void SetBoxExtent(const struct FVector& InBoxExtent, bool bUpdateOverlaps);
-	struct FVector GetUnscaledBoxExtent();
-	struct FVector GetScaledBoxExtent();
-};
-
-
 // Class Engine.ReflectionCapture
 // 0x0008 (0x0330 - 0x0328)
 class AReflectionCapture : public AActor
@@ -6867,7 +6897,7 @@ public:
 class UDecalComponent : public USceneComponent
 {
 public:
-	int                                                SortOrder;                                                // 0x0240(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                sortOrder;                                                // 0x0240(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	float                                              FadeScreenSize;                                           // 0x0244(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	float                                              FadeStartDelay;                                           // 0x0248(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	float                                              FadeDuration;                                             // 0x024C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
@@ -19152,36 +19182,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Engine.RendererOverrideSettings");
-		return ptr;
-	}
-
-};
-
-
-// Class Engine.ReplicationDriver
-// 0x0000 (0x0028 - 0x0028)
-class UReplicationDriver : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Engine.ReplicationDriver");
-		return ptr;
-	}
-
-};
-
-
-// Class Engine.ReplicationConnectionDriver
-// 0x0000 (0x0028 - 0x0028)
-class UReplicationConnectionDriver : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Engine.ReplicationConnectionDriver");
 		return ptr;
 	}
 

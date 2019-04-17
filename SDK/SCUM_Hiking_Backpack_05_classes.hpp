@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Hiking_Backpack_05.Hiking_Backpack_05_C
-// 0x0000 (0x0780 - 0x0780)
+// 0x0000 (0x07B0 - 0x07B0)
 class AHiking_Backpack_05_C : public AClothesItem
 {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -5953,7 +5953,7 @@ struct FDebugTextInfo
 	class AActor*                                      SrcActor;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FVector                                     SrcActorOffset;                                           // 0x0008(0x000C) (IsPlainOldData)
 	struct FVector                                     SrcActorDesiredOffset;                                    // 0x0014(0x000C) (IsPlainOldData)
-	struct FString                                     DebugText;                                                // 0x0020(0x0010) (ZeroConstructor)
+	struct FString                                     debugText;                                                // 0x0020(0x0010) (ZeroConstructor)
 	float                                              TimeRemaining;                                            // 0x0030(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
 	float                                              Duration;                                                 // 0x0034(0x0004) (ZeroConstructor, IsPlainOldData)
 	struct FColor                                      TextColor;                                                // 0x0038(0x0004) (IsPlainOldData)

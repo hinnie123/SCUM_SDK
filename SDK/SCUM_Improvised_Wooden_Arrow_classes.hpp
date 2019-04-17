@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Improvised_Wooden_Arrow.Improvised_Wooden_Arrow_C
-// 0x0000 (0x0700 - 0x0700)
+// 0x0000 (0x0730 - 0x0730)
 class AImprovised_Wooden_Arrow_C : public AItem
 {
 public:

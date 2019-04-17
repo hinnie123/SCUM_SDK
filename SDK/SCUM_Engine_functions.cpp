@@ -1,4 +1,4 @@
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23582,7 +23582,7 @@ void AHUD::AddHitBox(const struct FVector2D& Position, const struct FVector2D& S
 // Function Engine.HUD.AddDebugText
 // (Final, Net, NetReliable, Native, Event, Public, HasDefaults, NetClient)
 // Parameters:
-// struct FString                 DebugText                      (Parm, ZeroConstructor)
+// struct FString                 debugText                      (Parm, ZeroConstructor)
 // class AActor*                  SrcActor                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Duration                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Offset                         (Parm, IsPlainOldData)
@@ -23595,12 +23595,12 @@ void AHUD::AddHitBox(const struct FVector2D& Position, const struct FVector2D& S
 // float                          FontScale                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bDrawShadow                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void AHUD::AddDebugText(const struct FString& DebugText, class AActor* SrcActor, float Duration, const struct FVector& Offset, const struct FVector& DesiredOffset, const struct FColor& TextColor, bool bSkipOverwriteCheck, bool bAbsoluteLocation, bool bKeepAttachedToActor, class UFont* InFont, float FontScale, bool bDrawShadow)
+void AHUD::AddDebugText(const struct FString& debugText, class AActor* SrcActor, float Duration, const struct FVector& Offset, const struct FVector& DesiredOffset, const struct FColor& TextColor, bool bSkipOverwriteCheck, bool bAbsoluteLocation, bool bKeepAttachedToActor, class UFont* InFont, float FontScale, bool bDrawShadow)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.HUD.AddDebugText");
 
 	AHUD_AddDebugText_Params params;
-	params.DebugText = DebugText;
+	params.debugText = debugText;
 	params.SrcActor = SrcActor;
 	params.Duration = Duration;
 	params.Offset = Offset;
@@ -24942,6 +24942,73 @@ struct FVector UProjectileMovementComponent::LimitVelocity(const struct FVector&
 
 	UProjectileMovementComponent_LimitVelocity_Params params;
 	params.NewVelocity = NewVelocity;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.BoxComponent.SetBoxExtent
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 InBoxExtent                    (Parm, IsPlainOldData)
+// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
+
+void UBoxComponent::SetBoxExtent(const struct FVector& InBoxExtent, bool bUpdateOverlaps)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.BoxComponent.SetBoxExtent");
+
+	UBoxComponent_SetBoxExtent_Params params;
+	params.InBoxExtent = InBoxExtent;
+	params.bUpdateOverlaps = bUpdateOverlaps;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.BoxComponent.GetUnscaledBoxExtent
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FVector UBoxComponent::GetUnscaledBoxExtent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.BoxComponent.GetUnscaledBoxExtent");
+
+	UBoxComponent_GetUnscaledBoxExtent_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.BoxComponent.GetScaledBoxExtent
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FVector UBoxComponent::GetScaledBoxExtent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.BoxComponent.GetScaledBoxExtent");
+
+	UBoxComponent_GetScaledBoxExtent_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -26994,73 +27061,6 @@ void UBlueprintSetLibrary::STATIC_Set_Add(int NewItem)
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.BoxComponent.SetBoxExtent
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 InBoxExtent                    (Parm, IsPlainOldData)
-// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
-
-void UBoxComponent::SetBoxExtent(const struct FVector& InBoxExtent, bool bUpdateOverlaps)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.BoxComponent.SetBoxExtent");
-
-	UBoxComponent_SetBoxExtent_Params params;
-	params.InBoxExtent = InBoxExtent;
-	params.bUpdateOverlaps = bUpdateOverlaps;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.BoxComponent.GetUnscaledBoxExtent
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
-
-struct FVector UBoxComponent::GetUnscaledBoxExtent()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.BoxComponent.GetUnscaledBoxExtent");
-
-	UBoxComponent_GetUnscaledBoxExtent_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.BoxComponent.GetScaledBoxExtent
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
-
-struct FVector UBoxComponent::GetScaledBoxExtent()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.BoxComponent.GetScaledBoxExtent");
-
-	UBoxComponent_GetScaledBoxExtent_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
 }
 
 

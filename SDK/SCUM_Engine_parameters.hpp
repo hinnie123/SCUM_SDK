@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -7028,7 +7028,7 @@ struct AHUD_AddHitBox_Params
 // Function Engine.HUD.AddDebugText
 struct AHUD_AddDebugText_Params
 {
-	struct FString                                     DebugText;                                                // (Parm, ZeroConstructor)
+	struct FString                                     debugText;                                                // (Parm, ZeroConstructor)
 	class AActor*                                      SrcActor;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Offset;                                                   // (Parm, IsPlainOldData)
@@ -7429,6 +7429,25 @@ struct UProjectileMovementComponent_OnProjectileBounceDelegate__DelegateSignatur
 struct UProjectileMovementComponent_LimitVelocity_Params
 {
 	struct FVector                                     NewVelocity;                                              // (Parm, IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.BoxComponent.SetBoxExtent
+struct UBoxComponent_SetBoxExtent_Params
+{
+	struct FVector                                     InBoxExtent;                                              // (Parm, IsPlainOldData)
+	bool                                               bUpdateOverlaps;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.BoxComponent.GetUnscaledBoxExtent
+struct UBoxComponent_GetUnscaledBoxExtent_Params
+{
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.BoxComponent.GetScaledBoxExtent
+struct UBoxComponent_GetScaledBoxExtent_Params
+{
 	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
 };
 
@@ -8037,25 +8056,6 @@ struct UBlueprintSetLibrary_Set_AddItems_Params
 struct UBlueprintSetLibrary_Set_Add_Params
 {
 	int                                                NewItem;                                                  // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-};
-
-// Function Engine.BoxComponent.SetBoxExtent
-struct UBoxComponent_SetBoxExtent_Params
-{
-	struct FVector                                     InBoxExtent;                                              // (Parm, IsPlainOldData)
-	bool                                               bUpdateOverlaps;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.BoxComponent.GetUnscaledBoxExtent
-struct UBoxComponent_GetUnscaledBoxExtent_Params
-{
-	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.BoxComponent.GetScaledBoxExtent
-struct UBoxComponent_GetScaledBoxExtent_Params
-{
-	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
 };
 
 // Function Engine.CameraAnimInst.Stop

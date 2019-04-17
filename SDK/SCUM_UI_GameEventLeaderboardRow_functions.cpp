@@ -1,4 +1,4 @@
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,14 +36,14 @@ struct FLinearColor UUI_GameEventLeaderboardRow_C::Get_Background_BrushColor()
 // Function UI_GameEventLeaderboardRow.UI_GameEventLeaderboardRow_C.SetRank
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            rank                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            Rank                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_GameEventLeaderboardRow_C::SetRank(int rank)
+void UUI_GameEventLeaderboardRow_C::SetRank(int Rank)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLeaderboardRow.UI_GameEventLeaderboardRow_C.SetRank");
 
 	UUI_GameEventLeaderboardRow_C_SetRank_Params params;
-	params.rank = rank;
+	params.Rank = Rank;
 
 	auto flags = fn->FunctionFlags;
 

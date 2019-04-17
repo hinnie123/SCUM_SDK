@@ -1,19 +1,19 @@
 # SCUM_SDK
 SDK for the game SCUM
 
-UPDATED FOR LATEST VERSION: 0.1.22.11076 [Dec 23, 2018]
+UPDATED FOR LATEST VERSION: 0.1.32.12804
 
 Useful game info:
 ```
 Objects:
-0x34E2EA0 (already in sdk)
+0x34A2850 (already in sdk)
 
 TotalObjects: 
-0x34E2EB4 (already in sdk)
+0x34A2864 (already in sdk)
 
 GNames:
-48 89 05 ? ? ? ? 48 83 C4 28 C3
-\x48\x89\x05\x00\x00\x00\x00\x48\x83\xC4\x28\xC3 xxx????xxxxx
+48 8B 05 ? ? ? ? 48 85 C0 75 5F
+\x48\x8B\x05\x00\x00\x00\x00\x48\x85\xC0\x75\x5F xxx????xxxxx
 
 GWorld:
 48 8B 1D ? ? ? ? 48 85 DB 74 3B 41 B0 01
@@ -28,9 +28,9 @@ void init_sdk()
 	// we're using the Objects & TotalObjects listed above, however they're already implemented in the sdk
 	// so you don't have to init them
 
-	auto gname_addr = FindPattern("48 89 05 ? ? ? ? 48 83 C4 28 C3");
-	auto offset = *reinterpret_cast<uint32_t*>(gname_addr + 3);
-	SDK::FName::GNames = reinterpret_cast<decltype(SDK::FName::GNames)>(*reinterpret_cast<uintptr_t*>(gname_addr + 7 + offset));
+	auto gname_addr = utils::find_pattern("48 8B 05 ? ? ? ? 48 85 C0 75 5F");
+	auto offset = *(uint32_t*)(gname_addr + 3);
+	SDK::FName::GNames = (SDK::FName::GNames)(*(uintptr_t*)(gname_addr + 7 + offset));
 }
 ```
 

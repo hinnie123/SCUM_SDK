@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -258,6 +258,36 @@ enum class EAkMidiEventType : uint8_t
 	AkMidiEventTypeEscape          = 9,
 	AkMidiEventTypeMeta            = 10,
 	EAkMidiEventType_MAX           = 11
+};
+
+
+// Enum AkAudio.EAkCurveInterpolation
+enum class EAkCurveInterpolation : uint8_t
+{
+	Log3                           = 0,
+	Sine                           = 1,
+	Log1                           = 2,
+	InvSCurve                      = 3,
+	Linear                         = 4,
+	SCurve                         = 5,
+	Exp1                           = 6,
+	SineRecip                      = 7,
+	Exp3                           = 8,
+	LastFadeCurve                  = 9,
+	Constant                       = 10,
+	EAkCurveInterpolation_MAX      = 11
+};
+
+
+// Enum AkAudio.AkActionOnEventType
+enum class EAkActionOnEventType : uint8_t
+{
+	Stop                           = 0,
+	Pause                          = 1,
+	Resume                         = 2,
+	Break                          = 3,
+	ReleaseEnvelope                = 4,
+	AkActionOnEventType_MAX        = 5
 };
 
 

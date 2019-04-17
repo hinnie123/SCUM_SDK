@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,7 +24,7 @@ struct UUI_GameEventLeaderboardWidget_C_SetTopShownCount_Params
 struct UUI_GameEventLeaderboardWidget_C_AssignRowColor_Params
 {
 	class UUI_GameEventLeaderboardRow_C*               row;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	int                                                rank;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Rank;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.UpdateTopList
@@ -35,14 +35,14 @@ struct UUI_GameEventLeaderboardWidget_C_UpdateTopList_Params
 // Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.RefreshData
 struct UUI_GameEventLeaderboardWidget_C_RefreshData_Params
 {
-	ECharacterStatsSorting                             sort;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               descending;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ECharacterStatsOrderByField                        orderByField;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ESortOrder                                         sortOrder;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.UpdateRankingList
 struct UUI_GameEventLeaderboardWidget_C_UpdateRankingList_Params
 {
-	int                                                rank;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Rank;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.UpdateList

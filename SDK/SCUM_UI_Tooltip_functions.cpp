@@ -1,4 +1,4 @@
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,26 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function UI_Tooltip.UI_Tooltip_C.UpdateDebugText
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AItem*                   Item                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UUI_Tooltip_C::UpdateDebugText(class AItem* Item)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_Tooltip.UI_Tooltip_C.UpdateDebugText");
+
+	UUI_Tooltip_C_UpdateDebugText_Params params;
+	params.Item = Item;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function UI_Tooltip.UI_Tooltip_C.GetItemDurability
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)

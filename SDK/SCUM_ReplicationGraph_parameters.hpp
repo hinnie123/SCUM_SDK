@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,7 +34,7 @@ struct AReplicationGraphDebugActor_ServerSetCullDistanceForClass_Params
 // Function ReplicationGraph.ReplicationGraphDebugActor.ServerPrintAllActorInfo
 struct AReplicationGraphDebugActor_ServerPrintAllActorInfo_Params
 {
-	struct FString                                     str;                                                      // (Parm, ZeroConstructor)
+	struct FString                                     Str;                                                      // (Parm, ZeroConstructor)
 };
 
 // Function ReplicationGraph.ReplicationGraphDebugActor.ServerCellInfo

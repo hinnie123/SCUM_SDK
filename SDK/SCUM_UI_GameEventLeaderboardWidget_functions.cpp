@@ -1,4 +1,4 @@
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,15 +36,15 @@ void UUI_GameEventLeaderboardWidget_C::SetTopShownCount(int count)
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UUI_GameEventLeaderboardRow_C* row                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            rank                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            Rank                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_GameEventLeaderboardWidget_C::AssignRowColor(class UUI_GameEventLeaderboardRow_C* row, int rank)
+void UUI_GameEventLeaderboardWidget_C::AssignRowColor(class UUI_GameEventLeaderboardRow_C* row, int Rank)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.AssignRowColor");
 
 	UUI_GameEventLeaderboardWidget_C_AssignRowColor_Params params;
 	params.row = row;
-	params.rank = rank;
+	params.Rank = Rank;
 
 	auto flags = fn->FunctionFlags;
 
@@ -74,16 +74,16 @@ void UUI_GameEventLeaderboardWidget_C::UpdateTopList()
 // Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.RefreshData
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// ECharacterStatsSorting         sort                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           descending                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ECharacterStatsOrderByField    orderByField                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ESortOrder                     sortOrder                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_GameEventLeaderboardWidget_C::RefreshData(ECharacterStatsSorting sort, bool descending)
+void UUI_GameEventLeaderboardWidget_C::RefreshData(ECharacterStatsOrderByField orderByField, ESortOrder sortOrder)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.RefreshData");
 
 	UUI_GameEventLeaderboardWidget_C_RefreshData_Params params;
-	params.sort = sort;
-	params.descending = descending;
+	params.orderByField = orderByField;
+	params.sortOrder = sortOrder;
 
 	auto flags = fn->FunctionFlags;
 
@@ -96,14 +96,14 @@ void UUI_GameEventLeaderboardWidget_C::RefreshData(ECharacterStatsSorting sort, 
 // Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.UpdateRankingList
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            rank                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            Rank                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_GameEventLeaderboardWidget_C::UpdateRankingList(int rank)
+void UUI_GameEventLeaderboardWidget_C::UpdateRankingList(int Rank)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.UpdateRankingList");
 
 	UUI_GameEventLeaderboardWidget_C_UpdateRankingList_Params params;
-	params.rank = rank;
+	params.Rank = Rank;
 
 	auto flags = fn->FunctionFlags;
 

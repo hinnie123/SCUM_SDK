@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -386,7 +386,7 @@ public:
 class UMovieSceneSubSection : public UMovieSceneSection
 {
 public:
-	struct FMovieSceneSectionParameters                Parameters;                                               // 0x00E0(0x0018) (Edit)
+	struct FMovieSceneSectionParameters                parameters;                                               // 0x00E0(0x0018) (Edit)
 	float                                              StartOffset;                                              // 0x00F8(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
 	float                                              TimeScale;                                                // 0x00FC(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
 	float                                              PrerollTime;                                              // 0x0100(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)

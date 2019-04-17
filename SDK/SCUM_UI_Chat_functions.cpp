@@ -1,4 +1,4 @@
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,30 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function UI_Chat.UI_Chat_C.CreateSuggestionLine
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FString                 Text                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// class UUI_ChatSuggestion_C*    Widget                         (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UUI_Chat_C::CreateSuggestionLine(const struct FString& Text, class UUI_ChatSuggestion_C** Widget)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_Chat.UI_Chat_C.CreateSuggestionLine");
+
+	UUI_Chat_C_CreateSuggestionLine_Params params;
+	params.Text = Text;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Widget != nullptr)
+		*Widget = params.Widget;
+}
+
 
 // Function UI_Chat.UI_Chat_C.OnPreviewKeyDown
 // (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -129,6 +153,23 @@ void UUI_Chat_C::Construct()
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Chat.UI_Chat_C.Construct");
 
 	UUI_Chat_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UI_Chat.UI_Chat_C.UpdateActiveSuggestions
+// (Event, Public, BlueprintEvent)
+
+void UUI_Chat_C::UpdateActiveSuggestions()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_Chat.UI_Chat_C.UpdateActiveSuggestions");
+
+	UUI_Chat_C_UpdateActiveSuggestions_Params params;
 
 	auto flags = fn->FunctionFlags;
 

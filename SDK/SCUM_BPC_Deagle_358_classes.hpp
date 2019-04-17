@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BPC_Deagle_358.BPC_Deagle_357_C
-// 0x0000 (0x1068 - 0x1068)
+// 0x0000 (0x10B8 - 0x10B8)
 class ABPC_Deagle_357_C : public ABP_DEagle_50_C
 {
 public:

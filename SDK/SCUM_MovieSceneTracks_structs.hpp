@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -120,7 +120,7 @@ struct FMovieSceneEventParameters
 struct FEventPayload
 {
 	struct FName                                       EventName;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FMovieSceneEventParameters                  Parameters;                                               // 0x0008(0x0028) (Edit)
+	struct FMovieSceneEventParameters                  parameters;                                               // 0x0008(0x0028) (Edit)
 };
 
 // ScriptStruct MovieSceneTracks.MovieSceneEventSectionData

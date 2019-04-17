@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,8 +13,8 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass CookVegetables2.CookVegetables2_C
-// 0x0000 (0x07F0 - 0x07F0)
-class ACookVegetables2_C : public ACookedFoodItem
+// 0x0000 (0x0818 - 0x0818)
+class ACookVegetables2_C : public AFoodItem
 {
 public:
 

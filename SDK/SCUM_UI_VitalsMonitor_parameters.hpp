@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,7 @@ namespace SDK
 // Function UI_VitalsMonitor.UI_VitalsMonitor_C.GetOxygenSaturationExtremesText
 struct UUI_VitalsMonitor_C_GetOxygenSaturationExtremesText_Params
 {
-	struct FText                                       oxygenSaturationExtremes;                                 // (Parm, OutParm)
+	struct FText                                       OxygenSaturationExtremes;                                 // (Parm, OutParm)
 };
 
 // Function UI_VitalsMonitor.UI_VitalsMonitor_C.GetTemperatureExtremesText

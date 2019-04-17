@@ -1,4 +1,4 @@
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -163,12 +163,15 @@ void UUI_SpawnScreenWidget_C::OnSpawnAccept()
 
 // Function UI_SpawnScreenWidget.UI_SpawnScreenWidget_C.UpdateInfo
 // (Event, Public, BlueprintEvent)
+// Parameters:
+// bool*                          loadoutMenu                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_SpawnScreenWidget_C::UpdateInfo()
+void UUI_SpawnScreenWidget_C::UpdateInfo(bool* loadoutMenu)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnScreenWidget.UI_SpawnScreenWidget_C.UpdateInfo");
 
 	UUI_SpawnScreenWidget_C_UpdateInfo_Params params;
+	params.loadoutMenu = loadoutMenu;
 
 	auto flags = fn->FunctionFlags;
 
@@ -208,6 +211,26 @@ void UUI_SpawnScreenWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaT
 	UUI_SpawnScreenWidget_C_Tick_Params params;
 	params.MyGeometry = MyGeometry;
 	params.InDeltaTime = InDeltaTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UI_SpawnScreenWidget.UI_SpawnScreenWidget_C.EnableRespawnOption
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// ERespawnOption*                Option                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UUI_SpawnScreenWidget_C::EnableRespawnOption(ERespawnOption* Option)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnScreenWidget.UI_SpawnScreenWidget_C.EnableRespawnOption");
+
+	UUI_SpawnScreenWidget_C_EnableRespawnOption_Params params;
+	params.Option = Option;
 
 	auto flags = fn->FunctionFlags;
 

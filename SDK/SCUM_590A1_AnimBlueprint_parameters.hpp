@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,20 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function 590A1_AnimBlueprint.590A1_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_590A1_AnimBlueprint_AnimGraphNode_ModifyBone_561A74914456A1C12221C48F1B74D990
+struct U590A1_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_590A1_AnimBlueprint_AnimGraphNode_ModifyBone_561A74914456A1C12221C48F1B74D990_Params
+{
+};
+
 // Function 590A1_AnimBlueprint.590A1_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_590A1_AnimBlueprint_AnimGraphNode_BlendListByEnum_89A79703467B580947D221946A82A8AF
 struct U590A1_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_590A1_AnimBlueprint_AnimGraphNode_BlendListByEnum_89A79703467B580947D221946A82A8AF_Params
 {
+};
+
+// Function 590A1_AnimBlueprint.590A1_AnimBlueprint_C.BlueprintUpdateAnimation
+struct U590A1_AnimBlueprint_C_BlueprintUpdateAnimation_Params
+{
+	float*                                             DeltaTimeX;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function 590A1_AnimBlueprint.590A1_AnimBlueprint_C.ExecuteUbergraph_590A1_AnimBlueprint

@@ -1,4 +1,4 @@
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -74,14 +74,14 @@ void AReplicationGraphDebugActor::ServerSetCullDistanceForClass(class UClass* Cl
 // Function ReplicationGraph.ReplicationGraphDebugActor.ServerPrintAllActorInfo
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// struct FString                 str                            (Parm, ZeroConstructor)
+// struct FString                 Str                            (Parm, ZeroConstructor)
 
-void AReplicationGraphDebugActor::ServerPrintAllActorInfo(const struct FString& str)
+void AReplicationGraphDebugActor::ServerPrintAllActorInfo(const struct FString& Str)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ReplicationGraph.ReplicationGraphDebugActor.ServerPrintAllActorInfo");
 
 	AReplicationGraphDebugActor_ServerPrintAllActorInfo_Params params;
-	params.str = str;
+	params.Str = Str;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

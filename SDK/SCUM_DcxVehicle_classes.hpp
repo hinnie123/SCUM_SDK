@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -69,7 +69,7 @@ public:
 
 
 // Class DcxVehicle.DcxVehicleWheelsComponent
-// 0x0108 (0x0290 - 0x0188)
+// 0x0118 (0x02A0 - 0x0188)
 class UDcxVehicleWheelsComponent : public UPawnMovementComponent
 {
 public:
@@ -110,7 +110,7 @@ public:
 	struct FVector                                     AvoidanceVelocity;                                        // 0x025C(0x000C) (Transient, IsPlainOldData)
 	struct FVector                                     AvoidanceLockVelocity;                                    // 0x0268(0x000C) (Transient, IsPlainOldData)
 	float                                              AvoidanceLockTimer;                                       // 0x0274(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x18];                                      // 0x0278(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData04[0x28];                                      // 0x0278(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -149,20 +149,20 @@ public:
 
 
 // Class DcxVehicle.DcxVehicleDriveComponent
-// 0x0158 (0x03E8 - 0x0290)
+// 0x0158 (0x03F8 - 0x02A0)
 class UDcxVehicleDriveComponent : public UDcxVehicleWheelsComponent
 {
 public:
-	struct FDcxVehicleEngineData                       EngineData;                                               // 0x0290(0x0090) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FDcxVehicleGearboxData                      GearboxData;                                              // 0x0320(0x0030) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FDcxVehicleClutchData                       ClutchData;                                               // 0x0350(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly)
-	bool                                               bAutoReverse;                                             // 0x0360(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0361(0x0003) MISSED OFFSET
-	float                                              WrongDirectionThreshold;                                  // 0x0364(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bAutoBrake;                                               // 0x0368(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0369(0x0003) MISSED OFFSET
-	float                                              StopThreshold;                                            // 0x036C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FRuntimeFloatCurve                          SteerCurve;                                               // 0x0370(0x0078) (Edit, BlueprintVisible)
+	struct FDcxVehicleEngineData                       EngineData;                                               // 0x02A0(0x0090) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FDcxVehicleGearboxData                      GearboxData;                                              // 0x0330(0x0030) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FDcxVehicleClutchData                       ClutchData;                                               // 0x0360(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly)
+	bool                                               bAutoReverse;                                             // 0x0370(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0371(0x0003) MISSED OFFSET
+	float                                              WrongDirectionThreshold;                                  // 0x0374(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bAutoBrake;                                               // 0x0378(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0379(0x0003) MISSED OFFSET
+	float                                              StopThreshold;                                            // 0x037C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FRuntimeFloatCurve                          SteerCurve;                                               // 0x0380(0x0078) (Edit, BlueprintVisible)
 
 	static UClass* StaticClass()
 	{
@@ -188,12 +188,12 @@ public:
 
 
 // Class DcxVehicle.DcxVehicleDriveComponent4W
-// 0x0020 (0x0408 - 0x03E8)
+// 0x0020 (0x0418 - 0x03F8)
 class UDcxVehicleDriveComponent4W : public UDcxVehicleDriveComponent
 {
 public:
-	struct FDcxVehicleDifferentialData4W               DifferentialData;                                         // 0x03E8(0x001C) (Edit)
-	float                                              AckermannGeometryAccuracy;                                // 0x0404(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FDcxVehicleDifferentialData4W               DifferentialData;                                         // 0x03F8(0x001C) (Edit)
+	float                                              AckermannGeometryAccuracy;                                // 0x0414(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -209,7 +209,7 @@ public:
 
 
 // Class DcxVehicle.DcxVehicleDriveComponentNW
-// 0x0000 (0x03E8 - 0x03E8)
+// 0x0000 (0x03F8 - 0x03F8)
 class UDcxVehicleDriveComponentNW : public UDcxVehicleDriveComponent
 {
 public:
@@ -228,12 +228,12 @@ public:
 
 
 // Class DcxVehicle.DcxVehicleDriveComponentTank
-// 0x0008 (0x03F0 - 0x03E8)
+// 0x0008 (0x0400 - 0x03F8)
 class UDcxVehicleDriveComponentTank : public UDcxVehicleDriveComponent
 {
 public:
-	TEnumAsByte<EDcxVehicleDriveControlModelTank>      DriveModel;                                               // 0x03E8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x03E9(0x0007) MISSED OFFSET
+	TEnumAsByte<EDcxVehicleDriveControlModelTank>      DriveModel;                                               // 0x03F8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x03F9(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -375,13 +375,13 @@ public:
 
 
 // Class DcxVehicle.DcxVehicleNoDriveComponent
-// 0x0008 (0x0298 - 0x0290)
+// 0x0008 (0x02A8 - 0x02A0)
 class UDcxVehicleNoDriveComponent : public UDcxVehicleWheelsComponent
 {
 public:
-	bool                                               bUseRawInput;                                             // 0x0290(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0291(0x0003) MISSED OFFSET
-	float                                              MaxDriveTorque;                                           // 0x0294(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bUseRawInput;                                             // 0x02A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x02A1(0x0003) MISSED OFFSET
+	float                                              MaxDriveTorque;                                           // 0x02A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

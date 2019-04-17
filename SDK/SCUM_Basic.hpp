@@ -1,6 +1,8 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
+
+#include <locale>
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,12 +54,12 @@ class TUObjectArray
 public:
 	inline int32_t Num() const
 	{
-		return *(int*)((uintptr_t)GetModuleHandleA(0) + 0x34E2EB4);
+		return *(int*)((uintptr_t)GetModuleHandleA(0) + 0x34A2864);
 	}
 
 	inline UObject* GetByIndex(int32_t index) const
 	{
-		static auto objects = *(uintptr_t*)((uintptr_t)GetModuleHandleA(0) + 0x34E2EA0);
+		static auto objects = *(uintptr_t*)((uintptr_t)GetModuleHandleA(0) + 0x34A2850);
 		return (UObject*)(*(uintptr_t*)(*(uintptr_t*)(objects + 8i64 * (index / 66560)) + 24i64 * (index % 66560)));
 	}
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,7 +47,7 @@ struct UOxygenSaturationMonitor_C_SetPrisonerAndLifeComponentToMonitor_Params
 // Function OxygenSaturationMonitor.OxygenSaturationMonitor_C.ProvideOxygenSaturationExtremes
 struct UOxygenSaturationMonitor_C_ProvideOxygenSaturationExtremes_Params
 {
-	struct FText                                       oxygenSaturationExtremes;                                 // (Parm, OutParm)
+	struct FText                                       OxygenSaturationExtremes;                                 // (Parm, OutParm)
 };
 
 // Function OxygenSaturationMonitor.OxygenSaturationMonitor_C.GetHeartRateBPM

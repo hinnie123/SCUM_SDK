@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeaponScope_ACOG_01.WeaponScope_ACOG_01_C
-// 0x0000 (0x0818 - 0x0818)
+// 0x0000 (0x0858 - 0x0858)
 class AWeaponScope_ACOG_01_C : public AWeaponAttachmentScope
 {
 public:

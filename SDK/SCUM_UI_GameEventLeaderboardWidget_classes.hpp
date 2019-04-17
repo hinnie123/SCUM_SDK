@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,10 +33,10 @@ public:
 
 
 	void SetTopShownCount(int count);
-	void AssignRowColor(class UUI_GameEventLeaderboardRow_C* row, int rank);
+	void AssignRowColor(class UUI_GameEventLeaderboardRow_C* row, int Rank);
 	void UpdateTopList();
-	void RefreshData(ECharacterStatsSorting sort, bool descending);
-	void UpdateRankingList(int rank);
+	void RefreshData(ECharacterStatsOrderByField orderByField, ESortOrder sortOrder);
+	void UpdateRankingList(int Rank);
 	void UpdateList(class UVerticalBox* TargetWidget, TArray<struct FCharacterStatsItem>* StatsItems);
 	void Construct();
 	void Destruct();

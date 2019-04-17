@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -60,6 +60,12 @@ struct UAkComponent_UseEarlyReflections_Params
 // Function AkAudio.AkComponent.Stop
 struct UAkComponent_Stop_Params
 {
+};
+
+// Function AkAudio.AkComponent.SetUseSpatialAudio
+struct UAkComponent_SetUseSpatialAudio_Params
+{
+	bool                                               bNewValue;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function AkAudio.AkComponent.SetSwitch
@@ -330,6 +336,14 @@ struct UAkGameplayStatics_SetState_Params
 	struct FName                                       State;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function AkAudio.AkGameplayStatics.SetSpeakerAngles
+struct UAkGameplayStatics_SetSpeakerAngles_Params
+{
+	TArray<float>                                      SpeakerAngles;                                            // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	float                                              HeightAngle;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FString                                     DeviceShareset;                                           // (Parm, ZeroConstructor)
+};
+
 // Function AkAudio.AkGameplayStatics.SetRTPCValue
 struct UAkGameplayStatics_SetRTPCValue_Params
 {
@@ -503,6 +517,14 @@ struct UAkGameplayStatics_IsEditor_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function AkAudio.AkGameplayStatics.GetSpeakerAngles
+struct UAkGameplayStatics_GetSpeakerAngles_Params
+{
+	TArray<float>                                      SpeakerAngles;                                            // (Parm, OutParm, ZeroConstructor)
+	float                                              HeightAngle;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FString                                     DeviceShareset;                                           // (Parm, ZeroConstructor)
+};
+
 // Function AkAudio.AkGameplayStatics.GetOcclusionScalingFactor
 struct UAkGameplayStatics_GetOcclusionScalingFactor_Params
 {
@@ -519,9 +541,26 @@ struct UAkGameplayStatics_GetAkComponent_Params
 	class UAkComponent*                                ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
+// Function AkAudio.AkGameplayStatics.ExecuteActionOnEvent
+struct UAkGameplayStatics_ExecuteActionOnEvent_Params
+{
+	class UAkAudioEvent*                               AkEvent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	EAkActionOnEventType                               ActionType;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                TransitionDuration;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	EAkCurveInterpolation                              FadeCurve;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                PlayingID;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function AkAudio.AkGameplayStatics.ClearBanks
 struct UAkGameplayStatics_ClearBanks_Params
 {
+};
+
+// Function AkAudio.AkGameplayStatics.CancelEventCallback
+struct UAkGameplayStatics_CancelEventCallback_Params
+{
+	struct FScriptDelegate                             PostEventCallback;                                        // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
 // Function AkAudio.AkGameplayStatics.AddOutputCaptureMarker

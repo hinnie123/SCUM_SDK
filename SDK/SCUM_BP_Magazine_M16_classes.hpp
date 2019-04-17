@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Magazine_M16.BP_Magazine_M16_C
-// 0x0000 (0x0728 - 0x0728)
+// 0x0000 (0x0758 - 0x0758)
 class ABP_Magazine_M16_C : public AWeaponAttachmentMagazine
 {
 public:

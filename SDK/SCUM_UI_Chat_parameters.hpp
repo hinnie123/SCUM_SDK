@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function UI_Chat.UI_Chat_C.CreateSuggestionLine
+struct UUI_Chat_C_CreateSuggestionLine_Params
+{
+	struct FString                                     Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	class UUI_ChatSuggestion_C*                        Widget;                                                   // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
 
 // Function UI_Chat.UI_Chat_C.OnPreviewKeyDown
 struct UUI_Chat_C_OnPreviewKeyDown_Params
@@ -50,6 +57,11 @@ struct UUI_Chat_C_BndEvt__MuteButton_K2Node_ComponentBoundEvent_19_OnButtonClick
 
 // Function UI_Chat.UI_Chat_C.Construct
 struct UUI_Chat_C_Construct_Params
+{
+};
+
+// Function UI_Chat.UI_Chat_C.UpdateActiveSuggestions
+struct UUI_Chat_C_UpdateActiveSuggestions_Params
 {
 };
 

@@ -1,4 +1,4 @@
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,23 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function AnimBP_AKS_74U.AnimBP_AKS_74U_C.EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AKS_74U_AnimGraphNode_ModifyBone_23F30FFD4C2F66EBC99D01A878391CBA
+// (BlueprintEvent)
+
+void UAnimBP_AKS_74U_C::EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AKS_74U_AnimGraphNode_ModifyBone_23F30FFD4C2F66EBC99D01A878391CBA()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AnimBP_AKS_74U.AnimBP_AKS_74U_C.EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AKS_74U_AnimGraphNode_ModifyBone_23F30FFD4C2F66EBC99D01A878391CBA");
+
+	UAnimBP_AKS_74U_C_EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AKS_74U_AnimGraphNode_ModifyBone_23F30FFD4C2F66EBC99D01A878391CBA_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function AnimBP_AKS_74U.AnimBP_AKS_74U_C.EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AKS_74U_AnimGraphNode_BlendListByBool_5776B9914AC5CFC06C3AE6B838EC8E65
 // (BlueprintEvent)
@@ -37,6 +54,26 @@ void UAnimBP_AKS_74U_C::EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AKS_7
 	static auto fn = UObject::FindObject<UFunction>("Function AnimBP_AKS_74U.AnimBP_AKS_74U_C.EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AKS_74U_AnimGraphNode_BlendListByEnum_A410198E491529D79243C9B392E5AF8A");
 
 	UAnimBP_AKS_74U_C_EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AKS_74U_AnimGraphNode_BlendListByEnum_A410198E491529D79243C9B392E5AF8A_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function AnimBP_AKS_74U.AnimBP_AKS_74U_C.BlueprintUpdateAnimation
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float*                         DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimBP_AKS_74U_C::BlueprintUpdateAnimation(float* DeltaTimeX)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AnimBP_AKS_74U.AnimBP_AKS_74U_C.BlueprintUpdateAnimation");
+
+	UAnimBP_AKS_74U_C_BlueprintUpdateAnimation_Params params;
+	params.DeltaTimeX = DeltaTimeX;
 
 	auto flags = fn->FunctionFlags;
 

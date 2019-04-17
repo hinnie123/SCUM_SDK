@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,7 +23,7 @@ struct UUI_GameEventLeaderboardRow_C_Get_Background_BrushColor_Params
 // Function UI_GameEventLeaderboardRow.UI_GameEventLeaderboardRow_C.SetRank
 struct UUI_GameEventLeaderboardRow_C_SetRank_Params
 {
-	int                                                rank;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Rank;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UI_GameEventLeaderboardRow.UI_GameEventLeaderboardRow_C.SetStats

@@ -1,4 +1,4 @@
-// SCUM (0.1.18.9572) SDK
+// SCUM (0.1.32.12804) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -367,6 +367,23 @@ void UUI_SpawnSectorSelector_C::BndEvt__Button_3_K2Node_ComponentBoundEvent_13_O
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.BndEvt__Button_3_K2Node_ComponentBoundEvent_13_OnButtonClickedEvent__DelegateSignature");
 
 	UUI_SpawnSectorSelector_C_BndEvt__Button_3_K2Node_ComponentBoundEvent_13_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UUI_SpawnSectorSelector_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.Construct");
+
+	UUI_SpawnSectorSelector_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
 
