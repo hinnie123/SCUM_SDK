@@ -6,10 +6,10 @@ UPDATED FOR LATEST VERSION: 0.1.32.12804
 Useful game info:
 ```
 Objects:
-0x34A2850 (already in sdk)
+0x34B97C0 (already in sdk)
 
 TotalObjects: 
-0x34A2864 (already in sdk)
+0x34B97D4 (already in sdk)
 
 GNames:
 48 8B 05 ? ? ? ? 48 85 C0 75 5F

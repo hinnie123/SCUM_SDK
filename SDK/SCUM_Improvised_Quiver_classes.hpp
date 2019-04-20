@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.32.12804) SDK
+// SCUM (0.1.33.12968 by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Improvised_Quiver.Improvised_Quiver_C
-// 0x0000 (0x0730 - 0x0730)
+// 0x0000 (0x0748 - 0x0748)
 class AImprovised_Quiver_C : public AItem
 {
 public:

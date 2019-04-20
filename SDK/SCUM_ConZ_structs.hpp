@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.32.12804) SDK
+// SCUM (0.1.33.12968 by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1866,7 +1866,9 @@ enum class EPrisonerHUDMode : uint8_t
 	DebugMeleeSkill                = 4,
 	Target                         = 5,
 	Map                            = 6,
-	EPrisonerHUDMode_MAX           = 7
+	DroneNormal                    = 7,
+	DroneMap                       = 8,
+	EPrisonerHUDMode_MAX           = 9
 };
 
 
@@ -4089,17 +4091,17 @@ struct FPhysicalSurfaceData
 };
 
 // ScriptStruct ConZ.PlaceableIngredient
-// 0x0030
+// 0x0050
 struct FPlaceableIngredient
 {
 	TArray<class UCraftingItemTag*>                    Tags;                                                     // 0x0000(0x0010) (Edit, ZeroConstructor)
 	TArray<class UClass*>                              SpecificItems;                                            // 0x0010(0x0010) (Edit, ZeroConstructor)
 	EIngredientUsageRule                               UsageRule;                                                // 0x0020(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	ECraftingType                                      CraftingType;                                             // 0x0021(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x0022(0x0002) MISSED OFFSET
-	float                                              Required;                                                 // 0x0024(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Satisfied;                                                // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0021(0x0007) MISSED OFFSET
+	TArray<ECraftingType>                              TagsCraftingTypes;                                        // 0x0028(0x0010) (Edit, ZeroConstructor)
+	TArray<ECraftingType>                              SpecificItemsCraftingTypes;                               // 0x0038(0x0010) (Edit, ZeroConstructor)
+	float                                              Required;                                                 // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Satisfied;                                                // 0x004C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct ConZ.PrisonerMeleeAttackTypes
@@ -4204,7 +4206,7 @@ struct FCharacterActionAck
 };
 
 // ScriptStruct ConZ.ProjectilePointDamageEvent
-// 0x0038 (0x00E0 - 0x00A8)
+// 0x0040 (0x00E8 - 0x00A8)
 struct FProjectilePointDamageEvent : public FPointDamageEvent
 {
 	bool                                               IsHeadUpperShot;                                          // 0x00A8(0x0001) (ZeroConstructor, IsPlainOldData)
@@ -4212,6 +4214,7 @@ struct FProjectilePointDamageEvent : public FPointDamageEvent
 	float                                              EnergyLossPerClothesLayer[0x7];                           // 0x00AC(0x0004) (ZeroConstructor, IsPlainOldData)
 	struct FVector_NetQuantize100                      KillerLocation;                                           // 0x00C8(0x000C)
 	struct FVector_NetQuantize100                      VictimLocation;                                           // 0x00D4(0x000C)
+	class UClass*                                      WeaponClass;                                              // 0x00E0(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct ConZ.SkillEventWeapon
@@ -5088,6 +5091,20 @@ struct FZombiesVariations
 	TArray<struct FZombieAttributesVariation>          AttributesVariations;                                     // 0x0010(0x0010) (Edit, ZeroConstructor)
 	TArray<struct FZombieRelaxedStanceVariation>       RelaxedStanceVariations;                                  // 0x0020(0x0010) (Edit, ZeroConstructor)
 	TArray<struct FZombieCombatStanceVariation>        CombatStanceVariations;                                   // 0x0030(0x0010) (Edit, ZeroConstructor)
+};
+
+// ScriptStruct ConZ.AchievementStats
+// 0x0001
+struct FAchievementStats
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct ConZ.Achievements
+// 0x0001
+struct FAchievements
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct ConZ.AnimalData

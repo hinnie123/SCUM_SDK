@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.32.12804) SDK
+// SCUM (0.1.33.12968 by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -3016,7 +3016,7 @@ public:
 
 
 // Class Engine.SpringArmComponent
-// 0x0080 (0x02C0 - 0x0240)
+// 0x0090 (0x02D0 - 0x0240)
 class USpringArmComponent : public USceneComponent
 {
 public:
@@ -3040,6 +3040,10 @@ public:
 	float                                              CameraLagMaxTimeStep;                                     // 0x0268(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              CameraLagMaxDistance;                                     // 0x026C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x50];                                      // 0x0270(0x0050) MISSED OFFSET
+	bool                                               _shouldConstrainTraceOriginToOwnerCapsule;                // 0x02C0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x3];                                       // 0x02C1(0x0003) MISSED OFFSET
+	float                                              _ownerCapsuleContrainBuffer;                              // 0x02C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x8];                                       // 0x02C8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

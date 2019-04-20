@@ -1,4 +1,4 @@
-// SCUM (0.1.32.12804) SDK
+// SCUM (0.1.33.12968 by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -10662,6 +10662,28 @@ class AGlobalAnimalSpawner* AConZGameMode::GetGlobalAnimalSpawner()
 }
 
 
+// Function ConZ.ConZGameMode.GetAchievementsManagerServer
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class AAchievementsManagerServer* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AAchievementsManagerServer* AConZGameMode::GetAchievementsManagerServer()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZGameMode.GetAchievementsManagerServer");
+
+	AConZGameMode_GetAchievementsManagerServer_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ConZ.ConZGameState.SendServerTime
 // (Final, Net, NetReliable, Native, Event, NetMulticast, Private)
 // Parameters:
@@ -17269,6 +17291,48 @@ void ADrone::Server_SetActorLocation(const struct FVector& Location)
 
 	ADrone_Server_SetActorLocation_Params params;
 	params.Location = Location;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.Drone.Server_OpenDoor
+// (Final, Net, NetReliable, Native, Event, Private, NetServer, NetValidate)
+// Parameters:
+// class ADoor*                   Door                           (Parm, ZeroConstructor, IsPlainOldData)
+
+void ADrone::Server_OpenDoor(class ADoor* Door)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Drone.Server_OpenDoor");
+
+	ADrone_Server_OpenDoor_Params params;
+	params.Door = Door;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.Drone.Server_CloseDoor
+// (Final, Net, NetReliable, Native, Event, Private, NetServer, NetValidate)
+// Parameters:
+// class ADoor*                   Door                           (Parm, ZeroConstructor, IsPlainOldData)
+
+void ADrone::Server_CloseDoor(class ADoor* Door)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Drone.Server_CloseDoor");
+
+	ADrone_Server_CloseDoor_Params params;
+	params.Door = Door;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -26392,6 +26456,121 @@ void APlaceableActor::OnRep_CraftingIndex()
 }
 
 
+// Function ConZ.PlayerRpcChannel.Server_UnsubscribeFromUnachievedAchievements
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+// Parameters:
+// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FString>         achievementsIds                (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+
+void UPlayerRpcChannel::Server_UnsubscribeFromUnachievedAchievements(class APlayerController* PlayerController, TArray<struct FString> achievementsIds)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PlayerRpcChannel.Server_UnsubscribeFromUnachievedAchievements");
+
+	UPlayerRpcChannel_Server_UnsubscribeFromUnachievedAchievements_Params params;
+	params.PlayerController = PlayerController;
+	params.achievementsIds = achievementsIds;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.PlayerRpcChannel.Server_UnlockedAchievement
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+// Parameters:
+// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString                 AchievementID                  (Parm, ZeroConstructor)
+
+void UPlayerRpcChannel::Server_UnlockedAchievement(class APlayerController* PlayerController, const struct FString& AchievementID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PlayerRpcChannel.Server_UnlockedAchievement");
+
+	UPlayerRpcChannel_Server_UnlockedAchievement_Params params;
+	params.PlayerController = PlayerController;
+	params.AchievementID = AchievementID;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.PlayerRpcChannel.Server_ReportUnachievedAchievements
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+// Parameters:
+// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FString>         achievementsIds                (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+
+void UPlayerRpcChannel::Server_ReportUnachievedAchievements(class APlayerController* PlayerController, TArray<struct FString> achievementsIds)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PlayerRpcChannel.Server_ReportUnachievedAchievements");
+
+	UPlayerRpcChannel_Server_ReportUnachievedAchievements_Params params;
+	params.PlayerController = PlayerController;
+	params.achievementsIds = achievementsIds;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.PlayerRpcChannel.Client_UnlockAchievement
+// (Net, NetReliable, Native, Event, Public, NetClient, NetValidate)
+// Parameters:
+// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString                 AchievementID                  (Parm, ZeroConstructor)
+
+void UPlayerRpcChannel::Client_UnlockAchievement(class APlayerController* PlayerController, const struct FString& AchievementID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PlayerRpcChannel.Client_UnlockAchievement");
+
+	UPlayerRpcChannel_Client_UnlockAchievement_Params params;
+	params.PlayerController = PlayerController;
+	params.AchievementID = AchievementID;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.PlayerRpcChannel.Client_IncreaseStat
+// (Net, NetReliable, Native, Event, Public, NetClient, NetValidate)
+// Parameters:
+// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString                 statId                         (Parm, ZeroConstructor)
+
+void UPlayerRpcChannel::Client_IncreaseStat(class APlayerController* PlayerController, const struct FString& statId)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PlayerRpcChannel.Client_IncreaseStat");
+
+	UPlayerRpcChannel_Client_IncreaseStat_Params params;
+	params.PlayerController = PlayerController;
+	params.statId = statId;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ConZ.PowerGenerator.OnRep_IsWorking
 // (Final, Native, Private)
 
@@ -31224,6 +31403,28 @@ struct FDbIntegerId APrisoner::GetServerUserProfileId()
 }
 
 
+// Function ConZ.Prisoner.GetSavedSpawnRotation
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FRotator APrisoner::GetSavedSpawnRotation()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.GetSavedSpawnRotation");
+
+	APrisoner_GetSavedSpawnRotation_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ConZ.Prisoner.GetSavedSpawnLocationActive
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -32773,14 +32974,16 @@ void APrisoner::Client_ShowSpawnScreen(bool loadoutMenu)
 // Parameters:
 // bool                           active                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Location                       (Parm, IsPlainOldData)
+// struct FRotator                Rotation                       (Parm, IsPlainOldData)
 
-void APrisoner::Client_SetSavedSpawnLocation(bool active, const struct FVector& Location)
+void APrisoner::Client_SetSavedSpawnLocation(bool active, const struct FVector& Location, const struct FRotator& Rotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.Client_SetSavedSpawnLocation");
 
 	APrisoner_Client_SetSavedSpawnLocation_Params params;
 	params.active = active;
 	params.Location = Location;
+	params.Rotation = Rotation;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -41998,6 +42201,28 @@ class APrisonerCameraManager* APrisonerPlayerController::GetPrisonerCameraManage
 }
 
 
+// Function ConZ.PrisonerPlayerController.GetPlayerRpcChannel
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UPlayerRpcChannel*       ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UPlayerRpcChannel* APrisonerPlayerController::GetPlayerRpcChannel()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PrisonerPlayerController.GetPlayerRpcChannel");
+
+	APrisonerPlayerController_GetPlayerRpcChannel_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ConZ.PrisonerPlayerController.GetNoiseEmitterComponent
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -42162,6 +42387,28 @@ int APrisonerPlayerController::GetFameLevel()
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PrisonerPlayerController.GetFameLevel");
 
 	APrisonerPlayerController_GetFameLevel_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.PrisonerPlayerController.GetAchievementsManagerClient
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class AAchievementsManagerClient* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AAchievementsManagerClient* APrisonerPlayerController::GetAchievementsManagerClient()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PrisonerPlayerController.GetAchievementsManagerClient");
+
+	APrisonerPlayerController_GetAchievementsManagerClient_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -42381,6 +42628,24 @@ void APrisonerPlayerController::Client_ProcessAdminCommand_VisualizeBulletTrajec
 
 	APrisonerPlayerController_Client_ProcessAdminCommand_VisualizeBulletTrajectories_Params params;
 	params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ResetAchievements
+// (Net, NetReliable, Native, Event, Public, NetClient)
+
+void APrisonerPlayerController::Client_ProcessAdminCommand_ResetAchievements()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ResetAchievements");
+
+	APrisonerPlayerController_Client_ProcessAdminCommand_ResetAchievements_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.32.12804) SDK
+// SCUM (0.1.33.12968 by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -3076,6 +3076,12 @@ struct AConZGameMode_GetGlobalAnimalSpawner_Params
 	class AGlobalAnimalSpawner*                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function ConZ.ConZGameMode.GetAchievementsManagerServer
+struct AConZGameMode_GetAchievementsManagerServer_Params
+{
+	class AAchievementsManagerServer*                  ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function ConZ.ConZGameState.SendServerTime
 struct AConZGameState_SendServerTime_Params
 {
@@ -4969,6 +4975,18 @@ struct ADrone_Server_SetCurrentSpeedStep_Params
 struct ADrone_Server_SetActorLocation_Params
 {
 	struct FVector                                     Location;                                                 // (Parm, IsPlainOldData)
+};
+
+// Function ConZ.Drone.Server_OpenDoor
+struct ADrone_Server_OpenDoor_Params
+{
+	class ADoor*                                       Door;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.Drone.Server_CloseDoor
+struct ADrone_Server_CloseDoor_Params
+{
+	class ADoor*                                       Door;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.Drone.SelfDestruct
@@ -7626,6 +7644,41 @@ struct APlaceableActor_OnRep_CraftingIndex_Params
 {
 };
 
+// Function ConZ.PlayerRpcChannel.Server_UnsubscribeFromUnachievedAchievements
+struct UPlayerRpcChannel_Server_UnsubscribeFromUnachievedAchievements_Params
+{
+	class APlayerController*                           PlayerController;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FString>                             achievementsIds;                                          // (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+};
+
+// Function ConZ.PlayerRpcChannel.Server_UnlockedAchievement
+struct UPlayerRpcChannel_Server_UnlockedAchievement_Params
+{
+	class APlayerController*                           PlayerController;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FString                                     AchievementID;                                            // (Parm, ZeroConstructor)
+};
+
+// Function ConZ.PlayerRpcChannel.Server_ReportUnachievedAchievements
+struct UPlayerRpcChannel_Server_ReportUnachievedAchievements_Params
+{
+	class APlayerController*                           PlayerController;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FString>                             achievementsIds;                                          // (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+};
+
+// Function ConZ.PlayerRpcChannel.Client_UnlockAchievement
+struct UPlayerRpcChannel_Client_UnlockAchievement_Params
+{
+	class APlayerController*                           PlayerController;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FString                                     AchievementID;                                            // (Parm, ZeroConstructor)
+};
+
+// Function ConZ.PlayerRpcChannel.Client_IncreaseStat
+struct UPlayerRpcChannel_Client_IncreaseStat_Params
+{
+	class APlayerController*                           PlayerController;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FString                                     statId;                                                   // (Parm, ZeroConstructor)
+};
+
 // Function ConZ.PowerGenerator.OnRep_IsWorking
 struct APowerGenerator_OnRep_IsWorking_Params
 {
@@ -9017,6 +9070,12 @@ struct APrisoner_GetServerUserProfileId_Params
 	struct FDbIntegerId                                ReturnValue;                                              // (ConstParm, Parm, OutParm, ReturnParm)
 };
 
+// Function ConZ.Prisoner.GetSavedSpawnRotation
+struct APrisoner_GetSavedSpawnRotation_Params
+{
+	struct FRotator                                    ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
 // Function ConZ.Prisoner.GetSavedSpawnLocationActive
 struct APrisoner_GetSavedSpawnLocationActive_Params
 {
@@ -9448,6 +9507,7 @@ struct APrisoner_Client_SetSavedSpawnLocation_Params
 {
 	bool                                               active;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Location;                                                 // (Parm, IsPlainOldData)
+	struct FRotator                                    Rotation;                                                 // (Parm, IsPlainOldData)
 };
 
 // Function ConZ.Prisoner.Client_RequestCharacterAction
@@ -12065,6 +12125,12 @@ struct APrisonerPlayerController_GetPrisonerCameraManager_Params
 	class APrisonerCameraManager*                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function ConZ.PrisonerPlayerController.GetPlayerRpcChannel
+struct APrisonerPlayerController_GetPlayerRpcChannel_Params
+{
+	class UPlayerRpcChannel*                           ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
 // Function ConZ.PrisonerPlayerController.GetNoiseEmitterComponent
 struct APrisonerPlayerController_GetNoiseEmitterComponent_Params
 {
@@ -12111,6 +12177,12 @@ struct APrisonerPlayerController_GetFameMultiplier_Params
 struct APrisonerPlayerController_GetFameLevel_Params
 {
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerPlayerController.GetAchievementsManagerClient
+struct APrisonerPlayerController_GetAchievementsManagerClient_Params
+{
+	class AAchievementsManagerClient*                  ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function ConZ.PrisonerPlayerController.Crash
@@ -12175,6 +12247,11 @@ struct APrisonerPlayerController_Client_RecieveCharacterStats_Params
 struct APrisonerPlayerController_Client_ProcessAdminCommand_VisualizeBulletTrajectories_Params
 {
 	int                                                Value;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ResetAchievements
+struct APrisonerPlayerController_Client_ProcessAdminCommand_ResetAchievements_Params
+{
 };
 
 // Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ListVehicleSpawnerInfos

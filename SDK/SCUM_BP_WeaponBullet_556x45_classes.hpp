@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.32.12804) SDK
+// SCUM (0.1.33.12968 by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WeaponBullet_556x45.BP_WeaponBullet_556x45_C
-// 0x0000 (0x04E0 - 0x04E0)
+// 0x0000 (0x04E8 - 0x04E8)
 class ABP_WeaponBullet_556x45_C : public AProjectile
 {
 public:
