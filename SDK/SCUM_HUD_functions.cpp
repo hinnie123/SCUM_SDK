@@ -1,4 +1,4 @@
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1105,23 +1105,6 @@ void UHUD_C::AddMessageWithColor(TEnumAsByte<EMessageType> Type, const struct FT
 }
 
 
-// Function HUD.HUD_C.ToggleMonitorsVisibility
-// (Event, Public, BlueprintEvent)
-
-void UHUD_C::ToggleMonitorsVisibility()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.ToggleMonitorsVisibility");
-
-	UHUD_C_ToggleMonitorsVisibility_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function HUD.HUD_C.ClearTeammateNames
 // (Event, Public, BlueprintEvent)
 
@@ -1139,17 +1122,14 @@ void UHUD_C::ClearTeammateNames()
 }
 
 
-// Function HUD.HUD_C.ObjectiveChanged
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ABP_MissionObjective_C*  sender                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function HUD.HUD_C.UpdateAttributesHistory
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void UHUD_C::ObjectiveChanged(class ABP_MissionObjective_C* sender)
+void UHUD_C::UpdateAttributesHistory()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.ObjectiveChanged");
+	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.UpdateAttributesHistory");
 
-	UHUD_C_ObjectiveChanged_Params params;
-	params.sender = sender;
+	UHUD_C_UpdateAttributesHistory_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1159,14 +1139,38 @@ void UHUD_C::ObjectiveChanged(class ABP_MissionObjective_C* sender)
 }
 
 
-// Function HUD.HUD_C.UpdateAttributesHistory
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function HUD.HUD_C.AddMessage
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TEnumAsByte<EMessageType>      Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// float                          Duration                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UHUD_C::UpdateAttributesHistory()
+void UHUD_C::AddMessage(TEnumAsByte<EMessageType> Type, const struct FText& Text, float Duration)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.UpdateAttributesHistory");
+	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.AddMessage");
 
-	UHUD_C_UpdateAttributesHistory_Params params;
+	UHUD_C_AddMessage_Params params;
+	params.Type = Type;
+	params.Text = Text;
+	params.Duration = Duration;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HUD.HUD_C.ToggleMonitorsVisibility
+// (Event, Public, BlueprintEvent)
+
+void UHUD_C::ToggleMonitorsVisibility()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.ToggleMonitorsVisibility");
+
+	UHUD_C_ToggleMonitorsVisibility_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1235,14 +1239,14 @@ void UHUD_C::OnPrisonerSet()
 }
 
 
-// Function HUD.HUD_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function HUD.HUD_C.Shake
+// (BlueprintCallable, BlueprintEvent)
 
-void UHUD_C::Construct()
+void UHUD_C::Shake()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.Construct");
+	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.Shake");
 
-	UHUD_C_Construct_Params params;
+	UHUD_C_Shake_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1252,14 +1256,17 @@ void UHUD_C::Construct()
 }
 
 
-// Function HUD.HUD_C.Shake
+// Function HUD.HUD_C.ObjectiveChanged
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_MissionObjective_C*  sender                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UHUD_C::Shake()
+void UHUD_C::ObjectiveChanged(class ABP_MissionObjective_C* sender)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.Shake");
+	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.ObjectiveChanged");
 
-	UHUD_C_Shake_Params params;
+	UHUD_C_ObjectiveChanged_Params params;
+	params.sender = sender;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1452,21 +1459,14 @@ void UHUD_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 }
 
 
-// Function HUD.HUD_C.AddMessage
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TEnumAsByte<EMessageType>      Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
-// float                          Duration                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function HUD.HUD_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UHUD_C::AddMessage(TEnumAsByte<EMessageType> Type, const struct FText& Text, float Duration)
+void UHUD_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.AddMessage");
+	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.Construct");
 
-	UHUD_C_AddMessage_Params params;
-	params.Type = Type;
-	params.Text = Text;
-	params.Duration = Duration;
+	UHUD_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
 

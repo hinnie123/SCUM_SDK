@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass ABP_Dick_Placeholder.ABP_Dick_Placeholder_C
-// 0x0780 (0x0AE0 - 0x0360)
+// 0x0781 (0x0AE1 - 0x0360)
 class UABP_Dick_Placeholder_C : public UAnimInstance
 {
 public:
@@ -35,6 +35,7 @@ public:
 	bool                                               IsPenisInHands;                                           // 0x0AD0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x3];                                       // 0x0AD1(0x0003) MISSED OFFSET
 	struct FVector                                     _handsIK;                                                 // 0x0AD4(0x000C) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsInRange;                                                // 0x0AE0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -43,8 +44,8 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_Fabrik_97957A264606C62DC406D3975C3CF137();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_BlendListByBool_A3AF193D4E173862242D8EBBC183DB56();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_Fabrik_97957A264606C62DC406D3975C3CF137();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_BlendListByBool_EC306D5441337A76DF8BBDB1062CF42E();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_Fabrik_CA6C7A3141BAB14F9742FAB47540D2C0();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);

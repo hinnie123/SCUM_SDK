@@ -1,4 +1,4 @@
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24951,6 +24951,29 @@ struct FVector UProjectileMovementComponent::LimitVelocity(const struct FVector&
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function Engine.PostProcessVolume.AddOrUpdateBlendable
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TScriptInterface<class UBlendableInterface> InBlendableObject              (Parm, ZeroConstructor, IsPlainOldData)
+// float                          InWeight                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void APostProcessVolume::AddOrUpdateBlendable(const TScriptInterface<class UBlendableInterface>& InBlendableObject, float InWeight)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PostProcessVolume.AddOrUpdateBlendable");
+
+	APostProcessVolume_AddOrUpdateBlendable_Params params;
+	params.InBlendableObject = InBlendableObject;
+	params.InWeight = InWeight;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -63484,29 +63507,6 @@ void UPostProcessComponent::AddOrUpdateBlendable(const TScriptInterface<class UB
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PostProcessComponent.AddOrUpdateBlendable");
 
 	UPostProcessComponent_AddOrUpdateBlendable_Params params;
-	params.InBlendableObject = InBlendableObject;
-	params.InWeight = InWeight;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.PostProcessVolume.AddOrUpdateBlendable
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// TScriptInterface<class UBlendableInterface> InBlendableObject              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InWeight                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void APostProcessVolume::AddOrUpdateBlendable(const TScriptInterface<class UBlendableInterface>& InBlendableObject, float InWeight)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PostProcessVolume.AddOrUpdateBlendable");
-
-	APostProcessVolume_AddOrUpdateBlendable_Params params;
 	params.InBlendableObject = InBlendableObject;
 	params.InWeight = InWeight;
 

@@ -1,4 +1,4 @@
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,40 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function AnimBP_AK47.AnimBP_AK47_C.EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AK47_AnimGraphNode_BlendListByBool_CB440D17440AD8A1105BD49F982DC644
+// (BlueprintEvent)
+
+void UAnimBP_AK47_C::EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AK47_AnimGraphNode_BlendListByBool_CB440D17440AD8A1105BD49F982DC644()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AnimBP_AK47.AnimBP_AK47_C.EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AK47_AnimGraphNode_BlendListByBool_CB440D17440AD8A1105BD49F982DC644");
+
+	UAnimBP_AK47_C_EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AK47_AnimGraphNode_BlendListByBool_CB440D17440AD8A1105BD49F982DC644_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function AnimBP_AK47.AnimBP_AK47_C.EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AK47_AnimGraphNode_BlendListByEnum_EB28A44641DFBA70ECA1E8AADF522CDF
+// (BlueprintEvent)
+
+void UAnimBP_AK47_C::EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AK47_AnimGraphNode_BlendListByEnum_EB28A44641DFBA70ECA1E8AADF522CDF()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AnimBP_AK47.AnimBP_AK47_C.EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AK47_AnimGraphNode_BlendListByEnum_EB28A44641DFBA70ECA1E8AADF522CDF");
+
+	UAnimBP_AK47_C_EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AK47_AnimGraphNode_BlendListByEnum_EB28A44641DFBA70ECA1E8AADF522CDF_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function AnimBP_AK47.AnimBP_AK47_C.EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AK47_AnimGraphNode_BlendListByBool_4CF9E3C544E097D461B18793B5CE2E4A
 // (BlueprintEvent)

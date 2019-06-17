@@ -1,4 +1,4 @@
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -967,12 +967,12 @@ class AAIController* UAIBlueprintHelperLibrary::STATIC_GetAIController(class AAc
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   Pawn                           (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Destination                    (Parm, IsPlainOldData)
-// class AActor*                  TargetActor                    (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  targetActor                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          AcceptanceRadius               (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bStopOnOverlap                 (Parm, ZeroConstructor, IsPlainOldData)
 // class UAIAsyncTaskBlueprintProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UAIAsyncTaskBlueprintProxy* UAIBlueprintHelperLibrary::STATIC_CreateMoveToProxyObject(class UObject* WorldContextObject, class APawn* Pawn, const struct FVector& Destination, class AActor* TargetActor, float AcceptanceRadius, bool bStopOnOverlap)
+class UAIAsyncTaskBlueprintProxy* UAIBlueprintHelperLibrary::STATIC_CreateMoveToProxyObject(class UObject* WorldContextObject, class APawn* Pawn, const struct FVector& Destination, class AActor* targetActor, float AcceptanceRadius, bool bStopOnOverlap)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AIModule.AIBlueprintHelperLibrary.CreateMoveToProxyObject");
 
@@ -980,7 +980,7 @@ class UAIAsyncTaskBlueprintProxy* UAIBlueprintHelperLibrary::STATIC_CreateMoveTo
 	params.WorldContextObject = WorldContextObject;
 	params.Pawn = Pawn;
 	params.Destination = Destination;
-	params.TargetActor = TargetActor;
+	params.targetActor = targetActor;
 	params.AcceptanceRadius = AcceptanceRadius;
 	params.bStopOnOverlap = bStopOnOverlap;
 

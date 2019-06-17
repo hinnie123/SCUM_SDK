@@ -1,4 +1,4 @@
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -430,6 +430,23 @@ void UUI_GameMenu_C::OnSuicideConfirmed()
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.OnSuicideConfirmed");
 
 	UUI_GameMenu_C_OnSuicideConfirmed_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UI_GameMenu.UI_GameMenu_C.BndEvt__Statistics_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
+// (BlueprintEvent)
+
+void UUI_GameMenu_C::BndEvt__Statistics_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.BndEvt__Statistics_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
+
+	UUI_GameMenu_C_BndEvt__Statistics_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 

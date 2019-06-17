@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -7430,6 +7430,13 @@ struct UProjectileMovementComponent_LimitVelocity_Params
 {
 	struct FVector                                     NewVelocity;                                              // (Parm, IsPlainOldData)
 	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.PostProcessVolume.AddOrUpdateBlendable
+struct APostProcessVolume_AddOrUpdateBlendable_Params
+{
+	TScriptInterface<class UBlendableInterface>        InBlendableObject;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              InWeight;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.BoxComponent.SetBoxExtent
@@ -19223,13 +19230,6 @@ struct UPoseableMeshComponent_CopyPoseFromSkeletalComponent_Params
 
 // Function Engine.PostProcessComponent.AddOrUpdateBlendable
 struct UPostProcessComponent_AddOrUpdateBlendable_Params
-{
-	TScriptInterface<class UBlendableInterface>        InBlendableObject;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              InWeight;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.PostProcessVolume.AddOrUpdateBlendable
-struct APostProcessVolume_AddOrUpdateBlendable_Params
 {
 	TScriptInterface<class UBlendableInterface>        InBlendableObject;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              InWeight;                                                 // (Parm, ZeroConstructor, IsPlainOldData)

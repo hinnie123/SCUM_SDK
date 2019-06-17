@@ -1,4 +1,4 @@
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -57,9 +57,9 @@ void UUI_GameEventLeaderboardRow_C::SetRank(int Rank)
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 characterName                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-// struct FCharacterStats         CharacterStats                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FEventsRankingStats     CharacterStats                 (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UUI_GameEventLeaderboardRow_C::SetStats(const struct FString& characterName, const struct FCharacterStats& CharacterStats)
+void UUI_GameEventLeaderboardRow_C::SetStats(const struct FString& characterName, const struct FEventsRankingStats& CharacterStats)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLeaderboardRow.UI_GameEventLeaderboardRow_C.SetStats");
 

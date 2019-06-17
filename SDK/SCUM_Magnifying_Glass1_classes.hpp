@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Magnifying_Glass1.Magnifying_Glass1_C
-// 0x0000 (0x0760 - 0x0760)
+// 0x0000 (0x0790 - 0x0790)
 class AMagnifying_Glass1_C : public AEquipmentItem
 {
 public:

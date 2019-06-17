@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -63,6 +63,11 @@ struct UUI_TabModeTabsContainer_C_BndEvt__UI_TabModeTab_1_K2Node_ComponentBoundE
 
 // Function UI_TabModeTabsContainer.UI_TabModeTabsContainer_C.BndEvt__CraftingTab_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature
 struct UUI_TabModeTabsContainer_C_BndEvt__CraftingTab_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature_Params
+{
+};
+
+// Function UI_TabModeTabsContainer.UI_TabModeTabsContainer_C.BndEvt__JournalTab_K2Node_ComponentBoundEvent_4_Clicked__DelegateSignature
+struct UUI_TabModeTabsContainer_C_BndEvt__JournalTab_K2Node_ComponentBoundEvent_4_Clicked__DelegateSignature_Params
 {
 };
 

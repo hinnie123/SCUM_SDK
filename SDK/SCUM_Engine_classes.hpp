@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -3016,7 +3016,7 @@ public:
 
 
 // Class Engine.SpringArmComponent
-// 0x0090 (0x02D0 - 0x0240)
+// 0x0080 (0x02C0 - 0x0240)
 class USpringArmComponent : public USceneComponent
 {
 public:
@@ -3040,10 +3040,6 @@ public:
 	float                                              CameraLagMaxTimeStep;                                     // 0x0268(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              CameraLagMaxDistance;                                     // 0x026C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x50];                                      // 0x0270(0x0050) MISSED OFFSET
-	bool                                               _shouldConstrainTraceOriginToOwnerCapsule;                // 0x02C0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x3];                                       // 0x02C1(0x0003) MISSED OFFSET
-	float                                              _ownerCapsuleContrainBuffer;                              // 0x02C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x8];                                       // 0x02C8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3344,6 +3340,37 @@ public:
 };
 
 
+// Class Engine.TriggerBase
+// 0x0008 (0x0330 - 0x0328)
+class ATriggerBase : public AActor
+{
+public:
+	class UShapeComponent*                             CollisionComponent;                                       // 0x0328(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Engine.TriggerBase");
+		return ptr;
+	}
+
+};
+
+
+// Class Engine.TriggerBox
+// 0x0000 (0x0330 - 0x0330)
+class ATriggerBox : public ATriggerBase
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Engine.TriggerBox");
+		return ptr;
+	}
+
+};
+
+
 // Class Engine.ShapeComponent
 // 0x0020 (0x0580 - 0x0560)
 class UShapeComponent : public UPrimitiveComponent
@@ -3627,6 +3654,31 @@ public:
 	void OnProjectileStopDelegate__DelegateSignature(const struct FHitResult& ImpactResult);
 	void OnProjectileBounceDelegate__DelegateSignature(const struct FHitResult& ImpactResult, const struct FVector& ImpactVelocity);
 	struct FVector LimitVelocity(const struct FVector& NewVelocity);
+};
+
+
+// Class Engine.PostProcessVolume
+// 0x0540 (0x08A0 - 0x0360)
+class APostProcessVolume : public AVolume
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0360(0x0010) MISSED OFFSET
+	struct FPostProcessSettings                        Settings;                                                 // 0x0370(0x0520) (Edit, BlueprintVisible)
+	float                                              Priority;                                                 // 0x0890(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              BlendRadius;                                              // 0x0894(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              BlendWeight;                                              // 0x0898(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bEnabled : 1;                                             // 0x089C(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bUnbound : 1;                                             // 0x089C(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x089D(0x0003) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Engine.PostProcessVolume");
+		return ptr;
+	}
+
+
+	void AddOrUpdateBlendable(const TScriptInterface<class UBlendableInterface>& InBlendableObject, float InWeight);
 };
 
 
@@ -4871,7 +4923,7 @@ public:
 class UAsyncActionLoadPrimaryAsset : public UAsyncActionLoadPrimaryAssetBase
 {
 public:
-	struct FScriptMulticastDelegate                    Completed;                                                // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    completed;                                                // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 
 	static UClass* StaticClass()
 	{
@@ -4889,7 +4941,7 @@ public:
 class UAsyncActionLoadPrimaryAssetClass : public UAsyncActionLoadPrimaryAssetBase
 {
 public:
-	struct FScriptMulticastDelegate                    Completed;                                                // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    completed;                                                // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 
 	static UClass* StaticClass()
 	{
@@ -4907,7 +4959,7 @@ public:
 class UAsyncActionLoadPrimaryAssetList : public UAsyncActionLoadPrimaryAssetBase
 {
 public:
-	struct FScriptMulticastDelegate                    Completed;                                                // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    completed;                                                // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 
 	static UClass* StaticClass()
 	{
@@ -4925,7 +4977,7 @@ public:
 class UAsyncActionLoadPrimaryAssetClassList : public UAsyncActionLoadPrimaryAssetBase
 {
 public:
-	struct FScriptMulticastDelegate                    Completed;                                                // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    completed;                                                // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 
 	static UClass* StaticClass()
 	{
@@ -4943,7 +4995,7 @@ public:
 class UAsyncActionChangePrimaryAssetBundles : public UAsyncActionLoadPrimaryAssetBase
 {
 public:
-	struct FScriptMulticastDelegate                    Completed;                                                // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    completed;                                                // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 
 	static UClass* StaticClass()
 	{
@@ -18836,31 +18888,6 @@ public:
 };
 
 
-// Class Engine.PostProcessVolume
-// 0x0540 (0x08A0 - 0x0360)
-class APostProcessVolume : public AVolume
-{
-public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0360(0x0010) MISSED OFFSET
-	struct FPostProcessSettings                        Settings;                                                 // 0x0370(0x0520) (Edit, BlueprintVisible)
-	float                                              Priority;                                                 // 0x0890(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              BlendRadius;                                              // 0x0894(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              BlendWeight;                                              // 0x0898(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bEnabled : 1;                                             // 0x089C(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bUnbound : 1;                                             // 0x089C(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x089D(0x0003) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Engine.PostProcessVolume");
-		return ptr;
-	}
-
-
-	void AddOrUpdateBlendable(const TScriptInterface<class UBlendableInterface>& InBlendableObject, float InWeight);
-};
-
-
 // Class Engine.PrecomputedVisibilityOverrideVolume
 // 0x0030 (0x0390 - 0x0360)
 class APrecomputedVisibilityOverrideVolume : public AVolume
@@ -21129,37 +21156,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Engine.TouchInterface");
-		return ptr;
-	}
-
-};
-
-
-// Class Engine.TriggerBase
-// 0x0008 (0x0330 - 0x0328)
-class ATriggerBase : public AActor
-{
-public:
-	class UShapeComponent*                             CollisionComponent;                                       // 0x0328(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Engine.TriggerBase");
-		return ptr;
-	}
-
-};
-
-
-// Class Engine.TriggerBox
-// 0x0000 (0x0330 - 0x0330)
-class ATriggerBox : public ATriggerBase
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Engine.TriggerBox");
 		return ptr;
 	}
 

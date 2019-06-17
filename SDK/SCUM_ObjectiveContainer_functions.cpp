@@ -1,4 +1,4 @@
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -20,28 +20,6 @@ void UObjectiveContainer_C::Construct()
 	static auto fn = UObject::FindObject<UFunction>("Function ObjectiveContainer.ObjectiveContainer_C.Construct");
 
 	UObjectiveContainer_C_Construct_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function ObjectiveContainer.ObjectiveContainer_C.AddObjective
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ABP_MissionObjective_C*  Objective                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           PlaySound                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UObjectiveContainer_C::AddObjective(class ABP_MissionObjective_C* Objective, bool PlaySound)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function ObjectiveContainer.ObjectiveContainer_C.AddObjective");
-
-	UObjectiveContainer_C_AddObjective_Params params;
-	params.Objective = Objective;
-	params.PlaySound = PlaySound;
 
 	auto flags = fn->FunctionFlags;
 

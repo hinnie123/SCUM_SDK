@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ struct UUI_GameEventLeaderboardRow_C_SetRank_Params
 struct UUI_GameEventLeaderboardRow_C_SetStats_Params
 {
 	struct FString                                     characterName;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-	struct FCharacterStats                             CharacterStats;                                           // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FEventsRankingStats                         CharacterStats;                                           // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 }

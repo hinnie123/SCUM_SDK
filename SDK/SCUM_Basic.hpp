@@ -1,8 +1,6 @@
 #pragma once
 
-// SCUM (0.1.33.12968 by Hinnie) SDK
-
-#include <locale>
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,14 +50,17 @@ public:
 class TUObjectArray
 {
 public:
+	static uintptr_t g_total_objects;
+	static uintptr_t g_objects;
+
 	inline int32_t Num() const
 	{
-		return *(int*)((uintptr_t)GetModuleHandleA(0) + 0x34B97D4);
+		return *(int32_t*)((uintptr_t)GetModuleHandleA(0) + g_total_objects);
 	}
 
 	inline UObject* GetByIndex(int32_t index) const
 	{
-		static auto objects = *(uintptr_t*)((uintptr_t)GetModuleHandleA(0) + 0x34B97C0);
+		static auto objects = *(uintptr_t*)((uintptr_t)GetModuleHandleA(0) + g_objects);
 		return (UObject*)(*(uintptr_t*)(*(uintptr_t*)(objects + 8i64 * (index / 66560)) + 24i64 * (index % 66560)));
 	}
 

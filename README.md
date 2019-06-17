@@ -6,10 +6,12 @@ UPDATED FOR LATEST VERSION: 0.1.32.12804
 Useful game info:
 ```
 Objects:
-0x34B97C0 (already in sdk)
+4C 8B 15 ? ? ? ? 8D 43 01
+\x4C\x8B\x15\x00\x00\x00\x00\x8D\x43\x01 xxx????xxx
 
 TotalObjects: 
-0x34B97D4 (already in sdk)
+44 8B 15 ? ? ? ? 45 33 C9 45 85 D2
+\x4C\x8B\x15\x00\x00\x00\x00\x8D\x43\x01 xxx????xxx
 
 GNames:
 48 8B 05 ? ? ? ? 48 85 C0 75 5F
@@ -24,13 +26,17 @@ CreateDefaultObject: 102
 
 void init_sdk()
 {
-	SDK::UObject::GObjects = 0; // not using this
-	// we're using the Objects & TotalObjects listed above, however they're already implemented in the sdk
-	// so you don't have to init them
-
-	auto gname_addr = utils::find_pattern("48 8B 05 ? ? ? ? 48 85 C0 75 5F");
+	const auto gname_addr = utils::find_pattern("48 8B 05 ? ? ? ? 48 85 C0 75 5F");
 	auto offset = *(uint32_t*)(gname_addr + 3);
-	SDK::FName::GNames = (SDK::FName::GNames)(*(uintptr_t*)(gname_addr + 7 + offset));
+	SDK::FName::GNames = (SDK::TNameEntryArray*)(*(uintptr_t*)(gname_addr + 7 + offset));
+
+	const auto objects_addr = utils::find_pattern("4C 8B 15 ? ? ? ? 8D 43 01");
+	offset = *(int32_t*)(objects_addr + 3);
+	SDK::TUObjectArray::g_objects = (uintptr_t)(objects_addr + 7 + offset) - (uintptr_t)GetModuleHandleA(0);
+
+	const auto total_objects_addr = utils::find_pattern("44 8B 15 ? ? ? ? 45 33 C9 45 85 D2");
+	offset = *(int32_t*)(total_objects_addr + 3);
+	SDK::TUObjectArray::g_total_objects = (uintptr_t)(total_objects_addr + 7 + offset) - (uintptr_t)GetModuleHandleA(0);
 }
 ```
 

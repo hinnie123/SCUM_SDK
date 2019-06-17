@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,8 +13,8 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WeaponSights_RedDot_CA401B.BP_WeaponSights_RedDot_CA401B_C
-// 0x0000 (0x0770 - 0x0770)
-class ABP_WeaponSights_RedDot_CA401B_C : public AWeaponAttachmentSight
+// 0x0000 (0x07A8 - 0x07A8)
+class ABP_WeaponSights_RedDot_CA401B_C : public ABP_WeaponSightBase_C
 {
 public:
 

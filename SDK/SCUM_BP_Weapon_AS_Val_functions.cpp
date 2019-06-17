@@ -1,4 +1,4 @@
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,29 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function BP_Weapon_AS_Val.BP_Weapon_AS_Val_C.CanAddAttachment
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class AWeaponAttachment**      Attachment                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ABP_Weapon_AS_Val_C::CanAddAttachment(class AWeaponAttachment** Attachment)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_AS_Val.BP_Weapon_AS_Val_C.CanAddAttachment");
+
+	ABP_Weapon_AS_Val_C_CanAddAttachment_Params params;
+	params.Attachment = Attachment;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function BP_Weapon_AS_Val.BP_Weapon_AS_Val_C.UserConstructionScript
 // (Event, Public, BlueprintCallable, BlueprintEvent)

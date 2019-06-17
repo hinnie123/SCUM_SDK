@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -524,7 +524,7 @@ struct FMovieSceneSkeletalAnimationSectionTemplateParameters : public FMovieScen
 // 0x00D0 (0x00F0 - 0x0020)
 struct FMovieSceneSkeletalAnimationSectionTemplate : public FMovieSceneEvalTemplate
 {
-	struct FMovieSceneSkeletalAnimationSectionTemplateParameters Params;                                                   // 0x0020(0x00D0)
+	struct FMovieSceneSkeletalAnimationSectionTemplateParameters params;                                                   // 0x0020(0x00D0)
 };
 
 // ScriptStruct MovieSceneTracks.MovieSceneSlomoSectionTemplate

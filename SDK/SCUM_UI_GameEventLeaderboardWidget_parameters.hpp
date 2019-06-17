@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,7 +35,7 @@ struct UUI_GameEventLeaderboardWidget_C_UpdateTopList_Params
 // Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.RefreshData
 struct UUI_GameEventLeaderboardWidget_C_RefreshData_Params
 {
-	ECharacterStatsOrderByField                        orderByField;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	EEventsRankingStatsOrderByField                    orderByField;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	ESortOrder                                         sortOrder;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -48,7 +48,7 @@ struct UUI_GameEventLeaderboardWidget_C_UpdateRankingList_Params
 // Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.UpdateList
 struct UUI_GameEventLeaderboardWidget_C_UpdateList_Params
 {
-	TArray<struct FCharacterStatsItem>                 StatsItems;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct FEventsRankingStatsItem>             EventsRankingStatsItems;                                  // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	class UVerticalBox*                                TargetWidget;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 

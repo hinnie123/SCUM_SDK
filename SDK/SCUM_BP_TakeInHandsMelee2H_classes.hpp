@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TakeInHandsMelee2H.BP_TakeInHandsMelee2H_C
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0078 - 0x0078)
 class UBP_TakeInHandsMelee2H_C : public UTakeInHandsAssetData
 {
 public:

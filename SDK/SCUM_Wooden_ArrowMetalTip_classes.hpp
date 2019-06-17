@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Wooden_ArrowMetalTip.Wooden_ArrowMetalTip_C
-// 0x0000 (0x0768 - 0x0768)
+// 0x0000 (0x07A8 - 0x07A8)
 class AWooden_ArrowMetalTip_C : public AAmmunitionArrow
 {
 public:

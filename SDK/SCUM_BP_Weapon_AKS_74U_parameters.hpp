@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function BP_Weapon_AKS_74U.BP_Weapon_AKS_74U_C.CanAddAttachment
+struct ABP_Weapon_AKS_74U_C_CanAddAttachment_Params
+{
+	class AWeaponAttachment**                          Attachment;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function BP_Weapon_AKS_74U.BP_Weapon_AKS_74U_C.UserConstructionScript
 struct ABP_Weapon_AKS_74U_C_UserConstructionScript_Params

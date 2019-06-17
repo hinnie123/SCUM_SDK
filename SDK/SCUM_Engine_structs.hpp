@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -9209,7 +9209,7 @@ struct FRadialDamageParams
 // 0x0030 (0x0040 - 0x0010)
 struct FRadialDamageEvent : public FDamageEvent
 {
-	struct FRadialDamageParams                         Params;                                                   // 0x0010(0x0014)
+	struct FRadialDamageParams                         params;                                                   // 0x0010(0x0014)
 	struct FVector                                     Origin;                                                   // 0x0024(0x000C) (IsPlainOldData)
 	TArray<struct FHitResult>                          ComponentHits;                                            // 0x0030(0x0010) (ZeroConstructor)
 };

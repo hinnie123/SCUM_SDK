@@ -1,4 +1,4 @@
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,48 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.SetFromNormalizedValue
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                          normalizedValue                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UUI_CC_ProgressBar_C::SetFromNormalizedValue(float normalizedValue)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.SetFromNormalizedValue");
+
+	UUI_CC_ProgressBar_C_SetFromNormalizedValue_Params params;
+	params.normalizedValue = normalizedValue;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.GetNormalizedValue
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float                          normalizedValue                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UUI_CC_ProgressBar_C::GetNormalizedValue(float* normalizedValue)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.GetNormalizedValue");
+
+	UUI_CC_ProgressBar_C_GetNormalizedValue_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (normalizedValue != nullptr)
+		*normalizedValue = params.normalizedValue;
+}
+
 
 // Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.UpdateSliderFromMouseEvent
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)

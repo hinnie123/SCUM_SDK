@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,7 @@ namespace SDK
 class UMovieSceneGeometryCacheSection : public UMovieSceneSection
 {
 public:
-	struct FMovieSceneGeometryCacheParams              Params;                                                   // 0x00E0(0x0028) (Edit)
+	struct FMovieSceneGeometryCacheParams              params;                                                   // 0x00E0(0x0028) (Edit)
 
 	static UClass* StaticClass()
 	{

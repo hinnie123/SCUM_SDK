@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,13 +14,13 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function ABP_Dick_Placeholder.ABP_Dick_Placeholder_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_Fabrik_97957A264606C62DC406D3975C3CF137
-struct UABP_Dick_Placeholder_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_Fabrik_97957A264606C62DC406D3975C3CF137_Params
+// Function ABP_Dick_Placeholder.ABP_Dick_Placeholder_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_BlendListByBool_A3AF193D4E173862242D8EBBC183DB56
+struct UABP_Dick_Placeholder_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_BlendListByBool_A3AF193D4E173862242D8EBBC183DB56_Params
 {
 };
 
-// Function ABP_Dick_Placeholder.ABP_Dick_Placeholder_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_BlendListByBool_A3AF193D4E173862242D8EBBC183DB56
-struct UABP_Dick_Placeholder_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_BlendListByBool_A3AF193D4E173862242D8EBBC183DB56_Params
+// Function ABP_Dick_Placeholder.ABP_Dick_Placeholder_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_Fabrik_97957A264606C62DC406D3975C3CF137
+struct UABP_Dick_Placeholder_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_Fabrik_97957A264606C62DC406D3975C3CF137_Params
 {
 };
 

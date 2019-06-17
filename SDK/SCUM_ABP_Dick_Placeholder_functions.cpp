@@ -1,4 +1,4 @@
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function ABP_Dick_Placeholder.ABP_Dick_Placeholder_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_Fabrik_97957A264606C62DC406D3975C3CF137
+// Function ABP_Dick_Placeholder.ABP_Dick_Placeholder_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_BlendListByBool_A3AF193D4E173862242D8EBBC183DB56
 // (BlueprintEvent)
 
-void UABP_Dick_Placeholder_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_Fabrik_97957A264606C62DC406D3975C3CF137()
+void UABP_Dick_Placeholder_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_BlendListByBool_A3AF193D4E173862242D8EBBC183DB56()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ABP_Dick_Placeholder.ABP_Dick_Placeholder_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_Fabrik_97957A264606C62DC406D3975C3CF137");
+	static auto fn = UObject::FindObject<UFunction>("Function ABP_Dick_Placeholder.ABP_Dick_Placeholder_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_BlendListByBool_A3AF193D4E173862242D8EBBC183DB56");
 
-	UABP_Dick_Placeholder_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_Fabrik_97957A264606C62DC406D3975C3CF137_Params params;
+	UABP_Dick_Placeholder_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_BlendListByBool_A3AF193D4E173862242D8EBBC183DB56_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -29,14 +29,14 @@ void UABP_Dick_Placeholder_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Di
 }
 
 
-// Function ABP_Dick_Placeholder.ABP_Dick_Placeholder_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_BlendListByBool_A3AF193D4E173862242D8EBBC183DB56
+// Function ABP_Dick_Placeholder.ABP_Dick_Placeholder_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_Fabrik_97957A264606C62DC406D3975C3CF137
 // (BlueprintEvent)
 
-void UABP_Dick_Placeholder_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_BlendListByBool_A3AF193D4E173862242D8EBBC183DB56()
+void UABP_Dick_Placeholder_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_Fabrik_97957A264606C62DC406D3975C3CF137()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ABP_Dick_Placeholder.ABP_Dick_Placeholder_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_BlendListByBool_A3AF193D4E173862242D8EBBC183DB56");
+	static auto fn = UObject::FindObject<UFunction>("Function ABP_Dick_Placeholder.ABP_Dick_Placeholder_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_Fabrik_97957A264606C62DC406D3975C3CF137");
 
-	UABP_Dick_Placeholder_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_BlendListByBool_A3AF193D4E173862242D8EBBC183DB56_Params params;
+	UABP_Dick_Placeholder_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Dick_Placeholder_AnimGraphNode_Fabrik_97957A264606C62DC406D3975C3CF137_Params params;
 
 	auto flags = fn->FunctionFlags;
 

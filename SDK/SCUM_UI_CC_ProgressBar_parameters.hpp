@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.SetFromNormalizedValue
+struct UUI_CC_ProgressBar_C_SetFromNormalizedValue_Params
+{
+	float                                              normalizedValue;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.GetNormalizedValue
+struct UUI_CC_ProgressBar_C_GetNormalizedValue_Params
+{
+	float                                              normalizedValue;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.UpdateSliderFromMouseEvent
 struct UUI_CC_ProgressBar_C_UpdateSliderFromMouseEvent_Params

@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Improvised_Bow.Improvised_Bow_C
-// 0x0008 (0x1468 - 0x1460)
+// 0x0008 (0x1558 - 0x1550)
 class AImprovised_Bow_C : public AWeaponBow
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1460(0x0008) (Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1550(0x0008) (Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BPC_Recurve_Bow_101.BPC_Recurve_Bow_100_C
-// 0x0000 (0x1468 - 0x1468)
+// 0x0000 (0x1558 - 0x1558)
 class ABPC_Recurve_Bow_100_C : public ARecurve_Bow_C
 {
 public:

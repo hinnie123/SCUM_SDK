@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass AnimBP_MosinNagant.AnimBP_MosinNagant_C
-// 0x0570 (0x08F0 - 0x0380)
+// 0x0960 (0x0CE0 - 0x0380)
 class UAnimBP_MosinNagant_C : public UWeaponAnimInstance
 {
 public:
@@ -29,6 +29,14 @@ public:
 	struct FAnimNode_UseCachedPose                     AnimGraphNode_UseCachedPose_487F04974685913458BA3E8AD6D63F3F;// 0x07A0(0x0050)
 	struct FAnimNode_UseCachedPose                     AnimGraphNode_UseCachedPose_94F3E5FF48B45DF1398D1A8CA7668CD0;// 0x07F0(0x0050)
 	struct FAnimNode_SequencePlayer                    AnimGraphNode_SequencePlayer_AA9D341F40A9AD8F3ED4B49155492088;// 0x0840(0x00B0)
+	struct FAnimNode_Slot                              AnimGraphNode_Slot_72B215A346025DE081842886534F631E;      // 0x08F0(0x0070)
+	struct FAnimNode_Slot                              AnimGraphNode_Slot_07A49BC04C5913AD0038D69EFEDC832A;      // 0x0960(0x0070)
+	struct FAnimNode_Slot                              AnimGraphNode_Slot_04790393415CF6305112DB9EA56A88CC;      // 0x09D0(0x0070)
+	struct FAnimNode_BlendListByEnum                   AnimGraphNode_BlendListByEnum_F1AD67E44787EDB94874A7BC51DDC163;// 0x0A40(0x00E0)
+	struct FAnimNode_UseCachedPose                     AnimGraphNode_UseCachedPose_9DE1AE0444261FC687DB87803F362AD2;// 0x0B20(0x0050)
+	struct FAnimNode_UseCachedPose                     AnimGraphNode_UseCachedPose_E2378D26446E6A409F8A2B9329B14CD5;// 0x0B70(0x0050)
+	struct FAnimNode_UseCachedPose                     AnimGraphNode_UseCachedPose_944F366E47A47D40DDE725912171061F;// 0x0BC0(0x0050)
+	struct FAnimNode_BlendListByBool                   AnimGraphNode_BlendListByBool_8D5BF5F04A16836CBDF9E9A18DE3AEBF;// 0x0C10(0x00D0)
 
 	static UClass* StaticClass()
 	{
@@ -37,6 +45,8 @@ public:
 	}
 
 
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_MosinNagant_AnimGraphNode_BlendListByBool_8D5BF5F04A16836CBDF9E9A18DE3AEBF();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_MosinNagant_AnimGraphNode_BlendListByEnum_F1AD67E44787EDB94874A7BC51DDC163();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_MosinNagant_AnimGraphNode_BlendListByEnum_E5DD203F47FD728C7D983BAAD1752314();
 	void ExecuteUbergraph_AnimBP_MosinNagant(int EntryPoint);
 };

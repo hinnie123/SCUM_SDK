@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,7 +38,7 @@ public:
 
 	struct FLinearColor Get_Background_BrushColor();
 	void SetRank(int Rank);
-	void SetStats(const struct FString& characterName, const struct FCharacterStats& CharacterStats);
+	void SetStats(const struct FString& characterName, const struct FEventsRankingStats& CharacterStats);
 };
 
 

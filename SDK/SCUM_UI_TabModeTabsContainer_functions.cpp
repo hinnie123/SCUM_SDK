@@ -1,4 +1,4 @@
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -176,6 +176,23 @@ void UUI_TabModeTabsContainer_C::BndEvt__CraftingTab_K2Node_ComponentBoundEvent_
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TabModeTabsContainer.UI_TabModeTabsContainer_C.BndEvt__CraftingTab_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature");
 
 	UUI_TabModeTabsContainer_C_BndEvt__CraftingTab_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UI_TabModeTabsContainer.UI_TabModeTabsContainer_C.BndEvt__JournalTab_K2Node_ComponentBoundEvent_4_Clicked__DelegateSignature
+// (BlueprintEvent)
+
+void UUI_TabModeTabsContainer_C::BndEvt__JournalTab_K2Node_ComponentBoundEvent_4_Clicked__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_TabModeTabsContainer.UI_TabModeTabsContainer_C.BndEvt__JournalTab_K2Node_ComponentBoundEvent_4_Clicked__DelegateSignature");
+
+	UUI_TabModeTabsContainer_C_BndEvt__JournalTab_K2Node_ComponentBoundEvent_4_Clicked__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 

@@ -1,4 +1,4 @@
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -74,10 +74,10 @@ void UUI_GameEventLeaderboardWidget_C::UpdateTopList()
 // Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.RefreshData
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// ECharacterStatsOrderByField    orderByField                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// EEventsRankingStatsOrderByField orderByField                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ESortOrder                     sortOrder                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_GameEventLeaderboardWidget_C::RefreshData(ECharacterStatsOrderByField orderByField, ESortOrder sortOrder)
+void UUI_GameEventLeaderboardWidget_C::RefreshData(EEventsRankingStatsOrderByField orderByField, ESortOrder sortOrder)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.RefreshData");
 
@@ -116,10 +116,10 @@ void UUI_GameEventLeaderboardWidget_C::UpdateRankingList(int Rank)
 // Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.UpdateList
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FCharacterStatsItem> StatsItems                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FEventsRankingStatsItem> EventsRankingStatsItems        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class UVerticalBox*            TargetWidget                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UUI_GameEventLeaderboardWidget_C::UpdateList(class UVerticalBox* TargetWidget, TArray<struct FCharacterStatsItem>* StatsItems)
+void UUI_GameEventLeaderboardWidget_C::UpdateList(class UVerticalBox* TargetWidget, TArray<struct FEventsRankingStatsItem>* EventsRankingStatsItems)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.UpdateList");
 
@@ -132,8 +132,8 @@ void UUI_GameEventLeaderboardWidget_C::UpdateList(class UVerticalBox* TargetWidg
 
 	fn->FunctionFlags = flags;
 
-	if (StatsItems != nullptr)
-		*StatsItems = params.StatsItems;
+	if (EventsRankingStatsItems != nullptr)
+		*EventsRankingStatsItems = params.EventsRankingStatsItems;
 }
 
 

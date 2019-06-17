@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,13 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass ObjectiveContainer.ObjectiveContainer_C
-// 0x0020 (0x0240 - 0x0220)
-class UObjectiveContainer_C : public UDesignableUserWidget
+// 0x0018 (0x0238 - 0x0220)
+class UObjectiveContainer_C : public UObjectivesContainerWidget
 {
 public:
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0220(0x0008) (Transient, DuplicateTransient)
-	class UVerticalBox*                                Objectives;                                               // 0x0228(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
-	struct FScriptMulticastDelegate                    ObjectiveCompleted;                                       // 0x0230(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    ObjectiveCompleted;                                       // 0x0228(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
 
 	static UClass* StaticClass()
 	{
@@ -29,7 +28,6 @@ public:
 
 
 	void Construct();
-	void AddObjective(class ABP_MissionObjective_C* Objective, bool PlaySound);
 	void ExecuteUbergraph_ObjectiveContainer(int EntryPoint);
 	void ObjectiveCompleted__DelegateSignature();
 };

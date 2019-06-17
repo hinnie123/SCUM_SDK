@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.33.12968 by Hinnie) SDK
+// SCUM (Dumped by Hinnie) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -305,7 +305,7 @@ struct UAIBlueprintHelperLibrary_CreateMoveToProxyObject_Params
 	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
 	class APawn*                                       Pawn;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Destination;                                              // (Parm, IsPlainOldData)
-	class AActor*                                      TargetActor;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      targetActor;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              AcceptanceRadius;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bStopOnOverlap;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAIAsyncTaskBlueprintProxy*                  ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
