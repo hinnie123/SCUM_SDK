@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Tequila.Tequila_C
-// 0x0000 (0x08C8 - 0x08C8)
+// 0x0000 (0x0960 - 0x0960)
 class ATequila_C : public ADrinkItem
 {
 public:

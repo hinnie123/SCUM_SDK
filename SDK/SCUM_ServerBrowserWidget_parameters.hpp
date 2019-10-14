@@ -41,7 +41,7 @@ struct UServerBrowserWidget_C_SaveDirectionConnectionAddress_Params
 // Function ServerBrowserWidget.ServerBrowserWidget_C.ChooseServerAndConnect
 struct UServerBrowserWidget_C_ChooseServerAndConnect_Params
 {
-	struct FString                                     authToken;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	struct FString                                     AuthToken;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 };
 
 // Function ServerBrowserWidget.ServerBrowserWidget_C.ChooseServer
@@ -70,7 +70,7 @@ struct UServerBrowserWidget_C_EnterPassword_Params
 struct UServerBrowserWidget_C_ConnectToServerInfo_Params
 {
 	struct FServerInfo                                 ServerInfo;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FString                                     authToken;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	struct FString                                     AuthToken;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 };
 
 // Function ServerBrowserWidget.ServerBrowserWidget_C.UpdateSelectedServer
@@ -325,7 +325,7 @@ struct UServerBrowserWidget_C_OpenContinueOrNewDialog_Params
 	struct FString*                                    Ip;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 	int*                                               GameplayPort;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int*                                               ResponsePort;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FString*                                    authToken;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	struct FString*                                    AuthToken;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 };
 
 // Function ServerBrowserWidget.ServerBrowserWidget_C.OnContinueWithCharacter
@@ -334,7 +334,7 @@ struct UServerBrowserWidget_C_OnContinueWithCharacter_Params
 	struct FString                                     Ip;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 	int                                                GameplayPort;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                ResponsePort;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FString                                     authToken;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	struct FString                                     AuthToken;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 };
 
 // Function ServerBrowserWidget.ServerBrowserWidget_C.OnCreateNewCharacter
@@ -343,7 +343,7 @@ struct UServerBrowserWidget_C_OnCreateNewCharacter_Params
 	struct FString                                     Ip;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 	int                                                GameplayPort;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                ResponsePort;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FString                                     authToken;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	struct FString                                     AuthToken;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 };
 
 // Function ServerBrowserWidget.ServerBrowserWidget_C.OnNewCharacterConfirmed

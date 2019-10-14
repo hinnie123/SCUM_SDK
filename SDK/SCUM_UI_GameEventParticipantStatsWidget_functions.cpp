@@ -21,12 +21,12 @@ void UUI_GameEventParticipantStatsWidget_C::UpdateTeamColor(int TeamIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventParticipantStatsWidget.UI_GameEventParticipantStatsWidget_C.UpdateTeamColor");
 
-	UUI_GameEventParticipantStatsWidget_C_UpdateTeamColor_Params params;
-	params.TeamIndex = TeamIndex;
+	UUI_GameEventParticipantStatsWidget_C_UpdateTeamColor_Params fn_params;
+	fn_params.TeamIndex = TeamIndex;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -41,15 +41,15 @@ struct FText UUI_GameEventParticipantStatsWidget_C::UpdateNumber()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventParticipantStatsWidget.UI_GameEventParticipantStatsWidget_C.UpdateNumber");
 
-	UUI_GameEventParticipantStatsWidget_C_UpdateNumber_Params params;
+	UUI_GameEventParticipantStatsWidget_C_UpdateNumber_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -62,15 +62,15 @@ bool UUI_GameEventParticipantStatsWidget_C::IsOwning()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventParticipantStatsWidget.UI_GameEventParticipantStatsWidget_C.IsOwning");
 
-	UUI_GameEventParticipantStatsWidget_C_IsOwning_Params params;
+	UUI_GameEventParticipantStatsWidget_C_IsOwning_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -83,15 +83,15 @@ ESlateVisibility UUI_GameEventParticipantStatsWidget_C::GetSelectedOverlayVisibl
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventParticipantStatsWidget.UI_GameEventParticipantStatsWidget_C.GetSelectedOverlayVisiblity");
 
-	UUI_GameEventParticipantStatsWidget_C_GetSelectedOverlayVisiblity_Params params;
+	UUI_GameEventParticipantStatsWidget_C_GetSelectedOverlayVisiblity_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -104,15 +104,15 @@ ESlateVisibility UUI_GameEventParticipantStatsWidget_C::GetInactiveOverlayVisibi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventParticipantStatsWidget.UI_GameEventParticipantStatsWidget_C.GetInactiveOverlayVisibility");
 
-	UUI_GameEventParticipantStatsWidget_C_GetInactiveOverlayVisibility_Params params;
+	UUI_GameEventParticipantStatsWidget_C_GetInactiveOverlayVisibility_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -126,13 +126,13 @@ void UUI_GameEventParticipantStatsWidget_C::OnMouseEnter(struct FGeometry* MyGeo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventParticipantStatsWidget.UI_GameEventParticipantStatsWidget_C.OnMouseEnter");
 
-	UUI_GameEventParticipantStatsWidget_C_OnMouseEnter_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_GameEventParticipantStatsWidget_C_OnMouseEnter_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -147,12 +147,12 @@ void UUI_GameEventParticipantStatsWidget_C::OnMouseLeave(struct FPointerEvent* M
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventParticipantStatsWidget.UI_GameEventParticipantStatsWidget_C.OnMouseLeave");
 
-	UUI_GameEventParticipantStatsWidget_C_OnMouseLeave_Params params;
-	params.MouseEvent = MouseEvent;
+	UUI_GameEventParticipantStatsWidget_C_OnMouseLeave_Params fn_params;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -165,11 +165,11 @@ void UUI_GameEventParticipantStatsWidget_C::UpdateColours()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventParticipantStatsWidget.UI_GameEventParticipantStatsWidget_C.UpdateColours");
 
-	UUI_GameEventParticipantStatsWidget_C_UpdateColours_Params params;
+	UUI_GameEventParticipantStatsWidget_C_UpdateColours_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -184,12 +184,12 @@ void UUI_GameEventParticipantStatsWidget_C::SetColours(struct FGameEventTeamColo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventParticipantStatsWidget.UI_GameEventParticipantStatsWidget_C.SetColours");
 
-	UUI_GameEventParticipantStatsWidget_C_SetColours_Params params;
-	params.colours = colours;
+	UUI_GameEventParticipantStatsWidget_C_SetColours_Params fn_params;
+	fn_params.colours = colours;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -202,11 +202,11 @@ void UUI_GameEventParticipantStatsWidget_C::UpdateStats()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventParticipantStatsWidget.UI_GameEventParticipantStatsWidget_C.UpdateStats");
 
-	UUI_GameEventParticipantStatsWidget_C_UpdateStats_Params params;
+	UUI_GameEventParticipantStatsWidget_C_UpdateStats_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -221,12 +221,12 @@ void UUI_GameEventParticipantStatsWidget_C::ExecuteUbergraph_UI_GameEventPartici
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventParticipantStatsWidget.UI_GameEventParticipantStatsWidget_C.ExecuteUbergraph_UI_GameEventParticipantStatsWidget");
 
-	UUI_GameEventParticipantStatsWidget_C_ExecuteUbergraph_UI_GameEventParticipantStatsWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_GameEventParticipantStatsWidget_C_ExecuteUbergraph_UI_GameEventParticipantStatsWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

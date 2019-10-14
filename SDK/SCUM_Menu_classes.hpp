@@ -19,10 +19,10 @@ class AMenu_C : public ALevelScriptActor
 public:
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0330(0x0008) (Transient, DuplicateTransient)
 	class UMenuPlayAsDroneOverlayWidget_C*             DroneOverlayWidget;                                       // 0x0338(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class AWeatherController_C*                        WeatherController_ExecuteUbergraph_Menu_RefProperty;      // 0x0340(0x0008) (ZeroConstructor, IsPlainOldData)
-	class ABP_Prisoner_C*                              BP_Prisoner_4136_ExecuteUbergraph_Menu_RefProperty;       // 0x0348(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AActor*                                      FollowsCursorActor_ExecuteUbergraph_Menu_RefProperty;     // 0x0350(0x0008) (ZeroConstructor, IsPlainOldData)
-	class ASceneCapture2D*                             HeadCapture_ExecuteUbergraph_Menu_RefProperty;            // 0x0358(0x0008) (ZeroConstructor, IsPlainOldData)
+	class ASceneCapture2D*                             HeadCapture_ExecuteUbergraph_Menu_RefProperty;            // 0x0340(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AWeatherController_C*                        WeatherController_ExecuteUbergraph_Menu_RefProperty;      // 0x0348(0x0008) (ZeroConstructor, IsPlainOldData)
+	class ABP_Prisoner_C*                              BP_Prisoner_4136_ExecuteUbergraph_Menu_RefProperty;       // 0x0350(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AActor*                                      FollowsCursorActor_ExecuteUbergraph_Menu_RefProperty;     // 0x0358(0x0008) (ZeroConstructor, IsPlainOldData)
 	class APostProcessVolume*                          GlobalPostProcessVolume_0_EdGraph_0_RefProperty;          // 0x0360(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()

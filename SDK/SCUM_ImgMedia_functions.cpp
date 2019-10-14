@@ -21,13 +21,13 @@ void UImgMediaSource::SetSequencePath(const struct FString& Path)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ImgMedia.ImgMediaSource.SetSequencePath");
 
-	UImgMediaSource_SetSequencePath_Params params;
-	params.Path = Path;
+	UImgMediaSource_SetSequencePath_Params fn_params;
+	fn_params.Path = Path;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -42,16 +42,16 @@ struct FString UImgMediaSource::GetSequencePath()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ImgMedia.ImgMediaSource.GetSequencePath");
 
-	UImgMediaSource_GetSequencePath_Params params;
+	UImgMediaSource_GetSequencePath_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -64,17 +64,17 @@ void UImgMediaSource::GetProxies(TArray<struct FString>* OutProxies)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ImgMedia.ImgMediaSource.GetProxies");
 
-	UImgMediaSource_GetProxies_Params params;
+	UImgMediaSource_GetProxies_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutProxies != nullptr)
-		*OutProxies = params.OutProxies;
+		*OutProxies = fn_params.OutProxies;
 }
 
 

@@ -21,12 +21,12 @@ void UABP_Prisoner_Corpse_C::ExecuteUbergraph_ABP_Prisoner_Corpse(int EntryPoint
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_Prisoner_Corpse.ABP_Prisoner_Corpse_C.ExecuteUbergraph_ABP_Prisoner_Corpse");
 
-	UABP_Prisoner_Corpse_C_ExecuteUbergraph_ABP_Prisoner_Corpse_Params params;
-	params.EntryPoint = EntryPoint;
+	UABP_Prisoner_Corpse_C_ExecuteUbergraph_ABP_Prisoner_Corpse_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

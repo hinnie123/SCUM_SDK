@@ -12,6 +12,27 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.CanSwitchFiringMode
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ABP_Weapon_M1_Garand_C::CanSwitchFiringMode()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.CanSwitchFiringMode");
+
+	ABP_Weapon_M1_Garand_C_CanSwitchFiringMode_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
 // Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.UserConstructionScript
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
@@ -19,11 +40,11 @@ void ABP_Weapon_M1_Garand_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.UserConstructionScript");
 
-	ABP_Weapon_M1_Garand_C_UserConstructionScript_Params params;
+	ABP_Weapon_M1_Garand_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +57,11 @@ void ABP_Weapon_M1_Garand_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.ReceiveBeginPlay");
 
-	ABP_Weapon_M1_Garand_C_ReceiveBeginPlay_Params params;
+	ABP_Weapon_M1_Garand_C_ReceiveBeginPlay_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -56,13 +77,13 @@ void ABP_Weapon_M1_Garand_C::OnAttachmentAdded(class AWeapon* sender, class AWea
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.OnAttachmentAdded");
 
-	ABP_Weapon_M1_Garand_C_OnAttachmentAdded_Params params;
-	params.sender = sender;
-	params.Attachment = Attachment;
+	ABP_Weapon_M1_Garand_C_OnAttachmentAdded_Params fn_params;
+	fn_params.sender = sender;
+	fn_params.Attachment = Attachment;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -78,13 +99,13 @@ void ABP_Weapon_M1_Garand_C::OnAttachmentRemoved(class AWeapon* sender, class AW
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.OnAttachmentRemoved");
 
-	ABP_Weapon_M1_Garand_C_OnAttachmentRemoved_Params params;
-	params.sender = sender;
-	params.Attachment = Attachment;
+	ABP_Weapon_M1_Garand_C_OnAttachmentRemoved_Params fn_params;
+	fn_params.sender = sender;
+	fn_params.Attachment = Attachment;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -99,12 +120,12 @@ void ABP_Weapon_M1_Garand_C::ExecuteUbergraph_BP_Weapon_M1_Garand(int EntryPoint
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.ExecuteUbergraph_BP_Weapon_M1_Garand");
 
-	ABP_Weapon_M1_Garand_C_ExecuteUbergraph_BP_Weapon_M1_Garand_Params params;
-	params.EntryPoint = EntryPoint;
+	ABP_Weapon_M1_Garand_C_ExecuteUbergraph_BP_Weapon_M1_Garand_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

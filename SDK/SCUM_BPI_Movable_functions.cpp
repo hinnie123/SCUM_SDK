@@ -19,11 +19,11 @@ void UBPI_Movable_C::OnStartDrag()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_Movable.BPI_Movable_C.OnStartDrag");
 
-	UBPI_Movable_C_OnStartDrag_Params params;
+	UBPI_Movable_C_OnStartDrag_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

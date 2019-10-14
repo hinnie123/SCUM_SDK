@@ -21,15 +21,15 @@ ETabMode UUI_TabModeSwitcher_C::GetSelectedTabMode()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TABModeSwitcher.UI_TabModeSwitcher_C.GetSelectedTabMode");
 
-	UUI_TabModeSwitcher_C_GetSelectedTabMode_Params params;
+	UUI_TabModeSwitcher_C_GetSelectedTabMode_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -42,12 +42,12 @@ void UUI_TabModeSwitcher_C::SelectArcFromMouseDelta(const struct FVector2D& Delt
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TABModeSwitcher.UI_TabModeSwitcher_C.SelectArcFromMouseDelta");
 
-	UUI_TabModeSwitcher_C_SelectArcFromMouseDelta_Params params;
-	params.Delta = Delta;
+	UUI_TabModeSwitcher_C_SelectArcFromMouseDelta_Params fn_params;
+	fn_params.Delta = Delta;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -64,17 +64,17 @@ struct FEventReply UUI_TabModeSwitcher_C::OnMouseButtonDown(struct FGeometry* My
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TABModeSwitcher.UI_TabModeSwitcher_C.OnMouseButtonDown");
 
-	UUI_TabModeSwitcher_C_OnMouseButtonDown_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_TabModeSwitcher_C_OnMouseButtonDown_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -87,12 +87,12 @@ void UUI_TabModeSwitcher_C::SelectArc(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TABModeSwitcher.UI_TabModeSwitcher_C.SelectArc");
 
-	UUI_TabModeSwitcher_C_SelectArc_Params params;
-	params.Index = Index;
+	UUI_TabModeSwitcher_C_SelectArc_Params fn_params;
+	fn_params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -109,17 +109,17 @@ struct FEventReply UUI_TabModeSwitcher_C::OnMouseMove(struct FGeometry* MyGeomet
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TABModeSwitcher.UI_TabModeSwitcher_C.OnMouseMove");
 
-	UUI_TabModeSwitcher_C_OnMouseMove_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_TabModeSwitcher_C_OnMouseMove_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -132,12 +132,12 @@ void UUI_TabModeSwitcher_C::OnMouseLeave(struct FPointerEvent* MouseEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TABModeSwitcher.UI_TabModeSwitcher_C.OnMouseLeave");
 
-	UUI_TabModeSwitcher_C_OnMouseLeave_Params params;
-	params.MouseEvent = MouseEvent;
+	UUI_TabModeSwitcher_C_OnMouseLeave_Params fn_params;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -153,13 +153,13 @@ void UUI_TabModeSwitcher_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTim
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TABModeSwitcher.UI_TabModeSwitcher_C.Tick");
 
-	UUI_TabModeSwitcher_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UUI_TabModeSwitcher_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -174,12 +174,12 @@ void UUI_TabModeSwitcher_C::ExecuteUbergraph_UI_TabModeSwitcher(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TABModeSwitcher.UI_TabModeSwitcher_C.ExecuteUbergraph_UI_TabModeSwitcher");
 
-	UUI_TabModeSwitcher_C_ExecuteUbergraph_UI_TabModeSwitcher_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_TabModeSwitcher_C_ExecuteUbergraph_UI_TabModeSwitcher_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

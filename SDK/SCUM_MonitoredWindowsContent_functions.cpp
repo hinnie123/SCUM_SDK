@@ -21,16 +21,16 @@ void UMonitoredWindowsContent_C::GetUpdateContentTimer(struct FTimerHandle* upda
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MonitoredWindowsContent.MonitoredWindowsContent_C.GetUpdateContentTimer");
 
-	UMonitoredWindowsContent_C_GetUpdateContentTimer_Params params;
+	UMonitoredWindowsContent_C_GetUpdateContentTimer_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (updateContentTimer != nullptr)
-		*updateContentTimer = params.updateContentTimer;
+		*updateContentTimer = fn_params.updateContentTimer;
 }
 
 
@@ -43,16 +43,16 @@ void UMonitoredWindowsContent_C::IsBCUDataInitialized(bool* IsBCUDataInitialized
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MonitoredWindowsContent.MonitoredWindowsContent_C.IsBCUDataInitialized");
 
-	UMonitoredWindowsContent_C_IsBCUDataInitialized_Params params;
+	UMonitoredWindowsContent_C_IsBCUDataInitialized_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsBCUDataInitialized != nullptr)
-		*IsBCUDataInitialized = params.IsBCUDataInitialized;
+		*IsBCUDataInitialized = fn_params.IsBCUDataInitialized;
 }
 
 
@@ -63,11 +63,11 @@ void UMonitoredWindowsContent_C::NotifyParentOnAlarmSwitchedOff()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MonitoredWindowsContent.MonitoredWindowsContent_C.NotifyParentOnAlarmSwitchedOff");
 
-	UMonitoredWindowsContent_C_NotifyParentOnAlarmSwitchedOff_Params params;
+	UMonitoredWindowsContent_C_NotifyParentOnAlarmSwitchedOff_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -80,11 +80,11 @@ void UMonitoredWindowsContent_C::NotifyParentOnAlarmRaised()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MonitoredWindowsContent.MonitoredWindowsContent_C.NotifyParentOnAlarmRaised");
 
-	UMonitoredWindowsContent_C_NotifyParentOnAlarmRaised_Params params;
+	UMonitoredWindowsContent_C_NotifyParentOnAlarmRaised_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -99,16 +99,16 @@ void UMonitoredWindowsContent_C::IsPrisonerLifeComponentValid(bool* isLifeCompon
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MonitoredWindowsContent.MonitoredWindowsContent_C.IsPrisonerLifeComponentValid");
 
-	UMonitoredWindowsContent_C_IsPrisonerLifeComponentValid_Params params;
+	UMonitoredWindowsContent_C_IsPrisonerLifeComponentValid_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (isLifeComponentValid != nullptr)
-		*isLifeComponentValid = params.isLifeComponentValid;
+		*isLifeComponentValid = fn_params.isLifeComponentValid;
 }
 
 
@@ -121,16 +121,16 @@ void UMonitoredWindowsContent_C::GetPrisoner(class APrisoner** Prisoner)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MonitoredWindowsContent.MonitoredWindowsContent_C.GetPrisoner");
 
-	UMonitoredWindowsContent_C_GetPrisoner_Params params;
+	UMonitoredWindowsContent_C_GetPrisoner_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Prisoner != nullptr)
-		*Prisoner = params.Prisoner;
+		*Prisoner = fn_params.Prisoner;
 }
 
 
@@ -143,16 +143,16 @@ void UMonitoredWindowsContent_C::SetDefaultPrisonerToMonitor(bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MonitoredWindowsContent.MonitoredWindowsContent_C.SetDefaultPrisonerToMonitor");
 
-	UMonitoredWindowsContent_C_SetDefaultPrisonerToMonitor_Params params;
+	UMonitoredWindowsContent_C_SetDefaultPrisonerToMonitor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Success != nullptr)
-		*Success = params.Success;
+		*Success = fn_params.Success;
 }
 
 
@@ -166,17 +166,17 @@ void UMonitoredWindowsContent_C::SetPrisonerToMonitor(class APrisoner* Prisoner,
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MonitoredWindowsContent.MonitoredWindowsContent_C.SetPrisonerToMonitor");
 
-	UMonitoredWindowsContent_C_SetPrisonerToMonitor_Params params;
-	params.Prisoner = Prisoner;
+	UMonitoredWindowsContent_C_SetPrisonerToMonitor_Params fn_params;
+	fn_params.Prisoner = Prisoner;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Success != nullptr)
-		*Success = params.Success;
+		*Success = fn_params.Success;
 }
 
 
@@ -189,16 +189,16 @@ void UMonitoredWindowsContent_C::GetDefaultPrisoner(class APrisoner** Prisoner)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MonitoredWindowsContent.MonitoredWindowsContent_C.GetDefaultPrisoner");
 
-	UMonitoredWindowsContent_C_GetDefaultPrisoner_Params params;
+	UMonitoredWindowsContent_C_GetDefaultPrisoner_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Prisoner != nullptr)
-		*Prisoner = params.Prisoner;
+		*Prisoner = fn_params.Prisoner;
 }
 
 
@@ -209,11 +209,11 @@ void UMonitoredWindowsContent_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MonitoredWindowsContent.MonitoredWindowsContent_C.Construct");
 
-	UMonitoredWindowsContent_C_Construct_Params params;
+	UMonitoredWindowsContent_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -226,11 +226,11 @@ void UMonitoredWindowsContent_C::OnPrisonerSet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MonitoredWindowsContent.MonitoredWindowsContent_C.OnPrisonerSet");
 
-	UMonitoredWindowsContent_C_OnPrisonerSet_Params params;
+	UMonitoredWindowsContent_C_OnPrisonerSet_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -243,11 +243,11 @@ void UMonitoredWindowsContent_C::UpdateContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MonitoredWindowsContent.MonitoredWindowsContent_C.UpdateContent");
 
-	UMonitoredWindowsContent_C_UpdateContent_Params params;
+	UMonitoredWindowsContent_C_UpdateContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -262,12 +262,12 @@ void UMonitoredWindowsContent_C::ExecuteUbergraph_MonitoredWindowsContent(int En
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MonitoredWindowsContent.MonitoredWindowsContent_C.ExecuteUbergraph_MonitoredWindowsContent");
 
-	UMonitoredWindowsContent_C_ExecuteUbergraph_MonitoredWindowsContent_Params params;
-	params.EntryPoint = EntryPoint;
+	UMonitoredWindowsContent_C_ExecuteUbergraph_MonitoredWindowsContent_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -19,11 +19,11 @@ void UUI_CraftingInfo_C::OnSynchronizeProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingInfo.UI_CraftingInfo_C.OnSynchronizeProperties");
 
-	UUI_CraftingInfo_C_OnSynchronizeProperties_Params params;
+	UUI_CraftingInfo_C_OnSynchronizeProperties_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void UUI_CraftingInfo_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingInfo.UI_CraftingInfo_C.Construct");
 
-	UUI_CraftingInfo_C_Construct_Params params;
+	UUI_CraftingInfo_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -53,11 +53,11 @@ void UUI_CraftingInfo_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_9_OnButtonC
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingInfo.UI_CraftingInfo_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_CraftingInfo_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_CraftingInfo_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -72,12 +72,12 @@ void UUI_CraftingInfo_C::Init(class AItem** itemCDO)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingInfo.UI_CraftingInfo_C.Init");
 
-	UUI_CraftingInfo_C_Init_Params params;
-	params.itemCDO = itemCDO;
+	UUI_CraftingInfo_C_Init_Params fn_params;
+	fn_params.itemCDO = itemCDO;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -92,12 +92,12 @@ void UUI_CraftingInfo_C::ExecuteUbergraph_UI_CraftingInfo(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingInfo.UI_CraftingInfo_C.ExecuteUbergraph_UI_CraftingInfo");
 
-	UUI_CraftingInfo_C_ExecuteUbergraph_UI_CraftingInfo_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_CraftingInfo_C_ExecuteUbergraph_UI_CraftingInfo_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

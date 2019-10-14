@@ -23,17 +23,17 @@ struct FEventReply UUI_OptionsSlider_C::OnMouseButtonDoubleClick(struct FGeometr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.OnMouseButtonDoubleClick");
 
-	UUI_OptionsSlider_C_OnMouseButtonDoubleClick_Params params;
-	params.InMyGeometry = InMyGeometry;
-	params.InMouseEvent = InMouseEvent;
+	UUI_OptionsSlider_C_OnMouseButtonDoubleClick_Params fn_params;
+	fn_params.InMyGeometry = InMyGeometry;
+	fn_params.InMouseEvent = InMouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -48,17 +48,17 @@ struct FEventReply UUI_OptionsSlider_C::OnMouseButtonDown(struct FGeometry* MyGe
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.OnMouseButtonDown");
 
-	UUI_OptionsSlider_C_OnMouseButtonDown_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_OptionsSlider_C_OnMouseButtonDown_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -71,16 +71,16 @@ void UUI_OptionsSlider_C::GetValue(struct FText* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.GetValue");
 
-	UUI_OptionsSlider_C_GetValue_Params params;
+	UUI_OptionsSlider_C_GetValue_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Value != nullptr)
-		*Value = params.Value;
+		*Value = fn_params.Value;
 }
 
 
@@ -94,13 +94,13 @@ void UUI_OptionsSlider_C::ChangeValue(int Index, const struct FText& Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.ChangeValue");
 
-	UUI_OptionsSlider_C_ChangeValue_Params params;
-	params.Index = Index;
-	params.Value = Value;
+	UUI_OptionsSlider_C_ChangeValue_Params fn_params;
+	fn_params.Index = Index;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -115,12 +115,12 @@ void UUI_OptionsSlider_C::SetTitle(const struct FText& Title)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.SetTitle");
 
-	UUI_OptionsSlider_C_SetTitle_Params params;
-	params.Title = Title;
+	UUI_OptionsSlider_C_SetTitle_Params fn_params;
+	fn_params.Title = Title;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -136,13 +136,13 @@ void UUI_OptionsSlider_C::InitAsNumbers(int FirstIndex, int lastIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.InitAsNumbers");
 
-	UUI_OptionsSlider_C_InitAsNumbers_Params params;
-	params.FirstIndex = FirstIndex;
-	params.lastIndex = lastIndex;
+	UUI_OptionsSlider_C_InitAsNumbers_Params fn_params;
+	fn_params.FirstIndex = FirstIndex;
+	fn_params.lastIndex = lastIndex;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -155,11 +155,11 @@ void UUI_OptionsSlider_C::InitAsFlag()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.InitAsFlag");
 
-	UUI_OptionsSlider_C_InitAsFlag_Params params;
+	UUI_OptionsSlider_C_InitAsFlag_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -175,13 +175,13 @@ void UUI_OptionsSlider_C::AddKeyValuePair(const struct FText& Key, const struct 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.AddKeyValuePair");
 
-	UUI_OptionsSlider_C_AddKeyValuePair_Params params;
-	params.Key = Key;
-	params.Value = Value;
+	UUI_OptionsSlider_C_AddKeyValuePair_Params fn_params;
+	fn_params.Key = Key;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -198,17 +198,17 @@ struct FEventReply UUI_OptionsSlider_C::OnKeyUp(struct FGeometry* MyGeometry, st
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.OnKeyUp");
 
-	UUI_OptionsSlider_C_OnKeyUp_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InKeyEvent = InKeyEvent;
+	UUI_OptionsSlider_C_OnKeyUp_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InKeyEvent = InKeyEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -221,12 +221,12 @@ void UUI_OptionsSlider_C::AddValue(const struct FText& Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.AddValue");
 
-	UUI_OptionsSlider_C_AddValue_Params params;
-	params.Value = Value;
+	UUI_OptionsSlider_C_AddValue_Params fn_params;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -239,11 +239,11 @@ void UUI_OptionsSlider_C::ClearValues()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.ClearValues");
 
-	UUI_OptionsSlider_C_ClearValues_Params params;
+	UUI_OptionsSlider_C_ClearValues_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -258,12 +258,12 @@ void UUI_OptionsSlider_C::SetValue(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.SetValue");
 
-	UUI_OptionsSlider_C_SetValue_Params params;
-	params.Index = Index;
+	UUI_OptionsSlider_C_SetValue_Params fn_params;
+	fn_params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -276,11 +276,11 @@ void UUI_OptionsSlider_C::Increase()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.Increase");
 
-	UUI_OptionsSlider_C_Increase_Params params;
+	UUI_OptionsSlider_C_Increase_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -293,11 +293,11 @@ void UUI_OptionsSlider_C::Decrease()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.Decrease");
 
-	UUI_OptionsSlider_C_Decrease_Params params;
+	UUI_OptionsSlider_C_Decrease_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -314,17 +314,17 @@ struct FEventReply UUI_OptionsSlider_C::OnKeyDown(struct FGeometry* MyGeometry, 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.OnKeyDown");
 
-	UUI_OptionsSlider_C_OnKeyDown_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InKeyEvent = InKeyEvent;
+	UUI_OptionsSlider_C_OnKeyDown_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InKeyEvent = InKeyEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -339,17 +339,17 @@ struct FEventReply UUI_OptionsSlider_C::OnFocusReceived(struct FGeometry* MyGeom
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.OnFocusReceived");
 
-	UUI_OptionsSlider_C_OnFocusReceived_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InFocusEvent = InFocusEvent;
+	UUI_OptionsSlider_C_OnFocusReceived_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InFocusEvent = InFocusEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -364,17 +364,17 @@ struct FEventReply UUI_OptionsSlider_C::OnClickedHigher(const struct FGeometry& 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.OnClickedHigher");
 
-	UUI_OptionsSlider_C_OnClickedHigher_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_OptionsSlider_C_OnClickedHigher_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -389,17 +389,17 @@ struct FEventReply UUI_OptionsSlider_C::OnClickedLower(const struct FGeometry& M
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.OnClickedLower");
 
-	UUI_OptionsSlider_C_OnClickedLower_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_OptionsSlider_C_OnClickedLower_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -410,11 +410,11 @@ void UUI_OptionsSlider_C::OnSynchronizeProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.OnSynchronizeProperties");
 
-	UUI_OptionsSlider_C_OnSynchronizeProperties_Params params;
+	UUI_OptionsSlider_C_OnSynchronizeProperties_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -429,12 +429,12 @@ void UUI_OptionsSlider_C::OnFocusLost(struct FFocusEvent* InFocusEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.OnFocusLost");
 
-	UUI_OptionsSlider_C_OnFocusLost_Params params;
-	params.InFocusEvent = InFocusEvent;
+	UUI_OptionsSlider_C_OnFocusLost_Params fn_params;
+	fn_params.InFocusEvent = InFocusEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -450,13 +450,13 @@ void UUI_OptionsSlider_C::OnMouseEnter(struct FGeometry* MyGeometry, struct FPoi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.OnMouseEnter");
 
-	UUI_OptionsSlider_C_OnMouseEnter_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_OptionsSlider_C_OnMouseEnter_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -469,11 +469,11 @@ void UUI_OptionsSlider_C::BndEvt__RaiseButton_K2Node_ComponentBoundEvent_30_OnBu
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.BndEvt__RaiseButton_K2Node_ComponentBoundEvent_30_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_OptionsSlider_C_BndEvt__RaiseButton_K2Node_ComponentBoundEvent_30_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_OptionsSlider_C_BndEvt__RaiseButton_K2Node_ComponentBoundEvent_30_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -486,11 +486,11 @@ void UUI_OptionsSlider_C::BndEvt__LowerButton_K2Node_ComponentBoundEvent_48_OnBu
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.BndEvt__LowerButton_K2Node_ComponentBoundEvent_48_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_OptionsSlider_C_BndEvt__LowerButton_K2Node_ComponentBoundEvent_48_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_OptionsSlider_C_BndEvt__LowerButton_K2Node_ComponentBoundEvent_48_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -503,11 +503,11 @@ void UUI_OptionsSlider_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.Construct");
 
-	UUI_OptionsSlider_C_Construct_Params params;
+	UUI_OptionsSlider_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -522,12 +522,12 @@ void UUI_OptionsSlider_C::ExecuteUbergraph_UI_OptionsSlider(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.ExecuteUbergraph_UI_OptionsSlider");
 
-	UUI_OptionsSlider_C_ExecuteUbergraph_UI_OptionsSlider_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_OptionsSlider_C_ExecuteUbergraph_UI_OptionsSlider_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -544,14 +544,14 @@ void UUI_OptionsSlider_C::OnValueChanged__DelegateSignature(int Index, int OldIn
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_OptionsSlider.UI_OptionsSlider_C.OnValueChanged__DelegateSignature");
 
-	UUI_OptionsSlider_C_OnValueChanged__DelegateSignature_Params params;
-	params.Index = Index;
-	params.OldIndex = OldIndex;
-	params.Value = Value;
+	UUI_OptionsSlider_C_OnValueChanged__DelegateSignature_Params fn_params;
+	fn_params.Index = Index;
+	fn_params.OldIndex = OldIndex;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

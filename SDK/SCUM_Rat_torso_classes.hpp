@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Rat_torso.Rat_Torso_C
-// 0x0000 (0x0790 - 0x0790)
+// 0x0000 (0x0830 - 0x0830)
 class ARat_Torso_C : public AEquipmentItem
 {
 public:

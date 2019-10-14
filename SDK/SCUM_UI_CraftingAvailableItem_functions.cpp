@@ -19,11 +19,11 @@ void UUI_CraftingAvailableItem_C::UpdateSelectionAndOptionalState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingAvailableItem.UI_CraftingAvailableItem_C.UpdateSelectionAndOptionalState");
 
-	UUI_CraftingAvailableItem_C_UpdateSelectionAndOptionalState_Params params;
+	UUI_CraftingAvailableItem_C_UpdateSelectionAndOptionalState_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -38,15 +38,15 @@ bool UUI_CraftingAvailableItem_C::GetbIsEnabled_1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingAvailableItem.UI_CraftingAvailableItem_C.GetbIsEnabled_1");
 
-	UUI_CraftingAvailableItem_C_GetbIsEnabled_1_Params params;
+	UUI_CraftingAvailableItem_C_GetbIsEnabled_1_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -59,12 +59,12 @@ void UUI_CraftingAvailableItem_C::Init(class AItem** Item)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingAvailableItem.UI_CraftingAvailableItem_C.Init");
 
-	UUI_CraftingAvailableItem_C_Init_Params params;
-	params.Item = Item;
+	UUI_CraftingAvailableItem_C_Init_Params fn_params;
+	fn_params.Item = Item;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -79,12 +79,12 @@ void UUI_CraftingAvailableItem_C::SetIsSelected(bool* isSelected)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingAvailableItem.UI_CraftingAvailableItem_C.SetIsSelected");
 
-	UUI_CraftingAvailableItem_C_SetIsSelected_Params params;
-	params.isSelected = isSelected;
+	UUI_CraftingAvailableItem_C_SetIsSelected_Params fn_params;
+	fn_params.isSelected = isSelected;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -99,12 +99,12 @@ void UUI_CraftingAvailableItem_C::SetIsOptional(bool* isOptional)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingAvailableItem.UI_CraftingAvailableItem_C.SetIsOptional");
 
-	UUI_CraftingAvailableItem_C_SetIsOptional_Params params;
-	params.isOptional = isOptional;
+	UUI_CraftingAvailableItem_C_SetIsOptional_Params fn_params;
+	fn_params.isOptional = isOptional;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -119,12 +119,12 @@ void UUI_CraftingAvailableItem_C::SetOptionalState(EOptionalState* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingAvailableItem.UI_CraftingAvailableItem_C.SetOptionalState");
 
-	UUI_CraftingAvailableItem_C_SetOptionalState_Params params;
-	params.State = State;
+	UUI_CraftingAvailableItem_C_SetOptionalState_Params fn_params;
+	fn_params.State = State;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -137,11 +137,11 @@ void UUI_CraftingAvailableItem_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingAvailableItem.UI_CraftingAvailableItem_C.Construct");
 
-	UUI_CraftingAvailableItem_C_Construct_Params params;
+	UUI_CraftingAvailableItem_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -156,12 +156,12 @@ void UUI_CraftingAvailableItem_C::ExecuteUbergraph_UI_CraftingAvailableItem(int 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingAvailableItem.UI_CraftingAvailableItem_C.ExecuteUbergraph_UI_CraftingAvailableItem");
 
-	UUI_CraftingAvailableItem_C_ExecuteUbergraph_UI_CraftingAvailableItem_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_CraftingAvailableItem_C_ExecuteUbergraph_UI_CraftingAvailableItem_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

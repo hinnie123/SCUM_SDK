@@ -21,12 +21,12 @@ void UUI_WaypointScreenWidget_C::AddWaypointWidgetToScreen(class UWaypointWidget
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WaypointScreenWidget.UI_WaypointScreenWidget_C.AddWaypointWidgetToScreen");
 
-	UUI_WaypointScreenWidget_C_AddWaypointWidgetToScreen_Params params;
-	params.Widget = Widget;
+	UUI_WaypointScreenWidget_C_AddWaypointWidgetToScreen_Params fn_params;
+	fn_params.Widget = Widget;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -41,12 +41,12 @@ void UUI_WaypointScreenWidget_C::RemoveWaypointWidgetFromScreen(class UWaypointW
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WaypointScreenWidget.UI_WaypointScreenWidget_C.RemoveWaypointWidgetFromScreen");
 
-	UUI_WaypointScreenWidget_C_RemoveWaypointWidgetFromScreen_Params params;
-	params.Widget = Widget;
+	UUI_WaypointScreenWidget_C_RemoveWaypointWidgetFromScreen_Params fn_params;
+	fn_params.Widget = Widget;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -61,12 +61,12 @@ void UUI_WaypointScreenWidget_C::ExecuteUbergraph_UI_WaypointScreenWidget(int En
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WaypointScreenWidget.UI_WaypointScreenWidget_C.ExecuteUbergraph_UI_WaypointScreenWidget");
 
-	UUI_WaypointScreenWidget_C_ExecuteUbergraph_UI_WaypointScreenWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_WaypointScreenWidget_C_ExecuteUbergraph_UI_WaypointScreenWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

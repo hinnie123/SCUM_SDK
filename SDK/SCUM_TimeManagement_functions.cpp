@@ -23,18 +23,18 @@ struct FFrameTime UTimeManagementBlueprintLibrary::STATIC_Multiply_SecondsFrameR
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Multiply_SecondsFrameRate");
 
-	UTimeManagementBlueprintLibrary_Multiply_SecondsFrameRate_Params params;
-	params.TimeInSeconds = TimeInSeconds;
-	params.FrameRate = FrameRate;
+	UTimeManagementBlueprintLibrary_Multiply_SecondsFrameRate_Params fn_params;
+	fn_params.TimeInSeconds = TimeInSeconds;
+	fn_params.FrameRate = FrameRate;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -47,16 +47,16 @@ struct FTimecode UTimeManagementBlueprintLibrary::STATIC_GetTimecode()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.GetTimecode");
 
-	UTimeManagementBlueprintLibrary_GetTimecode_Params params;
+	UTimeManagementBlueprintLibrary_GetTimecode_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -71,18 +71,18 @@ struct FString UTimeManagementBlueprintLibrary::STATIC_Conv_TimecodeToString(con
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Conv_TimecodeToString");
 
-	UTimeManagementBlueprintLibrary_Conv_TimecodeToString_Params params;
-	params.InTimecode = InTimecode;
-	params.bForceSignDisplay = bForceSignDisplay;
+	UTimeManagementBlueprintLibrary_Conv_TimecodeToString_Params fn_params;
+	fn_params.InTimecode = InTimecode;
+	fn_params.bForceSignDisplay = bForceSignDisplay;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -96,17 +96,17 @@ float UTimeManagementBlueprintLibrary::STATIC_Conv_QualifiedFrameTimeToSeconds(c
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Conv_QualifiedFrameTimeToSeconds");
 
-	UTimeManagementBlueprintLibrary_Conv_QualifiedFrameTimeToSeconds_Params params;
-	params.InFrameTime = InFrameTime;
+	UTimeManagementBlueprintLibrary_Conv_QualifiedFrameTimeToSeconds_Params fn_params;
+	fn_params.InFrameTime = InFrameTime;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -120,17 +120,17 @@ float UTimeManagementBlueprintLibrary::STATIC_Conv_FrameRateToSeconds(const stru
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Conv_FrameRateToSeconds");
 
-	UTimeManagementBlueprintLibrary_Conv_FrameRateToSeconds_Params params;
-	params.InFrameRate = InFrameRate;
+	UTimeManagementBlueprintLibrary_Conv_FrameRateToSeconds_Params fn_params;
+	fn_params.InFrameRate = InFrameRate;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

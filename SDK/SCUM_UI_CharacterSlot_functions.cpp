@@ -19,11 +19,11 @@ void UUI_CharacterSlot_C::OnSynchronizeProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterSlot.UI_CharacterSlot_C.OnSynchronizeProperties");
 
-	UUI_CharacterSlot_C_OnSynchronizeProperties_Params params;
+	UUI_CharacterSlot_C_OnSynchronizeProperties_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void UUI_CharacterSlot_C::BndEvt__UI_MenuButton_128_K2Node_ComponentBoundEvent_3
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterSlot.UI_CharacterSlot_C.BndEvt__UI_MenuButton_128_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature");
 
-	UUI_CharacterSlot_C_BndEvt__UI_MenuButton_128_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature_Params params;
+	UUI_CharacterSlot_C_BndEvt__UI_MenuButton_128_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -53,11 +53,11 @@ void UUI_CharacterSlot_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_16_OnButto
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterSlot.UI_CharacterSlot_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_16_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_CharacterSlot_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_16_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_CharacterSlot_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_16_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -72,12 +72,12 @@ void UUI_CharacterSlot_C::ExecuteUbergraph_UI_CharacterSlot(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterSlot.UI_CharacterSlot_C.ExecuteUbergraph_UI_CharacterSlot");
 
-	UUI_CharacterSlot_C_ExecuteUbergraph_UI_CharacterSlot_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_CharacterSlot_C_ExecuteUbergraph_UI_CharacterSlot_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -92,12 +92,12 @@ void UUI_CharacterSlot_C::OnDestroyClicked__DelegateSignature(class UUI_Characte
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterSlot.UI_CharacterSlot_C.OnDestroyClicked__DelegateSignature");
 
-	UUI_CharacterSlot_C_OnDestroyClicked__DelegateSignature_Params params;
-	params.Widget = Widget;
+	UUI_CharacterSlot_C_OnDestroyClicked__DelegateSignature_Params fn_params;
+	fn_params.Widget = Widget;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -112,12 +112,12 @@ void UUI_CharacterSlot_C::OnClicked__DelegateSignature(class UDbUserProfile* use
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterSlot.UI_CharacterSlot_C.OnClicked__DelegateSignature");
 
-	UUI_CharacterSlot_C_OnClicked__DelegateSignature_Params params;
-	params.userProfile = userProfile;
+	UUI_CharacterSlot_C_OnClicked__DelegateSignature_Params fn_params;
+	fn_params.userProfile = userProfile;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Swan_Legs.Swan_Legs_C
-// 0x0000 (0x08C0 - 0x08C0)
+// 0x0000 (0x0958 - 0x0958)
 class ASwan_Legs_C : public AFoodItem
 {
 public:

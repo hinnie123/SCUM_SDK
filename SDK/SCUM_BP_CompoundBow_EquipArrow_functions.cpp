@@ -22,16 +22,16 @@ float UBP_CompoundBow_EquipArrow_C::ExecuteUsingData(struct FWeaponReloadData* D
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CompoundBow_EquipArrow.BP_CompoundBow_EquipArrow_C.ExecuteUsingData");
 
-	UBP_CompoundBow_EquipArrow_C_ExecuteUsingData_Params params;
-	params.Data = Data;
+	UBP_CompoundBow_EquipArrow_C_ExecuteUsingData_Params fn_params;
+	fn_params.Data = Data;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -45,16 +45,16 @@ bool UBP_CompoundBow_EquipArrow_C::CanExecuteUsingData(struct FWeaponReloadData*
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CompoundBow_EquipArrow.BP_CompoundBow_EquipArrow_C.CanExecuteUsingData");
 
-	UBP_CompoundBow_EquipArrow_C_CanExecuteUsingData_Params params;
-	params.Data = Data;
+	UBP_CompoundBow_EquipArrow_C_CanExecuteUsingData_Params fn_params;
+	fn_params.Data = Data;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

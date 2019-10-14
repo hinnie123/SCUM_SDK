@@ -19,12 +19,12 @@ void UGameplayTask::ReadyForActivation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask.ReadyForActivation");
 
-	UGameplayTask_ReadyForActivation_Params params;
+	UGameplayTask_ReadyForActivation_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -37,11 +37,11 @@ void UGameplayTask::GenericGameplayTaskDelegate__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("DelegateFunction GameplayTasks.GameplayTask.GenericGameplayTaskDelegate__DelegateSignature");
 
-	UGameplayTask_GenericGameplayTaskDelegate__DelegateSignature_Params params;
+	UGameplayTask_GenericGameplayTaskDelegate__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -54,12 +54,12 @@ void UGameplayTask::EndTask()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask.EndTask");
 
-	UGameplayTask_EndTask_Params params;
+	UGameplayTask_EndTask_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -78,20 +78,20 @@ class UGameplayTask_ClaimResource* UGameplayTask_ClaimResource::STATIC_ClaimReso
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_ClaimResource.ClaimResources");
 
-	UGameplayTask_ClaimResource_ClaimResources_Params params;
-	params.InTaskOwner = InTaskOwner;
-	params.ResourceClasses = ResourceClasses;
-	params.Priority = Priority;
-	params.TaskInstanceName = TaskInstanceName;
+	UGameplayTask_ClaimResource_ClaimResources_Params fn_params;
+	fn_params.InTaskOwner = InTaskOwner;
+	fn_params.ResourceClasses = ResourceClasses;
+	fn_params.Priority = Priority;
+	fn_params.TaskInstanceName = TaskInstanceName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -108,20 +108,20 @@ class UGameplayTask_ClaimResource* UGameplayTask_ClaimResource::STATIC_ClaimReso
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_ClaimResource.ClaimResource");
 
-	UGameplayTask_ClaimResource_ClaimResource_Params params;
-	params.InTaskOwner = InTaskOwner;
-	params.ResourceClass = ResourceClass;
-	params.Priority = Priority;
-	params.TaskInstanceName = TaskInstanceName;
+	UGameplayTask_ClaimResource_ClaimResource_Params fn_params;
+	fn_params.InTaskOwner = InTaskOwner;
+	fn_params.ResourceClass = ResourceClass;
+	fn_params.Priority = Priority;
+	fn_params.TaskInstanceName = TaskInstanceName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -139,21 +139,21 @@ class UGameplayTask_SpawnActor* UGameplayTask_SpawnActor::STATIC_SpawnActor(cons
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_SpawnActor.SpawnActor");
 
-	UGameplayTask_SpawnActor_SpawnActor_Params params;
-	params.TaskOwner = TaskOwner;
-	params.SpawnLocation = SpawnLocation;
-	params.SpawnRotation = SpawnRotation;
-	params.Class = Class;
-	params.bSpawnOnlyOnAuthority = bSpawnOnlyOnAuthority;
+	UGameplayTask_SpawnActor_SpawnActor_Params fn_params;
+	fn_params.TaskOwner = TaskOwner;
+	fn_params.SpawnLocation = SpawnLocation;
+	fn_params.SpawnRotation = SpawnRotation;
+	fn_params.Class = Class;
+	fn_params.bSpawnOnlyOnAuthority = bSpawnOnlyOnAuthority;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -167,14 +167,14 @@ void UGameplayTask_SpawnActor::FinishSpawningActor(class UObject* WorldContextOb
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_SpawnActor.FinishSpawningActor");
 
-	UGameplayTask_SpawnActor_FinishSpawningActor_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.SpawnedActor = SpawnedActor;
+	UGameplayTask_SpawnActor_FinishSpawningActor_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.SpawnedActor = SpawnedActor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -191,20 +191,20 @@ bool UGameplayTask_SpawnActor::BeginSpawningActor(class UObject* WorldContextObj
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_SpawnActor.BeginSpawningActor");
 
-	UGameplayTask_SpawnActor_BeginSpawningActor_Params params;
-	params.WorldContextObject = WorldContextObject;
+	UGameplayTask_SpawnActor_BeginSpawningActor_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (SpawnedActor != nullptr)
-		*SpawnedActor = params.SpawnedActor;
+		*SpawnedActor = fn_params.SpawnedActor;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -220,19 +220,19 @@ class UGameplayTask_WaitDelay* UGameplayTask_WaitDelay::STATIC_TaskWaitDelay(con
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTask_WaitDelay.TaskWaitDelay");
 
-	UGameplayTask_WaitDelay_TaskWaitDelay_Params params;
-	params.TaskOwner = TaskOwner;
-	params.Time = Time;
-	params.Priority = Priority;
+	UGameplayTask_WaitDelay_TaskWaitDelay_Params fn_params;
+	fn_params.TaskOwner = TaskOwner;
+	fn_params.Time = Time;
+	fn_params.Priority = Priority;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -243,11 +243,11 @@ void UGameplayTask_WaitDelay::TaskDelayDelegate__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("DelegateFunction GameplayTasks.GameplayTask_WaitDelay.TaskDelayDelegate__DelegateSignature");
 
-	UGameplayTask_WaitDelay_TaskDelayDelegate__DelegateSignature_Params params;
+	UGameplayTask_WaitDelay_TaskDelayDelegate__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -260,12 +260,12 @@ void UGameplayTasksComponent::OnRep_SimulatedTasks()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTasksComponent.OnRep_SimulatedTasks");
 
-	UGameplayTasksComponent_OnRep_SimulatedTasks_Params params;
+	UGameplayTasksComponent_OnRep_SimulatedTasks_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -285,21 +285,21 @@ EGameplayTaskRunResult UGameplayTasksComponent::STATIC_K2_RunGameplayTask(const 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayTasks.GameplayTasksComponent.K2_RunGameplayTask");
 
-	UGameplayTasksComponent_K2_RunGameplayTask_Params params;
-	params.TaskOwner = TaskOwner;
-	params.Task = Task;
-	params.Priority = Priority;
-	params.AdditionalRequiredResources = AdditionalRequiredResources;
-	params.AdditionalClaimedResources = AdditionalClaimedResources;
+	UGameplayTasksComponent_K2_RunGameplayTask_Params fn_params;
+	fn_params.TaskOwner = TaskOwner;
+	fn_params.Task = Task;
+	fn_params.Priority = Priority;
+	fn_params.AdditionalRequiredResources = AdditionalRequiredResources;
+	fn_params.AdditionalClaimedResources = AdditionalClaimedResources;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

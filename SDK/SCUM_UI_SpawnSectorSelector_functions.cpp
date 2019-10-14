@@ -22,13 +22,13 @@ void UUI_SpawnSectorSelector_C::SetSelectedSector(int InRow, int InColumn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.SetSelectedSector");
 
-	UUI_SpawnSectorSelector_C_SetSelectedSector_Params params;
-	params.InRow = InRow;
-	params.InColumn = InColumn;
+	UUI_SpawnSectorSelector_C_SetSelectedSector_Params fn_params;
+	fn_params.InRow = InRow;
+	fn_params.InColumn = InColumn;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -44,18 +44,18 @@ void UUI_SpawnSectorSelector_C::UpdateCurrentSector(int* ReturnRow, int* ReturnC
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.UpdateCurrentSector");
 
-	UUI_SpawnSectorSelector_C_UpdateCurrentSector_Params params;
+	UUI_SpawnSectorSelector_C_UpdateCurrentSector_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (ReturnRow != nullptr)
-		*ReturnRow = params.ReturnRow;
+		*ReturnRow = fn_params.ReturnRow;
 	if (ReturnColumn != nullptr)
-		*ReturnColumn = params.ReturnColumn;
+		*ReturnColumn = fn_params.ReturnColumn;
 }
 
 
@@ -69,18 +69,18 @@ void UUI_SpawnSectorSelector_C::GetSelectedSector(int* X, int* Y)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.GetSelectedSector");
 
-	UUI_SpawnSectorSelector_C_GetSelectedSector_Params params;
+	UUI_SpawnSectorSelector_C_GetSelectedSector_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (X != nullptr)
-		*X = params.X;
+		*X = fn_params.X;
 	if (Y != nullptr)
-		*Y = params.Y;
+		*Y = fn_params.Y;
 }
 
 
@@ -93,12 +93,12 @@ void UUI_SpawnSectorSelector_C::SelectSector(class UButton* Button)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.SelectSector");
 
-	UUI_SpawnSectorSelector_C_SelectSector_Params params;
-	params.Button = Button;
+	UUI_SpawnSectorSelector_C_SelectSector_Params fn_params;
+	fn_params.Button = Button;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -111,11 +111,11 @@ void UUI_SpawnSectorSelector_C::BndEvt__Button_1_K2Node_ComponentBoundEvent_544_
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.BndEvt__Button_1_K2Node_ComponentBoundEvent_544_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_SpawnSectorSelector_C_BndEvt__Button_1_K2Node_ComponentBoundEvent_544_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_SpawnSectorSelector_C_BndEvt__Button_1_K2Node_ComponentBoundEvent_544_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -128,11 +128,11 @@ void UUI_SpawnSectorSelector_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_561_
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_561_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_SpawnSectorSelector_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_561_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_SpawnSectorSelector_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_561_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -145,11 +145,11 @@ void UUI_SpawnSectorSelector_C::BndEvt__Button_2_K2Node_ComponentBoundEvent_0_On
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.BndEvt__Button_2_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_SpawnSectorSelector_C_BndEvt__Button_2_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_SpawnSectorSelector_C_BndEvt__Button_2_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -162,11 +162,11 @@ void UUI_SpawnSectorSelector_C::BndEvt__Button_15_K2Node_ComponentBoundEvent_1_O
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.BndEvt__Button_15_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_SpawnSectorSelector_C_BndEvt__Button_15_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_SpawnSectorSelector_C_BndEvt__Button_15_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -179,11 +179,11 @@ void UUI_SpawnSectorSelector_C::BndEvt__Button_14_K2Node_ComponentBoundEvent_2_O
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.BndEvt__Button_14_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_SpawnSectorSelector_C_BndEvt__Button_14_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_SpawnSectorSelector_C_BndEvt__Button_14_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -196,11 +196,11 @@ void UUI_SpawnSectorSelector_C::BndEvt__Button_13_K2Node_ComponentBoundEvent_3_O
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.BndEvt__Button_13_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_SpawnSectorSelector_C_BndEvt__Button_13_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_SpawnSectorSelector_C_BndEvt__Button_13_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -213,11 +213,11 @@ void UUI_SpawnSectorSelector_C::BndEvt__Button_12_K2Node_ComponentBoundEvent_4_O
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.BndEvt__Button_12_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_SpawnSectorSelector_C_BndEvt__Button_12_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_SpawnSectorSelector_C_BndEvt__Button_12_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -230,11 +230,11 @@ void UUI_SpawnSectorSelector_C::BndEvt__Button_11_K2Node_ComponentBoundEvent_5_O
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.BndEvt__Button_11_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_SpawnSectorSelector_C_BndEvt__Button_11_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_SpawnSectorSelector_C_BndEvt__Button_11_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -247,11 +247,11 @@ void UUI_SpawnSectorSelector_C::BndEvt__Button_10_K2Node_ComponentBoundEvent_6_O
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.BndEvt__Button_10_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_SpawnSectorSelector_C_BndEvt__Button_10_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_SpawnSectorSelector_C_BndEvt__Button_10_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -264,11 +264,11 @@ void UUI_SpawnSectorSelector_C::BndEvt__Button_9_K2Node_ComponentBoundEvent_7_On
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.BndEvt__Button_9_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_SpawnSectorSelector_C_BndEvt__Button_9_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_SpawnSectorSelector_C_BndEvt__Button_9_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -281,11 +281,11 @@ void UUI_SpawnSectorSelector_C::BndEvt__Button_8_K2Node_ComponentBoundEvent_8_On
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.BndEvt__Button_8_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_SpawnSectorSelector_C_BndEvt__Button_8_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_SpawnSectorSelector_C_BndEvt__Button_8_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -298,11 +298,11 @@ void UUI_SpawnSectorSelector_C::BndEvt__Button_7_K2Node_ComponentBoundEvent_9_On
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.BndEvt__Button_7_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_SpawnSectorSelector_C_BndEvt__Button_7_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_SpawnSectorSelector_C_BndEvt__Button_7_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -315,11 +315,11 @@ void UUI_SpawnSectorSelector_C::BndEvt__Button_6_K2Node_ComponentBoundEvent_10_O
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.BndEvt__Button_6_K2Node_ComponentBoundEvent_10_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_SpawnSectorSelector_C_BndEvt__Button_6_K2Node_ComponentBoundEvent_10_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_SpawnSectorSelector_C_BndEvt__Button_6_K2Node_ComponentBoundEvent_10_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -332,11 +332,11 @@ void UUI_SpawnSectorSelector_C::BndEvt__Button_5_K2Node_ComponentBoundEvent_11_O
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.BndEvt__Button_5_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_SpawnSectorSelector_C_BndEvt__Button_5_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_SpawnSectorSelector_C_BndEvt__Button_5_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -349,11 +349,11 @@ void UUI_SpawnSectorSelector_C::BndEvt__Button_4_K2Node_ComponentBoundEvent_12_O
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.BndEvt__Button_4_K2Node_ComponentBoundEvent_12_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_SpawnSectorSelector_C_BndEvt__Button_4_K2Node_ComponentBoundEvent_12_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_SpawnSectorSelector_C_BndEvt__Button_4_K2Node_ComponentBoundEvent_12_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -366,11 +366,11 @@ void UUI_SpawnSectorSelector_C::BndEvt__Button_3_K2Node_ComponentBoundEvent_13_O
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.BndEvt__Button_3_K2Node_ComponentBoundEvent_13_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_SpawnSectorSelector_C_BndEvt__Button_3_K2Node_ComponentBoundEvent_13_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_SpawnSectorSelector_C_BndEvt__Button_3_K2Node_ComponentBoundEvent_13_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -383,11 +383,11 @@ void UUI_SpawnSectorSelector_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.Construct");
 
-	UUI_SpawnSectorSelector_C_Construct_Params params;
+	UUI_SpawnSectorSelector_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -402,12 +402,12 @@ void UUI_SpawnSectorSelector_C::ExecuteUbergraph_UI_SpawnSectorSelector(int Entr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnSectorSelector.UI_SpawnSectorSelector_C.ExecuteUbergraph_UI_SpawnSectorSelector");
 
-	UUI_SpawnSectorSelector_C_ExecuteUbergraph_UI_SpawnSectorSelector_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_SpawnSectorSelector_C_ExecuteUbergraph_UI_SpawnSectorSelector_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

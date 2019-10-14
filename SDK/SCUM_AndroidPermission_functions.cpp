@@ -22,17 +22,17 @@ bool UAndroidPermissionFunctionLibrary::STATIC_CheckPermission(const struct FStr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AndroidPermission.AndroidPermissionFunctionLibrary.CheckPermission");
 
-	UAndroidPermissionFunctionLibrary_CheckPermission_Params params;
-	params.permission = permission;
+	UAndroidPermissionFunctionLibrary_CheckPermission_Params fn_params;
+	fn_params.permission = permission;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -46,17 +46,17 @@ class UAndroidPermissionCallbackProxy* UAndroidPermissionFunctionLibrary::STATIC
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AndroidPermission.AndroidPermissionFunctionLibrary.AcquirePermissions");
 
-	UAndroidPermissionFunctionLibrary_AcquirePermissions_Params params;
-	params.Permissions = Permissions;
+	UAndroidPermissionFunctionLibrary_AcquirePermissions_Params fn_params;
+	fn_params.Permissions = Permissions;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

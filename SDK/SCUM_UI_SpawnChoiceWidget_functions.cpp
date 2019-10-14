@@ -21,15 +21,15 @@ ESlateVisibility UUI_SpawnChoiceWidget_C::GetVisibilityProgressBar()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnChoiceWidget.UI_SpawnChoiceWidget_C.GetVisibilityProgressBar");
 
-	UUI_SpawnChoiceWidget_C_GetVisibilityProgressBar_Params params;
+	UUI_SpawnChoiceWidget_C_GetVisibilityProgressBar_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -40,11 +40,11 @@ void UUI_SpawnChoiceWidget_C::Update()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnChoiceWidget.UI_SpawnChoiceWidget_C.Update");
 
-	UUI_SpawnChoiceWidget_C_Update_Params params;
+	UUI_SpawnChoiceWidget_C_Update_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -59,15 +59,15 @@ struct FText UUI_SpawnChoiceWidget_C::Get_PriceText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnChoiceWidget.UI_SpawnChoiceWidget_C.Get_PriceText");
 
-	UUI_SpawnChoiceWidget_C_Get_PriceText_Params params;
+	UUI_SpawnChoiceWidget_C_Get_PriceText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -80,15 +80,15 @@ ESlateVisibility UUI_SpawnChoiceWidget_C::GetVisibilityDisabled()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnChoiceWidget.UI_SpawnChoiceWidget_C.GetVisibilityDisabled");
 
-	UUI_SpawnChoiceWidget_C_GetVisibilityDisabled_Params params;
+	UUI_SpawnChoiceWidget_C_GetVisibilityDisabled_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -101,15 +101,15 @@ ESlateVisibility UUI_SpawnChoiceWidget_C::GetVisibilitySelectArrow()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnChoiceWidget.UI_SpawnChoiceWidget_C.GetVisibilitySelectArrow");
 
-	UUI_SpawnChoiceWidget_C_GetVisibilitySelectArrow_Params params;
+	UUI_SpawnChoiceWidget_C_GetVisibilitySelectArrow_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -120,11 +120,11 @@ void UUI_SpawnChoiceWidget_C::OnSynchronizeProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnChoiceWidget.UI_SpawnChoiceWidget_C.OnSynchronizeProperties");
 
-	UUI_SpawnChoiceWidget_C_OnSynchronizeProperties_Params params;
+	UUI_SpawnChoiceWidget_C_OnSynchronizeProperties_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -137,11 +137,11 @@ void UUI_SpawnChoiceWidget_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_139_On
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnChoiceWidget.UI_SpawnChoiceWidget_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_139_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_SpawnChoiceWidget_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_139_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_SpawnChoiceWidget_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_139_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -154,11 +154,11 @@ void UUI_SpawnChoiceWidget_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnChoiceWidget.UI_SpawnChoiceWidget_C.Construct");
 
-	UUI_SpawnChoiceWidget_C_Construct_Params params;
+	UUI_SpawnChoiceWidget_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -174,13 +174,13 @@ void UUI_SpawnChoiceWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaT
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnChoiceWidget.UI_SpawnChoiceWidget_C.Tick");
 
-	UUI_SpawnChoiceWidget_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UUI_SpawnChoiceWidget_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -195,12 +195,12 @@ void UUI_SpawnChoiceWidget_C::ExecuteUbergraph_UI_SpawnChoiceWidget(int EntryPoi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnChoiceWidget.UI_SpawnChoiceWidget_C.ExecuteUbergraph_UI_SpawnChoiceWidget");
 
-	UUI_SpawnChoiceWidget_C_ExecuteUbergraph_UI_SpawnChoiceWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_SpawnChoiceWidget_C_ExecuteUbergraph_UI_SpawnChoiceWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -209,18 +209,18 @@ void UUI_SpawnChoiceWidget_C::ExecuteUbergraph_UI_SpawnChoiceWidget(int EntryPoi
 // Function UI_SpawnChoiceWidget.UI_SpawnChoiceWidget_C.OnClicked__DelegateSignature
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UUI_SpawnChoiceWidget_C* this                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UUI_SpawnChoiceWidget_C* _this                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UUI_SpawnChoiceWidget_C::OnClicked__DelegateSignature(class UUI_SpawnChoiceWidget_C* this)
+void UUI_SpawnChoiceWidget_C::OnClicked__DelegateSignature(class UUI_SpawnChoiceWidget_C* _this)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnChoiceWidget.UI_SpawnChoiceWidget_C.OnClicked__DelegateSignature");
 
-	UUI_SpawnChoiceWidget_C_OnClicked__DelegateSignature_Params params;
-	params.this = this;
+	UUI_SpawnChoiceWidget_C_OnClicked__DelegateSignature_Params fn_params;
+	fn_params._this = _this;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

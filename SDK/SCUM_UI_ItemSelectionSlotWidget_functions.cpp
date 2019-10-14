@@ -21,16 +21,16 @@ void UUI_ItemSelectionSlotWidget_C::GetAttachmentItems(TArray<class UClass*>* Ne
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemSelectionSlotWidget.UI_ItemSelectionSlotWidget_C.GetAttachmentItems");
 
-	UUI_ItemSelectionSlotWidget_C_GetAttachmentItems_Params params;
+	UUI_ItemSelectionSlotWidget_C_GetAttachmentItems_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (NewParam != nullptr)
-		*NewParam = params.NewParam;
+		*NewParam = fn_params.NewParam;
 }
 
 
@@ -43,16 +43,16 @@ void UUI_ItemSelectionSlotWidget_C::GetSelectedIndex(int* SelectedIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemSelectionSlotWidget.UI_ItemSelectionSlotWidget_C.GetSelectedIndex");
 
-	UUI_ItemSelectionSlotWidget_C_GetSelectedIndex_Params params;
+	UUI_ItemSelectionSlotWidget_C_GetSelectedIndex_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (SelectedIndex != nullptr)
-		*SelectedIndex = params.SelectedIndex;
+		*SelectedIndex = fn_params.SelectedIndex;
 }
 
 
@@ -65,15 +65,15 @@ int UUI_ItemSelectionSlotWidget_C::GetSelectionCount()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemSelectionSlotWidget.UI_ItemSelectionSlotWidget_C.GetSelectionCount");
 
-	UUI_ItemSelectionSlotWidget_C_GetSelectionCount_Params params;
+	UUI_ItemSelectionSlotWidget_C_GetSelectionCount_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -86,16 +86,16 @@ void UUI_ItemSelectionSlotWidget_C::HasNoSelection(bool* NoSelection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemSelectionSlotWidget.UI_ItemSelectionSlotWidget_C.HasNoSelection");
 
-	UUI_ItemSelectionSlotWidget_C_HasNoSelection_Params params;
+	UUI_ItemSelectionSlotWidget_C_HasNoSelection_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (NoSelection != nullptr)
-		*NoSelection = params.NoSelection;
+		*NoSelection = fn_params.NoSelection;
 }
 
 
@@ -106,11 +106,11 @@ void UUI_ItemSelectionSlotWidget_C::ClearSelections()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemSelectionSlotWidget.UI_ItemSelectionSlotWidget_C.ClearSelections");
 
-	UUI_ItemSelectionSlotWidget_C_ClearSelections_Params params;
+	UUI_ItemSelectionSlotWidget_C_ClearSelections_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -125,16 +125,16 @@ void UUI_ItemSelectionSlotWidget_C::GetSupportItems(TArray<class UClass*>* NewPa
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemSelectionSlotWidget.UI_ItemSelectionSlotWidget_C.GetSupportItems");
 
-	UUI_ItemSelectionSlotWidget_C_GetSupportItems_Params params;
+	UUI_ItemSelectionSlotWidget_C_GetSupportItems_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (NewParam != nullptr)
-		*NewParam = params.NewParam;
+		*NewParam = fn_params.NewParam;
 }
 
 
@@ -147,16 +147,16 @@ void UUI_ItemSelectionSlotWidget_C::GetMainItem(class UClass** MainItem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemSelectionSlotWidget.UI_ItemSelectionSlotWidget_C.GetMainItem");
 
-	UUI_ItemSelectionSlotWidget_C_GetMainItem_Params params;
+	UUI_ItemSelectionSlotWidget_C_GetMainItem_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (MainItem != nullptr)
-		*MainItem = params.MainItem;
+		*MainItem = fn_params.MainItem;
 }
 
 
@@ -169,15 +169,15 @@ ESlateVisibility UUI_ItemSelectionSlotWidget_C::Get_Box_Visibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemSelectionSlotWidget.UI_ItemSelectionSlotWidget_C.Get_Box_Visibility");
 
-	UUI_ItemSelectionSlotWidget_C_Get_Box_Visibility_Params params;
+	UUI_ItemSelectionSlotWidget_C_Get_Box_Visibility_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -190,12 +190,12 @@ void UUI_ItemSelectionSlotWidget_C::Select(int Selection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemSelectionSlotWidget.UI_ItemSelectionSlotWidget_C.Select");
 
-	UUI_ItemSelectionSlotWidget_C_Select_Params params;
-	params.Selection = Selection;
+	UUI_ItemSelectionSlotWidget_C_Select_Params fn_params;
+	fn_params.Selection = Selection;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -210,12 +210,12 @@ void UUI_ItemSelectionSlotWidget_C::AddSelection(class UItemSelection* Item)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemSelectionSlotWidget.UI_ItemSelectionSlotWidget_C.AddSelection");
 
-	UUI_ItemSelectionSlotWidget_C_AddSelection_Params params;
-	params.Item = Item;
+	UUI_ItemSelectionSlotWidget_C_AddSelection_Params fn_params;
+	fn_params.Item = Item;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -228,11 +228,11 @@ void UUI_ItemSelectionSlotWidget_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemSelectionSlotWidget.UI_ItemSelectionSlotWidget_C.Construct");
 
-	UUI_ItemSelectionSlotWidget_C_Construct_Params params;
+	UUI_ItemSelectionSlotWidget_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -245,11 +245,11 @@ void UUI_ItemSelectionSlotWidget_C::OnSynchronizeProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemSelectionSlotWidget.UI_ItemSelectionSlotWidget_C.OnSynchronizeProperties");
 
-	UUI_ItemSelectionSlotWidget_C_OnSynchronizeProperties_Params params;
+	UUI_ItemSelectionSlotWidget_C_OnSynchronizeProperties_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -264,12 +264,12 @@ void UUI_ItemSelectionSlotWidget_C::ExecuteUbergraph_UI_ItemSelectionSlotWidget(
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemSelectionSlotWidget.UI_ItemSelectionSlotWidget_C.ExecuteUbergraph_UI_ItemSelectionSlotWidget");
 
-	UUI_ItemSelectionSlotWidget_C_ExecuteUbergraph_UI_ItemSelectionSlotWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_ItemSelectionSlotWidget_C_ExecuteUbergraph_UI_ItemSelectionSlotWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -282,11 +282,11 @@ void UUI_ItemSelectionSlotWidget_C::OnClicked__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemSelectionSlotWidget.UI_ItemSelectionSlotWidget_C.OnClicked__DelegateSignature");
 
-	UUI_ItemSelectionSlotWidget_C_OnClicked__DelegateSignature_Params params;
+	UUI_ItemSelectionSlotWidget_C_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

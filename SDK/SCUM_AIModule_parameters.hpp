@@ -1467,7 +1467,7 @@ struct UPawnActionsComponent_K2_PushAction_Params
 struct UPawnActionsComponent_K2_PerformAction_Params
 {
 	class APawn*                                       Pawn;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	class UPawnAction*                                 action;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPawnAction*                                 Action;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EAIRequestPriority>                    Priority;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };

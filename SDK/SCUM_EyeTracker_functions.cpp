@@ -21,13 +21,13 @@ void UEyeTrackerFunctionLibrary::STATIC_SetEyeTrackedPlayer(class APlayerControl
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EyeTracker.EyeTrackerFunctionLibrary.SetEyeTrackedPlayer");
 
-	UEyeTrackerFunctionLibrary_SetEyeTrackedPlayer_Params params;
-	params.PlayerController = PlayerController;
+	UEyeTrackerFunctionLibrary_SetEyeTrackedPlayer_Params fn_params;
+	fn_params.PlayerController = PlayerController;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -42,16 +42,16 @@ bool UEyeTrackerFunctionLibrary::STATIC_IsStereoGazeDataAvailable()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EyeTracker.EyeTrackerFunctionLibrary.IsStereoGazeDataAvailable");
 
-	UEyeTrackerFunctionLibrary_IsStereoGazeDataAvailable_Params params;
+	UEyeTrackerFunctionLibrary_IsStereoGazeDataAvailable_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -64,16 +64,16 @@ bool UEyeTrackerFunctionLibrary::STATIC_IsEyeTrackerConnected()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EyeTracker.EyeTrackerFunctionLibrary.IsEyeTrackerConnected");
 
-	UEyeTrackerFunctionLibrary_IsEyeTrackerConnected_Params params;
+	UEyeTrackerFunctionLibrary_IsEyeTrackerConnected_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -87,19 +87,19 @@ bool UEyeTrackerFunctionLibrary::STATIC_GetStereoGazeData(struct FEyeTrackerSter
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EyeTracker.EyeTrackerFunctionLibrary.GetStereoGazeData");
 
-	UEyeTrackerFunctionLibrary_GetStereoGazeData_Params params;
+	UEyeTrackerFunctionLibrary_GetStereoGazeData_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutGazeData != nullptr)
-		*OutGazeData = params.OutGazeData;
+		*OutGazeData = fn_params.OutGazeData;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -113,19 +113,19 @@ bool UEyeTrackerFunctionLibrary::STATIC_GetGazeData(struct FEyeTrackerGazeData* 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EyeTracker.EyeTrackerFunctionLibrary.GetGazeData");
 
-	UEyeTrackerFunctionLibrary_GetGazeData_Params params;
+	UEyeTrackerFunctionLibrary_GetGazeData_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutGazeData != nullptr)
-		*OutGazeData = params.OutGazeData;
+		*OutGazeData = fn_params.OutGazeData;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

@@ -21,15 +21,15 @@ ESlateVisibility UUI_LogoutConfirmation_C::Get_LeavingSquadWarning_Visibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_LogoutConfirmation.UI_LogoutConfirmation_C.Get_LeavingSquadWarning_Visibility");
 
-	UUI_LogoutConfirmation_C_Get_LeavingSquadWarning_Visibility_Params params;
+	UUI_LogoutConfirmation_C_Get_LeavingSquadWarning_Visibility_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -42,15 +42,15 @@ struct FText UUI_LogoutConfirmation_C::GetCountdownText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_LogoutConfirmation.UI_LogoutConfirmation_C.GetCountdownText");
 
-	UUI_LogoutConfirmation_C_GetCountdownText_Params params;
+	UUI_LogoutConfirmation_C_GetCountdownText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -61,11 +61,11 @@ void UUI_LogoutConfirmation_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_LogoutConfirmation.UI_LogoutConfirmation_C.Construct");
 
-	UUI_LogoutConfirmation_C_Construct_Params params;
+	UUI_LogoutConfirmation_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -78,11 +78,11 @@ void UUI_LogoutConfirmation_C::BndEvt__NoButton_K2Node_ComponentBoundEvent_0_OnC
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_LogoutConfirmation.UI_LogoutConfirmation_C.BndEvt__NoButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
 
-	UUI_LogoutConfirmation_C_BndEvt__NoButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature_Params params;
+	UUI_LogoutConfirmation_C_BndEvt__NoButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -95,11 +95,11 @@ void UUI_LogoutConfirmation_C::OnCountdownFinished()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_LogoutConfirmation.UI_LogoutConfirmation_C.OnCountdownFinished");
 
-	UUI_LogoutConfirmation_C_OnCountdownFinished_Params params;
+	UUI_LogoutConfirmation_C_OnCountdownFinished_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -112,11 +112,11 @@ void UUI_LogoutConfirmation_C::OnNo()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_LogoutConfirmation.UI_LogoutConfirmation_C.OnNo");
 
-	UUI_LogoutConfirmation_C_OnNo_Params params;
+	UUI_LogoutConfirmation_C_OnNo_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -129,11 +129,11 @@ void UUI_LogoutConfirmation_C::BndEvt__ForceButton_K2Node_ComponentBoundEvent_12
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_LogoutConfirmation.UI_LogoutConfirmation_C.BndEvt__ForceButton_K2Node_ComponentBoundEvent_12_OnClicked__DelegateSignature");
 
-	UUI_LogoutConfirmation_C_BndEvt__ForceButton_K2Node_ComponentBoundEvent_12_OnClicked__DelegateSignature_Params params;
+	UUI_LogoutConfirmation_C_BndEvt__ForceButton_K2Node_ComponentBoundEvent_12_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -148,12 +148,12 @@ void UUI_LogoutConfirmation_C::ExecuteUbergraph_UI_LogoutConfirmation(int EntryP
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_LogoutConfirmation.UI_LogoutConfirmation_C.ExecuteUbergraph_UI_LogoutConfirmation");
 
-	UUI_LogoutConfirmation_C_ExecuteUbergraph_UI_LogoutConfirmation_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_LogoutConfirmation_C_ExecuteUbergraph_UI_LogoutConfirmation_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -166,11 +166,11 @@ void UUI_LogoutConfirmation_C::CountdownFinished__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_LogoutConfirmation.UI_LogoutConfirmation_C.CountdownFinished__DelegateSignature");
 
-	UUI_LogoutConfirmation_C_CountdownFinished__DelegateSignature_Params params;
+	UUI_LogoutConfirmation_C_CountdownFinished__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

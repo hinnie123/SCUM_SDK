@@ -21,16 +21,16 @@ void UUI_QuickAccessItemWidget_C::GetItemSize(struct FVector2D* itemSize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_QuickAccessItemWidget.UI_QuickAccessItemWidget_C.GetItemSize");
 
-	UUI_QuickAccessItemWidget_C_GetItemSize_Params params;
+	UUI_QuickAccessItemWidget_C_GetItemSize_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (itemSize != nullptr)
-		*itemSize = params.itemSize;
+		*itemSize = fn_params.itemSize;
 }
 
 
@@ -43,16 +43,16 @@ void UUI_QuickAccessItemWidget_C::GetImageBrush(struct FSlateBrush* imageBrush)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_QuickAccessItemWidget.UI_QuickAccessItemWidget_C.GetImageBrush");
 
-	UUI_QuickAccessItemWidget_C_GetImageBrush_Params params;
+	UUI_QuickAccessItemWidget_C_GetImageBrush_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (imageBrush != nullptr)
-		*imageBrush = params.imageBrush;
+		*imageBrush = fn_params.imageBrush;
 }
 
 
@@ -67,17 +67,17 @@ struct FEventReply UUI_QuickAccessItemWidget_C::On__imageWidget_MouseButtonDown_
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_QuickAccessItemWidget.UI_QuickAccessItemWidget_C.On__imageWidget_MouseButtonDown_1");
 
-	UUI_QuickAccessItemWidget_C_On__imageWidget_MouseButtonDown_1_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_QuickAccessItemWidget_C_On__imageWidget_MouseButtonDown_1_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -92,18 +92,18 @@ void UUI_QuickAccessItemWidget_C::OnDragDetected(struct FGeometry* MyGeometry, s
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_QuickAccessItemWidget.UI_QuickAccessItemWidget_C.OnDragDetected");
 
-	UUI_QuickAccessItemWidget_C_OnDragDetected_Params params;
-	params.MyGeometry = MyGeometry;
-	params.PointerEvent = PointerEvent;
+	UUI_QuickAccessItemWidget_C_OnDragDetected_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.PointerEvent = PointerEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Operation != nullptr)
-		*Operation = params.Operation;
+		*Operation = fn_params.Operation;
 }
 
 
@@ -116,12 +116,12 @@ void UUI_QuickAccessItemWidget_C::SetItemSlotNumber(int itemSlotNumber)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_QuickAccessItemWidget.UI_QuickAccessItemWidget_C.SetItemSlotNumber");
 
-	UUI_QuickAccessItemWidget_C_SetItemSlotNumber_Params params;
-	params.itemSlotNumber = itemSlotNumber;
+	UUI_QuickAccessItemWidget_C_SetItemSlotNumber_Params fn_params;
+	fn_params.itemSlotNumber = itemSlotNumber;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -134,11 +134,11 @@ void UUI_QuickAccessItemWidget_C::ActivateNormalColor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_QuickAccessItemWidget.UI_QuickAccessItemWidget_C.ActivateNormalColor");
 
-	UUI_QuickAccessItemWidget_C_ActivateNormalColor_Params params;
+	UUI_QuickAccessItemWidget_C_ActivateNormalColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -151,11 +151,11 @@ void UUI_QuickAccessItemWidget_C::ActivateAlarmColor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_QuickAccessItemWidget.UI_QuickAccessItemWidget_C.ActivateAlarmColor");
 
-	UUI_QuickAccessItemWidget_C_ActivateAlarmColor_Params params;
+	UUI_QuickAccessItemWidget_C_ActivateAlarmColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -170,15 +170,15 @@ struct FText UUI_QuickAccessItemWidget_C::GetItemSlotNumber()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_QuickAccessItemWidget.UI_QuickAccessItemWidget_C.GetItemSlotNumber");
 
-	UUI_QuickAccessItemWidget_C_GetItemSlotNumber_Params params;
+	UUI_QuickAccessItemWidget_C_GetItemSlotNumber_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -191,12 +191,12 @@ void UUI_QuickAccessItemWidget_C::SetTextColor(const struct FLinearColor& TextCo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_QuickAccessItemWidget.UI_QuickAccessItemWidget_C.SetTextColor");
 
-	UUI_QuickAccessItemWidget_C_SetTextColor_Params params;
-	params.TextColor = TextColor;
+	UUI_QuickAccessItemWidget_C_SetTextColor_Params fn_params;
+	fn_params.TextColor = TextColor;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -209,11 +209,11 @@ void UUI_QuickAccessItemWidget_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_QuickAccessItemWidget.UI_QuickAccessItemWidget_C.Construct");
 
-	UUI_QuickAccessItemWidget_C_Construct_Params params;
+	UUI_QuickAccessItemWidget_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -229,13 +229,13 @@ void UUI_QuickAccessItemWidget_C::OnDragLeave(struct FPointerEvent* PointerEvent
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_QuickAccessItemWidget.UI_QuickAccessItemWidget_C.OnDragLeave");
 
-	UUI_QuickAccessItemWidget_C_OnDragLeave_Params params;
-	params.PointerEvent = PointerEvent;
-	params.Operation = Operation;
+	UUI_QuickAccessItemWidget_C_OnDragLeave_Params fn_params;
+	fn_params.PointerEvent = PointerEvent;
+	fn_params.Operation = Operation;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -250,12 +250,12 @@ void UUI_QuickAccessItemWidget_C::ExecuteUbergraph_UI_QuickAccessItemWidget(int 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_QuickAccessItemWidget.UI_QuickAccessItemWidget_C.ExecuteUbergraph_UI_QuickAccessItemWidget");
 
-	UUI_QuickAccessItemWidget_C_ExecuteUbergraph_UI_QuickAccessItemWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_QuickAccessItemWidget_C_ExecuteUbergraph_UI_QuickAccessItemWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -19,11 +19,11 @@ void ABP_Wristwatch_C::UpdateFatnessLeannessVisuals()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Wristwatch.BP_Wristwatch_C.UpdateFatnessLeannessVisuals");
 
-	ABP_Wristwatch_C_UpdateFatnessLeannessVisuals_Params params;
+	ABP_Wristwatch_C_UpdateFatnessLeannessVisuals_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void ABP_Wristwatch_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Wristwatch.BP_Wristwatch_C.UserConstructionScript");
 
-	ABP_Wristwatch_C_UserConstructionScript_Params params;
+	ABP_Wristwatch_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -55,12 +55,12 @@ void ABP_Wristwatch_C::SetTime(float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Wristwatch.BP_Wristwatch_C.SetTime");
 
-	ABP_Wristwatch_C_SetTime_Params params;
-	params.Value = Value;
+	ABP_Wristwatch_C_SetTime_Params fn_params;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -73,11 +73,11 @@ void ABP_Wristwatch_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Wristwatch.BP_Wristwatch_C.ReceiveBeginPlay");
 
-	ABP_Wristwatch_C_ReceiveBeginPlay_Params params;
+	ABP_Wristwatch_C_ReceiveBeginPlay_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -92,12 +92,12 @@ void ABP_Wristwatch_C::ToggleDisplayVisibility(bool* Visiblity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Wristwatch.BP_Wristwatch_C.ToggleDisplayVisibility");
 
-	ABP_Wristwatch_C_ToggleDisplayVisibility_Params params;
-	params.Visiblity = Visiblity;
+	ABP_Wristwatch_C_ToggleDisplayVisibility_Params fn_params;
+	fn_params.Visiblity = Visiblity;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -112,12 +112,12 @@ void ABP_Wristwatch_C::SetDisplayBrightness(float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Wristwatch.BP_Wristwatch_C.SetDisplayBrightness");
 
-	ABP_Wristwatch_C_SetDisplayBrightness_Params params;
-	params.Value = Value;
+	ABP_Wristwatch_C_SetDisplayBrightness_Params fn_params;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -132,12 +132,12 @@ void ABP_Wristwatch_C::ExecuteUbergraph_BP_Wristwatch(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Wristwatch.BP_Wristwatch_C.ExecuteUbergraph_BP_Wristwatch");
 
-	ABP_Wristwatch_C_ExecuteUbergraph_BP_Wristwatch_Params params;
-	params.EntryPoint = EntryPoint;
+	ABP_Wristwatch_C_ExecuteUbergraph_BP_Wristwatch_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

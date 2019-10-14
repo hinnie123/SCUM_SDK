@@ -14,15 +14,20 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_Weapon_Improvised_Shotgun.BP_Weapon_Improvised_Shotgun_C.CanSwitchFiringMode
+struct ABP_Weapon_Improvised_Shotgun_C_CanSwitchFiringMode_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function BP_Weapon_Improvised_Shotgun.BP_Weapon_Improvised_Shotgun_C.UserConstructionScript
 struct ABP_Weapon_Improvised_Shotgun_C_UserConstructionScript_Params
 {
 };
 
-// Function BP_Weapon_Improvised_Shotgun.BP_Weapon_Improvised_Shotgun_C.ReceiveTick
-struct ABP_Weapon_Improvised_Shotgun_C_ReceiveTick_Params
+// Function BP_Weapon_Improvised_Shotgun.BP_Weapon_Improvised_Shotgun_C.ReceiveBeginPlay
+struct ABP_Weapon_Improvised_Shotgun_C_ReceiveBeginPlay_Params
 {
-	float*                                             DeltaSeconds;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Weapon_Improvised_Shotgun.BP_Weapon_Improvised_Shotgun_C.ExecuteUbergraph_BP_Weapon_Improvised_Shotgun

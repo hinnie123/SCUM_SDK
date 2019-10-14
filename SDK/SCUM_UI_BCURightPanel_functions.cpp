@@ -21,12 +21,12 @@ void UUI_BCURightPanel_C::SetPrisoner(class APrisoner* Prisoner)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_BCURightPanel.UI_BCURightPanel_C.SetPrisoner");
 
-	UUI_BCURightPanel_C_SetPrisoner_Params params;
-	params.Prisoner = Prisoner;
+	UUI_BCURightPanel_C_SetPrisoner_Params fn_params;
+	fn_params.Prisoner = Prisoner;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

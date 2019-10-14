@@ -21,16 +21,16 @@ void UUI_TextInput_C::GetValueInt(int* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TextInput.UI_TextInput_C.GetValueInt");
 
-	UUI_TextInput_C_GetValueInt_Params params;
+	UUI_TextInput_C_GetValueInt_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Value != nullptr)
-		*Value = params.Value;
+		*Value = fn_params.Value;
 }
 
 
@@ -43,16 +43,16 @@ void UUI_TextInput_C::GetValue(struct FText* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TextInput.UI_TextInput_C.GetValue");
 
-	UUI_TextInput_C_GetValue_Params params;
+	UUI_TextInput_C_GetValue_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Value != nullptr)
-		*Value = params.Value;
+		*Value = fn_params.Value;
 }
 
 
@@ -67,17 +67,17 @@ struct FEventReply UUI_TextInput_C::OnMouseButtonDown_1(const struct FGeometry& 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TextInput.UI_TextInput_C.OnMouseButtonDown_1");
 
-	UUI_TextInput_C_OnMouseButtonDown_1_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_TextInput_C_OnMouseButtonDown_1_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -88,11 +88,11 @@ void UUI_TextInput_C::OnSynchronizeProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TextInput.UI_TextInput_C.OnSynchronizeProperties");
 
-	UUI_TextInput_C_OnSynchronizeProperties_Params params;
+	UUI_TextInput_C_OnSynchronizeProperties_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -108,13 +108,13 @@ void UUI_TextInput_C::OnMouseEnter(struct FGeometry* MyGeometry, struct FPointer
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TextInput.UI_TextInput_C.OnMouseEnter");
 
-	UUI_TextInput_C_OnMouseEnter_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_TextInput_C_OnMouseEnter_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -129,12 +129,12 @@ void UUI_TextInput_C::OnMouseLeave(struct FPointerEvent* MouseEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TextInput.UI_TextInput_C.OnMouseLeave");
 
-	UUI_TextInput_C_OnMouseLeave_Params params;
-	params.MouseEvent = MouseEvent;
+	UUI_TextInput_C_OnMouseLeave_Params fn_params;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -149,12 +149,12 @@ void UUI_TextInput_C::BndEvt__TextBox_K2Node_ComponentBoundEvent_0_OnEditableTex
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TextInput.UI_TextInput_C.BndEvt__TextBox_K2Node_ComponentBoundEvent_0_OnEditableTextBoxChangedEvent__DelegateSignature");
 
-	UUI_TextInput_C_BndEvt__TextBox_K2Node_ComponentBoundEvent_0_OnEditableTextBoxChangedEvent__DelegateSignature_Params params;
-	params.Text = Text;
+	UUI_TextInput_C_BndEvt__TextBox_K2Node_ComponentBoundEvent_0_OnEditableTextBoxChangedEvent__DelegateSignature_Params fn_params;
+	fn_params.Text = Text;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -170,13 +170,13 @@ void UUI_TextInput_C::BndEvt__TextBox_K2Node_ComponentBoundEvent_3_OnEditableTex
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TextInput.UI_TextInput_C.BndEvt__TextBox_K2Node_ComponentBoundEvent_3_OnEditableTextBoxCommittedEvent__DelegateSignature");
 
-	UUI_TextInput_C_BndEvt__TextBox_K2Node_ComponentBoundEvent_3_OnEditableTextBoxCommittedEvent__DelegateSignature_Params params;
-	params.Text = Text;
-	params.CommitMethod = CommitMethod;
+	UUI_TextInput_C_BndEvt__TextBox_K2Node_ComponentBoundEvent_3_OnEditableTextBoxCommittedEvent__DelegateSignature_Params fn_params;
+	fn_params.Text = Text;
+	fn_params.CommitMethod = CommitMethod;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -191,12 +191,12 @@ void UUI_TextInput_C::ExecuteUbergraph_UI_TextInput(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TextInput.UI_TextInput_C.ExecuteUbergraph_UI_TextInput");
 
-	UUI_TextInput_C_ExecuteUbergraph_UI_TextInput_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_TextInput_C_ExecuteUbergraph_UI_TextInput_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -212,13 +212,13 @@ void UUI_TextInput_C::OnTextCommitted__DelegateSignature(const struct FText& Tex
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TextInput.UI_TextInput_C.OnTextCommitted__DelegateSignature");
 
-	UUI_TextInput_C_OnTextCommitted__DelegateSignature_Params params;
-	params.Text = Text;
-	params.CommitMethod = CommitMethod;
+	UUI_TextInput_C_OnTextCommitted__DelegateSignature_Params fn_params;
+	fn_params.Text = Text;
+	fn_params.CommitMethod = CommitMethod;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

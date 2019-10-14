@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Salted_meat_barrel_01.Salted_meat_barrel_01_C
-// 0x0000 (0x08C0 - 0x08C0)
+// 0x0000 (0x0958 - 0x0958)
 class ASalted_meat_barrel_01_C : public AFoodItem
 {
 public:

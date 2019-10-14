@@ -19,11 +19,11 @@ void UVitalStatsTemperature_C::DisableAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsTemperature.VitalStatsTemperature_C.DisableAlarm");
 
-	UVitalStatsTemperature_C_DisableAlarm_Params params;
+	UVitalStatsTemperature_C_DisableAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void UVitalStatsTemperature_C::EnableAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsTemperature.VitalStatsTemperature_C.EnableAlarm");
 
-	UVitalStatsTemperature_C_EnableAlarm_Params params;
+	UVitalStatsTemperature_C_EnableAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -53,11 +53,11 @@ void UVitalStatsTemperature_C::CheckAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsTemperature.VitalStatsTemperature_C.CheckAlarm");
 
-	UVitalStatsTemperature_C_CheckAlarm_Params params;
+	UVitalStatsTemperature_C_CheckAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -72,16 +72,16 @@ void UVitalStatsTemperature_C::GetBodyTemperatureFloat(float* NewParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsTemperature.VitalStatsTemperature_C.GetBodyTemperatureFloat");
 
-	UVitalStatsTemperature_C_GetBodyTemperatureFloat_Params params;
+	UVitalStatsTemperature_C_GetBodyTemperatureFloat_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (NewParam != nullptr)
-		*NewParam = params.NewParam;
+		*NewParam = fn_params.NewParam;
 }
 
 
@@ -92,11 +92,11 @@ void UVitalStatsTemperature_C::ActivateNormalColor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsTemperature.VitalStatsTemperature_C.ActivateNormalColor");
 
-	UVitalStatsTemperature_C_ActivateNormalColor_Params params;
+	UVitalStatsTemperature_C_ActivateNormalColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -109,11 +109,11 @@ void UVitalStatsTemperature_C::ActivateAlarmColor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsTemperature.VitalStatsTemperature_C.ActivateAlarmColor");
 
-	UVitalStatsTemperature_C_ActivateAlarmColor_Params params;
+	UVitalStatsTemperature_C_ActivateAlarmColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -128,12 +128,12 @@ void UVitalStatsTemperature_C::SetTemperatureDeviationText(const struct FText& t
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsTemperature.VitalStatsTemperature_C.SetTemperatureDeviationText");
 
-	UVitalStatsTemperature_C_SetTemperatureDeviationText_Params params;
-	params.temperatureDeviationText = temperatureDeviationText;
+	UVitalStatsTemperature_C_SetTemperatureDeviationText_Params fn_params;
+	fn_params.temperatureDeviationText = temperatureDeviationText;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -148,12 +148,12 @@ void UVitalStatsTemperature_C::SetTemperatureDeviation(float temperatureDeviatio
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsTemperature.VitalStatsTemperature_C.SetTemperatureDeviation");
 
-	UVitalStatsTemperature_C_SetTemperatureDeviation_Params params;
-	params.temperatureDeviation = temperatureDeviation;
+	UVitalStatsTemperature_C_SetTemperatureDeviation_Params fn_params;
+	fn_params.temperatureDeviation = temperatureDeviation;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -168,12 +168,12 @@ void UVitalStatsTemperature_C::SetTemperatureExtremes(const struct FText& tempEx
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsTemperature.VitalStatsTemperature_C.SetTemperatureExtremes");
 
-	UVitalStatsTemperature_C_SetTemperatureExtremes_Params params;
-	params.tempExtremes = tempExtremes;
+	UVitalStatsTemperature_C_SetTemperatureExtremes_Params fn_params;
+	fn_params.tempExtremes = tempExtremes;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -188,15 +188,15 @@ struct FText UVitalStatsTemperature_C::GetTemperatureDeviation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsTemperature.VitalStatsTemperature_C.GetTemperatureDeviation");
 
-	UVitalStatsTemperature_C_GetTemperatureDeviation_Params params;
+	UVitalStatsTemperature_C_GetTemperatureDeviation_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -209,15 +209,15 @@ struct FText UVitalStatsTemperature_C::GetBodyTemperature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsTemperature.VitalStatsTemperature_C.GetBodyTemperature");
 
-	UVitalStatsTemperature_C_GetBodyTemperature_Params params;
+	UVitalStatsTemperature_C_GetBodyTemperature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -230,12 +230,12 @@ void UVitalStatsTemperature_C::SetTextColor(const struct FLinearColor& TextColor
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsTemperature.VitalStatsTemperature_C.SetTextColor");
 
-	UVitalStatsTemperature_C_SetTextColor_Params params;
-	params.TextColor = TextColor;
+	UVitalStatsTemperature_C_SetTextColor_Params fn_params;
+	fn_params.TextColor = TextColor;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -248,11 +248,11 @@ void UVitalStatsTemperature_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsTemperature.VitalStatsTemperature_C.Construct");
 
-	UVitalStatsTemperature_C_Construct_Params params;
+	UVitalStatsTemperature_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -268,13 +268,13 @@ void UVitalStatsTemperature_C::Tick(struct FGeometry* MyGeometry, float* InDelta
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsTemperature.VitalStatsTemperature_C.Tick");
 
-	UVitalStatsTemperature_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UVitalStatsTemperature_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -289,12 +289,12 @@ void UVitalStatsTemperature_C::ExecuteUbergraph_VitalStatsTemperature(int EntryP
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsTemperature.VitalStatsTemperature_C.ExecuteUbergraph_VitalStatsTemperature");
 
-	UVitalStatsTemperature_C_ExecuteUbergraph_VitalStatsTemperature_Params params;
-	params.EntryPoint = EntryPoint;
+	UVitalStatsTemperature_C_ExecuteUbergraph_VitalStatsTemperature_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -21,15 +21,15 @@ struct FText UUI_WaypointWidget_C::Get_Label_Text()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WaypointWidget.UI_WaypointWidget_C.Get_Label_Text");
 
-	UUI_WaypointWidget_C_Get_Label_Text_Params params;
+	UUI_WaypointWidget_C_Get_Label_Text_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -42,15 +42,15 @@ struct FSlateBrush UUI_WaypointWidget_C::Get_Accent_Brush()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WaypointWidget.UI_WaypointWidget_C.Get_Accent_Brush");
 
-	UUI_WaypointWidget_C_Get_Accent_Brush_Params params;
+	UUI_WaypointWidget_C_Get_Accent_Brush_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -63,15 +63,15 @@ struct FLinearColor UUI_WaypointWidget_C::Get_Emphasis_Color()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WaypointWidget.UI_WaypointWidget_C.Get_Emphasis_Color");
 
-	UUI_WaypointWidget_C_Get_Emphasis_Color_Params params;
+	UUI_WaypointWidget_C_Get_Emphasis_Color_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -84,15 +84,15 @@ ESlateVisibility UUI_WaypointWidget_C::Get_Emphasis_Visibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WaypointWidget.UI_WaypointWidget_C.Get_Emphasis_Visibility");
 
-	UUI_WaypointWidget_C_Get_Emphasis_Visibility_Params params;
+	UUI_WaypointWidget_C_Get_Emphasis_Visibility_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -105,15 +105,15 @@ ESlateVisibility UUI_WaypointWidget_C::Get_Bar_Visibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WaypointWidget.UI_WaypointWidget_C.Get_Bar_Visibility");
 
-	UUI_WaypointWidget_C_Get_Bar_Visibility_Params params;
+	UUI_WaypointWidget_C_Get_Bar_Visibility_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -126,15 +126,15 @@ struct FText UUI_WaypointWidget_C::Get_Distance_Text()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WaypointWidget.UI_WaypointWidget_C.Get_Distance_Text");
 
-	UUI_WaypointWidget_C_Get_Distance_Text_Params params;
+	UUI_WaypointWidget_C_Get_Distance_Text_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -147,15 +147,15 @@ struct FSlateBrush UUI_WaypointWidget_C::Get_Bar_Brush()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WaypointWidget.UI_WaypointWidget_C.Get_Bar_Brush");
 
-	UUI_WaypointWidget_C_Get_Bar_Brush_Params params;
+	UUI_WaypointWidget_C_Get_Bar_Brush_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -168,15 +168,15 @@ ESlateVisibility UUI_WaypointWidget_C::Get_BigPointer_Visibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WaypointWidget.UI_WaypointWidget_C.Get_BigPointer_Visibility");
 
-	UUI_WaypointWidget_C_Get_BigPointer_Visibility_Params params;
+	UUI_WaypointWidget_C_Get_BigPointer_Visibility_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -189,15 +189,15 @@ ESlateVisibility UUI_WaypointWidget_C::Get_SmallPointer_Visibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WaypointWidget.UI_WaypointWidget_C.Get_SmallPointer_Visibility");
 
-	UUI_WaypointWidget_C_Get_SmallPointer_Visibility_Params params;
+	UUI_WaypointWidget_C_Get_SmallPointer_Visibility_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -210,15 +210,15 @@ struct FSlateBrush UUI_WaypointWidget_C::Get_Icon_Brush()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WaypointWidget.UI_WaypointWidget_C.Get_Icon_Brush");
 
-	UUI_WaypointWidget_C_Get_Icon_Brush_Params params;
+	UUI_WaypointWidget_C_Get_Icon_Brush_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -232,13 +232,13 @@ void UUI_WaypointWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WaypointWidget.UI_WaypointWidget_C.Tick");
 
-	UUI_WaypointWidget_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UUI_WaypointWidget_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -253,12 +253,12 @@ void UUI_WaypointWidget_C::ExecuteUbergraph_UI_WaypointWidget(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WaypointWidget.UI_WaypointWidget_C.ExecuteUbergraph_UI_WaypointWidget");
 
-	UUI_WaypointWidget_C_ExecuteUbergraph_UI_WaypointWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_WaypointWidget_C_ExecuteUbergraph_UI_WaypointWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

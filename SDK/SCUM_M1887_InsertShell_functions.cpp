@@ -22,16 +22,16 @@ float UM1887_InsertShell_C::ExecuteUsingData(struct FWeaponReloadData* Data)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function M1887_InsertShell.M1887_InsertShell_C.ExecuteUsingData");
 
-	UM1887_InsertShell_C_ExecuteUsingData_Params params;
-	params.Data = Data;
+	UM1887_InsertShell_C_ExecuteUsingData_Params fn_params;
+	fn_params.Data = Data;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -45,16 +45,16 @@ bool UM1887_InsertShell_C::CanExecuteUsingData(struct FWeaponReloadData* Data)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function M1887_InsertShell.M1887_InsertShell_C.CanExecuteUsingData");
 
-	UM1887_InsertShell_C_CanExecuteUsingData_Params params;
-	params.Data = Data;
+	UM1887_InsertShell_C_CanExecuteUsingData_Params fn_params;
+	fn_params.Data = Data;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

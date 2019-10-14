@@ -21,16 +21,16 @@ void URDAMonitor_C::shouldAlarmBeOn(bool* shouldAlarmBeOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RDAMonitor.RDAMonitor_C.shouldAlarmBeOn");
 
-	URDAMonitor_C_shouldAlarmBeOn_Params params;
+	URDAMonitor_C_shouldAlarmBeOn_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (shouldAlarmBeOn != nullptr)
-		*shouldAlarmBeOn = params.shouldAlarmBeOn;
+		*shouldAlarmBeOn = fn_params.shouldAlarmBeOn;
 }
 
 
@@ -43,16 +43,16 @@ void URDAMonitor_C::GetContentSize(struct FVector2D* contentSize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RDAMonitor.RDAMonitor_C.GetContentSize");
 
-	URDAMonitor_C_GetContentSize_Params params;
+	URDAMonitor_C_GetContentSize_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (contentSize != nullptr)
-		*contentSize = params.contentSize;
+		*contentSize = fn_params.contentSize;
 }
 
 
@@ -63,11 +63,11 @@ void URDAMonitor_C::SetPrisonerToMonitorOnChildren()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RDAMonitor.RDAMonitor_C.SetPrisonerToMonitorOnChildren");
 
-	URDAMonitor_C_SetPrisonerToMonitorOnChildren_Params params;
+	URDAMonitor_C_SetPrisonerToMonitorOnChildren_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -80,11 +80,11 @@ void URDAMonitor_C::Init()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RDAMonitor.RDAMonitor_C.Init");
 
-	URDAMonitor_C_Init_Params params;
+	URDAMonitor_C_Init_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -99,15 +99,15 @@ struct FText URDAMonitor_C::GetTitleText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RDAMonitor.RDAMonitor_C.GetTitleText");
 
-	URDAMonitor_C_GetTitleText_Params params;
+	URDAMonitor_C_GetTitleText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -120,16 +120,16 @@ void URDAMonitor_C::GetDefaultTitle(struct FText* defaultTitle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RDAMonitor.RDAMonitor_C.GetDefaultTitle");
 
-	URDAMonitor_C_GetDefaultTitle_Params params;
+	URDAMonitor_C_GetDefaultTitle_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (defaultTitle != nullptr)
-		*defaultTitle = params.defaultTitle;
+		*defaultTitle = fn_params.defaultTitle;
 }
 
 
@@ -142,16 +142,16 @@ void URDAMonitor_C::SelectCustomColor(struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RDAMonitor.RDAMonitor_C.SelectCustomColor");
 
-	URDAMonitor_C_SelectCustomColor_Params params;
+	URDAMonitor_C_SelectCustomColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Color != nullptr)
-		*Color = params.Color;
+		*Color = fn_params.Color;
 }
 
 
@@ -164,12 +164,12 @@ void URDAMonitor_C::OnMinimize(bool shouldMinimize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RDAMonitor.RDAMonitor_C.OnMinimize");
 
-	URDAMonitor_C_OnMinimize_Params params;
-	params.shouldMinimize = shouldMinimize;
+	URDAMonitor_C_OnMinimize_Params fn_params;
+	fn_params.shouldMinimize = shouldMinimize;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -182,11 +182,11 @@ void URDAMonitor_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RDAMonitor.RDAMonitor_C.Construct");
 
-	URDAMonitor_C_Construct_Params params;
+	URDAMonitor_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -202,13 +202,13 @@ void URDAMonitor_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RDAMonitor.RDAMonitor_C.Tick");
 
-	URDAMonitor_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	URDAMonitor_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -221,11 +221,11 @@ void URDAMonitor_C::MinimizableWidgetSizeChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RDAMonitor.RDAMonitor_C.MinimizableWidgetSizeChanged");
 
-	URDAMonitor_C_MinimizableWidgetSizeChanged_Params params;
+	URDAMonitor_C_MinimizableWidgetSizeChanged_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -238,11 +238,11 @@ void URDAMonitor_C::RDAMonitorSizeChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RDAMonitor.RDAMonitor_C.RDAMonitorSizeChanged");
 
-	URDAMonitor_C_RDAMonitorSizeChanged_Params params;
+	URDAMonitor_C_RDAMonitorSizeChanged_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -255,11 +255,11 @@ void URDAMonitor_C::OnPrisonerSet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RDAMonitor.RDAMonitor_C.OnPrisonerSet");
 
-	URDAMonitor_C_OnPrisonerSet_Params params;
+	URDAMonitor_C_OnPrisonerSet_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -272,11 +272,11 @@ void URDAMonitor_C::OnRDAMonitorContentSizeChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RDAMonitor.RDAMonitor_C.OnRDAMonitorContentSizeChanged");
 
-	URDAMonitor_C_OnRDAMonitorContentSizeChanged_Params params;
+	URDAMonitor_C_OnRDAMonitorContentSizeChanged_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -289,11 +289,11 @@ void URDAMonitor_C::WindowContentSizeChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RDAMonitor.RDAMonitor_C.WindowContentSizeChanged");
 
-	URDAMonitor_C_WindowContentSizeChanged_Params params;
+	URDAMonitor_C_WindowContentSizeChanged_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -306,11 +306,11 @@ void URDAMonitor_C::AlarmOnWindowContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RDAMonitor.RDAMonitor_C.AlarmOnWindowContent");
 
-	URDAMonitor_C_AlarmOnWindowContent_Params params;
+	URDAMonitor_C_AlarmOnWindowContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -323,11 +323,11 @@ void URDAMonitor_C::AlarmOffWindowContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RDAMonitor.RDAMonitor_C.AlarmOffWindowContent");
 
-	URDAMonitor_C_AlarmOffWindowContent_Params params;
+	URDAMonitor_C_AlarmOffWindowContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -342,12 +342,12 @@ void URDAMonitor_C::ExecuteUbergraph_RDAMonitor(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RDAMonitor.RDAMonitor_C.ExecuteUbergraph_RDAMonitor");
 
-	URDAMonitor_C_ExecuteUbergraph_RDAMonitor_Params params;
-	params.EntryPoint = EntryPoint;
+	URDAMonitor_C_ExecuteUbergraph_RDAMonitor_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -362,12 +362,12 @@ void URDAMonitor_C::RDASizeChangeEventDispatcher__DelegateSignature(const struct
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RDAMonitor.RDAMonitor_C.RDASizeChangeEventDispatcher__DelegateSignature");
 
-	URDAMonitor_C_RDASizeChangeEventDispatcher__DelegateSignature_Params params;
-	params.newSize = newSize;
+	URDAMonitor_C_RDASizeChangeEventDispatcher__DelegateSignature_Params fn_params;
+	fn_params.newSize = newSize;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

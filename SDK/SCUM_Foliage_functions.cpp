@@ -25,20 +25,20 @@ int UFoliageStatistics::STATIC_FoliageOverlappingSphereCount(class UObject* Worl
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Foliage.FoliageStatistics.FoliageOverlappingSphereCount");
 
-	UFoliageStatistics_FoliageOverlappingSphereCount_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.StaticMesh = StaticMesh;
-	params.CenterPosition = CenterPosition;
-	params.Radius = Radius;
+	UFoliageStatistics_FoliageOverlappingSphereCount_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.StaticMesh = StaticMesh;
+	fn_params.CenterPosition = CenterPosition;
+	fn_params.Radius = Radius;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -54,19 +54,19 @@ int UFoliageStatistics::STATIC_FoliageOverlappingBoxCount(class UObject* WorldCo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Foliage.FoliageStatistics.FoliageOverlappingBoxCount");
 
-	UFoliageStatistics_FoliageOverlappingBoxCount_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.StaticMesh = StaticMesh;
-	params.Box = Box;
+	UFoliageStatistics_FoliageOverlappingBoxCount_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.StaticMesh = StaticMesh;
+	fn_params.Box = Box;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -84,18 +84,18 @@ void AInteractiveFoliageActor::CapsuleTouched(class UPrimitiveComponent* Overlap
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Foliage.InteractiveFoliageActor.CapsuleTouched");
 
-	AInteractiveFoliageActor_CapsuleTouched_Params params;
-	params.OverlappedComp = OverlappedComp;
-	params.Other = Other;
-	params.OtherComp = OtherComp;
-	params.OtherBodyIndex = OtherBodyIndex;
-	params.bFromSweep = bFromSweep;
-	params.OverlapInfo = OverlapInfo;
+	AInteractiveFoliageActor_CapsuleTouched_Params fn_params;
+	fn_params.OverlappedComp = OverlappedComp;
+	fn_params.Other = Other;
+	fn_params.OtherComp = OtherComp;
+	fn_params.OtherBodyIndex = OtherBodyIndex;
+	fn_params.bFromSweep = bFromSweep;
+	fn_params.OverlapInfo = OverlapInfo;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -110,13 +110,13 @@ void UProceduralFoliageSpawner::Simulate(int NumSteps)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Foliage.ProceduralFoliageSpawner.Simulate");
 
-	UProceduralFoliageSpawner_Simulate_Params params;
-	params.NumSteps = NumSteps;
+	UProceduralFoliageSpawner_Simulate_Params fn_params;
+	fn_params.NumSteps = NumSteps;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

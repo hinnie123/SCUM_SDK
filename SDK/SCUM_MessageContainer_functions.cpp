@@ -24,15 +24,15 @@ void UMessageContainer_C::AddMessage(const struct FText& Text, TEnumAsByte<EMess
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MessageContainer.MessageContainer_C.AddMessage");
 
-	UMessageContainer_C_AddMessage_Params params;
-	params.Text = Text;
-	params.Type = Type;
-	params.Duration = Duration;
-	params.Color = Color;
+	UMessageContainer_C_AddMessage_Params fn_params;
+	fn_params.Text = Text;
+	fn_params.Type = Type;
+	fn_params.Duration = Duration;
+	fn_params.Color = Color;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

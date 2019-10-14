@@ -23,18 +23,18 @@ void UDigestion_C::HasContentSizeChanged(int oldDigestionItemCount, int newDiges
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.HasContentSizeChanged");
 
-	UDigestion_C_HasContentSizeChanged_Params params;
-	params.oldDigestionItemCount = oldDigestionItemCount;
-	params.newDigestionItemCount = newDigestionItemCount;
+	UDigestion_C_HasContentSizeChanged_Params fn_params;
+	fn_params.oldDigestionItemCount = oldDigestionItemCount;
+	fn_params.newDigestionItemCount = newDigestionItemCount;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (contentSizeChanged != nullptr)
-		*contentSizeChanged = params.contentSizeChanged;
+		*contentSizeChanged = fn_params.contentSizeChanged;
 }
 
 
@@ -47,16 +47,16 @@ void UDigestion_C::PrintArrayOfDigestionItems(TArray<class UDigestionItem*>* dig
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.PrintArrayOfDigestionItems");
 
-	UDigestion_C_PrintArrayOfDigestionItems_Params params;
+	UDigestion_C_PrintArrayOfDigestionItems_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (digestionItemsTArray != nullptr)
-		*digestionItemsTArray = params.digestionItemsTArray;
+		*digestionItemsTArray = fn_params.digestionItemsTArray;
 }
 
 
@@ -67,11 +67,11 @@ void UDigestion_C::UpdateDigestionItemsCount()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.UpdateDigestionItemsCount");
 
-	UDigestion_C_UpdateDigestionItemsCount_Params params;
+	UDigestion_C_UpdateDigestionItemsCount_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -89,21 +89,21 @@ void UDigestion_C::DigestionItemToText(class UDigestionItem* digestionItemRef, s
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.DigestionItemToText");
 
-	UDigestion_C_DigestionItemToText_Params params;
-	params.digestionItemRef = digestionItemRef;
+	UDigestion_C_DigestionItemToText_Params fn_params;
+	fn_params.digestionItemRef = digestionItemRef;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (digestionItemName != nullptr)
-		*digestionItemName = params.digestionItemName;
+		*digestionItemName = fn_params.digestionItemName;
 	if (digestionItemID != nullptr)
-		*digestionItemID = params.digestionItemID;
+		*digestionItemID = fn_params.digestionItemID;
 	if (digestionItemWeight != nullptr)
-		*digestionItemWeight = params.digestionItemWeight;
+		*digestionItemWeight = fn_params.digestionItemWeight;
 }
 
 
@@ -117,13 +117,13 @@ void UDigestion_C::FillDigestionLine(class UParameterLine_C* digestionLineRef, c
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.FillDigestionLine");
 
-	UDigestion_C_FillDigestionLine_Params params;
-	params.digestionLineRef = digestionLineRef;
-	params.digestionItemRef = digestionItemRef;
+	UDigestion_C_FillDigestionLine_Params fn_params;
+	fn_params.digestionLineRef = digestionLineRef;
+	fn_params.digestionItemRef = digestionItemRef;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -139,17 +139,17 @@ void UDigestion_C::CreateDigestionLine(class UDigestionItem* digestionItemRef, c
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.CreateDigestionLine");
 
-	UDigestion_C_CreateDigestionLine_Params params;
-	params.digestionItemRef = digestionItemRef;
+	UDigestion_C_CreateDigestionLine_Params fn_params;
+	fn_params.digestionItemRef = digestionItemRef;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (digestionParameterLine != nullptr)
-		*digestionParameterLine = params.digestionParameterLine;
+		*digestionParameterLine = fn_params.digestionParameterLine;
 }
 
 
@@ -162,12 +162,12 @@ void UDigestion_C::ShowDigestion(ESlateVisibility Visibility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.ShowDigestion");
 
-	UDigestion_C_ShowDigestion_Params params;
-	params.Visibility = Visibility;
+	UDigestion_C_ShowDigestion_Params fn_params;
+	fn_params.Visibility = Visibility;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -180,11 +180,11 @@ void UDigestion_C::InitDigestionItems()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.InitDigestionItems");
 
-	UDigestion_C_InitDigestionItems_Params params;
+	UDigestion_C_InitDigestionItems_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -200,13 +200,13 @@ void UDigestion_C::AddDigestionLine(int Index, class UParameterLine_C* digestion
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.AddDigestionLine");
 
-	UDigestion_C_AddDigestionLine_Params params;
-	params.Index = Index;
-	params.digestionLineRef = digestionLineRef;
+	UDigestion_C_AddDigestionLine_Params fn_params;
+	fn_params.Index = Index;
+	fn_params.digestionLineRef = digestionLineRef;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -224,19 +224,19 @@ void UDigestion_C::CreateDigestionLineFromText(const struct FText& digestionItem
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.CreateDigestionLineFromText");
 
-	UDigestion_C_CreateDigestionLineFromText_Params params;
-	params.digestionItemName = digestionItemName;
-	params.digestionItemID = digestionItemID;
-	params.digestionItemWeightRemained = digestionItemWeightRemained;
+	UDigestion_C_CreateDigestionLineFromText_Params fn_params;
+	fn_params.digestionItemName = digestionItemName;
+	fn_params.digestionItemID = digestionItemID;
+	fn_params.digestionItemWeightRemained = digestionItemWeightRemained;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (digestionLine != nullptr)
-		*digestionLine = params.digestionLine;
+		*digestionLine = fn_params.digestionLine;
 }
 
 
@@ -249,16 +249,16 @@ void UDigestion_C::GetDigestionItems(TArray<class UDigestionItem*>* digestionIte
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.GetDigestionItems");
 
-	UDigestion_C_GetDigestionItems_Params params;
+	UDigestion_C_GetDigestionItems_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (digestionItemsTArrayRef != nullptr)
-		*digestionItemsTArrayRef = params.digestionItemsTArrayRef;
+		*digestionItemsTArrayRef = fn_params.digestionItemsTArrayRef;
 }
 
 
@@ -271,12 +271,12 @@ void UDigestion_C::SetDigestionCount(int digestionItemsCountToSet)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.SetDigestionCount");
 
-	UDigestion_C_SetDigestionCount_Params params;
-	params.digestionItemsCountToSet = digestionItemsCountToSet;
+	UDigestion_C_SetDigestionCount_Params fn_params;
+	fn_params.digestionItemsCountToSet = digestionItemsCountToSet;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -289,11 +289,11 @@ void UDigestion_C::ClearDigestionLines()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.ClearDigestionLines");
 
-	UDigestion_C_ClearDigestionLines_Params params;
+	UDigestion_C_ClearDigestionLines_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -308,16 +308,16 @@ void UDigestion_C::CountDigestionItems(int* numberOfDigestionItems)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.CountDigestionItems");
 
-	UDigestion_C_CountDigestionItems_Params params;
+	UDigestion_C_CountDigestionItems_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (numberOfDigestionItems != nullptr)
-		*numberOfDigestionItems = params.numberOfDigestionItems;
+		*numberOfDigestionItems = fn_params.numberOfDigestionItems;
 }
 
 
@@ -330,16 +330,16 @@ void UDigestion_C::HasDigestionCountChanged(bool* sicknessCountChanged)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.HasDigestionCountChanged");
 
-	UDigestion_C_HasDigestionCountChanged_Params params;
+	UDigestion_C_HasDigestionCountChanged_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (sicknessCountChanged != nullptr)
-		*sicknessCountChanged = params.sicknessCountChanged;
+		*sicknessCountChanged = fn_params.sicknessCountChanged;
 }
 
 
@@ -350,11 +350,11 @@ void UDigestion_C::UpdateDigestion()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.UpdateDigestion");
 
-	UDigestion_C_UpdateDigestion_Params params;
+	UDigestion_C_UpdateDigestion_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -369,15 +369,15 @@ struct FText UDigestion_C::GetTitleText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.GetTitleText");
 
-	UDigestion_C_GetTitleText_Params params;
+	UDigestion_C_GetTitleText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -390,16 +390,16 @@ void UDigestion_C::GetDefaultTitle(struct FText* defaultTitle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.GetDefaultTitle");
 
-	UDigestion_C_GetDefaultTitle_Params params;
+	UDigestion_C_GetDefaultTitle_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (defaultTitle != nullptr)
-		*defaultTitle = params.defaultTitle;
+		*defaultTitle = fn_params.defaultTitle;
 }
 
 
@@ -412,16 +412,16 @@ void UDigestion_C::SelectCustomColor(struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.SelectCustomColor");
 
-	UDigestion_C_SelectCustomColor_Params params;
+	UDigestion_C_SelectCustomColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Color != nullptr)
-		*Color = params.Color;
+		*Color = fn_params.Color;
 }
 
 
@@ -432,11 +432,11 @@ void UDigestion_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.Construct");
 
-	UDigestion_C_Construct_Params params;
+	UDigestion_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -451,12 +451,12 @@ void UDigestion_C::OnMinimize(bool shouldMinimize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.OnMinimize");
 
-	UDigestion_C_OnMinimize_Params params;
-	params.shouldMinimize = shouldMinimize;
+	UDigestion_C_OnMinimize_Params fn_params;
+	fn_params.shouldMinimize = shouldMinimize;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -469,11 +469,11 @@ void UDigestion_C::OnPrisonerSet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.OnPrisonerSet");
 
-	UDigestion_C_OnPrisonerSet_Params params;
+	UDigestion_C_OnPrisonerSet_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -486,11 +486,11 @@ void UDigestion_C::UpdateContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.UpdateContent");
 
-	UDigestion_C_UpdateContent_Params params;
+	UDigestion_C_UpdateContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -505,12 +505,12 @@ void UDigestion_C::ExecuteUbergraph_Digestion(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Digestion.Digestion_C.ExecuteUbergraph_Digestion");
 
-	UDigestion_C_ExecuteUbergraph_Digestion_Params params;
-	params.EntryPoint = EntryPoint;
+	UDigestion_C_ExecuteUbergraph_Digestion_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

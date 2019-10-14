@@ -21,15 +21,15 @@ struct FSlateColor UUI_CraftingPanel_C::GetColorAndOpacity_1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingPanel.UI_CraftingPanel_C.GetColorAndOpacity_1");
 
-	UUI_CraftingPanel_C_GetColorAndOpacity_1_Params params;
+	UUI_CraftingPanel_C_GetColorAndOpacity_1_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -42,15 +42,15 @@ bool UUI_CraftingPanel_C::GetbIsEnabled_1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingPanel.UI_CraftingPanel_C.GetbIsEnabled_1");
 
-	UUI_CraftingPanel_C_GetbIsEnabled_1_Params params;
+	UUI_CraftingPanel_C_GetbIsEnabled_1_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -63,15 +63,15 @@ bool UUI_CraftingPanel_C::GetIsCraftButtonEnabled()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingPanel.UI_CraftingPanel_C.GetIsCraftButtonEnabled");
 
-	UUI_CraftingPanel_C_GetIsCraftButtonEnabled_Params params;
+	UUI_CraftingPanel_C_GetIsCraftButtonEnabled_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -85,13 +85,13 @@ void UUI_CraftingPanel_C::UpdateParameter(class URetainerBox* RetainerBox, class
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingPanel.UI_CraftingPanel_C.UpdateParameter");
 
-	UUI_CraftingPanel_C_UpdateParameter_Params params;
-	params.RetainerBox = RetainerBox;
-	params.Box = Box;
+	UUI_CraftingPanel_C_UpdateParameter_Params fn_params;
+	fn_params.RetainerBox = RetainerBox;
+	fn_params.Box = Box;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -104,11 +104,11 @@ void UUI_CraftingPanel_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_116_OnButt
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingPanel.UI_CraftingPanel_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_116_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_CraftingPanel_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_116_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_CraftingPanel_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_116_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -124,13 +124,13 @@ void UUI_CraftingPanel_C::BndEvt__InventoryContainer_K2Node_ComponentBoundEvent_
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingPanel.UI_CraftingPanel_C.BndEvt__InventoryContainer_K2Node_ComponentBoundEvent_18_OnExpandChanged__DelegateSignature");
 
-	UUI_CraftingPanel_C_BndEvt__InventoryContainer_K2Node_ComponentBoundEvent_18_OnExpandChanged__DelegateSignature_Params params;
-	params.container = container;
-	params.IsMinimized = IsMinimized;
+	UUI_CraftingPanel_C_BndEvt__InventoryContainer_K2Node_ComponentBoundEvent_18_OnExpandChanged__DelegateSignature_Params fn_params;
+	fn_params.container = container;
+	fn_params.IsMinimized = IsMinimized;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -146,13 +146,13 @@ void UUI_CraftingPanel_C::BndEvt__VicinityContainer_K2Node_ComponentBoundEvent_1
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingPanel.UI_CraftingPanel_C.BndEvt__VicinityContainer_K2Node_ComponentBoundEvent_19_OnExpandChanged__DelegateSignature");
 
-	UUI_CraftingPanel_C_BndEvt__VicinityContainer_K2Node_ComponentBoundEvent_19_OnExpandChanged__DelegateSignature_Params params;
-	params.container = container;
-	params.IsMinimized = IsMinimized;
+	UUI_CraftingPanel_C_BndEvt__VicinityContainer_K2Node_ComponentBoundEvent_19_OnExpandChanged__DelegateSignature_Params fn_params;
+	fn_params.container = container;
+	fn_params.IsMinimized = IsMinimized;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -165,11 +165,11 @@ void UUI_CraftingPanel_C::BndEvt__UI_MenuButton_K2Node_ComponentBoundEvent_13_On
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingPanel.UI_CraftingPanel_C.BndEvt__UI_MenuButton_K2Node_ComponentBoundEvent_13_OnClicked__DelegateSignature");
 
-	UUI_CraftingPanel_C_BndEvt__UI_MenuButton_K2Node_ComponentBoundEvent_13_OnClicked__DelegateSignature_Params params;
+	UUI_CraftingPanel_C_BndEvt__UI_MenuButton_K2Node_ComponentBoundEvent_13_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -185,13 +185,13 @@ void UUI_CraftingPanel_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingPanel.UI_CraftingPanel_C.Tick");
 
-	UUI_CraftingPanel_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UUI_CraftingPanel_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -206,12 +206,12 @@ void UUI_CraftingPanel_C::ShowPlaceableCraftingConfirmationForCraftingIndex(int*
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingPanel.UI_CraftingPanel_C.ShowPlaceableCraftingConfirmationForCraftingIndex");
 
-	UUI_CraftingPanel_C_ShowPlaceableCraftingConfirmationForCraftingIndex_Params params;
-	params.Index = Index;
+	UUI_CraftingPanel_C_ShowPlaceableCraftingConfirmationForCraftingIndex_Params fn_params;
+	fn_params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -224,11 +224,11 @@ void UUI_CraftingPanel_C::OnCraftingConfirmationDismissed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingPanel.UI_CraftingPanel_C.OnCraftingConfirmationDismissed");
 
-	UUI_CraftingPanel_C_OnCraftingConfirmationDismissed_Params params;
+	UUI_CraftingPanel_C_OnCraftingConfirmationDismissed_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -243,12 +243,12 @@ void UUI_CraftingPanel_C::ExecuteUbergraph_UI_CraftingPanel(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingPanel.UI_CraftingPanel_C.ExecuteUbergraph_UI_CraftingPanel");
 
-	UUI_CraftingPanel_C_ExecuteUbergraph_UI_CraftingPanel_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_CraftingPanel_C_ExecuteUbergraph_UI_CraftingPanel_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

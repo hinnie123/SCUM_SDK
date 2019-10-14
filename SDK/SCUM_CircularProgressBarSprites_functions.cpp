@@ -21,15 +21,15 @@ struct FText UCircularProgressBarSprites_C::GetCurrentPercentageToShowText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.GetCurrentPercentageToShowText");
 
-	UCircularProgressBarSprites_C_GetCurrentPercentageToShowText_Params params;
+	UCircularProgressBarSprites_C_GetCurrentPercentageToShowText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -42,16 +42,16 @@ void UCircularProgressBarSprites_C::GetCurrentPercentageToShow(float* currentPer
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.GetCurrentPercentageToShow");
 
-	UCircularProgressBarSprites_C_GetCurrentPercentageToShow_Params params;
+	UCircularProgressBarSprites_C_GetCurrentPercentageToShow_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (currentPercentageToShow != nullptr)
-		*currentPercentageToShow = params.currentPercentageToShow;
+		*currentPercentageToShow = fn_params.currentPercentageToShow;
 }
 
 
@@ -64,12 +64,12 @@ void UCircularProgressBarSprites_C::SetCurrentPercentageToShow(float percentageT
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.SetCurrentPercentageToShow");
 
-	UCircularProgressBarSprites_C_SetCurrentPercentageToShow_Params params;
-	params.percentageToShow = percentageToShow;
+	UCircularProgressBarSprites_C_SetCurrentPercentageToShow_Params fn_params;
+	fn_params.percentageToShow = percentageToShow;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -84,15 +84,15 @@ struct FText UCircularProgressBarSprites_C::GetPercentageText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.GetPercentageText");
 
-	UCircularProgressBarSprites_C_GetPercentageText_Params params;
+	UCircularProgressBarSprites_C_GetPercentageText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -105,12 +105,12 @@ void UCircularProgressBarSprites_C::SetTextalarmColorC(class UTextBlock* textWid
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.SetTextalarmColorC");
 
-	UCircularProgressBarSprites_C_SetTextalarmColorC_Params params;
-	params.textWidget = textWidget;
+	UCircularProgressBarSprites_C_SetTextalarmColorC_Params fn_params;
+	fn_params.textWidget = textWidget;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -126,13 +126,13 @@ void UCircularProgressBarSprites_C::SetTextColor(class UTextBlock* textWidget, c
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.SetTextColor");
 
-	UCircularProgressBarSprites_C_SetTextColor_Params params;
-	params.textWidget = textWidget;
-	params.Color = Color;
+	UCircularProgressBarSprites_C_SetTextColor_Params fn_params;
+	fn_params.textWidget = textWidget;
+	fn_params.Color = Color;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -145,11 +145,11 @@ void UCircularProgressBarSprites_C::ActivateNormalColor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.ActivateNormalColor");
 
-	UCircularProgressBarSprites_C_ActivateNormalColor_Params params;
+	UCircularProgressBarSprites_C_ActivateNormalColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -164,12 +164,12 @@ void UCircularProgressBarSprites_C::SetCircularBarColor(const struct FLinearColo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.SetCircularBarColor");
 
-	UCircularProgressBarSprites_C_SetCircularBarColor_Params params;
-	params.CircularBarColor = CircularBarColor;
+	UCircularProgressBarSprites_C_SetCircularBarColor_Params fn_params;
+	fn_params.CircularBarColor = CircularBarColor;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -184,16 +184,16 @@ void UCircularProgressBarSprites_C::GetCircularBarColor(struct FLinearColor* Cir
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.GetCircularBarColor");
 
-	UCircularProgressBarSprites_C_GetCircularBarColor_Params params;
+	UCircularProgressBarSprites_C_GetCircularBarColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (CircularBarColor != nullptr)
-		*CircularBarColor = params.CircularBarColor;
+		*CircularBarColor = fn_params.CircularBarColor;
 }
 
 
@@ -206,12 +206,12 @@ void UCircularProgressBarSprites_C::SetOuterCircleColor(const struct FLinearColo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.SetOuterCircleColor");
 
-	UCircularProgressBarSprites_C_SetOuterCircleColor_Params params;
-	params.outerCircleColor = outerCircleColor;
+	UCircularProgressBarSprites_C_SetOuterCircleColor_Params fn_params;
+	fn_params.outerCircleColor = outerCircleColor;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -226,16 +226,16 @@ void UCircularProgressBarSprites_C::GetOuterCircleColor(struct FLinearColor* out
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.GetOuterCircleColor");
 
-	UCircularProgressBarSprites_C_GetOuterCircleColor_Params params;
+	UCircularProgressBarSprites_C_GetOuterCircleColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (outerCircleColor != nullptr)
-		*outerCircleColor = params.outerCircleColor;
+		*outerCircleColor = fn_params.outerCircleColor;
 }
 
 
@@ -248,16 +248,16 @@ void UCircularProgressBarSprites_C::GetNormalColor(struct FLinearColor* NormalCo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.GetNormalColor");
 
-	UCircularProgressBarSprites_C_GetNormalColor_Params params;
+	UCircularProgressBarSprites_C_GetNormalColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (NormalColor != nullptr)
-		*NormalColor = params.NormalColor;
+		*NormalColor = fn_params.NormalColor;
 }
 
 
@@ -270,12 +270,12 @@ void UCircularProgressBarSprites_C::SetNormalColor(const struct FLinearColor& No
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.SetNormalColor");
 
-	UCircularProgressBarSprites_C_SetNormalColor_Params params;
-	params.NormalColor = NormalColor;
+	UCircularProgressBarSprites_C_SetNormalColor_Params fn_params;
+	fn_params.NormalColor = NormalColor;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -290,16 +290,16 @@ void UCircularProgressBarSprites_C::GetAlarmColor(struct FLinearColor* AlarmColo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.GetAlarmColor");
 
-	UCircularProgressBarSprites_C_GetAlarmColor_Params params;
+	UCircularProgressBarSprites_C_GetAlarmColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (AlarmColor != nullptr)
-		*AlarmColor = params.AlarmColor;
+		*AlarmColor = fn_params.AlarmColor;
 }
 
 
@@ -312,12 +312,12 @@ void UCircularProgressBarSprites_C::SetAlarmColor(const struct FLinearColor& Ala
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.SetAlarmColor");
 
-	UCircularProgressBarSprites_C_SetAlarmColor_Params params;
-	params.AlarmColor = AlarmColor;
+	UCircularProgressBarSprites_C_SetAlarmColor_Params fn_params;
+	fn_params.AlarmColor = AlarmColor;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -330,11 +330,11 @@ void UCircularProgressBarSprites_C::ActivateAlarmColor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.ActivateAlarmColor");
 
-	UCircularProgressBarSprites_C_ActivateAlarmColor_Params params;
+	UCircularProgressBarSprites_C_ActivateAlarmColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -347,11 +347,11 @@ void UCircularProgressBarSprites_C::UpdatePercentageArc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.UpdatePercentageArc");
 
-	UCircularProgressBarSprites_C_UpdatePercentageArc_Params params;
+	UCircularProgressBarSprites_C_UpdatePercentageArc_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -366,12 +366,12 @@ void UCircularProgressBarSprites_C::SetImageAlarmColor(class UImage* ImageWidget
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.SetImageAlarmColor");
 
-	UCircularProgressBarSprites_C_SetImageAlarmColor_Params params;
-	params.ImageWidget = ImageWidget;
+	UCircularProgressBarSprites_C_SetImageAlarmColor_Params fn_params;
+	fn_params.ImageWidget = ImageWidget;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -384,11 +384,11 @@ void UCircularProgressBarSprites_C::OnPercentageChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.OnPercentageChanged");
 
-	UCircularProgressBarSprites_C_OnPercentageChanged_Params params;
+	UCircularProgressBarSprites_C_OnPercentageChanged_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -401,11 +401,11 @@ void UCircularProgressBarSprites_C::AlarmSwitchOn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.AlarmSwitchOn");
 
-	UCircularProgressBarSprites_C_AlarmSwitchOn_Params params;
+	UCircularProgressBarSprites_C_AlarmSwitchOn_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -418,11 +418,11 @@ void UCircularProgressBarSprites_C::AlarmSwitchOff()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.AlarmSwitchOff");
 
-	UCircularProgressBarSprites_C_AlarmSwitchOff_Params params;
+	UCircularProgressBarSprites_C_AlarmSwitchOff_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -438,13 +438,13 @@ void UCircularProgressBarSprites_C::Tick(struct FGeometry* MyGeometry, float* In
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.Tick");
 
-	UCircularProgressBarSprites_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UCircularProgressBarSprites_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -457,11 +457,11 @@ void UCircularProgressBarSprites_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.Construct");
 
-	UCircularProgressBarSprites_C_Construct_Params params;
+	UCircularProgressBarSprites_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -474,11 +474,11 @@ void UCircularProgressBarSprites_C::OnSynchronizeProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.OnSynchronizeProperties");
 
-	UCircularProgressBarSprites_C_OnSynchronizeProperties_Params params;
+	UCircularProgressBarSprites_C_OnSynchronizeProperties_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -493,12 +493,12 @@ void UCircularProgressBarSprites_C::ExecuteUbergraph_CircularProgressBarSprites(
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.ExecuteUbergraph_CircularProgressBarSprites");
 
-	UCircularProgressBarSprites_C_ExecuteUbergraph_CircularProgressBarSprites_Params params;
-	params.EntryPoint = EntryPoint;
+	UCircularProgressBarSprites_C_ExecuteUbergraph_CircularProgressBarSprites_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

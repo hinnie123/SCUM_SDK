@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Torch.Torch_C
-// 0x0010 (0x0808 - 0x07F8)
+// 0x0010 (0x08A8 - 0x0898)
 class ATorch_C : public AFireItem
 {
 public:
-	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule;                              // 0x07F8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UPointLightComponent*                        PointLight;                                               // 0x0800(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule;                              // 0x0898(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UPointLightComponent*                        PointLight;                                               // 0x08A0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

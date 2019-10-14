@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass AtropineInjection.AtropineInjection_C
-// 0x0000 (0x0780 - 0x0780)
+// 0x0000 (0x0820 - 0x0820)
 class AAtropineInjection_C : public AMedicationItem
 {
 public:

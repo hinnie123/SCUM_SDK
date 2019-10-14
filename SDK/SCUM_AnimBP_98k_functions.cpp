@@ -19,11 +19,11 @@ void UAnimBP_98k_C::EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_98k_AnimG
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimBP_98k.AnimBP_98k_C.EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_98k_AnimGraphNode_BlendListByEnum_2BAD4FEA4B914AF61DC15A8DC18AEE30");
 
-	UAnimBP_98k_C_EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_98k_AnimGraphNode_BlendListByEnum_2BAD4FEA4B914AF61DC15A8DC18AEE30_Params params;
+	UAnimBP_98k_C_EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_98k_AnimGraphNode_BlendListByEnum_2BAD4FEA4B914AF61DC15A8DC18AEE30_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -38,12 +38,12 @@ void UAnimBP_98k_C::ExecuteUbergraph_AnimBP_98k(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimBP_98k.AnimBP_98k_C.ExecuteUbergraph_AnimBP_98k");
 
-	UAnimBP_98k_C_ExecuteUbergraph_AnimBP_98k_Params params;
-	params.EntryPoint = EntryPoint;
+	UAnimBP_98k_C_ExecuteUbergraph_AnimBP_98k_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

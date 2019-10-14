@@ -42,7 +42,7 @@ public:
 
 	ESlateVisibility GetDropdownVisibility();
 	void RestoreSelected();
-	void UpdateSelection(class UComboBoxString* Dropdown, const struct FString& Selected, TArray<class AGameEventBase*>* GameEvents);
+	void UpdateSelection(class UComboBoxString* Dropdown, const struct FString& selected, TArray<class AGameEventBase*>* GameEvents);
 	void GetSelectedEvent(class AGameEventBase** gameEvent);
 	void GetGameEventOptionString(class AGameEventBase* gameEvent, struct FString* OptionString);
 	void SelectEvent(int Index, bool Current);

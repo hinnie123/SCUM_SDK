@@ -22,17 +22,17 @@ void UUI_Chat_C::CreateSuggestionLine(const struct FString& Text, class UUI_Chat
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Chat.UI_Chat_C.CreateSuggestionLine");
 
-	UUI_Chat_C_CreateSuggestionLine_Params params;
-	params.Text = Text;
+	UUI_Chat_C_CreateSuggestionLine_Params fn_params;
+	fn_params.Text = Text;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Widget != nullptr)
-		*Widget = params.Widget;
+		*Widget = fn_params.Widget;
 }
 
 
@@ -47,17 +47,17 @@ struct FEventReply UUI_Chat_C::OnPreviewKeyDown(struct FGeometry* MyGeometry, st
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Chat.UI_Chat_C.OnPreviewKeyDown");
 
-	UUI_Chat_C_OnPreviewKeyDown_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InKeyEvent = InKeyEvent;
+	UUI_Chat_C_OnPreviewKeyDown_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InKeyEvent = InKeyEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -72,17 +72,17 @@ struct FEventReply UUI_Chat_C::OnKeyDown(struct FGeometry* MyGeometry, struct FK
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Chat.UI_Chat_C.OnKeyDown");
 
-	UUI_Chat_C_OnKeyDown_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InKeyEvent = InKeyEvent;
+	UUI_Chat_C_OnKeyDown_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InKeyEvent = InKeyEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -93,11 +93,11 @@ void UUI_Chat_C::SetInputFocusIfNeeded()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Chat.UI_Chat_C.SetInputFocusIfNeeded");
 
-	UUI_Chat_C_SetInputFocusIfNeeded_Params params;
+	UUI_Chat_C_SetInputFocusIfNeeded_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -114,17 +114,17 @@ struct FEventReply UUI_Chat_C::OnMouseButtonUp(struct FGeometry* MyGeometry, str
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Chat.UI_Chat_C.OnMouseButtonUp");
 
-	UUI_Chat_C_OnMouseButtonUp_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_Chat_C_OnMouseButtonUp_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -135,11 +135,11 @@ void UUI_Chat_C::BndEvt__MuteButton_K2Node_ComponentBoundEvent_19_OnButtonClicke
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Chat.UI_Chat_C.BndEvt__MuteButton_K2Node_ComponentBoundEvent_19_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_Chat_C_BndEvt__MuteButton_K2Node_ComponentBoundEvent_19_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_Chat_C_BndEvt__MuteButton_K2Node_ComponentBoundEvent_19_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -152,11 +152,11 @@ void UUI_Chat_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Chat.UI_Chat_C.Construct");
 
-	UUI_Chat_C_Construct_Params params;
+	UUI_Chat_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -169,11 +169,11 @@ void UUI_Chat_C::UpdateActiveSuggestions()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Chat.UI_Chat_C.UpdateActiveSuggestions");
 
-	UUI_Chat_C_UpdateActiveSuggestions_Params params;
+	UUI_Chat_C_UpdateActiveSuggestions_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -188,12 +188,12 @@ void UUI_Chat_C::ExecuteUbergraph_UI_Chat(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Chat.UI_Chat_C.ExecuteUbergraph_UI_Chat");
 
-	UUI_Chat_C_ExecuteUbergraph_UI_Chat_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_Chat_C_ExecuteUbergraph_UI_Chat_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

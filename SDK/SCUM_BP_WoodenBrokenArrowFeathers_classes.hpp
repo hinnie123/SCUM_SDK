@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WoodenBrokenArrowFeathers.BP_WoodenBrokenArrowFeathers_C
-// 0x0000 (0x0778 - 0x0778)
+// 0x0000 (0x0818 - 0x0818)
 class ABP_WoodenBrokenArrowFeathers_C : public ABrokenArrow
 {
 public:

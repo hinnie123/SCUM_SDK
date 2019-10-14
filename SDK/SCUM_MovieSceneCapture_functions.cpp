@@ -21,16 +21,16 @@ int UMovieSceneCaptureEnvironment::STATIC_GetCaptureFrameNumber()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureFrameNumber");
 
-	UMovieSceneCaptureEnvironment_GetCaptureFrameNumber_Params params;
+	UMovieSceneCaptureEnvironment_GetCaptureFrameNumber_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -43,16 +43,16 @@ float UMovieSceneCaptureEnvironment::STATIC_GetCaptureElapsedTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureElapsedTime");
 
-	UMovieSceneCaptureEnvironment_GetCaptureElapsedTime_Params params;
+	UMovieSceneCaptureEnvironment_GetCaptureElapsedTime_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

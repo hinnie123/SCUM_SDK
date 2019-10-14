@@ -21,16 +21,16 @@ void UUI_CircularParameter_C::GetPercentageSecond(float* percentageSecond)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CircularParameter.UI_CircularParameter_C.GetPercentageSecond");
 
-	UUI_CircularParameter_C_GetPercentageSecond_Params params;
+	UUI_CircularParameter_C_GetPercentageSecond_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (percentageSecond != nullptr)
-		*percentageSecond = params.percentageSecond;
+		*percentageSecond = fn_params.percentageSecond;
 }
 
 
@@ -41,11 +41,11 @@ void UUI_CircularParameter_C::DisableAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CircularParameter.UI_CircularParameter_C.DisableAlarm");
 
-	UUI_CircularParameter_C_DisableAlarm_Params params;
+	UUI_CircularParameter_C_DisableAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -60,12 +60,12 @@ void UUI_CircularParameter_C::EnableAlarm(bool above)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CircularParameter.UI_CircularParameter_C.EnableAlarm");
 
-	UUI_CircularParameter_C_EnableAlarm_Params params;
-	params.above = above;
+	UUI_CircularParameter_C_EnableAlarm_Params fn_params;
+	fn_params.above = above;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -78,11 +78,11 @@ void UUI_CircularParameter_C::CheckAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CircularParameter.UI_CircularParameter_C.CheckAlarm");
 
-	UUI_CircularParameter_C_CheckAlarm_Params params;
+	UUI_CircularParameter_C_CheckAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -97,12 +97,12 @@ void UUI_CircularParameter_C::SetDescriptionText(const struct FText& Description
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CircularParameter.UI_CircularParameter_C.SetDescriptionText");
 
-	UUI_CircularParameter_C_SetDescriptionText_Params params;
-	params.Description = Description;
+	UUI_CircularParameter_C_SetDescriptionText_Params fn_params;
+	fn_params.Description = Description;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -117,12 +117,12 @@ void UUI_CircularParameter_C::SetMeasurementUnit(const struct FText& unit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CircularParameter.UI_CircularParameter_C.SetMeasurementUnit");
 
-	UUI_CircularParameter_C_SetMeasurementUnit_Params params;
-	params.unit = unit;
+	UUI_CircularParameter_C_SetMeasurementUnit_Params fn_params;
+	fn_params.unit = unit;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -137,15 +137,15 @@ float UUI_CircularParameter_C::GetMaxValue()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CircularParameter.UI_CircularParameter_C.GetMaxValue");
 
-	UUI_CircularParameter_C_GetMaxValue_Params params;
+	UUI_CircularParameter_C_GetMaxValue_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -158,15 +158,15 @@ float UUI_CircularParameter_C::GetCurrentValue()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CircularParameter.UI_CircularParameter_C.GetCurrentValue");
 
-	UUI_CircularParameter_C_GetCurrentValue_Params params;
+	UUI_CircularParameter_C_GetCurrentValue_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -179,15 +179,15 @@ float UUI_CircularParameter_C::GetPercentage()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CircularParameter.UI_CircularParameter_C.GetPercentage");
 
-	UUI_CircularParameter_C_GetPercentage_Params params;
+	UUI_CircularParameter_C_GetPercentage_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -201,13 +201,13 @@ void UUI_CircularParameter_C::Tick(struct FGeometry* MyGeometry, float* InDeltaT
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CircularParameter.UI_CircularParameter_C.Tick");
 
-	UUI_CircularParameter_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UUI_CircularParameter_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -220,11 +220,11 @@ void UUI_CircularParameter_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CircularParameter.UI_CircularParameter_C.Construct");
 
-	UUI_CircularParameter_C_Construct_Params params;
+	UUI_CircularParameter_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -239,12 +239,12 @@ void UUI_CircularParameter_C::SetMaxValue(float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CircularParameter.UI_CircularParameter_C.SetMaxValue");
 
-	UUI_CircularParameter_C_SetMaxValue_Params params;
-	params.Value = Value;
+	UUI_CircularParameter_C_SetMaxValue_Params fn_params;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -259,12 +259,12 @@ void UUI_CircularParameter_C::SetCurrentValue(float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CircularParameter.UI_CircularParameter_C.SetCurrentValue");
 
-	UUI_CircularParameter_C_SetCurrentValue_Params params;
-	params.Value = Value;
+	UUI_CircularParameter_C_SetCurrentValue_Params fn_params;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -280,13 +280,13 @@ void UUI_CircularParameter_C::OnMouseEnter(struct FGeometry* MyGeometry, struct 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CircularParameter.UI_CircularParameter_C.OnMouseEnter");
 
-	UUI_CircularParameter_C_OnMouseEnter_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_CircularParameter_C_OnMouseEnter_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -299,11 +299,11 @@ void UUI_CircularParameter_C::OnSynchronizeProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CircularParameter.UI_CircularParameter_C.OnSynchronizeProperties");
 
-	UUI_CircularParameter_C_OnSynchronizeProperties_Params params;
+	UUI_CircularParameter_C_OnSynchronizeProperties_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -318,12 +318,12 @@ void UUI_CircularParameter_C::OnMouseLeave(struct FPointerEvent* MouseEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CircularParameter.UI_CircularParameter_C.OnMouseLeave");
 
-	UUI_CircularParameter_C_OnMouseLeave_Params params;
-	params.MouseEvent = MouseEvent;
+	UUI_CircularParameter_C_OnMouseLeave_Params fn_params;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -338,12 +338,12 @@ void UUI_CircularParameter_C::SetCurrentValueSecond(float Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CircularParameter.UI_CircularParameter_C.SetCurrentValueSecond");
 
-	UUI_CircularParameter_C_SetCurrentValueSecond_Params params;
-	params.Value = Value;
+	UUI_CircularParameter_C_SetCurrentValueSecond_Params fn_params;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -358,12 +358,12 @@ void UUI_CircularParameter_C::ExecuteUbergraph_UI_CircularParameter(int EntryPoi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CircularParameter.UI_CircularParameter_C.ExecuteUbergraph_UI_CircularParameter");
 
-	UUI_CircularParameter_C_ExecuteUbergraph_UI_CircularParameter_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_CircularParameter_C_ExecuteUbergraph_UI_CircularParameter_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

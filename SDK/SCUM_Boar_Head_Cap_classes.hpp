@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Boar_Head_Cap.Boar_Head_Cap_C
-// 0x0000 (0x0818 - 0x0818)
+// 0x0000 (0x08D0 - 0x08D0)
 class ABoar_Head_Cap_C : public AClothesItem
 {
 public:

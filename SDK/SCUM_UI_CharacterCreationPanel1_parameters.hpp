@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.ApplyPrisonerShirt
+struct UUI_CharacterCreationPanel1_C_ApplyPrisonerShirt_Params
+{
+};
+
 // Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.GetBustSize
 struct UUI_CharacterCreationPanel1_C_GetBustSize_Params
 {
@@ -215,7 +220,7 @@ struct UUI_CharacterCreationPanel1_C_Construct_Params
 struct UUI_CharacterCreationPanel1_C_BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_50_OnIndexChanged__DelegateSignature_Params
 {
 	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              LeftoverPercentage;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              leftoverPercentage;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__UI_LeanFatMuscleTriangle_K2Node_ComponentBoundEvent_5_AttributesChanged__DelegateSignature
@@ -228,21 +233,21 @@ struct UUI_CharacterCreationPanel1_C_BndEvt__UI_LeanFatMuscleTriangle_K2Node_Com
 struct UUI_CharacterCreationPanel1_C_BndEvt__TattooSlider_K2Node_ComponentBoundEvent_152_OnIndexChanged__DelegateSignature_Params
 {
 	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              LeftoverPercentage;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              leftoverPercentage;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__HeadSlider_K2Node_ComponentBoundEvent_153_OnIndexChanged__DelegateSignature
 struct UUI_CharacterCreationPanel1_C_BndEvt__HeadSlider_K2Node_ComponentBoundEvent_153_OnIndexChanged__DelegateSignature_Params
 {
 	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              LeftoverPercentage;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              leftoverPercentage;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__UI_CC_ProgressBar_C_0_K2Node_ComponentBoundEvent_242_OnIndexChanged__DelegateSignature
 struct UUI_CharacterCreationPanel1_C_BndEvt__UI_CC_ProgressBar_C_0_K2Node_ComponentBoundEvent_242_OnIndexChanged__DelegateSignature_Params
 {
 	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              LeftoverPercentage;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              leftoverPercentage;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__AttributeModifierStrength_K2Node_ComponentBoundEvent_36_OnIncrease__DelegateSignature
@@ -388,28 +393,28 @@ struct UUI_CharacterCreationPanel1_C_Keep_Server_Connection_Alive_Params
 struct UUI_CharacterCreationPanel1_C_BndEvt__PenisSizeSlider_K2Node_ComponentBoundEvent_0_OnIndexChanged__DelegateSignature_Params
 {
 	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              LeftoverPercentage;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              leftoverPercentage;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__ConcealedModeSlider_K2Node_ComponentBoundEvent_1_OnIndexChanged__DelegateSignature
 struct UUI_CharacterCreationPanel1_C_BndEvt__ConcealedModeSlider_K2Node_ComponentBoundEvent_1_OnIndexChanged__DelegateSignature_Params
 {
 	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              LeftoverPercentage;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              leftoverPercentage;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__UI_CC_ProgressBar_0_K2Node_ComponentBoundEvent_2_OnIndexChanged__DelegateSignature
 struct UUI_CharacterCreationPanel1_C_BndEvt__UI_CC_ProgressBar_0_K2Node_ComponentBoundEvent_2_OnIndexChanged__DelegateSignature_Params
 {
 	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              LeftoverPercentage;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              leftoverPercentage;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__BreastSizeSlider_K2Node_ComponentBoundEvent_3_OnIndexChanged__DelegateSignature
 struct UUI_CharacterCreationPanel1_C_BndEvt__BreastSizeSlider_K2Node_ComponentBoundEvent_3_OnIndexChanged__DelegateSignature_Params
 {
 	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              LeftoverPercentage;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              leftoverPercentage;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.ExecuteUbergraph_UI_CharacterCreationPanel1

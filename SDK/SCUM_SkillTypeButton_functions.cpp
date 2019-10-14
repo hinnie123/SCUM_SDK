@@ -19,11 +19,11 @@ void USkillTypeButton_C::DeactivateAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillTypeButton.SkillTypeButton_C.DeactivateAlarm");
 
-	USkillTypeButton_C_DeactivateAlarm_Params params;
+	USkillTypeButton_C_DeactivateAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void USkillTypeButton_C::ActivateAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillTypeButton.SkillTypeButton_C.ActivateAlarm");
 
-	USkillTypeButton_C_ActivateAlarm_Params params;
+	USkillTypeButton_C_ActivateAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -53,11 +53,11 @@ void USkillTypeButton_C::OnSelectionAdjustSizePositionAndPadding()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillTypeButton.SkillTypeButton_C.OnSelectionAdjustSizePositionAndPadding");
 
-	USkillTypeButton_C_OnSelectionAdjustSizePositionAndPadding_Params params;
+	USkillTypeButton_C_OnSelectionAdjustSizePositionAndPadding_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -70,11 +70,11 @@ void USkillTypeButton_C::SetTextPadding()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillTypeButton.SkillTypeButton_C.SetTextPadding");
 
-	USkillTypeButton_C_SetTextPadding_Params params;
+	USkillTypeButton_C_SetTextPadding_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -87,11 +87,11 @@ void USkillTypeButton_C::ResetTextPadding()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillTypeButton.SkillTypeButton_C.ResetTextPadding");
 
-	USkillTypeButton_C_ResetTextPadding_Params params;
+	USkillTypeButton_C_ResetTextPadding_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -107,13 +107,13 @@ void USkillTypeButton_C::SetButtonOverlaySizeAndPosition(const struct FVector2D&
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillTypeButton.SkillTypeButton_C.SetButtonOverlaySizeAndPosition");
 
-	USkillTypeButton_C_SetButtonOverlaySizeAndPosition_Params params;
-	params.InPosition = InPosition;
-	params.InSize = InSize;
+	USkillTypeButton_C_SetButtonOverlaySizeAndPosition_Params fn_params;
+	fn_params.InPosition = InPosition;
+	fn_params.InSize = InSize;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -126,11 +126,11 @@ void USkillTypeButton_C::ResetButtonOverlaySizeAndPosition()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillTypeButton.SkillTypeButton_C.ResetButtonOverlaySizeAndPosition");
 
-	USkillTypeButton_C_ResetButtonOverlaySizeAndPosition_Params params;
+	USkillTypeButton_C_ResetButtonOverlaySizeAndPosition_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -145,12 +145,12 @@ void USkillTypeButton_C::SetSizeX(float SizeX)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillTypeButton.SkillTypeButton_C.SetSizeX");
 
-	USkillTypeButton_C_SetSizeX_Params params;
-	params.SizeX = SizeX;
+	USkillTypeButton_C_SetSizeX_Params fn_params;
+	fn_params.SizeX = SizeX;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -165,16 +165,16 @@ void USkillTypeButton_C::GetBorderSizeX(float* borderSizeX)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillTypeButton.SkillTypeButton_C.GetBorderSizeX");
 
-	USkillTypeButton_C_GetBorderSizeX_Params params;
+	USkillTypeButton_C_GetBorderSizeX_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (borderSizeX != nullptr)
-		*borderSizeX = params.borderSizeX;
+		*borderSizeX = fn_params.borderSizeX;
 }
 
 
@@ -187,12 +187,12 @@ void USkillTypeButton_C::IncreaseSizeX(float sizeChangeX)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillTypeButton.SkillTypeButton_C.IncreaseSizeX");
 
-	USkillTypeButton_C_IncreaseSizeX_Params params;
-	params.sizeChangeX = sizeChangeX;
+	USkillTypeButton_C_IncreaseSizeX_Params fn_params;
+	fn_params.sizeChangeX = sizeChangeX;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -207,12 +207,12 @@ void USkillTypeButton_C::SetOffset(float offsetX)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillTypeButton.SkillTypeButton_C.SetOffset");
 
-	USkillTypeButton_C_SetOffset_Params params;
-	params.offsetX = offsetX;
+	USkillTypeButton_C_SetOffset_Params fn_params;
+	fn_params.offsetX = offsetX;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -227,12 +227,12 @@ void USkillTypeButton_C::SetSkillTypeLevel(float SkillTypeLevel)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillTypeButton.SkillTypeButton_C.SetSkillTypeLevel");
 
-	USkillTypeButton_C_SetSkillTypeLevel_Params params;
-	params.SkillTypeLevel = SkillTypeLevel;
+	USkillTypeButton_C_SetSkillTypeLevel_Params fn_params;
+	fn_params.SkillTypeLevel = SkillTypeLevel;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -245,11 +245,11 @@ void USkillTypeButton_C::ShowBorder()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillTypeButton.SkillTypeButton_C.ShowBorder");
 
-	USkillTypeButton_C_ShowBorder_Params params;
+	USkillTypeButton_C_ShowBorder_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -262,11 +262,11 @@ void USkillTypeButton_C::HideBorder()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillTypeButton.SkillTypeButton_C.HideBorder");
 
-	USkillTypeButton_C_HideBorder_Params params;
+	USkillTypeButton_C_HideBorder_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -279,11 +279,11 @@ void USkillTypeButton_C::BndEvt__Button_1_K2Node_ComponentBoundEvent_137_OnButto
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillTypeButton.SkillTypeButton_C.BndEvt__Button_1_K2Node_ComponentBoundEvent_137_OnButtonReleasedEvent__DelegateSignature");
 
-	USkillTypeButton_C_BndEvt__Button_1_K2Node_ComponentBoundEvent_137_OnButtonReleasedEvent__DelegateSignature_Params params;
+	USkillTypeButton_C_BndEvt__Button_1_K2Node_ComponentBoundEvent_137_OnButtonReleasedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -296,11 +296,11 @@ void USkillTypeButton_C::BndEvt__SkillButton_K2Node_ComponentBoundEvent_392_OnBu
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillTypeButton.SkillTypeButton_C.BndEvt__SkillButton_K2Node_ComponentBoundEvent_392_OnButtonClickedEvent__DelegateSignature");
 
-	USkillTypeButton_C_BndEvt__SkillButton_K2Node_ComponentBoundEvent_392_OnButtonClickedEvent__DelegateSignature_Params params;
+	USkillTypeButton_C_BndEvt__SkillButton_K2Node_ComponentBoundEvent_392_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -313,11 +313,11 @@ void USkillTypeButton_C::BndEvt__SkillButton_K2Node_ComponentBoundEvent_75_OnBut
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillTypeButton.SkillTypeButton_C.BndEvt__SkillButton_K2Node_ComponentBoundEvent_75_OnButtonPressedEvent__DelegateSignature");
 
-	USkillTypeButton_C_BndEvt__SkillButton_K2Node_ComponentBoundEvent_75_OnButtonPressedEvent__DelegateSignature_Params params;
+	USkillTypeButton_C_BndEvt__SkillButton_K2Node_ComponentBoundEvent_75_OnButtonPressedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -332,12 +332,12 @@ void USkillTypeButton_C::ExecuteUbergraph_SkillTypeButton(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillTypeButton.SkillTypeButton_C.ExecuteUbergraph_SkillTypeButton");
 
-	USkillTypeButton_C_ExecuteUbergraph_SkillTypeButton_Params params;
-	params.EntryPoint = EntryPoint;
+	USkillTypeButton_C_ExecuteUbergraph_SkillTypeButton_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -350,11 +350,11 @@ void USkillTypeButton_C::OnClickedSkillTypeButton__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillTypeButton.SkillTypeButton_C.OnClickedSkillTypeButton__DelegateSignature");
 
-	USkillTypeButton_C_OnClickedSkillTypeButton__DelegateSignature_Params params;
+	USkillTypeButton_C_OnClickedSkillTypeButton__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

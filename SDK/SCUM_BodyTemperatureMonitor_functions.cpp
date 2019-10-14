@@ -21,12 +21,12 @@ void UBodyTemperatureMonitor_C::AlarmControl(int alarmCode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyTemperatureMonitor.BodyTemperatureMonitor_C.AlarmControl");
 
-	UBodyTemperatureMonitor_C_AlarmControl_Params params;
-	params.alarmCode = alarmCode;
+	UBodyTemperatureMonitor_C_AlarmControl_Params fn_params;
+	fn_params.alarmCode = alarmCode;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -39,11 +39,11 @@ void UBodyTemperatureMonitor_C::DeactivateAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyTemperatureMonitor.BodyTemperatureMonitor_C.DeactivateAlarm");
 
-	UBodyTemperatureMonitor_C_DeactivateAlarm_Params params;
+	UBodyTemperatureMonitor_C_DeactivateAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -56,11 +56,11 @@ void UBodyTemperatureMonitor_C::ActivateAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyTemperatureMonitor.BodyTemperatureMonitor_C.ActivateAlarm");
 
-	UBodyTemperatureMonitor_C_ActivateAlarm_Params params;
+	UBodyTemperatureMonitor_C_ActivateAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -76,17 +76,17 @@ void UBodyTemperatureMonitor_C::CheckBodyTemperatureAlarm(float bodyTemperature,
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyTemperatureMonitor.BodyTemperatureMonitor_C.CheckBodyTemperatureAlarm");
 
-	UBodyTemperatureMonitor_C_CheckBodyTemperatureAlarm_Params params;
-	params.bodyTemperature = bodyTemperature;
+	UBodyTemperatureMonitor_C_CheckBodyTemperatureAlarm_Params fn_params;
+	fn_params.bodyTemperature = bodyTemperature;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (alarmCode != nullptr)
-		*alarmCode = params.alarmCode;
+		*alarmCode = fn_params.alarmCode;
 }
 
 
@@ -100,17 +100,17 @@ void UBodyTemperatureMonitor_C::SetPrisonerAndLifeComponentToMonitor(class APris
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyTemperatureMonitor.BodyTemperatureMonitor_C.SetPrisonerAndLifeComponentToMonitor");
 
-	UBodyTemperatureMonitor_C_SetPrisonerAndLifeComponentToMonitor_Params params;
-	params.Prisoner = Prisoner;
+	UBodyTemperatureMonitor_C_SetPrisonerAndLifeComponentToMonitor_Params fn_params;
+	fn_params.Prisoner = Prisoner;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Success != nullptr)
-		*Success = params.Success;
+		*Success = fn_params.Success;
 }
 
 
@@ -123,16 +123,16 @@ void UBodyTemperatureMonitor_C::ProvideTemperatureExtremes(struct FText* minTemp
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyTemperatureMonitor.BodyTemperatureMonitor_C.ProvideTemperatureExtremes");
 
-	UBodyTemperatureMonitor_C_ProvideTemperatureExtremes_Params params;
+	UBodyTemperatureMonitor_C_ProvideTemperatureExtremes_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (minTemp_MaxTemp != nullptr)
-		*minTemp_MaxTemp = params.minTemp_MaxTemp;
+		*minTemp_MaxTemp = fn_params.minTemp_MaxTemp;
 }
 
 
@@ -145,15 +145,15 @@ struct FText UBodyTemperatureMonitor_C::GetHeartRateBPM()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyTemperatureMonitor.BodyTemperatureMonitor_C.GetHeartRateBPM");
 
-	UBodyTemperatureMonitor_C_GetHeartRateBPM_Params params;
+	UBodyTemperatureMonitor_C_GetHeartRateBPM_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -167,13 +167,13 @@ void UBodyTemperatureMonitor_C::Tick(struct FGeometry* MyGeometry, float* InDelt
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyTemperatureMonitor.BodyTemperatureMonitor_C.Tick");
 
-	UBodyTemperatureMonitor_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UBodyTemperatureMonitor_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -186,11 +186,11 @@ void UBodyTemperatureMonitor_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyTemperatureMonitor.BodyTemperatureMonitor_C.Construct");
 
-	UBodyTemperatureMonitor_C_Construct_Params params;
+	UBodyTemperatureMonitor_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -205,12 +205,12 @@ void UBodyTemperatureMonitor_C::ExecuteUbergraph_BodyTemperatureMonitor(int Entr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyTemperatureMonitor.BodyTemperatureMonitor_C.ExecuteUbergraph_BodyTemperatureMonitor");
 
-	UBodyTemperatureMonitor_C_ExecuteUbergraph_BodyTemperatureMonitor_Params params;
-	params.EntryPoint = EntryPoint;
+	UBodyTemperatureMonitor_C_ExecuteUbergraph_BodyTemperatureMonitor_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

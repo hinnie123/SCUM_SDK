@@ -19,11 +19,11 @@ void UUI_SelectionContainer_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SelectionContainer.UI_SelectionContainer_C.Construct");
 
-	UUI_SelectionContainer_C_Construct_Params params;
+	UUI_SelectionContainer_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -39,13 +39,13 @@ void UUI_SelectionContainer_C::OnHeaderDoubleClicked(const struct FGeometry& Geo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SelectionContainer.UI_SelectionContainer_C.OnHeaderDoubleClicked");
 
-	UUI_SelectionContainer_C_OnHeaderDoubleClicked_Params params;
-	params.Geometry = Geometry;
-	params.MouseEvent = MouseEvent;
+	UUI_SelectionContainer_C_OnHeaderDoubleClicked_Params fn_params;
+	fn_params.Geometry = Geometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -58,11 +58,11 @@ void UUI_SelectionContainer_C::BndEvt__MinimizeFullButton_K2Node_ComponentBoundE
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SelectionContainer.UI_SelectionContainer_C.BndEvt__MinimizeFullButton_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_SelectionContainer_C_BndEvt__MinimizeFullButton_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_SelectionContainer_C_BndEvt__MinimizeFullButton_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -75,11 +75,11 @@ void UUI_SelectionContainer_C::BndEvt__CloseButton_K2Node_ComponentBoundEvent_38
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SelectionContainer.UI_SelectionContainer_C.BndEvt__CloseButton_K2Node_ComponentBoundEvent_38_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_SelectionContainer_C_BndEvt__CloseButton_K2Node_ComponentBoundEvent_38_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_SelectionContainer_C_BndEvt__CloseButton_K2Node_ComponentBoundEvent_38_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -94,12 +94,12 @@ void UUI_SelectionContainer_C::ExecuteUbergraph_UI_SelectionContainer(int EntryP
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SelectionContainer.UI_SelectionContainer_C.ExecuteUbergraph_UI_SelectionContainer");
 
-	UUI_SelectionContainer_C_ExecuteUbergraph_UI_SelectionContainer_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_SelectionContainer_C_ExecuteUbergraph_UI_SelectionContainer_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

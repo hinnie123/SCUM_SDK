@@ -21,12 +21,12 @@ void UUI_CraftingInfoSecondIteration_C::Init(class AItem** itemCDO)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingInfoSecondIteration.UI_CraftingInfoSecondIteration_C.Init");
 
-	UUI_CraftingInfoSecondIteration_C_Init_Params params;
-	params.itemCDO = itemCDO;
+	UUI_CraftingInfoSecondIteration_C_Init_Params fn_params;
+	fn_params.itemCDO = itemCDO;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -42,13 +42,13 @@ void UUI_CraftingInfoSecondIteration_C::SetCaptionAndDescription(struct FText* C
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingInfoSecondIteration.UI_CraftingInfoSecondIteration_C.SetCaptionAndDescription");
 
-	UUI_CraftingInfoSecondIteration_C_SetCaptionAndDescription_Params params;
-	params.Caption = Caption;
-	params.Description = Description;
+	UUI_CraftingInfoSecondIteration_C_SetCaptionAndDescription_Params fn_params;
+	fn_params.Caption = Caption;
+	fn_params.Description = Description;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -63,12 +63,12 @@ void UUI_CraftingInfoSecondIteration_C::ExecuteUbergraph_UI_CraftingInfoSecondIt
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingInfoSecondIteration.UI_CraftingInfoSecondIteration_C.ExecuteUbergraph_UI_CraftingInfoSecondIteration");
 
-	UUI_CraftingInfoSecondIteration_C_ExecuteUbergraph_UI_CraftingInfoSecondIteration_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_CraftingInfoSecondIteration_C_ExecuteUbergraph_UI_CraftingInfoSecondIteration_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

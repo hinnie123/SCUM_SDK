@@ -13,11 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Deagle_51.BP_DEagle_50_C
-// 0x0008 (0x1168 - 0x1160)
+// 0x0010 (0x12B0 - 0x12A0)
 class ABP_DEagle_50_C : public AWeapon
 {
 public:
-	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule;                              // 0x1160(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x12A0(0x0008) (Transient, DuplicateTransient)
+	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule;                              // 0x12A8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -26,7 +27,10 @@ public:
 	}
 
 
+	bool CanSwitchFiringMode();
 	void UserConstructionScript();
+	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BP_DEagle_51(int EntryPoint);
 };
 
 

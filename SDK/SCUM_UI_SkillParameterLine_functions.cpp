@@ -19,11 +19,11 @@ void UUI_SkillParameterLine_C::Update()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SkillParameterLine.UI_SkillParameterLine_C.Update");
 
-	UUI_SkillParameterLine_C_Update_Params params;
+	UUI_SkillParameterLine_C_Update_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

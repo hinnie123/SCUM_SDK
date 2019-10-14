@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MRE_Cheeseburger.MRE_Cheeseburger_C
-// 0x0000 (0x08C0 - 0x08C0)
+// 0x0000 (0x0958 - 0x0958)
 class AMRE_Cheeseburger_C : public AFoodItem
 {
 public:

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Aspirin.Aspirin_C
-// 0x0000 (0x0780 - 0x0780)
+// 0x0000 (0x0820 - 0x0820)
 class AAspirin_C : public AMedicationItem
 {
 public:

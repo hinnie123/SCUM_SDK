@@ -21,12 +21,12 @@ void UUI_GameEventInfoWidget_C::UpdateStats(class AGameEventBase** _gameEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventInfoWidget.UI_GameEventInfoWidget_C.UpdateStats");
 
-	UUI_GameEventInfoWidget_C_UpdateStats_Params params;
-	params._gameEvent = _gameEvent;
+	UUI_GameEventInfoWidget_C_UpdateStats_Params fn_params;
+	fn_params._gameEvent = _gameEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -41,12 +41,12 @@ void UUI_GameEventInfoWidget_C::ExecuteUbergraph_UI_GameEventInfoWidget(int Entr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventInfoWidget.UI_GameEventInfoWidget_C.ExecuteUbergraph_UI_GameEventInfoWidget");
 
-	UUI_GameEventInfoWidget_C_ExecuteUbergraph_UI_GameEventInfoWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_GameEventInfoWidget_C_ExecuteUbergraph_UI_GameEventInfoWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BinocularsTest.BP_BinocularsTest_C
-// 0x0000 (0x07D8 - 0x07D8)
+// 0x0000 (0x0878 - 0x0878)
 class ABP_BinocularsTest_C : public ABinocularsItem
 {
 public:

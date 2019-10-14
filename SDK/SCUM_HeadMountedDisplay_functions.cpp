@@ -22,14 +22,14 @@ void UHeadMountedDisplayFunctionLibrary::STATIC_SetWorldToMetersScale(class UObj
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetWorldToMetersScale");
 
-	UHeadMountedDisplayFunctionLibrary_SetWorldToMetersScale_Params params;
-	params.WorldContext = WorldContext;
-	params.NewScale = NewScale;
+	UHeadMountedDisplayFunctionLibrary_SetWorldToMetersScale_Params fn_params;
+	fn_params.WorldContext = WorldContext;
+	fn_params.NewScale = NewScale;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -44,13 +44,13 @@ void UHeadMountedDisplayFunctionLibrary::STATIC_SetTrackingOrigin(TEnumAsByte<EH
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetTrackingOrigin");
 
-	UHeadMountedDisplayFunctionLibrary_SetTrackingOrigin_Params params;
-	params.Origin = Origin;
+	UHeadMountedDisplayFunctionLibrary_SetTrackingOrigin_Params fn_params;
+	fn_params.Origin = Origin;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -65,13 +65,13 @@ void UHeadMountedDisplayFunctionLibrary::STATIC_SetSpectatorScreenTexture(class 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetSpectatorScreenTexture");
 
-	UHeadMountedDisplayFunctionLibrary_SetSpectatorScreenTexture_Params params;
-	params.InTexture = InTexture;
+	UHeadMountedDisplayFunctionLibrary_SetSpectatorScreenTexture_Params fn_params;
+	fn_params.InTexture = InTexture;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -91,18 +91,18 @@ void UHeadMountedDisplayFunctionLibrary::STATIC_SetSpectatorScreenModeTexturePlu
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetSpectatorScreenModeTexturePlusEyeLayout");
 
-	UHeadMountedDisplayFunctionLibrary_SetSpectatorScreenModeTexturePlusEyeLayout_Params params;
-	params.EyeRectMin = EyeRectMin;
-	params.EyeRectMax = EyeRectMax;
-	params.TextureRectMin = TextureRectMin;
-	params.TextureRectMax = TextureRectMax;
-	params.bDrawEyeFirst = bDrawEyeFirst;
-	params.bClearBlack = bClearBlack;
+	UHeadMountedDisplayFunctionLibrary_SetSpectatorScreenModeTexturePlusEyeLayout_Params fn_params;
+	fn_params.EyeRectMin = EyeRectMin;
+	fn_params.EyeRectMax = EyeRectMax;
+	fn_params.TextureRectMin = TextureRectMin;
+	fn_params.TextureRectMax = TextureRectMax;
+	fn_params.bDrawEyeFirst = bDrawEyeFirst;
+	fn_params.bClearBlack = bClearBlack;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -117,13 +117,13 @@ void UHeadMountedDisplayFunctionLibrary::STATIC_SetSpectatorScreenMode(ESpectato
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetSpectatorScreenMode");
 
-	UHeadMountedDisplayFunctionLibrary_SetSpectatorScreenMode_Params params;
-	params.Mode = Mode;
+	UHeadMountedDisplayFunctionLibrary_SetSpectatorScreenMode_Params fn_params;
+	fn_params.Mode = Mode;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -139,14 +139,14 @@ void UHeadMountedDisplayFunctionLibrary::STATIC_SetClippingPlanes(float Near, fl
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetClippingPlanes");
 
-	UHeadMountedDisplayFunctionLibrary_SetClippingPlanes_Params params;
-	params.Near = Near;
-	params.Far = Far;
+	UHeadMountedDisplayFunctionLibrary_SetClippingPlanes_Params fn_params;
+	fn_params.Near = Near;
+	fn_params.Far = Far;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -162,14 +162,14 @@ void UHeadMountedDisplayFunctionLibrary::STATIC_ResetOrientationAndPosition(floa
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.ResetOrientationAndPosition");
 
-	UHeadMountedDisplayFunctionLibrary_ResetOrientationAndPosition_Params params;
-	params.Yaw = Yaw;
-	params.Options = Options;
+	UHeadMountedDisplayFunctionLibrary_ResetOrientationAndPosition_Params fn_params;
+	fn_params.Yaw = Yaw;
+	fn_params.Options = Options;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -184,16 +184,16 @@ bool UHeadMountedDisplayFunctionLibrary::STATIC_IsSpectatorScreenModeControllabl
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsSpectatorScreenModeControllable");
 
-	UHeadMountedDisplayFunctionLibrary_IsSpectatorScreenModeControllable_Params params;
+	UHeadMountedDisplayFunctionLibrary_IsSpectatorScreenModeControllable_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -206,16 +206,16 @@ bool UHeadMountedDisplayFunctionLibrary::STATIC_IsInLowPersistenceMode()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsInLowPersistenceMode");
 
-	UHeadMountedDisplayFunctionLibrary_IsInLowPersistenceMode_Params params;
+	UHeadMountedDisplayFunctionLibrary_IsInLowPersistenceMode_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -228,16 +228,16 @@ bool UHeadMountedDisplayFunctionLibrary::STATIC_IsHeadMountedDisplayEnabled()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsHeadMountedDisplayEnabled");
 
-	UHeadMountedDisplayFunctionLibrary_IsHeadMountedDisplayEnabled_Params params;
+	UHeadMountedDisplayFunctionLibrary_IsHeadMountedDisplayEnabled_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -250,16 +250,16 @@ bool UHeadMountedDisplayFunctionLibrary::STATIC_IsHeadMountedDisplayConnected()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsHeadMountedDisplayConnected");
 
-	UHeadMountedDisplayFunctionLibrary_IsHeadMountedDisplayConnected_Params params;
+	UHeadMountedDisplayFunctionLibrary_IsHeadMountedDisplayConnected_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -273,17 +273,17 @@ bool UHeadMountedDisplayFunctionLibrary::STATIC_IsDeviceTracking(const struct FX
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsDeviceTracking");
 
-	UHeadMountedDisplayFunctionLibrary_IsDeviceTracking_Params params;
-	params.XRDeviceId = XRDeviceId;
+	UHeadMountedDisplayFunctionLibrary_IsDeviceTracking_Params fn_params;
+	fn_params.XRDeviceId = XRDeviceId;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -296,16 +296,16 @@ bool UHeadMountedDisplayFunctionLibrary::STATIC_HasValidTrackingPosition()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.HasValidTrackingPosition");
 
-	UHeadMountedDisplayFunctionLibrary_HasValidTrackingPosition_Params params;
+	UHeadMountedDisplayFunctionLibrary_HasValidTrackingPosition_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -319,17 +319,17 @@ float UHeadMountedDisplayFunctionLibrary::STATIC_GetWorldToMetersScale(class UOb
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetWorldToMetersScale");
 
-	UHeadMountedDisplayFunctionLibrary_GetWorldToMetersScale_Params params;
-	params.WorldContext = WorldContext;
+	UHeadMountedDisplayFunctionLibrary_GetWorldToMetersScale_Params fn_params;
+	fn_params.WorldContext = WorldContext;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -343,19 +343,19 @@ void UHeadMountedDisplayFunctionLibrary::STATIC_GetVRFocusState(bool* bUseFocus,
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetVRFocusState");
 
-	UHeadMountedDisplayFunctionLibrary_GetVRFocusState_Params params;
+	UHeadMountedDisplayFunctionLibrary_GetVRFocusState_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (bUseFocus != nullptr)
-		*bUseFocus = params.bUseFocus;
+		*bUseFocus = fn_params.bUseFocus;
 	if (bHasFocus != nullptr)
-		*bHasFocus = params.bHasFocus;
+		*bHasFocus = fn_params.bHasFocus;
 }
 
 
@@ -369,17 +369,17 @@ struct FTransform UHeadMountedDisplayFunctionLibrary::STATIC_GetTrackingToWorldT
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetTrackingToWorldTransform");
 
-	UHeadMountedDisplayFunctionLibrary_GetTrackingToWorldTransform_Params params;
-	params.WorldContext = WorldContext;
+	UHeadMountedDisplayFunctionLibrary_GetTrackingToWorldTransform_Params fn_params;
+	fn_params.WorldContext = WorldContext;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -402,36 +402,36 @@ void UHeadMountedDisplayFunctionLibrary::STATIC_GetTrackingSensorParameters(int 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetTrackingSensorParameters");
 
-	UHeadMountedDisplayFunctionLibrary_GetTrackingSensorParameters_Params params;
-	params.Index = Index;
+	UHeadMountedDisplayFunctionLibrary_GetTrackingSensorParameters_Params fn_params;
+	fn_params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Origin != nullptr)
-		*Origin = params.Origin;
+		*Origin = fn_params.Origin;
 	if (Rotation != nullptr)
-		*Rotation = params.Rotation;
+		*Rotation = fn_params.Rotation;
 	if (LeftFOV != nullptr)
-		*LeftFOV = params.LeftFOV;
+		*LeftFOV = fn_params.LeftFOV;
 	if (RightFOV != nullptr)
-		*RightFOV = params.RightFOV;
+		*RightFOV = fn_params.RightFOV;
 	if (TopFOV != nullptr)
-		*TopFOV = params.TopFOV;
+		*TopFOV = fn_params.TopFOV;
 	if (BottomFOV != nullptr)
-		*BottomFOV = params.BottomFOV;
+		*BottomFOV = fn_params.BottomFOV;
 	if (Distance != nullptr)
-		*Distance = params.Distance;
+		*Distance = fn_params.Distance;
 	if (NearPlane != nullptr)
-		*NearPlane = params.NearPlane;
+		*NearPlane = fn_params.NearPlane;
 	if (FarPlane != nullptr)
-		*FarPlane = params.FarPlane;
+		*FarPlane = fn_params.FarPlane;
 	if (IsActive != nullptr)
-		*IsActive = params.IsActive;
+		*IsActive = fn_params.IsActive;
 }
 
 
@@ -444,16 +444,16 @@ TEnumAsByte<EHMDTrackingOrigin> UHeadMountedDisplayFunctionLibrary::STATIC_GetTr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetTrackingOrigin");
 
-	UHeadMountedDisplayFunctionLibrary_GetTrackingOrigin_Params params;
+	UHeadMountedDisplayFunctionLibrary_GetTrackingOrigin_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -466,16 +466,16 @@ float UHeadMountedDisplayFunctionLibrary::STATIC_GetScreenPercentage()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetScreenPercentage");
 
-	UHeadMountedDisplayFunctionLibrary_GetScreenPercentage_Params params;
+	UHeadMountedDisplayFunctionLibrary_GetScreenPercentage_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -494,29 +494,29 @@ void UHeadMountedDisplayFunctionLibrary::STATIC_GetPositionalTrackingCameraParam
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetPositionalTrackingCameraParameters");
 
-	UHeadMountedDisplayFunctionLibrary_GetPositionalTrackingCameraParameters_Params params;
+	UHeadMountedDisplayFunctionLibrary_GetPositionalTrackingCameraParameters_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (CameraOrigin != nullptr)
-		*CameraOrigin = params.CameraOrigin;
+		*CameraOrigin = fn_params.CameraOrigin;
 	if (CameraRotation != nullptr)
-		*CameraRotation = params.CameraRotation;
+		*CameraRotation = fn_params.CameraRotation;
 	if (HFOV != nullptr)
-		*HFOV = params.HFOV;
+		*HFOV = fn_params.HFOV;
 	if (VFOV != nullptr)
-		*VFOV = params.VFOV;
+		*VFOV = fn_params.VFOV;
 	if (CameraDistance != nullptr)
-		*CameraDistance = params.CameraDistance;
+		*CameraDistance = fn_params.CameraDistance;
 	if (NearPlane != nullptr)
-		*NearPlane = params.NearPlane;
+		*NearPlane = fn_params.NearPlane;
 	if (FarPlane != nullptr)
-		*FarPlane = params.FarPlane;
+		*FarPlane = fn_params.FarPlane;
 }
 
 
@@ -529,16 +529,16 @@ float UHeadMountedDisplayFunctionLibrary::STATIC_GetPixelDensity()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetPixelDensity");
 
-	UHeadMountedDisplayFunctionLibrary_GetPixelDensity_Params params;
+	UHeadMountedDisplayFunctionLibrary_GetPixelDensity_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -552,19 +552,19 @@ void UHeadMountedDisplayFunctionLibrary::STATIC_GetOrientationAndPosition(struct
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetOrientationAndPosition");
 
-	UHeadMountedDisplayFunctionLibrary_GetOrientationAndPosition_Params params;
+	UHeadMountedDisplayFunctionLibrary_GetOrientationAndPosition_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (DeviceRotation != nullptr)
-		*DeviceRotation = params.DeviceRotation;
+		*DeviceRotation = fn_params.DeviceRotation;
 	if (DevicePosition != nullptr)
-		*DevicePosition = params.DevicePosition;
+		*DevicePosition = fn_params.DevicePosition;
 }
 
 
@@ -577,16 +577,16 @@ int UHeadMountedDisplayFunctionLibrary::STATIC_GetNumOfTrackingSensors()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetNumOfTrackingSensors");
 
-	UHeadMountedDisplayFunctionLibrary_GetNumOfTrackingSensors_Params params;
+	UHeadMountedDisplayFunctionLibrary_GetNumOfTrackingSensors_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -599,16 +599,16 @@ TEnumAsByte<EHMDWornState> UHeadMountedDisplayFunctionLibrary::STATIC_GetHMDWorn
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetHMDWornState");
 
-	UHeadMountedDisplayFunctionLibrary_GetHMDWornState_Params params;
+	UHeadMountedDisplayFunctionLibrary_GetHMDWornState_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -621,16 +621,16 @@ struct FName UHeadMountedDisplayFunctionLibrary::STATIC_GetHMDDeviceName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetHMDDeviceName");
 
-	UHeadMountedDisplayFunctionLibrary_GetHMDDeviceName_Params params;
+	UHeadMountedDisplayFunctionLibrary_GetHMDDeviceName_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -648,25 +648,25 @@ void UHeadMountedDisplayFunctionLibrary::STATIC_GetDeviceWorldPose(class UObject
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetDeviceWorldPose");
 
-	UHeadMountedDisplayFunctionLibrary_GetDeviceWorldPose_Params params;
-	params.WorldContext = WorldContext;
-	params.XRDeviceId = XRDeviceId;
+	UHeadMountedDisplayFunctionLibrary_GetDeviceWorldPose_Params fn_params;
+	fn_params.WorldContext = WorldContext;
+	fn_params.XRDeviceId = XRDeviceId;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (bIsTracked != nullptr)
-		*bIsTracked = params.bIsTracked;
+		*bIsTracked = fn_params.bIsTracked;
 	if (Orientation != nullptr)
-		*Orientation = params.Orientation;
+		*Orientation = fn_params.Orientation;
 	if (bHasPositionalTracking != nullptr)
-		*bHasPositionalTracking = params.bHasPositionalTracking;
+		*bHasPositionalTracking = fn_params.bHasPositionalTracking;
 	if (Position != nullptr)
-		*Position = params.Position;
+		*Position = fn_params.Position;
 }
 
 
@@ -683,24 +683,24 @@ void UHeadMountedDisplayFunctionLibrary::STATIC_GetDevicePose(const struct FXRDe
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetDevicePose");
 
-	UHeadMountedDisplayFunctionLibrary_GetDevicePose_Params params;
-	params.XRDeviceId = XRDeviceId;
+	UHeadMountedDisplayFunctionLibrary_GetDevicePose_Params fn_params;
+	fn_params.XRDeviceId = XRDeviceId;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (bIsTracked != nullptr)
-		*bIsTracked = params.bIsTracked;
+		*bIsTracked = fn_params.bIsTracked;
 	if (Orientation != nullptr)
-		*Orientation = params.Orientation;
+		*Orientation = fn_params.Orientation;
 	if (bHasPositionalTracking != nullptr)
-		*bHasPositionalTracking = params.bHasPositionalTracking;
+		*bHasPositionalTracking = fn_params.bHasPositionalTracking;
 	if (Position != nullptr)
-		*Position = params.Position;
+		*Position = fn_params.Position;
 }
 
 
@@ -715,18 +715,18 @@ TArray<struct FXRDeviceId> UHeadMountedDisplayFunctionLibrary::STATIC_EnumerateT
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.EnumerateTrackedDevices");
 
-	UHeadMountedDisplayFunctionLibrary_EnumerateTrackedDevices_Params params;
-	params.SystemId = SystemId;
-	params.DeviceType = DeviceType;
+	UHeadMountedDisplayFunctionLibrary_EnumerateTrackedDevices_Params fn_params;
+	fn_params.SystemId = SystemId;
+	fn_params.DeviceType = DeviceType;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -739,13 +739,13 @@ void UHeadMountedDisplayFunctionLibrary::STATIC_EnableLowPersistenceMode(bool bE
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.EnableLowPersistenceMode");
 
-	UHeadMountedDisplayFunctionLibrary_EnableLowPersistenceMode_Params params;
-	params.bEnable = bEnable;
+	UHeadMountedDisplayFunctionLibrary_EnableLowPersistenceMode_Params fn_params;
+	fn_params.bEnable = bEnable;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -761,17 +761,17 @@ bool UHeadMountedDisplayFunctionLibrary::STATIC_EnableHMD(bool bEnable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.EnableHMD");
 
-	UHeadMountedDisplayFunctionLibrary_EnableHMD_Params params;
-	params.bEnable = bEnable;
+	UHeadMountedDisplayFunctionLibrary_EnableHMD_Params fn_params;
+	fn_params.bEnable = bEnable;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -784,13 +784,13 @@ void UMotionControllerComponent::SetTrackingSource(EControllerHand NewSource)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionControllerComponent.SetTrackingSource");
 
-	UMotionControllerComponent_SetTrackingSource_Params params;
-	params.NewSource = NewSource;
+	UMotionControllerComponent_SetTrackingSource_Params fn_params;
+	fn_params.NewSource = NewSource;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -805,13 +805,13 @@ void UMotionControllerComponent::SetTrackingMotionSource(const struct FName& New
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionControllerComponent.SetTrackingMotionSource");
 
-	UMotionControllerComponent_SetTrackingMotionSource_Params params;
-	params.NewSource = NewSource;
+	UMotionControllerComponent_SetTrackingMotionSource_Params fn_params;
+	fn_params.NewSource = NewSource;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -826,13 +826,13 @@ void UMotionControllerComponent::SetShowDeviceModel(bool bShowControllerModel)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionControllerComponent.SetShowDeviceModel");
 
-	UMotionControllerComponent_SetShowDeviceModel_Params params;
-	params.bShowControllerModel = bShowControllerModel;
+	UMotionControllerComponent_SetShowDeviceModel_Params fn_params;
+	fn_params.bShowControllerModel = bShowControllerModel;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -847,13 +847,13 @@ void UMotionControllerComponent::SetDisplayModelSource(const struct FName& NewDi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionControllerComponent.SetDisplayModelSource");
 
-	UMotionControllerComponent_SetDisplayModelSource_Params params;
-	params.NewDisplayModelSource = NewDisplayModelSource;
+	UMotionControllerComponent_SetDisplayModelSource_Params fn_params;
+	fn_params.NewDisplayModelSource = NewDisplayModelSource;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -868,13 +868,13 @@ void UMotionControllerComponent::SetCustomDisplayMesh(class UStaticMesh* NewDisp
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionControllerComponent.SetCustomDisplayMesh");
 
-	UMotionControllerComponent_SetCustomDisplayMesh_Params params;
-	params.NewDisplayMesh = NewDisplayMesh;
+	UMotionControllerComponent_SetCustomDisplayMesh_Params fn_params;
+	fn_params.NewDisplayMesh = NewDisplayMesh;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -889,13 +889,13 @@ void UMotionControllerComponent::SetAssociatedPlayerIndex(int NewPlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionControllerComponent.SetAssociatedPlayerIndex");
 
-	UMotionControllerComponent_SetAssociatedPlayerIndex_Params params;
-	params.NewPlayer = NewPlayer;
+	UMotionControllerComponent_SetAssociatedPlayerIndex_Params fn_params;
+	fn_params.NewPlayer = NewPlayer;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -908,11 +908,11 @@ void UMotionControllerComponent::OnMotionControllerUpdated()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionControllerComponent.OnMotionControllerUpdated");
 
-	UMotionControllerComponent_OnMotionControllerUpdated_Params params;
+	UMotionControllerComponent_OnMotionControllerUpdated_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -927,16 +927,16 @@ bool UMotionControllerComponent::IsTracked()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionControllerComponent.IsTracked");
 
-	UMotionControllerComponent_IsTracked_Params params;
+	UMotionControllerComponent_IsTracked_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -949,16 +949,16 @@ EControllerHand UMotionControllerComponent::GetTrackingSource()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionControllerComponent.GetTrackingSource");
 
-	UMotionControllerComponent_GetTrackingSource_Params params;
+	UMotionControllerComponent_GetTrackingSource_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -973,20 +973,20 @@ float UMotionControllerComponent::GetParameterValue(const struct FName& InName, 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionControllerComponent.GetParameterValue");
 
-	UMotionControllerComponent_GetParameterValue_Params params;
-	params.InName = InName;
+	UMotionControllerComponent_GetParameterValue_Params fn_params;
+	fn_params.InName = InName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (bValueFound != nullptr)
-		*bValueFound = params.bValueFound;
+		*bValueFound = fn_params.bValueFound;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -999,13 +999,13 @@ void UMotionTrackedDeviceFunctionLibrary::STATIC_SetIsControllerMotionTrackingEn
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.SetIsControllerMotionTrackingEnabledByDefault");
 
-	UMotionTrackedDeviceFunctionLibrary_SetIsControllerMotionTrackingEnabledByDefault_Params params;
-	params.Enable = Enable;
+	UMotionTrackedDeviceFunctionLibrary_SetIsControllerMotionTrackingEnabledByDefault_Params fn_params;
+	fn_params.Enable = Enable;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1022,18 +1022,18 @@ bool UMotionTrackedDeviceFunctionLibrary::STATIC_IsMotionTrackingEnabledForSourc
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackingEnabledForSource");
 
-	UMotionTrackedDeviceFunctionLibrary_IsMotionTrackingEnabledForSource_Params params;
-	params.PlayerIndex = PlayerIndex;
-	params.SourceName = SourceName;
+	UMotionTrackedDeviceFunctionLibrary_IsMotionTrackingEnabledForSource_Params fn_params;
+	fn_params.PlayerIndex = PlayerIndex;
+	fn_params.SourceName = SourceName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1048,18 +1048,18 @@ bool UMotionTrackedDeviceFunctionLibrary::STATIC_IsMotionTrackingEnabledForDevic
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackingEnabledForDevice");
 
-	UMotionTrackedDeviceFunctionLibrary_IsMotionTrackingEnabledForDevice_Params params;
-	params.PlayerIndex = PlayerIndex;
-	params.Hand = Hand;
+	UMotionTrackedDeviceFunctionLibrary_IsMotionTrackingEnabledForDevice_Params fn_params;
+	fn_params.PlayerIndex = PlayerIndex;
+	fn_params.Hand = Hand;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1073,17 +1073,17 @@ bool UMotionTrackedDeviceFunctionLibrary::STATIC_IsMotionTrackingEnabledForCompo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackingEnabledForComponent");
 
-	UMotionTrackedDeviceFunctionLibrary_IsMotionTrackingEnabledForComponent_Params params;
-	params.MotionControllerComponent = MotionControllerComponent;
+	UMotionTrackedDeviceFunctionLibrary_IsMotionTrackingEnabledForComponent_Params fn_params;
+	fn_params.MotionControllerComponent = MotionControllerComponent;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1096,16 +1096,16 @@ bool UMotionTrackedDeviceFunctionLibrary::STATIC_IsMotionTrackedDeviceCountManag
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackedDeviceCountManagementNecessary");
 
-	UMotionTrackedDeviceFunctionLibrary_IsMotionTrackedDeviceCountManagementNecessary_Params params;
+	UMotionTrackedDeviceFunctionLibrary_IsMotionTrackedDeviceCountManagementNecessary_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1120,18 +1120,18 @@ bool UMotionTrackedDeviceFunctionLibrary::STATIC_IsMotionSourceTracking(int Play
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionSourceTracking");
 
-	UMotionTrackedDeviceFunctionLibrary_IsMotionSourceTracking_Params params;
-	params.PlayerIndex = PlayerIndex;
-	params.SourceName = SourceName;
+	UMotionTrackedDeviceFunctionLibrary_IsMotionSourceTracking_Params fn_params;
+	fn_params.PlayerIndex = PlayerIndex;
+	fn_params.SourceName = SourceName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1144,16 +1144,16 @@ int UMotionTrackedDeviceFunctionLibrary::STATIC_GetMotionTrackingEnabledControll
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.GetMotionTrackingEnabledControllerCount");
 
-	UMotionTrackedDeviceFunctionLibrary_GetMotionTrackingEnabledControllerCount_Params params;
+	UMotionTrackedDeviceFunctionLibrary_GetMotionTrackingEnabledControllerCount_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1166,16 +1166,16 @@ int UMotionTrackedDeviceFunctionLibrary::STATIC_GetMaximumMotionTrackedControlle
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.GetMaximumMotionTrackedControllerCount");
 
-	UMotionTrackedDeviceFunctionLibrary_GetMaximumMotionTrackedControllerCount_Params params;
+	UMotionTrackedDeviceFunctionLibrary_GetMaximumMotionTrackedControllerCount_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1188,16 +1188,16 @@ struct FName UMotionTrackedDeviceFunctionLibrary::STATIC_GetActiveTrackingSystem
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.GetActiveTrackingSystemName");
 
-	UMotionTrackedDeviceFunctionLibrary_GetActiveTrackingSystemName_Params params;
+	UMotionTrackedDeviceFunctionLibrary_GetActiveTrackingSystemName_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1210,16 +1210,16 @@ TArray<struct FName> UMotionTrackedDeviceFunctionLibrary::STATIC_EnumerateMotion
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnumerateMotionSources");
 
-	UMotionTrackedDeviceFunctionLibrary_EnumerateMotionSources_Params params;
+	UMotionTrackedDeviceFunctionLibrary_EnumerateMotionSources_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1234,18 +1234,18 @@ bool UMotionTrackedDeviceFunctionLibrary::STATIC_EnableMotionTrackingOfSource(in
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnableMotionTrackingOfSource");
 
-	UMotionTrackedDeviceFunctionLibrary_EnableMotionTrackingOfSource_Params params;
-	params.PlayerIndex = PlayerIndex;
-	params.SourceName = SourceName;
+	UMotionTrackedDeviceFunctionLibrary_EnableMotionTrackingOfSource_Params fn_params;
+	fn_params.PlayerIndex = PlayerIndex;
+	fn_params.SourceName = SourceName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1260,18 +1260,18 @@ bool UMotionTrackedDeviceFunctionLibrary::STATIC_EnableMotionTrackingOfDevice(in
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnableMotionTrackingOfDevice");
 
-	UMotionTrackedDeviceFunctionLibrary_EnableMotionTrackingOfDevice_Params params;
-	params.PlayerIndex = PlayerIndex;
-	params.Hand = Hand;
+	UMotionTrackedDeviceFunctionLibrary_EnableMotionTrackingOfDevice_Params fn_params;
+	fn_params.PlayerIndex = PlayerIndex;
+	fn_params.Hand = Hand;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1285,17 +1285,17 @@ bool UMotionTrackedDeviceFunctionLibrary::STATIC_EnableMotionTrackingForComponen
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnableMotionTrackingForComponent");
 
-	UMotionTrackedDeviceFunctionLibrary_EnableMotionTrackingForComponent_Params params;
-	params.MotionControllerComponent = MotionControllerComponent;
+	UMotionTrackedDeviceFunctionLibrary_EnableMotionTrackingForComponent_Params fn_params;
+	fn_params.MotionControllerComponent = MotionControllerComponent;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1309,14 +1309,14 @@ void UMotionTrackedDeviceFunctionLibrary::STATIC_DisableMotionTrackingOfSource(i
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfSource");
 
-	UMotionTrackedDeviceFunctionLibrary_DisableMotionTrackingOfSource_Params params;
-	params.PlayerIndex = PlayerIndex;
-	params.SourceName = SourceName;
+	UMotionTrackedDeviceFunctionLibrary_DisableMotionTrackingOfSource_Params fn_params;
+	fn_params.PlayerIndex = PlayerIndex;
+	fn_params.SourceName = SourceName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1332,14 +1332,14 @@ void UMotionTrackedDeviceFunctionLibrary::STATIC_DisableMotionTrackingOfDevice(i
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfDevice");
 
-	UMotionTrackedDeviceFunctionLibrary_DisableMotionTrackingOfDevice_Params params;
-	params.PlayerIndex = PlayerIndex;
-	params.Hand = Hand;
+	UMotionTrackedDeviceFunctionLibrary_DisableMotionTrackingOfDevice_Params fn_params;
+	fn_params.PlayerIndex = PlayerIndex;
+	fn_params.Hand = Hand;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1354,13 +1354,13 @@ void UMotionTrackedDeviceFunctionLibrary::STATIC_DisableMotionTrackingOfControll
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfControllersForPlayer");
 
-	UMotionTrackedDeviceFunctionLibrary_DisableMotionTrackingOfControllersForPlayer_Params params;
-	params.PlayerIndex = PlayerIndex;
+	UMotionTrackedDeviceFunctionLibrary_DisableMotionTrackingOfControllersForPlayer_Params fn_params;
+	fn_params.PlayerIndex = PlayerIndex;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1373,12 +1373,12 @@ void UMotionTrackedDeviceFunctionLibrary::STATIC_DisableMotionTrackingOfAllContr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfAllControllers");
 
-	UMotionTrackedDeviceFunctionLibrary_DisableMotionTrackingOfAllControllers_Params params;
+	UMotionTrackedDeviceFunctionLibrary_DisableMotionTrackingOfAllControllers_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1393,13 +1393,13 @@ void UMotionTrackedDeviceFunctionLibrary::STATIC_DisableMotionTrackingForCompone
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingForComponent");
 
-	UMotionTrackedDeviceFunctionLibrary_DisableMotionTrackingForComponent_Params params;
-	params.MotionControllerComponent = MotionControllerComponent;
+	UMotionTrackedDeviceFunctionLibrary_DisableMotionTrackingForComponent_Params fn_params;
+	fn_params.MotionControllerComponent = MotionControllerComponent;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1420,24 +1420,24 @@ class UPrimitiveComponent* UXRAssetFunctionLibrary::STATIC_AddNamedDeviceVisuali
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.XRAssetFunctionLibrary.AddNamedDeviceVisualizationComponentBlocking");
 
-	UXRAssetFunctionLibrary_AddNamedDeviceVisualizationComponentBlocking_Params params;
-	params.Target = Target;
-	params.SystemName = SystemName;
-	params.DeviceName = DeviceName;
-	params.bManualAttachment = bManualAttachment;
-	params.RelativeTransform = RelativeTransform;
+	UXRAssetFunctionLibrary_AddNamedDeviceVisualizationComponentBlocking_Params fn_params;
+	fn_params.Target = Target;
+	fn_params.SystemName = SystemName;
+	fn_params.DeviceName = DeviceName;
+	fn_params.bManualAttachment = bManualAttachment;
+	fn_params.RelativeTransform = RelativeTransform;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (XRDeviceId != nullptr)
-		*XRDeviceId = params.XRDeviceId;
+		*XRDeviceId = fn_params.XRDeviceId;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1454,20 +1454,20 @@ class UPrimitiveComponent* UXRAssetFunctionLibrary::STATIC_AddDeviceVisualizatio
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.XRAssetFunctionLibrary.AddDeviceVisualizationComponentBlocking");
 
-	UXRAssetFunctionLibrary_AddDeviceVisualizationComponentBlocking_Params params;
-	params.Target = Target;
-	params.XRDeviceId = XRDeviceId;
-	params.bManualAttachment = bManualAttachment;
-	params.RelativeTransform = RelativeTransform;
+	UXRAssetFunctionLibrary_AddDeviceVisualizationComponentBlocking_Params fn_params;
+	fn_params.Target = Target;
+	fn_params.XRDeviceId = XRDeviceId;
+	fn_params.bManualAttachment = bManualAttachment;
+	fn_params.RelativeTransform = RelativeTransform;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1487,26 +1487,26 @@ class UAsyncTask_LoadXRDeviceVisComponent* UAsyncTask_LoadXRDeviceVisComponent::
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.AsyncTask_LoadXRDeviceVisComponent.AddNamedDeviceVisualizationComponentAsync");
 
-	UAsyncTask_LoadXRDeviceVisComponent_AddNamedDeviceVisualizationComponentAsync_Params params;
-	params.Target = Target;
-	params.SystemName = SystemName;
-	params.DeviceName = DeviceName;
-	params.bManualAttachment = bManualAttachment;
-	params.RelativeTransform = RelativeTransform;
+	UAsyncTask_LoadXRDeviceVisComponent_AddNamedDeviceVisualizationComponentAsync_Params fn_params;
+	fn_params.Target = Target;
+	fn_params.SystemName = SystemName;
+	fn_params.DeviceName = DeviceName;
+	fn_params.bManualAttachment = bManualAttachment;
+	fn_params.RelativeTransform = RelativeTransform;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (XRDeviceId != nullptr)
-		*XRDeviceId = params.XRDeviceId;
+		*XRDeviceId = fn_params.XRDeviceId;
 	if (NewComponent != nullptr)
-		*NewComponent = params.NewComponent;
+		*NewComponent = fn_params.NewComponent;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1524,23 +1524,23 @@ class UAsyncTask_LoadXRDeviceVisComponent* UAsyncTask_LoadXRDeviceVisComponent::
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.AsyncTask_LoadXRDeviceVisComponent.AddDeviceVisualizationComponentAsync");
 
-	UAsyncTask_LoadXRDeviceVisComponent_AddDeviceVisualizationComponentAsync_Params params;
-	params.Target = Target;
-	params.XRDeviceId = XRDeviceId;
-	params.bManualAttachment = bManualAttachment;
-	params.RelativeTransform = RelativeTransform;
+	UAsyncTask_LoadXRDeviceVisComponent_AddDeviceVisualizationComponentAsync_Params fn_params;
+	fn_params.Target = Target;
+	fn_params.XRDeviceId = XRDeviceId;
+	fn_params.bManualAttachment = bManualAttachment;
+	fn_params.RelativeTransform = RelativeTransform;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (NewComponent != nullptr)
-		*NewComponent = params.NewComponent;
+		*NewComponent = fn_params.NewComponent;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

@@ -25,20 +25,20 @@ void UGUIHelperStaticFunctionLibrary_C::STATIC_ShowErrorDialog(const struct FTex
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.ShowErrorDialog");
 
-	UGUIHelperStaticFunctionLibrary_C_ShowErrorDialog_Params params;
-	params.Message = Message;
-	params.Canvas = Canvas;
-	params.widgetToDisable = widgetToDisable;
-	params.__WorldContext = __WorldContext;
+	UGUIHelperStaticFunctionLibrary_C_ShowErrorDialog_Params fn_params;
+	fn_params.Message = Message;
+	fn_params.Canvas = Canvas;
+	fn_params.widgetToDisable = widgetToDisable;
+	fn_params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (messageWidget != nullptr)
-		*messageWidget = params.messageWidget;
+		*messageWidget = fn_params.messageWidget;
 }
 
 
@@ -53,18 +53,18 @@ void UGUIHelperStaticFunctionLibrary_C::STATIC_LinearCoordinatesToString(const s
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.LinearCoordinatesToString");
 
-	UGUIHelperStaticFunctionLibrary_C_LinearCoordinatesToString_Params params;
-	params.Coordinates = Coordinates;
-	params.__WorldContext = __WorldContext;
+	UGUIHelperStaticFunctionLibrary_C_LinearCoordinatesToString_Params fn_params;
+	fn_params.Coordinates = Coordinates;
+	fn_params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (coordinatesString != nullptr)
-		*coordinatesString = params.coordinatesString;
+		*coordinatesString = fn_params.coordinatesString;
 }
 
 
@@ -79,18 +79,18 @@ void UGUIHelperStaticFunctionLibrary_C::STATIC_HealthToString(float Health, clas
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.HealthToString");
 
-	UGUIHelperStaticFunctionLibrary_C_HealthToString_Params params;
-	params.Health = Health;
-	params.__WorldContext = __WorldContext;
+	UGUIHelperStaticFunctionLibrary_C_HealthToString_Params fn_params;
+	fn_params.Health = Health;
+	fn_params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (healthString != nullptr)
-		*healthString = params.healthString;
+		*healthString = fn_params.healthString;
 }
 
 
@@ -107,20 +107,20 @@ void UGUIHelperStaticFunctionLibrary_C::STATIC_ValueToDescriptionString(const st
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.ValueToDescriptionString");
 
-	UGUIHelperStaticFunctionLibrary_C_ValueToDescriptionString_Params params;
-	params.preLabel = preLabel;
-	params.Value = Value;
-	params.postLabel = postLabel;
-	params.__WorldContext = __WorldContext;
+	UGUIHelperStaticFunctionLibrary_C_ValueToDescriptionString_Params fn_params;
+	fn_params.preLabel = preLabel;
+	fn_params.Value = Value;
+	fn_params.postLabel = postLabel;
+	fn_params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (descriptionString != nullptr)
-		*descriptionString = params.descriptionString;
+		*descriptionString = fn_params.descriptionString;
 }
 
 
@@ -135,18 +135,18 @@ void UGUIHelperStaticFunctionLibrary_C::STATIC_ValueToString(float Value, class 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.ValueToString");
 
-	UGUIHelperStaticFunctionLibrary_C_ValueToString_Params params;
-	params.Value = Value;
-	params.__WorldContext = __WorldContext;
+	UGUIHelperStaticFunctionLibrary_C_ValueToString_Params fn_params;
+	fn_params.Value = Value;
+	fn_params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (ValueString != nullptr)
-		*ValueString = params.ValueString;
+		*ValueString = fn_params.ValueString;
 }
 
 
@@ -161,18 +161,18 @@ void UGUIHelperStaticFunctionLibrary_C::STATIC_LinearVectorDistanceToString(cons
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.LinearVectorDistanceToString");
 
-	UGUIHelperStaticFunctionLibrary_C_LinearVectorDistanceToString_Params params;
-	params.Acceleration = Acceleration;
-	params.__WorldContext = __WorldContext;
+	UGUIHelperStaticFunctionLibrary_C_LinearVectorDistanceToString_Params fn_params;
+	fn_params.Acceleration = Acceleration;
+	fn_params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (accelerationString != nullptr)
-		*accelerationString = params.accelerationString;
+		*accelerationString = fn_params.accelerationString;
 }
 
 
@@ -187,18 +187,18 @@ void UGUIHelperStaticFunctionLibrary_C::STATIC_VelocityToString(const struct FVe
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.VelocityToString");
 
-	UGUIHelperStaticFunctionLibrary_C_VelocityToString_Params params;
-	params.Velocity = Velocity;
-	params.__WorldContext = __WorldContext;
+	UGUIHelperStaticFunctionLibrary_C_VelocityToString_Params fn_params;
+	fn_params.Velocity = Velocity;
+	fn_params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (velocityString != nullptr)
-		*velocityString = params.velocityString;
+		*velocityString = fn_params.velocityString;
 }
 
 
@@ -213,18 +213,18 @@ void UGUIHelperStaticFunctionLibrary_C::STATIC_AccelerationToString(float Accele
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.AccelerationToString");
 
-	UGUIHelperStaticFunctionLibrary_C_AccelerationToString_Params params;
-	params.Acceleration = Acceleration;
-	params.__WorldContext = __WorldContext;
+	UGUIHelperStaticFunctionLibrary_C_AccelerationToString_Params fn_params;
+	fn_params.Acceleration = Acceleration;
+	fn_params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (accelerationString != nullptr)
-		*accelerationString = params.accelerationString;
+		*accelerationString = fn_params.accelerationString;
 }
 
 
@@ -241,20 +241,20 @@ void UGUIHelperStaticFunctionLibrary_C::STATIC_StringToDescriptionString(const s
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.StringToDescriptionString");
 
-	UGUIHelperStaticFunctionLibrary_C_StringToDescriptionString_Params params;
-	params.preLabel = preLabel;
-	params.ValueString = ValueString;
-	params.postLabel = postLabel;
-	params.__WorldContext = __WorldContext;
+	UGUIHelperStaticFunctionLibrary_C_StringToDescriptionString_Params fn_params;
+	fn_params.preLabel = preLabel;
+	fn_params.ValueString = ValueString;
+	fn_params.postLabel = postLabel;
+	fn_params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (descriptionString != nullptr)
-		*descriptionString = params.descriptionString;
+		*descriptionString = fn_params.descriptionString;
 }
 
 
@@ -269,18 +269,18 @@ void UGUIHelperStaticFunctionLibrary_C::STATIC_LinearValueToString(float Value, 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.LinearValueToString");
 
-	UGUIHelperStaticFunctionLibrary_C_LinearValueToString_Params params;
-	params.Value = Value;
-	params.__WorldContext = __WorldContext;
+	UGUIHelperStaticFunctionLibrary_C_LinearValueToString_Params fn_params;
+	fn_params.Value = Value;
+	fn_params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (ValueString != nullptr)
-		*ValueString = params.ValueString;
+		*ValueString = fn_params.ValueString;
 }
 
 
@@ -295,18 +295,18 @@ void UGUIHelperStaticFunctionLibrary_C::STATIC_CoordinatesToString(const struct 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.CoordinatesToString");
 
-	UGUIHelperStaticFunctionLibrary_C_CoordinatesToString_Params params;
-	params.Coordinates = Coordinates;
-	params.__WorldContext = __WorldContext;
+	UGUIHelperStaticFunctionLibrary_C_CoordinatesToString_Params fn_params;
+	fn_params.Coordinates = Coordinates;
+	fn_params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (coordinatesString != nullptr)
-		*coordinatesString = params.coordinatesString;
+		*coordinatesString = fn_params.coordinatesString;
 }
 
 
@@ -321,18 +321,18 @@ void UGUIHelperStaticFunctionLibrary_C::STATIC_VectorToString(const struct FVect
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.VectorToString");
 
-	UGUIHelperStaticFunctionLibrary_C_VectorToString_Params params;
-	params.Vector = Vector;
-	params.__WorldContext = __WorldContext;
+	UGUIHelperStaticFunctionLibrary_C_VectorToString_Params fn_params;
+	fn_params.Vector = Vector;
+	fn_params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (vectorString != nullptr)
-		*vectorString = params.vectorString;
+		*vectorString = fn_params.vectorString;
 }
 
 
@@ -347,18 +347,18 @@ void UGUIHelperStaticFunctionLibrary_C::STATIC_RotationToString(const struct FRo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.RotationToString");
 
-	UGUIHelperStaticFunctionLibrary_C_RotationToString_Params params;
-	params.Rotation = Rotation;
-	params.__WorldContext = __WorldContext;
+	UGUIHelperStaticFunctionLibrary_C_RotationToString_Params fn_params;
+	fn_params.Rotation = Rotation;
+	fn_params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (rotationString != nullptr)
-		*rotationString = params.rotationString;
+		*rotationString = fn_params.rotationString;
 }
 
 
@@ -375,20 +375,20 @@ void UGUIHelperStaticFunctionLibrary_C::STATIC_LinearValueToDescriptionString(co
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.LinearValueToDescriptionString");
 
-	UGUIHelperStaticFunctionLibrary_C_LinearValueToDescriptionString_Params params;
-	params.preLabel = preLabel;
-	params.Value = Value;
-	params.postLabel = postLabel;
-	params.__WorldContext = __WorldContext;
+	UGUIHelperStaticFunctionLibrary_C_LinearValueToDescriptionString_Params fn_params;
+	fn_params.preLabel = preLabel;
+	fn_params.Value = Value;
+	fn_params.postLabel = postLabel;
+	fn_params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (descriptionString != nullptr)
-		*descriptionString = params.descriptionString;
+		*descriptionString = fn_params.descriptionString;
 }
 
 
@@ -404,19 +404,19 @@ void UGUIHelperStaticFunctionLibrary_C::STATIC_FloatToStringWithPrecision(float 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.FloatToStringWithPrecision");
 
-	UGUIHelperStaticFunctionLibrary_C_FloatToStringWithPrecision_Params params;
-	params.floatNum = floatNum;
-	params.Precision = Precision;
-	params.__WorldContext = __WorldContext;
+	UGUIHelperStaticFunctionLibrary_C_FloatToStringWithPrecision_Params fn_params;
+	fn_params.floatNum = floatNum;
+	fn_params.Precision = Precision;
+	fn_params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (floatAsString != nullptr)
-		*floatAsString = params.floatAsString;
+		*floatAsString = fn_params.floatAsString;
 }
 
 
@@ -431,18 +431,18 @@ void UGUIHelperStaticFunctionLibrary_C::STATIC_EmovementPaceToText(EPrisonerMove
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.EmovementPaceToText");
 
-	UGUIHelperStaticFunctionLibrary_C_EmovementPaceToText_Params params;
-	params.movementPace = movementPace;
-	params.__WorldContext = __WorldContext;
+	UGUIHelperStaticFunctionLibrary_C_EmovementPaceToText_Params fn_params;
+	fn_params.movementPace = movementPace;
+	fn_params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (movementPaceText != nullptr)
-		*movementPaceText = params.movementPaceText;
+		*movementPaceText = fn_params.movementPaceText;
 }
 
 
@@ -456,17 +456,17 @@ void UGUIHelperStaticFunctionLibrary_C::STATIC_SortSkills(class UObject* __World
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.SortSkills");
 
-	UGUIHelperStaticFunctionLibrary_C_SortSkills_Params params;
-	params.__WorldContext = __WorldContext;
+	UGUIHelperStaticFunctionLibrary_C_SortSkills_Params fn_params;
+	fn_params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (skillArrayRef != nullptr)
-		*skillArrayRef = params.skillArrayRef;
+		*skillArrayRef = fn_params.skillArrayRef;
 }
 
 
@@ -481,18 +481,18 @@ void UGUIHelperStaticFunctionLibrary_C::STATIC_SkilLevelToSkillPercentage(ESkill
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.SkilLevelToSkillPercentage");
 
-	UGUIHelperStaticFunctionLibrary_C_SkilLevelToSkillPercentage_Params params;
-	params.Selection = Selection;
-	params.__WorldContext = __WorldContext;
+	UGUIHelperStaticFunctionLibrary_C_SkilLevelToSkillPercentage_Params fn_params;
+	fn_params.Selection = Selection;
+	fn_params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (MaxValue != nullptr)
-		*MaxValue = params.MaxValue;
+		*MaxValue = fn_params.MaxValue;
 }
 
 
@@ -507,17 +507,17 @@ struct FText UGUIHelperStaticFunctionLibrary_C::STATIC_FloatToTextFormatted(floa
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.FloatToTextFormatted");
 
-	UGUIHelperStaticFunctionLibrary_C_FloatToTextFormatted_Params params;
-	params.floatNum = floatNum;
-	params.__WorldContext = __WorldContext;
+	UGUIHelperStaticFunctionLibrary_C_FloatToTextFormatted_Params fn_params;
+	fn_params.floatNum = floatNum;
+	fn_params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -532,18 +532,18 @@ void UGUIHelperStaticFunctionLibrary_C::STATIC_SkilLevelToMaxSkillValue(ESkillLe
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.SkilLevelToMaxSkillValue");
 
-	UGUIHelperStaticFunctionLibrary_C_SkilLevelToMaxSkillValue_Params params;
-	params.Selection = Selection;
-	params.__WorldContext = __WorldContext;
+	UGUIHelperStaticFunctionLibrary_C_SkilLevelToMaxSkillValue_Params fn_params;
+	fn_params.Selection = Selection;
+	fn_params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (MaxValue != nullptr)
-		*MaxValue = params.MaxValue;
+		*MaxValue = fn_params.MaxValue;
 }
 
 
@@ -558,18 +558,18 @@ void UGUIHelperStaticFunctionLibrary_C::STATIC_SkilLevelToMaxSkillValueText(ESki
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.SkilLevelToMaxSkillValueText");
 
-	UGUIHelperStaticFunctionLibrary_C_SkilLevelToMaxSkillValueText_Params params;
-	params.Selection = Selection;
-	params.__WorldContext = __WorldContext;
+	UGUIHelperStaticFunctionLibrary_C_SkilLevelToMaxSkillValueText_Params fn_params;
+	fn_params.Selection = Selection;
+	fn_params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (MaxValue != nullptr)
-		*MaxValue = params.MaxValue;
+		*MaxValue = fn_params.MaxValue;
 }
 
 

@@ -21,12 +21,12 @@ void UUI_MenuButton_C::SetText(const struct FText& Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_MenuButton.UI_MenuButton_C.SetText");
 
-	UUI_MenuButton_C_SetText_Params params;
-	params.Text = Text;
+	UUI_MenuButton_C_SetText_Params fn_params;
+	fn_params.Text = Text;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -41,12 +41,12 @@ void UUI_MenuButton_C::SetFontSize(int FontSize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_MenuButton.UI_MenuButton_C.SetFontSize");
 
-	UUI_MenuButton_C_SetFontSize_Params params;
-	params.FontSize = FontSize;
+	UUI_MenuButton_C_SetFontSize_Params fn_params;
+	fn_params.FontSize = FontSize;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -62,13 +62,13 @@ void UUI_MenuButton_C::OnMouseEnter(struct FGeometry* MyGeometry, struct FPointe
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_MenuButton.UI_MenuButton_C.OnMouseEnter");
 
-	UUI_MenuButton_C_OnMouseEnter_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_MenuButton_C_OnMouseEnter_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -83,12 +83,12 @@ void UUI_MenuButton_C::OnMouseLeave(struct FPointerEvent* MouseEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_MenuButton.UI_MenuButton_C.OnMouseLeave");
 
-	UUI_MenuButton_C_OnMouseLeave_Params params;
-	params.MouseEvent = MouseEvent;
+	UUI_MenuButton_C_OnMouseLeave_Params fn_params;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -101,11 +101,11 @@ void UUI_MenuButton_C::OnSynchronizeProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_MenuButton.UI_MenuButton_C.OnSynchronizeProperties");
 
-	UUI_MenuButton_C_OnSynchronizeProperties_Params params;
+	UUI_MenuButton_C_OnSynchronizeProperties_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -118,11 +118,11 @@ void UUI_MenuButton_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_25_OnButtonCl
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_MenuButton.UI_MenuButton_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_25_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_MenuButton_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_25_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_MenuButton_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_25_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -135,11 +135,11 @@ void UUI_MenuButton_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_MenuButton.UI_MenuButton_C.Construct");
 
-	UUI_MenuButton_C_Construct_Params params;
+	UUI_MenuButton_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -152,11 +152,11 @@ void UUI_MenuButton_C::BndEvt__MainButton_K2Node_ComponentBoundEvent_4_OnButtonH
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_MenuButton.UI_MenuButton_C.BndEvt__MainButton_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature");
 
-	UUI_MenuButton_C_BndEvt__MainButton_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature_Params params;
+	UUI_MenuButton_C_BndEvt__MainButton_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -171,12 +171,12 @@ void UUI_MenuButton_C::ExecuteUbergraph_UI_MenuButton(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_MenuButton.UI_MenuButton_C.ExecuteUbergraph_UI_MenuButton");
 
-	UUI_MenuButton_C_ExecuteUbergraph_UI_MenuButton_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_MenuButton_C_ExecuteUbergraph_UI_MenuButton_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -189,11 +189,11 @@ void UUI_MenuButton_C::OnClicked__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_MenuButton.UI_MenuButton_C.OnClicked__DelegateSignature");
 
-	UUI_MenuButton_C_OnClicked__DelegateSignature_Params params;
+	UUI_MenuButton_C_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

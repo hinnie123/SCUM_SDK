@@ -19,11 +19,11 @@ void A2H_Baseball_Bat_with_spikes_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function 2H_Baseball_Bat_with_spikes.2H_Baseball_Bat_with_spikes_C.UserConstructionScript");
 
-	A2H_Baseball_Bat_with_spikes_C_UserConstructionScript_Params params;
+	A2H_Baseball_Bat_with_spikes_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

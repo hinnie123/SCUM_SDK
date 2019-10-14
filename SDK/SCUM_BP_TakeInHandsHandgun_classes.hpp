@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TakeInHandsHandgun.BP_TakeInHandsHandgun_C
-// 0x0000 (0x0078 - 0x0078)
+// 0x0000 (0x0088 - 0x0088)
 class UBP_TakeInHandsHandgun_C : public UTakeInHandsAssetData
 {
 public:

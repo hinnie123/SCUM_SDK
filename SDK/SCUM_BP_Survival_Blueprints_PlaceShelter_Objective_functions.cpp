@@ -21,16 +21,16 @@ void ABP_Survival_Blueprints_PlaceShelter_Objective_C::GetPrisoner(class APrison
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Survival_Blueprints_PlaceShelter_Objective.BP_Survival_Blueprints_PlaceShelter_Objective_C.GetPrisoner");
 
-	ABP_Survival_Blueprints_PlaceShelter_Objective_C_GetPrisoner_Params params;
+	ABP_Survival_Blueprints_PlaceShelter_Objective_C_GetPrisoner_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Prisoner != nullptr)
-		*Prisoner = params.Prisoner;
+		*Prisoner = fn_params.Prisoner;
 }
 
 
@@ -43,12 +43,12 @@ void ABP_Survival_Blueprints_PlaceShelter_Objective_C::AddToDialogueQueue(EDialo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Survival_Blueprints_PlaceShelter_Objective.BP_Survival_Blueprints_PlaceShelter_Objective_C.AddToDialogueQueue");
 
-	ABP_Survival_Blueprints_PlaceShelter_Objective_C_AddToDialogueQueue_Params params;
-	params.DialogueEvent = DialogueEvent;
+	ABP_Survival_Blueprints_PlaceShelter_Objective_C_AddToDialogueQueue_Params fn_params;
+	fn_params.DialogueEvent = DialogueEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -61,11 +61,11 @@ void ABP_Survival_Blueprints_PlaceShelter_Objective_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Survival_Blueprints_PlaceShelter_Objective.BP_Survival_Blueprints_PlaceShelter_Objective_C.UserConstructionScript");
 
-	ABP_Survival_Blueprints_PlaceShelter_Objective_C_UserConstructionScript_Params params;
+	ABP_Survival_Blueprints_PlaceShelter_Objective_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -78,11 +78,11 @@ void ABP_Survival_Blueprints_PlaceShelter_Objective_C::OnObjectiveStarted()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Survival_Blueprints_PlaceShelter_Objective.BP_Survival_Blueprints_PlaceShelter_Objective_C.OnObjectiveStarted");
 
-	ABP_Survival_Blueprints_PlaceShelter_Objective_C_OnObjectiveStarted_Params params;
+	ABP_Survival_Blueprints_PlaceShelter_Objective_C_OnObjectiveStarted_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -97,12 +97,12 @@ void ABP_Survival_Blueprints_PlaceShelter_Objective_C::OnTabModeOpened(ETabMode 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Survival_Blueprints_PlaceShelter_Objective.BP_Survival_Blueprints_PlaceShelter_Objective_C.OnTabModeOpened");
 
-	ABP_Survival_Blueprints_PlaceShelter_Objective_C_OnTabModeOpened_Params params;
-	params.tabMode = tabMode;
+	ABP_Survival_Blueprints_PlaceShelter_Objective_C_OnTabModeOpened_Params fn_params;
+	fn_params.tabMode = tabMode;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -117,12 +117,12 @@ void ABP_Survival_Blueprints_PlaceShelter_Objective_C::ExecuteUbergraph_BP_Survi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Survival_Blueprints_PlaceShelter_Objective.BP_Survival_Blueprints_PlaceShelter_Objective_C.ExecuteUbergraph_BP_Survival_Blueprints_PlaceShelter_Objective");
 
-	ABP_Survival_Blueprints_PlaceShelter_Objective_C_ExecuteUbergraph_BP_Survival_Blueprints_PlaceShelter_Objective_Params params;
-	params.EntryPoint = EntryPoint;
+	ABP_Survival_Blueprints_PlaceShelter_Objective_C_ExecuteUbergraph_BP_Survival_Blueprints_PlaceShelter_Objective_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

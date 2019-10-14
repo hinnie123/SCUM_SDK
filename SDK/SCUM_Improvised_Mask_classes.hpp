@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Improvised_Mask.Improvised_Mask_C
-// 0x0000 (0x0818 - 0x0818)
+// 0x0000 (0x08D0 - 0x08D0)
 class AImprovised_Mask_C : public AClothesItem
 {
 public:

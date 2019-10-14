@@ -22,13 +22,13 @@ void UHoveredEventWidget_C::OnMouseEnter(struct FGeometry* MyGeometry, struct FP
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HoveredEventWidget.HoveredEventWidget_C.OnMouseEnter");
 
-	UHoveredEventWidget_C_OnMouseEnter_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UHoveredEventWidget_C_OnMouseEnter_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -43,12 +43,12 @@ void UHoveredEventWidget_C::OnMouseLeave(struct FPointerEvent* MouseEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HoveredEventWidget.HoveredEventWidget_C.OnMouseLeave");
 
-	UHoveredEventWidget_C_OnMouseLeave_Params params;
-	params.MouseEvent = MouseEvent;
+	UHoveredEventWidget_C_OnMouseLeave_Params fn_params;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -63,12 +63,12 @@ void UHoveredEventWidget_C::ExecuteUbergraph_HoveredEventWidget(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HoveredEventWidget.HoveredEventWidget_C.ExecuteUbergraph_HoveredEventWidget");
 
-	UHoveredEventWidget_C_ExecuteUbergraph_HoveredEventWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UHoveredEventWidget_C_ExecuteUbergraph_HoveredEventWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -81,11 +81,11 @@ void UHoveredEventWidget_C::MouseLeft__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HoveredEventWidget.HoveredEventWidget_C.MouseLeft__DelegateSignature");
 
-	UHoveredEventWidget_C_MouseLeft__DelegateSignature_Params params;
+	UHoveredEventWidget_C_MouseLeft__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -98,11 +98,11 @@ void UHoveredEventWidget_C::MouseEntered__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HoveredEventWidget.HoveredEventWidget_C.MouseEntered__DelegateSignature");
 
-	UHoveredEventWidget_C_MouseEntered__DelegateSignature_Params params;
+	UHoveredEventWidget_C_MouseEntered__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Event_Improvised_Metal_Spear.Event_Improvised_Metal_Spear_C
-// 0x0008 (0x07C8 - 0x07C0)
+// 0x0008 (0x0868 - 0x0860)
 class AEvent_Improvised_Metal_Spear_C : public AWeaponItem
 {
 public:
-	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule1;                             // 0x07C0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule1;                             // 0x0860(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -19,11 +19,11 @@ void ALock_Medium_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Lock_Medium.Lock_Medium_C.UserConstructionScript");
 
-	ALock_Medium_C_UserConstructionScript_Params params;
+	ALock_Medium_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

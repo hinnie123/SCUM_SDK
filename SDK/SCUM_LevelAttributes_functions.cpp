@@ -21,16 +21,16 @@ void ULevelAttributes_C::shouldAlarmBeOn(bool* shouldAlarmBeOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.shouldAlarmBeOn");
 
-	ULevelAttributes_C_shouldAlarmBeOn_Params params;
+	ULevelAttributes_C_shouldAlarmBeOn_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (shouldAlarmBeOn != nullptr)
-		*shouldAlarmBeOn = params.shouldAlarmBeOn;
+		*shouldAlarmBeOn = fn_params.shouldAlarmBeOn;
 }
 
 
@@ -48,23 +48,23 @@ void ULevelAttributes_C::UpdateReferentValue(float currentValue, float tolleranc
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.UpdateReferentValue");
 
-	ULevelAttributes_C_UpdateReferentValue_Params params;
-	params.currentValue = currentValue;
-	params.tollerance = tollerance;
-	params.UpdateInterval = UpdateInterval;
+	ULevelAttributes_C_UpdateReferentValue_Params fn_params;
+	fn_params.currentValue = currentValue;
+	fn_params.tollerance = tollerance;
+	fn_params.UpdateInterval = UpdateInterval;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (lastReferentValue != nullptr)
-		*lastReferentValue = params.lastReferentValue;
+		*lastReferentValue = fn_params.lastReferentValue;
 	if (timeSinceLastUpdate != nullptr)
-		*timeSinceLastUpdate = params.timeSinceLastUpdate;
+		*timeSinceLastUpdate = fn_params.timeSinceLastUpdate;
 	if (referentValueUpdated != nullptr)
-		*referentValueUpdated = params.referentValueUpdated;
+		*referentValueUpdated = fn_params.referentValueUpdated;
 }
 
 
@@ -75,11 +75,11 @@ void ULevelAttributes_C::InitAttributeValues()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.InitAttributeValues");
 
-	ULevelAttributes_C_InitAttributeValues_Params params;
+	ULevelAttributes_C_InitAttributeValues_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -97,19 +97,19 @@ void ULevelAttributes_C::CalculateChangeSpeed(float currentValue, float lastValu
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.CalculateChangeSpeed");
 
-	ULevelAttributes_C_CalculateChangeSpeed_Params params;
-	params.currentValue = currentValue;
-	params.lastValue = lastValue;
-	params.UpdateInterval = UpdateInterval;
+	ULevelAttributes_C_CalculateChangeSpeed_Params fn_params;
+	fn_params.currentValue = currentValue;
+	fn_params.lastValue = lastValue;
+	fn_params.UpdateInterval = UpdateInterval;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Speed != nullptr)
-		*Speed = params.Speed;
+		*Speed = fn_params.Speed;
 }
 
 
@@ -125,20 +125,20 @@ void ULevelAttributes_C::CheckAttributeLevelAlarm(float currentAttributeValue, f
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.CheckAttributeLevelAlarm");
 
-	ULevelAttributes_C_CheckAttributeLevelAlarm_Params params;
-	params.currentAttributeValue = currentAttributeValue;
-	params.dynamicChange = dynamicChange;
+	ULevelAttributes_C_CheckAttributeLevelAlarm_Params fn_params;
+	fn_params.currentAttributeValue = currentAttributeValue;
+	fn_params.dynamicChange = dynamicChange;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (alarmRef != nullptr)
-		*alarmRef = params.alarmRef;
+		*alarmRef = fn_params.alarmRef;
 	if (alarmCode != nullptr)
-		*alarmCode = params.alarmCode;
+		*alarmCode = fn_params.alarmCode;
 }
 
 
@@ -153,18 +153,18 @@ void ULevelAttributes_C::CheckBFPAlarm(float bodyFatPercentage, float bodyFatAla
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.CheckBFPAlarm");
 
-	ULevelAttributes_C_CheckBFPAlarm_Params params;
-	params.bodyFatPercentage = bodyFatPercentage;
-	params.bodyFatAlarmThreshold = bodyFatAlarmThreshold;
+	ULevelAttributes_C_CheckBFPAlarm_Params fn_params;
+	fn_params.bodyFatPercentage = bodyFatPercentage;
+	fn_params.bodyFatAlarmThreshold = bodyFatAlarmThreshold;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (alarmCode != nullptr)
-		*alarmCode = params.alarmCode;
+		*alarmCode = fn_params.alarmCode;
 }
 
 
@@ -175,11 +175,11 @@ void ULevelAttributes_C::Init()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.Init");
 
-	ULevelAttributes_C_Init_Params params;
+	ULevelAttributes_C_Init_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -192,11 +192,11 @@ void ULevelAttributes_C::SetMeasurementUnits()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.SetMeasurementUnits");
 
-	ULevelAttributes_C_SetMeasurementUnits_Params params;
+	ULevelAttributes_C_SetMeasurementUnits_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -209,11 +209,11 @@ void ULevelAttributes_C::UpdateParameterLines()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.UpdateParameterLines");
 
-	ULevelAttributes_C_UpdateParameterLines_Params params;
+	ULevelAttributes_C_UpdateParameterLines_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -228,15 +228,15 @@ struct FText ULevelAttributes_C::GetTitleText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.GetTitleText");
 
-	ULevelAttributes_C_GetTitleText_Params params;
+	ULevelAttributes_C_GetTitleText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -249,16 +249,16 @@ void ULevelAttributes_C::GetDefaultTitle(struct FText* defaultTitle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.GetDefaultTitle");
 
-	ULevelAttributes_C_GetDefaultTitle_Params params;
+	ULevelAttributes_C_GetDefaultTitle_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (defaultTitle != nullptr)
-		*defaultTitle = params.defaultTitle;
+		*defaultTitle = fn_params.defaultTitle;
 }
 
 
@@ -271,16 +271,16 @@ void ULevelAttributes_C::SelectCustomColor(struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.SelectCustomColor");
 
-	ULevelAttributes_C_SelectCustomColor_Params params;
+	ULevelAttributes_C_SelectCustomColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Color != nullptr)
-		*Color = params.Color;
+		*Color = fn_params.Color;
 }
 
 
@@ -293,12 +293,12 @@ void ULevelAttributes_C::OnMinimize(bool shouldMinimize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.OnMinimize");
 
-	ULevelAttributes_C_OnMinimize_Params params;
-	params.shouldMinimize = shouldMinimize;
+	ULevelAttributes_C_OnMinimize_Params fn_params;
+	fn_params.shouldMinimize = shouldMinimize;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -311,11 +311,11 @@ void ULevelAttributes_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.Construct");
 
-	ULevelAttributes_C_Construct_Params params;
+	ULevelAttributes_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -328,11 +328,11 @@ void ULevelAttributes_C::OnPrisonerSet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.OnPrisonerSet");
 
-	ULevelAttributes_C_OnPrisonerSet_Params params;
+	ULevelAttributes_C_OnPrisonerSet_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -345,11 +345,11 @@ void ULevelAttributes_C::UpdateContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.UpdateContent");
 
-	ULevelAttributes_C_UpdateContent_Params params;
+	ULevelAttributes_C_UpdateContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -362,11 +362,11 @@ void ULevelAttributes_C::ShouldActivateAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.ShouldActivateAlarm");
 
-	ULevelAttributes_C_ShouldActivateAlarm_Params params;
+	ULevelAttributes_C_ShouldActivateAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -379,11 +379,11 @@ void ULevelAttributes_C::ShouldDeactivateAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.ShouldDeactivateAlarm");
 
-	ULevelAttributes_C_ShouldDeactivateAlarm_Params params;
+	ULevelAttributes_C_ShouldDeactivateAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -396,11 +396,11 @@ void ULevelAttributes_C::ShouldActivateBFPAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.ShouldActivateBFPAlarm");
 
-	ULevelAttributes_C_ShouldActivateBFPAlarm_Params params;
+	ULevelAttributes_C_ShouldActivateBFPAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -413,11 +413,11 @@ void ULevelAttributes_C::AlarmOnWindowContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.AlarmOnWindowContent");
 
-	ULevelAttributes_C_AlarmOnWindowContent_Params params;
+	ULevelAttributes_C_AlarmOnWindowContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -430,11 +430,11 @@ void ULevelAttributes_C::AlarmOffWindowContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.AlarmOffWindowContent");
 
-	ULevelAttributes_C_AlarmOffWindowContent_Params params;
+	ULevelAttributes_C_AlarmOffWindowContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -449,12 +449,12 @@ void ULevelAttributes_C::ExecuteUbergraph_LevelAttributes(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.ExecuteUbergraph_LevelAttributes");
 
-	ULevelAttributes_C_ExecuteUbergraph_LevelAttributes_Params params;
-	params.EntryPoint = EntryPoint;
+	ULevelAttributes_C_ExecuteUbergraph_LevelAttributes_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -467,11 +467,11 @@ void ULevelAttributes_C::AlarmOffBodyConditionEventDispatcher__DelegateSignature
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.AlarmOffBodyConditionEventDispatcher__DelegateSignature");
 
-	ULevelAttributes_C_AlarmOffBodyConditionEventDispatcher__DelegateSignature_Params params;
+	ULevelAttributes_C_AlarmOffBodyConditionEventDispatcher__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -484,11 +484,11 @@ void ULevelAttributes_C::AlarmOnBodyConditionEventDispatcher__DelegateSignature(
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.AlarmOnBodyConditionEventDispatcher__DelegateSignature");
 
-	ULevelAttributes_C_AlarmOnBodyConditionEventDispatcher__DelegateSignature_Params params;
+	ULevelAttributes_C_AlarmOnBodyConditionEventDispatcher__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

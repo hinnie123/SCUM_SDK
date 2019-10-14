@@ -21,15 +21,15 @@ struct FText UUI_CTFRoundInfoWidget_C::GetRoundStatus()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CTFRoundInfoWidget.UI_CTFRoundInfoWidget_C.GetRoundStatus");
 
-	UUI_CTFRoundInfoWidget_C_GetRoundStatus_Params params;
+	UUI_CTFRoundInfoWidget_C_GetRoundStatus_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -42,15 +42,15 @@ ESlateVisibility UUI_CTFRoundInfoWidget_C::GetTimeLeftBoxVisibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CTFRoundInfoWidget.UI_CTFRoundInfoWidget_C.GetTimeLeftBoxVisibility");
 
-	UUI_CTFRoundInfoWidget_C_GetTimeLeftBoxVisibility_Params params;
+	UUI_CTFRoundInfoWidget_C_GetTimeLeftBoxVisibility_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -63,15 +63,15 @@ struct FText UUI_CTFRoundInfoWidget_C::GetTimeLeftDescriptionText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CTFRoundInfoWidget.UI_CTFRoundInfoWidget_C.GetTimeLeftDescriptionText");
 
-	UUI_CTFRoundInfoWidget_C_GetTimeLeftDescriptionText_Params params;
+	UUI_CTFRoundInfoWidget_C_GetTimeLeftDescriptionText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -84,15 +84,15 @@ struct FText UUI_CTFRoundInfoWidget_C::GetTimeLeftText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CTFRoundInfoWidget.UI_CTFRoundInfoWidget_C.GetTimeLeftText");
 
-	UUI_CTFRoundInfoWidget_C_GetTimeLeftText_Params params;
+	UUI_CTFRoundInfoWidget_C_GetTimeLeftText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -105,12 +105,12 @@ void UUI_CTFRoundInfoWidget_C::SetGameEvent(class AGameEventBase** gameEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CTFRoundInfoWidget.UI_CTFRoundInfoWidget_C.SetGameEvent");
 
-	UUI_CTFRoundInfoWidget_C_SetGameEvent_Params params;
-	params.gameEvent = gameEvent;
+	UUI_CTFRoundInfoWidget_C_SetGameEvent_Params fn_params;
+	fn_params.gameEvent = gameEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -125,12 +125,12 @@ void UUI_CTFRoundInfoWidget_C::ExecuteUbergraph_UI_CTFRoundInfoWidget(int EntryP
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CTFRoundInfoWidget.UI_CTFRoundInfoWidget_C.ExecuteUbergraph_UI_CTFRoundInfoWidget");
 
-	UUI_CTFRoundInfoWidget_C_ExecuteUbergraph_UI_CTFRoundInfoWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_CTFRoundInfoWidget_C_ExecuteUbergraph_UI_CTFRoundInfoWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

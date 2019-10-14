@@ -22,17 +22,17 @@ struct FSoftObjectPath UAssetRegistryHelpers::STATIC_ToSoftObjectPath(const stru
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.ToSoftObjectPath");
 
-	UAssetRegistryHelpers_ToSoftObjectPath_Params params;
-	params.InAssetData = InAssetData;
+	UAssetRegistryHelpers_ToSoftObjectPath_Params fn_params;
+	fn_params.InAssetData = InAssetData;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -47,18 +47,18 @@ struct FARFilter UAssetRegistryHelpers::STATIC_SetFilterTagsAndValues(const stru
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.SetFilterTagsAndValues");
 
-	UAssetRegistryHelpers_SetFilterTagsAndValues_Params params;
-	params.InFilter = InFilter;
-	params.InTagsAndValues = InTagsAndValues;
+	UAssetRegistryHelpers_SetFilterTagsAndValues_Params fn_params;
+	fn_params.InFilter = InFilter;
+	fn_params.InTagsAndValues = InTagsAndValues;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -72,17 +72,17 @@ bool UAssetRegistryHelpers::STATIC_IsValid(const struct FAssetData& InAssetData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.IsValid");
 
-	UAssetRegistryHelpers_IsValid_Params params;
-	params.InAssetData = InAssetData;
+	UAssetRegistryHelpers_IsValid_Params fn_params;
+	fn_params.InAssetData = InAssetData;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -96,17 +96,17 @@ bool UAssetRegistryHelpers::STATIC_IsUAsset(const struct FAssetData& InAssetData
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.IsUAsset");
 
-	UAssetRegistryHelpers_IsUAsset_Params params;
-	params.InAssetData = InAssetData;
+	UAssetRegistryHelpers_IsUAsset_Params fn_params;
+	fn_params.InAssetData = InAssetData;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -120,17 +120,17 @@ bool UAssetRegistryHelpers::STATIC_IsRedirector(const struct FAssetData& InAsset
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.IsRedirector");
 
-	UAssetRegistryHelpers_IsRedirector_Params params;
-	params.InAssetData = InAssetData;
+	UAssetRegistryHelpers_IsRedirector_Params fn_params;
+	fn_params.InAssetData = InAssetData;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -144,17 +144,17 @@ bool UAssetRegistryHelpers::STATIC_IsAssetLoaded(const struct FAssetData& InAsse
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.IsAssetLoaded");
 
-	UAssetRegistryHelpers_IsAssetLoaded_Params params;
-	params.InAssetData = InAssetData;
+	UAssetRegistryHelpers_IsAssetLoaded_Params fn_params;
+	fn_params.InAssetData = InAssetData;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -170,21 +170,21 @@ bool UAssetRegistryHelpers::STATIC_GetTagValue(const struct FAssetData& InAssetD
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.GetTagValue");
 
-	UAssetRegistryHelpers_GetTagValue_Params params;
-	params.InAssetData = InAssetData;
-	params.InTagName = InTagName;
+	UAssetRegistryHelpers_GetTagValue_Params fn_params;
+	fn_params.InAssetData = InAssetData;
+	fn_params.InTagName = InTagName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutTagValue != nullptr)
-		*OutTagValue = params.OutTagValue;
+		*OutTagValue = fn_params.OutTagValue;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -198,17 +198,17 @@ struct FString UAssetRegistryHelpers::STATIC_GetFullName(const struct FAssetData
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.GetFullName");
 
-	UAssetRegistryHelpers_GetFullName_Params params;
-	params.InAssetData = InAssetData;
+	UAssetRegistryHelpers_GetFullName_Params fn_params;
+	fn_params.InAssetData = InAssetData;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -222,17 +222,17 @@ struct FString UAssetRegistryHelpers::STATIC_GetExportTextName(const struct FAss
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.GetExportTextName");
 
-	UAssetRegistryHelpers_GetExportTextName_Params params;
-	params.InAssetData = InAssetData;
+	UAssetRegistryHelpers_GetExportTextName_Params fn_params;
+	fn_params.InAssetData = InAssetData;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -246,17 +246,17 @@ class UClass* UAssetRegistryHelpers::STATIC_GetClass(const struct FAssetData& In
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.GetClass");
 
-	UAssetRegistryHelpers_GetClass_Params params;
-	params.InAssetData = InAssetData;
+	UAssetRegistryHelpers_GetClass_Params fn_params;
+	fn_params.InAssetData = InAssetData;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -269,16 +269,16 @@ TScriptInterface<class UAssetRegistry> UAssetRegistryHelpers::STATIC_GetAssetReg
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.GetAssetRegistry");
 
-	UAssetRegistryHelpers_GetAssetRegistry_Params params;
+	UAssetRegistryHelpers_GetAssetRegistry_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -292,17 +292,17 @@ class UObject* UAssetRegistryHelpers::STATIC_GetAsset(const struct FAssetData& I
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.GetAsset");
 
-	UAssetRegistryHelpers_GetAsset_Params params;
-	params.InAssetData = InAssetData;
+	UAssetRegistryHelpers_GetAsset_Params fn_params;
+	fn_params.InAssetData = InAssetData;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -317,18 +317,18 @@ struct FAssetData UAssetRegistryHelpers::STATIC_CreateAssetData(class UObject* I
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistryHelpers.CreateAssetData");
 
-	UAssetRegistryHelpers_CreateAssetData_Params params;
-	params.InAsset = InAsset;
-	params.bAllowBlueprintClass = bAllowBlueprintClass;
+	UAssetRegistryHelpers_CreateAssetData_Params fn_params;
+	fn_params.InAsset = InAsset;
+	fn_params.bAllowBlueprintClass = bAllowBlueprintClass;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -341,13 +341,13 @@ void UAssetRegistry::SearchAllAssets(bool bSynchronousSearch)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.SearchAllAssets");
 
-	UAssetRegistry_SearchAllAssets_Params params;
-	params.bSynchronousSearch = bSynchronousSearch;
+	UAssetRegistry_SearchAllAssets_Params fn_params;
+	fn_params.bSynchronousSearch = bSynchronousSearch;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -363,14 +363,14 @@ void UAssetRegistry::ScanPathsSynchronous(TArray<struct FString> InPaths, bool b
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.ScanPathsSynchronous");
 
-	UAssetRegistry_ScanPathsSynchronous_Params params;
-	params.InPaths = InPaths;
-	params.bForceRescan = bForceRescan;
+	UAssetRegistry_ScanPathsSynchronous_Params fn_params;
+	fn_params.InPaths = InPaths;
+	fn_params.bForceRescan = bForceRescan;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -385,13 +385,13 @@ void UAssetRegistry::ScanModifiedAssetFiles(TArray<struct FString> InFilePaths)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.ScanModifiedAssetFiles");
 
-	UAssetRegistry_ScanModifiedAssetFiles_Params params;
-	params.InFilePaths = InFilePaths;
+	UAssetRegistry_ScanModifiedAssetFiles_Params fn_params;
+	fn_params.InFilePaths = InFilePaths;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -407,14 +407,14 @@ void UAssetRegistry::ScanFilesSynchronous(TArray<struct FString> InFilePaths, bo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.ScanFilesSynchronous");
 
-	UAssetRegistry_ScanFilesSynchronous_Params params;
-	params.InFilePaths = InFilePaths;
-	params.bForceRescan = bForceRescan;
+	UAssetRegistry_ScanFilesSynchronous_Params fn_params;
+	fn_params.InFilePaths = InFilePaths;
+	fn_params.bForceRescan = bForceRescan;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -430,18 +430,18 @@ void UAssetRegistry::RunAssetsThroughFilter(const struct FARFilter& Filter, TArr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.RunAssetsThroughFilter");
 
-	UAssetRegistry_RunAssetsThroughFilter_Params params;
-	params.Filter = Filter;
+	UAssetRegistry_RunAssetsThroughFilter_Params fn_params;
+	fn_params.Filter = Filter;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (AssetDataList != nullptr)
-		*AssetDataList = params.AssetDataList;
+		*AssetDataList = fn_params.AssetDataList;
 }
 
 
@@ -454,13 +454,13 @@ void UAssetRegistry::PrioritizeSearchPath(const struct FString& PathToPrioritize
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.PrioritizeSearchPath");
 
-	UAssetRegistry_PrioritizeSearchPath_Params params;
-	params.PathToPrioritize = PathToPrioritize;
+	UAssetRegistry_PrioritizeSearchPath_Params fn_params;
+	fn_params.PathToPrioritize = PathToPrioritize;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -475,16 +475,16 @@ bool UAssetRegistry::IsLoadingAssets()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.IsLoadingAssets");
 
-	UAssetRegistry_IsLoadingAssets_Params params;
+	UAssetRegistry_IsLoadingAssets_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -499,18 +499,18 @@ bool UAssetRegistry::HasAssets(const struct FName& PackagePath, bool bRecursive)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.HasAssets");
 
-	UAssetRegistry_HasAssets_Params params;
-	params.PackagePath = PackagePath;
-	params.bRecursive = bRecursive;
+	UAssetRegistry_HasAssets_Params fn_params;
+	fn_params.PackagePath = PackagePath;
+	fn_params.bRecursive = bRecursive;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -525,19 +525,19 @@ void UAssetRegistry::GetSubPaths(const struct FString& InBasePath, bool bInRecur
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetSubPaths");
 
-	UAssetRegistry_GetSubPaths_Params params;
-	params.InBasePath = InBasePath;
-	params.bInRecurse = bInRecurse;
+	UAssetRegistry_GetSubPaths_Params fn_params;
+	fn_params.InBasePath = InBasePath;
+	fn_params.bInRecurse = bInRecurse;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutPathList != nullptr)
-		*OutPathList = params.OutPathList;
+		*OutPathList = fn_params.OutPathList;
 }
 
 
@@ -554,22 +554,22 @@ bool UAssetRegistry::GetAssetsByPath(const struct FName& PackagePath, bool bRecu
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetAssetsByPath");
 
-	UAssetRegistry_GetAssetsByPath_Params params;
-	params.PackagePath = PackagePath;
-	params.bRecursive = bRecursive;
-	params.bIncludeOnlyOnDiskAssets = bIncludeOnlyOnDiskAssets;
+	UAssetRegistry_GetAssetsByPath_Params fn_params;
+	fn_params.PackagePath = PackagePath;
+	fn_params.bRecursive = bRecursive;
+	fn_params.bIncludeOnlyOnDiskAssets = bIncludeOnlyOnDiskAssets;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutAssetData != nullptr)
-		*OutAssetData = params.OutAssetData;
+		*OutAssetData = fn_params.OutAssetData;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -585,21 +585,21 @@ bool UAssetRegistry::GetAssetsByPackageName(const struct FName& PackageName, boo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetAssetsByPackageName");
 
-	UAssetRegistry_GetAssetsByPackageName_Params params;
-	params.PackageName = PackageName;
-	params.bIncludeOnlyOnDiskAssets = bIncludeOnlyOnDiskAssets;
+	UAssetRegistry_GetAssetsByPackageName_Params fn_params;
+	fn_params.PackageName = PackageName;
+	fn_params.bIncludeOnlyOnDiskAssets = bIncludeOnlyOnDiskAssets;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutAssetData != nullptr)
-		*OutAssetData = params.OutAssetData;
+		*OutAssetData = fn_params.OutAssetData;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -615,21 +615,21 @@ bool UAssetRegistry::GetAssetsByClass(const struct FName& ClassName, bool bSearc
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetAssetsByClass");
 
-	UAssetRegistry_GetAssetsByClass_Params params;
-	params.ClassName = ClassName;
-	params.bSearchSubClasses = bSearchSubClasses;
+	UAssetRegistry_GetAssetsByClass_Params fn_params;
+	fn_params.ClassName = ClassName;
+	fn_params.bSearchSubClasses = bSearchSubClasses;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutAssetData != nullptr)
-		*OutAssetData = params.OutAssetData;
+		*OutAssetData = fn_params.OutAssetData;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -644,20 +644,20 @@ bool UAssetRegistry::GetAssets(const struct FARFilter& Filter, TArray<struct FAs
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetAssets");
 
-	UAssetRegistry_GetAssets_Params params;
-	params.Filter = Filter;
+	UAssetRegistry_GetAssets_Params fn_params;
+	fn_params.Filter = Filter;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutAssetData != nullptr)
-		*OutAssetData = params.OutAssetData;
+		*OutAssetData = fn_params.OutAssetData;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -672,18 +672,18 @@ struct FAssetData UAssetRegistry::GetAssetByObjectPath(const struct FName& Objec
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetAssetByObjectPath");
 
-	UAssetRegistry_GetAssetByObjectPath_Params params;
-	params.ObjectPath = ObjectPath;
-	params.bIncludeOnlyOnDiskAssets = bIncludeOnlyOnDiskAssets;
+	UAssetRegistry_GetAssetByObjectPath_Params fn_params;
+	fn_params.ObjectPath = ObjectPath;
+	fn_params.bIncludeOnlyOnDiskAssets = bIncludeOnlyOnDiskAssets;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -696,17 +696,17 @@ void UAssetRegistry::GetAllCachedPaths(TArray<struct FString>* OutPathList)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetAllCachedPaths");
 
-	UAssetRegistry_GetAllCachedPaths_Params params;
+	UAssetRegistry_GetAllCachedPaths_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutPathList != nullptr)
-		*OutPathList = params.OutPathList;
+		*OutPathList = fn_params.OutPathList;
 }
 
 
@@ -721,20 +721,20 @@ bool UAssetRegistry::GetAllAssets(bool bIncludeOnlyOnDiskAssets, TArray<struct F
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.GetAllAssets");
 
-	UAssetRegistry_GetAllAssets_Params params;
-	params.bIncludeOnlyOnDiskAssets = bIncludeOnlyOnDiskAssets;
+	UAssetRegistry_GetAllAssets_Params fn_params;
+	fn_params.bIncludeOnlyOnDiskAssets = bIncludeOnlyOnDiskAssets;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutAssetData != nullptr)
-		*OutAssetData = params.OutAssetData;
+		*OutAssetData = fn_params.OutAssetData;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

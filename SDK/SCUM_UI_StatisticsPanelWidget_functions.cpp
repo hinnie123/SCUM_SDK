@@ -23,17 +23,17 @@ struct FEventReply UUI_StatisticsPanelWidget_C::OnPreviewKeyDown(struct FGeometr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_StatisticsPanelWidget.UI_StatisticsPanelWidget_C.OnPreviewKeyDown");
 
-	UUI_StatisticsPanelWidget_C_OnPreviewKeyDown_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InKeyEvent = InKeyEvent;
+	UUI_StatisticsPanelWidget_C_OnPreviewKeyDown_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InKeyEvent = InKeyEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -44,11 +44,11 @@ void UUI_StatisticsPanelWidget_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_StatisticsPanelWidget.UI_StatisticsPanelWidget_C.Construct");
 
-	UUI_StatisticsPanelWidget_C_Construct_Params params;
+	UUI_StatisticsPanelWidget_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -61,11 +61,11 @@ void UUI_StatisticsPanelWidget_C::OnOpened()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_StatisticsPanelWidget.UI_StatisticsPanelWidget_C.OnOpened");
 
-	UUI_StatisticsPanelWidget_C_OnOpened_Params params;
+	UUI_StatisticsPanelWidget_C_OnOpened_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -78,11 +78,11 @@ void UUI_StatisticsPanelWidget_C::OnESC()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_StatisticsPanelWidget.UI_StatisticsPanelWidget_C.OnESC");
 
-	UUI_StatisticsPanelWidget_C_OnESC_Params params;
+	UUI_StatisticsPanelWidget_C_OnESC_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -97,12 +97,12 @@ void UUI_StatisticsPanelWidget_C::ExecuteUbergraph_UI_StatisticsPanelWidget(int 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_StatisticsPanelWidget.UI_StatisticsPanelWidget_C.ExecuteUbergraph_UI_StatisticsPanelWidget");
 
-	UUI_StatisticsPanelWidget_C_ExecuteUbergraph_UI_StatisticsPanelWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_StatisticsPanelWidget_C_ExecuteUbergraph_UI_StatisticsPanelWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

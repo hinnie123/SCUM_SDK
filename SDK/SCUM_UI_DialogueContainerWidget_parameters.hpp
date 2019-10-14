@@ -14,6 +14,18 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function UI_DialogueContainerWidget.UI_DialogueContainerWidget_C.GetHideAvatarAnimation
+struct UUI_DialogueContainerWidget_C_GetHideAvatarAnimation_Params
+{
+	class UWidgetAnimation*                            ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function UI_DialogueContainerWidget.UI_DialogueContainerWidget_C.GetShowAvatarAnimation
+struct UUI_DialogueContainerWidget_C_GetShowAvatarAnimation_Params
+{
+	class UWidgetAnimation*                            ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
 // Function UI_DialogueContainerWidget.UI_DialogueContainerWidget_C.Construct
 struct UUI_DialogueContainerWidget_C_Construct_Params
 {
@@ -24,22 +36,6 @@ struct UUI_DialogueContainerWidget_C_Tick_Params
 {
 	struct FGeometry*                                  MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 	float*                                             InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UI_DialogueContainerWidget.UI_DialogueContainerWidget_C.OnAnimationFinished
-struct UUI_DialogueContainerWidget_C_OnAnimationFinished_Params
-{
-	class UWidgetAnimation**                           Animation;                                                // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-};
-
-// Function UI_DialogueContainerWidget.UI_DialogueContainerWidget_C.HideAvatarAnimation
-struct UUI_DialogueContainerWidget_C_HideAvatarAnimation_Params
-{
-};
-
-// Function UI_DialogueContainerWidget.UI_DialogueContainerWidget_C.ShowAvatarAnimation
-struct UUI_DialogueContainerWidget_C_ShowAvatarAnimation_Params
-{
 };
 
 // Function UI_DialogueContainerWidget.UI_DialogueContainerWidget_C.ExecuteUbergraph_UI_DialogueContainerWidget

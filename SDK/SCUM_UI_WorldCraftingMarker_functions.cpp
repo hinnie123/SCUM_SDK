@@ -21,15 +21,15 @@ struct FText UUI_WorldCraftingMarker_C::Get_Label_Text()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WorldCraftingMarker.UI_WorldCraftingMarker_C.Get_Label_Text");
 
-	UUI_WorldCraftingMarker_C_Get_Label_Text_Params params;
+	UUI_WorldCraftingMarker_C_Get_Label_Text_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -42,15 +42,15 @@ struct FSlateBrush UUI_WorldCraftingMarker_C::Get_Accent_Brush()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WorldCraftingMarker.UI_WorldCraftingMarker_C.Get_Accent_Brush");
 
-	UUI_WorldCraftingMarker_C_Get_Accent_Brush_Params params;
+	UUI_WorldCraftingMarker_C_Get_Accent_Brush_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -63,15 +63,15 @@ struct FLinearColor UUI_WorldCraftingMarker_C::Get_Emphasis_Color()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WorldCraftingMarker.UI_WorldCraftingMarker_C.Get_Emphasis_Color");
 
-	UUI_WorldCraftingMarker_C_Get_Emphasis_Color_Params params;
+	UUI_WorldCraftingMarker_C_Get_Emphasis_Color_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -84,15 +84,15 @@ ESlateVisibility UUI_WorldCraftingMarker_C::Get_Emphasis_Visibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WorldCraftingMarker.UI_WorldCraftingMarker_C.Get_Emphasis_Visibility");
 
-	UUI_WorldCraftingMarker_C_Get_Emphasis_Visibility_Params params;
+	UUI_WorldCraftingMarker_C_Get_Emphasis_Visibility_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -105,15 +105,15 @@ ESlateVisibility UUI_WorldCraftingMarker_C::Get_Bar_Visibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WorldCraftingMarker.UI_WorldCraftingMarker_C.Get_Bar_Visibility");
 
-	UUI_WorldCraftingMarker_C_Get_Bar_Visibility_Params params;
+	UUI_WorldCraftingMarker_C_Get_Bar_Visibility_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -126,15 +126,15 @@ struct FText UUI_WorldCraftingMarker_C::Get_Distance_Text()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WorldCraftingMarker.UI_WorldCraftingMarker_C.Get_Distance_Text");
 
-	UUI_WorldCraftingMarker_C_Get_Distance_Text_Params params;
+	UUI_WorldCraftingMarker_C_Get_Distance_Text_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -147,15 +147,15 @@ struct FSlateBrush UUI_WorldCraftingMarker_C::Get_Bar_Brush()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WorldCraftingMarker.UI_WorldCraftingMarker_C.Get_Bar_Brush");
 
-	UUI_WorldCraftingMarker_C_Get_Bar_Brush_Params params;
+	UUI_WorldCraftingMarker_C_Get_Bar_Brush_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -168,15 +168,15 @@ ESlateVisibility UUI_WorldCraftingMarker_C::Get_BigPointer_Visibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WorldCraftingMarker.UI_WorldCraftingMarker_C.Get_BigPointer_Visibility");
 
-	UUI_WorldCraftingMarker_C_Get_BigPointer_Visibility_Params params;
+	UUI_WorldCraftingMarker_C_Get_BigPointer_Visibility_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -189,15 +189,15 @@ ESlateVisibility UUI_WorldCraftingMarker_C::Get_SmallPointer_Visibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WorldCraftingMarker.UI_WorldCraftingMarker_C.Get_SmallPointer_Visibility");
 
-	UUI_WorldCraftingMarker_C_Get_SmallPointer_Visibility_Params params;
+	UUI_WorldCraftingMarker_C_Get_SmallPointer_Visibility_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -210,15 +210,15 @@ struct FSlateBrush UUI_WorldCraftingMarker_C::Get_Icon_Brush()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WorldCraftingMarker.UI_WorldCraftingMarker_C.Get_Icon_Brush");
 
-	UUI_WorldCraftingMarker_C_Get_Icon_Brush_Params params;
+	UUI_WorldCraftingMarker_C_Get_Icon_Brush_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -232,13 +232,13 @@ void UUI_WorldCraftingMarker_C::Tick(struct FGeometry* MyGeometry, float* InDelt
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WorldCraftingMarker.UI_WorldCraftingMarker_C.Tick");
 
-	UUI_WorldCraftingMarker_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UUI_WorldCraftingMarker_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -253,12 +253,12 @@ void UUI_WorldCraftingMarker_C::ChangeMode(ECraftingMarkerMode* Mode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WorldCraftingMarker.UI_WorldCraftingMarker_C.ChangeMode");
 
-	UUI_WorldCraftingMarker_C_ChangeMode_Params params;
-	params.Mode = Mode;
+	UUI_WorldCraftingMarker_C_ChangeMode_Params fn_params;
+	fn_params.Mode = Mode;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -273,12 +273,12 @@ void UUI_WorldCraftingMarker_C::ExecuteUbergraph_UI_WorldCraftingMarker(int Entr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_WorldCraftingMarker.UI_WorldCraftingMarker_C.ExecuteUbergraph_UI_WorldCraftingMarker");
 
-	UUI_WorldCraftingMarker_C_ExecuteUbergraph_UI_WorldCraftingMarker_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_WorldCraftingMarker_C_ExecuteUbergraph_UI_WorldCraftingMarker_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

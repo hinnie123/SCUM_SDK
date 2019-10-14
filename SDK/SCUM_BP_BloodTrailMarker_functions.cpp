@@ -19,11 +19,11 @@ void ABP_BloodTrailMarker_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BloodTrailMarker.BP_BloodTrailMarker_C.UserConstructionScript");
 
-	ABP_BloodTrailMarker_C_UserConstructionScript_Params params;
+	ABP_BloodTrailMarker_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void ABP_BloodTrailMarker_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BloodTrailMarker.BP_BloodTrailMarker_C.ReceiveBeginPlay");
 
-	ABP_BloodTrailMarker_C_ReceiveBeginPlay_Params params;
+	ABP_BloodTrailMarker_C_ReceiveBeginPlay_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -55,12 +55,12 @@ void ABP_BloodTrailMarker_C::ExecuteUbergraph_BP_BloodTrailMarker(int EntryPoint
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BloodTrailMarker.BP_BloodTrailMarker_C.ExecuteUbergraph_BP_BloodTrailMarker");
 
-	ABP_BloodTrailMarker_C_ExecuteUbergraph_BP_BloodTrailMarker_Params params;
-	params.EntryPoint = EntryPoint;
+	ABP_BloodTrailMarker_C_ExecuteUbergraph_BP_BloodTrailMarker_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

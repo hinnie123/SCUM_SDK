@@ -22,16 +22,16 @@ bool UBP_Mosin_InsertBullet_C::CanExecuteUsingData(struct FWeaponReloadData* Dat
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Mosin_InsertBullet.BP_Mosin_InsertBullet_C.CanExecuteUsingData");
 
-	UBP_Mosin_InsertBullet_C_CanExecuteUsingData_Params params;
-	params.Data = Data;
+	UBP_Mosin_InsertBullet_C_CanExecuteUsingData_Params fn_params;
+	fn_params.Data = Data;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

@@ -81,12 +81,12 @@ public:
 	void UpdatePreviewPrisoners(const struct FString& ServerIp, int ServerResponsePort);
 	void GetCurrentUser(class UDbUser** user);
 	void SaveDirectionConnectionAddress();
-	void ChooseServerAndConnect(const struct FString& authToken);
+	void ChooseServerAndConnect(const struct FString& AuthToken);
 	void ChooseServer(struct FString* Ip, int* ResponsePort);
 	void HidePasswordPopup();
 	void ShowPasswordPopup();
 	void EnterPassword();
-	void ConnectToServerInfo(const struct FServerInfo& ServerInfo, const struct FString& authToken);
+	void ConnectToServerInfo(const struct FServerInfo& ServerInfo, const struct FString& AuthToken);
 	void UpdateSelectedServer();
 	struct FEventReply OnPreviewKeyDown(struct FGeometry* MyGeometry, struct FKeyEvent* InKeyEvent);
 	void SelectServerForConnection(class UServerInfoWidget_C* ServerInfo);
@@ -128,9 +128,9 @@ public:
 	void EndWaitingOnServerResponse();
 	void BndEvt__DirectConnectTextBox_K2Node_ComponentBoundEvent_2_OnEditableTextBoxChangedEvent__DelegateSignature(const struct FText& Text);
 	void BndEvt__UI_MenuButton_C_0_K2Node_ComponentBoundEvent_121_OnClicked__DelegateSignature();
-	void OpenContinueOrNewDialog(struct FString* Ip, int* GameplayPort, int* ResponsePort, struct FString* authToken);
-	void OnContinueWithCharacter(const struct FString& Ip, int GameplayPort, int ResponsePort, const struct FString& authToken);
-	void OnCreateNewCharacter(const struct FString& Ip, int GameplayPort, int ResponsePort, const struct FString& authToken);
+	void OpenContinueOrNewDialog(struct FString* Ip, int* GameplayPort, int* ResponsePort, struct FString* AuthToken);
+	void OnContinueWithCharacter(const struct FString& Ip, int GameplayPort, int ResponsePort, const struct FString& AuthToken);
+	void OnCreateNewCharacter(const struct FString& Ip, int GameplayPort, int ResponsePort, const struct FString& AuthToken);
 	void OnNewCharacterConfirmed();
 	void NewCharacterCanceled();
 	void BndEvt__SortByPing_K2Node_ComponentBoundEvent_882_OnClicked__DelegateSignature(class UUI_SortByButton_C* Button, TEnumAsByte<ESortByTypes> Type);

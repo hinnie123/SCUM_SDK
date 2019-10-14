@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Screwdriver.Screwdriver_C
-// 0x0000 (0x0778 - 0x0778)
+// 0x0000 (0x0818 - 0x0818)
 class AScrewdriver_C : public AItem
 {
 public:

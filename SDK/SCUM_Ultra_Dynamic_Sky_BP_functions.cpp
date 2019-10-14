@@ -19,11 +19,11 @@ void AUltra_Dynamic_Sky_BP_C::Set_Material_Variables()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.Set Material Variables");
 
-	AUltra_Dynamic_Sky_BP_C_Set_Material_Variables_Params params;
+	AUltra_Dynamic_Sky_BP_C_Set_Material_Variables_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void AUltra_Dynamic_Sky_BP_C::Set_Solar_Angle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.Set Solar Angle");
 
-	AUltra_Dynamic_Sky_BP_C_Set_Solar_Angle_Params params;
+	AUltra_Dynamic_Sky_BP_C_Set_Solar_Angle_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -53,11 +53,11 @@ void AUltra_Dynamic_Sky_BP_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.UserConstructionScript");
 
-	AUltra_Dynamic_Sky_BP_C_UserConstructionScript_Params params;
+	AUltra_Dynamic_Sky_BP_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -70,11 +70,11 @@ void AUltra_Dynamic_Sky_BP_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.ReceiveBeginPlay");
 
-	AUltra_Dynamic_Sky_BP_C_ReceiveBeginPlay_Params params;
+	AUltra_Dynamic_Sky_BP_C_ReceiveBeginPlay_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -89,12 +89,12 @@ void AUltra_Dynamic_Sky_BP_C::ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.ReceiveTick");
 
-	AUltra_Dynamic_Sky_BP_C_ReceiveTick_Params params;
-	params.DeltaSeconds = DeltaSeconds;
+	AUltra_Dynamic_Sky_BP_C_ReceiveTick_Params fn_params;
+	fn_params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -107,11 +107,11 @@ void AUltra_Dynamic_Sky_BP_C::UpdateSky()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.UpdateSky");
 
-	AUltra_Dynamic_Sky_BP_C_UpdateSky_Params params;
+	AUltra_Dynamic_Sky_BP_C_UpdateSky_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -126,12 +126,12 @@ void AUltra_Dynamic_Sky_BP_C::ExecuteUbergraph_Ultra_Dynamic_Sky_BP(int EntryPoi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.ExecuteUbergraph_Ultra_Dynamic_Sky_BP");
 
-	AUltra_Dynamic_Sky_BP_C_ExecuteUbergraph_Ultra_Dynamic_Sky_BP_Params params;
-	params.EntryPoint = EntryPoint;
+	AUltra_Dynamic_Sky_BP_C_ExecuteUbergraph_Ultra_Dynamic_Sky_BP_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

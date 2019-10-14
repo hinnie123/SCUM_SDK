@@ -19,11 +19,11 @@ void AFireplace1_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Fireplace1.Fireplace1_C.UserConstructionScript");
 
-	AFireplace1_C_UserConstructionScript_Params params;
+	AFireplace1_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

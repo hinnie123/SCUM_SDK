@@ -23,17 +23,17 @@ struct FEventReply UUI_ActionProgress_C::OnMouseButtonDown(struct FGeometry* MyG
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ActionProgress.UI_ActionProgress_C.OnMouseButtonDown");
 
-	UUI_ActionProgress_C_OnMouseButtonDown_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_ActionProgress_C_OnMouseButtonDown_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -46,15 +46,15 @@ struct FText UUI_ActionProgress_C::Get_PercentageText_Text_1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ActionProgress.UI_ActionProgress_C.Get_PercentageText_Text_1");
 
-	UUI_ActionProgress_C_Get_PercentageText_Text_1_Params params;
+	UUI_ActionProgress_C_Get_PercentageText_Text_1_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -65,11 +65,11 @@ void UUI_ActionProgress_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ActionProgress.UI_ActionProgress_C.Construct");
 
-	UUI_ActionProgress_C_Construct_Params params;
+	UUI_ActionProgress_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -85,13 +85,13 @@ void UUI_ActionProgress_C::OnMouseEnter(struct FGeometry* MyGeometry, struct FPo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ActionProgress.UI_ActionProgress_C.OnMouseEnter");
 
-	UUI_ActionProgress_C_OnMouseEnter_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_ActionProgress_C_OnMouseEnter_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -106,12 +106,12 @@ void UUI_ActionProgress_C::OnMouseLeave(struct FPointerEvent* MouseEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ActionProgress.UI_ActionProgress_C.OnMouseLeave");
 
-	UUI_ActionProgress_C_OnMouseLeave_Params params;
-	params.MouseEvent = MouseEvent;
+	UUI_ActionProgress_C_OnMouseLeave_Params fn_params;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -126,12 +126,12 @@ void UUI_ActionProgress_C::ExecuteUbergraph_UI_ActionProgress(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ActionProgress.UI_ActionProgress_C.ExecuteUbergraph_UI_ActionProgress");
 
-	UUI_ActionProgress_C_ExecuteUbergraph_UI_ActionProgress_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_ActionProgress_C_ExecuteUbergraph_UI_ActionProgress_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

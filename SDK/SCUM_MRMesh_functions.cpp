@@ -19,12 +19,12 @@ void UMeshReconstructorBase::StopReconstruction()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MRMesh.MeshReconstructorBase.StopReconstruction");
 
-	UMeshReconstructorBase_StopReconstruction_Params params;
+	UMeshReconstructorBase_StopReconstruction_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -37,12 +37,12 @@ void UMeshReconstructorBase::StartReconstruction()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MRMesh.MeshReconstructorBase.StartReconstruction");
 
-	UMeshReconstructorBase_StartReconstruction_Params params;
+	UMeshReconstructorBase_StartReconstruction_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -55,12 +55,12 @@ void UMeshReconstructorBase::PauseReconstruction()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MRMesh.MeshReconstructorBase.PauseReconstruction");
 
-	UMeshReconstructorBase_PauseReconstruction_Params params;
+	UMeshReconstructorBase_PauseReconstruction_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -75,16 +75,16 @@ bool UMeshReconstructorBase::IsReconstructionStarted()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MRMesh.MeshReconstructorBase.IsReconstructionStarted");
 
-	UMeshReconstructorBase_IsReconstructionStarted_Params params;
+	UMeshReconstructorBase_IsReconstructionStarted_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -97,16 +97,16 @@ bool UMeshReconstructorBase::IsReconstructionPaused()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MRMesh.MeshReconstructorBase.IsReconstructionPaused");
 
-	UMeshReconstructorBase_IsReconstructionPaused_Params params;
+	UMeshReconstructorBase_IsReconstructionPaused_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -117,12 +117,12 @@ void UMeshReconstructorBase::DisconnectMRMesh()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MRMesh.MeshReconstructorBase.DisconnectMRMesh");
 
-	UMeshReconstructorBase_DisconnectMRMesh_Params params;
+	UMeshReconstructorBase_DisconnectMRMesh_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -137,13 +137,13 @@ void UMeshReconstructorBase::ConnectMRMesh(class UMRMeshComponent* Mesh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MRMesh.MeshReconstructorBase.ConnectMRMesh");
 
-	UMeshReconstructorBase_ConnectMRMesh_Params params;
-	params.Mesh = Mesh;
+	UMeshReconstructorBase_ConnectMRMesh_Params fn_params;
+	fn_params.Mesh = Mesh;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -158,16 +158,16 @@ bool UMRMeshComponent::IsConnected()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.IsConnected");
 
-	UMRMeshComponent_IsConnected_Params params;
+	UMRMeshComponent_IsConnected_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -178,12 +178,12 @@ void UMRMeshComponent::ForceNavMeshUpdate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.ForceNavMeshUpdate");
 
-	UMRMeshComponent_ForceNavMeshUpdate_Params params;
+	UMRMeshComponent_ForceNavMeshUpdate_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -196,12 +196,12 @@ void UMRMeshComponent::Clear()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.Clear");
 
-	UMRMeshComponent_Clear_Params params;
+	UMRMeshComponent_Clear_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

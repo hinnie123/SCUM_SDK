@@ -22,13 +22,13 @@ void UUI_MicInputIndicator_C::Tick(struct FGeometry* MyGeometry, float* InDeltaT
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_MicInputIndicator.UI_MicInputIndicator_C.Tick");
 
-	UUI_MicInputIndicator_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UUI_MicInputIndicator_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -41,11 +41,11 @@ void UUI_MicInputIndicator_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_MicInputIndicator.UI_MicInputIndicator_C.Construct");
 
-	UUI_MicInputIndicator_C_Construct_Params params;
+	UUI_MicInputIndicator_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -60,12 +60,12 @@ void UUI_MicInputIndicator_C::ExecuteUbergraph_UI_MicInputIndicator(int EntryPoi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_MicInputIndicator.UI_MicInputIndicator_C.ExecuteUbergraph_UI_MicInputIndicator");
 
-	UUI_MicInputIndicator_C_ExecuteUbergraph_UI_MicInputIndicator_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_MicInputIndicator_C_ExecuteUbergraph_UI_MicInputIndicator_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

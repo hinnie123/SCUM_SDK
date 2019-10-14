@@ -23,14 +23,14 @@ void UWarning_C::ShowWarning(const struct FText& Text, float Duration, const str
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Warning.Warning_C.ShowWarning");
 
-	UWarning_C_ShowWarning_Params params;
-	params.Text = Text;
-	params.Duration = Duration;
-	params.Color = Color;
+	UWarning_C_ShowWarning_Params fn_params;
+	fn_params.Text = Text;
+	fn_params.Duration = Duration;
+	fn_params.Color = Color;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -46,13 +46,13 @@ void UWarning_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Warning.Warning_C.Tick");
 
-	UWarning_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UWarning_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -67,12 +67,12 @@ void UWarning_C::ExecuteUbergraph_Warning(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Warning.Warning_C.ExecuteUbergraph_Warning");
 
-	UWarning_C_ExecuteUbergraph_Warning_Params params;
-	params.EntryPoint = EntryPoint;
+	UWarning_C_ExecuteUbergraph_Warning_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

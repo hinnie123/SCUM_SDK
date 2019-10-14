@@ -14,6 +14,12 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.CanSwitchFiringMode
+struct ABP_Weapon_M1_Garand_C_CanSwitchFiringMode_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.UserConstructionScript
 struct ABP_Weapon_M1_Garand_C_UserConstructionScript_Params
 {

@@ -21,12 +21,12 @@ void UBPI_Minimizable_C::OnMinimize(bool shouldMinimize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_Minimizable.BPI_Minimizable_C.OnMinimize");
 
-	UBPI_Minimizable_C_OnMinimize_Params params;
-	params.shouldMinimize = shouldMinimize;
+	UBPI_Minimizable_C_OnMinimize_Params fn_params;
+	fn_params.shouldMinimize = shouldMinimize;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Canteen.Canteen_C
-// 0x0000 (0x08C8 - 0x08C8)
+// 0x0000 (0x0960 - 0x0960)
 class ACanteen_C : public ADrinkItem
 {
 public:

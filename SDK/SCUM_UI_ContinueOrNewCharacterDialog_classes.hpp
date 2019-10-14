@@ -27,7 +27,7 @@ public:
 	struct FString                                     Ip;                                                       // 0x0250(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	int                                                GameplayPort;                                             // 0x0260(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	int                                                ResponsePort;                                             // 0x0264(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FString                                     authToken;                                                // 0x0268(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString                                     AuthToken;                                                // 0x0268(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	class UCanvasPanel*                                Canvas;                                                   // 0x0278(0x0008) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
@@ -41,8 +41,8 @@ public:
 	void BndEvt__NewCharacterButton_K2Node_ComponentBoundEvent_26_OnClicked__DelegateSignature();
 	void Init();
 	void ExecuteUbergraph_UI_ContinueOrNewCharacterDialog(int EntryPoint);
-	void New__DelegateSignature(const struct FString& Ip, int GameplayPort, int ResponsePort, const struct FString& authToken);
-	void Continue__DelegateSignature(const struct FString& Ip, int GameplayPort, int ResponsePort, const struct FString& authToken);
+	void New__DelegateSignature(const struct FString& Ip, int GameplayPort, int ResponsePort, const struct FString& AuthToken);
+	void Continue__DelegateSignature(const struct FString& Ip, int GameplayPort, int ResponsePort, const struct FString& AuthToken);
 };
 
 

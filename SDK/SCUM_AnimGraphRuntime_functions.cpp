@@ -30,27 +30,27 @@ void UKismetAnimationLibrary::STATIC_K2_TwoBoneIK(const struct FVector& RootPos,
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimGraphRuntime.KismetAnimationLibrary.K2_TwoBoneIK");
 
-	UKismetAnimationLibrary_K2_TwoBoneIK_Params params;
-	params.RootPos = RootPos;
-	params.JointPos = JointPos;
-	params.EndPos = EndPos;
-	params.JointTarget = JointTarget;
-	params.Effector = Effector;
-	params.bAllowStretching = bAllowStretching;
-	params.StartStretchRatio = StartStretchRatio;
-	params.MaxStretchScale = MaxStretchScale;
+	UKismetAnimationLibrary_K2_TwoBoneIK_Params fn_params;
+	fn_params.RootPos = RootPos;
+	fn_params.JointPos = JointPos;
+	fn_params.EndPos = EndPos;
+	fn_params.JointTarget = JointTarget;
+	fn_params.Effector = Effector;
+	fn_params.bAllowStretching = bAllowStretching;
+	fn_params.StartStretchRatio = StartStretchRatio;
+	fn_params.MaxStretchScale = MaxStretchScale;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutJointPos != nullptr)
-		*OutJointPos = params.OutJointPos;
+		*OutJointPos = fn_params.OutJointPos;
 	if (OutEndPos != nullptr)
-		*OutEndPos = params.OutEndPos;
+		*OutEndPos = fn_params.OutEndPos;
 }
 
 
@@ -69,22 +69,22 @@ struct FTransform UKismetAnimationLibrary::STATIC_K2_LookAt(const struct FTransf
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimGraphRuntime.KismetAnimationLibrary.K2_LookAt");
 
-	UKismetAnimationLibrary_K2_LookAt_Params params;
-	params.CurrentTransform = CurrentTransform;
-	params.TargetPosition = TargetPosition;
-	params.LookAtVector = LookAtVector;
-	params.bUseUpVector = bUseUpVector;
-	params.UpVector = UpVector;
-	params.ClampConeInDegree = ClampConeInDegree;
+	UKismetAnimationLibrary_K2_LookAt_Params fn_params;
+	fn_params.CurrentTransform = CurrentTransform;
+	fn_params.TargetPosition = TargetPosition;
+	fn_params.LookAtVector = LookAtVector;
+	fn_params.bUseUpVector = bUseUpVector;
+	fn_params.UpVector = UpVector;
+	fn_params.ClampConeInDegree = ClampConeInDegree;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -98,14 +98,14 @@ void UPlayMontageCallbackProxy::OnNotifyEndReceived(const struct FName& NotifyNa
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyEndReceived");
 
-	UPlayMontageCallbackProxy_OnNotifyEndReceived_Params params;
-	params.NotifyName = NotifyName;
-	params.BranchingPointNotifyPayload = BranchingPointNotifyPayload;
+	UPlayMontageCallbackProxy_OnNotifyEndReceived_Params fn_params;
+	fn_params.NotifyName = NotifyName;
+	fn_params.BranchingPointNotifyPayload = BranchingPointNotifyPayload;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -121,14 +121,14 @@ void UPlayMontageCallbackProxy::OnNotifyBeginReceived(const struct FName& Notify
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyBeginReceived");
 
-	UPlayMontageCallbackProxy_OnNotifyBeginReceived_Params params;
-	params.NotifyName = NotifyName;
-	params.BranchingPointNotifyPayload = BranchingPointNotifyPayload;
+	UPlayMontageCallbackProxy_OnNotifyBeginReceived_Params fn_params;
+	fn_params.NotifyName = NotifyName;
+	fn_params.BranchingPointNotifyPayload = BranchingPointNotifyPayload;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -144,14 +144,14 @@ void UPlayMontageCallbackProxy::OnMontageEnded(class UAnimMontage* Montage, bool
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageEnded");
 
-	UPlayMontageCallbackProxy_OnMontageEnded_Params params;
-	params.Montage = Montage;
-	params.bInterrupted = bInterrupted;
+	UPlayMontageCallbackProxy_OnMontageEnded_Params fn_params;
+	fn_params.Montage = Montage;
+	fn_params.bInterrupted = bInterrupted;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -167,14 +167,14 @@ void UPlayMontageCallbackProxy::OnMontageBlendingOut(class UAnimMontage* Montage
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageBlendingOut");
 
-	UPlayMontageCallbackProxy_OnMontageBlendingOut_Params params;
-	params.Montage = Montage;
-	params.bInterrupted = bInterrupted;
+	UPlayMontageCallbackProxy_OnMontageBlendingOut_Params fn_params;
+	fn_params.Montage = Montage;
+	fn_params.bInterrupted = bInterrupted;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -194,21 +194,21 @@ class UPlayMontageCallbackProxy* UPlayMontageCallbackProxy::STATIC_CreateProxyOb
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimGraphRuntime.PlayMontageCallbackProxy.CreateProxyObjectForPlayMontage");
 
-	UPlayMontageCallbackProxy_CreateProxyObjectForPlayMontage_Params params;
-	params.InSkeletalMeshComponent = InSkeletalMeshComponent;
-	params.MontageToPlay = MontageToPlay;
-	params.PlayRate = PlayRate;
-	params.StartingPosition = StartingPosition;
-	params.StartingSection = StartingSection;
+	UPlayMontageCallbackProxy_CreateProxyObjectForPlayMontage_Params fn_params;
+	fn_params.InSkeletalMeshComponent = InSkeletalMeshComponent;
+	fn_params.MontageToPlay = MontageToPlay;
+	fn_params.PlayRate = PlayRate;
+	fn_params.StartingPosition = StartingPosition;
+	fn_params.StartingSection = StartingSection;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

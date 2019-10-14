@@ -21,12 +21,12 @@ void UUI_Border_C::SetColor(const struct FLinearColor& Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Border.UI_Border_C.SetColor");
 
-	UUI_Border_C_SetColor_Params params;
-	params.Color = Color;
+	UUI_Border_C_SetColor_Params fn_params;
+	fn_params.Color = Color;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -39,11 +39,11 @@ void UUI_Border_C::OnSynchronizeProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Border.UI_Border_C.OnSynchronizeProperties");
 
-	UUI_Border_C_OnSynchronizeProperties_Params params;
+	UUI_Border_C_OnSynchronizeProperties_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -58,12 +58,12 @@ void UUI_Border_C::ExecuteUbergraph_UI_Border(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Border.UI_Border_C.ExecuteUbergraph_UI_Border");
 
-	UUI_Border_C_ExecuteUbergraph_UI_Border_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_Border_C_ExecuteUbergraph_UI_Border_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

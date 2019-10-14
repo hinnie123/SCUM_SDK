@@ -21,12 +21,12 @@ void UUI_NotificationWidget_C::CheckLifespan(float DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_NotificationWidget.UI_NotificationWidget_C.CheckLifespan");
 
-	UUI_NotificationWidget_C_CheckLifespan_Params params;
-	params.DeltaTime = DeltaTime;
+	UUI_NotificationWidget_C_CheckLifespan_Params fn_params;
+	fn_params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -41,12 +41,12 @@ void UUI_NotificationWidget_C::SetLifeSpan(float Duration)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_NotificationWidget.UI_NotificationWidget_C.SetLifeSpan");
 
-	UUI_NotificationWidget_C_SetLifeSpan_Params params;
-	params.Duration = Duration;
+	UUI_NotificationWidget_C_SetLifeSpan_Params fn_params;
+	fn_params.Duration = Duration;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -61,12 +61,12 @@ void UUI_NotificationWidget_C::SetText(const struct FText& InText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_NotificationWidget.UI_NotificationWidget_C.SetText");
 
-	UUI_NotificationWidget_C_SetText_Params params;
-	params.InText = InText;
+	UUI_NotificationWidget_C_SetText_Params fn_params;
+	fn_params.InText = InText;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -79,11 +79,11 @@ void UUI_NotificationWidget_C::UpdateScale()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_NotificationWidget.UI_NotificationWidget_C.UpdateScale");
 
-	UUI_NotificationWidget_C_UpdateScale_Params params;
+	UUI_NotificationWidget_C_UpdateScale_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -98,12 +98,12 @@ void UUI_NotificationWidget_C::Show(bool Instant)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_NotificationWidget.UI_NotificationWidget_C.Show");
 
-	UUI_NotificationWidget_C_Show_Params params;
-	params.Instant = Instant;
+	UUI_NotificationWidget_C_Show_Params fn_params;
+	fn_params.Instant = Instant;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -118,12 +118,12 @@ void UUI_NotificationWidget_C::Dismiss(bool Instant)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_NotificationWidget.UI_NotificationWidget_C.Dismiss");
 
-	UUI_NotificationWidget_C_Dismiss_Params params;
-	params.Instant = Instant;
+	UUI_NotificationWidget_C_Dismiss_Params fn_params;
+	fn_params.Instant = Instant;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -136,11 +136,11 @@ void UUI_NotificationWidget_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_NotificationWidget.UI_NotificationWidget_C.Construct");
 
-	UUI_NotificationWidget_C_Construct_Params params;
+	UUI_NotificationWidget_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -156,13 +156,13 @@ void UUI_NotificationWidget_C::Tick(struct FGeometry* MyGeometry, float* InDelta
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_NotificationWidget.UI_NotificationWidget_C.Tick");
 
-	UUI_NotificationWidget_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UUI_NotificationWidget_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -177,12 +177,12 @@ void UUI_NotificationWidget_C::ExecuteUbergraph_UI_NotificationWidget(int EntryP
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_NotificationWidget.UI_NotificationWidget_C.ExecuteUbergraph_UI_NotificationWidget");
 
-	UUI_NotificationWidget_C_ExecuteUbergraph_UI_NotificationWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_NotificationWidget_C_ExecuteUbergraph_UI_NotificationWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

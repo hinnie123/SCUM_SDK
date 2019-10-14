@@ -21,12 +21,12 @@ void URespiratoryRateMonitor_C::AlarmControl(int alarmCode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RespiratoryRateMonitor.RespiratoryRateMonitor_C.AlarmControl");
 
-	URespiratoryRateMonitor_C_AlarmControl_Params params;
-	params.alarmCode = alarmCode;
+	URespiratoryRateMonitor_C_AlarmControl_Params fn_params;
+	fn_params.alarmCode = alarmCode;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -39,11 +39,11 @@ void URespiratoryRateMonitor_C::DeactivateAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RespiratoryRateMonitor.RespiratoryRateMonitor_C.DeactivateAlarm");
 
-	URespiratoryRateMonitor_C_DeactivateAlarm_Params params;
+	URespiratoryRateMonitor_C_DeactivateAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -56,11 +56,11 @@ void URespiratoryRateMonitor_C::ActivateAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RespiratoryRateMonitor.RespiratoryRateMonitor_C.ActivateAlarm");
 
-	URespiratoryRateMonitor_C_ActivateAlarm_Params params;
+	URespiratoryRateMonitor_C_ActivateAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -76,17 +76,17 @@ void URespiratoryRateMonitor_C::CheckRespiratoryRateAlarm(int respiratoryRate, i
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RespiratoryRateMonitor.RespiratoryRateMonitor_C.CheckRespiratoryRateAlarm");
 
-	URespiratoryRateMonitor_C_CheckRespiratoryRateAlarm_Params params;
-	params.respiratoryRate = respiratoryRate;
+	URespiratoryRateMonitor_C_CheckRespiratoryRateAlarm_Params fn_params;
+	fn_params.respiratoryRate = respiratoryRate;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (alarmCode != nullptr)
-		*alarmCode = params.alarmCode;
+		*alarmCode = fn_params.alarmCode;
 }
 
 
@@ -100,17 +100,17 @@ void URespiratoryRateMonitor_C::SetPrisonerAndLifeComponentToMonitor(class APris
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RespiratoryRateMonitor.RespiratoryRateMonitor_C.SetPrisonerAndLifeComponentToMonitor");
 
-	URespiratoryRateMonitor_C_SetPrisonerAndLifeComponentToMonitor_Params params;
-	params.prisonerToSet = prisonerToSet;
+	URespiratoryRateMonitor_C_SetPrisonerAndLifeComponentToMonitor_Params fn_params;
+	fn_params.prisonerToSet = prisonerToSet;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Success != nullptr)
-		*Success = params.Success;
+		*Success = fn_params.Success;
 }
 
 
@@ -123,16 +123,16 @@ void URespiratoryRateMonitor_C::ProvideRespiratoryRateExtremes(struct FText* res
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RespiratoryRateMonitor.RespiratoryRateMonitor_C.ProvideRespiratoryRateExtremes");
 
-	URespiratoryRateMonitor_C_ProvideRespiratoryRateExtremes_Params params;
+	URespiratoryRateMonitor_C_ProvideRespiratoryRateExtremes_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (respiratoryRateExtremes != nullptr)
-		*respiratoryRateExtremes = params.respiratoryRateExtremes;
+		*respiratoryRateExtremes = fn_params.respiratoryRateExtremes;
 }
 
 
@@ -143,11 +143,11 @@ void URespiratoryRateMonitor_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RespiratoryRateMonitor.RespiratoryRateMonitor_C.Construct");
 
-	URespiratoryRateMonitor_C_Construct_Params params;
+	URespiratoryRateMonitor_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -163,13 +163,13 @@ void URespiratoryRateMonitor_C::Tick(struct FGeometry* MyGeometry, float* InDelt
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RespiratoryRateMonitor.RespiratoryRateMonitor_C.Tick");
 
-	URespiratoryRateMonitor_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	URespiratoryRateMonitor_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -184,12 +184,12 @@ void URespiratoryRateMonitor_C::ExecuteUbergraph_RespiratoryRateMonitor(int Entr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RespiratoryRateMonitor.RespiratoryRateMonitor_C.ExecuteUbergraph_RespiratoryRateMonitor");
 
-	URespiratoryRateMonitor_C_ExecuteUbergraph_RespiratoryRateMonitor_Params params;
-	params.EntryPoint = EntryPoint;
+	URespiratoryRateMonitor_C_ExecuteUbergraph_RespiratoryRateMonitor_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

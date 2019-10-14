@@ -23,17 +23,17 @@ struct FEventReply UUI_CraftingComponent_C::OnMouseButtonDown(struct FGeometry* 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingComponent.UI_CraftingComponent_C.OnMouseButtonDown");
 
-	UUI_CraftingComponent_C_OnMouseButtonDown_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_CraftingComponent_C_OnMouseButtonDown_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -46,12 +46,12 @@ void UUI_CraftingComponent_C::SetIsTool(bool* IsTool)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingComponent.UI_CraftingComponent_C.SetIsTool");
 
-	UUI_CraftingComponent_C_SetIsTool_Params params;
-	params.IsTool = IsTool;
+	UUI_CraftingComponent_C_SetIsTool_Params fn_params;
+	fn_params.IsTool = IsTool;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -66,12 +66,12 @@ void UUI_CraftingComponent_C::SetRequiredCount(int* count)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingComponent.UI_CraftingComponent_C.SetRequiredCount");
 
-	UUI_CraftingComponent_C_SetRequiredCount_Params params;
-	params.count = count;
+	UUI_CraftingComponent_C_SetRequiredCount_Params fn_params;
+	fn_params.count = count;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -86,12 +86,12 @@ void UUI_CraftingComponent_C::SetOrderNumber(int* orderNumber)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingComponent.UI_CraftingComponent_C.SetOrderNumber");
 
-	UUI_CraftingComponent_C_SetOrderNumber_Params params;
-	params.orderNumber = orderNumber;
+	UUI_CraftingComponent_C_SetOrderNumber_Params fn_params;
+	fn_params.orderNumber = orderNumber;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -106,12 +106,12 @@ void UUI_CraftingComponent_C::SetIsOptional(bool* isOptional)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingComponent.UI_CraftingComponent_C.SetIsOptional");
 
-	UUI_CraftingComponent_C_SetIsOptional_Params params;
-	params.isOptional = isOptional;
+	UUI_CraftingComponent_C_SetIsOptional_Params fn_params;
+	fn_params.isOptional = isOptional;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -124,11 +124,11 @@ void UUI_CraftingComponent_C::CreateTooltip()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingComponent.UI_CraftingComponent_C.CreateTooltip");
 
-	UUI_CraftingComponent_C_CreateTooltip_Params params;
+	UUI_CraftingComponent_C_CreateTooltip_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -143,12 +143,12 @@ void UUI_CraftingComponent_C::SetIsAvailable(bool* IsAvailable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingComponent.UI_CraftingComponent_C.SetIsAvailable");
 
-	UUI_CraftingComponent_C_SetIsAvailable_Params params;
-	params.IsAvailable = IsAvailable;
+	UUI_CraftingComponent_C_SetIsAvailable_Params fn_params;
+	fn_params.IsAvailable = IsAvailable;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -164,13 +164,13 @@ void UUI_CraftingComponent_C::OnMouseEnter(struct FGeometry* MyGeometry, struct 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingComponent.UI_CraftingComponent_C.OnMouseEnter");
 
-	UUI_CraftingComponent_C_OnMouseEnter_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_CraftingComponent_C_OnMouseEnter_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -186,13 +186,13 @@ void UUI_CraftingComponent_C::SetSatisfiedAndRequiredCount(int* Satisfied, int* 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingComponent.UI_CraftingComponent_C.SetSatisfiedAndRequiredCount");
 
-	UUI_CraftingComponent_C_SetSatisfiedAndRequiredCount_Params params;
-	params.Satisfied = Satisfied;
-	params.Required = Required;
+	UUI_CraftingComponent_C_SetSatisfiedAndRequiredCount_Params fn_params;
+	fn_params.Satisfied = Satisfied;
+	fn_params.Required = Required;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -207,12 +207,12 @@ void UUI_CraftingComponent_C::ExecuteUbergraph_UI_CraftingComponent(int EntryPoi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingComponent.UI_CraftingComponent_C.ExecuteUbergraph_UI_CraftingComponent");
 
-	UUI_CraftingComponent_C_ExecuteUbergraph_UI_CraftingComponent_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_CraftingComponent_C_ExecuteUbergraph_UI_CraftingComponent_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

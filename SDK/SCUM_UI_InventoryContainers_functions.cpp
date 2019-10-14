@@ -19,11 +19,11 @@ void UUI_InventoryContainers_C::BndEvt__MinimizableWidget_30_K2Node_ComponentBou
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_InventoryContainers.UI_InventoryContainers_C.BndEvt__MinimizableWidget_30_K2Node_ComponentBoundEvent_8_NotifyMinimizableWidgetSizeChangedEventDispatcher__DelegateSignature");
 
-	UUI_InventoryContainers_C_BndEvt__MinimizableWidget_30_K2Node_ComponentBoundEvent_8_NotifyMinimizableWidgetSizeChangedEventDispatcher__DelegateSignature_Params params;
+	UUI_InventoryContainers_C_BndEvt__MinimizableWidget_30_K2Node_ComponentBoundEvent_8_NotifyMinimizableWidgetSizeChangedEventDispatcher__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -38,12 +38,12 @@ void UUI_InventoryContainers_C::ChangeTitle(struct FText* Title)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_InventoryContainers.UI_InventoryContainers_C.ChangeTitle");
 
-	UUI_InventoryContainers_C_ChangeTitle_Params params;
-	params.Title = Title;
+	UUI_InventoryContainers_C_ChangeTitle_Params fn_params;
+	fn_params.Title = Title;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -58,12 +58,12 @@ void UUI_InventoryContainers_C::ExecuteUbergraph_UI_InventoryContainers(int Entr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_InventoryContainers.UI_InventoryContainers_C.ExecuteUbergraph_UI_InventoryContainers");
 
-	UUI_InventoryContainers_C_ExecuteUbergraph_UI_InventoryContainers_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_InventoryContainers_C_ExecuteUbergraph_UI_InventoryContainers_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -22,17 +22,17 @@ void UBaseProgressBar_C::PercentageToUITextWOPercSign(float Value, struct FText*
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.PercentageToUITextWOPercSign");
 
-	UBaseProgressBar_C_PercentageToUITextWOPercSign_Params params;
-	params.Value = Value;
+	UBaseProgressBar_C_PercentageToUITextWOPercSign_Params fn_params;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (percentageString != nullptr)
-		*percentageString = params.percentageString;
+		*percentageString = fn_params.percentageString;
 }
 
 
@@ -45,16 +45,16 @@ void UBaseProgressBar_C::GetAlarmThresholdHigh(float* alarmThreshold)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.GetAlarmThresholdHigh");
 
-	UBaseProgressBar_C_GetAlarmThresholdHigh_Params params;
+	UBaseProgressBar_C_GetAlarmThresholdHigh_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (alarmThreshold != nullptr)
-		*alarmThreshold = params.alarmThreshold;
+		*alarmThreshold = fn_params.alarmThreshold;
 }
 
 
@@ -67,12 +67,12 @@ void UBaseProgressBar_C::SetAlarmThresholdHigh(float alarmThreshold)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.SetAlarmThresholdHigh");
 
-	UBaseProgressBar_C_SetAlarmThresholdHigh_Params params;
-	params.alarmThreshold = alarmThreshold;
+	UBaseProgressBar_C_SetAlarmThresholdHigh_Params fn_params;
+	fn_params.alarmThreshold = alarmThreshold;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -87,16 +87,16 @@ void UBaseProgressBar_C::CheckAlarmThresholdHigh(bool* shouldAlarmBeOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.CheckAlarmThresholdHigh");
 
-	UBaseProgressBar_C_CheckAlarmThresholdHigh_Params params;
+	UBaseProgressBar_C_CheckAlarmThresholdHigh_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (shouldAlarmBeOn != nullptr)
-		*shouldAlarmBeOn = params.shouldAlarmBeOn;
+		*shouldAlarmBeOn = fn_params.shouldAlarmBeOn;
 }
 
 
@@ -109,12 +109,12 @@ void UBaseProgressBar_C::SetAlarmThresholdHighActive(bool shouldBeActive)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.SetAlarmThresholdHighActive");
 
-	UBaseProgressBar_C_SetAlarmThresholdHighActive_Params params;
-	params.shouldBeActive = shouldBeActive;
+	UBaseProgressBar_C_SetAlarmThresholdHighActive_Params fn_params;
+	fn_params.shouldBeActive = shouldBeActive;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -129,16 +129,16 @@ void UBaseProgressBar_C::GetIsAlarmOn(bool* isAlarmOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.GetIsAlarmOn");
 
-	UBaseProgressBar_C_GetIsAlarmOn_Params params;
+	UBaseProgressBar_C_GetIsAlarmOn_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (isAlarmOn != nullptr)
-		*isAlarmOn = params.isAlarmOn;
+		*isAlarmOn = fn_params.isAlarmOn;
 }
 
 
@@ -152,17 +152,17 @@ void UBaseProgressBar_C::PercentageToUIText(float Value, struct FText* percentag
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.PercentageToUIText");
 
-	UBaseProgressBar_C_PercentageToUIText_Params params;
-	params.Value = Value;
+	UBaseProgressBar_C_PercentageToUIText_Params fn_params;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (percentageString != nullptr)
-		*percentageString = params.percentageString;
+		*percentageString = fn_params.percentageString;
 }
 
 
@@ -175,12 +175,12 @@ void UBaseProgressBar_C::SetClamping(bool shouldEnableClamping)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.SetClamping");
 
-	UBaseProgressBar_C_SetClamping_Params params;
-	params.shouldEnableClamping = shouldEnableClamping;
+	UBaseProgressBar_C_SetClamping_Params fn_params;
+	fn_params.shouldEnableClamping = shouldEnableClamping;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -196,17 +196,17 @@ void UBaseProgressBar_C::PercentageToText(float Value, struct FText* PercentageT
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.PercentageToText");
 
-	UBaseProgressBar_C_PercentageToText_Params params;
-	params.Value = Value;
+	UBaseProgressBar_C_PercentageToText_Params fn_params;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (PercentageText != nullptr)
-		*PercentageText = params.PercentageText;
+		*PercentageText = fn_params.PercentageText;
 }
 
 
@@ -219,16 +219,16 @@ void UBaseProgressBar_C::GetPreviousPercentage(float* prevPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.GetPreviousPercentage");
 
-	UBaseProgressBar_C_GetPreviousPercentage_Params params;
+	UBaseProgressBar_C_GetPreviousPercentage_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (prevPercentage != nullptr)
-		*prevPercentage = params.prevPercentage;
+		*prevPercentage = fn_params.prevPercentage;
 }
 
 
@@ -241,16 +241,16 @@ void UBaseProgressBar_C::CheckAlarmThreshold(bool* shouldAlarmBeOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.CheckAlarmThreshold");
 
-	UBaseProgressBar_C_CheckAlarmThreshold_Params params;
+	UBaseProgressBar_C_CheckAlarmThreshold_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (shouldAlarmBeOn != nullptr)
-		*shouldAlarmBeOn = params.shouldAlarmBeOn;
+		*shouldAlarmBeOn = fn_params.shouldAlarmBeOn;
 }
 
 
@@ -261,11 +261,11 @@ void UBaseProgressBar_C::AlarmSwitchOn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.AlarmSwitchOn");
 
-	UBaseProgressBar_C_AlarmSwitchOn_Params params;
+	UBaseProgressBar_C_AlarmSwitchOn_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -278,11 +278,11 @@ void UBaseProgressBar_C::AlarmSwitchOff()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.AlarmSwitchOff");
 
-	UBaseProgressBar_C_AlarmSwitchOff_Params params;
+	UBaseProgressBar_C_AlarmSwitchOff_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -297,16 +297,16 @@ void UBaseProgressBar_C::GetAlarmThreshold(float* alarmThreshold)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.GetAlarmThreshold");
 
-	UBaseProgressBar_C_GetAlarmThreshold_Params params;
+	UBaseProgressBar_C_GetAlarmThreshold_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (alarmThreshold != nullptr)
-		*alarmThreshold = params.alarmThreshold;
+		*alarmThreshold = fn_params.alarmThreshold;
 }
 
 
@@ -319,12 +319,12 @@ void UBaseProgressBar_C::SetAlarmThreshold(float alarmThreshold)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.SetAlarmThreshold");
 
-	UBaseProgressBar_C_SetAlarmThreshold_Params params;
-	params.alarmThreshold = alarmThreshold;
+	UBaseProgressBar_C_SetAlarmThreshold_Params fn_params;
+	fn_params.alarmThreshold = alarmThreshold;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -340,17 +340,17 @@ void UBaseProgressBar_C::PercentageToString(float Value, struct FString* percent
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.PercentageToString");
 
-	UBaseProgressBar_C_PercentageToString_Params params;
-	params.Value = Value;
+	UBaseProgressBar_C_PercentageToString_Params fn_params;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (percentageString != nullptr)
-		*percentageString = params.percentageString;
+		*percentageString = fn_params.percentageString;
 }
 
 
@@ -364,17 +364,17 @@ void UBaseProgressBar_C::PercentageToInt(float Value, int* percentageInt)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.PercentageToInt");
 
-	UBaseProgressBar_C_PercentageToInt_Params params;
-	params.Value = Value;
+	UBaseProgressBar_C_PercentageToInt_Params fn_params;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (percentageInt != nullptr)
-		*percentageInt = params.percentageInt;
+		*percentageInt = fn_params.percentageInt;
 }
 
 
@@ -387,12 +387,12 @@ void UBaseProgressBar_C::SetPreviousPercentage(float previousPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.SetPreviousPercentage");
 
-	UBaseProgressBar_C_SetPreviousPercentage_Params params;
-	params.previousPercentage = previousPercentage;
+	UBaseProgressBar_C_SetPreviousPercentage_Params fn_params;
+	fn_params.previousPercentage = previousPercentage;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -405,11 +405,11 @@ void UBaseProgressBar_C::SavePercentageAsPrevious()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.SavePercentageAsPrevious");
 
-	UBaseProgressBar_C_SavePercentageAsPrevious_Params params;
+	UBaseProgressBar_C_SavePercentageAsPrevious_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -422,11 +422,11 @@ void UBaseProgressBar_C::OnPercentageChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.OnPercentageChanged");
 
-	UBaseProgressBar_C_OnPercentageChanged_Params params;
+	UBaseProgressBar_C_OnPercentageChanged_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -441,12 +441,12 @@ void UBaseProgressBar_C::SetTitleBase(const struct FText& Title)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.SetTitleBase");
 
-	UBaseProgressBar_C_SetTitleBase_Params params;
-	params.Title = Title;
+	UBaseProgressBar_C_SetTitleBase_Params fn_params;
+	fn_params.Title = Title;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -461,16 +461,16 @@ void UBaseProgressBar_C::GetTitleBase(struct FText* Title)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.GetTitleBase");
 
-	UBaseProgressBar_C_GetTitleBase_Params params;
+	UBaseProgressBar_C_GetTitleBase_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Title != nullptr)
-		*Title = params.Title;
+		*Title = fn_params.Title;
 }
 
 
@@ -483,12 +483,12 @@ void UBaseProgressBar_C::IncreasePercentage(float IncreasePercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.IncreasePercentage");
 
-	UBaseProgressBar_C_IncreasePercentage_Params params;
-	params.IncreasePercentage = IncreasePercentage;
+	UBaseProgressBar_C_IncreasePercentage_Params fn_params;
+	fn_params.IncreasePercentage = IncreasePercentage;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -503,12 +503,12 @@ void UBaseProgressBar_C::decreasePercentage(float decreasePercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.decreasePercentage");
 
-	UBaseProgressBar_C_decreasePercentage_Params params;
-	params.decreasePercentage = decreasePercentage;
+	UBaseProgressBar_C_decreasePercentage_Params fn_params;
+	fn_params.decreasePercentage = decreasePercentage;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -523,12 +523,12 @@ void UBaseProgressBar_C::SetPercentage(float percentInputToSet)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.SetPercentage");
 
-	UBaseProgressBar_C_SetPercentage_Params params;
-	params.percentInputToSet = percentInputToSet;
+	UBaseProgressBar_C_SetPercentage_Params fn_params;
+	fn_params.percentInputToSet = percentInputToSet;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -543,16 +543,16 @@ void UBaseProgressBar_C::GetPercentage(float* percentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.GetPercentage");
 
-	UBaseProgressBar_C_GetPercentage_Params params;
+	UBaseProgressBar_C_GetPercentage_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (percentage != nullptr)
-		*percentage = params.percentage;
+		*percentage = fn_params.percentage;
 }
 
 

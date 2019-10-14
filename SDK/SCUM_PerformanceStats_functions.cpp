@@ -19,11 +19,11 @@ void UPerformanceStats_C::Init()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.Init");
 
-	UPerformanceStats_C_Init_Params params;
+	UPerformanceStats_C_Init_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void UPerformanceStats_C::SetParentsForChildren()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.SetParentsForChildren");
 
-	UPerformanceStats_C_SetParentsForChildren_Params params;
+	UPerformanceStats_C_SetParentsForChildren_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -55,16 +55,16 @@ void UPerformanceStats_C::shouldAlarmBeOn(bool* shouldAlarmBeOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.shouldAlarmBeOn");
 
-	UPerformanceStats_C_shouldAlarmBeOn_Params params;
+	UPerformanceStats_C_shouldAlarmBeOn_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (shouldAlarmBeOn != nullptr)
-		*shouldAlarmBeOn = params.shouldAlarmBeOn;
+		*shouldAlarmBeOn = fn_params.shouldAlarmBeOn;
 }
 
 
@@ -75,11 +75,11 @@ void UPerformanceStats_C::UpdateParameterLines()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.UpdateParameterLines");
 
-	UPerformanceStats_C_UpdateParameterLines_Params params;
+	UPerformanceStats_C_UpdateParameterLines_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -95,17 +95,17 @@ void UPerformanceStats_C::SetPrisonerToMonitor(class APrisoner** Prisoner, bool*
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.SetPrisonerToMonitor");
 
-	UPerformanceStats_C_SetPrisonerToMonitor_Params params;
-	params.Prisoner = Prisoner;
+	UPerformanceStats_C_SetPrisonerToMonitor_Params fn_params;
+	fn_params.Prisoner = Prisoner;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Success != nullptr)
-		*Success = params.Success;
+		*Success = fn_params.Success;
 }
 
 
@@ -118,12 +118,12 @@ void UPerformanceStats_C::SetDefaultTitle(const struct FText& defaultTitle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.SetDefaultTitle");
 
-	UPerformanceStats_C_SetDefaultTitle_Params params;
-	params.defaultTitle = defaultTitle;
+	UPerformanceStats_C_SetDefaultTitle_Params fn_params;
+	fn_params.defaultTitle = defaultTitle;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -138,12 +138,12 @@ void UPerformanceStats_C::SetContentVisibility(ESlateVisibility Visibility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.SetContentVisibility");
 
-	UPerformanceStats_C_SetContentVisibility_Params params;
-	params.Visibility = Visibility;
+	UPerformanceStats_C_SetContentVisibility_Params fn_params;
+	fn_params.Visibility = Visibility;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -158,12 +158,12 @@ void UPerformanceStats_C::SetTextColor(const struct FLinearColor& TextColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.SetTextColor");
 
-	UPerformanceStats_C_SetTextColor_Params params;
-	params.TextColor = TextColor;
+	UPerformanceStats_C_SetTextColor_Params fn_params;
+	fn_params.TextColor = TextColor;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -179,13 +179,13 @@ void UPerformanceStats_C::SetTextColorOfVerticalBox(class UPanelWidget* vertical
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.SetTextColorOfVerticalBox");
 
-	UPerformanceStats_C_SetTextColorOfVerticalBox_Params params;
-	params.verticalBoxRef = verticalBoxRef;
-	params.TextColor = TextColor;
+	UPerformanceStats_C_SetTextColorOfVerticalBox_Params fn_params;
+	fn_params.verticalBoxRef = verticalBoxRef;
+	fn_params.TextColor = TextColor;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -200,15 +200,15 @@ struct FText UPerformanceStats_C::GetTitleText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.GetTitleText");
 
-	UPerformanceStats_C_GetTitleText_Params params;
+	UPerformanceStats_C_GetTitleText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -222,13 +222,13 @@ void UPerformanceStats_C::SetVerticalBoxContentVisibility(class UVerticalBox* ve
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.SetVerticalBoxContentVisibility");
 
-	UPerformanceStats_C_SetVerticalBoxContentVisibility_Params params;
-	params.verticalBoxRef = verticalBoxRef;
-	params.Visibility = Visibility;
+	UPerformanceStats_C_SetVerticalBoxContentVisibility_Params fn_params;
+	fn_params.verticalBoxRef = verticalBoxRef;
+	fn_params.Visibility = Visibility;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -243,12 +243,12 @@ void UPerformanceStats_C::SetContentMinimized(bool minimized)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.SetContentMinimized");
 
-	UPerformanceStats_C_SetContentMinimized_Params params;
-	params.minimized = minimized;
+	UPerformanceStats_C_SetContentMinimized_Params fn_params;
+	fn_params.minimized = minimized;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -263,12 +263,12 @@ void UPerformanceStats_C::MinimizeContent(bool shouldMinimize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.MinimizeContent");
 
-	UPerformanceStats_C_MinimizeContent_Params params;
-	params.shouldMinimize = shouldMinimize;
+	UPerformanceStats_C_MinimizeContent_Params fn_params;
+	fn_params.shouldMinimize = shouldMinimize;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -283,16 +283,16 @@ void UPerformanceStats_C::GetDefaultTitle(struct FText* defaultTitle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.GetDefaultTitle");
 
-	UPerformanceStats_C_GetDefaultTitle_Params params;
+	UPerformanceStats_C_GetDefaultTitle_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (defaultTitle != nullptr)
-		*defaultTitle = params.defaultTitle;
+		*defaultTitle = fn_params.defaultTitle;
 }
 
 
@@ -305,16 +305,16 @@ void UPerformanceStats_C::SelectCustomColor(struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.SelectCustomColor");
 
-	UPerformanceStats_C_SelectCustomColor_Params params;
+	UPerformanceStats_C_SelectCustomColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Color != nullptr)
-		*Color = params.Color;
+		*Color = fn_params.Color;
 }
 
 
@@ -327,12 +327,12 @@ void UPerformanceStats_C::OnMinimize(bool shouldMinimize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.OnMinimize");
 
-	UPerformanceStats_C_OnMinimize_Params params;
-	params.shouldMinimize = shouldMinimize;
+	UPerformanceStats_C_OnMinimize_Params fn_params;
+	fn_params.shouldMinimize = shouldMinimize;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -345,11 +345,11 @@ void UPerformanceStats_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.Construct");
 
-	UPerformanceStats_C_Construct_Params params;
+	UPerformanceStats_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -365,13 +365,13 @@ void UPerformanceStats_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.Tick");
 
-	UPerformanceStats_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UPerformanceStats_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -384,11 +384,11 @@ void UPerformanceStats_C::OnPrisonerSet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.OnPrisonerSet");
 
-	UPerformanceStats_C_OnPrisonerSet_Params params;
+	UPerformanceStats_C_OnPrisonerSet_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -401,11 +401,11 @@ void UPerformanceStats_C::AlarmOnWindowContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.AlarmOnWindowContent");
 
-	UPerformanceStats_C_AlarmOnWindowContent_Params params;
+	UPerformanceStats_C_AlarmOnWindowContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -418,11 +418,11 @@ void UPerformanceStats_C::AlarmOffWindowContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.AlarmOffWindowContent");
 
-	UPerformanceStats_C_AlarmOffWindowContent_Params params;
+	UPerformanceStats_C_AlarmOffWindowContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -437,12 +437,12 @@ void UPerformanceStats_C::ExecuteUbergraph_PerformanceStats(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.ExecuteUbergraph_PerformanceStats");
 
-	UPerformanceStats_C_ExecuteUbergraph_PerformanceStats_Params params;
-	params.EntryPoint = EntryPoint;
+	UPerformanceStats_C_ExecuteUbergraph_PerformanceStats_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

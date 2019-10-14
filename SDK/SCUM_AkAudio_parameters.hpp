@@ -138,7 +138,7 @@ struct UAkComponent_PostAkEventByName_Params
 // Function AkAudio.AkComponent.PostAkEventAndWaitForEnd
 struct UAkComponent_PostAkEventAndWaitForEnd_Params
 {
-	class UAkAudioEvent*                               AkEvent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               akEvent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FString                                     in_EventName;                                             // (Parm, ZeroConstructor)
 	struct FLatentActionInfo                           LatentInfo;                                               // (Parm)
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -147,7 +147,7 @@ struct UAkComponent_PostAkEventAndWaitForEnd_Params
 // Function AkAudio.AkComponent.PostAkEvent
 struct UAkComponent_PostAkEvent_Params
 {
-	class UAkAudioEvent*                               AkEvent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               akEvent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                CallbackMask;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FScriptDelegate                             PostEventCallback;                                        // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	struct FString                                     in_EventName;                                             // (Parm, ZeroConstructor)
@@ -310,7 +310,7 @@ struct UAkGameplayStatics_StartAllAmbientSounds_Params
 struct UAkGameplayStatics_SpawnAkComponentAtLocation_Params
 {
 	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               AkEvent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               akEvent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAkAuxBus*                                   EarlyReflectionsBus;                                      // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Location;                                                 // (Parm, IsPlainOldData)
 	struct FRotator                                    Orientation;                                              // (Parm, IsPlainOldData)
@@ -421,7 +421,7 @@ struct UAkGameplayStatics_PostEventByName_Params
 // Function AkAudio.AkGameplayStatics.PostEventAttached
 struct UAkGameplayStatics_PostEventAttached_Params
 {
-	class UAkAudioEvent*                               AkEvent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               akEvent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FName                                       AttachPointName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bStopWhenAttachedToDestroyed;                             // (Parm, ZeroConstructor, IsPlainOldData)
@@ -441,7 +441,7 @@ struct UAkGameplayStatics_PostEventAtLocationByName_Params
 // Function AkAudio.AkGameplayStatics.PostEventAtLocation
 struct UAkGameplayStatics_PostEventAtLocation_Params
 {
-	class UAkAudioEvent*                               AkEvent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               akEvent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Location;                                                 // (Parm, IsPlainOldData)
 	struct FRotator                                    Orientation;                                              // (Parm, IsPlainOldData)
 	struct FString                                     EventName;                                                // (Parm, ZeroConstructor)
@@ -452,7 +452,7 @@ struct UAkGameplayStatics_PostEventAtLocation_Params
 // Function AkAudio.AkGameplayStatics.PostEvent
 struct UAkGameplayStatics_PostEvent_Params
 {
-	class UAkAudioEvent*                               AkEvent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               akEvent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bStopWhenAttachedToDestroyed;                             // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FString                                     EventName;                                                // (Parm, ZeroConstructor)
@@ -462,7 +462,7 @@ struct UAkGameplayStatics_PostEvent_Params
 // Function AkAudio.AkGameplayStatics.PostAndWaitForEndOfEvent
 struct UAkGameplayStatics_PostAndWaitForEndOfEvent_Params
 {
-	class UAkAudioEvent*                               AkEvent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               akEvent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bStopWhenAttachedToDestroyed;                             // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FString                                     EventName;                                                // (Parm, ZeroConstructor)
@@ -544,7 +544,7 @@ struct UAkGameplayStatics_GetAkComponent_Params
 // Function AkAudio.AkGameplayStatics.ExecuteActionOnEvent
 struct UAkGameplayStatics_ExecuteActionOnEvent_Params
 {
-	class UAkAudioEvent*                               AkEvent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               akEvent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	EAkActionOnEventType                               ActionType;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                TransitionDuration;                                       // (Parm, ZeroConstructor, IsPlainOldData)

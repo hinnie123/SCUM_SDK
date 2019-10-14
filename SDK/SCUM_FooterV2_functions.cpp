@@ -22,13 +22,13 @@ void UFooterV2_C::SetText(const struct FText& textToSet, const struct FLinearCol
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FooterV2.FooterV2_C.SetText");
 
-	UFooterV2_C_SetText_Params params;
-	params.textToSet = textToSet;
-	params.textColorToSet = textColorToSet;
+	UFooterV2_C_SetText_Params fn_params;
+	fn_params.textToSet = textToSet;
+	fn_params.textColorToSet = textColorToSet;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -41,11 +41,11 @@ void UFooterV2_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FooterV2.FooterV2_C.Construct");
 
-	UFooterV2_C_Construct_Params params;
+	UFooterV2_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -60,12 +60,12 @@ void UFooterV2_C::ExecuteUbergraph_FooterV2(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FooterV2.FooterV2_C.ExecuteUbergraph_FooterV2");
 
-	UFooterV2_C_ExecuteUbergraph_FooterV2_Params params;
-	params.EntryPoint = EntryPoint;
+	UFooterV2_C_ExecuteUbergraph_FooterV2_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

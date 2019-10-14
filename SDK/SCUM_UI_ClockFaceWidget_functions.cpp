@@ -21,12 +21,12 @@ void UUI_ClockFaceWidget_C::SetBrightness(float Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ClockFaceWidget.UI_ClockFaceWidget_C.SetBrightness");
 
-	UUI_ClockFaceWidget_C_SetBrightness_Params params;
-	params.Value = Value;
+	UUI_ClockFaceWidget_C_SetBrightness_Params fn_params;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -42,16 +42,16 @@ struct FText UUI_ClockFaceWidget_C::AppendZero(int Number)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ClockFaceWidget.UI_ClockFaceWidget_C.AppendZero");
 
-	UUI_ClockFaceWidget_C_AppendZero_Params params;
-	params.Number = Number;
+	UUI_ClockFaceWidget_C_AppendZero_Params fn_params;
+	fn_params.Number = Number;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -64,12 +64,12 @@ void UUI_ClockFaceWidget_C::SetHours(int* Hours)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ClockFaceWidget.UI_ClockFaceWidget_C.SetHours");
 
-	UUI_ClockFaceWidget_C_SetHours_Params params;
-	params.Hours = Hours;
+	UUI_ClockFaceWidget_C_SetHours_Params fn_params;
+	fn_params.Hours = Hours;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -84,12 +84,12 @@ void UUI_ClockFaceWidget_C::SetMinutes(int* Minutes)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ClockFaceWidget.UI_ClockFaceWidget_C.SetMinutes");
 
-	UUI_ClockFaceWidget_C_SetMinutes_Params params;
-	params.Minutes = Minutes;
+	UUI_ClockFaceWidget_C_SetMinutes_Params fn_params;
+	fn_params.Minutes = Minutes;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -104,12 +104,12 @@ void UUI_ClockFaceWidget_C::ExecuteUbergraph_UI_ClockFaceWidget(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ClockFaceWidget.UI_ClockFaceWidget_C.ExecuteUbergraph_UI_ClockFaceWidget");
 
-	UUI_ClockFaceWidget_C_ExecuteUbergraph_UI_ClockFaceWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_ClockFaceWidget_C_ExecuteUbergraph_UI_ClockFaceWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

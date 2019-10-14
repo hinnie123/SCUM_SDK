@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Metal_Arrow_Batch.Metal_Arrow_Batch_C
-// 0x0000 (0x0778 - 0x0778)
+// 0x0000 (0x0818 - 0x0818)
 class AMetal_Arrow_Batch_C : public AItem
 {
 public:

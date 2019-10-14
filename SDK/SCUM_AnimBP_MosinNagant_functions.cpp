@@ -19,11 +19,11 @@ void UAnimBP_MosinNagant_C::EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_M
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimBP_MosinNagant.AnimBP_MosinNagant_C.EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_MosinNagant_AnimGraphNode_BlendListByBool_8D5BF5F04A16836CBDF9E9A18DE3AEBF");
 
-	UAnimBP_MosinNagant_C_EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_MosinNagant_AnimGraphNode_BlendListByBool_8D5BF5F04A16836CBDF9E9A18DE3AEBF_Params params;
+	UAnimBP_MosinNagant_C_EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_MosinNagant_AnimGraphNode_BlendListByBool_8D5BF5F04A16836CBDF9E9A18DE3AEBF_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void UAnimBP_MosinNagant_C::EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_M
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimBP_MosinNagant.AnimBP_MosinNagant_C.EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_MosinNagant_AnimGraphNode_BlendListByEnum_F1AD67E44787EDB94874A7BC51DDC163");
 
-	UAnimBP_MosinNagant_C_EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_MosinNagant_AnimGraphNode_BlendListByEnum_F1AD67E44787EDB94874A7BC51DDC163_Params params;
+	UAnimBP_MosinNagant_C_EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_MosinNagant_AnimGraphNode_BlendListByEnum_F1AD67E44787EDB94874A7BC51DDC163_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -53,11 +53,11 @@ void UAnimBP_MosinNagant_C::EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_M
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimBP_MosinNagant.AnimBP_MosinNagant_C.EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_MosinNagant_AnimGraphNode_BlendListByEnum_E5DD203F47FD728C7D983BAAD1752314");
 
-	UAnimBP_MosinNagant_C_EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_MosinNagant_AnimGraphNode_BlendListByEnum_E5DD203F47FD728C7D983BAAD1752314_Params params;
+	UAnimBP_MosinNagant_C_EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_MosinNagant_AnimGraphNode_BlendListByEnum_E5DD203F47FD728C7D983BAAD1752314_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -72,12 +72,12 @@ void UAnimBP_MosinNagant_C::ExecuteUbergraph_AnimBP_MosinNagant(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimBP_MosinNagant.AnimBP_MosinNagant_C.ExecuteUbergraph_AnimBP_MosinNagant");
 
-	UAnimBP_MosinNagant_C_ExecuteUbergraph_AnimBP_MosinNagant_Params params;
-	params.EntryPoint = EntryPoint;
+	UAnimBP_MosinNagant_C_ExecuteUbergraph_AnimBP_MosinNagant_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

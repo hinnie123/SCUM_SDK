@@ -22,14 +22,14 @@ void ALandscapeProxy::SetLandscapeMaterialVectorParameterValue(const struct FNam
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.SetLandscapeMaterialVectorParameterValue");
 
-	ALandscapeProxy_SetLandscapeMaterialVectorParameterValue_Params params;
-	params.ParameterName = ParameterName;
-	params.Value = Value;
+	ALandscapeProxy_SetLandscapeMaterialVectorParameterValue_Params fn_params;
+	fn_params.ParameterName = ParameterName;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -45,14 +45,14 @@ void ALandscapeProxy::SetLandscapeMaterialTextureParameterValue(const struct FNa
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.SetLandscapeMaterialTextureParameterValue");
 
-	ALandscapeProxy_SetLandscapeMaterialTextureParameterValue_Params params;
-	params.ParameterName = ParameterName;
-	params.Value = Value;
+	ALandscapeProxy_SetLandscapeMaterialTextureParameterValue_Params fn_params;
+	fn_params.ParameterName = ParameterName;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -68,14 +68,14 @@ void ALandscapeProxy::SetLandscapeMaterialScalarParameterValue(const struct FNam
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.SetLandscapeMaterialScalarParameterValue");
 
-	ALandscapeProxy_SetLandscapeMaterialScalarParameterValue_Params params;
-	params.ParameterName = ParameterName;
-	params.Value = Value;
+	ALandscapeProxy_SetLandscapeMaterialScalarParameterValue_Params fn_params;
+	fn_params.ParameterName = ParameterName;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -90,13 +90,13 @@ void ALandscapeProxy::EditorSetLandscapeMaterial(class UMaterialInterface* NewLa
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.EditorSetLandscapeMaterial");
 
-	ALandscapeProxy_EditorSetLandscapeMaterial_Params params;
-	params.NewLandscapeMaterial = NewLandscapeMaterial;
+	ALandscapeProxy_EditorSetLandscapeMaterial_Params fn_params;
+	fn_params.NewLandscapeMaterial = NewLandscapeMaterial;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -121,23 +121,23 @@ void ALandscapeProxy::EditorApplySpline(class USplineComponent* InSplineComponen
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.EditorApplySpline");
 
-	ALandscapeProxy_EditorApplySpline_Params params;
-	params.InSplineComponent = InSplineComponent;
-	params.StartWidth = StartWidth;
-	params.EndWidth = EndWidth;
-	params.StartSideFalloff = StartSideFalloff;
-	params.EndSideFalloff = EndSideFalloff;
-	params.StartRoll = StartRoll;
-	params.EndRoll = EndRoll;
-	params.NumSubdivisions = NumSubdivisions;
-	params.bRaiseHeights = bRaiseHeights;
-	params.bLowerHeights = bLowerHeights;
-	params.PaintLayer = PaintLayer;
+	ALandscapeProxy_EditorApplySpline_Params fn_params;
+	fn_params.InSplineComponent = InSplineComponent;
+	fn_params.StartWidth = StartWidth;
+	fn_params.EndWidth = EndWidth;
+	fn_params.StartSideFalloff = StartSideFalloff;
+	fn_params.EndSideFalloff = EndSideFalloff;
+	fn_params.StartRoll = StartRoll;
+	fn_params.EndRoll = EndRoll;
+	fn_params.NumSubdivisions = NumSubdivisions;
+	fn_params.bRaiseHeights = bRaiseHeights;
+	fn_params.bLowerHeights = bLowerHeights;
+	fn_params.PaintLayer = PaintLayer;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -152,13 +152,13 @@ void ALandscapeProxy::ChangeUseTessellationComponentScreenSizeFalloff(bool InCom
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.ChangeUseTessellationComponentScreenSizeFalloff");
 
-	ALandscapeProxy_ChangeUseTessellationComponentScreenSizeFalloff_Params params;
-	params.InComponentScreenSizeToUseSubSections = InComponentScreenSizeToUseSubSections;
+	ALandscapeProxy_ChangeUseTessellationComponentScreenSizeFalloff_Params fn_params;
+	fn_params.InComponentScreenSizeToUseSubSections = InComponentScreenSizeToUseSubSections;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -173,13 +173,13 @@ void ALandscapeProxy::ChangeTessellationComponentScreenSizeFalloff(float InUseTe
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.ChangeTessellationComponentScreenSizeFalloff");
 
-	ALandscapeProxy_ChangeTessellationComponentScreenSizeFalloff_Params params;
-	params.InUseTessellationComponentScreenSizeFalloff = InUseTessellationComponentScreenSizeFalloff;
+	ALandscapeProxy_ChangeTessellationComponentScreenSizeFalloff_Params fn_params;
+	fn_params.InUseTessellationComponentScreenSizeFalloff = InUseTessellationComponentScreenSizeFalloff;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -194,13 +194,13 @@ void ALandscapeProxy::ChangeTessellationComponentScreenSize(float InTessellation
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.ChangeTessellationComponentScreenSize");
 
-	ALandscapeProxy_ChangeTessellationComponentScreenSize_Params params;
-	params.InTessellationComponentScreenSize = InTessellationComponentScreenSize;
+	ALandscapeProxy_ChangeTessellationComponentScreenSize_Params fn_params;
+	fn_params.InTessellationComponentScreenSize = InTessellationComponentScreenSize;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -215,13 +215,13 @@ void ALandscapeProxy::ChangeLODDistanceFactor(float InLODDistanceFactor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.ChangeLODDistanceFactor");
 
-	ALandscapeProxy_ChangeLODDistanceFactor_Params params;
-	params.InLODDistanceFactor = InLODDistanceFactor;
+	ALandscapeProxy_ChangeLODDistanceFactor_Params fn_params;
+	fn_params.InLODDistanceFactor = InLODDistanceFactor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -236,13 +236,13 @@ void ALandscapeProxy::ChangeComponentScreenSizeToUseSubSections(float InComponen
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.ChangeComponentScreenSizeToUseSubSections");
 
-	ALandscapeProxy_ChangeComponentScreenSizeToUseSubSections_Params params;
-	params.InComponentScreenSizeToUseSubSections = InComponentScreenSizeToUseSubSections;
+	ALandscapeProxy_ChangeComponentScreenSizeToUseSubSections_Params fn_params;
+	fn_params.InComponentScreenSizeToUseSubSections = InComponentScreenSizeToUseSubSections;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -258,17 +258,17 @@ class UMaterialInstanceDynamic* ULandscapeComponent::GetMaterialInstanceDynamic(
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeComponent.GetMaterialInstanceDynamic");
 
-	ULandscapeComponent_GetMaterialInstanceDynamic_Params params;
-	params.InIndex = InIndex;
+	ULandscapeComponent_GetMaterialInstanceDynamic_Params fn_params;
+	fn_params.InIndex = InIndex;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

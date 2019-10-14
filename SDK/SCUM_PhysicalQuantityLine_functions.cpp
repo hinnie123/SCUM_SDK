@@ -21,12 +21,12 @@ void UPhysicalQuantityLine_C::SetValueColor(const struct FLinearColor& maxValueL
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysicalQuantityLine.PhysicalQuantityLine_C.SetValueColor");
 
-	UPhysicalQuantityLine_C_SetValueColor_Params params;
-	params.maxValueLinearColorToSet = maxValueLinearColorToSet;
+	UPhysicalQuantityLine_C_SetValueColor_Params fn_params;
+	fn_params.maxValueLinearColorToSet = maxValueLinearColorToSet;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -41,16 +41,16 @@ void UPhysicalQuantityLine_C::GetValueColor(struct FLinearColor* maxValueColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysicalQuantityLine.PhysicalQuantityLine_C.GetValueColor");
 
-	UPhysicalQuantityLine_C_GetValueColor_Params params;
+	UPhysicalQuantityLine_C_GetValueColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (maxValueColor != nullptr)
-		*maxValueColor = params.maxValueColor;
+		*maxValueColor = fn_params.maxValueColor;
 }
 
 
@@ -63,12 +63,12 @@ void UPhysicalQuantityLine_C::SetMaxValueColor(const struct FLinearColor& maxVal
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysicalQuantityLine.PhysicalQuantityLine_C.SetMaxValueColor");
 
-	UPhysicalQuantityLine_C_SetMaxValueColor_Params params;
-	params.maxValueLinearColorToSet = maxValueLinearColorToSet;
+	UPhysicalQuantityLine_C_SetMaxValueColor_Params fn_params;
+	fn_params.maxValueLinearColorToSet = maxValueLinearColorToSet;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -83,16 +83,16 @@ void UPhysicalQuantityLine_C::GetMaxValueColor(struct FLinearColor* maxValueColo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysicalQuantityLine.PhysicalQuantityLine_C.GetMaxValueColor");
 
-	UPhysicalQuantityLine_C_GetMaxValueColor_Params params;
+	UPhysicalQuantityLine_C_GetMaxValueColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (maxValueColor != nullptr)
-		*maxValueColor = params.maxValueColor;
+		*maxValueColor = fn_params.maxValueColor;
 }
 
 
@@ -105,12 +105,12 @@ void UPhysicalQuantityLine_C::SetMeasurementUnit(const struct FText& measurement
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysicalQuantityLine.PhysicalQuantityLine_C.SetMeasurementUnit");
 
-	UPhysicalQuantityLine_C_SetMeasurementUnit_Params params;
-	params.measurementUnitToSet = measurementUnitToSet;
+	UPhysicalQuantityLine_C_SetMeasurementUnit_Params fn_params;
+	fn_params.measurementUnitToSet = measurementUnitToSet;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -125,16 +125,16 @@ void UPhysicalQuantityLine_C::GetMeasurementUnit(struct FText* measurementUnit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysicalQuantityLine.PhysicalQuantityLine_C.GetMeasurementUnit");
 
-	UPhysicalQuantityLine_C_GetMeasurementUnit_Params params;
+	UPhysicalQuantityLine_C_GetMeasurementUnit_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (measurementUnit != nullptr)
-		*measurementUnit = params.measurementUnit;
+		*measurementUnit = fn_params.measurementUnit;
 }
 
 
@@ -147,12 +147,12 @@ void UPhysicalQuantityLine_C::SetMaxValueText(const struct FText& maxValueTextTo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysicalQuantityLine.PhysicalQuantityLine_C.SetMaxValueText");
 
-	UPhysicalQuantityLine_C_SetMaxValueText_Params params;
-	params.maxValueTextToSet = maxValueTextToSet;
+	UPhysicalQuantityLine_C_SetMaxValueText_Params fn_params;
+	fn_params.maxValueTextToSet = maxValueTextToSet;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -167,16 +167,16 @@ void UPhysicalQuantityLine_C::GetMaxValueText(struct FText* maxValueTxt)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysicalQuantityLine.PhysicalQuantityLine_C.GetMaxValueText");
 
-	UPhysicalQuantityLine_C_GetMaxValueText_Params params;
+	UPhysicalQuantityLine_C_GetMaxValueText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (maxValueTxt != nullptr)
-		*maxValueTxt = params.maxValueTxt;
+		*maxValueTxt = fn_params.maxValueTxt;
 }
 
 
@@ -189,12 +189,12 @@ void UPhysicalQuantityLine_C::SetParameterValueText(const struct FText& paramVal
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysicalQuantityLine.PhysicalQuantityLine_C.SetParameterValueText");
 
-	UPhysicalQuantityLine_C_SetParameterValueText_Params params;
-	params.paramValueTextToSet = paramValueTextToSet;
+	UPhysicalQuantityLine_C_SetParameterValueText_Params fn_params;
+	fn_params.paramValueTextToSet = paramValueTextToSet;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -209,16 +209,16 @@ void UPhysicalQuantityLine_C::GetParameterValueText(struct FText* parameterValue
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysicalQuantityLine.PhysicalQuantityLine_C.GetParameterValueText");
 
-	UPhysicalQuantityLine_C_GetParameterValueText_Params params;
+	UPhysicalQuantityLine_C_GetParameterValueText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (parameterValueTxt != nullptr)
-		*parameterValueTxt = params.parameterValueTxt;
+		*parameterValueTxt = fn_params.parameterValueTxt;
 }
 
 
@@ -229,11 +229,11 @@ void UPhysicalQuantityLine_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysicalQuantityLine.PhysicalQuantityLine_C.Construct");
 
-	UPhysicalQuantityLine_C_Construct_Params params;
+	UPhysicalQuantityLine_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -248,12 +248,12 @@ void UPhysicalQuantityLine_C::ExecuteUbergraph_PhysicalQuantityLine(int EntryPoi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PhysicalQuantityLine.PhysicalQuantityLine_C.ExecuteUbergraph_PhysicalQuantityLine");
 
-	UPhysicalQuantityLine_C_ExecuteUbergraph_PhysicalQuantityLine_Params params;
-	params.EntryPoint = EntryPoint;
+	UPhysicalQuantityLine_C_ExecuteUbergraph_PhysicalQuantityLine_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

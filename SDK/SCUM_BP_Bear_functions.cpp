@@ -19,11 +19,11 @@ void ABP_Bear_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Bear.BP_Bear_C.UserConstructionScript");
 
-	ABP_Bear_C_UserConstructionScript_Params params;
+	ABP_Bear_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -38,12 +38,12 @@ void ABP_Bear_C::ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Bear.BP_Bear_C.ReceiveTick");
 
-	ABP_Bear_C_ReceiveTick_Params params;
-	params.DeltaSeconds = DeltaSeconds;
+	ABP_Bear_C_ReceiveTick_Params fn_params;
+	fn_params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -56,11 +56,11 @@ void ABP_Bear_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Bear.BP_Bear_C.ReceiveBeginPlay");
 
-	ABP_Bear_C_ReceiveBeginPlay_Params params;
+	ABP_Bear_C_ReceiveBeginPlay_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -75,12 +75,12 @@ void ABP_Bear_C::ExecuteUbergraph_BP_Bear(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Bear.BP_Bear_C.ExecuteUbergraph_BP_Bear");
 
-	ABP_Bear_C_ExecuteUbergraph_BP_Bear_Params params;
-	params.EntryPoint = EntryPoint;
+	ABP_Bear_C_ExecuteUbergraph_BP_Bear_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

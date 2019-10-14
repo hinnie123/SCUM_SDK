@@ -22,13 +22,13 @@ void UConsoleTextLine_C::SetText(const struct FText& textToSet, const struct FLi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConsoleTextLine.ConsoleTextLine_C.SetText");
 
-	UConsoleTextLine_C_SetText_Params params;
-	params.textToSet = textToSet;
-	params.textColorToSet = textColorToSet;
+	UConsoleTextLine_C_SetText_Params fn_params;
+	fn_params.textToSet = textToSet;
+	fn_params.textColorToSet = textColorToSet;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -41,11 +41,11 @@ void UConsoleTextLine_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConsoleTextLine.ConsoleTextLine_C.Construct");
 
-	UConsoleTextLine_C_Construct_Params params;
+	UConsoleTextLine_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -60,12 +60,12 @@ void UConsoleTextLine_C::ExecuteUbergraph_ConsoleTextLine(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConsoleTextLine.ConsoleTextLine_C.ExecuteUbergraph_ConsoleTextLine");
 
-	UConsoleTextLine_C_ExecuteUbergraph_ConsoleTextLine_Params params;
-	params.EntryPoint = EntryPoint;
+	UConsoleTextLine_C_ExecuteUbergraph_ConsoleTextLine_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

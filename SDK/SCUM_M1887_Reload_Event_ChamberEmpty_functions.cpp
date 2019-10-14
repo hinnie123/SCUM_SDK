@@ -22,16 +22,16 @@ float UM1887_Reload_Event_ChamberEmpty_C::ExecuteUsingData(struct FWeaponReloadD
 {
 	static auto fn = UObject::FindObject<UFunction>("Function M1887_Reload_Event_ChamberEmpty.M1887_Reload_Event_ChamberEmpty_C.ExecuteUsingData");
 
-	UM1887_Reload_Event_ChamberEmpty_C_ExecuteUsingData_Params params;
-	params.Data = Data;
+	UM1887_Reload_Event_ChamberEmpty_C_ExecuteUsingData_Params fn_params;
+	fn_params.Data = Data;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -45,16 +45,16 @@ bool UM1887_Reload_Event_ChamberEmpty_C::CanExecuteUsingData(struct FWeaponReloa
 {
 	static auto fn = UObject::FindObject<UFunction>("Function M1887_Reload_Event_ChamberEmpty.M1887_Reload_Event_ChamberEmpty_C.CanExecuteUsingData");
 
-	UM1887_Reload_Event_ChamberEmpty_C_CanExecuteUsingData_Params params;
-	params.Data = Data;
+	UM1887_Reload_Event_ChamberEmpty_C_CanExecuteUsingData_Params fn_params;
+	fn_params.Data = Data;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -67,12 +67,12 @@ void UM1887_Reload_Event_ChamberEmpty_C::OnActionAnimNotify(ECharacterActionNoti
 {
 	static auto fn = UObject::FindObject<UFunction>("Function M1887_Reload_Event_ChamberEmpty.M1887_Reload_Event_ChamberEmpty_C.OnActionAnimNotify");
 
-	UM1887_Reload_Event_ChamberEmpty_C_OnActionAnimNotify_Params params;
-	params.notifyType = notifyType;
+	UM1887_Reload_Event_ChamberEmpty_C_OnActionAnimNotify_Params fn_params;
+	fn_params.notifyType = notifyType;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -87,12 +87,12 @@ void UM1887_Reload_Event_ChamberEmpty_C::ExecuteUbergraph_M1887_Reload_Event_Cha
 {
 	static auto fn = UObject::FindObject<UFunction>("Function M1887_Reload_Event_ChamberEmpty.M1887_Reload_Event_ChamberEmpty_C.ExecuteUbergraph_M1887_Reload_Event_ChamberEmpty");
 
-	UM1887_Reload_Event_ChamberEmpty_C_ExecuteUbergraph_M1887_Reload_Event_ChamberEmpty_Params params;
-	params.EntryPoint = EntryPoint;
+	UM1887_Reload_Event_ChamberEmpty_C_ExecuteUbergraph_M1887_Reload_Event_ChamberEmpty_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -19,11 +19,11 @@ void UUI_ContinueOrNewCharacterDialog_C::BndEvt__YesButton_K2Node_ComponentBound
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ContinueOrNewCharacterDialog.UI_ContinueOrNewCharacterDialog_C.BndEvt__YesButton_K2Node_ComponentBoundEvent_19_OnClicked__DelegateSignature");
 
-	UUI_ContinueOrNewCharacterDialog_C_BndEvt__YesButton_K2Node_ComponentBoundEvent_19_OnClicked__DelegateSignature_Params params;
+	UUI_ContinueOrNewCharacterDialog_C_BndEvt__YesButton_K2Node_ComponentBoundEvent_19_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void UUI_ContinueOrNewCharacterDialog_C::BndEvt__NewCharacterButton_K2Node_Compo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ContinueOrNewCharacterDialog.UI_ContinueOrNewCharacterDialog_C.BndEvt__NewCharacterButton_K2Node_ComponentBoundEvent_26_OnClicked__DelegateSignature");
 
-	UUI_ContinueOrNewCharacterDialog_C_BndEvt__NewCharacterButton_K2Node_ComponentBoundEvent_26_OnClicked__DelegateSignature_Params params;
+	UUI_ContinueOrNewCharacterDialog_C_BndEvt__NewCharacterButton_K2Node_ComponentBoundEvent_26_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -53,11 +53,11 @@ void UUI_ContinueOrNewCharacterDialog_C::Init()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ContinueOrNewCharacterDialog.UI_ContinueOrNewCharacterDialog_C.Init");
 
-	UUI_ContinueOrNewCharacterDialog_C_Init_Params params;
+	UUI_ContinueOrNewCharacterDialog_C_Init_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -72,12 +72,12 @@ void UUI_ContinueOrNewCharacterDialog_C::ExecuteUbergraph_UI_ContinueOrNewCharac
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ContinueOrNewCharacterDialog.UI_ContinueOrNewCharacterDialog_C.ExecuteUbergraph_UI_ContinueOrNewCharacterDialog");
 
-	UUI_ContinueOrNewCharacterDialog_C_ExecuteUbergraph_UI_ContinueOrNewCharacterDialog_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_ContinueOrNewCharacterDialog_C_ExecuteUbergraph_UI_ContinueOrNewCharacterDialog_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -89,21 +89,21 @@ void UUI_ContinueOrNewCharacterDialog_C::ExecuteUbergraph_UI_ContinueOrNewCharac
 // struct FString                 Ip                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // int                            GameplayPort                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ResponsePort                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 authToken                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// struct FString                 AuthToken                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UUI_ContinueOrNewCharacterDialog_C::New__DelegateSignature(const struct FString& Ip, int GameplayPort, int ResponsePort, const struct FString& authToken)
+void UUI_ContinueOrNewCharacterDialog_C::New__DelegateSignature(const struct FString& Ip, int GameplayPort, int ResponsePort, const struct FString& AuthToken)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ContinueOrNewCharacterDialog.UI_ContinueOrNewCharacterDialog_C.New__DelegateSignature");
 
-	UUI_ContinueOrNewCharacterDialog_C_New__DelegateSignature_Params params;
-	params.Ip = Ip;
-	params.GameplayPort = GameplayPort;
-	params.ResponsePort = ResponsePort;
-	params.authToken = authToken;
+	UUI_ContinueOrNewCharacterDialog_C_New__DelegateSignature_Params fn_params;
+	fn_params.Ip = Ip;
+	fn_params.GameplayPort = GameplayPort;
+	fn_params.ResponsePort = ResponsePort;
+	fn_params.AuthToken = AuthToken;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -115,21 +115,21 @@ void UUI_ContinueOrNewCharacterDialog_C::New__DelegateSignature(const struct FSt
 // struct FString                 Ip                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // int                            GameplayPort                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ResponsePort                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 authToken                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// struct FString                 AuthToken                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UUI_ContinueOrNewCharacterDialog_C::Continue__DelegateSignature(const struct FString& Ip, int GameplayPort, int ResponsePort, const struct FString& authToken)
+void UUI_ContinueOrNewCharacterDialog_C::Continue__DelegateSignature(const struct FString& Ip, int GameplayPort, int ResponsePort, const struct FString& AuthToken)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ContinueOrNewCharacterDialog.UI_ContinueOrNewCharacterDialog_C.Continue__DelegateSignature");
 
-	UUI_ContinueOrNewCharacterDialog_C_Continue__DelegateSignature_Params params;
-	params.Ip = Ip;
-	params.GameplayPort = GameplayPort;
-	params.ResponsePort = ResponsePort;
-	params.authToken = authToken;
+	UUI_ContinueOrNewCharacterDialog_C_Continue__DelegateSignature_Params fn_params;
+	fn_params.Ip = Ip;
+	fn_params.GameplayPort = GameplayPort;
+	fn_params.ResponsePort = ResponsePort;
+	fn_params.AuthToken = AuthToken;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

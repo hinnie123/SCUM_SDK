@@ -13,11 +13,10 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BowSilencer.BP_BowSilencer_C
-// 0x0008 (0x0798 - 0x0790)
+// 0x0000 (0x0830 - 0x0830)
 class ABP_BowSilencer_C : public ABowAttachmentSilencer
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0790(0x0008) (Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{
@@ -25,11 +24,6 @@ public:
 		return ptr;
 	}
 
-
-	void UserConstructionScript();
-	void OnDetachedFromItem(class AItem** Item);
-	void OnAttachedToItem(class AItem** Item);
-	void ExecuteUbergraph_BP_BowSilencer(int EntryPoint);
 };
 
 

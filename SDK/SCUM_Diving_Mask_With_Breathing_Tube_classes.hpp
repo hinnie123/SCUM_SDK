@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Diving_Mask_With_Breathing_Tube.Diving_Mask_With_Breathing_Tube_C
-// 0x0000 (0x0818 - 0x0818)
+// 0x0000 (0x08D0 - 0x08D0)
 class ADiving_Mask_With_Breathing_Tube_C : public AClothesItem
 {
 public:

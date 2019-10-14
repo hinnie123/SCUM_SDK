@@ -21,15 +21,15 @@ struct FText UScrollableContent_C::GetTitleText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ScrollableContent.ScrollableContent_C.GetTitleText");
 
-	UScrollableContent_C_GetTitleText_Params params;
+	UScrollableContent_C_GetTitleText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -42,16 +42,16 @@ void UScrollableContent_C::GetDefaultTitle(struct FText* defaultTitle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ScrollableContent.ScrollableContent_C.GetDefaultTitle");
 
-	UScrollableContent_C_GetDefaultTitle_Params params;
+	UScrollableContent_C_GetDefaultTitle_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (defaultTitle != nullptr)
-		*defaultTitle = params.defaultTitle;
+		*defaultTitle = fn_params.defaultTitle;
 }
 
 
@@ -62,11 +62,11 @@ void UScrollableContent_C::ResetInputChatLineString()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ScrollableContent.ScrollableContent_C.ResetInputChatLineString");
 
-	UScrollableContent_C_ResetInputChatLineString_Params params;
+	UScrollableContent_C_ResetInputChatLineString_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -81,12 +81,12 @@ void UScrollableContent_C::SetInputChatLineString(const struct FText& chatLineSt
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ScrollableContent.ScrollableContent_C.SetInputChatLineString");
 
-	UScrollableContent_C_SetInputChatLineString_Params params;
-	params.chatLineStringToSet = chatLineStringToSet;
+	UScrollableContent_C_SetInputChatLineString_Params fn_params;
+	fn_params.chatLineStringToSet = chatLineStringToSet;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -101,16 +101,16 @@ void UScrollableContent_C::GetInputChatLineText(struct FText* chatLineString)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ScrollableContent.ScrollableContent_C.GetInputChatLineText");
 
-	UScrollableContent_C_GetInputChatLineText_Params params;
+	UScrollableContent_C_GetInputChatLineText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (chatLineString != nullptr)
-		*chatLineString = params.chatLineString;
+		*chatLineString = fn_params.chatLineString;
 }
 
 
@@ -121,11 +121,11 @@ void UScrollableContent_C::PrintChatMessages()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ScrollableContent.ScrollableContent_C.PrintChatMessages");
 
-	UScrollableContent_C_PrintChatMessages_Params params;
+	UScrollableContent_C_PrintChatMessages_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -140,16 +140,16 @@ void UScrollableContent_C::SelectCustomColor(struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ScrollableContent.ScrollableContent_C.SelectCustomColor");
 
-	UScrollableContent_C_SelectCustomColor_Params params;
+	UScrollableContent_C_SelectCustomColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Color != nullptr)
-		*Color = params.Color;
+		*Color = fn_params.Color;
 }
 
 
@@ -160,11 +160,11 @@ void UScrollableContent_C::AutoCreateContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ScrollableContent.ScrollableContent_C.AutoCreateContent");
 
-	UScrollableContent_C_AutoCreateContent_Params params;
+	UScrollableContent_C_AutoCreateContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -177,11 +177,11 @@ void UScrollableContent_C::PopulateMessageStrings()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ScrollableContent.ScrollableContent_C.PopulateMessageStrings");
 
-	UScrollableContent_C_PopulateMessageStrings_Params params;
+	UScrollableContent_C_PopulateMessageStrings_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -199,19 +199,19 @@ void UScrollableContent_C::AddTextLine(const struct FText& textToSet, const stru
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ScrollableContent.ScrollableContent_C.AddTextLine");
 
-	UScrollableContent_C_AddTextLine_Params params;
-	params.textToSet = textToSet;
-	params.Color = Color;
-	params.scrollToTheEnd = scrollToTheEnd;
+	UScrollableContent_C_AddTextLine_Params fn_params;
+	fn_params.textToSet = textToSet;
+	fn_params.Color = Color;
+	fn_params.scrollToTheEnd = scrollToTheEnd;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (lineAdded != nullptr)
-		*lineAdded = params.lineAdded;
+		*lineAdded = fn_params.lineAdded;
 }
 
 
@@ -226,17 +226,17 @@ struct FEventReply UScrollableContent_C::OnMouseButtonDownOnConsole(const struct
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ScrollableContent.ScrollableContent_C.OnMouseButtonDownOnConsole");
 
-	UScrollableContent_C_OnMouseButtonDownOnConsole_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UScrollableContent_C_OnMouseButtonDownOnConsole_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -247,11 +247,11 @@ void UScrollableContent_C::StartDrag()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ScrollableContent.ScrollableContent_C.StartDrag");
 
-	UScrollableContent_C_StartDrag_Params params;
+	UScrollableContent_C_StartDrag_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -267,13 +267,13 @@ void UScrollableContent_C::BndEvt__InputChatLine_K2Node_ComponentBoundEvent_585_
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ScrollableContent.ScrollableContent_C.BndEvt__InputChatLine_K2Node_ComponentBoundEvent_585_OnEditableTextBoxCommittedEvent__DelegateSignature");
 
-	UScrollableContent_C_BndEvt__InputChatLine_K2Node_ComponentBoundEvent_585_OnEditableTextBoxCommittedEvent__DelegateSignature_Params params;
-	params.Text = Text;
-	params.CommitMethod = CommitMethod;
+	UScrollableContent_C_BndEvt__InputChatLine_K2Node_ComponentBoundEvent_585_OnEditableTextBoxCommittedEvent__DelegateSignature_Params fn_params;
+	fn_params.Text = Text;
+	fn_params.CommitMethod = CommitMethod;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -286,11 +286,11 @@ void UScrollableContent_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ScrollableContent.ScrollableContent_C.Construct");
 
-	UScrollableContent_C_Construct_Params params;
+	UScrollableContent_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -305,12 +305,12 @@ void UScrollableContent_C::OnMinimize(bool shouldMinimize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ScrollableContent.ScrollableContent_C.OnMinimize");
 
-	UScrollableContent_C_OnMinimize_Params params;
-	params.shouldMinimize = shouldMinimize;
+	UScrollableContent_C_OnMinimize_Params fn_params;
+	fn_params.shouldMinimize = shouldMinimize;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -325,12 +325,12 @@ void UScrollableContent_C::ExecuteUbergraph_ScrollableContent(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ScrollableContent.ScrollableContent_C.ExecuteUbergraph_ScrollableContent");
 
-	UScrollableContent_C_ExecuteUbergraph_ScrollableContent_Params params;
-	params.EntryPoint = EntryPoint;
+	UScrollableContent_C_ExecuteUbergraph_ScrollableContent_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

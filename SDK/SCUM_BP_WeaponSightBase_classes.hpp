@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WeaponSightBase.BP_WeaponSightBase_C
-// 0x0008 (0x07A8 - 0x07A0)
+// 0x0008 (0x0848 - 0x0840)
 class ABP_WeaponSightBase_C : public AWeaponAttachmentSight
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x07A0(0x0008) (Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0840(0x0008) (Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

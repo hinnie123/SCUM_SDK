@@ -21,16 +21,16 @@ void UUI_GameEventTeamInfoWidget_C::GetStatWidgetCount(int* count)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventTeamInfoWidget.UI_GameEventTeamInfoWidget_C.GetStatWidgetCount");
 
-	UUI_GameEventTeamInfoWidget_C_GetStatWidgetCount_Params params;
+	UUI_GameEventTeamInfoWidget_C_GetStatWidgetCount_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (count != nullptr)
-		*count = params.count;
+		*count = fn_params.count;
 }
 
 
@@ -44,17 +44,17 @@ void UUI_GameEventTeamInfoWidget_C::GetStatWidget(int Index, class UGameEventPar
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventTeamInfoWidget.UI_GameEventTeamInfoWidget_C.GetStatWidget");
 
-	UUI_GameEventTeamInfoWidget_C_GetStatWidget_Params params;
-	params.Index = Index;
+	UUI_GameEventTeamInfoWidget_C_GetStatWidget_Params fn_params;
+	fn_params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Widget != nullptr)
-		*Widget = params.Widget;
+		*Widget = fn_params.Widget;
 }
 
 
@@ -67,12 +67,12 @@ void UUI_GameEventTeamInfoWidget_C::SetTeamScore(float Score)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventTeamInfoWidget.UI_GameEventTeamInfoWidget_C.SetTeamScore");
 
-	UUI_GameEventTeamInfoWidget_C_SetTeamScore_Params params;
-	params.Score = Score;
+	UUI_GameEventTeamInfoWidget_C_SetTeamScore_Params fn_params;
+	fn_params.Score = Score;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -85,11 +85,11 @@ void UUI_GameEventTeamInfoWidget_C::ClearWinCounters()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventTeamInfoWidget.UI_GameEventTeamInfoWidget_C.ClearWinCounters");
 
-	UUI_GameEventTeamInfoWidget_C_ClearWinCounters_Params params;
+	UUI_GameEventTeamInfoWidget_C_ClearWinCounters_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -102,11 +102,11 @@ void UUI_GameEventTeamInfoWidget_C::AddWinCounter()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventTeamInfoWidget.UI_GameEventTeamInfoWidget_C.AddWinCounter");
 
-	UUI_GameEventTeamInfoWidget_C_AddWinCounter_Params params;
+	UUI_GameEventTeamInfoWidget_C_AddWinCounter_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -121,12 +121,12 @@ void UUI_GameEventTeamInfoWidget_C::RemoveStatWidget(class UGameEventParticipant
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventTeamInfoWidget.UI_GameEventTeamInfoWidget_C.RemoveStatWidget");
 
-	UUI_GameEventTeamInfoWidget_C_RemoveStatWidget_Params params;
-	params.Widget = Widget;
+	UUI_GameEventTeamInfoWidget_C_RemoveStatWidget_Params fn_params;
+	fn_params.Widget = Widget;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -141,12 +141,12 @@ void UUI_GameEventTeamInfoWidget_C::AddStatWidget(class UGameEventParticipantSta
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventTeamInfoWidget.UI_GameEventTeamInfoWidget_C.AddStatWidget");
 
-	UUI_GameEventTeamInfoWidget_C_AddStatWidget_Params params;
-	params.Widget = Widget;
+	UUI_GameEventTeamInfoWidget_C_AddStatWidget_Params fn_params;
+	fn_params.Widget = Widget;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -161,12 +161,12 @@ void UUI_GameEventTeamInfoWidget_C::AddHeader(class UUI_GameEventTeamHeaderWidge
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventTeamInfoWidget.UI_GameEventTeamInfoWidget_C.AddHeader");
 
-	UUI_GameEventTeamInfoWidget_C_AddHeader_Params params;
-	params.Header = Header;
+	UUI_GameEventTeamInfoWidget_C_AddHeader_Params fn_params;
+	fn_params.Header = Header;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -179,11 +179,11 @@ void UUI_GameEventTeamInfoWidget_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventTeamInfoWidget.UI_GameEventTeamInfoWidget_C.Construct");
 
-	UUI_GameEventTeamInfoWidget_C_Construct_Params params;
+	UUI_GameEventTeamInfoWidget_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -198,12 +198,12 @@ void UUI_GameEventTeamInfoWidget_C::ExecuteUbergraph_UI_GameEventTeamInfoWidget(
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventTeamInfoWidget.UI_GameEventTeamInfoWidget_C.ExecuteUbergraph_UI_GameEventTeamInfoWidget");
 
-	UUI_GameEventTeamInfoWidget_C_ExecuteUbergraph_UI_GameEventTeamInfoWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_GameEventTeamInfoWidget_C_ExecuteUbergraph_UI_GameEventTeamInfoWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

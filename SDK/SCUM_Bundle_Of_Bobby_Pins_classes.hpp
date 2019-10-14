@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bundle_Of_Bobby_Pins.Bundle_Of_Bobby_Pins_C
-// 0x0000 (0x0790 - 0x0790)
+// 0x0000 (0x0830 - 0x0830)
 class ABundle_Of_Bobby_Pins_C : public AEquipmentItem
 {
 public:

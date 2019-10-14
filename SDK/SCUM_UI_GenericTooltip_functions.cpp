@@ -21,12 +21,12 @@ void UUI_GenericTooltip_C::SetText(const struct FText& Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GenericTooltip.UI_GenericTooltip_C.SetText");
 
-	UUI_GenericTooltip_C_SetText_Params params;
-	params.Text = Text;
+	UUI_GenericTooltip_C_SetText_Params fn_params;
+	fn_params.Text = Text;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -19,11 +19,11 @@ void UMessage_C::StartFade()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Message.Message_C.StartFade");
 
-	UMessage_C_StartFade_Params params;
+	UMessage_C_StartFade_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -41,15 +41,15 @@ void UMessage_C::Init(const struct FText& Text, TEnumAsByte<EMessageType> Type, 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Message.Message_C.Init");
 
-	UMessage_C_Init_Params params;
-	params.Text = Text;
-	params.Type = Type;
-	params.Duration = Duration;
-	params.Color = Color;
+	UMessage_C_Init_Params fn_params;
+	fn_params.Text = Text;
+	fn_params.Type = Type;
+	fn_params.Duration = Duration;
+	fn_params.Color = Color;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -65,13 +65,13 @@ void UMessage_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Message.Message_C.Tick");
 
-	UMessage_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UMessage_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -86,12 +86,12 @@ void UMessage_C::ExecuteUbergraph_Message(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Message.Message_C.ExecuteUbergraph_Message");
 
-	UMessage_C_ExecuteUbergraph_Message_Params params;
-	params.EntryPoint = EntryPoint;
+	UMessage_C_ExecuteUbergraph_Message_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -25,16 +25,16 @@ void UUI_MultipleProgressBar_C::SetDisplayValues(float value1, float value2, flo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_MultipleProgressBar.UI_MultipleProgressBar_C.SetDisplayValues");
 
-	UUI_MultipleProgressBar_C_SetDisplayValues_Params params;
-	params.value1 = value1;
-	params.value2 = value2;
-	params.value3 = value3;
-	params.value4 = value4;
-	params.value5 = value5;
+	UUI_MultipleProgressBar_C_SetDisplayValues_Params fn_params;
+	fn_params.value1 = value1;
+	fn_params.value2 = value2;
+	fn_params.value3 = value3;
+	fn_params.value4 = value4;
+	fn_params.value5 = value5;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -51,14 +51,14 @@ void UUI_MultipleProgressBar_C::SetMaxValue(float MaxValue, float limitMaxValue,
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_MultipleProgressBar.UI_MultipleProgressBar_C.SetMaxValue");
 
-	UUI_MultipleProgressBar_C_SetMaxValue_Params params;
-	params.MaxValue = MaxValue;
-	params.limitMaxValue = limitMaxValue;
-	params.DisplayMaxValue = DisplayMaxValue;
+	UUI_MultipleProgressBar_C_SetMaxValue_Params fn_params;
+	fn_params.MaxValue = MaxValue;
+	fn_params.limitMaxValue = limitMaxValue;
+	fn_params.DisplayMaxValue = DisplayMaxValue;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -75,17 +75,17 @@ struct FEventReply UUI_MultipleProgressBar_C::OnMouseMove(struct FGeometry* MyGe
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_MultipleProgressBar.UI_MultipleProgressBar_C.OnMouseMove");
 
-	UUI_MultipleProgressBar_C_OnMouseMove_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_MultipleProgressBar_C_OnMouseMove_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -102,16 +102,16 @@ void UUI_MultipleProgressBar_C::SetPercentages(float Percentage1, float percenta
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_MultipleProgressBar.UI_MultipleProgressBar_C.SetPercentages");
 
-	UUI_MultipleProgressBar_C_SetPercentages_Params params;
-	params.Percentage1 = Percentage1;
-	params.percentage2 = percentage2;
-	params.percentage3 = percentage3;
-	params.Percentage4 = Percentage4;
-	params.percentage5 = percentage5;
+	UUI_MultipleProgressBar_C_SetPercentages_Params fn_params;
+	fn_params.Percentage1 = Percentage1;
+	fn_params.percentage2 = percentage2;
+	fn_params.percentage3 = percentage3;
+	fn_params.Percentage4 = Percentage4;
+	fn_params.percentage5 = percentage5;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -124,11 +124,11 @@ void UUI_MultipleProgressBar_C::OnSynchronizeProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_MultipleProgressBar.UI_MultipleProgressBar_C.OnSynchronizeProperties");
 
-	UUI_MultipleProgressBar_C_OnSynchronizeProperties_Params params;
+	UUI_MultipleProgressBar_C_OnSynchronizeProperties_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -141,11 +141,11 @@ void UUI_MultipleProgressBar_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_MultipleProgressBar.UI_MultipleProgressBar_C.Construct");
 
-	UUI_MultipleProgressBar_C_Construct_Params params;
+	UUI_MultipleProgressBar_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -160,12 +160,12 @@ void UUI_MultipleProgressBar_C::ExecuteUbergraph_UI_MultipleProgressBar(int Entr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_MultipleProgressBar.UI_MultipleProgressBar_C.ExecuteUbergraph_UI_MultipleProgressBar");
 
-	UUI_MultipleProgressBar_C_ExecuteUbergraph_UI_MultipleProgressBar_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_MultipleProgressBar_C_ExecuteUbergraph_UI_MultipleProgressBar_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -21,12 +21,12 @@ void UUI_CraftingInfoInWorld_C::Init(class AItem** itemCDO)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingInfoInWorld.UI_CraftingInfoInWorld_C.Init");
 
-	UUI_CraftingInfoInWorld_C_Init_Params params;
-	params.itemCDO = itemCDO;
+	UUI_CraftingInfoInWorld_C_Init_Params fn_params;
+	fn_params.itemCDO = itemCDO;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -42,13 +42,13 @@ void UUI_CraftingInfoInWorld_C::SetCaptionAndDescription(struct FText* Caption, 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingInfoInWorld.UI_CraftingInfoInWorld_C.SetCaptionAndDescription");
 
-	UUI_CraftingInfoInWorld_C_SetCaptionAndDescription_Params params;
-	params.Caption = Caption;
-	params.Description = Description;
+	UUI_CraftingInfoInWorld_C_SetCaptionAndDescription_Params fn_params;
+	fn_params.Caption = Caption;
+	fn_params.Description = Description;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -63,12 +63,12 @@ void UUI_CraftingInfoInWorld_C::ExecuteUbergraph_UI_CraftingInfoInWorld(int Entr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingInfoInWorld.UI_CraftingInfoInWorld_C.ExecuteUbergraph_UI_CraftingInfoInWorld");
 
-	UUI_CraftingInfoInWorld_C_ExecuteUbergraph_UI_CraftingInfoInWorld_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_CraftingInfoInWorld_C_ExecuteUbergraph_UI_CraftingInfoInWorld_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

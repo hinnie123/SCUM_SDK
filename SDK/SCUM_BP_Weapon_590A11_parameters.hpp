@@ -14,6 +14,12 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_Weapon_590A11.BP_Weapon_590A11_C.CanSwitchFiringMode
+struct ABP_Weapon_590A11_C_CanSwitchFiringMode_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function BP_Weapon_590A11.BP_Weapon_590A11_C.GetWidgetDisplayInfo
 struct ABP_Weapon_590A11_C_GetWidgetDisplayInfo_Params
 {

@@ -23,17 +23,17 @@ bool UAnimNotify_AkEvent_C::Received_Notify(class USkeletalMeshComponent** MeshC
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimNotify_AkEvent.AnimNotify_AkEvent_C.Received_Notify");
 
-	UAnimNotify_AkEvent_C_Received_Notify_Params params;
-	params.MeshComp = MeshComp;
-	params.Animation = Animation;
+	UAnimNotify_AkEvent_C_Received_Notify_Params fn_params;
+	fn_params.MeshComp = MeshComp;
+	fn_params.Animation = Animation;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

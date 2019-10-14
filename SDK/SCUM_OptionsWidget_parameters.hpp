@@ -539,6 +539,35 @@ struct UOptionsWidget_C_BndEvt__FOVSlider_K2Node_ComponentBoundEvent_4_MouseUp__
 {
 };
 
+// Function OptionsWidget.OptionsWidget_C.BndEvt__GameOptions_K2Node_ComponentBoundEvent_5_OnClicked__DelegateSignature
+struct UOptionsWidget_C_BndEvt__GameOptions_K2Node_ComponentBoundEvent_5_OnClicked__DelegateSignature_Params
+{
+};
+
+// Function OptionsWidget.OptionsWidget_C.BndEvt__ShowKillNotifications_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature
+struct UOptionsWidget_C_BndEvt__ShowKillNotifications_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature_Params
+{
+	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                OldIndex;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       Value;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function OptionsWidget.OptionsWidget_C.BndEvt__ShowAnnouncementMessages_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature
+struct UOptionsWidget_C_BndEvt__ShowAnnouncementMessages_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature_Params
+{
+	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                OldIndex;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       Value;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function OptionsWidget.OptionsWidget_C.BndEvt__VoiceChatSlider_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature
+struct UOptionsWidget_C_BndEvt__VoiceChatSlider_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature_Params
+{
+	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                OldIndex;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       Value;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
 // Function OptionsWidget.OptionsWidget_C.ExecuteUbergraph_OptionsWidget
 struct UOptionsWidget_C_ExecuteUbergraph_OptionsWidget_Params
 {

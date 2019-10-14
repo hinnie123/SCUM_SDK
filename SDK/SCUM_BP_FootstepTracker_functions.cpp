@@ -26,17 +26,17 @@ void ABP_FootstepTracker_C::DrawToTexture(class UCanvasRenderTarget2D* RenderTar
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FootstepTracker.BP_FootstepTracker_C.DrawToTexture");
 
-	ABP_FootstepTracker_C_DrawToTexture_Params params;
-	params.RenderTarget = RenderTarget;
-	params.DrawSize = DrawSize;
-	params.Material = Material;
-	params.Rotation = Rotation;
-	params.AccuracyDivider = AccuracyDivider;
-	params.Location = Location;
+	ABP_FootstepTracker_C_DrawToTexture_Params fn_params;
+	fn_params.RenderTarget = RenderTarget;
+	fn_params.DrawSize = DrawSize;
+	fn_params.Material = Material;
+	fn_params.Rotation = Rotation;
+	fn_params.AccuracyDivider = AccuracyDivider;
+	fn_params.Location = Location;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -49,11 +49,11 @@ void ABP_FootstepTracker_C::Blitzkrieg_Boom()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FootstepTracker.BP_FootstepTracker_C.Blitzkrieg Boom");
 
-	ABP_FootstepTracker_C_Blitzkrieg_Boom_Params params;
+	ABP_FootstepTracker_C_Blitzkrieg_Boom_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -66,11 +66,11 @@ void ABP_FootstepTracker_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FootstepTracker.BP_FootstepTracker_C.UserConstructionScript");
 
-	ABP_FootstepTracker_C_UserConstructionScript_Params params;
+	ABP_FootstepTracker_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -85,12 +85,12 @@ void ABP_FootstepTracker_C::ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FootstepTracker.BP_FootstepTracker_C.ReceiveTick");
 
-	ABP_FootstepTracker_C_ReceiveTick_Params params;
-	params.DeltaSeconds = DeltaSeconds;
+	ABP_FootstepTracker_C_ReceiveTick_Params fn_params;
+	fn_params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -108,15 +108,15 @@ void ABP_FootstepTracker_C::DrawFootstep(const struct FVector& Location, bool fl
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FootstepTracker.BP_FootstepTracker_C.DrawFootstep");
 
-	ABP_FootstepTracker_C_DrawFootstep_Params params;
-	params.Location = Location;
-	params.flip = flip;
-	params.Rotation = Rotation;
-	params.footstepNumber = footstepNumber;
+	ABP_FootstepTracker_C_DrawFootstep_Params fn_params;
+	fn_params.Location = Location;
+	fn_params.flip = flip;
+	fn_params.Rotation = Rotation;
+	fn_params.footstepNumber = footstepNumber;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -129,11 +129,11 @@ void ABP_FootstepTracker_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FootstepTracker.BP_FootstepTracker_C.ReceiveBeginPlay");
 
-	ABP_FootstepTracker_C_ReceiveBeginPlay_Params params;
+	ABP_FootstepTracker_C_ReceiveBeginPlay_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -148,12 +148,12 @@ void ABP_FootstepTracker_C::ExecuteUbergraph_BP_FootstepTracker(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FootstepTracker.BP_FootstepTracker_C.ExecuteUbergraph_BP_FootstepTracker");
 
-	ABP_FootstepTracker_C_ExecuteUbergraph_BP_FootstepTracker_Params params;
-	params.EntryPoint = EntryPoint;
+	ABP_FootstepTracker_C_ExecuteUbergraph_BP_FootstepTracker_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

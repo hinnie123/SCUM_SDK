@@ -19,11 +19,11 @@ void UUI_GameEventMiniScoreboardWidget_C::UpdateWinCounters()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventMiniScoreboardWidget.UI_GameEventMiniScoreboardWidget_C.UpdateWinCounters");
 
-	UUI_GameEventMiniScoreboardWidget_C_UpdateWinCounters_Params params;
+	UUI_GameEventMiniScoreboardWidget_C_UpdateWinCounters_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void UUI_GameEventMiniScoreboardWidget_C::UpdateTeamScores()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventMiniScoreboardWidget.UI_GameEventMiniScoreboardWidget_C.UpdateTeamScores");
 
-	UUI_GameEventMiniScoreboardWidget_C_UpdateTeamScores_Params params;
+	UUI_GameEventMiniScoreboardWidget_C_UpdateTeamScores_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -53,11 +53,11 @@ void UUI_GameEventMiniScoreboardWidget_C::InitInfo()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventMiniScoreboardWidget.UI_GameEventMiniScoreboardWidget_C.InitInfo");
 
-	UUI_GameEventMiniScoreboardWidget_C_InitInfo_Params params;
+	UUI_GameEventMiniScoreboardWidget_C_InitInfo_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -72,15 +72,15 @@ ESlateVisibility UUI_GameEventMiniScoreboardWidget_C::EmptyMessage()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventMiniScoreboardWidget.UI_GameEventMiniScoreboardWidget_C.EmptyMessage");
 
-	UUI_GameEventMiniScoreboardWidget_C_EmptyMessage_Params params;
+	UUI_GameEventMiniScoreboardWidget_C_EmptyMessage_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -91,11 +91,11 @@ void UUI_GameEventMiniScoreboardWidget_C::OnUpdate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventMiniScoreboardWidget.UI_GameEventMiniScoreboardWidget_C.OnUpdate");
 
-	UUI_GameEventMiniScoreboardWidget_C_OnUpdate_Params params;
+	UUI_GameEventMiniScoreboardWidget_C_OnUpdate_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -108,11 +108,11 @@ void UUI_GameEventMiniScoreboardWidget_C::InitializeScoreboard()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventMiniScoreboardWidget.UI_GameEventMiniScoreboardWidget_C.InitializeScoreboard");
 
-	UUI_GameEventMiniScoreboardWidget_C_InitializeScoreboard_Params params;
+	UUI_GameEventMiniScoreboardWidget_C_InitializeScoreboard_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -127,12 +127,12 @@ void UUI_GameEventMiniScoreboardWidget_C::ExecuteUbergraph_UI_GameEventMiniScore
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventMiniScoreboardWidget.UI_GameEventMiniScoreboardWidget_C.ExecuteUbergraph_UI_GameEventMiniScoreboardWidget");
 
-	UUI_GameEventMiniScoreboardWidget_C_ExecuteUbergraph_UI_GameEventMiniScoreboardWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_GameEventMiniScoreboardWidget_C_ExecuteUbergraph_UI_GameEventMiniScoreboardWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

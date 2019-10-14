@@ -51,7 +51,7 @@ public:
 	unsigned char                                      UnknownData01[0x6];                                       // 0x0312(0x0006) MISSED OFFSET
 	struct FText                                       Title;                                                    // 0x0318(0x0018) (Edit, BlueprintVisible)
 	int                                                TitleSize;                                                // 0x0330(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              LeftoverPercentage;                                       // 0x0334(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              leftoverPercentage;                                       // 0x0334(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              _lastLeftoverPercentage;                                  // 0x0338(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               EnableRemainingPercentage;                                // 0x033C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x3];                                       // 0x033D(0x0003) MISSED OFFSET
@@ -91,7 +91,7 @@ public:
 	void ExecuteUbergraph_UI_CC_ProgressBar(int EntryPoint);
 	void MouseDown__DelegateSignature();
 	void MouseUp__DelegateSignature();
-	void OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage);
+	void OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage);
 };
 
 

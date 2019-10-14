@@ -21,16 +21,16 @@ void UUI_ItemClass_C::GetTexture(class UTexture2D** Texture)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemClass.UI_ItemClass_C.GetTexture");
 
-	UUI_ItemClass_C_GetTexture_Params params;
+	UUI_ItemClass_C_GetTexture_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Texture != nullptr)
-		*Texture = params.Texture;
+		*Texture = fn_params.Texture;
 }
 
 
@@ -45,17 +45,17 @@ struct FEventReply UUI_ItemClass_C::OnMouseButtonDoubleClick(struct FGeometry* I
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemClass.UI_ItemClass_C.OnMouseButtonDoubleClick");
 
-	UUI_ItemClass_C_OnMouseButtonDoubleClick_Params params;
-	params.InMyGeometry = InMyGeometry;
-	params.InMouseEvent = InMouseEvent;
+	UUI_ItemClass_C_OnMouseButtonDoubleClick_Params fn_params;
+	fn_params.InMyGeometry = InMyGeometry;
+	fn_params.InMouseEvent = InMouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -69,13 +69,13 @@ void UUI_ItemClass_C::Init(class UClass** ItemClass, class UTexture2D** Texture)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemClass.UI_ItemClass_C.Init");
 
-	UUI_ItemClass_C_Init_Params params;
-	params.ItemClass = ItemClass;
-	params.Texture = Texture;
+	UUI_ItemClass_C_Init_Params fn_params;
+	fn_params.ItemClass = ItemClass;
+	fn_params.Texture = Texture;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -88,11 +88,11 @@ void UUI_ItemClass_C::OnSynchronizeProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemClass.UI_ItemClass_C.OnSynchronizeProperties");
 
-	UUI_ItemClass_C_OnSynchronizeProperties_Params params;
+	UUI_ItemClass_C_OnSynchronizeProperties_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -105,11 +105,11 @@ void UUI_ItemClass_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemClass.UI_ItemClass_C.Construct");
 
-	UUI_ItemClass_C_Construct_Params params;
+	UUI_ItemClass_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -124,12 +124,12 @@ void UUI_ItemClass_C::ExecuteUbergraph_UI_ItemClass(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemClass.UI_ItemClass_C.ExecuteUbergraph_UI_ItemClass");
 
-	UUI_ItemClass_C_ExecuteUbergraph_UI_ItemClass_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_ItemClass_C_ExecuteUbergraph_UI_ItemClass_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

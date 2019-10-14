@@ -22,13 +22,13 @@ void UUI_Lockpicking_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Lockpicking.UI_Lockpicking_C.Tick");
 
-	UUI_Lockpicking_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UUI_Lockpicking_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -43,12 +43,12 @@ void UUI_Lockpicking_C::ExecuteUbergraph_UI_Lockpicking(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Lockpicking.UI_Lockpicking_C.ExecuteUbergraph_UI_Lockpicking");
 
-	UUI_Lockpicking_C_ExecuteUbergraph_UI_Lockpicking_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_Lockpicking_C_ExecuteUbergraph_UI_Lockpicking_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

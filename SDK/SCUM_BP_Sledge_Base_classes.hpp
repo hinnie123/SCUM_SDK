@@ -13,15 +13,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Sledge_Base.BP_Sledge_Base_C
-// 0x0028 (0x0988 - 0x0960)
+// 0x0028 (0x0A28 - 0x0A00)
 class ABP_Sledge_Base_C : public ASledge
 {
 public:
-	class UStaticMeshComponent*                        Collision;                                                // 0x0960(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USledgePassengerMountSlot*                   Passenger;                                                // 0x0968(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USledgeDriverMountSlot*                      Driver;                                                   // 0x0970(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UCameraComponent*                            Camera;                                                   // 0x0978(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USledgeSpringArmComponent*                   CameraBoom;                                               // 0x0980(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        Collision;                                                // 0x0A00(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USledgePassengerMountSlot*                   Passenger;                                                // 0x0A08(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USledgeDriverMountSlot*                      Driver;                                                   // 0x0A10(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UCameraComponent*                            Camera;                                                   // 0x0A18(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USledgeSpringArmComponent*                   CameraBoom;                                               // 0x0A20(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

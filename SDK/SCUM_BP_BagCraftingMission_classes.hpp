@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BagCraftingMission.BP_BagCraftingMission_C
-// 0x0008 (0x0570 - 0x0568)
+// 0x0008 (0x0578 - 0x0570)
 class ABP_BagCraftingMission_C : public AMission
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0568(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0570(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

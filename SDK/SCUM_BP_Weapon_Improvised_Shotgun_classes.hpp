@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Weapon_Improvised_Shotgun.BP_Weapon_Improvised_Shotgun_C
-// 0x0010 (0x1170 - 0x1160)
+// 0x0010 (0x12B0 - 0x12A0)
 class ABP_Weapon_Improvised_Shotgun_C : public AWeapon
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1160(0x0008) (Transient, DuplicateTransient)
-	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule;                              // 0x1168(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x12A0(0x0008) (Transient, DuplicateTransient)
+	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule;                              // 0x12A8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -27,8 +27,9 @@ public:
 	}
 
 
+	bool CanSwitchFiringMode();
 	void UserConstructionScript();
-	void ReceiveTick(float* DeltaSeconds);
+	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_Weapon_Improvised_Shotgun(int EntryPoint);
 };
 

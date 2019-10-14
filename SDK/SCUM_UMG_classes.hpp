@@ -833,18 +833,18 @@ public:
 	}
 
 
-	void SetSelectedOption(const struct FString& Option);
-	bool RemoveOption(const struct FString& Option);
+	void SetSelectedOption(const struct FString& option);
+	bool RemoveOption(const struct FString& option);
 	void RefreshOptions();
 	void OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
 	void OnOpeningEvent__DelegateSignature();
 	struct FString GetSelectedOption();
 	int GetOptionCount();
 	struct FString GetOptionAtIndex(int Index);
-	int FindOptionIndex(const struct FString& Option);
+	int FindOptionIndex(const struct FString& option);
 	void ClearSelection();
 	void ClearOptions();
-	void AddOption(const struct FString& Option);
+	void AddOption(const struct FString& option);
 };
 
 

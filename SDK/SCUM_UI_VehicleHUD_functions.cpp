@@ -21,15 +21,15 @@ struct FText UUI_VehicleHUD_C::GetHealthBarCaption()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_VehicleHUD.UI_VehicleHUD_C.GetHealthBarCaption");
 
-	UUI_VehicleHUD_C_GetHealthBarCaption_Params params;
+	UUI_VehicleHUD_C_GetHealthBarCaption_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -42,15 +42,15 @@ ESlateVisibility UUI_VehicleHUD_C::GetMainVisibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_VehicleHUD.UI_VehicleHUD_C.GetMainVisibility");
 
-	UUI_VehicleHUD_C_GetMainVisibility_Params params;
+	UUI_VehicleHUD_C_GetMainVisibility_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -64,13 +64,13 @@ void UUI_VehicleHUD_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_VehicleHUD.UI_VehicleHUD_C.Tick");
 
-	UUI_VehicleHUD_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UUI_VehicleHUD_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -85,12 +85,12 @@ void UUI_VehicleHUD_C::ExecuteUbergraph_UI_VehicleHUD(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_VehicleHUD.UI_VehicleHUD_C.ExecuteUbergraph_UI_VehicleHUD");
 
-	UUI_VehicleHUD_C_ExecuteUbergraph_UI_VehicleHUD_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_VehicleHUD_C_ExecuteUbergraph_UI_VehicleHUD_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

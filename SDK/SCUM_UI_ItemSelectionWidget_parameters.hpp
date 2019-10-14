@@ -23,7 +23,7 @@ struct UUI_ItemSelectionWidget_C_Get_ItemName_ColorAndOpacity_Params
 // Function UI_ItemSelectionWidget.UI_ItemSelectionWidget_C.SetSelected
 struct UUI_ItemSelectionWidget_C_SetSelected_Params
 {
-	bool                                               Selected;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               selected;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UI_ItemSelectionWidget.UI_ItemSelectionWidget_C.On_Selection_MouseButtonDown

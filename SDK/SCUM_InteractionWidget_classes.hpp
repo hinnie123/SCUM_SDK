@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass InteractionWidget.InteractionWidget_C
-// 0x0008 (0x0270 - 0x0268)
+// 0x0008 (0x0290 - 0x0288)
 class UInteractionWidget_C : public UInteractionUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0268(0x0008) (Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0288(0x0008) (Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

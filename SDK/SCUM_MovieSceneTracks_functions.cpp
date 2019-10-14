@@ -21,15 +21,15 @@ struct FTransform UMovieSceneTransformOrigin::BP_GetTransformOrigin()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneTracks.MovieSceneTransformOrigin.BP_GetTransformOrigin");
 
-	UMovieSceneTransformOrigin_BP_GetTransformOrigin_Params params;
+	UMovieSceneTransformOrigin_BP_GetTransformOrigin_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

@@ -19,12 +19,12 @@ void UClothingSimulationInteractor::PhysicsAssetUpdated()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.PhysicsAssetUpdated");
 
-	UClothingSimulationInteractor_PhysicsAssetUpdated_Params params;
+	UClothingSimulationInteractor_PhysicsAssetUpdated_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -37,12 +37,12 @@ void UClothingSimulationInteractor::ClothConfigUpdated()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.ClothConfigUpdated");
 
-	UClothingSimulationInteractor_ClothConfigUpdated_Params params;
+	UClothingSimulationInteractor_ClothConfigUpdated_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

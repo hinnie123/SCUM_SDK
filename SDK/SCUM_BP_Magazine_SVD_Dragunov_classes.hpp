@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Magazine_SVD_Dragunov.BP_Magazine_SVD_Dragunov_C
-// 0x0000 (0x07A0 - 0x07A0)
+// 0x0000 (0x0840 - 0x0840)
 class ABP_Magazine_SVD_Dragunov_C : public AWeaponAttachmentMagazine
 {
 public:

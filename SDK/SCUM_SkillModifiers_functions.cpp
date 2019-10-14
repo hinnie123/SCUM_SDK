@@ -19,11 +19,11 @@ void USkillModifiers_C::SetParentsForChildren()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillModifiers.SkillModifiers_C.SetParentsForChildren");
 
-	USkillModifiers_C_SetParentsForChildren_Params params;
+	USkillModifiers_C_SetParentsForChildren_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -38,16 +38,16 @@ void USkillModifiers_C::shouldAlarmBeOn(bool* shouldAlarmBeOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillModifiers.SkillModifiers_C.shouldAlarmBeOn");
 
-	USkillModifiers_C_shouldAlarmBeOn_Params params;
+	USkillModifiers_C_shouldAlarmBeOn_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (shouldAlarmBeOn != nullptr)
-		*shouldAlarmBeOn = params.shouldAlarmBeOn;
+		*shouldAlarmBeOn = fn_params.shouldAlarmBeOn;
 }
 
 
@@ -58,11 +58,11 @@ void USkillModifiers_C::UpdateParameterLines()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillModifiers.SkillModifiers_C.UpdateParameterLines");
 
-	USkillModifiers_C_UpdateParameterLines_Params params;
+	USkillModifiers_C_UpdateParameterLines_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -78,17 +78,17 @@ void USkillModifiers_C::SetPrisonerToMonitor(class APrisoner** Prisoner, bool* S
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillModifiers.SkillModifiers_C.SetPrisonerToMonitor");
 
-	USkillModifiers_C_SetPrisonerToMonitor_Params params;
-	params.Prisoner = Prisoner;
+	USkillModifiers_C_SetPrisonerToMonitor_Params fn_params;
+	fn_params.Prisoner = Prisoner;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Success != nullptr)
-		*Success = params.Success;
+		*Success = fn_params.Success;
 }
 
 
@@ -101,12 +101,12 @@ void USkillModifiers_C::SetDefaultTitle(const struct FText& defaultTitle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillModifiers.SkillModifiers_C.SetDefaultTitle");
 
-	USkillModifiers_C_SetDefaultTitle_Params params;
-	params.defaultTitle = defaultTitle;
+	USkillModifiers_C_SetDefaultTitle_Params fn_params;
+	fn_params.defaultTitle = defaultTitle;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -121,12 +121,12 @@ void USkillModifiers_C::SetContentVisibility(ESlateVisibility Visibility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillModifiers.SkillModifiers_C.SetContentVisibility");
 
-	USkillModifiers_C_SetContentVisibility_Params params;
-	params.Visibility = Visibility;
+	USkillModifiers_C_SetContentVisibility_Params fn_params;
+	fn_params.Visibility = Visibility;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -141,12 +141,12 @@ void USkillModifiers_C::SetTextColor(const struct FLinearColor& TextColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillModifiers.SkillModifiers_C.SetTextColor");
 
-	USkillModifiers_C_SetTextColor_Params params;
-	params.TextColor = TextColor;
+	USkillModifiers_C_SetTextColor_Params fn_params;
+	fn_params.TextColor = TextColor;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -162,13 +162,13 @@ void USkillModifiers_C::SetTextColorOfVerticalBox(class UPanelWidget* verticalBo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillModifiers.SkillModifiers_C.SetTextColorOfVerticalBox");
 
-	USkillModifiers_C_SetTextColorOfVerticalBox_Params params;
-	params.verticalBoxRef = verticalBoxRef;
-	params.TextColor = TextColor;
+	USkillModifiers_C_SetTextColorOfVerticalBox_Params fn_params;
+	fn_params.verticalBoxRef = verticalBoxRef;
+	fn_params.TextColor = TextColor;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -183,15 +183,15 @@ struct FText USkillModifiers_C::GetTitleText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillModifiers.SkillModifiers_C.GetTitleText");
 
-	USkillModifiers_C_GetTitleText_Params params;
+	USkillModifiers_C_GetTitleText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -205,13 +205,13 @@ void USkillModifiers_C::SetVerticalBoxContentVisibility(class UVerticalBox* vert
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillModifiers.SkillModifiers_C.SetVerticalBoxContentVisibility");
 
-	USkillModifiers_C_SetVerticalBoxContentVisibility_Params params;
-	params.verticalBoxRef = verticalBoxRef;
-	params.Visibility = Visibility;
+	USkillModifiers_C_SetVerticalBoxContentVisibility_Params fn_params;
+	fn_params.verticalBoxRef = verticalBoxRef;
+	fn_params.Visibility = Visibility;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -226,12 +226,12 @@ void USkillModifiers_C::SetContentMinimized(bool minimized)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillModifiers.SkillModifiers_C.SetContentMinimized");
 
-	USkillModifiers_C_SetContentMinimized_Params params;
-	params.minimized = minimized;
+	USkillModifiers_C_SetContentMinimized_Params fn_params;
+	fn_params.minimized = minimized;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -246,12 +246,12 @@ void USkillModifiers_C::MinimizeContent(bool shouldMinimize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillModifiers.SkillModifiers_C.MinimizeContent");
 
-	USkillModifiers_C_MinimizeContent_Params params;
-	params.shouldMinimize = shouldMinimize;
+	USkillModifiers_C_MinimizeContent_Params fn_params;
+	fn_params.shouldMinimize = shouldMinimize;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -266,16 +266,16 @@ void USkillModifiers_C::GetDefaultTitle(struct FText* defaultTitle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillModifiers.SkillModifiers_C.GetDefaultTitle");
 
-	USkillModifiers_C_GetDefaultTitle_Params params;
+	USkillModifiers_C_GetDefaultTitle_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (defaultTitle != nullptr)
-		*defaultTitle = params.defaultTitle;
+		*defaultTitle = fn_params.defaultTitle;
 }
 
 
@@ -288,16 +288,16 @@ void USkillModifiers_C::SelectCustomColor(struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillModifiers.SkillModifiers_C.SelectCustomColor");
 
-	USkillModifiers_C_SelectCustomColor_Params params;
+	USkillModifiers_C_SelectCustomColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Color != nullptr)
-		*Color = params.Color;
+		*Color = fn_params.Color;
 }
 
 
@@ -310,12 +310,12 @@ void USkillModifiers_C::OnMinimize(bool shouldMinimize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillModifiers.SkillModifiers_C.OnMinimize");
 
-	USkillModifiers_C_OnMinimize_Params params;
-	params.shouldMinimize = shouldMinimize;
+	USkillModifiers_C_OnMinimize_Params fn_params;
+	fn_params.shouldMinimize = shouldMinimize;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -328,11 +328,11 @@ void USkillModifiers_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillModifiers.SkillModifiers_C.Construct");
 
-	USkillModifiers_C_Construct_Params params;
+	USkillModifiers_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -348,13 +348,13 @@ void USkillModifiers_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillModifiers.SkillModifiers_C.Tick");
 
-	USkillModifiers_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	USkillModifiers_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -367,11 +367,11 @@ void USkillModifiers_C::OnPrisonerSet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillModifiers.SkillModifiers_C.OnPrisonerSet");
 
-	USkillModifiers_C_OnPrisonerSet_Params params;
+	USkillModifiers_C_OnPrisonerSet_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -384,11 +384,11 @@ void USkillModifiers_C::AlarmOnWindowContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillModifiers.SkillModifiers_C.AlarmOnWindowContent");
 
-	USkillModifiers_C_AlarmOnWindowContent_Params params;
+	USkillModifiers_C_AlarmOnWindowContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -401,11 +401,11 @@ void USkillModifiers_C::AlarmOffWindowContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillModifiers.SkillModifiers_C.AlarmOffWindowContent");
 
-	USkillModifiers_C_AlarmOffWindowContent_Params params;
+	USkillModifiers_C_AlarmOffWindowContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -420,12 +420,12 @@ void USkillModifiers_C::ExecuteUbergraph_SkillModifiers(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillModifiers.SkillModifiers_C.ExecuteUbergraph_SkillModifiers");
 
-	USkillModifiers_C_ExecuteUbergraph_SkillModifiers_Params params;
-	params.EntryPoint = EntryPoint;
+	USkillModifiers_C_ExecuteUbergraph_SkillModifiers_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

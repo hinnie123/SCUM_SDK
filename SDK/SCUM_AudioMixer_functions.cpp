@@ -19,12 +19,12 @@ void USynthComponent::Stop()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.Stop");
 
-	USynthComponent_Stop_Params params;
+	USynthComponent_Stop_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -37,12 +37,12 @@ void USynthComponent::Start()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.Start");
 
-	USynthComponent_Start_Params params;
+	USynthComponent_Start_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -57,13 +57,13 @@ void USynthComponent::SetVolumeMultiplier(float VolumeMultiplier)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.SetVolumeMultiplier");
 
-	USynthComponent_SetVolumeMultiplier_Params params;
-	params.VolumeMultiplier = VolumeMultiplier;
+	USynthComponent_SetVolumeMultiplier_Params fn_params;
+	fn_params.VolumeMultiplier = VolumeMultiplier;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -79,14 +79,14 @@ void USynthComponent::SetSubmixSend(class USoundSubmix* Submix, float SendLevel)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.SetSubmixSend");
 
-	USynthComponent_SetSubmixSend_Params params;
-	params.Submix = Submix;
-	params.SendLevel = SendLevel;
+	USynthComponent_SetSubmixSend_Params fn_params;
+	fn_params.Submix = Submix;
+	fn_params.SendLevel = SendLevel;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -101,16 +101,16 @@ bool USynthComponent::IsPlaying()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.IsPlaying");
 
-	USynthComponent_IsPlaying_Params params;
+	USynthComponent_IsPlaying_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -129,22 +129,22 @@ class USoundWave* UAudioMixerBlueprintLibrary::STATIC_StopRecordingOutput(class 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.StopRecordingOutput");
 
-	UAudioMixerBlueprintLibrary_StopRecordingOutput_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.ExportType = ExportType;
-	params.Name = Name;
-	params.Path = Path;
-	params.SubmixToRecord = SubmixToRecord;
-	params.ExistingSoundWaveToOverwrite = ExistingSoundWaveToOverwrite;
+	UAudioMixerBlueprintLibrary_StopRecordingOutput_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.ExportType = ExportType;
+	fn_params.Name = Name;
+	fn_params.Path = Path;
+	fn_params.SubmixToRecord = SubmixToRecord;
+	fn_params.ExistingSoundWaveToOverwrite = ExistingSoundWaveToOverwrite;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -159,15 +159,15 @@ void UAudioMixerBlueprintLibrary::STATIC_StartRecordingOutput(class UObject* Wor
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.StartRecordingOutput");
 
-	UAudioMixerBlueprintLibrary_StartRecordingOutput_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.ExpectedDuration = ExpectedDuration;
-	params.SubmixToRecord = SubmixToRecord;
+	UAudioMixerBlueprintLibrary_StartRecordingOutput_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.ExpectedDuration = ExpectedDuration;
+	fn_params.SubmixToRecord = SubmixToRecord;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -185,16 +185,16 @@ void UAudioMixerBlueprintLibrary::STATIC_SetBypassSourceEffectChainEntry(class U
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.SetBypassSourceEffectChainEntry");
 
-	UAudioMixerBlueprintLibrary_SetBypassSourceEffectChainEntry_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.PresetChain = PresetChain;
-	params.EntryIndex = EntryIndex;
-	params.bBypassed = bBypassed;
+	UAudioMixerBlueprintLibrary_SetBypassSourceEffectChainEntry_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.PresetChain = PresetChain;
+	fn_params.EntryIndex = EntryIndex;
+	fn_params.bBypassed = bBypassed;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -211,15 +211,15 @@ void UAudioMixerBlueprintLibrary::STATIC_RemoveSourceEffectFromPresetChain(class
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.RemoveSourceEffectFromPresetChain");
 
-	UAudioMixerBlueprintLibrary_RemoveSourceEffectFromPresetChain_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.PresetChain = PresetChain;
-	params.EntryIndex = EntryIndex;
+	UAudioMixerBlueprintLibrary_RemoveSourceEffectFromPresetChain_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.PresetChain = PresetChain;
+	fn_params.EntryIndex = EntryIndex;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -235,14 +235,14 @@ void UAudioMixerBlueprintLibrary::STATIC_RemoveMasterSubmixEffect(class UObject*
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.RemoveMasterSubmixEffect");
 
-	UAudioMixerBlueprintLibrary_RemoveMasterSubmixEffect_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.SubmixEffectPreset = SubmixEffectPreset;
+	UAudioMixerBlueprintLibrary_RemoveMasterSubmixEffect_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.SubmixEffectPreset = SubmixEffectPreset;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -259,18 +259,18 @@ int UAudioMixerBlueprintLibrary::STATIC_GetNumberOfEntriesInSourceEffectChain(cl
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.GetNumberOfEntriesInSourceEffectChain");
 
-	UAudioMixerBlueprintLibrary_GetNumberOfEntriesInSourceEffectChain_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.PresetChain = PresetChain;
+	UAudioMixerBlueprintLibrary_GetNumberOfEntriesInSourceEffectChain_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.PresetChain = PresetChain;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -283,13 +283,13 @@ void UAudioMixerBlueprintLibrary::STATIC_ClearMasterSubmixEffects(class UObject*
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.ClearMasterSubmixEffects");
 
-	UAudioMixerBlueprintLibrary_ClearMasterSubmixEffects_Params params;
-	params.WorldContextObject = WorldContextObject;
+	UAudioMixerBlueprintLibrary_ClearMasterSubmixEffects_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -306,15 +306,15 @@ void UAudioMixerBlueprintLibrary::STATIC_AddSourceEffectToPresetChain(class UObj
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.AddSourceEffectToPresetChain");
 
-	UAudioMixerBlueprintLibrary_AddSourceEffectToPresetChain_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.PresetChain = PresetChain;
-	params.Entry = Entry;
+	UAudioMixerBlueprintLibrary_AddSourceEffectToPresetChain_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.PresetChain = PresetChain;
+	fn_params.Entry = Entry;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -330,14 +330,14 @@ void UAudioMixerBlueprintLibrary::STATIC_AddMasterSubmixEffect(class UObject* Wo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.AddMasterSubmixEffect");
 
-	UAudioMixerBlueprintLibrary_AddMasterSubmixEffect_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.SubmixEffectPreset = SubmixEffectPreset;
+	UAudioMixerBlueprintLibrary_AddMasterSubmixEffect_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.SubmixEffectPreset = SubmixEffectPreset;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -352,13 +352,13 @@ void USubmixEffectDynamicsProcessorPreset::SetSettings(const struct FSubmixEffec
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetSettings");
 
-	USubmixEffectDynamicsProcessorPreset_SetSettings_Params params;
-	params.InSettings = InSettings;
+	USubmixEffectDynamicsProcessorPreset_SetSettings_Params fn_params;
+	fn_params.InSettings = InSettings;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -373,13 +373,13 @@ void USubmixEffectSubmixEQPreset::SetSettings(const struct FSubmixEffectSubmixEQ
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.SubmixEffectSubmixEQPreset.SetSettings");
 
-	USubmixEffectSubmixEQPreset_SetSettings_Params params;
-	params.InSettings = InSettings;
+	USubmixEffectSubmixEQPreset_SetSettings_Params fn_params;
+	fn_params.InSettings = InSettings;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -395,14 +395,14 @@ void USubmixEffectReverbPreset::SetSettingsWithReverbEffect(class UReverbEffect*
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.SubmixEffectReverbPreset.SetSettingsWithReverbEffect");
 
-	USubmixEffectReverbPreset_SetSettingsWithReverbEffect_Params params;
-	params.InReverbEffect = InReverbEffect;
-	params.WetLevel = WetLevel;
+	USubmixEffectReverbPreset_SetSettingsWithReverbEffect_Params fn_params;
+	fn_params.InReverbEffect = InReverbEffect;
+	fn_params.WetLevel = WetLevel;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -417,13 +417,13 @@ void USubmixEffectReverbPreset::SetSettings(const struct FSubmixEffectReverbSett
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.SubmixEffectReverbPreset.SetSettings");
 
-	USubmixEffectReverbPreset_SetSettings_Params params;
-	params.InSettings = InSettings;
+	USubmixEffectReverbPreset_SetSettings_Params fn_params;
+	fn_params.InSettings = InSettings;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

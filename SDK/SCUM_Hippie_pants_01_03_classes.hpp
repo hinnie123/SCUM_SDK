@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Hippie_pants_01_03.Hippie_Pants_01_03_C
-// 0x0000 (0x0818 - 0x0818)
+// 0x0000 (0x08D0 - 0x08D0)
 class AHippie_Pants_01_03_C : public AClothesItem
 {
 public:

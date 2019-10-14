@@ -21,15 +21,15 @@ ESlateVisibility UUI_NotificationPanelWidget_C::Get_EventCancelBox_Visibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_NotificationPanelWidget.UI_NotificationPanelWidget_C.Get_EventCancelBox_Visibility");
 
-	UUI_NotificationPanelWidget_C_Get_EventCancelBox_Visibility_Params params;
+	UUI_NotificationPanelWidget_C_Get_EventCancelBox_Visibility_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -42,15 +42,15 @@ struct FText UUI_NotificationPanelWidget_C::Get_EventCancelTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_NotificationPanelWidget.UI_NotificationPanelWidget_C.Get_EventCancelTime");
 
-	UUI_NotificationPanelWidget_C_Get_EventCancelTime_Params params;
+	UUI_NotificationPanelWidget_C_Get_EventCancelTime_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -63,15 +63,15 @@ struct FLinearColor UUI_NotificationPanelWidget_C::Get_EventTime_BrushColor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_NotificationPanelWidget.UI_NotificationPanelWidget_C.Get_EventTime_BrushColor");
 
-	UUI_NotificationPanelWidget_C_Get_EventTime_BrushColor_Params params;
+	UUI_NotificationPanelWidget_C_Get_EventTime_BrushColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -84,15 +84,15 @@ struct FLinearColor UUI_NotificationPanelWidget_C::Get_NextEventBox_BrushColor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_NotificationPanelWidget.UI_NotificationPanelWidget_C.Get_NextEventBox_BrushColor");
 
-	UUI_NotificationPanelWidget_C_Get_NextEventBox_BrushColor_Params params;
+	UUI_NotificationPanelWidget_C_Get_NextEventBox_BrushColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -105,15 +105,15 @@ struct FText UUI_NotificationPanelWidget_C::Get_EventTimeText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_NotificationPanelWidget.UI_NotificationPanelWidget_C.Get_EventTimeText");
 
-	UUI_NotificationPanelWidget_C_Get_EventTimeText_Params params;
+	UUI_NotificationPanelWidget_C_Get_EventTimeText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -126,15 +126,15 @@ ESlateVisibility UUI_NotificationPanelWidget_C::Get_EventTime_Visibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_NotificationPanelWidget.UI_NotificationPanelWidget_C.Get_EventTime_Visibility");
 
-	UUI_NotificationPanelWidget_C_Get_EventTime_Visibility_Params params;
+	UUI_NotificationPanelWidget_C_Get_EventTime_Visibility_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -147,15 +147,15 @@ struct FText UUI_NotificationPanelWidget_C::Get_RankLabel_Text()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_NotificationPanelWidget.UI_NotificationPanelWidget_C.Get_RankLabel_Text");
 
-	UUI_NotificationPanelWidget_C_Get_RankLabel_Text_Params params;
+	UUI_NotificationPanelWidget_C_Get_RankLabel_Text_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -168,15 +168,15 @@ struct FText UUI_NotificationPanelWidget_C::Get_NextEventLocation_Text()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_NotificationPanelWidget.UI_NotificationPanelWidget_C.Get_NextEventLocation_Text");
 
-	UUI_NotificationPanelWidget_C_Get_NextEventLocation_Text_Params params;
+	UUI_NotificationPanelWidget_C_Get_NextEventLocation_Text_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -189,15 +189,15 @@ struct FText UUI_NotificationPanelWidget_C::Get_FamePointsCounter_Text()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_NotificationPanelWidget.UI_NotificationPanelWidget_C.Get_FamePointsCounter_Text");
 
-	UUI_NotificationPanelWidget_C_Get_FamePointsCounter_Text_Params params;
+	UUI_NotificationPanelWidget_C_Get_FamePointsCounter_Text_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -210,15 +210,15 @@ struct FText UUI_NotificationPanelWidget_C::Get_NextEventCountdown_Text()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_NotificationPanelWidget.UI_NotificationPanelWidget_C.Get_NextEventCountdown_Text");
 
-	UUI_NotificationPanelWidget_C_Get_NextEventCountdown_Text_Params params;
+	UUI_NotificationPanelWidget_C_Get_NextEventCountdown_Text_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -231,15 +231,15 @@ ESlateVisibility UUI_NotificationPanelWidget_C::Get_NextEventBox_Visibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_NotificationPanelWidget.UI_NotificationPanelWidget_C.Get_NextEventBox_Visibility");
 
-	UUI_NotificationPanelWidget_C_Get_NextEventBox_Visibility_Params params;
+	UUI_NotificationPanelWidget_C_Get_NextEventBox_Visibility_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -252,12 +252,12 @@ void UUI_NotificationPanelWidget_C::ShowNotification(class UNotificationWidget**
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_NotificationPanelWidget.UI_NotificationPanelWidget_C.ShowNotification");
 
-	UUI_NotificationPanelWidget_C_ShowNotification_Params params;
-	params.notification = notification;
+	UUI_NotificationPanelWidget_C_ShowNotification_Params fn_params;
+	fn_params.notification = notification;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -270,11 +270,11 @@ void UUI_NotificationPanelWidget_C::ClearAllNotifications()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_NotificationPanelWidget.UI_NotificationPanelWidget_C.ClearAllNotifications");
 
-	UUI_NotificationPanelWidget_C_ClearAllNotifications_Params params;
+	UUI_NotificationPanelWidget_C_ClearAllNotifications_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -289,12 +289,12 @@ void UUI_NotificationPanelWidget_C::ExecuteUbergraph_UI_NotificationPanelWidget(
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_NotificationPanelWidget.UI_NotificationPanelWidget_C.ExecuteUbergraph_UI_NotificationPanelWidget");
 
-	UUI_NotificationPanelWidget_C_ExecuteUbergraph_UI_NotificationPanelWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_NotificationPanelWidget_C_ExecuteUbergraph_UI_NotificationPanelWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bear_Back_Paws.Bear_Back_Paws_C
-// 0x0000 (0x0790 - 0x0790)
+// 0x0000 (0x0830 - 0x0830)
 class ABear_Back_Paws_C : public AEquipmentItem
 {
 public:

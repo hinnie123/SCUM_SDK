@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Improvised_Plant_rope.Improvised_Plant_rope_C
-// 0x0000 (0x0790 - 0x0790)
+// 0x0000 (0x0830 - 0x0830)
 class AImprovised_Plant_rope_C : public AEquipmentItem
 {
 public:

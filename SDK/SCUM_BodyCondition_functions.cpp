@@ -24,19 +24,19 @@ void UBodyCondition_C::CheckBloodVolumeAlarm(float currentBlood, float initialBl
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyCondition.BodyCondition_C.CheckBloodVolumeAlarm");
 
-	UBodyCondition_C_CheckBloodVolumeAlarm_Params params;
-	params.currentBlood = currentBlood;
-	params.initialBlood = initialBlood;
-	params.MinBlood = MinBlood;
+	UBodyCondition_C_CheckBloodVolumeAlarm_Params fn_params;
+	fn_params.currentBlood = currentBlood;
+	fn_params.initialBlood = initialBlood;
+	fn_params.MinBlood = MinBlood;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (alarmCode != nullptr)
-		*alarmCode = params.alarmCode;
+		*alarmCode = fn_params.alarmCode;
 }
 
 
@@ -51,18 +51,18 @@ void UBodyCondition_C::CheckTemperatureAlarm(float temperatureDeviation, float T
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyCondition.BodyCondition_C.CheckTemperatureAlarm");
 
-	UBodyCondition_C_CheckTemperatureAlarm_Params params;
-	params.temperatureDeviation = temperatureDeviation;
-	params.Temperature = Temperature;
+	UBodyCondition_C_CheckTemperatureAlarm_Params fn_params;
+	fn_params.temperatureDeviation = temperatureDeviation;
+	fn_params.Temperature = Temperature;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (alarmCode != nullptr)
-		*alarmCode = params.alarmCode;
+		*alarmCode = fn_params.alarmCode;
 }
 
 
@@ -77,18 +77,18 @@ void UBodyCondition_C::CheckTeethNumberAlarm(float Age, float TeethNumber, int* 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyCondition.BodyCondition_C.CheckTeethNumberAlarm");
 
-	UBodyCondition_C_CheckTeethNumberAlarm_Params params;
-	params.Age = Age;
-	params.TeethNumber = TeethNumber;
+	UBodyCondition_C_CheckTeethNumberAlarm_Params fn_params;
+	fn_params.Age = Age;
+	fn_params.TeethNumber = TeethNumber;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (alarmCode != nullptr)
-		*alarmCode = params.alarmCode;
+		*alarmCode = fn_params.alarmCode;
 }
 
 
@@ -103,18 +103,18 @@ void UBodyCondition_C::CheckBFPAlarm(float bodyFatPercentage, float bodyFatAlarm
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyCondition.BodyCondition_C.CheckBFPAlarm");
 
-	UBodyCondition_C_CheckBFPAlarm_Params params;
-	params.bodyFatPercentage = bodyFatPercentage;
-	params.bodyFatAlarmThreshold = bodyFatAlarmThreshold;
+	UBodyCondition_C_CheckBFPAlarm_Params fn_params;
+	fn_params.bodyFatPercentage = bodyFatPercentage;
+	fn_params.bodyFatAlarmThreshold = bodyFatAlarmThreshold;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (alarmCode != nullptr)
-		*alarmCode = params.alarmCode;
+		*alarmCode = fn_params.alarmCode;
 }
 
 
@@ -125,11 +125,11 @@ void UBodyCondition_C::Init()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyCondition.BodyCondition_C.Init");
 
-	UBodyCondition_C_Init_Params params;
+	UBodyCondition_C_Init_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -142,11 +142,11 @@ void UBodyCondition_C::SetMeasurementUnits()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyCondition.BodyCondition_C.SetMeasurementUnits");
 
-	UBodyCondition_C_SetMeasurementUnits_Params params;
+	UBodyCondition_C_SetMeasurementUnits_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -159,11 +159,11 @@ void UBodyCondition_C::UpdateParameterLines()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyCondition.BodyCondition_C.UpdateParameterLines");
 
-	UBodyCondition_C_UpdateParameterLines_Params params;
+	UBodyCondition_C_UpdateParameterLines_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -178,15 +178,15 @@ struct FText UBodyCondition_C::GetTitleText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyCondition.BodyCondition_C.GetTitleText");
 
-	UBodyCondition_C_GetTitleText_Params params;
+	UBodyCondition_C_GetTitleText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -199,16 +199,16 @@ void UBodyCondition_C::GetDefaultTitle(struct FText* defaultTitle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyCondition.BodyCondition_C.GetDefaultTitle");
 
-	UBodyCondition_C_GetDefaultTitle_Params params;
+	UBodyCondition_C_GetDefaultTitle_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (defaultTitle != nullptr)
-		*defaultTitle = params.defaultTitle;
+		*defaultTitle = fn_params.defaultTitle;
 }
 
 
@@ -221,16 +221,16 @@ void UBodyCondition_C::SelectCustomColor(struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyCondition.BodyCondition_C.SelectCustomColor");
 
-	UBodyCondition_C_SelectCustomColor_Params params;
+	UBodyCondition_C_SelectCustomColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Color != nullptr)
-		*Color = params.Color;
+		*Color = fn_params.Color;
 }
 
 
@@ -243,12 +243,12 @@ void UBodyCondition_C::OnMinimize(bool shouldMinimize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyCondition.BodyCondition_C.OnMinimize");
 
-	UBodyCondition_C_OnMinimize_Params params;
-	params.shouldMinimize = shouldMinimize;
+	UBodyCondition_C_OnMinimize_Params fn_params;
+	fn_params.shouldMinimize = shouldMinimize;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -261,11 +261,11 @@ void UBodyCondition_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyCondition.BodyCondition_C.Construct");
 
-	UBodyCondition_C_Construct_Params params;
+	UBodyCondition_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -278,11 +278,11 @@ void UBodyCondition_C::OnPrisonerSet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyCondition.BodyCondition_C.OnPrisonerSet");
 
-	UBodyCondition_C_OnPrisonerSet_Params params;
+	UBodyCondition_C_OnPrisonerSet_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -295,11 +295,11 @@ void UBodyCondition_C::UpdateContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyCondition.BodyCondition_C.UpdateContent");
 
-	UBodyCondition_C_UpdateContent_Params params;
+	UBodyCondition_C_UpdateContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -312,11 +312,11 @@ void UBodyCondition_C::ShouldActivateAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyCondition.BodyCondition_C.ShouldActivateAlarm");
 
-	UBodyCondition_C_ShouldActivateAlarm_Params params;
+	UBodyCondition_C_ShouldActivateAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -329,11 +329,11 @@ void UBodyCondition_C::ShouldDeactivateAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyCondition.BodyCondition_C.ShouldDeactivateAlarm");
 
-	UBodyCondition_C_ShouldDeactivateAlarm_Params params;
+	UBodyCondition_C_ShouldDeactivateAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -346,11 +346,11 @@ void UBodyCondition_C::ShouldActivateBFPAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyCondition.BodyCondition_C.ShouldActivateBFPAlarm");
 
-	UBodyCondition_C_ShouldActivateBFPAlarm_Params params;
+	UBodyCondition_C_ShouldActivateBFPAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -365,12 +365,12 @@ void UBodyCondition_C::ExecuteUbergraph_BodyCondition(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyCondition.BodyCondition_C.ExecuteUbergraph_BodyCondition");
 
-	UBodyCondition_C_ExecuteUbergraph_BodyCondition_Params params;
-	params.EntryPoint = EntryPoint;
+	UBodyCondition_C_ExecuteUbergraph_BodyCondition_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -383,11 +383,11 @@ void UBodyCondition_C::AlarmOffBodyConditionEventDispatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyCondition.BodyCondition_C.AlarmOffBodyConditionEventDispatcher__DelegateSignature");
 
-	UBodyCondition_C_AlarmOffBodyConditionEventDispatcher__DelegateSignature_Params params;
+	UBodyCondition_C_AlarmOffBodyConditionEventDispatcher__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -400,11 +400,11 @@ void UBodyCondition_C::AlarmOnBodyConditionEventDispatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BodyCondition.BodyCondition_C.AlarmOnBodyConditionEventDispatcher__DelegateSignature");
 
-	UBodyCondition_C_AlarmOnBodyConditionEventDispatcher__DelegateSignature_Params params;
+	UBodyCondition_C_AlarmOnBodyConditionEventDispatcher__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -14,6 +14,12 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function UI_Tooltip.UI_Tooltip_C.InitFromInventoryNode
+struct UUI_Tooltip_C_InitFromInventoryNode_Params
+{
+	TScriptInterface<class UInventoryNode>             Item;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function UI_Tooltip.UI_Tooltip_C.UpdateDebugText
 struct UUI_Tooltip_C_UpdateDebugText_Params
 {

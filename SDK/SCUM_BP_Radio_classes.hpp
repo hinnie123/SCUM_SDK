@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Radio.BP_Radio_C
-// 0x0000 (0x0780 - 0x0780)
+// 0x0000 (0x0820 - 0x0820)
 class ABP_Radio_C : public ARadioItem
 {
 public:

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass RH_Arm_Guard.RH_Arm_Guard_C
-// 0x0000 (0x0818 - 0x0818)
+// 0x0000 (0x08D0 - 0x08D0)
 class ARH_Arm_Guard_C : public AClothesItem
 {
 public:

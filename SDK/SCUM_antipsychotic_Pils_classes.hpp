@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass antipsychotic_Pils.antipsychotic_Pils_C
-// 0x0000 (0x0780 - 0x0780)
+// 0x0000 (0x0820 - 0x0820)
 class Aantipsychotic_Pils_C : public AMedicationItem
 {
 public:

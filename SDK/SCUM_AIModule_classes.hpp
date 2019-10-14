@@ -2104,7 +2104,7 @@ public:
 class UBTTask_PushPawnAction : public UBTTask_PawnActionBase
 {
 public:
-	class UPawnAction*                                 action;                                                   // 0x0070(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UPawnAction*                                 Action;                                                   // 0x0070(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -3315,7 +3315,7 @@ public:
 
 
 	bool K2_PushAction(class UPawnAction* newAction, TEnumAsByte<EAIRequestPriority> Priority, class UObject* Instigator);
-	bool STATIC_K2_PerformAction(class APawn* Pawn, class UPawnAction* action, TEnumAsByte<EAIRequestPriority> Priority);
+	bool STATIC_K2_PerformAction(class APawn* Pawn, class UPawnAction* Action, TEnumAsByte<EAIRequestPriority> Priority);
 	TEnumAsByte<EPawnActionAbortState> K2_ForceAbortAction(class UPawnAction* ActionToAbort);
 	TEnumAsByte<EPawnActionAbortState> K2_AbortAction(class UPawnAction* ActionToAbort);
 };

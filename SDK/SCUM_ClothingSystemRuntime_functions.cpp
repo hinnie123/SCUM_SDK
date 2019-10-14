@@ -21,13 +21,13 @@ void UClothingSimulationInteractorNv::SetAnimDriveSpringStiffness(float InStiffn
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntime.ClothingSimulationInteractorNv.SetAnimDriveSpringStiffness");
 
-	UClothingSimulationInteractorNv_SetAnimDriveSpringStiffness_Params params;
-	params.InStiffness = InStiffness;
+	UClothingSimulationInteractorNv_SetAnimDriveSpringStiffness_Params fn_params;
+	fn_params.InStiffness = InStiffness;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -42,13 +42,13 @@ void UClothingSimulationInteractorNv::SetAnimDriveDamperStiffness(float InStiffn
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntime.ClothingSimulationInteractorNv.SetAnimDriveDamperStiffness");
 
-	UClothingSimulationInteractorNv_SetAnimDriveDamperStiffness_Params params;
-	params.InStiffness = InStiffness;
+	UClothingSimulationInteractorNv_SetAnimDriveDamperStiffness_Params fn_params;
+	fn_params.InStiffness = InStiffness;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -63,13 +63,13 @@ void UClothingSimulationInteractorNv::EnableGravityOverride(const struct FVector
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntime.ClothingSimulationInteractorNv.EnableGravityOverride");
 
-	UClothingSimulationInteractorNv_EnableGravityOverride_Params params;
-	params.InVector = InVector;
+	UClothingSimulationInteractorNv_EnableGravityOverride_Params fn_params;
+	fn_params.InVector = InVector;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -82,12 +82,12 @@ void UClothingSimulationInteractorNv::DisableGravityOverride()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ClothingSystemRuntime.ClothingSimulationInteractorNv.DisableGravityOverride");
 
-	UClothingSimulationInteractorNv_DisableGravityOverride_Params params;
+	UClothingSimulationInteractorNv_DisableGravityOverride_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -19,11 +19,11 @@ void UUI_QuickAccessBar_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_QuickAccessBar.UI_QuickAccessBar_C.Construct");
 
-	UUI_QuickAccessBar_C_Construct_Params params;
+	UUI_QuickAccessBar_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -38,12 +38,12 @@ void UUI_QuickAccessBar_C::ExecuteUbergraph_UI_QuickAccessBar(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_QuickAccessBar.UI_QuickAccessBar_C.ExecuteUbergraph_UI_QuickAccessBar");
 
-	UUI_QuickAccessBar_C_ExecuteUbergraph_UI_QuickAccessBar_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_QuickAccessBar_C_ExecuteUbergraph_UI_QuickAccessBar_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

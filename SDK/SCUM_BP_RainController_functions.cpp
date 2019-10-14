@@ -19,11 +19,11 @@ void ABP_RainController_C::DisableRain()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RainController.BP_RainController_C.DisableRain");
 
-	ABP_RainController_C_DisableRain_Params params;
+	ABP_RainController_C_DisableRain_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void ABP_RainController_C::EnableRain()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RainController.BP_RainController_C.EnableRain");
 
-	ABP_RainController_C_EnableRain_Params params;
+	ABP_RainController_C_EnableRain_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -53,11 +53,11 @@ void ABP_RainController_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RainController.BP_RainController_C.UserConstructionScript");
 
-	ABP_RainController_C_UserConstructionScript_Params params;
+	ABP_RainController_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -75,15 +75,15 @@ void ABP_RainController_C::BndEvt__LightningEmitter_K2Node_ComponentBoundEvent_0
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RainController.BP_RainController_C.BndEvt__LightningEmitter_K2Node_ComponentBoundEvent_0_ParticleSpawnSignature__DelegateSignature");
 
-	ABP_RainController_C_BndEvt__LightningEmitter_K2Node_ComponentBoundEvent_0_ParticleSpawnSignature__DelegateSignature_Params params;
-	params.EventName = EventName;
-	params.EmitterTime = EmitterTime;
-	params.Location = Location;
-	params.Velocity = Velocity;
+	ABP_RainController_C_BndEvt__LightningEmitter_K2Node_ComponentBoundEvent_0_ParticleSpawnSignature__DelegateSignature_Params fn_params;
+	fn_params.EventName = EventName;
+	fn_params.EmitterTime = EmitterTime;
+	fn_params.Location = Location;
+	fn_params.Velocity = Velocity;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -98,12 +98,12 @@ void ABP_RainController_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayRe
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RainController.BP_RainController_C.ReceiveEndPlay");
 
-	ABP_RainController_C_ReceiveEndPlay_Params params;
-	params.EndPlayReason = EndPlayReason;
+	ABP_RainController_C_ReceiveEndPlay_Params fn_params;
+	fn_params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -116,11 +116,11 @@ void ABP_RainController_C::ReceiveDestroyed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RainController.BP_RainController_C.ReceiveDestroyed");
 
-	ABP_RainController_C_ReceiveDestroyed_Params params;
+	ABP_RainController_C_ReceiveDestroyed_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -133,11 +133,11 @@ void ABP_RainController_C::ShiftCam()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RainController.BP_RainController_C.ShiftCam");
 
-	ABP_RainController_C_ShiftCam_Params params;
+	ABP_RainController_C_ShiftCam_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -152,12 +152,12 @@ void ABP_RainController_C::ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RainController.BP_RainController_C.ReceiveTick");
 
-	ABP_RainController_C_ReceiveTick_Params params;
-	params.DeltaSeconds = DeltaSeconds;
+	ABP_RainController_C_ReceiveTick_Params fn_params;
+	fn_params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -170,11 +170,11 @@ void ABP_RainController_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RainController.BP_RainController_C.ReceiveBeginPlay");
 
-	ABP_RainController_C_ReceiveBeginPlay_Params params;
+	ABP_RainController_C_ReceiveBeginPlay_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -189,12 +189,12 @@ void ABP_RainController_C::ExecuteUbergraph_BP_RainController(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RainController.BP_RainController_C.ExecuteUbergraph_BP_RainController");
 
-	ABP_RainController_C_ExecuteUbergraph_BP_RainController_Params params;
-	params.EntryPoint = EntryPoint;
+	ABP_RainController_C_ExecuteUbergraph_BP_RainController_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -24,7 +24,7 @@ public:
 	class UItemSelectionSlotWidget*                    SelectionSlot;                                            // 0x0228(0x0008) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	struct FScriptMulticastDelegate                    OnClicked;                                                // 0x0230(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
 	int                                                Index;                                                    // 0x0240(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               Selected;                                                 // 0x0244(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               selected;                                                 // 0x0244(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -34,7 +34,7 @@ public:
 
 
 	struct FSlateColor Get_ItemName_ColorAndOpacity();
-	void SetSelected(bool Selected);
+	void SetSelected(bool selected);
 	struct FEventReply On_Selection_MouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 	void UpdateButton();
 	void GetData(class UItemSelection** Data);

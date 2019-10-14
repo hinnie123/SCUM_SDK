@@ -23,18 +23,18 @@ float USoundUtilitiesBPFunctionLibrary::STATIC_GetPitchScaleFromMIDIPitch(int Ba
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SoundUtilities.SoundUtilitiesBPFunctionLibrary.GetPitchScaleFromMIDIPitch");
 
-	USoundUtilitiesBPFunctionLibrary_GetPitchScaleFromMIDIPitch_Params params;
-	params.BaseMidiNote = BaseMidiNote;
-	params.TargetMidiNote = TargetMidiNote;
+	USoundUtilitiesBPFunctionLibrary_GetPitchScaleFromMIDIPitch_Params fn_params;
+	fn_params.BaseMidiNote = BaseMidiNote;
+	fn_params.TargetMidiNote = TargetMidiNote;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -48,17 +48,17 @@ int USoundUtilitiesBPFunctionLibrary::STATIC_GetMIDIPitchFromFrequency(float Fre
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SoundUtilities.SoundUtilitiesBPFunctionLibrary.GetMIDIPitchFromFrequency");
 
-	USoundUtilitiesBPFunctionLibrary_GetMIDIPitchFromFrequency_Params params;
-	params.Frequency = Frequency;
+	USoundUtilitiesBPFunctionLibrary_GetMIDIPitchFromFrequency_Params fn_params;
+	fn_params.Frequency = Frequency;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -72,17 +72,17 @@ float USoundUtilitiesBPFunctionLibrary::STATIC_GetFrequencyFromMIDIPitch(int Mid
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SoundUtilities.SoundUtilitiesBPFunctionLibrary.GetFrequencyFromMIDIPitch");
 
-	USoundUtilitiesBPFunctionLibrary_GetFrequencyFromMIDIPitch_Params params;
-	params.MidiNote = MidiNote;
+	USoundUtilitiesBPFunctionLibrary_GetFrequencyFromMIDIPitch_Params fn_params;
+	fn_params.MidiNote = MidiNote;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -98,19 +98,19 @@ float USoundUtilitiesBPFunctionLibrary::STATIC_GetBeatTempo(float BeatsPerMinute
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SoundUtilities.SoundUtilitiesBPFunctionLibrary.GetBeatTempo");
 
-	USoundUtilitiesBPFunctionLibrary_GetBeatTempo_Params params;
-	params.BeatsPerMinute = BeatsPerMinute;
-	params.BeatMultiplier = BeatMultiplier;
-	params.DivisionsOfWholeNote = DivisionsOfWholeNote;
+	USoundUtilitiesBPFunctionLibrary_GetBeatTempo_Params fn_params;
+	fn_params.BeatsPerMinute = BeatsPerMinute;
+	fn_params.BeatMultiplier = BeatMultiplier;
+	fn_params.DivisionsOfWholeNote = DivisionsOfWholeNote;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

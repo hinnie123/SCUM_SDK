@@ -23,18 +23,18 @@ struct FString UDatasmithContentBlueprintLibrary::STATIC_GetDatasmithUserDataVal
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserDataValueForKey");
 
-	UDatasmithContentBlueprintLibrary_GetDatasmithUserDataValueForKey_Params params;
-	params.Object = Object;
-	params.Key = Key;
+	UDatasmithContentBlueprintLibrary_GetDatasmithUserDataValueForKey_Params fn_params;
+	fn_params.Object = Object;
+	fn_params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -50,21 +50,21 @@ void UDatasmithContentBlueprintLibrary::STATIC_GetDatasmithUserDataKeysAndValues
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserDataKeysAndValuesForValue");
 
-	UDatasmithContentBlueprintLibrary_GetDatasmithUserDataKeysAndValuesForValue_Params params;
-	params.Object = Object;
-	params.StringToMatch = StringToMatch;
+	UDatasmithContentBlueprintLibrary_GetDatasmithUserDataKeysAndValuesForValue_Params fn_params;
+	fn_params.Object = Object;
+	fn_params.StringToMatch = StringToMatch;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutKeys != nullptr)
-		*OutKeys = params.OutKeys;
+		*OutKeys = fn_params.OutKeys;
 	if (OutValues != nullptr)
-		*OutValues = params.OutValues;
+		*OutValues = fn_params.OutValues;
 }
 
 
@@ -78,17 +78,17 @@ class UDatasmithAssetUserData* UDatasmithContentBlueprintLibrary::STATIC_GetData
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserData");
 
-	UDatasmithContentBlueprintLibrary_GetDatasmithUserData_Params params;
-	params.Object = Object;
+	UDatasmithContentBlueprintLibrary_GetDatasmithUserData_Params fn_params;
+	fn_params.Object = Object;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

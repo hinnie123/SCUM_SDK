@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Survival_Blueprints_CutBush_Objective.BP_Survival_Blueprints_CutBush_Objective_C
-// 0x0008 (0x0458 - 0x0450)
+// 0x0008 (0x0470 - 0x0468)
 class ABP_Survival_Blueprints_CutBush_Objective_C : public ACuttingObjective
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0450(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0468(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

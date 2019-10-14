@@ -21,12 +21,12 @@ void UUI_CriminalRecordSkill_C::InitFromSkillTemplate(const struct FSkillTemplat
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CriminalRecordSkill.UI_CriminalRecordSkill_C.InitFromSkillTemplate");
 
-	UUI_CriminalRecordSkill_C_InitFromSkillTemplate_Params params;
-	params.SkillTemplate = SkillTemplate;
+	UUI_CriminalRecordSkill_C_InitFromSkillTemplate_Params fn_params;
+	fn_params.SkillTemplate = SkillTemplate;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

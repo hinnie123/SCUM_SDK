@@ -93,15 +93,15 @@ struct ABP_Prisoner_C_BndEvt__VoiceChat_K2Node_ComponentBoundEvent_1_VoiceChatSt
 {
 };
 
+// Function BP_Prisoner.BP_Prisoner_C.UpdateHairVisuals
+struct ABP_Prisoner_C_UpdateHairVisuals_Params
+{
+};
+
 // Function BP_Prisoner.BP_Prisoner_C.ReceiveTick
 struct ABP_Prisoner_C_ReceiveTick_Params
 {
 	float*                                             DeltaSeconds;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function BP_Prisoner.BP_Prisoner_C.ReceiveBeginPlay
-struct ABP_Prisoner_C_ReceiveBeginPlay_Params
-{
 };
 
 // Function BP_Prisoner.BP_Prisoner_C.ExecuteUbergraph_BP_Prisoner

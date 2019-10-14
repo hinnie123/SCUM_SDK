@@ -19,12 +19,12 @@ void UMovieSceneSequencePlayer::Stop()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.Stop");
 
-	UMovieSceneSequencePlayer_Stop_Params params;
+	UMovieSceneSequencePlayer_Stop_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -40,14 +40,14 @@ void UMovieSceneSequencePlayer::SetTimeRange(float StartTime, float Duration)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetTimeRange");
 
-	UMovieSceneSequencePlayer_SetTimeRange_Params params;
-	params.StartTime = StartTime;
-	params.Duration = Duration;
+	UMovieSceneSequencePlayer_SetTimeRange_Params fn_params;
+	fn_params.StartTime = StartTime;
+	fn_params.Duration = Duration;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -62,13 +62,13 @@ void UMovieSceneSequencePlayer::SetPlayRate(float PlayRate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetPlayRate");
 
-	UMovieSceneSequencePlayer_SetPlayRate_Params params;
-	params.PlayRate = PlayRate;
+	UMovieSceneSequencePlayer_SetPlayRate_Params fn_params;
+	fn_params.PlayRate = PlayRate;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -84,14 +84,14 @@ void UMovieSceneSequencePlayer::SetPlaybackRange(float NewStartTime, float NewEn
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetPlaybackRange");
 
-	UMovieSceneSequencePlayer_SetPlaybackRange_Params params;
-	params.NewStartTime = NewStartTime;
-	params.NewEndTime = NewEndTime;
+	UMovieSceneSequencePlayer_SetPlaybackRange_Params fn_params;
+	fn_params.NewStartTime = NewStartTime;
+	fn_params.NewEndTime = NewEndTime;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -106,13 +106,13 @@ void UMovieSceneSequencePlayer::SetPlaybackPosition(float NewPlaybackPosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetPlaybackPosition");
 
-	UMovieSceneSequencePlayer_SetPlaybackPosition_Params params;
-	params.NewPlaybackPosition = NewPlaybackPosition;
+	UMovieSceneSequencePlayer_SetPlaybackPosition_Params fn_params;
+	fn_params.NewPlaybackPosition = NewPlaybackPosition;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -127,13 +127,13 @@ void UMovieSceneSequencePlayer::SetFrameRate(const struct FFrameRate& FrameRate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetFrameRate");
 
-	UMovieSceneSequencePlayer_SetFrameRate_Params params;
-	params.FrameRate = FrameRate;
+	UMovieSceneSequencePlayer_SetFrameRate_Params fn_params;
+	fn_params.FrameRate = FrameRate;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -149,14 +149,14 @@ void UMovieSceneSequencePlayer::SetFrameRange(int StartFrame, int Duration)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetFrameRange");
 
-	UMovieSceneSequencePlayer_SetFrameRange_Params params;
-	params.StartFrame = StartFrame;
-	params.Duration = Duration;
+	UMovieSceneSequencePlayer_SetFrameRange_Params fn_params;
+	fn_params.StartFrame = StartFrame;
+	fn_params.Duration = Duration;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -171,13 +171,13 @@ void UMovieSceneSequencePlayer::SetDisableCameraCuts(bool bInDisableCameraCuts)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.SetDisableCameraCuts");
 
-	UMovieSceneSequencePlayer_SetDisableCameraCuts_Params params;
-	params.bInDisableCameraCuts = bInDisableCameraCuts;
+	UMovieSceneSequencePlayer_SetDisableCameraCuts_Params fn_params;
+	fn_params.bInDisableCameraCuts = bInDisableCameraCuts;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -192,13 +192,13 @@ void UMovieSceneSequencePlayer::ScrubToSeconds(float TimeInSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.ScrubToSeconds");
 
-	UMovieSceneSequencePlayer_ScrubToSeconds_Params params;
-	params.TimeInSeconds = TimeInSeconds;
+	UMovieSceneSequencePlayer_ScrubToSeconds_Params fn_params;
+	fn_params.TimeInSeconds = TimeInSeconds;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -213,13 +213,13 @@ void UMovieSceneSequencePlayer::ScrubToFrame(const struct FFrameTime& NewPositio
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.ScrubToFrame");
 
-	UMovieSceneSequencePlayer_ScrubToFrame_Params params;
-	params.NewPosition = NewPosition;
+	UMovieSceneSequencePlayer_ScrubToFrame_Params fn_params;
+	fn_params.NewPosition = NewPosition;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -232,12 +232,12 @@ void UMovieSceneSequencePlayer::Scrub()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.Scrub");
 
-	UMovieSceneSequencePlayer_Scrub_Params params;
+	UMovieSceneSequencePlayer_Scrub_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -252,13 +252,13 @@ void UMovieSceneSequencePlayer::PlayToSeconds(float TimeInSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.PlayToSeconds");
 
-	UMovieSceneSequencePlayer_PlayToSeconds_Params params;
-	params.TimeInSeconds = TimeInSeconds;
+	UMovieSceneSequencePlayer_PlayToSeconds_Params fn_params;
+	fn_params.TimeInSeconds = TimeInSeconds;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -273,13 +273,13 @@ void UMovieSceneSequencePlayer::PlayToFrame(const struct FFrameTime& NewPosition
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.PlayToFrame");
 
-	UMovieSceneSequencePlayer_PlayToFrame_Params params;
-	params.NewPosition = NewPosition;
+	UMovieSceneSequencePlayer_PlayToFrame_Params fn_params;
+	fn_params.NewPosition = NewPosition;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -292,12 +292,12 @@ void UMovieSceneSequencePlayer::PlayReverse()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.PlayReverse");
 
-	UMovieSceneSequencePlayer_PlayReverse_Params params;
+	UMovieSceneSequencePlayer_PlayReverse_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -312,13 +312,13 @@ void UMovieSceneSequencePlayer::PlayLooping(int NumLoops)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.PlayLooping");
 
-	UMovieSceneSequencePlayer_PlayLooping_Params params;
-	params.NumLoops = NumLoops;
+	UMovieSceneSequencePlayer_PlayLooping_Params fn_params;
+	fn_params.NumLoops = NumLoops;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -331,12 +331,12 @@ void UMovieSceneSequencePlayer::Play()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.Play");
 
-	UMovieSceneSequencePlayer_Play_Params params;
+	UMovieSceneSequencePlayer_Play_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -349,12 +349,12 @@ void UMovieSceneSequencePlayer::Pause()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.Pause");
 
-	UMovieSceneSequencePlayer_Pause_Params params;
+	UMovieSceneSequencePlayer_Pause_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -369,13 +369,13 @@ void UMovieSceneSequencePlayer::JumpToSeconds(float TimeInSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.JumpToSeconds");
 
-	UMovieSceneSequencePlayer_JumpToSeconds_Params params;
-	params.TimeInSeconds = TimeInSeconds;
+	UMovieSceneSequencePlayer_JumpToSeconds_Params fn_params;
+	fn_params.TimeInSeconds = TimeInSeconds;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -390,13 +390,13 @@ void UMovieSceneSequencePlayer::JumpToPosition(float NewPlaybackPosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.JumpToPosition");
 
-	UMovieSceneSequencePlayer_JumpToPosition_Params params;
-	params.NewPlaybackPosition = NewPlaybackPosition;
+	UMovieSceneSequencePlayer_JumpToPosition_Params fn_params;
+	fn_params.NewPlaybackPosition = NewPlaybackPosition;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -411,13 +411,13 @@ void UMovieSceneSequencePlayer::JumpToFrame(const struct FFrameTime& NewPosition
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.JumpToFrame");
 
-	UMovieSceneSequencePlayer_JumpToFrame_Params params;
-	params.NewPosition = NewPosition;
+	UMovieSceneSequencePlayer_JumpToFrame_Params fn_params;
+	fn_params.NewPosition = NewPosition;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -432,16 +432,16 @@ bool UMovieSceneSequencePlayer::IsReversed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.IsReversed");
 
-	UMovieSceneSequencePlayer_IsReversed_Params params;
+	UMovieSceneSequencePlayer_IsReversed_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -454,16 +454,16 @@ bool UMovieSceneSequencePlayer::IsPlaying()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.IsPlaying");
 
-	UMovieSceneSequencePlayer_IsPlaying_Params params;
+	UMovieSceneSequencePlayer_IsPlaying_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -476,16 +476,16 @@ bool UMovieSceneSequencePlayer::IsPaused()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.IsPaused");
 
-	UMovieSceneSequencePlayer_IsPaused_Params params;
+	UMovieSceneSequencePlayer_IsPaused_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -496,12 +496,12 @@ void UMovieSceneSequencePlayer::GoToEndAndStop()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GoToEndAndStop");
 
-	UMovieSceneSequencePlayer_GoToEndAndStop_Params params;
+	UMovieSceneSequencePlayer_GoToEndAndStop_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -516,16 +516,16 @@ struct FQualifiedFrameTime UMovieSceneSequencePlayer::GetStartTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetStartTime");
 
-	UMovieSceneSequencePlayer_GetStartTime_Params params;
+	UMovieSceneSequencePlayer_GetStartTime_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -538,16 +538,16 @@ float UMovieSceneSequencePlayer::GetPlayRate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetPlayRate");
 
-	UMovieSceneSequencePlayer_GetPlayRate_Params params;
+	UMovieSceneSequencePlayer_GetPlayRate_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -560,16 +560,16 @@ float UMovieSceneSequencePlayer::GetPlaybackStart()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetPlaybackStart");
 
-	UMovieSceneSequencePlayer_GetPlaybackStart_Params params;
+	UMovieSceneSequencePlayer_GetPlaybackStart_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -582,16 +582,16 @@ float UMovieSceneSequencePlayer::GetPlaybackPosition()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetPlaybackPosition");
 
-	UMovieSceneSequencePlayer_GetPlaybackPosition_Params params;
+	UMovieSceneSequencePlayer_GetPlaybackPosition_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -604,16 +604,16 @@ float UMovieSceneSequencePlayer::GetPlaybackEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetPlaybackEnd");
 
-	UMovieSceneSequencePlayer_GetPlaybackEnd_Params params;
+	UMovieSceneSequencePlayer_GetPlaybackEnd_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -626,16 +626,16 @@ float UMovieSceneSequencePlayer::GetLength()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetLength");
 
-	UMovieSceneSequencePlayer_GetLength_Params params;
+	UMovieSceneSequencePlayer_GetLength_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -648,16 +648,16 @@ struct FFrameRate UMovieSceneSequencePlayer::GetFrameRate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetFrameRate");
 
-	UMovieSceneSequencePlayer_GetFrameRate_Params params;
+	UMovieSceneSequencePlayer_GetFrameRate_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -670,16 +670,16 @@ int UMovieSceneSequencePlayer::GetFrameDuration()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetFrameDuration");
 
-	UMovieSceneSequencePlayer_GetFrameDuration_Params params;
+	UMovieSceneSequencePlayer_GetFrameDuration_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -692,16 +692,16 @@ struct FQualifiedFrameTime UMovieSceneSequencePlayer::GetEndTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetEndTime");
 
-	UMovieSceneSequencePlayer_GetEndTime_Params params;
+	UMovieSceneSequencePlayer_GetEndTime_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -714,16 +714,16 @@ struct FQualifiedFrameTime UMovieSceneSequencePlayer::GetDuration()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetDuration");
 
-	UMovieSceneSequencePlayer_GetDuration_Params params;
+	UMovieSceneSequencePlayer_GetDuration_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -736,16 +736,16 @@ bool UMovieSceneSequencePlayer::GetDisableCameraCuts()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetDisableCameraCuts");
 
-	UMovieSceneSequencePlayer_GetDisableCameraCuts_Params params;
+	UMovieSceneSequencePlayer_GetDisableCameraCuts_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -758,16 +758,16 @@ struct FQualifiedFrameTime UMovieSceneSequencePlayer::GetCurrentTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetCurrentTime");
 
-	UMovieSceneSequencePlayer_GetCurrentTime_Params params;
+	UMovieSceneSequencePlayer_GetCurrentTime_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -781,17 +781,17 @@ TArray<class UObject*> UMovieSceneSequencePlayer::GetBoundObjects(const struct F
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.GetBoundObjects");
 
-	UMovieSceneSequencePlayer_GetBoundObjects_Params params;
-	params.ObjectBinding = ObjectBinding;
+	UMovieSceneSequencePlayer_GetBoundObjects_Params fn_params;
+	fn_params.ObjectBinding = ObjectBinding;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -802,12 +802,12 @@ void UMovieSceneSequencePlayer::ChangePlaybackDirection()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneSequencePlayer.ChangePlaybackDirection");
 
-	UMovieSceneSequencePlayer_ChangePlaybackDirection_Params params;
+	UMovieSceneSequencePlayer_ChangePlaybackDirection_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -823,16 +823,16 @@ float UMovieSceneEasingFunction::OnEvaluate(float Interp)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MovieScene.MovieSceneEasingFunction.OnEvaluate");
 
-	UMovieSceneEasingFunction_OnEvaluate_Params params;
-	params.Interp = Interp;
+	UMovieSceneEasingFunction_OnEvaluate_Params fn_params;
+	fn_params.Interp = Interp;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

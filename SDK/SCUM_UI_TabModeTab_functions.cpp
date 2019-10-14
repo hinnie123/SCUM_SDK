@@ -21,16 +21,16 @@ void UUI_TabModeTab_C::GetIsActive(bool* IsActive)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TabModeTab.UI_TabModeTab_C.GetIsActive");
 
-	UUI_TabModeTab_C_GetIsActive_Params params;
+	UUI_TabModeTab_C_GetIsActive_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsActive != nullptr)
-		*IsActive = params.IsActive;
+		*IsActive = fn_params.IsActive;
 }
 
 
@@ -45,17 +45,17 @@ struct FEventReply UUI_TabModeTab_C::OnClick(const struct FGeometry& MyGeometry,
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TabModeTab.UI_TabModeTab_C.OnClick");
 
-	UUI_TabModeTab_C_OnClick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_TabModeTab_C_OnClick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -68,12 +68,12 @@ void UUI_TabModeTab_C::SetIsActive(bool active)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TabModeTab.UI_TabModeTab_C.SetIsActive");
 
-	UUI_TabModeTab_C_SetIsActive_Params params;
-	params.active = active;
+	UUI_TabModeTab_C_SetIsActive_Params fn_params;
+	fn_params.active = active;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -86,11 +86,11 @@ void UUI_TabModeTab_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TabModeTab.UI_TabModeTab_C.Construct");
 
-	UUI_TabModeTab_C_Construct_Params params;
+	UUI_TabModeTab_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -103,11 +103,11 @@ void UUI_TabModeTab_C::OnSynchronizeProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TabModeTab.UI_TabModeTab_C.OnSynchronizeProperties");
 
-	UUI_TabModeTab_C_OnSynchronizeProperties_Params params;
+	UUI_TabModeTab_C_OnSynchronizeProperties_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -122,12 +122,12 @@ void UUI_TabModeTab_C::ExecuteUbergraph_UI_TabModeTab(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TabModeTab.UI_TabModeTab_C.ExecuteUbergraph_UI_TabModeTab");
 
-	UUI_TabModeTab_C_ExecuteUbergraph_UI_TabModeTab_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_TabModeTab_C_ExecuteUbergraph_UI_TabModeTab_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -140,11 +140,11 @@ void UUI_TabModeTab_C::Clicked__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TabModeTab.UI_TabModeTab_C.Clicked__DelegateSignature");
 
-	UUI_TabModeTab_C_Clicked__DelegateSignature_Params params;
+	UUI_TabModeTab_C_Clicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

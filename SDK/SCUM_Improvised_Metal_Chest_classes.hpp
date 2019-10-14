@@ -13,8 +13,8 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Improvised_Metal_Chest.Improvised_Metal_Chest_C
-// 0x0000 (0x0818 - 0x0818)
-class AImprovised_Metal_Chest_C : public AClothesItem
+// 0x0000 (0x0848 - 0x0848)
+class AImprovised_Metal_Chest_C : public AChestItem
 {
 public:
 

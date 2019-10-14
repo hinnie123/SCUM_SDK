@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Animal_Bone_SMall.Animal_Bone_SMall_C
-// 0x0000 (0x0790 - 0x0790)
+// 0x0000 (0x0830 - 0x0830)
 class AAnimal_Bone_SMall_C : public AEquipmentItem
 {
 public:

@@ -19,11 +19,11 @@ void UBorder_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Border.Border_C.Construct");
 
-	UBorder_C_Construct_Params params;
+	UBorder_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void UBorder_C::OnSynchronizeProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Border.Border_C.OnSynchronizeProperties");
 
-	UBorder_C_OnSynchronizeProperties_Params params;
+	UBorder_C_OnSynchronizeProperties_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -55,12 +55,12 @@ void UBorder_C::ExecuteUbergraph_Border(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Border.Border_C.ExecuteUbergraph_Border");
 
-	UBorder_C_ExecuteUbergraph_Border_Params params;
-	params.EntryPoint = EntryPoint;
+	UBorder_C_ExecuteUbergraph_Border_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

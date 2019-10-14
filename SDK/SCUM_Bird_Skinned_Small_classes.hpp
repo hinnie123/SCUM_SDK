@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bird_Skinned_Small.Bird_Skinned_Small_C
-// 0x0000 (0x08C0 - 0x08C0)
+// 0x0000 (0x0958 - 0x0958)
 class ABird_Skinned_Small_C : public AFoodItem
 {
 public:

@@ -19,11 +19,11 @@ void UInteractionWidget_C::BndEvt___actionButton_K2Node_ComponentBoundEvent_28_O
 {
 	static auto fn = UObject::FindObject<UFunction>("Function InteractionWidget.InteractionWidget_C.BndEvt___actionButton_K2Node_ComponentBoundEvent_28_OnButtonHoverEvent__DelegateSignature");
 
-	UInteractionWidget_C_BndEvt___actionButton_K2Node_ComponentBoundEvent_28_OnButtonHoverEvent__DelegateSignature_Params params;
+	UInteractionWidget_C_BndEvt___actionButton_K2Node_ComponentBoundEvent_28_OnButtonHoverEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void UInteractionWidget_C::BndEvt___actionButton_K2Node_ComponentBoundEvent_42_O
 {
 	static auto fn = UObject::FindObject<UFunction>("Function InteractionWidget.InteractionWidget_C.BndEvt___actionButton_K2Node_ComponentBoundEvent_42_OnButtonHoverEvent__DelegateSignature");
 
-	UInteractionWidget_C_BndEvt___actionButton_K2Node_ComponentBoundEvent_42_OnButtonHoverEvent__DelegateSignature_Params params;
+	UInteractionWidget_C_BndEvt___actionButton_K2Node_ComponentBoundEvent_42_OnButtonHoverEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -55,12 +55,12 @@ void UInteractionWidget_C::ExecuteUbergraph_InteractionWidget(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function InteractionWidget.InteractionWidget_C.ExecuteUbergraph_InteractionWidget");
 
-	UInteractionWidget_C_ExecuteUbergraph_InteractionWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UInteractionWidget_C_ExecuteUbergraph_InteractionWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

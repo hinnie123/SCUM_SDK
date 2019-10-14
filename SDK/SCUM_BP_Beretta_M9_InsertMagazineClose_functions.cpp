@@ -22,16 +22,16 @@ bool UBP_Beretta_M9_InsertMagazineClose_C::CanExecuteUsingData(struct FWeaponRel
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Beretta_M9_InsertMagazineClose.BP_Beretta_M9_InsertMagazineClose_C.CanExecuteUsingData");
 
-	UBP_Beretta_M9_InsertMagazineClose_C_CanExecuteUsingData_Params params;
-	params.Data = Data;
+	UBP_Beretta_M9_InsertMagazineClose_C_CanExecuteUsingData_Params fn_params;
+	fn_params.Data = Data;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

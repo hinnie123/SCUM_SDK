@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WeaponBullet_792x58EVENT.BP_WeaponBullet_792x58EVENT_C
-// 0x0008 (0x04F0 - 0x04E8)
+// 0x0008 (0x0500 - 0x04F8)
 class ABP_WeaponBullet_792x58EVENT_C : public AProjectile
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x04E8(0x0008) (Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x04F8(0x0008) (Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

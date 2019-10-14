@@ -22,13 +22,13 @@ void UUI_LeanFatMuscleTriangle_C::UpdateAttributesFromFatnessAndLeanness(float F
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_LeanFatMuscleTriangle.UI_LeanFatMuscleTriangle_C.UpdateAttributesFromFatnessAndLeanness");
 
-	UUI_LeanFatMuscleTriangle_C_UpdateAttributesFromFatnessAndLeanness_Params params;
-	params.Fatness = Fatness;
-	params.Leanness = Leanness;
+	UUI_LeanFatMuscleTriangle_C_UpdateAttributesFromFatnessAndLeanness_Params fn_params;
+	fn_params.Fatness = Fatness;
+	fn_params.Leanness = Leanness;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -45,19 +45,19 @@ struct FEventReply UUI_LeanFatMuscleTriangle_C::OnMouseEvent(bool updateEvenWith
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_LeanFatMuscleTriangle.UI_LeanFatMuscleTriangle_C.OnMouseEvent");
 
-	UUI_LeanFatMuscleTriangle_C_OnMouseEvent_Params params;
-	params.updateEvenWithoutCapture = updateEvenWithoutCapture;
+	UUI_LeanFatMuscleTriangle_C_OnMouseEvent_Params fn_params;
+	fn_params.updateEvenWithoutCapture = updateEvenWithoutCapture;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Event != nullptr)
-		*Event = params.Event;
+		*Event = fn_params.Event;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -72,17 +72,17 @@ struct FEventReply UUI_LeanFatMuscleTriangle_C::OnMouseButtonDown(struct FGeomet
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_LeanFatMuscleTriangle.UI_LeanFatMuscleTriangle_C.OnMouseButtonDown");
 
-	UUI_LeanFatMuscleTriangle_C_OnMouseButtonDown_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_LeanFatMuscleTriangle_C_OnMouseButtonDown_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -96,13 +96,13 @@ void UUI_LeanFatMuscleTriangle_C::UpdateVisualsFromFatnessAndLeanness(float Fatn
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_LeanFatMuscleTriangle.UI_LeanFatMuscleTriangle_C.UpdateVisualsFromFatnessAndLeanness");
 
-	UUI_LeanFatMuscleTriangle_C_UpdateVisualsFromFatnessAndLeanness_Params params;
-	params.Fatness = Fatness;
-	params.Leanness = Leanness;
+	UUI_LeanFatMuscleTriangle_C_UpdateVisualsFromFatnessAndLeanness_Params fn_params;
+	fn_params.Fatness = Fatness;
+	fn_params.Leanness = Leanness;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -119,17 +119,17 @@ struct FEventReply UUI_LeanFatMuscleTriangle_C::OnMouseButtonUp(struct FGeometry
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_LeanFatMuscleTriangle.UI_LeanFatMuscleTriangle_C.OnMouseButtonUp");
 
-	UUI_LeanFatMuscleTriangle_C_OnMouseButtonUp_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_LeanFatMuscleTriangle_C_OnMouseButtonUp_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -145,21 +145,21 @@ void UUI_LeanFatMuscleTriangle_C::GetFactorsFromLocalCoordinatesz(const struct F
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_LeanFatMuscleTriangle.UI_LeanFatMuscleTriangle_C.GetFactorsFromLocalCoordinatesz");
 
-	UUI_LeanFatMuscleTriangle_C_GetFactorsFromLocalCoordinatesz_Params params;
-	params.Coordinates = Coordinates;
+	UUI_LeanFatMuscleTriangle_C_GetFactorsFromLocalCoordinatesz_Params fn_params;
+	fn_params.Coordinates = Coordinates;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (muscle != nullptr)
-		*muscle = params.muscle;
+		*muscle = fn_params.muscle;
 	if (lean != nullptr)
-		*lean = params.lean;
+		*lean = fn_params.lean;
 	if (Fat != nullptr)
-		*Fat = params.Fat;
+		*Fat = fn_params.Fat;
 }
 
 
@@ -174,17 +174,17 @@ struct FEventReply UUI_LeanFatMuscleTriangle_C::OnMouseMove(struct FGeometry* My
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_LeanFatMuscleTriangle.UI_LeanFatMuscleTriangle_C.OnMouseMove");
 
-	UUI_LeanFatMuscleTriangle_C_OnMouseMove_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_LeanFatMuscleTriangle_C_OnMouseMove_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -197,12 +197,12 @@ void UUI_LeanFatMuscleTriangle_C::AttributesChanged__DelegateSignature(const str
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_LeanFatMuscleTriangle.UI_LeanFatMuscleTriangle_C.AttributesChanged__DelegateSignature");
 
-	UUI_LeanFatMuscleTriangle_C_AttributesChanged__DelegateSignature_Params params;
-	params.Attributes = Attributes;
+	UUI_LeanFatMuscleTriangle_C_AttributesChanged__DelegateSignature_Params fn_params;
+	fn_params.Attributes = Attributes;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

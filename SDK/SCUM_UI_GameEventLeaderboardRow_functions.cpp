@@ -21,15 +21,15 @@ struct FLinearColor UUI_GameEventLeaderboardRow_C::Get_Background_BrushColor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLeaderboardRow.UI_GameEventLeaderboardRow_C.Get_Background_BrushColor");
 
-	UUI_GameEventLeaderboardRow_C_Get_Background_BrushColor_Params params;
+	UUI_GameEventLeaderboardRow_C_Get_Background_BrushColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -42,12 +42,12 @@ void UUI_GameEventLeaderboardRow_C::SetRank(int Rank)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLeaderboardRow.UI_GameEventLeaderboardRow_C.SetRank");
 
-	UUI_GameEventLeaderboardRow_C_SetRank_Params params;
-	params.Rank = Rank;
+	UUI_GameEventLeaderboardRow_C_SetRank_Params fn_params;
+	fn_params.Rank = Rank;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -63,13 +63,13 @@ void UUI_GameEventLeaderboardRow_C::SetStats(const struct FString& characterName
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLeaderboardRow.UI_GameEventLeaderboardRow_C.SetStats");
 
-	UUI_GameEventLeaderboardRow_C_SetStats_Params params;
-	params.characterName = characterName;
-	params.CharacterStats = CharacterStats;
+	UUI_GameEventLeaderboardRow_C_SetStats_Params fn_params;
+	fn_params.characterName = characterName;
+	fn_params.CharacterStats = CharacterStats;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

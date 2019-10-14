@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bear_Left_Torso_Half.Bear_Left_Torso_Half_C
-// 0x0000 (0x0790 - 0x0790)
+// 0x0000 (0x0830 - 0x0830)
 class ABear_Left_Torso_Half_C : public AEquipmentItem
 {
 public:

@@ -19,11 +19,11 @@ void UVitalStatsRespiration_C::DisableAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsRespiration.VitalStatsRespiration_C.DisableAlarm");
 
-	UVitalStatsRespiration_C_DisableAlarm_Params params;
+	UVitalStatsRespiration_C_DisableAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void UVitalStatsRespiration_C::EnableAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsRespiration.VitalStatsRespiration_C.EnableAlarm");
 
-	UVitalStatsRespiration_C_EnableAlarm_Params params;
+	UVitalStatsRespiration_C_EnableAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -53,11 +53,11 @@ void UVitalStatsRespiration_C::CheckAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsRespiration.VitalStatsRespiration_C.CheckAlarm");
 
-	UVitalStatsRespiration_C_CheckAlarm_Params params;
+	UVitalStatsRespiration_C_CheckAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -72,16 +72,16 @@ void UVitalStatsRespiration_C::GetRespiratoryRateInt(int* respiratoryRate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsRespiration.VitalStatsRespiration_C.GetRespiratoryRateInt");
 
-	UVitalStatsRespiration_C_GetRespiratoryRateInt_Params params;
+	UVitalStatsRespiration_C_GetRespiratoryRateInt_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (respiratoryRate != nullptr)
-		*respiratoryRate = params.respiratoryRate;
+		*respiratoryRate = fn_params.respiratoryRate;
 }
 
 
@@ -92,11 +92,11 @@ void UVitalStatsRespiration_C::ActivateNormalColor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsRespiration.VitalStatsRespiration_C.ActivateNormalColor");
 
-	UVitalStatsRespiration_C_ActivateNormalColor_Params params;
+	UVitalStatsRespiration_C_ActivateNormalColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -109,11 +109,11 @@ void UVitalStatsRespiration_C::ActivateAlarmColor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsRespiration.VitalStatsRespiration_C.ActivateAlarmColor");
 
-	UVitalStatsRespiration_C_ActivateAlarmColor_Params params;
+	UVitalStatsRespiration_C_ActivateAlarmColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -128,15 +128,15 @@ struct FText UVitalStatsRespiration_C::GetBreathRate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsRespiration.VitalStatsRespiration_C.GetBreathRate");
 
-	UVitalStatsRespiration_C_GetBreathRate_Params params;
+	UVitalStatsRespiration_C_GetBreathRate_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -149,12 +149,12 @@ void UVitalStatsRespiration_C::SetTextColor(const struct FLinearColor& TextColor
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsRespiration.VitalStatsRespiration_C.SetTextColor");
 
-	UVitalStatsRespiration_C_SetTextColor_Params params;
-	params.TextColor = TextColor;
+	UVitalStatsRespiration_C_SetTextColor_Params fn_params;
+	fn_params.TextColor = TextColor;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -167,11 +167,11 @@ void UVitalStatsRespiration_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsRespiration.VitalStatsRespiration_C.Construct");
 
-	UVitalStatsRespiration_C_Construct_Params params;
+	UVitalStatsRespiration_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -187,13 +187,13 @@ void UVitalStatsRespiration_C::Tick(struct FGeometry* MyGeometry, float* InDelta
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsRespiration.VitalStatsRespiration_C.Tick");
 
-	UVitalStatsRespiration_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UVitalStatsRespiration_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -208,12 +208,12 @@ void UVitalStatsRespiration_C::ExecuteUbergraph_VitalStatsRespiration(int EntryP
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsRespiration.VitalStatsRespiration_C.ExecuteUbergraph_VitalStatsRespiration");
 
-	UVitalStatsRespiration_C_ExecuteUbergraph_VitalStatsRespiration_Params params;
-	params.EntryPoint = EntryPoint;
+	UVitalStatsRespiration_C_ExecuteUbergraph_VitalStatsRespiration_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -21,15 +21,15 @@ class UVerticalBox* UUI_HoverPanelWidget_C::GetContentBox()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HoverPanelWidget.UI_HoverPanelWidget_C.GetContentBox");
 
-	UUI_HoverPanelWidget_C_GetContentBox_Params params;
+	UUI_HoverPanelWidget_C_GetContentBox_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -40,11 +40,11 @@ void UUI_HoverPanelWidget_C::ClearPanel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HoverPanelWidget.UI_HoverPanelWidget_C.ClearPanel");
 
-	UUI_HoverPanelWidget_C_ClearPanel_Params params;
+	UUI_HoverPanelWidget_C_ClearPanel_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -59,12 +59,12 @@ void UUI_HoverPanelWidget_C::SetScreenPosition(struct FVector2D* Position)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HoverPanelWidget.UI_HoverPanelWidget_C.SetScreenPosition");
 
-	UUI_HoverPanelWidget_C_SetScreenPosition_Params params;
-	params.Position = Position;
+	UUI_HoverPanelWidget_C_SetScreenPosition_Params fn_params;
+	fn_params.Position = Position;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -79,12 +79,12 @@ void UUI_HoverPanelWidget_C::ExecuteUbergraph_UI_HoverPanelWidget(int EntryPoint
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HoverPanelWidget.UI_HoverPanelWidget_C.ExecuteUbergraph_UI_HoverPanelWidget");
 
-	UUI_HoverPanelWidget_C_ExecuteUbergraph_UI_HoverPanelWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_HoverPanelWidget_C_ExecuteUbergraph_UI_HoverPanelWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

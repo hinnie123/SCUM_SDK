@@ -21,12 +21,12 @@ void UUI_CC_SkillSlider_C::SetPercentage(float percentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_SkillSlider.UI_CC_SkillSlider_C.SetPercentage");
 
-	UUI_CC_SkillSlider_C_SetPercentage_Params params;
-	params.percentage = percentage;
+	UUI_CC_SkillSlider_C_SetPercentage_Params fn_params;
+	fn_params.percentage = percentage;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -42,13 +42,13 @@ void UUI_CC_SkillSlider_C::SetMaxLevelAndExperienceFromPoints(float Points, bool
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_SkillSlider.UI_CC_SkillSlider_C.SetMaxLevelAndExperienceFromPoints");
 
-	UUI_CC_SkillSlider_C_SetMaxLevelAndExperienceFromPoints_Params params;
-	params.Points = Points;
-	params.isSelected = isSelected;
+	UUI_CC_SkillSlider_C_SetMaxLevelAndExperienceFromPoints_Params fn_params;
+	fn_params.Points = Points;
+	fn_params.isSelected = isSelected;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -64,13 +64,13 @@ void UUI_CC_SkillSlider_C::SetMaxLevelAndExperience(ESkillLevel Level, float exp
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_SkillSlider.UI_CC_SkillSlider_C.SetMaxLevelAndExperience");
 
-	UUI_CC_SkillSlider_C_SetMaxLevelAndExperience_Params params;
-	params.Level = Level;
-	params.experiencePercentage = experiencePercentage;
+	UUI_CC_SkillSlider_C_SetMaxLevelAndExperience_Params fn_params;
+	fn_params.Level = Level;
+	fn_params.experiencePercentage = experiencePercentage;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -86,13 +86,13 @@ void UUI_CC_SkillSlider_C::SetSkillLevelAndExperience(ESkillLevel Level, float E
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_SkillSlider.UI_CC_SkillSlider_C.SetSkillLevelAndExperience");
 
-	UUI_CC_SkillSlider_C_SetSkillLevelAndExperience_Params params;
-	params.Level = Level;
-	params.Experience = Experience;
+	UUI_CC_SkillSlider_C_SetSkillLevelAndExperience_Params fn_params;
+	fn_params.Level = Level;
+	fn_params.Experience = Experience;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -105,11 +105,11 @@ void UUI_CC_SkillSlider_C::OnSynchronizeProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_SkillSlider.UI_CC_SkillSlider_C.OnSynchronizeProperties");
 
-	UUI_CC_SkillSlider_C_OnSynchronizeProperties_Params params;
+	UUI_CC_SkillSlider_C_OnSynchronizeProperties_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -119,19 +119,19 @@ void UUI_CC_SkillSlider_C::OnSynchronizeProperties()
 // (BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          LeftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          leftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_CC_SkillSlider_C::BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_98_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage)
+void UUI_CC_SkillSlider_C::BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_98_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_SkillSlider.UI_CC_SkillSlider_C.BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_98_OnIndexChanged__DelegateSignature");
 
-	UUI_CC_SkillSlider_C_BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_98_OnIndexChanged__DelegateSignature_Params params;
-	params.Index = Index;
-	params.LeftoverPercentage = LeftoverPercentage;
+	UUI_CC_SkillSlider_C_BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_98_OnIndexChanged__DelegateSignature_Params fn_params;
+	fn_params.Index = Index;
+	fn_params.leftoverPercentage = leftoverPercentage;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -144,11 +144,11 @@ void UUI_CC_SkillSlider_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_SkillSlider.UI_CC_SkillSlider_C.Construct");
 
-	UUI_CC_SkillSlider_C_Construct_Params params;
+	UUI_CC_SkillSlider_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -161,11 +161,11 @@ void UUI_CC_SkillSlider_C::BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_SkillSlider.UI_CC_SkillSlider_C.BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_2_MouseUp__DelegateSignature");
 
-	UUI_CC_SkillSlider_C_BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_2_MouseUp__DelegateSignature_Params params;
+	UUI_CC_SkillSlider_C_BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_2_MouseUp__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -178,11 +178,11 @@ void UUI_CC_SkillSlider_C::BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_SkillSlider.UI_CC_SkillSlider_C.BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_6_MouseDown__DelegateSignature");
 
-	UUI_CC_SkillSlider_C_BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_6_MouseDown__DelegateSignature_Params params;
+	UUI_CC_SkillSlider_C_BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_6_MouseDown__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -197,12 +197,12 @@ void UUI_CC_SkillSlider_C::ExecuteUbergraph_UI_CC_SkillSlider(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_SkillSlider.UI_CC_SkillSlider_C.ExecuteUbergraph_UI_CC_SkillSlider");
 
-	UUI_CC_SkillSlider_C_ExecuteUbergraph_UI_CC_SkillSlider_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_CC_SkillSlider_C_ExecuteUbergraph_UI_CC_SkillSlider_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -217,12 +217,12 @@ void UUI_CC_SkillSlider_C::SliderDeselected__DelegateSignature(class UUI_CC_Skil
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_SkillSlider.UI_CC_SkillSlider_C.SliderDeselected__DelegateSignature");
 
-	UUI_CC_SkillSlider_C_SliderDeselected__DelegateSignature_Params params;
-	params.Slider = Slider;
+	UUI_CC_SkillSlider_C_SliderDeselected__DelegateSignature_Params fn_params;
+	fn_params.Slider = Slider;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -237,12 +237,12 @@ void UUI_CC_SkillSlider_C::SliderSelected__DelegateSignature(class UUI_CC_SkillS
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_SkillSlider.UI_CC_SkillSlider_C.SliderSelected__DelegateSignature");
 
-	UUI_CC_SkillSlider_C_SliderSelected__DelegateSignature_Params params;
-	params.Slider = Slider;
+	UUI_CC_SkillSlider_C_SliderSelected__DelegateSignature_Params fn_params;
+	fn_params.Slider = Slider;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -258,13 +258,13 @@ void UUI_CC_SkillSlider_C::SliderChanged__DelegateSignature(ESkillAttribute Attr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_SkillSlider.UI_CC_SkillSlider_C.SliderChanged__DelegateSignature");
 
-	UUI_CC_SkillSlider_C_SliderChanged__DelegateSignature_Params params;
-	params.Attribute = Attribute;
-	params.Slider = Slider;
+	UUI_CC_SkillSlider_C_SliderChanged__DelegateSignature_Params fn_params;
+	fn_params.Attribute = Attribute;
+	fn_params.Slider = Slider;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

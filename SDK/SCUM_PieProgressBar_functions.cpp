@@ -19,11 +19,11 @@ void UPieProgressBar_C::HidePieImages()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.HidePieImages");
 
-	UPieProgressBar_C_HidePieImages_Params params;
+	UPieProgressBar_C_HidePieImages_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -38,15 +38,15 @@ struct FText UPieProgressBar_C::GetPercentageText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.GetPercentageText");
 
-	UPieProgressBar_C_GetPercentageText_Params params;
+	UPieProgressBar_C_GetPercentageText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -60,13 +60,13 @@ void UPieProgressBar_C::SetImageColor(class UImage* Image, const struct FLinearC
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.SetImageColor");
 
-	UPieProgressBar_C_SetImageColor_Params params;
-	params.Image = Image;
-	params.Color = Color;
+	UPieProgressBar_C_SetImageColor_Params fn_params;
+	fn_params.Image = Image;
+	fn_params.Color = Color;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -82,13 +82,13 @@ void UPieProgressBar_C::SetTextColor(class UTextBlock* textWidget, const struct 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.SetTextColor");
 
-	UPieProgressBar_C_SetTextColor_Params params;
-	params.textWidget = textWidget;
-	params.Color = Color;
+	UPieProgressBar_C_SetTextColor_Params fn_params;
+	fn_params.textWidget = textWidget;
+	fn_params.Color = Color;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -103,12 +103,12 @@ void UPieProgressBar_C::SetCircularBarColor(const struct FLinearColor& CircularB
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.SetCircularBarColor");
 
-	UPieProgressBar_C_SetCircularBarColor_Params params;
-	params.CircularBarColor = CircularBarColor;
+	UPieProgressBar_C_SetCircularBarColor_Params fn_params;
+	fn_params.CircularBarColor = CircularBarColor;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -123,16 +123,16 @@ void UPieProgressBar_C::GetCircularBarColor(struct FLinearColor* CircularBarColo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.GetCircularBarColor");
 
-	UPieProgressBar_C_GetCircularBarColor_Params params;
+	UPieProgressBar_C_GetCircularBarColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (CircularBarColor != nullptr)
-		*CircularBarColor = params.CircularBarColor;
+		*CircularBarColor = fn_params.CircularBarColor;
 }
 
 
@@ -145,12 +145,12 @@ void UPieProgressBar_C::SetOuterCircleColor(const struct FLinearColor& outerCirc
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.SetOuterCircleColor");
 
-	UPieProgressBar_C_SetOuterCircleColor_Params params;
-	params.outerCircleColor = outerCircleColor;
+	UPieProgressBar_C_SetOuterCircleColor_Params fn_params;
+	fn_params.outerCircleColor = outerCircleColor;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -165,16 +165,16 @@ void UPieProgressBar_C::GetOuterCircleColor(struct FLinearColor* outerCircleColo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.GetOuterCircleColor");
 
-	UPieProgressBar_C_GetOuterCircleColor_Params params;
+	UPieProgressBar_C_GetOuterCircleColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (outerCircleColor != nullptr)
-		*outerCircleColor = params.outerCircleColor;
+		*outerCircleColor = fn_params.outerCircleColor;
 }
 
 
@@ -187,16 +187,16 @@ void UPieProgressBar_C::GetNormalColor(struct FLinearColor* NormalColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.GetNormalColor");
 
-	UPieProgressBar_C_GetNormalColor_Params params;
+	UPieProgressBar_C_GetNormalColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (NormalColor != nullptr)
-		*NormalColor = params.NormalColor;
+		*NormalColor = fn_params.NormalColor;
 }
 
 
@@ -209,12 +209,12 @@ void UPieProgressBar_C::SetNormalColor(const struct FLinearColor& NormalColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.SetNormalColor");
 
-	UPieProgressBar_C_SetNormalColor_Params params;
-	params.NormalColor = NormalColor;
+	UPieProgressBar_C_SetNormalColor_Params fn_params;
+	fn_params.NormalColor = NormalColor;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -227,11 +227,11 @@ void UPieProgressBar_C::UpdatePercentageArc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.UpdatePercentageArc");
 
-	UPieProgressBar_C_UpdatePercentageArc_Params params;
+	UPieProgressBar_C_UpdatePercentageArc_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -244,11 +244,11 @@ void UPieProgressBar_C::OnPercentageChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.OnPercentageChanged");
 
-	UPieProgressBar_C_OnPercentageChanged_Params params;
+	UPieProgressBar_C_OnPercentageChanged_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -264,13 +264,13 @@ void UPieProgressBar_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.Tick");
 
-	UPieProgressBar_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UPieProgressBar_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -283,11 +283,11 @@ void UPieProgressBar_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.Construct");
 
-	UPieProgressBar_C_Construct_Params params;
+	UPieProgressBar_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -300,11 +300,11 @@ void UPieProgressBar_C::OnSynchronizeProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.OnSynchronizeProperties");
 
-	UPieProgressBar_C_OnSynchronizeProperties_Params params;
+	UPieProgressBar_C_OnSynchronizeProperties_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -319,12 +319,12 @@ void UPieProgressBar_C::ExecuteUbergraph_PieProgressBar(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.ExecuteUbergraph_PieProgressBar");
 
-	UPieProgressBar_C_ExecuteUbergraph_PieProgressBar_Params params;
-	params.EntryPoint = EntryPoint;
+	UPieProgressBar_C_ExecuteUbergraph_PieProgressBar_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -50,7 +50,7 @@ struct UUI_CC_SkillSlider_C_OnSynchronizeProperties_Params
 struct UUI_CC_SkillSlider_C_BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_98_OnIndexChanged__DelegateSignature_Params
 {
 	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              LeftoverPercentage;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              leftoverPercentage;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UI_CC_SkillSlider.UI_CC_SkillSlider_C.Construct

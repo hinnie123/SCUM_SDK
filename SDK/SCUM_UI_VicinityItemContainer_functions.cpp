@@ -19,11 +19,11 @@ void UUI_VicinityItemContainer_C::InitVicinityItemContainer()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_VicinityItemContainer.UI_VicinityItemContainer_C.InitVicinityItemContainer");
 
-	UUI_VicinityItemContainer_C_InitVicinityItemContainer_Params params;
+	UUI_VicinityItemContainer_C_InitVicinityItemContainer_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -38,12 +38,12 @@ void UUI_VicinityItemContainer_C::SetParentHUD(class UHUD_C* parentHUD)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_VicinityItemContainer.UI_VicinityItemContainer_C.SetParentHUD");
 
-	UUI_VicinityItemContainer_C_SetParentHUD_Params params;
-	params.parentHUD = parentHUD;
+	UUI_VicinityItemContainer_C_SetParentHUD_Params fn_params;
+	fn_params.parentHUD = parentHUD;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -58,12 +58,12 @@ void UUI_VicinityItemContainer_C::SetTitle(const struct FText& titleToSet)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_VicinityItemContainer.UI_VicinityItemContainer_C.SetTitle");
 
-	UUI_VicinityItemContainer_C_SetTitle_Params params;
-	params.titleToSet = titleToSet;
+	UUI_VicinityItemContainer_C_SetTitle_Params fn_params;
+	fn_params.titleToSet = titleToSet;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -76,11 +76,11 @@ void UUI_VicinityItemContainer_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_VicinityItemContainer.UI_VicinityItemContainer_C.Construct");
 
-	UUI_VicinityItemContainer_C_Construct_Params params;
+	UUI_VicinityItemContainer_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -95,12 +95,12 @@ void UUI_VicinityItemContainer_C::SaveLayout(TScriptInterface<class UAttributeMa
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_VicinityItemContainer.UI_VicinityItemContainer_C.SaveLayout");
 
-	UUI_VicinityItemContainer_C_SaveLayout_Params params;
-	params.Attributes = Attributes;
+	UUI_VicinityItemContainer_C_SaveLayout_Params fn_params;
+	fn_params.Attributes = Attributes;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -115,12 +115,12 @@ void UUI_VicinityItemContainer_C::LoadLayout(TScriptInterface<class UAttributeMa
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_VicinityItemContainer.UI_VicinityItemContainer_C.LoadLayout");
 
-	UUI_VicinityItemContainer_C_LoadLayout_Params params;
-	params.Attributes = Attributes;
+	UUI_VicinityItemContainer_C_LoadLayout_Params fn_params;
+	fn_params.Attributes = Attributes;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -133,11 +133,11 @@ void UUI_VicinityItemContainer_C::DeferredLoadLayout()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_VicinityItemContainer.UI_VicinityItemContainer_C.DeferredLoadLayout");
 
-	UUI_VicinityItemContainer_C_DeferredLoadLayout_Params params;
+	UUI_VicinityItemContainer_C_DeferredLoadLayout_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -150,11 +150,11 @@ void UUI_VicinityItemContainer_C::ResetLayout()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_VicinityItemContainer.UI_VicinityItemContainer_C.ResetLayout");
 
-	UUI_VicinityItemContainer_C_ResetLayout_Params params;
+	UUI_VicinityItemContainer_C_ResetLayout_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -169,12 +169,12 @@ void UUI_VicinityItemContainer_C::ExecuteUbergraph_UI_VicinityItemContainer(int 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_VicinityItemContainer.UI_VicinityItemContainer_C.ExecuteUbergraph_UI_VicinityItemContainer");
 
-	UUI_VicinityItemContainer_C_ExecuteUbergraph_UI_VicinityItemContainer_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_VicinityItemContainer_C_ExecuteUbergraph_UI_VicinityItemContainer_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

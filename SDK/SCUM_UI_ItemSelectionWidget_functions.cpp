@@ -21,33 +21,33 @@ struct FSlateColor UUI_ItemSelectionWidget_C::Get_ItemName_ColorAndOpacity()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemSelectionWidget.UI_ItemSelectionWidget_C.Get_ItemName_ColorAndOpacity");
 
-	UUI_ItemSelectionWidget_C_Get_ItemName_ColorAndOpacity_Params params;
+	UUI_ItemSelectionWidget_C_Get_ItemName_ColorAndOpacity_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
 // Function UI_ItemSelectionWidget.UI_ItemSelectionWidget_C.SetSelected
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           Selected                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           selected                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_ItemSelectionWidget_C::SetSelected(bool Selected)
+void UUI_ItemSelectionWidget_C::SetSelected(bool selected)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemSelectionWidget.UI_ItemSelectionWidget_C.SetSelected");
 
-	UUI_ItemSelectionWidget_C_SetSelected_Params params;
-	params.Selected = Selected;
+	UUI_ItemSelectionWidget_C_SetSelected_Params fn_params;
+	fn_params.selected = selected;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -64,17 +64,17 @@ struct FEventReply UUI_ItemSelectionWidget_C::On_Selection_MouseButtonDown(const
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemSelectionWidget.UI_ItemSelectionWidget_C.On_Selection_MouseButtonDown");
 
-	UUI_ItemSelectionWidget_C_On_Selection_MouseButtonDown_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_ItemSelectionWidget_C_On_Selection_MouseButtonDown_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -85,11 +85,11 @@ void UUI_ItemSelectionWidget_C::UpdateButton()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemSelectionWidget.UI_ItemSelectionWidget_C.UpdateButton");
 
-	UUI_ItemSelectionWidget_C_UpdateButton_Params params;
+	UUI_ItemSelectionWidget_C_UpdateButton_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -104,16 +104,16 @@ void UUI_ItemSelectionWidget_C::GetData(class UItemSelection** Data)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemSelectionWidget.UI_ItemSelectionWidget_C.GetData");
 
-	UUI_ItemSelectionWidget_C_GetData_Params params;
+	UUI_ItemSelectionWidget_C_GetData_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Data != nullptr)
-		*Data = params.Data;
+		*Data = fn_params.Data;
 }
 
 
@@ -126,12 +126,12 @@ void UUI_ItemSelectionWidget_C::SetData(class UItemSelection* Data)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemSelectionWidget.UI_ItemSelectionWidget_C.SetData");
 
-	UUI_ItemSelectionWidget_C_SetData_Params params;
-	params.Data = Data;
+	UUI_ItemSelectionWidget_C_SetData_Params fn_params;
+	fn_params.Data = Data;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -144,11 +144,11 @@ void UUI_ItemSelectionWidget_C::OnClicked__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemSelectionWidget.UI_ItemSelectionWidget_C.OnClicked__DelegateSignature");
 
-	UUI_ItemSelectionWidget_C_OnClicked__DelegateSignature_Params params;
+	UUI_ItemSelectionWidget_C_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

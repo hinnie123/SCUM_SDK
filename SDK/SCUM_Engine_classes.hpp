@@ -424,7 +424,7 @@ public:
 	void RestartLevel();
 	bool ProjectWorldLocationToScreen(const struct FVector& WorldLocation, bool bPlayerViewportRelative, struct FVector2D* ScreenLocation);
 	void PlayHapticEffect(class UHapticFeedbackEffect_Base* HapticEffect, EControllerHand Hand, float Scale, bool bLoop);
-	void PlayDynamicForceFeedback(float Intensity, float Duration, bool bAffectsLeftLarge, bool bAffectsLeftSmall, bool bAffectsRightLarge, bool bAffectsRightSmall, TEnumAsByte<EDynamicForceFeedbackAction> action, const struct FLatentActionInfo& LatentInfo);
+	void PlayDynamicForceFeedback(float Intensity, float Duration, bool bAffectsLeftLarge, bool bAffectsLeftSmall, bool bAffectsRightLarge, bool bAffectsRightSmall, TEnumAsByte<EDynamicForceFeedbackAction> Action, const struct FLatentActionInfo& LatentInfo);
 	void Pause();
 	void OnServerStartedVisualLogger(bool bIsLogging);
 	void LocalTravel(const struct FString& URL);
@@ -2747,6 +2747,94 @@ public:
 };
 
 
+// Class Engine.PlayerCameraManager
+// 0x22C8 (0x25F0 - 0x0328)
+class APlayerCameraManager : public AActor
+{
+public:
+	class APlayerController*                           PCOwner;                                                  // 0x0328(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class USceneComponent*                             TransformComponent;                                       // 0x0330(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0338(0x0008) MISSED OFFSET
+	float                                              DefaultFOV;                                               // 0x0340(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0344(0x0004) MISSED OFFSET
+	float                                              DefaultOrthoWidth;                                        // 0x0348(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x034C(0x0004) MISSED OFFSET
+	float                                              DefaultAspectRatio;                                       // 0x0350(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4C];                                      // 0x0354(0x004C) MISSED OFFSET
+	struct FCameraCacheEntry                           CameraCache;                                              // 0x03A0(0x0580) (Transient)
+	struct FCameraCacheEntry                           LastFrameCameraCache;                                     // 0x0920(0x0580) (Transient)
+	struct FTViewTarget                                ViewTarget;                                               // 0x0EA0(0x0590) (Transient)
+	struct FTViewTarget                                PendingViewTarget;                                        // 0x1430(0x0590) (Transient)
+	unsigned char                                      UnknownData04[0x20];                                      // 0x19C0(0x0020) MISSED OFFSET
+	struct FCameraCacheEntry                           CameraCachePrivate;                                       // 0x19E0(0x0580) (Transient)
+	struct FCameraCacheEntry                           LastFrameCameraCachePrivate;                              // 0x1F60(0x0580) (Transient)
+	TArray<class UCameraModifier*>                     ModifierList;                                             // 0x24E0(0x0010) (ZeroConstructor, Transient)
+	TArray<class UClass*>                              DefaultModifiers;                                         // 0x24F0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
+	float                                              FreeCamDistance;                                          // 0x2500(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     FreeCamOffset;                                            // 0x2504(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FVector                                     ViewTargetOffset;                                         // 0x2510(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x14];                                      // 0x251C(0x0014) MISSED OFFSET
+	TArray<class AEmitterCameraLensEffectBase*>        CameraLensEffects;                                        // 0x2530(0x0010) (ZeroConstructor, Transient)
+	class UCameraModifier_CameraShake*                 CachedCameraShakeMod;                                     // 0x2540(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UCameraAnimInst*                             AnimInstPool[0x8];                                        // 0x2548(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TArray<struct FPostProcessSettings>                PostProcessBlendCache;                                    // 0x2588(0x0010) (ZeroConstructor, Transient)
+	unsigned char                                      UnknownData06[0x10];                                      // 0x2598(0x0010) MISSED OFFSET
+	TArray<class UCameraAnimInst*>                     ActiveAnims;                                              // 0x25A8(0x0010) (ZeroConstructor, Transient)
+	TArray<class UCameraAnimInst*>                     FreeAnims;                                                // 0x25B8(0x0010) (ZeroConstructor, Transient)
+	class ACameraActor*                                AnimCameraActor;                                          // 0x25C8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      bIsOrthographic : 1;                                      // 0x25D0(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bDefaultConstrainAspectRatio : 1;                         // 0x25D0(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData07 : 4;                                        // 0x25D0(0x0001)
+	unsigned char                                      bClientSimulatingViewTarget : 1;                          // 0x25D0(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bUseClientSideCameraUpdates : 1;                          // 0x25D0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData08 : 2;                                        // 0x25D1(0x0001)
+	unsigned char                                      bGameCameraCutThisFrame : 1;                              // 0x25D1(0x0001) (BlueprintVisible, BlueprintReadOnly, Transient)
+	unsigned char                                      UnknownData09[0x2];                                       // 0x25D2(0x0002) MISSED OFFSET
+	float                                              ViewPitchMin;                                             // 0x25D4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ViewPitchMax;                                             // 0x25D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ViewYawMin;                                               // 0x25DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ViewYawMax;                                               // 0x25E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ViewRollMin;                                              // 0x25E4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ViewRollMax;                                              // 0x25E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData10[0x4];                                       // 0x25EC(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Engine.PlayerCameraManager");
+		return ptr;
+	}
+
+
+	void StopCameraShake(class UCameraShake* ShakeInstance, bool bImmediately);
+	void StopCameraFade();
+	void StopCameraAnimInst(class UCameraAnimInst* AnimInst, bool bImmediate);
+	void StopAllInstancesOfCameraShake(class UClass* Shake, bool bImmediately);
+	void StopAllInstancesOfCameraAnim(class UCameraAnim* Anim, bool bImmediate);
+	void StopAllCameraShakes(bool bImmediately);
+	void StopAllCameraAnims(bool bImmediate);
+	void StartCameraFade(float FromAlpha, float ToAlpha, float Duration, const struct FLinearColor& Color, bool bShouldFadeAudio, bool bHoldWhenFinished);
+	void SetManualCameraFade(float InFadeAmount, const struct FLinearColor& Color, bool bInFadeAudio);
+	bool RemoveCameraModifier(class UCameraModifier* ModifierToRemove);
+	void RemoveCameraLensEffect(class AEmitterCameraLensEffectBase* Emitter);
+	class UCameraShake* PlayCameraShake(class UClass* ShakeClass, float Scale, TEnumAsByte<ECameraAnimPlaySpace> PlaySpace, const struct FRotator& UserPlaySpaceRot);
+	class UCameraAnimInst* PlayCameraAnim(class UCameraAnim* Anim, float Rate, float Scale, float BlendInTime, float BlendOutTime, bool bLoop, bool bRandomStartTime, float Duration, TEnumAsByte<ECameraAnimPlaySpace> PlaySpace, const struct FRotator& UserPlaySpaceRot);
+	void PhotographyCameraModify(const struct FVector& NewCameraLocation, const struct FVector& PreviousCameraLocation, const struct FVector& OriginalCameraLocation, struct FVector* ResultCameraLocation);
+	void OnPhotographySessionStart();
+	void OnPhotographySessionEnd();
+	void OnPhotographyMultiPartCaptureStart();
+	void OnPhotographyMultiPartCaptureEnd();
+	class APlayerController* GetOwningPlayerController();
+	float GetFOVAngle();
+	struct FRotator GetCameraRotation();
+	struct FVector GetCameraLocation();
+	class UCameraModifier* FindCameraModifierByClass(class UClass* ModifierClass);
+	void ClearCameraLensEffects();
+	bool BlueprintUpdateCamera(class AActor* CameraTarget, struct FVector* NewCameraLocation, struct FRotator* NewCameraRotation, float* NewCameraFOV);
+	class UCameraModifier* AddNewCameraModifier(class UClass* ModifierClass);
+	class AEmitterCameraLensEffectBase* AddCameraLensEffect(class UClass* LensEffectEmitterClass);
+};
+
+
 // Class Engine.GameInstance
 // 0x0078 (0x00A0 - 0x0028)
 class UGameInstance : public UObject
@@ -3440,94 +3528,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class Engine.PlayerCameraManager
-// 0x22C8 (0x25F0 - 0x0328)
-class APlayerCameraManager : public AActor
-{
-public:
-	class APlayerController*                           PCOwner;                                                  // 0x0328(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class USceneComponent*                             TransformComponent;                                       // 0x0330(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0338(0x0008) MISSED OFFSET
-	float                                              DefaultFOV;                                               // 0x0340(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0344(0x0004) MISSED OFFSET
-	float                                              DefaultOrthoWidth;                                        // 0x0348(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x034C(0x0004) MISSED OFFSET
-	float                                              DefaultAspectRatio;                                       // 0x0350(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4C];                                      // 0x0354(0x004C) MISSED OFFSET
-	struct FCameraCacheEntry                           CameraCache;                                              // 0x03A0(0x0580) (Transient)
-	struct FCameraCacheEntry                           LastFrameCameraCache;                                     // 0x0920(0x0580) (Transient)
-	struct FTViewTarget                                ViewTarget;                                               // 0x0EA0(0x0590) (Transient)
-	struct FTViewTarget                                PendingViewTarget;                                        // 0x1430(0x0590) (Transient)
-	unsigned char                                      UnknownData04[0x20];                                      // 0x19C0(0x0020) MISSED OFFSET
-	struct FCameraCacheEntry                           CameraCachePrivate;                                       // 0x19E0(0x0580) (Transient)
-	struct FCameraCacheEntry                           LastFrameCameraCachePrivate;                              // 0x1F60(0x0580) (Transient)
-	TArray<class UCameraModifier*>                     ModifierList;                                             // 0x24E0(0x0010) (ZeroConstructor, Transient)
-	TArray<class UClass*>                              DefaultModifiers;                                         // 0x24F0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
-	float                                              FreeCamDistance;                                          // 0x2500(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     FreeCamOffset;                                            // 0x2504(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FVector                                     ViewTargetOffset;                                         // 0x2510(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x14];                                      // 0x251C(0x0014) MISSED OFFSET
-	TArray<class AEmitterCameraLensEffectBase*>        CameraLensEffects;                                        // 0x2530(0x0010) (ZeroConstructor, Transient)
-	class UCameraModifier_CameraShake*                 CachedCameraShakeMod;                                     // 0x2540(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UCameraAnimInst*                             AnimInstPool[0x8];                                        // 0x2548(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TArray<struct FPostProcessSettings>                PostProcessBlendCache;                                    // 0x2588(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData06[0x10];                                      // 0x2598(0x0010) MISSED OFFSET
-	TArray<class UCameraAnimInst*>                     ActiveAnims;                                              // 0x25A8(0x0010) (ZeroConstructor, Transient)
-	TArray<class UCameraAnimInst*>                     FreeAnims;                                                // 0x25B8(0x0010) (ZeroConstructor, Transient)
-	class ACameraActor*                                AnimCameraActor;                                          // 0x25C8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      bIsOrthographic : 1;                                      // 0x25D0(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bDefaultConstrainAspectRatio : 1;                         // 0x25D0(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData07 : 4;                                        // 0x25D0(0x0001)
-	unsigned char                                      bClientSimulatingViewTarget : 1;                          // 0x25D0(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bUseClientSideCameraUpdates : 1;                          // 0x25D0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData08 : 2;                                        // 0x25D1(0x0001)
-	unsigned char                                      bGameCameraCutThisFrame : 1;                              // 0x25D1(0x0001) (BlueprintVisible, BlueprintReadOnly, Transient)
-	unsigned char                                      UnknownData09[0x2];                                       // 0x25D2(0x0002) MISSED OFFSET
-	float                                              ViewPitchMin;                                             // 0x25D4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ViewPitchMax;                                             // 0x25D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ViewYawMin;                                               // 0x25DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ViewYawMax;                                               // 0x25E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ViewRollMin;                                              // 0x25E4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ViewRollMax;                                              // 0x25E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData10[0x4];                                       // 0x25EC(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Engine.PlayerCameraManager");
-		return ptr;
-	}
-
-
-	void StopCameraShake(class UCameraShake* ShakeInstance, bool bImmediately);
-	void StopCameraFade();
-	void StopCameraAnimInst(class UCameraAnimInst* AnimInst, bool bImmediate);
-	void StopAllInstancesOfCameraShake(class UClass* Shake, bool bImmediately);
-	void StopAllInstancesOfCameraAnim(class UCameraAnim* Anim, bool bImmediate);
-	void StopAllCameraShakes(bool bImmediately);
-	void StopAllCameraAnims(bool bImmediate);
-	void StartCameraFade(float FromAlpha, float ToAlpha, float Duration, const struct FLinearColor& Color, bool bShouldFadeAudio, bool bHoldWhenFinished);
-	void SetManualCameraFade(float InFadeAmount, const struct FLinearColor& Color, bool bInFadeAudio);
-	bool RemoveCameraModifier(class UCameraModifier* ModifierToRemove);
-	void RemoveCameraLensEffect(class AEmitterCameraLensEffectBase* Emitter);
-	class UCameraShake* PlayCameraShake(class UClass* ShakeClass, float Scale, TEnumAsByte<ECameraAnimPlaySpace> PlaySpace, const struct FRotator& UserPlaySpaceRot);
-	class UCameraAnimInst* PlayCameraAnim(class UCameraAnim* Anim, float Rate, float Scale, float BlendInTime, float BlendOutTime, bool bLoop, bool bRandomStartTime, float Duration, TEnumAsByte<ECameraAnimPlaySpace> PlaySpace, const struct FRotator& UserPlaySpaceRot);
-	void PhotographyCameraModify(const struct FVector& NewCameraLocation, const struct FVector& PreviousCameraLocation, const struct FVector& OriginalCameraLocation, struct FVector* ResultCameraLocation);
-	void OnPhotographySessionStart();
-	void OnPhotographySessionEnd();
-	void OnPhotographyMultiPartCaptureStart();
-	void OnPhotographyMultiPartCaptureEnd();
-	class APlayerController* GetOwningPlayerController();
-	float GetFOVAngle();
-	struct FRotator GetCameraRotation();
-	struct FVector GetCameraLocation();
-	class UCameraModifier* FindCameraModifierByClass(class UClass* ModifierClass);
-	void ClearCameraLensEffects();
-	bool BlueprintUpdateCamera(class AActor* CameraTarget, struct FVector* NewCameraLocation, struct FRotator* NewCameraRotation, float* NewCameraFOV);
-	class UCameraModifier* AddNewCameraModifier(class UClass* ModifierClass);
-	class AEmitterCameraLensEffectBase* AddCameraLensEffect(class UClass* LensEffectEmitterClass);
 };
 
 
@@ -5364,10 +5364,10 @@ public:
 	}
 
 
-	void STATIC_ScheduleLocalNotificationFromNow(int inSecondsFromNow, const struct FText& Title, const struct FText& Body, const struct FText& action, const struct FString& ActivationEvent);
+	void STATIC_ScheduleLocalNotificationFromNow(int inSecondsFromNow, const struct FText& Title, const struct FText& Body, const struct FText& Action, const struct FString& ActivationEvent);
 	void STATIC_ScheduleLocalNotificationBadgeFromNow(int inSecondsFromNow, const struct FString& ActivationEvent);
 	void STATIC_ScheduleLocalNotificationBadgeAtTime(const struct FDateTime& FireDateTime, bool LocalTime, const struct FString& ActivationEvent);
-	void STATIC_ScheduleLocalNotificationAtTime(const struct FDateTime& FireDateTime, bool LocalTime, const struct FText& Title, const struct FText& Body, const struct FText& action, const struct FString& ActivationEvent);
+	void STATIC_ScheduleLocalNotificationAtTime(const struct FDateTime& FireDateTime, bool LocalTime, const struct FText& Title, const struct FText& Body, const struct FText& Action, const struct FString& ActivationEvent);
 	void STATIC_GetLaunchNotification(bool* NotificationLaunchedApp, struct FString* ActivationEvent, int* FireDate);
 	void STATIC_ClearAllLocalNotifications();
 	void STATIC_CancelLocalNotification(const struct FString& ActivationEvent);
@@ -9870,7 +9870,7 @@ public:
 class UInterpTrackInstToggle : public UInterpTrackInst
 {
 public:
-	TEnumAsByte<ETrackToggleAction>                    action;                                                   // 0x0028(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ETrackToggleAction>                    Action;                                                   // 0x0028(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0029(0x0003) MISSED OFFSET
 	float                                              LastUpdatePosition;                                       // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      bSavedActiveState : 1;                                    // 0x0030(0x0001)
@@ -9927,7 +9927,7 @@ public:
 class UInterpTrackInstVisibility : public UInterpTrackInst
 {
 public:
-	TEnumAsByte<EVisibilityTrackAction>                action;                                                   // 0x0028(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EVisibilityTrackAction>                Action;                                                   // 0x0028(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0029(0x0003) MISSED OFFSET
 	float                                              LastUpdatePosition;                                       // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData)
 
@@ -11240,12 +11240,54 @@ public:
 
 // Class Engine.Level
 // 0x0260 (0x0288 - 0x0028)
-class ULevel
+class ULevel : public UObject
 {
 public:
-	char pad_0000[160]; //0x0000
-	TArray<class AActor*> actors; //0x00A0
-}; //Size: 0x0440
+	unsigned char                                      UnknownData00[0x98];                                      // 0x0028(0x0098) MISSED OFFSET
+	class UWorld*                                      OwningWorld;                                              // 0x00C0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UModel*                                      Model;                                                    // 0x00C8(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<class UModelComponent*>                     ModelComponents;                                          // 0x00D0(0x0010) (ExportObject, ZeroConstructor)
+	class ULevelActorContainer*                        ActorCluster;                                             // 0x00E0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, DuplicateTransient, IsPlainOldData)
+	int                                                NumTextureStreamingUnbuiltComponents;                     // 0x00E8(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                NumTextureStreamingDirtyResources;                        // 0x00EC(0x0004) (ZeroConstructor, IsPlainOldData)
+	class ALevelScriptActor*                           LevelScriptActor;                                         // 0x00F0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class ANavigationObjectBase*                       NavListStart;                                             // 0x00F8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class ANavigationObjectBase*                       NavListEnd;                                               // 0x0100(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<class UNavigationDataChunk*>                NavDataChunks;                                            // 0x0108(0x0010) (ZeroConstructor)
+	float                                              LightmapTotalSize;                                        // 0x0118(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	float                                              ShadowmapTotalSize;                                       // 0x011C(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	TArray<struct FVector>                             StaticNavigableGeometry;                                  // 0x0120(0x0010) (ZeroConstructor)
+	TArray<struct FGuid>                               StreamingTextureGuids;                                    // 0x0130(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0x90];                                      // 0x0140(0x0090) MISSED OFFSET
+	bool                                               bIsLightingScenario;                                      // 0x01D0(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x01D1(0x0003) MISSED OFFSET
+	struct FGuid                                       LevelBuildDataId;                                         // 0x01D4(0x0010) (IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x01E4(0x0004) MISSED OFFSET
+	class UMapBuildDataRegistry*                       MapBuildData;                                             // 0x01E8(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FIntVector                                  LightBuildLevelOffset;                                    // 0x01F0(0x000C) (IsPlainOldData)
+	unsigned char                                      UnknownData04 : 2;                                        // 0x01FC(0x0001)
+	unsigned char                                      bTextureStreamingRotationChanged : 1;                     // 0x01FC(0x0001)
+	unsigned char                                      bStaticComponentsRegisteredInStreamingManager : 1;        // 0x01FC(0x0001) (Transient, DuplicateTransient)
+	unsigned char                                      bIsVisible : 1;                                           // 0x01FC(0x0001) (Transient)
+	unsigned char                                      UnknownData05[0x4B];                                      // 0x01FD(0x004B) MISSED OFFSET
+	class AWorldSettings*                              WorldSettings;                                            // 0x0248(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x8];                                       // 0x0250(0x0008) MISSED OFFSET
+	TArray<class UAssetUserData*>                      AssetUserData;                                            // 0x0258(0x0010) (ExportObject, ZeroConstructor)
+	unsigned char                                      UnknownData07[0x10];                                      // 0x0268(0x0010) MISSED OFFSET
+	TArray<struct FReplicatedStaticActorDestructionInfo> DestroyedReplicatedStaticActors;                          // 0x0278(0x0010) (ZeroConstructor)
+
+	TArray<class AActor*> GetActors()
+	{
+		return *(TArray<class AActor*>*)((uintptr_t)this + 0xA0);
+	}
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Engine.Level");
+		return ptr;
+	}
+
+};
 
 
 // Class Engine.LevelActorContainer

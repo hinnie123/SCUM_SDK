@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Christmas_Ball_03.Christmas_Ball_03_C
-// 0x0000 (0x0790 - 0x0790)
+// 0x0000 (0x0830 - 0x0830)
 class AChristmas_Ball_03_C : public AEquipmentItem
 {
 public:

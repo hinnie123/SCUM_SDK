@@ -12,6 +12,48 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function UI_DialogueContainerWidget.UI_DialogueContainerWidget_C.GetHideAvatarAnimation
+// (Event, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class UWidgetAnimation*        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UWidgetAnimation* UUI_DialogueContainerWidget_C::GetHideAvatarAnimation()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_DialogueContainerWidget.UI_DialogueContainerWidget_C.GetHideAvatarAnimation");
+
+	UUI_DialogueContainerWidget_C_GetHideAvatarAnimation_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
+// Function UI_DialogueContainerWidget.UI_DialogueContainerWidget_C.GetShowAvatarAnimation
+// (Event, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class UWidgetAnimation*        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UWidgetAnimation* UUI_DialogueContainerWidget_C::GetShowAvatarAnimation()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_DialogueContainerWidget.UI_DialogueContainerWidget_C.GetShowAvatarAnimation");
+
+	UUI_DialogueContainerWidget_C_GetShowAvatarAnimation_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
 // Function UI_DialogueContainerWidget.UI_DialogueContainerWidget_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
@@ -19,11 +61,11 @@ void UUI_DialogueContainerWidget_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_DialogueContainerWidget.UI_DialogueContainerWidget_C.Construct");
 
-	UUI_DialogueContainerWidget_C_Construct_Params params;
+	UUI_DialogueContainerWidget_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -39,67 +81,13 @@ void UUI_DialogueContainerWidget_C::Tick(struct FGeometry* MyGeometry, float* In
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_DialogueContainerWidget.UI_DialogueContainerWidget_C.Tick");
 
-	UUI_DialogueContainerWidget_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UUI_DialogueContainerWidget_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UI_DialogueContainerWidget.UI_DialogueContainerWidget_C.OnAnimationFinished
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// class UWidgetAnimation**       Animation                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-void UUI_DialogueContainerWidget_C::OnAnimationFinished(class UWidgetAnimation** Animation)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UI_DialogueContainerWidget.UI_DialogueContainerWidget_C.OnAnimationFinished");
-
-	UUI_DialogueContainerWidget_C_OnAnimationFinished_Params params;
-	params.Animation = Animation;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UI_DialogueContainerWidget.UI_DialogueContainerWidget_C.HideAvatarAnimation
-// (Event, Public, BlueprintEvent)
-
-void UUI_DialogueContainerWidget_C::HideAvatarAnimation()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UI_DialogueContainerWidget.UI_DialogueContainerWidget_C.HideAvatarAnimation");
-
-	UUI_DialogueContainerWidget_C_HideAvatarAnimation_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UI_DialogueContainerWidget.UI_DialogueContainerWidget_C.ShowAvatarAnimation
-// (Event, Public, BlueprintEvent)
-
-void UUI_DialogueContainerWidget_C::ShowAvatarAnimation()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UI_DialogueContainerWidget.UI_DialogueContainerWidget_C.ShowAvatarAnimation");
-
-	UUI_DialogueContainerWidget_C_ShowAvatarAnimation_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -114,12 +102,12 @@ void UUI_DialogueContainerWidget_C::ExecuteUbergraph_UI_DialogueContainerWidget(
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_DialogueContainerWidget.UI_DialogueContainerWidget_C.ExecuteUbergraph_UI_DialogueContainerWidget");
 
-	UUI_DialogueContainerWidget_C_ExecuteUbergraph_UI_DialogueContainerWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_DialogueContainerWidget_C_ExecuteUbergraph_UI_DialogueContainerWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

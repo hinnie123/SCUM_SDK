@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Beer_Waitapu.Beer_Waitapu_C
-// 0x0000 (0x08C8 - 0x08C8)
+// 0x0000 (0x0960 - 0x0960)
 class ABeer_Waitapu_C : public ADrinkItem
 {
 public:

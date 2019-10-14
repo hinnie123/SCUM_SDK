@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BasicFortification.BP_BasicFortification_C
-// 0x0000 (0x0610 - 0x0610)
+// 0x0000 (0x0620 - 0x0620)
 class UBP_BasicFortification_C : public UFortificationComponent
 {
 public:

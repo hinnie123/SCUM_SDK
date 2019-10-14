@@ -21,16 +21,16 @@ void UUI_TeammateName_C::GetName(struct FString* Name)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TeammateName.UI_TeammateName_C.GetName");
 
-	UUI_TeammateName_C_GetName_Params params;
+	UUI_TeammateName_C_GetName_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Name != nullptr)
-		*Name = params.Name;
+		*Name = fn_params.Name;
 }
 
 
@@ -43,12 +43,12 @@ void UUI_TeammateName_C::SetName(const struct FString& Name)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TeammateName.UI_TeammateName_C.SetName");
 
-	UUI_TeammateName_C_SetName_Params params;
-	params.Name = Name;
+	UUI_TeammateName_C_SetName_Params fn_params;
+	fn_params.Name = Name;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

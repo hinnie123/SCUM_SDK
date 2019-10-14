@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Lock_Item_Advanced.Lock_Item_Advanced_C
-// 0x0000 (0x0778 - 0x0778)
+// 0x0000 (0x0818 - 0x0818)
 class ALock_Item_Advanced_C : public AItem
 {
 public:

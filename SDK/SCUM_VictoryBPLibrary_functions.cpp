@@ -22,17 +22,17 @@ struct FVector UTKMathFunctionLibrary::STATIC_VectorRadiansToDegrees(const struc
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.VectorRadiansToDegrees");
 
-	UTKMathFunctionLibrary_VectorRadiansToDegrees_Params params;
-	params.RadVector = RadVector;
+	UTKMathFunctionLibrary_VectorRadiansToDegrees_Params fn_params;
+	fn_params.RadVector = RadVector;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -46,17 +46,17 @@ struct FVector UTKMathFunctionLibrary::STATIC_VectorDegreesToRadians(const struc
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.VectorDegreesToRadians");
 
-	UTKMathFunctionLibrary_VectorDegreesToRadians_Params params;
-	params.DegVector = DegVector;
+	UTKMathFunctionLibrary_VectorDegreesToRadians_Params fn_params;
+	fn_params.DegVector = DegVector;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -73,20 +73,20 @@ bool UTKMathFunctionLibrary::STATIC_SphereBoxIntersection(const struct FVector& 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.SphereBoxIntersection");
 
-	UTKMathFunctionLibrary_SphereBoxIntersection_Params params;
-	params.SphereOrigin = SphereOrigin;
-	params.SphereRadius = SphereRadius;
-	params.BoxOrigin = BoxOrigin;
-	params.BoxExtent = BoxExtent;
+	UTKMathFunctionLibrary_SphereBoxIntersection_Params fn_params;
+	fn_params.SphereOrigin = SphereOrigin;
+	fn_params.SphereRadius = SphereRadius;
+	fn_params.BoxOrigin = BoxOrigin;
+	fn_params.BoxExtent = BoxExtent;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -102,19 +102,19 @@ float UTKMathFunctionLibrary::STATIC_SignedDistancePlanePoint(const struct FVect
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.SignedDistancePlanePoint");
 
-	UTKMathFunctionLibrary_SignedDistancePlanePoint_Params params;
-	params.PlaneNormal = PlaneNormal;
-	params.planePoint = planePoint;
-	params.Point = Point;
+	UTKMathFunctionLibrary_SignedDistancePlanePoint_Params fn_params;
+	fn_params.PlaneNormal = PlaneNormal;
+	fn_params.planePoint = planePoint;
+	fn_params.Point = Point;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -129,18 +129,18 @@ struct FVector UTKMathFunctionLibrary::STATIC_SetVectorLength(const struct FVect
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.SetVectorLength");
 
-	UTKMathFunctionLibrary_SetVectorLength_Params params;
-	params.A = A;
-	params.Size = Size;
+	UTKMathFunctionLibrary_SetVectorLength_Params fn_params;
+	fn_params.A = A;
+	fn_params.Size = Size;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -155,15 +155,15 @@ void UTKMathFunctionLibrary::STATIC_SetCenterOfMassOffset(class UPrimitiveCompon
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.SetCenterOfMassOffset");
 
-	UTKMathFunctionLibrary_SetCenterOfMassOffset_Params params;
-	params.Target = Target;
-	params.Offset = Offset;
-	params.BoneName = BoneName;
+	UTKMathFunctionLibrary_SetCenterOfMassOffset_Params fn_params;
+	fn_params.Target = Target;
+	fn_params.Offset = Offset;
+	fn_params.BoneName = BoneName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -181,19 +181,19 @@ int UTKMathFunctionLibrary::STATIC_RoundToUpperMultiple(int A, int Multiple, boo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.RoundToUpperMultiple");
 
-	UTKMathFunctionLibrary_RoundToUpperMultiple_Params params;
-	params.A = A;
-	params.Multiple = Multiple;
-	params.skipSelf = skipSelf;
+	UTKMathFunctionLibrary_RoundToUpperMultiple_Params fn_params;
+	fn_params.A = A;
+	fn_params.Multiple = Multiple;
+	fn_params.skipSelf = skipSelf;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -208,18 +208,18 @@ int UTKMathFunctionLibrary::STATIC_RoundToNearestMultiple(int A, int Multiple)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.RoundToNearestMultiple");
 
-	UTKMathFunctionLibrary_RoundToNearestMultiple_Params params;
-	params.A = A;
-	params.Multiple = Multiple;
+	UTKMathFunctionLibrary_RoundToNearestMultiple_Params fn_params;
+	fn_params.A = A;
+	fn_params.Multiple = Multiple;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -235,19 +235,19 @@ int UTKMathFunctionLibrary::STATIC_RoundToLowerMultiple(int A, int Multiple, boo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.RoundToLowerMultiple");
 
-	UTKMathFunctionLibrary_RoundToLowerMultiple_Params params;
-	params.A = A;
-	params.Multiple = Multiple;
-	params.skipSelf = skipSelf;
+	UTKMathFunctionLibrary_RoundToLowerMultiple_Params fn_params;
+	fn_params.A = A;
+	fn_params.Multiple = Multiple;
+	fn_params.skipSelf = skipSelf;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -263,19 +263,19 @@ struct FVector UTKMathFunctionLibrary::STATIC_ProjectPointOnLine(const struct FV
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.ProjectPointOnLine");
 
-	UTKMathFunctionLibrary_ProjectPointOnLine_Params params;
-	params.LineOrigin = LineOrigin;
-	params.LineDirection = LineDirection;
-	params.Point = Point;
+	UTKMathFunctionLibrary_ProjectPointOnLine_Params fn_params;
+	fn_params.LineOrigin = LineOrigin;
+	fn_params.LineDirection = LineDirection;
+	fn_params.Point = Point;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -291,19 +291,19 @@ int UTKMathFunctionLibrary::STATIC_PointOnWhichSideOfLineSegment(const struct FV
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.PointOnWhichSideOfLineSegment");
 
-	UTKMathFunctionLibrary_PointOnWhichSideOfLineSegment_Params params;
-	params.LinePoint1 = LinePoint1;
-	params.LinePoint2 = LinePoint2;
-	params.Point = Point;
+	UTKMathFunctionLibrary_PointOnWhichSideOfLineSegment_Params fn_params;
+	fn_params.LinePoint1 = LinePoint1;
+	fn_params.LinePoint2 = LinePoint2;
+	fn_params.Point = Point;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -317,17 +317,17 @@ struct FVector2D UTKMathFunctionLibrary::STATIC_NegateVector2D(const struct FVec
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.NegateVector2D");
 
-	UTKMathFunctionLibrary_NegateVector2D_Params params;
-	params.A = A;
+	UTKMathFunctionLibrary_NegateVector2D_Params fn_params;
+	fn_params.A = A;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -341,17 +341,17 @@ int UTKMathFunctionLibrary::STATIC_NegateInt(int A)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.NegateInt");
 
-	UTKMathFunctionLibrary_NegateInt_Params params;
-	params.A = A;
+	UTKMathFunctionLibrary_NegateInt_Params fn_params;
+	fn_params.A = A;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -365,17 +365,17 @@ float UTKMathFunctionLibrary::STATIC_NegateFloat(float A)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.NegateFloat");
 
-	UTKMathFunctionLibrary_NegateFloat_Params params;
-	params.A = A;
+	UTKMathFunctionLibrary_NegateFloat_Params fn_params;
+	fn_params.A = A;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -393,23 +393,23 @@ bool UTKMathFunctionLibrary::STATIC_LineToLineIntersection(const struct FVector&
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.LineToLineIntersection");
 
-	UTKMathFunctionLibrary_LineToLineIntersection_Params params;
-	params.LinePoint1 = LinePoint1;
-	params.LineDir1 = LineDir1;
-	params.LinePoint2 = LinePoint2;
-	params.LineDir2 = LineDir2;
+	UTKMathFunctionLibrary_LineToLineIntersection_Params fn_params;
+	fn_params.LinePoint1 = LinePoint1;
+	fn_params.LineDir1 = LineDir1;
+	fn_params.LinePoint2 = LinePoint2;
+	fn_params.LineDir2 = LineDir2;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IntersectionPoint != nullptr)
-		*IntersectionPoint = params.IntersectionPoint;
+		*IntersectionPoint = fn_params.IntersectionPoint;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -429,27 +429,27 @@ bool UTKMathFunctionLibrary::STATIC_LineExtentBoxIntersection(const struct FBox&
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.LineExtentBoxIntersection");
 
-	UTKMathFunctionLibrary_LineExtentBoxIntersection_Params params;
-	params.inBox = inBox;
-	params.Start = Start;
-	params.End = End;
-	params.Extent = Extent;
+	UTKMathFunctionLibrary_LineExtentBoxIntersection_Params fn_params;
+	fn_params.inBox = inBox;
+	fn_params.Start = Start;
+	fn_params.End = End;
+	fn_params.Extent = Extent;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (HitLocation != nullptr)
-		*HitLocation = params.HitLocation;
+		*HitLocation = fn_params.HitLocation;
 	if (HitNormal != nullptr)
-		*HitNormal = params.HitNormal;
+		*HitNormal = fn_params.HitNormal;
 	if (HitTime != nullptr)
-		*HitTime = params.HitTime;
+		*HitTime = fn_params.HitTime;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -463,17 +463,17 @@ bool UTKMathFunctionLibrary::STATIC_IsPowerOfTwo(int X)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.IsPowerOfTwo");
 
-	UTKMathFunctionLibrary_IsPowerOfTwo_Params params;
-	params.X = X;
+	UTKMathFunctionLibrary_IsPowerOfTwo_Params fn_params;
+	fn_params.X = X;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -489,19 +489,19 @@ bool UTKMathFunctionLibrary::STATIC_IsPointInsideBox(const struct FVector& Point
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.IsPointInsideBox");
 
-	UTKMathFunctionLibrary_IsPointInsideBox_Params params;
-	params.Point = Point;
-	params.BoxOrigin = BoxOrigin;
-	params.BoxExtent = BoxExtent;
+	UTKMathFunctionLibrary_IsPointInsideBox_Params fn_params;
+	fn_params.Point = Point;
+	fn_params.BoxOrigin = BoxOrigin;
+	fn_params.BoxExtent = BoxExtent;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -516,18 +516,18 @@ bool UTKMathFunctionLibrary::STATIC_IsMultipleOf(int A, int Multiple)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.IsMultipleOf");
 
-	UTKMathFunctionLibrary_IsMultipleOf_Params params;
-	params.A = A;
-	params.Multiple = Multiple;
+	UTKMathFunctionLibrary_IsMultipleOf_Params fn_params;
+	fn_params.A = A;
+	fn_params.Multiple = Multiple;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -545,21 +545,21 @@ bool UTKMathFunctionLibrary::STATIC_IsLineInsideSphere(const struct FVector& Lin
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.IsLineInsideSphere");
 
-	UTKMathFunctionLibrary_IsLineInsideSphere_Params params;
-	params.LineStart = LineStart;
-	params.LineDir = LineDir;
-	params.LineLength = LineLength;
-	params.SphereOrigin = SphereOrigin;
-	params.SphereRadius = SphereRadius;
+	UTKMathFunctionLibrary_IsLineInsideSphere_Params fn_params;
+	fn_params.LineStart = LineStart;
+	fn_params.LineDir = LineDir;
+	fn_params.LineLength = LineLength;
+	fn_params.SphereOrigin = SphereOrigin;
+	fn_params.SphereRadius = SphereRadius;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -573,17 +573,17 @@ bool UTKMathFunctionLibrary::STATIC_IsEvenNumber(float A)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.IsEvenNumber");
 
-	UTKMathFunctionLibrary_IsEvenNumber_Params params;
-	params.A = A;
+	UTKMathFunctionLibrary_IsEvenNumber_Params fn_params;
+	fn_params.A = A;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -598,18 +598,18 @@ struct FVector UTKMathFunctionLibrary::STATIC_GridSnap(const struct FVector& A, 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.GridSnap");
 
-	UTKMathFunctionLibrary_GridSnap_Params params;
-	params.A = A;
-	params.Grid = Grid;
+	UTKMathFunctionLibrary_GridSnap_Params fn_params;
+	fn_params.A = A;
+	fn_params.Grid = Grid;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -626,20 +626,20 @@ struct FVector UTKMathFunctionLibrary::STATIC_GetVelocityAtPoint(class UPrimitiv
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.GetVelocityAtPoint");
 
-	UTKMathFunctionLibrary_GetVelocityAtPoint_Params params;
-	params.Target = Target;
-	params.Point = Point;
-	params.BoneName = BoneName;
-	params.DrawDebugInfo = DrawDebugInfo;
+	UTKMathFunctionLibrary_GetVelocityAtPoint_Params fn_params;
+	fn_params.Target = Target;
+	fn_params.Point = Point;
+	fn_params.BoneName = BoneName;
+	fn_params.DrawDebugInfo = DrawDebugInfo;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -653,17 +653,17 @@ int UTKMathFunctionLibrary::STATIC_GetConsoleVariableInt(const struct FString& V
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.GetConsoleVariableInt");
 
-	UTKMathFunctionLibrary_GetConsoleVariableInt_Params params;
-	params.VariableName = VariableName;
+	UTKMathFunctionLibrary_GetConsoleVariableInt_Params fn_params;
+	fn_params.VariableName = VariableName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -677,17 +677,17 @@ float UTKMathFunctionLibrary::STATIC_GetConsoleVariableFloat(const struct FStrin
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.GetConsoleVariableFloat");
 
-	UTKMathFunctionLibrary_GetConsoleVariableFloat_Params params;
-	params.VariableName = VariableName;
+	UTKMathFunctionLibrary_GetConsoleVariableFloat_Params fn_params;
+	fn_params.VariableName = VariableName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -702,18 +702,18 @@ float UTKMathFunctionLibrary::STATIC_ConvertPhysicsLinearVelocity(const struct F
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.ConvertPhysicsLinearVelocity");
 
-	UTKMathFunctionLibrary_ConvertPhysicsLinearVelocity_Params params;
-	params.Velocity = Velocity;
-	params.SpeedUnit = SpeedUnit;
+	UTKMathFunctionLibrary_ConvertPhysicsLinearVelocity_Params fn_params;
+	fn_params.Velocity = Velocity;
+	fn_params.SpeedUnit = SpeedUnit;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -730,21 +730,21 @@ void UTKMathFunctionLibrary::STATIC_ConvertAnchorToAnchor(class UObject* WorldCo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.ConvertAnchorToAnchor");
 
-	UTKMathFunctionLibrary_ConvertAnchorToAnchor_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.CurrentAnchor = CurrentAnchor;
-	params.Offsets = Offsets;
-	params.TargetAnchor = TargetAnchor;
+	UTKMathFunctionLibrary_ConvertAnchorToAnchor_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.CurrentAnchor = CurrentAnchor;
+	fn_params.Offsets = Offsets;
+	fn_params.TargetAnchor = TargetAnchor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (ConvertedOffsets != nullptr)
-		*ConvertedOffsets = params.ConvertedOffsets;
+		*ConvertedOffsets = fn_params.ConvertedOffsets;
 }
 
 
@@ -763,25 +763,25 @@ bool UTKMathFunctionLibrary::STATIC_ClosestPointsOnTwoLines(const struct FVector
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.ClosestPointsOnTwoLines");
 
-	UTKMathFunctionLibrary_ClosestPointsOnTwoLines_Params params;
-	params.LinePoint1 = LinePoint1;
-	params.lineVec1 = lineVec1;
-	params.LinePoint2 = LinePoint2;
-	params.lineVec2 = lineVec2;
+	UTKMathFunctionLibrary_ClosestPointsOnTwoLines_Params fn_params;
+	fn_params.LinePoint1 = LinePoint1;
+	fn_params.lineVec1 = lineVec1;
+	fn_params.LinePoint2 = LinePoint2;
+	fn_params.lineVec2 = lineVec2;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (closestPointLine1 != nullptr)
-		*closestPointLine1 = params.closestPointLine1;
+		*closestPointLine1 = fn_params.closestPointLine1;
 	if (closestPointLine2 != nullptr)
-		*closestPointLine2 = params.closestPointLine2;
+		*closestPointLine2 = fn_params.closestPointLine2;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -799,23 +799,23 @@ void UTKMathFunctionLibrary::STATIC_ClosestPointsOfLineSegments(const struct FVe
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.ClosestPointsOfLineSegments");
 
-	UTKMathFunctionLibrary_ClosestPointsOfLineSegments_Params params;
-	params.Line1Start = Line1Start;
-	params.Line1End = Line1End;
-	params.Line2Start = Line2Start;
-	params.Line2End = Line2End;
+	UTKMathFunctionLibrary_ClosestPointsOfLineSegments_Params fn_params;
+	fn_params.Line1Start = Line1Start;
+	fn_params.Line1End = Line1End;
+	fn_params.Line2Start = Line2Start;
+	fn_params.Line2End = Line2End;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (LinePoint1 != nullptr)
-		*LinePoint1 = params.LinePoint1;
+		*LinePoint1 = fn_params.LinePoint1;
 	if (LinePoint2 != nullptr)
-		*LinePoint2 = params.LinePoint2;
+		*LinePoint2 = fn_params.LinePoint2;
 }
 
 
@@ -832,20 +832,20 @@ struct FVector UTKMathFunctionLibrary::STATIC_ClosestPointOnSphereToLine(const s
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.ClosestPointOnSphereToLine");
 
-	UTKMathFunctionLibrary_ClosestPointOnSphereToLine_Params params;
-	params.SphereOrigin = SphereOrigin;
-	params.SphereRadius = SphereRadius;
-	params.LineOrigin = LineOrigin;
-	params.LineDir = LineDir;
+	UTKMathFunctionLibrary_ClosestPointOnSphereToLine_Params fn_params;
+	fn_params.SphereOrigin = SphereOrigin;
+	fn_params.SphereRadius = SphereRadius;
+	fn_params.LineOrigin = LineOrigin;
+	fn_params.LineDir = LineDir;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -861,19 +861,19 @@ struct FVector UTKMathFunctionLibrary::STATIC_ClosestPointOnLineSeqment(const st
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.ClosestPointOnLineSeqment");
 
-	UTKMathFunctionLibrary_ClosestPointOnLineSeqment_Params params;
-	params.Point = Point;
-	params.LineStart = LineStart;
-	params.LineEnd = LineEnd;
+	UTKMathFunctionLibrary_ClosestPointOnLineSeqment_Params fn_params;
+	fn_params.Point = Point;
+	fn_params.LineStart = LineStart;
+	fn_params.LineEnd = LineEnd;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -890,20 +890,20 @@ bool UTKMathFunctionLibrary::STATIC_AreLineSegmentsCrossing(const struct FVector
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.TKMathFunctionLibrary.AreLineSegmentsCrossing");
 
-	UTKMathFunctionLibrary_AreLineSegmentsCrossing_Params params;
-	params.pointA1 = pointA1;
-	params.pointA2 = pointA2;
-	params.pointB1 = pointB1;
-	params.pointB2 = pointB2;
+	UTKMathFunctionLibrary_AreLineSegmentsCrossing_Params fn_params;
+	fn_params.pointA1 = pointA1;
+	fn_params.pointA2 = pointA2;
+	fn_params.pointB1 = pointB1;
+	fn_params.pointB2 = pointB2;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -917,17 +917,17 @@ bool UVictoryBPFunctionLibrary::STATIC_WorldType__InPIEWorld(class UObject* Worl
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.WorldType__InPIEWorld");
 
-	UVictoryBPFunctionLibrary_WorldType__InPIEWorld_Params params;
-	params.WorldContextObject = WorldContextObject;
+	UVictoryBPFunctionLibrary_WorldType__InPIEWorld_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -941,17 +941,17 @@ bool UVictoryBPFunctionLibrary::STATIC_WorldType__InGameInstanceWorld(class UObj
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.WorldType__InGameInstanceWorld");
 
-	UVictoryBPFunctionLibrary_WorldType__InGameInstanceWorld_Params params;
-	params.WorldContextObject = WorldContextObject;
+	UVictoryBPFunctionLibrary_WorldType__InGameInstanceWorld_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -965,17 +965,17 @@ bool UVictoryBPFunctionLibrary::STATIC_WorldType__InEditorWorld(class UObject* W
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.WorldType__InEditorWorld");
 
-	UVictoryBPFunctionLibrary_WorldType__InEditorWorld_Params params;
-	params.WorldContextObject = WorldContextObject;
+	UVictoryBPFunctionLibrary_WorldType__InEditorWorld_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -990,18 +990,18 @@ bool UVictoryBPFunctionLibrary::STATIC_WidgetIsChildOf(class UWidget* ChildWidge
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.WidgetIsChildOf");
 
-	UVictoryBPFunctionLibrary_WidgetIsChildOf_Params params;
-	params.ChildWidget = ChildWidget;
-	params.PossibleParent = PossibleParent;
+	UVictoryBPFunctionLibrary_WidgetIsChildOf_Params fn_params;
+	fn_params.ChildWidget = ChildWidget;
+	fn_params.PossibleParent = PossibleParent;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1016,18 +1016,18 @@ class UUserWidget* UVictoryBPFunctionLibrary::STATIC_WidgetGetParentOfClass(clas
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.WidgetGetParentOfClass");
 
-	UVictoryBPFunctionLibrary_WidgetGetParentOfClass_Params params;
-	params.ChildWidget = ChildWidget;
-	params.WidgetClass = WidgetClass;
+	UVictoryBPFunctionLibrary_WidgetGetParentOfClass_Params fn_params;
+	fn_params.ChildWidget = ChildWidget;
+	fn_params.WidgetClass = WidgetClass;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1043,20 +1043,20 @@ void UVictoryBPFunctionLibrary::STATIC_WidgetGetChildrenOfClass(class UWidget* P
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.WidgetGetChildrenOfClass");
 
-	UVictoryBPFunctionLibrary_WidgetGetChildrenOfClass_Params params;
-	params.ParentWidget = ParentWidget;
-	params.WidgetClass = WidgetClass;
-	params.bImmediateOnly = bImmediateOnly;
+	UVictoryBPFunctionLibrary_WidgetGetChildrenOfClass_Params fn_params;
+	fn_params.ParentWidget = ParentWidget;
+	fn_params.WidgetClass = WidgetClass;
+	fn_params.bImmediateOnly = bImmediateOnly;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (ChildWidgets != nullptr)
-		*ChildWidgets = params.ChildWidgets;
+		*ChildWidgets = fn_params.ChildWidgets;
 }
 
 
@@ -1071,19 +1071,19 @@ void UVictoryBPFunctionLibrary::STATIC_Visibility__GetRenderedActors(class UObje
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Visibility__GetRenderedActors");
 
-	UVictoryBPFunctionLibrary_Visibility__GetRenderedActors_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.MinRecentTime = MinRecentTime;
+	UVictoryBPFunctionLibrary_Visibility__GetRenderedActors_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.MinRecentTime = MinRecentTime;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (CurrentlyRenderedActors != nullptr)
-		*CurrentlyRenderedActors = params.CurrentlyRenderedActors;
+		*CurrentlyRenderedActors = fn_params.CurrentlyRenderedActors;
 }
 
 
@@ -1098,19 +1098,19 @@ void UVictoryBPFunctionLibrary::STATIC_Visibility__GetNotRenderedActors(class UO
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Visibility__GetNotRenderedActors");
 
-	UVictoryBPFunctionLibrary_Visibility__GetNotRenderedActors_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.MinRecentTime = MinRecentTime;
+	UVictoryBPFunctionLibrary_Visibility__GetNotRenderedActors_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.MinRecentTime = MinRecentTime;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (CurrentlyNotRenderedActors != nullptr)
-		*CurrentlyNotRenderedActors = params.CurrentlyNotRenderedActors;
+		*CurrentlyNotRenderedActors = fn_params.CurrentlyNotRenderedActors;
 }
 
 
@@ -1127,23 +1127,23 @@ bool UVictoryBPFunctionLibrary::STATIC_ViewportPositionDeproject(class UObject* 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.ViewportPositionDeproject");
 
-	UVictoryBPFunctionLibrary_ViewportPositionDeproject_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.ViewportPosition = ViewportPosition;
+	UVictoryBPFunctionLibrary_ViewportPositionDeproject_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.ViewportPosition = ViewportPosition;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutWorldOrigin != nullptr)
-		*OutWorldOrigin = params.OutWorldOrigin;
+		*OutWorldOrigin = fn_params.OutWorldOrigin;
 	if (OutWorldDirection != nullptr)
-		*OutWorldDirection = params.OutWorldDirection;
+		*OutWorldDirection = fn_params.OutWorldDirection;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1159,19 +1159,19 @@ bool UVictoryBPFunctionLibrary::STATIC_Viewport__SetMousePosition(class APlayerC
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Viewport__SetMousePosition");
 
-	UVictoryBPFunctionLibrary_Viewport__SetMousePosition_Params params;
-	params.ThePC = ThePC;
-	params.PosX = PosX;
-	params.PosY = PosY;
+	UVictoryBPFunctionLibrary_Viewport__SetMousePosition_Params fn_params;
+	fn_params.ThePC = ThePC;
+	fn_params.PosX = PosX;
+	fn_params.PosY = PosY;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1187,22 +1187,22 @@ bool UVictoryBPFunctionLibrary::STATIC_Viewport__GetMousePosition(class APlayerC
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Viewport__GetMousePosition");
 
-	UVictoryBPFunctionLibrary_Viewport__GetMousePosition_Params params;
-	params.ThePC = ThePC;
+	UVictoryBPFunctionLibrary_Viewport__GetMousePosition_Params fn_params;
+	fn_params.ThePC = ThePC;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (PosX != nullptr)
-		*PosX = params.PosX;
+		*PosX = fn_params.PosX;
 	if (PosY != nullptr)
-		*PosY = params.PosY;
+		*PosY = fn_params.PosY;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1218,22 +1218,22 @@ bool UVictoryBPFunctionLibrary::STATIC_Viewport__GetCenterOfViewport(class APlay
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Viewport__GetCenterOfViewport");
 
-	UVictoryBPFunctionLibrary_Viewport__GetCenterOfViewport_Params params;
-	params.ThePC = ThePC;
+	UVictoryBPFunctionLibrary_Viewport__GetCenterOfViewport_Params fn_params;
+	fn_params.ThePC = ThePC;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (PosX != nullptr)
-		*PosX = params.PosX;
+		*PosX = fn_params.PosX;
 	if (PosY != nullptr)
-		*PosY = params.PosY;
+		*PosY = fn_params.PosY;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1248,18 +1248,18 @@ bool UVictoryBPFunctionLibrary::STATIC_Viewport__EnableWorldRendering(class APla
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Viewport__EnableWorldRendering");
 
-	UVictoryBPFunctionLibrary_Viewport__EnableWorldRendering_Params params;
-	params.ThePC = ThePC;
-	params.RenderTheWorld = RenderTheWorld;
+	UVictoryBPFunctionLibrary_Viewport__EnableWorldRendering_Params fn_params;
+	fn_params.ThePC = ThePC;
+	fn_params.RenderTheWorld = RenderTheWorld;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1274,18 +1274,18 @@ bool UVictoryBPFunctionLibrary::STATIC_VictorySoundVolumeChange(class USoundClas
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictorySoundVolumeChange");
 
-	UVictoryBPFunctionLibrary_VictorySoundVolumeChange_Params params;
-	params.SoundClassObject = SoundClassObject;
-	params.NewVolume = NewVolume;
+	UVictoryBPFunctionLibrary_VictorySoundVolumeChange_Params fn_params;
+	fn_params.SoundClassObject = SoundClassObject;
+	fn_params.NewVolume = NewVolume;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1299,19 +1299,19 @@ void UVictoryBPFunctionLibrary::STATIC_VictorySortIntArray(TArray<int>* IntArray
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictorySortIntArray");
 
-	UVictoryBPFunctionLibrary_VictorySortIntArray_Params params;
+	UVictoryBPFunctionLibrary_VictorySortIntArray_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IntArray != nullptr)
-		*IntArray = params.IntArray;
+		*IntArray = fn_params.IntArray;
 	if (IntArrayRef != nullptr)
-		*IntArrayRef = params.IntArrayRef;
+		*IntArrayRef = fn_params.IntArrayRef;
 }
 
 
@@ -1325,19 +1325,19 @@ void UVictoryBPFunctionLibrary::STATIC_VictorySortFloatArray(TArray<float>* Floa
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictorySortFloatArray");
 
-	UVictoryBPFunctionLibrary_VictorySortFloatArray_Params params;
+	UVictoryBPFunctionLibrary_VictorySortFloatArray_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (FloatArray != nullptr)
-		*FloatArray = params.FloatArray;
+		*FloatArray = fn_params.FloatArray;
 	if (FloatArrayRef != nullptr)
-		*FloatArrayRef = params.FloatArrayRef;
+		*FloatArrayRef = fn_params.FloatArrayRef;
 }
 
 
@@ -1350,13 +1350,13 @@ void UVictoryBPFunctionLibrary::STATIC_VictorySimulateMouseWheel(float Delta)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictorySimulateMouseWheel");
 
-	UVictoryBPFunctionLibrary_VictorySimulateMouseWheel_Params params;
-	params.Delta = Delta;
+	UVictoryBPFunctionLibrary_VictorySimulateMouseWheel_Params fn_params;
+	fn_params.Delta = Delta;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1373,15 +1373,15 @@ void UVictoryBPFunctionLibrary::STATIC_VictorySimulateKeyPress(class APlayerCont
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictorySimulateKeyPress");
 
-	UVictoryBPFunctionLibrary_VictorySimulateKeyPress_Params params;
-	params.ThePC = ThePC;
-	params.Key = Key;
-	params.EventType = EventType;
+	UVictoryBPFunctionLibrary_VictorySimulateKeyPress_Params fn_params;
+	fn_params.ThePC = ThePC;
+	fn_params.Key = Key;
+	fn_params.EventType = EventType;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1398,15 +1398,15 @@ void UVictoryBPFunctionLibrary::STATIC_VictorySetCustomConfigVar_Vector2D(const 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictorySetCustomConfigVar_Vector2D");
 
-	UVictoryBPFunctionLibrary_VictorySetCustomConfigVar_Vector2D_Params params;
-	params.SectionName = SectionName;
-	params.VariableName = VariableName;
-	params.Value = Value;
+	UVictoryBPFunctionLibrary_VictorySetCustomConfigVar_Vector2D_Params fn_params;
+	fn_params.SectionName = SectionName;
+	fn_params.VariableName = VariableName;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1423,15 +1423,15 @@ void UVictoryBPFunctionLibrary::STATIC_VictorySetCustomConfigVar_Vector(const st
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictorySetCustomConfigVar_Vector");
 
-	UVictoryBPFunctionLibrary_VictorySetCustomConfigVar_Vector_Params params;
-	params.SectionName = SectionName;
-	params.VariableName = VariableName;
-	params.Value = Value;
+	UVictoryBPFunctionLibrary_VictorySetCustomConfigVar_Vector_Params fn_params;
+	fn_params.SectionName = SectionName;
+	fn_params.VariableName = VariableName;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1448,15 +1448,15 @@ void UVictoryBPFunctionLibrary::STATIC_VictorySetCustomConfigVar_String(const st
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictorySetCustomConfigVar_String");
 
-	UVictoryBPFunctionLibrary_VictorySetCustomConfigVar_String_Params params;
-	params.SectionName = SectionName;
-	params.VariableName = VariableName;
-	params.Value = Value;
+	UVictoryBPFunctionLibrary_VictorySetCustomConfigVar_String_Params fn_params;
+	fn_params.SectionName = SectionName;
+	fn_params.VariableName = VariableName;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1473,15 +1473,15 @@ void UVictoryBPFunctionLibrary::STATIC_VictorySetCustomConfigVar_Rotator(const s
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictorySetCustomConfigVar_Rotator");
 
-	UVictoryBPFunctionLibrary_VictorySetCustomConfigVar_Rotator_Params params;
-	params.SectionName = SectionName;
-	params.VariableName = VariableName;
-	params.Value = Value;
+	UVictoryBPFunctionLibrary_VictorySetCustomConfigVar_Rotator_Params fn_params;
+	fn_params.SectionName = SectionName;
+	fn_params.VariableName = VariableName;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1498,15 +1498,15 @@ void UVictoryBPFunctionLibrary::STATIC_VictorySetCustomConfigVar_Int(const struc
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictorySetCustomConfigVar_Int");
 
-	UVictoryBPFunctionLibrary_VictorySetCustomConfigVar_Int_Params params;
-	params.SectionName = SectionName;
-	params.VariableName = VariableName;
-	params.Value = Value;
+	UVictoryBPFunctionLibrary_VictorySetCustomConfigVar_Int_Params fn_params;
+	fn_params.SectionName = SectionName;
+	fn_params.VariableName = VariableName;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1523,15 +1523,15 @@ void UVictoryBPFunctionLibrary::STATIC_VictorySetCustomConfigVar_Float(const str
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictorySetCustomConfigVar_Float");
 
-	UVictoryBPFunctionLibrary_VictorySetCustomConfigVar_Float_Params params;
-	params.SectionName = SectionName;
-	params.VariableName = VariableName;
-	params.Value = Value;
+	UVictoryBPFunctionLibrary_VictorySetCustomConfigVar_Float_Params fn_params;
+	fn_params.SectionName = SectionName;
+	fn_params.VariableName = VariableName;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1548,15 +1548,15 @@ void UVictoryBPFunctionLibrary::STATIC_VictorySetCustomConfigVar_Color(const str
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictorySetCustomConfigVar_Color");
 
-	UVictoryBPFunctionLibrary_VictorySetCustomConfigVar_Color_Params params;
-	params.SectionName = SectionName;
-	params.VariableName = VariableName;
-	params.Value = Value;
+	UVictoryBPFunctionLibrary_VictorySetCustomConfigVar_Color_Params fn_params;
+	fn_params.SectionName = SectionName;
+	fn_params.VariableName = VariableName;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1573,15 +1573,15 @@ void UVictoryBPFunctionLibrary::STATIC_VictorySetCustomConfigVar_Bool(const stru
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictorySetCustomConfigVar_Bool");
 
-	UVictoryBPFunctionLibrary_VictorySetCustomConfigVar_Bool_Params params;
-	params.SectionName = SectionName;
-	params.VariableName = VariableName;
-	params.Value = Value;
+	UVictoryBPFunctionLibrary_VictorySetCustomConfigVar_Bool_Params fn_params;
+	fn_params.SectionName = SectionName;
+	fn_params.VariableName = VariableName;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1596,13 +1596,13 @@ void UVictoryBPFunctionLibrary::STATIC_VictoryRemoveAxisKeyBind(const struct FVi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryRemoveAxisKeyBind");
 
-	UVictoryBPFunctionLibrary_VictoryRemoveAxisKeyBind_Params params;
-	params.ToRemove = ToRemove;
+	UVictoryBPFunctionLibrary_VictoryRemoveAxisKeyBind_Params fn_params;
+	fn_params.ToRemove = ToRemove;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1617,13 +1617,13 @@ void UVictoryBPFunctionLibrary::STATIC_VictoryRemoveActionKeyBind(const struct F
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryRemoveActionKeyBind");
 
-	UVictoryBPFunctionLibrary_VictoryRemoveActionKeyBind_Params params;
-	params.ToRemove = ToRemove;
+	UVictoryBPFunctionLibrary_VictoryRemoveActionKeyBind_Params fn_params;
+	fn_params.ToRemove = ToRemove;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1640,18 +1640,18 @@ bool UVictoryBPFunctionLibrary::STATIC_VictoryReBindAxisKey(const struct FVictor
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryReBindAxisKey");
 
-	UVictoryBPFunctionLibrary_VictoryReBindAxisKey_Params params;
-	params.Original = Original;
-	params.NewBinding = NewBinding;
+	UVictoryBPFunctionLibrary_VictoryReBindAxisKey_Params fn_params;
+	fn_params.Original = Original;
+	fn_params.NewBinding = NewBinding;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1666,18 +1666,18 @@ bool UVictoryBPFunctionLibrary::STATIC_VictoryReBindActionKey(const struct FVict
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryReBindActionKey");
 
-	UVictoryBPFunctionLibrary_VictoryReBindActionKey_Params params;
-	params.Original = Original;
-	params.NewBinding = NewBinding;
+	UVictoryBPFunctionLibrary_VictoryReBindActionKey_Params fn_params;
+	fn_params.Original = Original;
+	fn_params.NewBinding = NewBinding;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1692,18 +1692,18 @@ bool UVictoryBPFunctionLibrary::STATIC_VictoryPhysics_UpdateAngularDamping(class
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryPhysics_UpdateAngularDamping");
 
-	UVictoryBPFunctionLibrary_VictoryPhysics_UpdateAngularDamping_Params params;
-	params.CompToUpdate = CompToUpdate;
-	params.NewAngularDamping = NewAngularDamping;
+	UVictoryBPFunctionLibrary_VictoryPhysics_UpdateAngularDamping_Params fn_params;
+	fn_params.CompToUpdate = CompToUpdate;
+	fn_params.NewAngularDamping = NewAngularDamping;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1716,16 +1716,16 @@ struct FString UVictoryBPFunctionLibrary::STATIC_VictoryPaths__WindowsNoEditorDi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryPaths__WindowsNoEditorDir");
 
-	UVictoryBPFunctionLibrary_VictoryPaths__WindowsNoEditorDir_Params params;
+	UVictoryBPFunctionLibrary_VictoryPaths__WindowsNoEditorDir_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1738,16 +1738,16 @@ struct FString UVictoryBPFunctionLibrary::STATIC_VictoryPaths__Win64Dir_BinaryLo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryPaths__Win64Dir_BinaryLocation");
 
-	UVictoryBPFunctionLibrary_VictoryPaths__Win64Dir_BinaryLocation_Params params;
+	UVictoryBPFunctionLibrary_VictoryPaths__Win64Dir_BinaryLocation_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1760,16 +1760,16 @@ struct FString UVictoryBPFunctionLibrary::STATIC_VictoryPaths__ScreenShotsDir()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryPaths__ScreenShotsDir");
 
-	UVictoryBPFunctionLibrary_VictoryPaths__ScreenShotsDir_Params params;
+	UVictoryBPFunctionLibrary_VictoryPaths__ScreenShotsDir_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1782,16 +1782,16 @@ struct FString UVictoryBPFunctionLibrary::STATIC_VictoryPaths__SavedDir()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryPaths__SavedDir");
 
-	UVictoryBPFunctionLibrary_VictoryPaths__SavedDir_Params params;
+	UVictoryBPFunctionLibrary_VictoryPaths__SavedDir_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1804,16 +1804,16 @@ struct FString UVictoryBPFunctionLibrary::STATIC_VictoryPaths__LogsDir()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryPaths__LogsDir");
 
-	UVictoryBPFunctionLibrary_VictoryPaths__LogsDir_Params params;
+	UVictoryBPFunctionLibrary_VictoryPaths__LogsDir_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1826,16 +1826,16 @@ struct FString UVictoryBPFunctionLibrary::STATIC_VictoryPaths__GameRootDirectory
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryPaths__GameRootDirectory");
 
-	UVictoryBPFunctionLibrary_VictoryPaths__GameRootDirectory_Params params;
+	UVictoryBPFunctionLibrary_VictoryPaths__GameRootDirectory_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1848,16 +1848,16 @@ struct FString UVictoryBPFunctionLibrary::STATIC_VictoryPaths__ConfigDir()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryPaths__ConfigDir");
 
-	UVictoryBPFunctionLibrary_VictoryPaths__ConfigDir_Params params;
+	UVictoryBPFunctionLibrary_VictoryPaths__ConfigDir_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1877,25 +1877,25 @@ class ULevelStreaming* UVictoryBPFunctionLibrary::STATIC_VictoryLoadLevelInstanc
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryLoadLevelInstance");
 
-	UVictoryBPFunctionLibrary_VictoryLoadLevelInstance_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.MapFolderOffOfContent = MapFolderOffOfContent;
-	params.LevelName = LevelName;
-	params.InstanceNumber = InstanceNumber;
-	params.Location = Location;
-	params.Rotation = Rotation;
+	UVictoryBPFunctionLibrary_VictoryLoadLevelInstance_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.MapFolderOffOfContent = MapFolderOffOfContent;
+	fn_params.LevelName = LevelName;
+	fn_params.InstanceNumber = InstanceNumber;
+	fn_params.Location = Location;
+	fn_params.Rotation = Rotation;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Success != nullptr)
-		*Success = params.Success;
+		*Success = fn_params.Success;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1909,18 +1909,18 @@ void UVictoryBPFunctionLibrary::STATIC_VictoryISM_GetAllVictoryISMActors(class U
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryISM_GetAllVictoryISMActors");
 
-	UVictoryBPFunctionLibrary_VictoryISM_GetAllVictoryISMActors_Params params;
-	params.WorldContextObject = WorldContextObject;
+	UVictoryBPFunctionLibrary_VictoryISM_GetAllVictoryISMActors_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Out != nullptr)
-		*Out = params.Out;
+		*Out = fn_params.Out;
 }
 
 
@@ -1937,21 +1937,21 @@ void UVictoryBPFunctionLibrary::STATIC_VictoryISM_ConvertToVictoryISMActors(clas
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryISM_ConvertToVictoryISMActors");
 
-	UVictoryBPFunctionLibrary_VictoryISM_ConvertToVictoryISMActors_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.ActorClass = ActorClass;
-	params.DestroyOriginalActors = DestroyOriginalActors;
-	params.MinCountToCreateISM = MinCountToCreateISM;
+	UVictoryBPFunctionLibrary_VictoryISM_ConvertToVictoryISMActors_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.ActorClass = ActorClass;
+	fn_params.DestroyOriginalActors = DestroyOriginalActors;
+	fn_params.MinCountToCreateISM = MinCountToCreateISM;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (CreatedISMActors != nullptr)
-		*CreatedISMActors = params.CreatedISMActors;
+		*CreatedISMActors = fn_params.CreatedISMActors;
 }
 
 
@@ -1965,17 +1965,17 @@ bool UVictoryBPFunctionLibrary::STATIC_VictoryIsApplicationRunning(int ProcessId
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryIsApplicationRunning");
 
-	UVictoryBPFunctionLibrary_VictoryIsApplicationRunning_Params params;
-	params.ProcessId = ProcessId;
+	UVictoryBPFunctionLibrary_VictoryIsApplicationRunning_Params fn_params;
+	fn_params.ProcessId = ProcessId;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1990,20 +1990,20 @@ void UVictoryBPFunctionLibrary::STATIC_VictoryIntPlusEquals(int Add, int* Int, i
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryIntPlusEquals");
 
-	UVictoryBPFunctionLibrary_VictoryIntPlusEquals_Params params;
-	params.Add = Add;
+	UVictoryBPFunctionLibrary_VictoryIntPlusEquals_Params fn_params;
+	fn_params.Add = Add;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Int != nullptr)
-		*Int = params.Int;
+		*Int = fn_params.Int;
 	if (IntOut != nullptr)
-		*IntOut = params.IntOut;
+		*IntOut = fn_params.IntOut;
 }
 
 
@@ -2018,20 +2018,20 @@ void UVictoryBPFunctionLibrary::STATIC_VictoryIntMinusEquals(int Sub, int* Int, 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryIntMinusEquals");
 
-	UVictoryBPFunctionLibrary_VictoryIntMinusEquals_Params params;
-	params.Sub = Sub;
+	UVictoryBPFunctionLibrary_VictoryIntMinusEquals_Params fn_params;
+	fn_params.Sub = Sub;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Int != nullptr)
-		*Int = params.Int;
+		*Int = fn_params.Int;
 	if (IntOut != nullptr)
-		*IntOut = params.IntOut;
+		*IntOut = fn_params.IntOut;
 }
 
 
@@ -2045,17 +2045,17 @@ struct FVictoryInputAxis UVictoryBPFunctionLibrary::STATIC_VictoryGetVictoryInpu
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryGetVictoryInputAxis");
 
-	UVictoryBPFunctionLibrary_VictoryGetVictoryInputAxis_Params params;
-	params.KeyEvent = KeyEvent;
+	UVictoryBPFunctionLibrary_VictoryGetVictoryInputAxis_Params fn_params;
+	fn_params.KeyEvent = KeyEvent;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2069,17 +2069,17 @@ struct FVictoryInput UVictoryBPFunctionLibrary::STATIC_VictoryGetVictoryInput(co
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryGetVictoryInput");
 
-	UVictoryBPFunctionLibrary_VictoryGetVictoryInput_Params params;
-	params.KeyEvent = KeyEvent;
+	UVictoryBPFunctionLibrary_VictoryGetVictoryInput_Params fn_params;
+	fn_params.KeyEvent = KeyEvent;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2093,17 +2093,17 @@ float UVictoryBPFunctionLibrary::STATIC_VictoryGetSoundVolume(class USoundClass*
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryGetSoundVolume");
 
-	UVictoryBPFunctionLibrary_VictoryGetSoundVolume_Params params;
-	params.SoundClassObject = SoundClassObject;
+	UVictoryBPFunctionLibrary_VictoryGetSoundVolume_Params fn_params;
+	fn_params.SoundClassObject = SoundClassObject;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2119,21 +2119,21 @@ struct FVector2D UVictoryBPFunctionLibrary::STATIC_VictoryGetCustomConfigVar_Vec
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryGetCustomConfigVar_Vector2D");
 
-	UVictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Vector2D_Params params;
-	params.SectionName = SectionName;
-	params.VariableName = VariableName;
+	UVictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Vector2D_Params fn_params;
+	fn_params.SectionName = SectionName;
+	fn_params.VariableName = VariableName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2149,21 +2149,21 @@ struct FVector UVictoryBPFunctionLibrary::STATIC_VictoryGetCustomConfigVar_Vecto
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryGetCustomConfigVar_Vector");
 
-	UVictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Vector_Params params;
-	params.SectionName = SectionName;
-	params.VariableName = VariableName;
+	UVictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Vector_Params fn_params;
+	fn_params.SectionName = SectionName;
+	fn_params.VariableName = VariableName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2179,21 +2179,21 @@ struct FString UVictoryBPFunctionLibrary::STATIC_VictoryGetCustomConfigVar_Strin
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryGetCustomConfigVar_String");
 
-	UVictoryBPFunctionLibrary_VictoryGetCustomConfigVar_String_Params params;
-	params.SectionName = SectionName;
-	params.VariableName = VariableName;
+	UVictoryBPFunctionLibrary_VictoryGetCustomConfigVar_String_Params fn_params;
+	fn_params.SectionName = SectionName;
+	fn_params.VariableName = VariableName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2209,21 +2209,21 @@ struct FRotator UVictoryBPFunctionLibrary::STATIC_VictoryGetCustomConfigVar_Rota
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryGetCustomConfigVar_Rotator");
 
-	UVictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Rotator_Params params;
-	params.SectionName = SectionName;
-	params.VariableName = VariableName;
+	UVictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Rotator_Params fn_params;
+	fn_params.SectionName = SectionName;
+	fn_params.VariableName = VariableName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2239,21 +2239,21 @@ int UVictoryBPFunctionLibrary::STATIC_VictoryGetCustomConfigVar_Int(const struct
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryGetCustomConfigVar_Int");
 
-	UVictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Int_Params params;
-	params.SectionName = SectionName;
-	params.VariableName = VariableName;
+	UVictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Int_Params fn_params;
+	fn_params.SectionName = SectionName;
+	fn_params.VariableName = VariableName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2269,21 +2269,21 @@ float UVictoryBPFunctionLibrary::STATIC_VictoryGetCustomConfigVar_Float(const st
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryGetCustomConfigVar_Float");
 
-	UVictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Float_Params params;
-	params.SectionName = SectionName;
-	params.VariableName = VariableName;
+	UVictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Float_Params fn_params;
+	fn_params.SectionName = SectionName;
+	fn_params.VariableName = VariableName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2299,21 +2299,21 @@ struct FLinearColor UVictoryBPFunctionLibrary::STATIC_VictoryGetCustomConfigVar_
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryGetCustomConfigVar_Color");
 
-	UVictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Color_Params params;
-	params.SectionName = SectionName;
-	params.VariableName = VariableName;
+	UVictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Color_Params fn_params;
+	fn_params.SectionName = SectionName;
+	fn_params.VariableName = VariableName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2329,21 +2329,21 @@ bool UVictoryBPFunctionLibrary::STATIC_VictoryGetCustomConfigVar_Bool(const stru
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryGetCustomConfigVar_Bool");
 
-	UVictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Bool_Params params;
-	params.SectionName = SectionName;
-	params.VariableName = VariableName;
+	UVictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Bool_Params fn_params;
+	fn_params.SectionName = SectionName;
+	fn_params.VariableName = VariableName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2357,17 +2357,17 @@ struct FString UVictoryBPFunctionLibrary::STATIC_VictoryGetApplicationName(int P
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryGetApplicationName");
 
-	UVictoryBPFunctionLibrary_VictoryGetApplicationName_Params params;
-	params.ProcessId = ProcessId;
+	UVictoryBPFunctionLibrary_VictoryGetApplicationName_Params fn_params;
+	fn_params.ProcessId = ProcessId;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2380,17 +2380,17 @@ void UVictoryBPFunctionLibrary::STATIC_VictoryGetAllAxisKeyBindings(TArray<struc
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryGetAllAxisKeyBindings");
 
-	UVictoryBPFunctionLibrary_VictoryGetAllAxisKeyBindings_Params params;
+	UVictoryBPFunctionLibrary_VictoryGetAllAxisKeyBindings_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Bindings != nullptr)
-		*Bindings = params.Bindings;
+		*Bindings = fn_params.Bindings;
 }
 
 
@@ -2405,20 +2405,20 @@ void UVictoryBPFunctionLibrary::STATIC_VictoryGetAllAxisAndActionMappingsForKey(
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryGetAllAxisAndActionMappingsForKey");
 
-	UVictoryBPFunctionLibrary_VictoryGetAllAxisAndActionMappingsForKey_Params params;
-	params.Key = Key;
+	UVictoryBPFunctionLibrary_VictoryGetAllAxisAndActionMappingsForKey_Params fn_params;
+	fn_params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (ActionBindings != nullptr)
-		*ActionBindings = params.ActionBindings;
+		*ActionBindings = fn_params.ActionBindings;
 	if (AxisBindings != nullptr)
-		*AxisBindings = params.AxisBindings;
+		*AxisBindings = fn_params.AxisBindings;
 }
 
 
@@ -2431,17 +2431,17 @@ void UVictoryBPFunctionLibrary::STATIC_VictoryGetAllActionKeyBindings(TArray<str
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryGetAllActionKeyBindings");
 
-	UVictoryBPFunctionLibrary_VictoryGetAllActionKeyBindings_Params params;
+	UVictoryBPFunctionLibrary_VictoryGetAllActionKeyBindings_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Bindings != nullptr)
-		*Bindings = params.Bindings;
+		*Bindings = fn_params.Bindings;
 }
 
 
@@ -2456,20 +2456,20 @@ void UVictoryBPFunctionLibrary::STATIC_VictoryFloatPlusEquals(float Add, float* 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryFloatPlusEquals");
 
-	UVictoryBPFunctionLibrary_VictoryFloatPlusEquals_Params params;
-	params.Add = Add;
+	UVictoryBPFunctionLibrary_VictoryFloatPlusEquals_Params fn_params;
+	fn_params.Add = Add;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Float != nullptr)
-		*Float = params.Float;
+		*Float = fn_params.Float;
 	if (FloatOut != nullptr)
-		*FloatOut = params.FloatOut;
+		*FloatOut = fn_params.FloatOut;
 }
 
 
@@ -2484,20 +2484,20 @@ void UVictoryBPFunctionLibrary::STATIC_VictoryFloatMinusEquals(float Sub, float*
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryFloatMinusEquals");
 
-	UVictoryBPFunctionLibrary_VictoryFloatMinusEquals_Params params;
-	params.Sub = Sub;
+	UVictoryBPFunctionLibrary_VictoryFloatMinusEquals_Params fn_params;
+	fn_params.Sub = Sub;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Float != nullptr)
-		*Float = params.Float;
+		*Float = fn_params.Float;
 	if (FloatOut != nullptr)
-		*FloatOut = params.FloatOut;
+		*FloatOut = fn_params.FloatOut;
 }
 
 
@@ -2512,18 +2512,18 @@ bool UVictoryBPFunctionLibrary::STATIC_VictoryDestructible_DestroyChunk(class UD
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryDestructible_DestroyChunk");
 
-	UVictoryBPFunctionLibrary_VictoryDestructible_DestroyChunk_Params params;
-	params.DestructibleComp = DestructibleComp;
-	params.HitItem = HitItem;
+	UVictoryBPFunctionLibrary_VictoryDestructible_DestroyChunk_Params fn_params;
+	fn_params.DestructibleComp = DestructibleComp;
+	fn_params.HitItem = HitItem;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2542,23 +2542,23 @@ void UVictoryBPFunctionLibrary::STATIC_VictoryCreateProc(const struct FString& F
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryCreateProc");
 
-	UVictoryBPFunctionLibrary_VictoryCreateProc_Params params;
-	params.FullPathOfProgramToRun = FullPathOfProgramToRun;
-	params.CommandlineArgs = CommandlineArgs;
-	params.Detach = Detach;
-	params.Hidden = Hidden;
-	params.Priority = Priority;
-	params.OptionalWorkingDirectory = OptionalWorkingDirectory;
+	UVictoryBPFunctionLibrary_VictoryCreateProc_Params fn_params;
+	fn_params.FullPathOfProgramToRun = FullPathOfProgramToRun;
+	fn_params.CommandlineArgs = CommandlineArgs;
+	fn_params.Detach = Detach;
+	fn_params.Hidden = Hidden;
+	fn_params.Priority = Priority;
+	fn_params.OptionalWorkingDirectory = OptionalWorkingDirectory;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (ProcessId != nullptr)
-		*ProcessId = params.ProcessId;
+		*ProcessId = fn_params.ProcessId;
 }
 
 
@@ -2574,21 +2574,21 @@ void UVictoryBPFunctionLibrary::STATIC_VictoryAppendInline(const struct FString&
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VictoryAppendInline");
 
-	UVictoryBPFunctionLibrary_VictoryAppendInline_Params params;
-	params.ToAppend = ToAppend;
-	params.AppendNewline = AppendNewline;
+	UVictoryBPFunctionLibrary_VictoryAppendInline_Params fn_params;
+	fn_params.ToAppend = ToAppend;
+	fn_params.AppendNewline = AppendNewline;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (string != nullptr)
-		*string = params.string;
+		*string = fn_params.string;
 	if (Result != nullptr)
-		*Result = params.Result;
+		*Result = fn_params.Result;
 }
 
 
@@ -2603,18 +2603,18 @@ struct FString UVictoryBPFunctionLibrary::STATIC_Victory_SecondsToHoursMinutesSe
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Victory_SecondsToHoursMinutesSeconds");
 
-	UVictoryBPFunctionLibrary_Victory_SecondsToHoursMinutesSeconds_Params params;
-	params.Seconds = Seconds;
-	params.TrimZeroes = TrimZeroes;
+	UVictoryBPFunctionLibrary_Victory_SecondsToHoursMinutesSeconds_Params fn_params;
+	fn_params.Seconds = Seconds;
+	fn_params.TrimZeroes = TrimZeroes;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2627,13 +2627,13 @@ void UVictoryBPFunctionLibrary::STATIC_Victory_SaveStringToOSClipboard(const str
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Victory_SaveStringToOSClipboard");
 
-	UVictoryBPFunctionLibrary_Victory_SaveStringToOSClipboard_Params params;
-	params.ToClipboard = ToClipboard;
+	UVictoryBPFunctionLibrary_Victory_SaveStringToOSClipboard_Params fn_params;
+	fn_params.ToClipboard = ToClipboard;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -2655,25 +2655,25 @@ bool UVictoryBPFunctionLibrary::STATIC_Victory_SavePixels(const struct FString& 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Victory_SavePixels");
 
-	UVictoryBPFunctionLibrary_Victory_SavePixels_Params params;
-	params.FullFilePath = FullFilePath;
-	params.Width = Width;
-	params.Height = Height;
-	params.ImagePixels = ImagePixels;
-	params.SaveAsBMP = SaveAsBMP;
-	params.SRGB = SRGB;
+	UVictoryBPFunctionLibrary_Victory_SavePixels_Params fn_params;
+	fn_params.FullFilePath = FullFilePath;
+	fn_params.Width = Width;
+	fn_params.Height = Height;
+	fn_params.ImagePixels = ImagePixels;
+	fn_params.SaveAsBMP = SaveAsBMP;
+	fn_params.SRGB = SRGB;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (ErrorString != nullptr)
-		*ErrorString = params.ErrorString;
+		*ErrorString = fn_params.ErrorString;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2692,27 +2692,27 @@ class UTexture2D* UVictoryBPFunctionLibrary::STATIC_Victory_LoadTexture2D_FromFi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Victory_LoadTexture2D_FromFile_Pixels");
 
-	UVictoryBPFunctionLibrary_Victory_LoadTexture2D_FromFile_Pixels_Params params;
-	params.FullFilePath = FullFilePath;
-	params.ImageFormat = ImageFormat;
+	UVictoryBPFunctionLibrary_Victory_LoadTexture2D_FromFile_Pixels_Params fn_params;
+	fn_params.FullFilePath = FullFilePath;
+	fn_params.ImageFormat = ImageFormat;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 	if (Width != nullptr)
-		*Width = params.Width;
+		*Width = fn_params.Width;
 	if (Height != nullptr)
-		*Height = params.Height;
+		*Height = fn_params.Height;
 	if (OutPixels != nullptr)
-		*OutPixels = params.OutPixels;
+		*OutPixels = fn_params.OutPixels;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2730,25 +2730,25 @@ class UTexture2D* UVictoryBPFunctionLibrary::STATIC_Victory_LoadTexture2D_FromFi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Victory_LoadTexture2D_FromFile");
 
-	UVictoryBPFunctionLibrary_Victory_LoadTexture2D_FromFile_Params params;
-	params.FullFilePath = FullFilePath;
-	params.ImageFormat = ImageFormat;
+	UVictoryBPFunctionLibrary_Victory_LoadTexture2D_FromFile_Params fn_params;
+	fn_params.FullFilePath = FullFilePath;
+	fn_params.ImageFormat = ImageFormat;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 	if (Width != nullptr)
-		*Width = params.Width;
+		*Width = fn_params.Width;
 	if (Height != nullptr)
-		*Height = params.Height;
+		*Height = fn_params.Height;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2761,17 +2761,17 @@ void UVictoryBPFunctionLibrary::STATIC_Victory_GetStringFromOSClipboard(struct F
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Victory_GetStringFromOSClipboard");
 
-	UVictoryBPFunctionLibrary_Victory_GetStringFromOSClipboard_Params params;
+	UVictoryBPFunctionLibrary_Victory_GetStringFromOSClipboard_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (FromClipboard != nullptr)
-		*FromClipboard = params.FromClipboard;
+		*FromClipboard = fn_params.FromClipboard;
 }
 
 
@@ -2788,24 +2788,24 @@ bool UVictoryBPFunctionLibrary::STATIC_Victory_GetPixelsArrayFromT2D(class UText
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Victory_GetPixelsArrayFromT2D");
 
-	UVictoryBPFunctionLibrary_Victory_GetPixelsArrayFromT2D_Params params;
-	params.T2D = T2D;
+	UVictoryBPFunctionLibrary_Victory_GetPixelsArrayFromT2D_Params fn_params;
+	fn_params.T2D = T2D;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (TextureWidth != nullptr)
-		*TextureWidth = params.TextureWidth;
+		*TextureWidth = fn_params.TextureWidth;
 	if (TextureHeight != nullptr)
-		*TextureHeight = params.TextureHeight;
+		*TextureHeight = fn_params.TextureHeight;
 	if (PixelArray != nullptr)
-		*PixelArray = params.PixelArray;
+		*PixelArray = fn_params.PixelArray;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2822,22 +2822,22 @@ bool UVictoryBPFunctionLibrary::STATIC_Victory_GetPixelFromT2D(class UTexture2D*
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Victory_GetPixelFromT2D");
 
-	UVictoryBPFunctionLibrary_Victory_GetPixelFromT2D_Params params;
-	params.T2D = T2D;
-	params.X = X;
-	params.Y = Y;
+	UVictoryBPFunctionLibrary_Victory_GetPixelFromT2D_Params fn_params;
+	fn_params.T2D = T2D;
+	fn_params.X = X;
+	fn_params.Y = Y;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (PixelColor != nullptr)
-		*PixelColor = params.PixelColor;
+		*PixelColor = fn_params.PixelColor;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2850,16 +2850,16 @@ struct FString UVictoryBPFunctionLibrary::STATIC_Victory_GetGRHIAdapterName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Victory_GetGRHIAdapterName");
 
-	UVictoryBPFunctionLibrary_Victory_GetGRHIAdapterName_Params params;
+	UVictoryBPFunctionLibrary_Victory_GetGRHIAdapterName_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2875,23 +2875,23 @@ void UVictoryBPFunctionLibrary::STATIC_Victory_GetGPUInfo(struct FString* Device
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Victory_GetGPUInfo");
 
-	UVictoryBPFunctionLibrary_Victory_GetGPUInfo_Params params;
+	UVictoryBPFunctionLibrary_Victory_GetGPUInfo_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (DeviceDescription != nullptr)
-		*DeviceDescription = params.DeviceDescription;
+		*DeviceDescription = fn_params.DeviceDescription;
 	if (Provider != nullptr)
-		*Provider = params.Provider;
+		*Provider = fn_params.Provider;
 	if (DriverVersion != nullptr)
-		*DriverVersion = params.DriverVersion;
+		*DriverVersion = fn_params.DriverVersion;
 	if (DriverDate != nullptr)
-		*DriverDate = params.DriverDate;
+		*DriverDate = fn_params.DriverDate;
 }
 
 
@@ -2904,16 +2904,16 @@ struct FString UVictoryBPFunctionLibrary::STATIC_Victory_GetGPUBrand()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Victory_GetGPUBrand");
 
-	UVictoryBPFunctionLibrary_Victory_GetGPUBrand_Params params;
+	UVictoryBPFunctionLibrary_Victory_GetGPUBrand_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2931,23 +2931,23 @@ bool UVictoryBPFunctionLibrary::STATIC_Victory_Get_Pixel(TArray<struct FLinearCo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Victory_Get_Pixel");
 
-	UVictoryBPFunctionLibrary_Victory_Get_Pixel_Params params;
-	params.Pixels = Pixels;
-	params.ImageHeight = ImageHeight;
-	params.X = X;
-	params.Y = Y;
+	UVictoryBPFunctionLibrary_Victory_Get_Pixel_Params fn_params;
+	fn_params.Pixels = Pixels;
+	fn_params.ImageHeight = ImageHeight;
+	fn_params.X = X;
+	fn_params.Y = Y;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (FoundColor != nullptr)
-		*FoundColor = params.FoundColor;
+		*FoundColor = fn_params.FoundColor;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2967,23 +2967,23 @@ TEnumAsByte<EPathFollowingRequestResult> UVictoryBPFunctionLibrary::STATIC_Victo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Victory_AI_MoveToWithFilter");
 
-	UVictoryBPFunctionLibrary_Victory_AI_MoveToWithFilter_Params params;
-	params.Pawn = Pawn;
-	params.Dest = Dest;
-	params.FilterClass = FilterClass;
-	params.AcceptanceRadius = AcceptanceRadius;
-	params.bProjectDestinationToNavigation = bProjectDestinationToNavigation;
-	params.bStopOnOverlap = bStopOnOverlap;
-	params.bCanStrafe = bCanStrafe;
+	UVictoryBPFunctionLibrary_Victory_AI_MoveToWithFilter_Params fn_params;
+	fn_params.Pawn = Pawn;
+	fn_params.Dest = Dest;
+	fn_params.FilterClass = FilterClass;
+	fn_params.AcceptanceRadius = AcceptanceRadius;
+	fn_params.bProjectDestinationToNavigation = bProjectDestinationToNavigation;
+	fn_params.bStopOnOverlap = bStopOnOverlap;
+	fn_params.bCanStrafe = bCanStrafe;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2998,18 +2998,18 @@ float UVictoryBPFunctionLibrary::STATIC_VerticalFOV(float HorizontalFOV, float A
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.VerticalFOV");
 
-	UVictoryBPFunctionLibrary_VerticalFOV_Params params;
-	params.HorizontalFOV = HorizontalFOV;
-	params.AspectRatio = AspectRatio;
+	UVictoryBPFunctionLibrary_VerticalFOV_Params fn_params;
+	fn_params.HorizontalFOV = HorizontalFOV;
+	fn_params.AspectRatio = AspectRatio;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3026,20 +3026,20 @@ struct FVector2D UVictoryBPFunctionLibrary::STATIC_Vector2DInterpTo_Constant(con
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Vector2DInterpTo_Constant");
 
-	UVictoryBPFunctionLibrary_Vector2DInterpTo_Constant_Params params;
-	params.Current = Current;
-	params.Target = Target;
-	params.DeltaTime = DeltaTime;
-	params.InterpSpeed = InterpSpeed;
+	UVictoryBPFunctionLibrary_Vector2DInterpTo_Constant_Params fn_params;
+	fn_params.Current = Current;
+	fn_params.Target = Target;
+	fn_params.DeltaTime = DeltaTime;
+	fn_params.InterpSpeed = InterpSpeed;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3056,20 +3056,20 @@ struct FVector2D UVictoryBPFunctionLibrary::STATIC_Vector2DInterpTo(const struct
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Vector2DInterpTo");
 
-	UVictoryBPFunctionLibrary_Vector2DInterpTo_Params params;
-	params.Current = Current;
-	params.Target = Target;
-	params.DeltaTime = DeltaTime;
-	params.InterpSpeed = InterpSpeed;
+	UVictoryBPFunctionLibrary_Vector2DInterpTo_Params fn_params;
+	fn_params.Current = Current;
+	fn_params.Target = Target;
+	fn_params.DeltaTime = DeltaTime;
+	fn_params.InterpSpeed = InterpSpeed;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3083,18 +3083,18 @@ void UVictoryBPFunctionLibrary::STATIC_UTCToLocal(const struct FDateTime& UTCTim
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.UTCToLocal");
 
-	UVictoryBPFunctionLibrary_UTCToLocal_Params params;
-	params.UTCTime = UTCTime;
+	UVictoryBPFunctionLibrary_UTCToLocal_Params fn_params;
+	fn_params.UTCTime = UTCTime;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (LocalTime != nullptr)
-		*LocalTime = params.LocalTime;
+		*LocalTime = fn_params.LocalTime;
 }
 
 
@@ -3107,13 +3107,13 @@ void UVictoryBPFunctionLibrary::STATIC_UnloadStreamingLevel(class ULevelStreamin
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.UnloadStreamingLevel");
 
-	UVictoryBPFunctionLibrary_UnloadStreamingLevel_Params params;
-	params.LevelInstance = LevelInstance;
+	UVictoryBPFunctionLibrary_UnloadStreamingLevel_Params fn_params;
+	fn_params.LevelInstance = LevelInstance;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -3130,18 +3130,18 @@ struct FRotator UVictoryBPFunctionLibrary::TransformVectorToActorSpaceAngle(clas
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.TransformVectorToActorSpaceAngle");
 
-	UVictoryBPFunctionLibrary_TransformVectorToActorSpaceAngle_Params params;
-	params.Actor = Actor;
-	params.InVector = InVector;
+	UVictoryBPFunctionLibrary_TransformVectorToActorSpaceAngle_Params fn_params;
+	fn_params.Actor = Actor;
+	fn_params.InVector = InVector;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3156,18 +3156,18 @@ struct FVector UVictoryBPFunctionLibrary::TransformVectorToActorSpace(class AAct
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.TransformVectorToActorSpace");
 
-	UVictoryBPFunctionLibrary_TransformVectorToActorSpace_Params params;
-	params.Actor = Actor;
-	params.InVector = InVector;
+	UVictoryBPFunctionLibrary_TransformVectorToActorSpace_Params fn_params;
+	fn_params.Actor = Actor;
+	fn_params.InVector = InVector;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3189,31 +3189,31 @@ class AActor* UVictoryBPFunctionLibrary::STATIC_Traces__CharacterMeshTrace___Clo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Traces__CharacterMeshTrace___ClosestSocket");
 
-	UVictoryBPFunctionLibrary_Traces__CharacterMeshTrace___ClosestSocket_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.TraceOwner = TraceOwner;
-	params.TraceStart = TraceStart;
-	params.TraceEnd = TraceEnd;
+	UVictoryBPFunctionLibrary_Traces__CharacterMeshTrace___ClosestSocket_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.TraceOwner = TraceOwner;
+	fn_params.TraceStart = TraceStart;
+	fn_params.TraceEnd = TraceEnd;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutImpactPoint != nullptr)
-		*OutImpactPoint = params.OutImpactPoint;
+		*OutImpactPoint = fn_params.OutImpactPoint;
 	if (OutImpactNormal != nullptr)
-		*OutImpactNormal = params.OutImpactNormal;
+		*OutImpactNormal = fn_params.OutImpactNormal;
 	if (ClosestSocketName != nullptr)
-		*ClosestSocketName = params.ClosestSocketName;
+		*ClosestSocketName = fn_params.ClosestSocketName;
 	if (SocketLocation != nullptr)
-		*SocketLocation = params.SocketLocation;
+		*SocketLocation = fn_params.SocketLocation;
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3234,30 +3234,30 @@ class AActor* UVictoryBPFunctionLibrary::STATIC_Traces__CharacterMeshTrace___Clo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Traces__CharacterMeshTrace___ClosestBone");
 
-	UVictoryBPFunctionLibrary_Traces__CharacterMeshTrace___ClosestBone_Params params;
-	params.TraceOwner = TraceOwner;
-	params.TraceStart = TraceStart;
-	params.TraceEnd = TraceEnd;
+	UVictoryBPFunctionLibrary_Traces__CharacterMeshTrace___ClosestBone_Params fn_params;
+	fn_params.TraceOwner = TraceOwner;
+	fn_params.TraceStart = TraceStart;
+	fn_params.TraceEnd = TraceEnd;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutImpactPoint != nullptr)
-		*OutImpactPoint = params.OutImpactPoint;
+		*OutImpactPoint = fn_params.OutImpactPoint;
 	if (OutImpactNormal != nullptr)
-		*OutImpactNormal = params.OutImpactNormal;
+		*OutImpactNormal = fn_params.OutImpactNormal;
 	if (ClosestBoneName != nullptr)
-		*ClosestBoneName = params.ClosestBoneName;
+		*ClosestBoneName = fn_params.ClosestBoneName;
 	if (ClosestBoneLocation != nullptr)
-		*ClosestBoneLocation = params.ClosestBoneLocation;
+		*ClosestBoneLocation = fn_params.ClosestBoneLocation;
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3279,28 +3279,28 @@ bool UVictoryBPFunctionLibrary::STATIC_TraceData__GetTraceDataFromSkeletalMeshSo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.TraceData__GetTraceDataFromSkeletalMeshSocket");
 
-	UVictoryBPFunctionLibrary_TraceData__GetTraceDataFromSkeletalMeshSocket_Params params;
-	params.Mesh = Mesh;
-	params.TraceRotation = TraceRotation;
-	params.TraceLength = TraceLength;
-	params.Socket = Socket;
-	params.DrawTraceData = DrawTraceData;
-	params.TraceDataColor = TraceDataColor;
-	params.TraceDataThickness = TraceDataThickness;
+	UVictoryBPFunctionLibrary_TraceData__GetTraceDataFromSkeletalMeshSocket_Params fn_params;
+	fn_params.Mesh = Mesh;
+	fn_params.TraceRotation = TraceRotation;
+	fn_params.TraceLength = TraceLength;
+	fn_params.Socket = Socket;
+	fn_params.DrawTraceData = DrawTraceData;
+	fn_params.TraceDataColor = TraceDataColor;
+	fn_params.TraceDataThickness = TraceDataThickness;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (TraceStart != nullptr)
-		*TraceStart = params.TraceStart;
+		*TraceStart = fn_params.TraceStart;
 	if (TraceEnd != nullptr)
-		*TraceEnd = params.TraceEnd;
+		*TraceEnd = fn_params.TraceEnd;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3322,28 +3322,28 @@ bool UVictoryBPFunctionLibrary::STATIC_TraceData__GetTraceDataFromCharacterSocke
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.TraceData__GetTraceDataFromCharacterSocket");
 
-	UVictoryBPFunctionLibrary_TraceData__GetTraceDataFromCharacterSocket_Params params;
-	params.TheCharacter = TheCharacter;
-	params.TraceRotation = TraceRotation;
-	params.TraceLength = TraceLength;
-	params.Socket = Socket;
-	params.DrawTraceData = DrawTraceData;
-	params.TraceDataColor = TraceDataColor;
-	params.TraceDataThickness = TraceDataThickness;
+	UVictoryBPFunctionLibrary_TraceData__GetTraceDataFromCharacterSocket_Params fn_params;
+	fn_params.TheCharacter = TheCharacter;
+	fn_params.TraceRotation = TraceRotation;
+	fn_params.TraceLength = TraceLength;
+	fn_params.Socket = Socket;
+	fn_params.DrawTraceData = DrawTraceData;
+	fn_params.TraceDataColor = TraceDataColor;
+	fn_params.TraceDataThickness = TraceDataThickness;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (TraceStart != nullptr)
-		*TraceStart = params.TraceStart;
+		*TraceStart = fn_params.TraceStart;
 	if (TraceEnd != nullptr)
-		*TraceEnd = params.TraceEnd;
+		*TraceEnd = fn_params.TraceEnd;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3358,18 +3358,18 @@ int UVictoryBPFunctionLibrary::STATIC_Text_ToInt(const struct FText& Text, bool 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Text_ToInt");
 
-	UVictoryBPFunctionLibrary_Text_ToInt_Params params;
-	params.Text = Text;
-	params.UseDotForThousands = UseDotForThousands;
+	UVictoryBPFunctionLibrary_Text_ToInt_Params fn_params;
+	fn_params.Text = Text;
+	fn_params.UseDotForThousands = UseDotForThousands;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3384,18 +3384,18 @@ float UVictoryBPFunctionLibrary::STATIC_Text_ToFloat(const struct FText& Text, b
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Text_ToFloat");
 
-	UVictoryBPFunctionLibrary_Text_ToFloat_Params params;
-	params.Text = Text;
-	params.UseDotForThousands = UseDotForThousands;
+	UVictoryBPFunctionLibrary_Text_ToFloat_Params fn_params;
+	fn_params.Text = Text;
+	fn_params.UseDotForThousands = UseDotForThousands;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3409,17 +3409,17 @@ bool UVictoryBPFunctionLibrary::STATIC_Text_IsNumeric(const struct FText& Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Text_IsNumeric");
 
-	UVictoryBPFunctionLibrary_Text_IsNumeric_Params params;
-	params.Text = Text;
+	UVictoryBPFunctionLibrary_Text_IsNumeric_Params fn_params;
+	fn_params.Text = Text;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3433,17 +3433,17 @@ bool UVictoryBPFunctionLibrary::STATIC_StringIsEmpty(const struct FString& Targe
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.StringIsEmpty");
 
-	UVictoryBPFunctionLibrary_StringIsEmpty_Params params;
-	params.Target = Target;
+	UVictoryBPFunctionLibrary_StringIsEmpty_Params fn_params;
+	fn_params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3459,20 +3459,20 @@ void UVictoryBPFunctionLibrary::STATIC_StringConversion__GetFloatAsStringWithPre
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.StringConversion__GetFloatAsStringWithPrecision");
 
-	UVictoryBPFunctionLibrary_StringConversion__GetFloatAsStringWithPrecision_Params params;
-	params.TheFloat = TheFloat;
-	params.Precision = Precision;
-	params.IncludeLeadingZero = IncludeLeadingZero;
+	UVictoryBPFunctionLibrary_StringConversion__GetFloatAsStringWithPrecision_Params fn_params;
+	fn_params.TheFloat = TheFloat;
+	fn_params.Precision = Precision;
+	fn_params.IncludeLeadingZero = IncludeLeadingZero;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (TheString != nullptr)
-		*TheString = params.TheString;
+		*TheString = fn_params.TheString;
 }
 
 
@@ -3489,21 +3489,21 @@ void UVictoryBPFunctionLibrary::STATIC_String__ExplodeString(const struct FStrin
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.String__ExplodeString");
 
-	UVictoryBPFunctionLibrary_String__ExplodeString_Params params;
-	params.InputString = InputString;
-	params.Separator = Separator;
-	params.Limit = Limit;
-	params.bTrimElements = bTrimElements;
+	UVictoryBPFunctionLibrary_String__ExplodeString_Params fn_params;
+	fn_params.InputString = InputString;
+	fn_params.Separator = Separator;
+	fn_params.Limit = Limit;
+	fn_params.bTrimElements = bTrimElements;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutputStrings != nullptr)
-		*OutputStrings = params.OutputStrings;
+		*OutputStrings = fn_params.OutputStrings;
 }
 
 
@@ -3518,18 +3518,18 @@ struct FString UVictoryBPFunctionLibrary::STATIC_String__CombineStrings_Multi(co
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.String__CombineStrings_Multi");
 
-	UVictoryBPFunctionLibrary_String__CombineStrings_Multi_Params params;
-	params.A = A;
-	params.B = B;
+	UVictoryBPFunctionLibrary_String__CombineStrings_Multi_Params fn_params;
+	fn_params.A = A;
+	fn_params.B = B;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3547,21 +3547,21 @@ struct FString UVictoryBPFunctionLibrary::STATIC_String__CombineStrings(const st
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.String__CombineStrings");
 
-	UVictoryBPFunctionLibrary_String__CombineStrings_Params params;
-	params.StringFirst = StringFirst;
-	params.StringSecond = StringSecond;
-	params.Separator = Separator;
-	params.StringFirstLabel = StringFirstLabel;
-	params.StringSecondLabel = StringSecondLabel;
+	UVictoryBPFunctionLibrary_String__CombineStrings_Params fn_params;
+	fn_params.StringFirst = StringFirst;
+	fn_params.StringSecond = StringSecond;
+	fn_params.Separator = Separator;
+	fn_params.StringFirstLabel = StringFirstLabel;
+	fn_params.StringSecondLabel = StringSecondLabel;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3580,22 +3580,22 @@ class AActor* UVictoryBPFunctionLibrary::STATIC_SpawnActorIntoLevel(class UObjec
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.SpawnActorIntoLevel");
 
-	UVictoryBPFunctionLibrary_SpawnActorIntoLevel_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.ActorClass = ActorClass;
-	params.Level = Level;
-	params.Location = Location;
-	params.Rotation = Rotation;
-	params.SpawnEvenIfColliding = SpawnEvenIfColliding;
+	UVictoryBPFunctionLibrary_SpawnActorIntoLevel_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.ActorClass = ActorClass;
+	fn_params.Level = Level;
+	fn_params.Location = Location;
+	fn_params.Rotation = Rotation;
+	fn_params.SpawnEvenIfColliding = SpawnEvenIfColliding;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3609,14 +3609,14 @@ void UVictoryBPFunctionLibrary::STATIC_SetGenericTeamId(class AActor* Target, un
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.SetGenericTeamId");
 
-	UVictoryBPFunctionLibrary_SetGenericTeamId_Params params;
-	params.Target = Target;
-	params.NewTeamId = NewTeamId;
+	UVictoryBPFunctionLibrary_SetGenericTeamId_Params fn_params;
+	fn_params.Target = Target;
+	fn_params.NewTeamId = NewTeamId;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -3632,14 +3632,14 @@ void UVictoryBPFunctionLibrary::STATIC_SetComponentTickRate(class UActorComponen
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.SetComponentTickRate");
 
-	UVictoryBPFunctionLibrary_SetComponentTickRate_Params params;
-	params.Component = Component;
-	params.Seconds = Seconds;
+	UVictoryBPFunctionLibrary_SetComponentTickRate_Params fn_params;
+	fn_params.Component = Component;
+	fn_params.Seconds = Seconds;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -3655,14 +3655,14 @@ void UVictoryBPFunctionLibrary::STATIC_SetBloomIntensity(class APostProcessVolum
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.SetBloomIntensity");
 
-	UVictoryBPFunctionLibrary_SetBloomIntensity_Params params;
-	params.PostProcessVolume = PostProcessVolume;
-	params.Intensity = Intensity;
+	UVictoryBPFunctionLibrary_SetBloomIntensity_Params fn_params;
+	fn_params.PostProcessVolume = PostProcessVolume;
+	fn_params.Intensity = Intensity;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -3679,15 +3679,15 @@ void UVictoryBPFunctionLibrary::STATIC_ServerTravel(class UObject* WorldContextO
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.ServerTravel");
 
-	UVictoryBPFunctionLibrary_ServerTravel_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.MapName = MapName;
-	params.bNotifyPlayers = bNotifyPlayers;
+	UVictoryBPFunctionLibrary_ServerTravel_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.MapName = MapName;
+	fn_params.bNotifyPlayers = bNotifyPlayers;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -3706,21 +3706,21 @@ void UVictoryBPFunctionLibrary::STATIC_Selection_SelectionBox(class UObject* Wor
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Selection_SelectionBox");
 
-	UVictoryBPFunctionLibrary_Selection_SelectionBox_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.AnchorPoint = AnchorPoint;
-	params.DraggedPoint = DraggedPoint;
-	params.ClassFilter = ClassFilter;
+	UVictoryBPFunctionLibrary_Selection_SelectionBox_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.AnchorPoint = AnchorPoint;
+	fn_params.DraggedPoint = DraggedPoint;
+	fn_params.ClassFilter = ClassFilter;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (SelectedActors != nullptr)
-		*SelectedActors = params.SelectedActors;
+		*SelectedActors = fn_params.SelectedActors;
 }
 
 
@@ -3731,12 +3731,12 @@ void UVictoryBPFunctionLibrary::STATIC_seedRandWithTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.seedRandWithTime");
 
-	UVictoryBPFunctionLibrary_seedRandWithTime_Params params;
+	UVictoryBPFunctionLibrary_seedRandWithTime_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -3749,12 +3749,12 @@ void UVictoryBPFunctionLibrary::STATIC_seedRandWithEntropy()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.seedRandWithEntropy");
 
-	UVictoryBPFunctionLibrary_seedRandWithEntropy_Params params;
+	UVictoryBPFunctionLibrary_seedRandWithEntropy_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -3769,13 +3769,13 @@ void UVictoryBPFunctionLibrary::STATIC_seedRand(int Seed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.seedRand");
 
-	UVictoryBPFunctionLibrary_seedRand_Params params;
-	params.Seed = Seed;
+	UVictoryBPFunctionLibrary_seedRand_Params fn_params;
+	fn_params.Seed = Seed;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -3794,22 +3794,22 @@ bool UVictoryBPFunctionLibrary::STATIC_ScreenShots_Rename_Move_Most_Recent(const
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.ScreenShots_Rename_Move_Most_Recent");
 
-	UVictoryBPFunctionLibrary_ScreenShots_Rename_Move_Most_Recent_Params params;
-	params.NewName = NewName;
-	params.NewAbsoluteFolderPath = NewAbsoluteFolderPath;
-	params.HighResolution = HighResolution;
+	UVictoryBPFunctionLibrary_ScreenShots_Rename_Move_Most_Recent_Params fn_params;
+	fn_params.NewName = NewName;
+	fn_params.NewAbsoluteFolderPath = NewAbsoluteFolderPath;
+	fn_params.HighResolution = HighResolution;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OriginalFileName != nullptr)
-		*OriginalFileName = params.OriginalFileName;
+		*OriginalFileName = fn_params.OriginalFileName;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3822,17 +3822,17 @@ void UVictoryBPFunctionLibrary::STATIC_SaveGameObject_GetAllSaveSlotFileNames(TA
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.SaveGameObject_GetAllSaveSlotFileNames");
 
-	UVictoryBPFunctionLibrary_SaveGameObject_GetAllSaveSlotFileNames_Params params;
+	UVictoryBPFunctionLibrary_SaveGameObject_GetAllSaveSlotFileNames_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (FileNames != nullptr)
-		*FileNames = params.FileNames;
+		*FileNames = fn_params.FileNames;
 }
 
 
@@ -3843,12 +3843,12 @@ void UVictoryBPFunctionLibrary::STATIC_Rendering__UnFreezeGameRendering()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Rendering__UnFreezeGameRendering");
 
-	UVictoryBPFunctionLibrary_Rendering__UnFreezeGameRendering_Params params;
+	UVictoryBPFunctionLibrary_Rendering__UnFreezeGameRendering_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -3861,12 +3861,12 @@ void UVictoryBPFunctionLibrary::STATIC_Rendering__FreezeGameRendering()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Rendering__FreezeGameRendering");
 
-	UVictoryBPFunctionLibrary_Rendering__FreezeGameRendering_Params params;
+	UVictoryBPFunctionLibrary_Rendering__FreezeGameRendering_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -3882,14 +3882,14 @@ void UVictoryBPFunctionLibrary::STATIC_RemoveFromStreamingLevels(class UObject* 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.RemoveFromStreamingLevels");
 
-	UVictoryBPFunctionLibrary_RemoveFromStreamingLevels_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.LevelInstanceInfo = LevelInstanceInfo;
+	UVictoryBPFunctionLibrary_RemoveFromStreamingLevels_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.LevelInstanceInfo = LevelInstanceInfo;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -3905,14 +3905,14 @@ void UVictoryBPFunctionLibrary::STATIC_RemoveAllWidgetsOfClass(class UObject* Wo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.RemoveAllWidgetsOfClass");
 
-	UVictoryBPFunctionLibrary_RemoveAllWidgetsOfClass_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.WidgetClass = WidgetClass;
+	UVictoryBPFunctionLibrary_RemoveAllWidgetsOfClass_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.WidgetClass = WidgetClass;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -3931,24 +3931,24 @@ void UVictoryBPFunctionLibrary::STATIC_RealWorldTime__GetTimePassedSincePrevious
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.RealWorldTime__GetTimePassedSincePreviousTime");
 
-	UVictoryBPFunctionLibrary_RealWorldTime__GetTimePassedSincePreviousTime_Params params;
-	params.PreviousTime = PreviousTime;
+	UVictoryBPFunctionLibrary_RealWorldTime__GetTimePassedSincePreviousTime_Params fn_params;
+	fn_params.PreviousTime = PreviousTime;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (MilliSeconds != nullptr)
-		*MilliSeconds = params.MilliSeconds;
+		*MilliSeconds = fn_params.MilliSeconds;
 	if (Seconds != nullptr)
-		*Seconds = params.Seconds;
+		*Seconds = fn_params.Seconds;
 	if (Minutes != nullptr)
-		*Minutes = params.Minutes;
+		*Minutes = fn_params.Minutes;
 	if (Hours != nullptr)
-		*Hours = params.Hours;
+		*Hours = fn_params.Hours;
 }
 
 
@@ -3966,25 +3966,25 @@ void UVictoryBPFunctionLibrary::STATIC_RealWorldTime__GetDifferenceBetweenTimes(
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.RealWorldTime__GetDifferenceBetweenTimes");
 
-	UVictoryBPFunctionLibrary_RealWorldTime__GetDifferenceBetweenTimes_Params params;
-	params.PreviousTime1 = PreviousTime1;
-	params.PreviousTime2 = PreviousTime2;
+	UVictoryBPFunctionLibrary_RealWorldTime__GetDifferenceBetweenTimes_Params fn_params;
+	fn_params.PreviousTime1 = PreviousTime1;
+	fn_params.PreviousTime2 = PreviousTime2;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (MilliSeconds != nullptr)
-		*MilliSeconds = params.MilliSeconds;
+		*MilliSeconds = fn_params.MilliSeconds;
 	if (Seconds != nullptr)
-		*Seconds = params.Seconds;
+		*Seconds = fn_params.Seconds;
 	if (Minutes != nullptr)
-		*Minutes = params.Minutes;
+		*Minutes = fn_params.Minutes;
 	if (Hours != nullptr)
-		*Hours = params.Hours;
+		*Hours = fn_params.Hours;
 }
 
 
@@ -4005,33 +4005,33 @@ struct FString UVictoryBPFunctionLibrary::STATIC_RealWorldTime__GetCurrentOSTime
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.RealWorldTime__GetCurrentOSTime");
 
-	UVictoryBPFunctionLibrary_RealWorldTime__GetCurrentOSTime_Params params;
+	UVictoryBPFunctionLibrary_RealWorldTime__GetCurrentOSTime_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (MilliSeconds != nullptr)
-		*MilliSeconds = params.MilliSeconds;
+		*MilliSeconds = fn_params.MilliSeconds;
 	if (Seconds != nullptr)
-		*Seconds = params.Seconds;
+		*Seconds = fn_params.Seconds;
 	if (Minutes != nullptr)
-		*Minutes = params.Minutes;
+		*Minutes = fn_params.Minutes;
 	if (Hours12 != nullptr)
-		*Hours12 = params.Hours12;
+		*Hours12 = fn_params.Hours12;
 	if (Hours24 != nullptr)
-		*Hours24 = params.Hours24;
+		*Hours24 = fn_params.Hours24;
 	if (Day != nullptr)
-		*Day = params.Day;
+		*Day = fn_params.Day;
 	if (Month != nullptr)
-		*Month = params.Month;
+		*Month = fn_params.Month;
 	if (Year != nullptr)
-		*Year = params.Year;
+		*Year = fn_params.Year;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4044,16 +4044,16 @@ int UVictoryBPFunctionLibrary::STATIC_RandInt_uniDis_MT()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.RandInt_uniDis_MT");
 
-	UVictoryBPFunctionLibrary_RandInt_uniDis_MT_Params params;
+	UVictoryBPFunctionLibrary_RandInt_uniDis_MT_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4066,16 +4066,16 @@ int UVictoryBPFunctionLibrary::STATIC_RandInt_uniDis()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.RandInt_uniDis");
 
-	UVictoryBPFunctionLibrary_RandInt_uniDis_Params params;
+	UVictoryBPFunctionLibrary_RandInt_uniDis_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4090,18 +4090,18 @@ int UVictoryBPFunctionLibrary::STATIC_RandInt_MINMAX_uniDis_MT(int iMin, int iMa
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.RandInt_MINMAX_uniDis_MT");
 
-	UVictoryBPFunctionLibrary_RandInt_MINMAX_uniDis_MT_Params params;
-	params.iMin = iMin;
-	params.iMax = iMax;
+	UVictoryBPFunctionLibrary_RandInt_MINMAX_uniDis_MT_Params fn_params;
+	fn_params.iMin = iMin;
+	fn_params.iMax = iMax;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4116,18 +4116,18 @@ int UVictoryBPFunctionLibrary::STATIC_RandInt_MINMAX_uniDis(int iMin, int iMax)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.RandInt_MINMAX_uniDis");
 
-	UVictoryBPFunctionLibrary_RandInt_MINMAX_uniDis_Params params;
-	params.iMin = iMin;
-	params.iMax = iMax;
+	UVictoryBPFunctionLibrary_RandInt_MINMAX_uniDis_Params fn_params;
+	fn_params.iMin = iMin;
+	fn_params.iMax = iMax;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4140,16 +4140,16 @@ float UVictoryBPFunctionLibrary::STATIC_RandFloat_uniDis_MT()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.RandFloat_uniDis_MT");
 
-	UVictoryBPFunctionLibrary_RandFloat_uniDis_MT_Params params;
+	UVictoryBPFunctionLibrary_RandFloat_uniDis_MT_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4162,16 +4162,16 @@ float UVictoryBPFunctionLibrary::STATIC_RandFloat_uniDis()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.RandFloat_uniDis");
 
-	UVictoryBPFunctionLibrary_RandFloat_uniDis_Params params;
+	UVictoryBPFunctionLibrary_RandFloat_uniDis_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4186,18 +4186,18 @@ float UVictoryBPFunctionLibrary::STATIC_RandFloat_MINMAX_uniDis_MT(float iMin, f
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.RandFloat_MINMAX_uniDis_MT");
 
-	UVictoryBPFunctionLibrary_RandFloat_MINMAX_uniDis_MT_Params params;
-	params.iMin = iMin;
-	params.iMax = iMax;
+	UVictoryBPFunctionLibrary_RandFloat_MINMAX_uniDis_MT_Params fn_params;
+	fn_params.iMin = iMin;
+	fn_params.iMax = iMax;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4212,18 +4212,18 @@ float UVictoryBPFunctionLibrary::STATIC_RandFloat_MINMAX_uniDis(float iMin, floa
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.RandFloat_MINMAX_uniDis");
 
-	UVictoryBPFunctionLibrary_RandFloat_MINMAX_uniDis_Params params;
-	params.iMin = iMin;
-	params.iMax = iMax;
+	UVictoryBPFunctionLibrary_RandFloat_MINMAX_uniDis_Params fn_params;
+	fn_params.iMin = iMin;
+	fn_params.iMax = iMax;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4237,17 +4237,17 @@ bool UVictoryBPFunctionLibrary::STATIC_RandBool_Bernoulli_MT(float fBias)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.RandBool_Bernoulli_MT");
 
-	UVictoryBPFunctionLibrary_RandBool_Bernoulli_MT_Params params;
-	params.fBias = fBias;
+	UVictoryBPFunctionLibrary_RandBool_Bernoulli_MT_Params fn_params;
+	fn_params.fBias = fBias;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4261,17 +4261,17 @@ bool UVictoryBPFunctionLibrary::STATIC_RandBool_Bernoulli(float fBias)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.RandBool_Bernoulli");
 
-	UVictoryBPFunctionLibrary_RandBool_Bernoulli_Params params;
-	params.fBias = fBias;
+	UVictoryBPFunctionLibrary_RandBool_Bernoulli_Params fn_params;
+	fn_params.fBias = fBias;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4285,17 +4285,17 @@ struct FVector2D UVictoryBPFunctionLibrary::STATIC_ProjectWorldToScreenPosition(
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.ProjectWorldToScreenPosition");
 
-	UVictoryBPFunctionLibrary_ProjectWorldToScreenPosition_Params params;
-	params.WorldLocation = WorldLocation;
+	UVictoryBPFunctionLibrary_ProjectWorldToScreenPosition_Params fn_params;
+	fn_params.WorldLocation = WorldLocation;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4310,19 +4310,19 @@ void UVictoryBPFunctionLibrary::STATIC_PointDistanceToPlane(const struct FPlane&
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.PointDistanceToPlane");
 
-	UVictoryBPFunctionLibrary_PointDistanceToPlane_Params params;
-	params.Plane = Plane;
-	params.Point = Point;
+	UVictoryBPFunctionLibrary_PointDistanceToPlane_Params fn_params;
+	fn_params.Plane = Plane;
+	fn_params.Point = Point;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Distance != nullptr)
-		*Distance = params.Distance;
+		*Distance = fn_params.Distance;
 }
 
 
@@ -4345,26 +4345,26 @@ class UAudioComponent* UVictoryBPFunctionLibrary::STATIC_PlaySoundAttachedFromFi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.PlaySoundAttachedFromFile");
 
-	UVictoryBPFunctionLibrary_PlaySoundAttachedFromFile_Params params;
-	params.FilePath = FilePath;
-	params.AttachToComponent = AttachToComponent;
-	params.AttachPointName = AttachPointName;
-	params.Location = Location;
-	params.LocationType = LocationType;
-	params.bStopWhenAttachedToDestroyed = bStopWhenAttachedToDestroyed;
-	params.VolumeMultiplier = VolumeMultiplier;
-	params.PitchMultiplier = PitchMultiplier;
-	params.StartTime = StartTime;
-	params.AttenuationSettings = AttenuationSettings;
+	UVictoryBPFunctionLibrary_PlaySoundAttachedFromFile_Params fn_params;
+	fn_params.FilePath = FilePath;
+	fn_params.AttachToComponent = AttachToComponent;
+	fn_params.AttachPointName = AttachPointName;
+	fn_params.Location = Location;
+	fn_params.LocationType = LocationType;
+	fn_params.bStopWhenAttachedToDestroyed = bStopWhenAttachedToDestroyed;
+	fn_params.VolumeMultiplier = VolumeMultiplier;
+	fn_params.PitchMultiplier = PitchMultiplier;
+	fn_params.StartTime = StartTime;
+	fn_params.AttenuationSettings = AttenuationSettings;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4383,19 +4383,19 @@ void UVictoryBPFunctionLibrary::STATIC_PlaySoundAtLocationFromFile(class UObject
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.PlaySoundAtLocationFromFile");
 
-	UVictoryBPFunctionLibrary_PlaySoundAtLocationFromFile_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.FilePath = FilePath;
-	params.Location = Location;
-	params.VolumeMultiplier = VolumeMultiplier;
-	params.PitchMultiplier = PitchMultiplier;
-	params.StartTime = StartTime;
-	params.AttenuationSettings = AttenuationSettings;
+	UVictoryBPFunctionLibrary_PlaySoundAtLocationFromFile_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.FilePath = FilePath;
+	fn_params.Location = Location;
+	fn_params.VolumeMultiplier = VolumeMultiplier;
+	fn_params.PitchMultiplier = PitchMultiplier;
+	fn_params.StartTime = StartTime;
+	fn_params.AttenuationSettings = AttenuationSettings;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -4412,20 +4412,20 @@ bool UVictoryBPFunctionLibrary::STATIC_PlayerState_GetPlayerID(class APlayerCont
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.PlayerState_GetPlayerID");
 
-	UVictoryBPFunctionLibrary_PlayerState_GetPlayerID_Params params;
-	params.ThePC = ThePC;
+	UVictoryBPFunctionLibrary_PlayerState_GetPlayerID_Params fn_params;
+	fn_params.ThePC = ThePC;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (PlayerId != nullptr)
-		*PlayerId = params.PlayerId;
+		*PlayerId = fn_params.PlayerId;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4440,20 +4440,20 @@ bool UVictoryBPFunctionLibrary::STATIC_PlayerController_GetControllerID(class AP
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.PlayerController_GetControllerID");
 
-	UVictoryBPFunctionLibrary_PlayerController_GetControllerID_Params params;
-	params.ThePC = ThePC;
+	UVictoryBPFunctionLibrary_PlayerController_GetControllerID_Params fn_params;
+	fn_params.ThePC = ThePC;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (ControllerId != nullptr)
-		*ControllerId = params.ControllerId;
+		*ControllerId = fn_params.ControllerId;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4469,19 +4469,19 @@ bool UVictoryBPFunctionLibrary::STATIC_Physics__UpdateCharacterCameraToRagdollLo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Physics__UpdateCharacterCameraToRagdollLocation");
 
-	UVictoryBPFunctionLibrary_Physics__UpdateCharacterCameraToRagdollLocation_Params params;
-	params.TheCharacter = TheCharacter;
-	params.HeightOffset = HeightOffset;
-	params.InterpSpeed = InterpSpeed;
+	UVictoryBPFunctionLibrary_Physics__UpdateCharacterCameraToRagdollLocation_Params fn_params;
+	fn_params.TheCharacter = TheCharacter;
+	fn_params.HeightOffset = HeightOffset;
+	fn_params.InterpSpeed = InterpSpeed;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4499,21 +4499,21 @@ bool UVictoryBPFunctionLibrary::STATIC_Physics__LeaveRagDoll(class AActor* TheCh
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Physics__LeaveRagDoll");
 
-	UVictoryBPFunctionLibrary_Physics__LeaveRagDoll_Params params;
-	params.TheCharacter = TheCharacter;
-	params.SetToFallingMovementMode = SetToFallingMovementMode;
-	params.HeightAboveRBMesh = HeightAboveRBMesh;
-	params.InitLocation = InitLocation;
-	params.InitRotation = InitRotation;
+	UVictoryBPFunctionLibrary_Physics__LeaveRagDoll_Params fn_params;
+	fn_params.TheCharacter = TheCharacter;
+	fn_params.SetToFallingMovementMode = SetToFallingMovementMode;
+	fn_params.HeightAboveRBMesh = HeightAboveRBMesh;
+	fn_params.InitLocation = InitLocation;
+	fn_params.InitRotation = InitRotation;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4527,17 +4527,17 @@ bool UVictoryBPFunctionLibrary::STATIC_Physics__IsRagDoll(class AActor* TheChara
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Physics__IsRagDoll");
 
-	UVictoryBPFunctionLibrary_Physics__IsRagDoll_Params params;
-	params.TheCharacter = TheCharacter;
+	UVictoryBPFunctionLibrary_Physics__IsRagDoll_Params fn_params;
+	fn_params.TheCharacter = TheCharacter;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4553,22 +4553,22 @@ bool UVictoryBPFunctionLibrary::STATIC_Physics__InitializeVictoryRagDoll(class A
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Physics__InitializeVictoryRagDoll");
 
-	UVictoryBPFunctionLibrary_Physics__InitializeVictoryRagDoll_Params params;
-	params.TheCharacter = TheCharacter;
+	UVictoryBPFunctionLibrary_Physics__InitializeVictoryRagDoll_Params fn_params;
+	fn_params.TheCharacter = TheCharacter;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (InitLocation != nullptr)
-		*InitLocation = params.InitLocation;
+		*InitLocation = fn_params.InitLocation;
 	if (InitRotation != nullptr)
-		*InitRotation = params.InitRotation;
+		*InitRotation = fn_params.InitRotation;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4583,20 +4583,20 @@ bool UVictoryBPFunctionLibrary::STATIC_Physics__GetLocationofRagDoll(class AActo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Physics__GetLocationofRagDoll");
 
-	UVictoryBPFunctionLibrary_Physics__GetLocationofRagDoll_Params params;
-	params.TheCharacter = TheCharacter;
+	UVictoryBPFunctionLibrary_Physics__GetLocationofRagDoll_Params fn_params;
+	fn_params.TheCharacter = TheCharacter;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (RagdollLocation != nullptr)
-		*RagdollLocation = params.RagdollLocation;
+		*RagdollLocation = fn_params.RagdollLocation;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4610,17 +4610,17 @@ bool UVictoryBPFunctionLibrary::STATIC_Physics__EnterRagDoll(class AActor* TheCh
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Physics__EnterRagDoll");
 
-	UVictoryBPFunctionLibrary_Physics__EnterRagDoll_Params params;
-	params.TheCharacter = TheCharacter;
+	UVictoryBPFunctionLibrary_Physics__EnterRagDoll_Params fn_params;
+	fn_params.TheCharacter = TheCharacter;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4637,24 +4637,24 @@ bool UVictoryBPFunctionLibrary::STATIC_OptionsMenu__GetDisplayAdapterScreenResol
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.OptionsMenu__GetDisplayAdapterScreenResolutions");
 
-	UVictoryBPFunctionLibrary_OptionsMenu__GetDisplayAdapterScreenResolutions_Params params;
-	params.IncludeRefreshRates = IncludeRefreshRates;
+	UVictoryBPFunctionLibrary_OptionsMenu__GetDisplayAdapterScreenResolutions_Params fn_params;
+	fn_params.IncludeRefreshRates = IncludeRefreshRates;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Widths != nullptr)
-		*Widths = params.Widths;
+		*Widths = fn_params.Widths;
 	if (Heights != nullptr)
-		*Heights = params.Heights;
+		*Heights = fn_params.Heights;
 	if (RefreshRates != nullptr)
-		*RefreshRates = params.RefreshRates;
+		*RefreshRates = fn_params.RefreshRates;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4677,37 +4677,37 @@ void UVictoryBPFunctionLibrary::STATIC_OperatingSystem__GetCurrentPlatform(bool*
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.OperatingSystem__GetCurrentPlatform");
 
-	UVictoryBPFunctionLibrary_OperatingSystem__GetCurrentPlatform_Params params;
+	UVictoryBPFunctionLibrary_OperatingSystem__GetCurrentPlatform_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Windows_ != nullptr)
-		*Windows_ = params.Windows_;
+		*Windows_ = fn_params.Windows_;
 	if (Mac != nullptr)
-		*Mac = params.Mac;
+		*Mac = fn_params.Mac;
 	if (Linux != nullptr)
-		*Linux = params.Linux;
+		*Linux = fn_params.Linux;
 	if (IOS != nullptr)
-		*IOS = params.IOS;
+		*IOS = fn_params.IOS;
 	if (Android != nullptr)
-		*Android = params.Android;
+		*Android = fn_params.Android;
 	if (Android_ARM != nullptr)
-		*Android_ARM = params.Android_ARM;
+		*Android_ARM = fn_params.Android_ARM;
 	if (Android_Vulkan != nullptr)
-		*Android_Vulkan = params.Android_Vulkan;
+		*Android_Vulkan = fn_params.Android_Vulkan;
 	if (PS4 != nullptr)
-		*PS4 = params.PS4;
+		*PS4 = fn_params.PS4;
 	if (XBoxOne != nullptr)
-		*XBoxOne = params.XBoxOne;
+		*XBoxOne = fn_params.XBoxOne;
 	if (HTML5 != nullptr)
-		*HTML5 = params.HTML5;
+		*HTML5 = fn_params.HTML5;
 	if (Apple != nullptr)
-		*Apple = params.Apple;
+		*Apple = fn_params.Apple;
 }
 
 
@@ -4720,13 +4720,13 @@ void UVictoryBPFunctionLibrary::STATIC_Open_URL_In_Web_Browser(const struct FStr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Open_URL_In_Web_Browser");
 
-	UVictoryBPFunctionLibrary_Open_URL_In_Web_Browser_Params params;
-	params.TheURL = TheURL;
+	UVictoryBPFunctionLibrary_Open_URL_In_Web_Browser_Params fn_params;
+	fn_params.TheURL = TheURL;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -4744,19 +4744,19 @@ bool UVictoryBPFunctionLibrary::STATIC_NotEqual_Vector2DVector2D(const struct FV
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.NotEqual_Vector2DVector2D");
 
-	UVictoryBPFunctionLibrary_NotEqual_Vector2DVector2D_Params params;
-	params.A = A;
-	params.B = B;
-	params.ErrorTolerance = ErrorTolerance;
+	UVictoryBPFunctionLibrary_NotEqual_Vector2DVector2D_Params fn_params;
+	fn_params.A = A;
+	fn_params.B = B;
+	fn_params.ErrorTolerance = ErrorTolerance;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4771,18 +4771,18 @@ bool UVictoryBPFunctionLibrary::STATIC_Mobility__SetSceneCompMobility(class USce
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Mobility__SetSceneCompMobility");
 
-	UVictoryBPFunctionLibrary_Mobility__SetSceneCompMobility_Params params;
-	params.SceneComp = SceneComp;
-	params.NewMobility = NewMobility;
+	UVictoryBPFunctionLibrary_Mobility__SetSceneCompMobility_Params fn_params;
+	fn_params.SceneComp = SceneComp;
+	fn_params.NewMobility = NewMobility;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4797,20 +4797,20 @@ void UVictoryBPFunctionLibrary::STATIC_MinOfIntArray(TArray<int> IntArray, int* 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.MinOfIntArray");
 
-	UVictoryBPFunctionLibrary_MinOfIntArray_Params params;
-	params.IntArray = IntArray;
+	UVictoryBPFunctionLibrary_MinOfIntArray_Params fn_params;
+	fn_params.IntArray = IntArray;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IndexOfMinValue != nullptr)
-		*IndexOfMinValue = params.IndexOfMinValue;
+		*IndexOfMinValue = fn_params.IndexOfMinValue;
 	if (MinValue != nullptr)
-		*MinValue = params.MinValue;
+		*MinValue = fn_params.MinValue;
 }
 
 
@@ -4825,20 +4825,20 @@ void UVictoryBPFunctionLibrary::STATIC_MinOfFloatArray(TArray<float> FloatArray,
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.MinOfFloatArray");
 
-	UVictoryBPFunctionLibrary_MinOfFloatArray_Params params;
-	params.FloatArray = FloatArray;
+	UVictoryBPFunctionLibrary_MinOfFloatArray_Params fn_params;
+	fn_params.FloatArray = FloatArray;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IndexOfMinValue != nullptr)
-		*IndexOfMinValue = params.IndexOfMinValue;
+		*IndexOfMinValue = fn_params.IndexOfMinValue;
 	if (MinValue != nullptr)
-		*MinValue = params.MinValue;
+		*MinValue = fn_params.MinValue;
 }
 
 
@@ -4853,20 +4853,20 @@ void UVictoryBPFunctionLibrary::STATIC_MaxOfIntArray(TArray<int> IntArray, int* 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.MaxOfIntArray");
 
-	UVictoryBPFunctionLibrary_MaxOfIntArray_Params params;
-	params.IntArray = IntArray;
+	UVictoryBPFunctionLibrary_MaxOfIntArray_Params fn_params;
+	fn_params.IntArray = IntArray;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IndexOfMaxValue != nullptr)
-		*IndexOfMaxValue = params.IndexOfMaxValue;
+		*IndexOfMaxValue = fn_params.IndexOfMaxValue;
 	if (MaxValue != nullptr)
-		*MaxValue = params.MaxValue;
+		*MaxValue = fn_params.MaxValue;
 }
 
 
@@ -4881,20 +4881,20 @@ void UVictoryBPFunctionLibrary::STATIC_MaxOfFloatArray(TArray<float> FloatArray,
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.MaxOfFloatArray");
 
-	UVictoryBPFunctionLibrary_MaxOfFloatArray_Params params;
-	params.FloatArray = FloatArray;
+	UVictoryBPFunctionLibrary_MaxOfFloatArray_Params fn_params;
+	fn_params.FloatArray = FloatArray;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IndexOfMaxValue != nullptr)
-		*IndexOfMaxValue = params.IndexOfMaxValue;
+		*IndexOfMaxValue = fn_params.IndexOfMaxValue;
 	if (MaxValue != nullptr)
-		*MaxValue = params.MaxValue;
+		*MaxValue = fn_params.MaxValue;
 }
 
 
@@ -4912,21 +4912,21 @@ float UVictoryBPFunctionLibrary::STATIC_MapRangeClamped(float Value, float InRan
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.MapRangeClamped");
 
-	UVictoryBPFunctionLibrary_MapRangeClamped_Params params;
-	params.Value = Value;
-	params.InRangeA = InRangeA;
-	params.InRangeB = InRangeB;
-	params.OutRangeA = OutRangeA;
-	params.OutRangeB = OutRangeB;
+	UVictoryBPFunctionLibrary_MapRangeClamped_Params fn_params;
+	fn_params.Value = Value;
+	fn_params.InRangeA = InRangeA;
+	fn_params.InRangeB = InRangeB;
+	fn_params.OutRangeA = OutRangeA;
+	fn_params.OutRangeB = OutRangeB;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4937,12 +4937,12 @@ void UVictoryBPFunctionLibrary::STATIC_Loops_ResetBPRunawayCounter()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Loops_ResetBPRunawayCounter");
 
-	UVictoryBPFunctionLibrary_Loops_ResetBPRunawayCounter_Params params;
+	UVictoryBPFunctionLibrary_Loops_ResetBPRunawayCounter_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -4961,24 +4961,24 @@ class UTexture2D* UVictoryBPFunctionLibrary::STATIC_LoadTexture2D_FromFileByExte
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.LoadTexture2D_FromFileByExtension");
 
-	UVictoryBPFunctionLibrary_LoadTexture2D_FromFileByExtension_Params params;
-	params.ImagePath = ImagePath;
+	UVictoryBPFunctionLibrary_LoadTexture2D_FromFileByExtension_Params fn_params;
+	fn_params.ImagePath = ImagePath;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 	if (OutWidth != nullptr)
-		*OutWidth = params.OutWidth;
+		*OutWidth = fn_params.OutWidth;
 	if (OutHeight != nullptr)
-		*OutHeight = params.OutHeight;
+		*OutHeight = fn_params.OutHeight;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -4992,17 +4992,17 @@ class UTexture2D* UVictoryBPFunctionLibrary::STATIC_LoadTexture2D_FromDDSFile(co
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.LoadTexture2D_FromDDSFile");
 
-	UVictoryBPFunctionLibrary_LoadTexture2D_FromDDSFile_Params params;
-	params.FullFilePath = FullFilePath;
+	UVictoryBPFunctionLibrary_LoadTexture2D_FromDDSFile_Params fn_params;
+	fn_params.FullFilePath = FullFilePath;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5017,20 +5017,20 @@ bool UVictoryBPFunctionLibrary::STATIC_LoadStringFromFile(const struct FString& 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.LoadStringFromFile");
 
-	UVictoryBPFunctionLibrary_LoadStringFromFile_Params params;
-	params.FullFilePath = FullFilePath;
+	UVictoryBPFunctionLibrary_LoadStringFromFile_Params fn_params;
+	fn_params.FullFilePath = FullFilePath;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Result != nullptr)
-		*Result = params.Result;
+		*Result = fn_params.Result;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5047,23 +5047,23 @@ bool UVictoryBPFunctionLibrary::STATIC_LoadStringArrayFromFile(const struct FStr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.LoadStringArrayFromFile");
 
-	UVictoryBPFunctionLibrary_LoadStringArrayFromFile_Params params;
-	params.FullFilePath = FullFilePath;
-	params.ExcludeEmptyLines = ExcludeEmptyLines;
+	UVictoryBPFunctionLibrary_LoadStringArrayFromFile_Params fn_params;
+	fn_params.FullFilePath = FullFilePath;
+	fn_params.ExcludeEmptyLines = ExcludeEmptyLines;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (StringArray != nullptr)
-		*StringArray = params.StringArray;
+		*StringArray = fn_params.StringArray;
 	if (ArraySize != nullptr)
-		*ArraySize = params.ArraySize;
+		*ArraySize = fn_params.ArraySize;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5079,21 +5079,21 @@ class UObject* UVictoryBPFunctionLibrary::STATIC_LoadObjectFromAssetPath(class U
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.LoadObjectFromAssetPath");
 
-	UVictoryBPFunctionLibrary_LoadObjectFromAssetPath_Params params;
-	params.ObjectClass = ObjectClass;
-	params.Path = Path;
+	UVictoryBPFunctionLibrary_LoadObjectFromAssetPath_Params fn_params;
+	fn_params.ObjectClass = ObjectClass;
+	fn_params.Path = Path;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5111,25 +5111,25 @@ bool UVictoryBPFunctionLibrary::STATIC_LensFlare__GetLensFlareOffsets(class APla
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.LensFlare__GetLensFlareOffsets");
 
-	UVictoryBPFunctionLibrary_LensFlare__GetLensFlareOffsets_Params params;
-	params.PlayerController = PlayerController;
-	params.LightSource = LightSource;
+	UVictoryBPFunctionLibrary_LensFlare__GetLensFlareOffsets_Params fn_params;
+	fn_params.PlayerController = PlayerController;
+	fn_params.LightSource = LightSource;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (PitchOffset != nullptr)
-		*PitchOffset = params.PitchOffset;
+		*PitchOffset = fn_params.PitchOffset;
 	if (YawOffset != nullptr)
-		*YawOffset = params.YawOffset;
+		*YawOffset = fn_params.YawOffset;
 	if (RollOffset != nullptr)
-		*RollOffset = params.RollOffset;
+		*RollOffset = fn_params.RollOffset;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5148,27 +5148,27 @@ void UVictoryBPFunctionLibrary::STATIC_JoyIsKey(const struct FKeyEvent& KeyEvent
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.JoyIsKey");
 
-	UVictoryBPFunctionLibrary_JoyIsKey_Params params;
-	params.KeyEvent = KeyEvent;
-	params.Key = Key;
+	UVictoryBPFunctionLibrary_JoyIsKey_Params fn_params;
+	fn_params.KeyEvent = KeyEvent;
+	fn_params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Ctrl != nullptr)
-		*Ctrl = params.Ctrl;
+		*Ctrl = fn_params.Ctrl;
 	if (Shift != nullptr)
-		*Shift = params.Shift;
+		*Shift = fn_params.Shift;
 	if (Alt != nullptr)
-		*Alt = params.Alt;
+		*Alt = fn_params.Alt;
 	if (Cmd != nullptr)
-		*Cmd = params.Cmd;
+		*Cmd = fn_params.Cmd;
 	if (Match != nullptr)
-		*Match = params.Match;
+		*Match = fn_params.Match;
 }
 
 
@@ -5181,13 +5181,13 @@ void UVictoryBPFunctionLibrary::STATIC_JoyGraphicsSettings__FullScreen_Set(TEnum
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.JoyGraphicsSettings__FullScreen_Set");
 
-	UVictoryBPFunctionLibrary_JoyGraphicsSettings__FullScreen_Set_Params params;
-	params.NewSetting = NewSetting;
+	UVictoryBPFunctionLibrary_JoyGraphicsSettings__FullScreen_Set_Params fn_params;
+	fn_params.NewSetting = NewSetting;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -5202,16 +5202,16 @@ TEnumAsByte<EJoyGraphicsFullScreen> UVictoryBPFunctionLibrary::STATIC_JoyGraphic
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.JoyGraphicsSettings__FullScreen_Get");
 
-	UVictoryBPFunctionLibrary_JoyGraphicsSettings__FullScreen_Get_Params params;
+	UVictoryBPFunctionLibrary_JoyGraphicsSettings__FullScreen_Get_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5227,21 +5227,21 @@ bool UVictoryBPFunctionLibrary::STATIC_JoyFileIO_GetFilesInRootAndAllSubFolders(
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.JoyFileIO_GetFilesInRootAndAllSubFolders");
 
-	UVictoryBPFunctionLibrary_JoyFileIO_GetFilesInRootAndAllSubFolders_Params params;
-	params.RootFolderFullPath = RootFolderFullPath;
-	params.Ext = Ext;
+	UVictoryBPFunctionLibrary_JoyFileIO_GetFilesInRootAndAllSubFolders_Params fn_params;
+	fn_params.RootFolderFullPath = RootFolderFullPath;
+	fn_params.Ext = Ext;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Files != nullptr)
-		*Files = params.Files;
+		*Files = fn_params.Files;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5257,21 +5257,21 @@ bool UVictoryBPFunctionLibrary::STATIC_JoyFileIO_GetFiles(const struct FString& 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.JoyFileIO_GetFiles");
 
-	UVictoryBPFunctionLibrary_JoyFileIO_GetFiles_Params params;
-	params.RootFolderFullPath = RootFolderFullPath;
-	params.Ext = Ext;
+	UVictoryBPFunctionLibrary_JoyFileIO_GetFiles_Params fn_params;
+	fn_params.RootFolderFullPath = RootFolderFullPath;
+	fn_params.Ext = Ext;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Files != nullptr)
-		*Files = params.Files;
+		*Files = fn_params.Files;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5286,18 +5286,18 @@ bool UVictoryBPFunctionLibrary::STATIC_IsWidgetOfClassInViewport(class UObject* 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.IsWidgetOfClassInViewport");
 
-	UVictoryBPFunctionLibrary_IsWidgetOfClassInViewport_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.WidgetClass = WidgetClass;
+	UVictoryBPFunctionLibrary_IsWidgetOfClassInViewport_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.WidgetClass = WidgetClass;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5311,17 +5311,17 @@ bool UVictoryBPFunctionLibrary::STATIC_IsStandAlone(class UObject* WorldContextO
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.IsStandAlone");
 
-	UVictoryBPFunctionLibrary_IsStandAlone_Params params;
-	params.WorldContextObject = WorldContextObject;
+	UVictoryBPFunctionLibrary_IsStandAlone_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5337,19 +5337,19 @@ bool UVictoryBPFunctionLibrary::STATIC_IsPointOnPlane(const struct FPlane& Plane
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.IsPointOnPlane");
 
-	UVictoryBPFunctionLibrary_IsPointOnPlane_Params params;
-	params.Plane = Plane;
-	params.Point = Point;
-	params.Tolerance = Tolerance;
+	UVictoryBPFunctionLibrary_IsPointOnPlane_Params fn_params;
+	fn_params.Plane = Plane;
+	fn_params.Point = Point;
+	fn_params.Tolerance = Tolerance;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5363,17 +5363,17 @@ bool UVictoryBPFunctionLibrary::STATIC_IsAlphaNumeric(const struct FString& stri
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.IsAlphaNumeric");
 
-	UVictoryBPFunctionLibrary_IsAlphaNumeric_Params params;
-	params.string = string;
+	UVictoryBPFunctionLibrary_IsAlphaNumeric_Params fn_params;
+	fn_params.string = string;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5389,19 +5389,19 @@ class UPanelSlot* UVictoryBPFunctionLibrary::STATIC_InsertChildAt(class UWidget*
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.InsertChildAt");
 
-	UVictoryBPFunctionLibrary_InsertChildAt_Params params;
-	params.Parent = Parent;
-	params.Index = Index;
-	params.Content = Content;
+	UVictoryBPFunctionLibrary_InsertChildAt_Params fn_params;
+	fn_params.Parent = Parent;
+	fn_params.Index = Index;
+	fn_params.Content = Content;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5416,18 +5416,18 @@ float UVictoryBPFunctionLibrary::STATIC_HorizontalFOV(float VerticalFOV, float A
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.HorizontalFOV");
 
-	UVictoryBPFunctionLibrary_HorizontalFOV_Params params;
-	params.VerticalFOV = VerticalFOV;
-	params.AspectRatio = AspectRatio;
+	UVictoryBPFunctionLibrary_HorizontalFOV_Params fn_params;
+	fn_params.VerticalFOV = VerticalFOV;
+	fn_params.AspectRatio = AspectRatio;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5440,13 +5440,13 @@ void UVictoryBPFunctionLibrary::STATIC_HideStreamingLevel(class ULevelStreamingK
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.HideStreamingLevel");
 
-	UVictoryBPFunctionLibrary_HideStreamingLevel_Params params;
-	params.LevelInstance = LevelInstance;
+	UVictoryBPFunctionLibrary_HideStreamingLevel_Params fn_params;
+	fn_params.LevelInstance = LevelInstance;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -5465,20 +5465,20 @@ bool UVictoryBPFunctionLibrary::STATIC_HasSubstring(const struct FString& Search
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.HasSubstring");
 
-	UVictoryBPFunctionLibrary_HasSubstring_Params params;
-	params.SearchIn = SearchIn;
-	params.SubString = SubString;
-	params.SearchCase = SearchCase;
-	params.SearchDir = SearchDir;
+	UVictoryBPFunctionLibrary_HasSubstring_Params fn_params;
+	fn_params.SearchIn = SearchIn;
+	fn_params.SubString = SubString;
+	fn_params.SearchCase = SearchCase;
+	fn_params.SearchDir = SearchDir;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5489,12 +5489,12 @@ void UVictoryBPFunctionLibrary::STATIC_GraphicsSettings__SetFrameRateToBeUnbound
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GraphicsSettings__SetFrameRateToBeUnbound");
 
-	UVictoryBPFunctionLibrary_GraphicsSettings__SetFrameRateToBeUnbound_Params params;
+	UVictoryBPFunctionLibrary_GraphicsSettings__SetFrameRateToBeUnbound_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -5509,13 +5509,13 @@ void UVictoryBPFunctionLibrary::STATIC_GraphicsSettings__SetFrameRateCap(float N
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GraphicsSettings__SetFrameRateCap");
 
-	UVictoryBPFunctionLibrary_GraphicsSettings__SetFrameRateCap_Params params;
-	params.NewValue = NewValue;
+	UVictoryBPFunctionLibrary_GraphicsSettings__SetFrameRateCap_Params fn_params;
+	fn_params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -5532,18 +5532,18 @@ class UWidget* UVictoryBPFunctionLibrary::STATIC_GetWidgetFromName(class UUserWi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetWidgetFromName");
 
-	UVictoryBPFunctionLibrary_GetWidgetFromName_Params params;
-	params.ParentUserWidget = ParentUserWidget;
-	params.Name = Name;
+	UVictoryBPFunctionLibrary_GetWidgetFromName_Params fn_params;
+	fn_params.ParentUserWidget = ParentUserWidget;
+	fn_params.Name = Name;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5561,23 +5561,23 @@ bool UVictoryBPFunctionLibrary::STATIC_GetViewportPositionHitResultByChannel(cla
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetViewportPositionHitResultByChannel");
 
-	UVictoryBPFunctionLibrary_GetViewportPositionHitResultByChannel_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.ViewportPosition = ViewportPosition;
-	params.TraceChannel = TraceChannel;
-	params.bTraceComplex = bTraceComplex;
+	UVictoryBPFunctionLibrary_GetViewportPositionHitResultByChannel_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.ViewportPosition = ViewportPosition;
+	fn_params.TraceChannel = TraceChannel;
+	fn_params.bTraceComplex = bTraceComplex;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutHitResult != nullptr)
-		*OutHitResult = params.OutHitResult;
+		*OutHitResult = fn_params.OutHitResult;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5593,21 +5593,21 @@ bool UVictoryBPFunctionLibrary::STATIC_GetViewportPosition(class UObject* WorldC
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetViewportPosition");
 
-	UVictoryBPFunctionLibrary_GetViewportPosition_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.ScreenPosition = ScreenPosition;
+	UVictoryBPFunctionLibrary_GetViewportPosition_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.ScreenPosition = ScreenPosition;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutViewportPosition != nullptr)
-		*OutViewportPosition = params.OutViewportPosition;
+		*OutViewportPosition = fn_params.OutViewportPosition;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5623,19 +5623,19 @@ struct FVector UVictoryBPFunctionLibrary::STATIC_GetVectorRelativeLocation(const
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetVectorRelativeLocation");
 
-	UVictoryBPFunctionLibrary_GetVectorRelativeLocation_Params params;
-	params.ParentLocation = ParentLocation;
-	params.ParentRotation = ParentRotation;
-	params.ChildLocation = ChildLocation;
+	UVictoryBPFunctionLibrary_GetVectorRelativeLocation_Params fn_params;
+	fn_params.ParentLocation = ParentLocation;
+	fn_params.ParentRotation = ParentRotation;
+	fn_params.ChildLocation = ChildLocation;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5649,18 +5649,18 @@ void UVictoryBPFunctionLibrary::STATIC_GetUTCFromUnixTimeStamp(int UnixTimeStamp
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetUTCFromUnixTimeStamp");
 
-	UVictoryBPFunctionLibrary_GetUTCFromUnixTimeStamp_Params params;
-	params.UnixTimeStamp = UnixTimeStamp;
+	UVictoryBPFunctionLibrary_GetUTCFromUnixTimeStamp_Params fn_params;
+	fn_params.UnixTimeStamp = UnixTimeStamp;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (UTCTime != nullptr)
-		*UTCTime = params.UTCTime;
+		*UTCTime = fn_params.UTCTime;
 }
 
 
@@ -5677,25 +5677,25 @@ void UVictoryBPFunctionLibrary::STATIC_GetUserDisplayAdapterBrand(bool* IsAMD, b
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetUserDisplayAdapterBrand");
 
-	UVictoryBPFunctionLibrary_GetUserDisplayAdapterBrand_Params params;
+	UVictoryBPFunctionLibrary_GetUserDisplayAdapterBrand_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsAMD != nullptr)
-		*IsAMD = params.IsAMD;
+		*IsAMD = fn_params.IsAMD;
 	if (IsNvidia != nullptr)
-		*IsNvidia = params.IsNvidia;
+		*IsNvidia = fn_params.IsNvidia;
 	if (IsIntel != nullptr)
-		*IsIntel = params.IsIntel;
+		*IsIntel = fn_params.IsIntel;
 	if (IsUnknown != nullptr)
-		*IsUnknown = params.IsUnknown;
+		*IsUnknown = fn_params.IsUnknown;
 	if (UnknownId != nullptr)
-		*UnknownId = params.UnknownId;
+		*UnknownId = fn_params.UnknownId;
 }
 
 
@@ -5709,17 +5709,17 @@ int UVictoryBPFunctionLibrary::STATIC_GetUnixTimeStamp(const struct FDateTime& U
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetUnixTimeStamp");
 
-	UVictoryBPFunctionLibrary_GetUnixTimeStamp_Params params;
-	params.UTCTime = UTCTime;
+	UVictoryBPFunctionLibrary_GetUnixTimeStamp_Params fn_params;
+	fn_params.UTCTime = UTCTime;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5733,17 +5733,17 @@ float UVictoryBPFunctionLibrary::STATIC_GetTimeInPlay(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetTimeInPlay");
 
-	UVictoryBPFunctionLibrary_GetTimeInPlay_Params params;
-	params.Actor = Actor;
+	UVictoryBPFunctionLibrary_GetTimeInPlay_Params fn_params;
+	fn_params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5757,17 +5757,17 @@ float UVictoryBPFunctionLibrary::STATIC_GetTimeAlive(class AActor* Target)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetTimeAlive");
 
-	UVictoryBPFunctionLibrary_GetTimeAlive_Params params;
-	params.Target = Target;
+	UVictoryBPFunctionLibrary_GetTimeAlive_Params fn_params;
+	fn_params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5782,20 +5782,20 @@ bool UVictoryBPFunctionLibrary::STATIC_GetStaticMeshVertexLocations(class UStati
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetStaticMeshVertexLocations");
 
-	UVictoryBPFunctionLibrary_GetStaticMeshVertexLocations_Params params;
-	params.Comp = Comp;
+	UVictoryBPFunctionLibrary_GetStaticMeshVertexLocations_Params fn_params;
+	fn_params.Comp = Comp;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (VertexPositions != nullptr)
-		*VertexPositions = params.VertexPositions;
+		*VertexPositions = fn_params.VertexPositions;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5809,17 +5809,17 @@ class USoundWave* UVictoryBPFunctionLibrary::STATIC_GetSoundWaveFromFile(const s
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetSoundWaveFromFile");
 
-	UVictoryBPFunctionLibrary_GetSoundWaveFromFile_Params params;
-	params.FilePath = FilePath;
+	UVictoryBPFunctionLibrary_GetSoundWaveFromFile_Params fn_params;
+	fn_params.FilePath = FilePath;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5834,18 +5834,18 @@ struct FRotator UVictoryBPFunctionLibrary::STATIC_GetRotatorRelativeRotation(con
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetRotatorRelativeRotation");
 
-	UVictoryBPFunctionLibrary_GetRotatorRelativeRotation_Params params;
-	params.ParentRotation = ParentRotation;
-	params.ChildRotation = ChildRotation;
+	UVictoryBPFunctionLibrary_GetRotatorRelativeRotation_Params fn_params;
+	fn_params.ParentRotation = ParentRotation;
+	fn_params.ChildRotation = ChildRotation;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5858,16 +5858,16 @@ int UVictoryBPFunctionLibrary::STATIC_GetPlayerUniqueNetID()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetPlayerUniqueNetID");
 
-	UVictoryBPFunctionLibrary_GetPlayerUniqueNetID_Params params;
+	UVictoryBPFunctionLibrary_GetPlayerUniqueNetID_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5882,18 +5882,18 @@ class APlayerStart* UVictoryBPFunctionLibrary::STATIC_GetPlayerStart(class UObje
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetPlayerStart");
 
-	UVictoryBPFunctionLibrary_GetPlayerStart_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.PlayerStartName = PlayerStartName;
+	UVictoryBPFunctionLibrary_GetPlayerStart_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.PlayerStartName = PlayerStartName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5907,17 +5907,17 @@ struct FName UVictoryBPFunctionLibrary::STATIC_GetObjectPath(class UObject* Obj)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetObjectPath");
 
-	UVictoryBPFunctionLibrary_GetObjectPath_Params params;
-	params.Obj = Obj;
+	UVictoryBPFunctionLibrary_GetObjectPath_Params fn_params;
+	fn_params.Obj = Obj;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5931,18 +5931,18 @@ void UVictoryBPFunctionLibrary::STATIC_GetNamesOfLoadedLevels(class UObject* Wor
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetNamesOfLoadedLevels");
 
-	UVictoryBPFunctionLibrary_GetNamesOfLoadedLevels_Params params;
-	params.WorldContextObject = WorldContextObject;
+	UVictoryBPFunctionLibrary_GetNamesOfLoadedLevels_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (NamesOfLoadedLevels != nullptr)
-		*NamesOfLoadedLevels = params.NamesOfLoadedLevels;
+		*NamesOfLoadedLevels = fn_params.NamesOfLoadedLevels;
 }
 
 
@@ -5956,17 +5956,17 @@ struct FLevelStreamInstanceInfo UVictoryBPFunctionLibrary::STATIC_GetLevelInstan
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetLevelInstanceInfo");
 
-	UVictoryBPFunctionLibrary_GetLevelInstanceInfo_Params params;
-	params.LevelInstance = LevelInstance;
+	UVictoryBPFunctionLibrary_GetLevelInstanceInfo_Params fn_params;
+	fn_params.LevelInstance = LevelInstance;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -5979,16 +5979,16 @@ struct FName UVictoryBPFunctionLibrary::STATIC_GetHeadMountedDisplayDeviceType()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetHeadMountedDisplayDeviceType");
 
-	UVictoryBPFunctionLibrary_GetHeadMountedDisplayDeviceType_Params params;
+	UVictoryBPFunctionLibrary_GetHeadMountedDisplayDeviceType_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6002,17 +6002,17 @@ unsigned char UVictoryBPFunctionLibrary::STATIC_GetGenericTeamId(class AActor* T
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetGenericTeamId");
 
-	UVictoryBPFunctionLibrary_GetGenericTeamId_Params params;
-	params.Target = Target;
+	UVictoryBPFunctionLibrary_GetGenericTeamId_Params fn_params;
+	fn_params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6028,19 +6028,19 @@ class UUserWidget* UVictoryBPFunctionLibrary::STATIC_GetFirstWidgetOfClass(class
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetFirstWidgetOfClass");
 
-	UVictoryBPFunctionLibrary_GetFirstWidgetOfClass_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.WidgetClass = WidgetClass;
-	params.TopLevelOnly = TopLevelOnly;
+	UVictoryBPFunctionLibrary_GetFirstWidgetOfClass_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.WidgetClass = WidgetClass;
+	fn_params.TopLevelOnly = TopLevelOnly;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6056,21 +6056,21 @@ float UVictoryBPFunctionLibrary::STATIC_GetDistanceToCollision(class UPrimitiveC
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetDistanceToCollision");
 
-	UVictoryBPFunctionLibrary_GetDistanceToCollision_Params params;
-	params.CollisionComponent = CollisionComponent;
-	params.Point = Point;
+	UVictoryBPFunctionLibrary_GetDistanceToCollision_Params fn_params;
+	fn_params.CollisionComponent = CollisionComponent;
+	fn_params.Point = Point;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (ClosestPointOnCollision != nullptr)
-		*ClosestPointOnCollision = params.ClosestPointOnCollision;
+		*ClosestPointOnCollision = fn_params.ClosestPointOnCollision;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6087,23 +6087,23 @@ float UVictoryBPFunctionLibrary::STATIC_GetDistanceBetweenComponentSurfaces(clas
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetDistanceBetweenComponentSurfaces");
 
-	UVictoryBPFunctionLibrary_GetDistanceBetweenComponentSurfaces_Params params;
-	params.CollisionComponent1 = CollisionComponent1;
-	params.CollisionComponent2 = CollisionComponent2;
+	UVictoryBPFunctionLibrary_GetDistanceBetweenComponentSurfaces_Params fn_params;
+	fn_params.CollisionComponent1 = CollisionComponent1;
+	fn_params.CollisionComponent2 = CollisionComponent2;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (PointOnSurface1 != nullptr)
-		*PointOnSurface1 = params.PointOnSurface1;
+		*PointOnSurface1 = fn_params.PointOnSurface1;
 	if (PointOnSurface2 != nullptr)
-		*PointOnSurface2 = params.PointOnSurface2;
+		*PointOnSurface2 = fn_params.PointOnSurface2;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6117,17 +6117,17 @@ float UVictoryBPFunctionLibrary::STATIC_GetCreationTime(class AActor* Target)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetCreationTime");
 
-	UVictoryBPFunctionLibrary_GetCreationTime_Params params;
-	params.Target = Target;
+	UVictoryBPFunctionLibrary_GetCreationTime_Params fn_params;
+	fn_params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6142,18 +6142,18 @@ struct FRotator UVictoryBPFunctionLibrary::STATIC_GetComponentRelativeRotation(c
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetComponentRelativeRotation");
 
-	UVictoryBPFunctionLibrary_GetComponentRelativeRotation_Params params;
-	params.ParentComponent = ParentComponent;
-	params.ChildComponent = ChildComponent;
+	UVictoryBPFunctionLibrary_GetComponentRelativeRotation_Params fn_params;
+	fn_params.ParentComponent = ParentComponent;
+	fn_params.ChildComponent = ChildComponent;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6168,18 +6168,18 @@ struct FVector UVictoryBPFunctionLibrary::STATIC_GetComponentRelativeLocation(cl
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetComponentRelativeLocation");
 
-	UVictoryBPFunctionLibrary_GetComponentRelativeLocation_Params params;
-	params.ParentComponent = ParentComponent;
-	params.ChildComponent = ChildComponent;
+	UVictoryBPFunctionLibrary_GetComponentRelativeLocation_Params fn_params;
+	fn_params.ParentComponent = ParentComponent;
+	fn_params.ChildComponent = ChildComponent;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6192,16 +6192,16 @@ struct FString UVictoryBPFunctionLibrary::STATIC_GetCommandLine()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetCommandLine");
 
-	UVictoryBPFunctionLibrary_GetCommandLine_Params params;
+	UVictoryBPFunctionLibrary_GetCommandLine_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6219,23 +6219,23 @@ class AActor* UVictoryBPFunctionLibrary::STATIC_GetClosestActorOfClassInRadiusOf
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetClosestActorOfClassInRadiusOfLocation");
 
-	UVictoryBPFunctionLibrary_GetClosestActorOfClassInRadiusOfLocation_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.ActorClass = ActorClass;
-	params.Center = Center;
-	params.Radius = Radius;
+	UVictoryBPFunctionLibrary_GetClosestActorOfClassInRadiusOfLocation_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.ActorClass = ActorClass;
+	fn_params.Center = Center;
+	fn_params.Radius = Radius;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6253,23 +6253,23 @@ class AActor* UVictoryBPFunctionLibrary::STATIC_GetClosestActorOfClassInRadiusOf
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetClosestActorOfClassInRadiusOfActor");
 
-	UVictoryBPFunctionLibrary_GetClosestActorOfClassInRadiusOfActor_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.ActorClass = ActorClass;
-	params.ActorCenter = ActorCenter;
-	params.Radius = Radius;
+	UVictoryBPFunctionLibrary_GetClosestActorOfClassInRadiusOfActor_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.ActorClass = ActorClass;
+	fn_params.ActorCenter = ActorCenter;
+	fn_params.Radius = Radius;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6284,20 +6284,20 @@ void UVictoryBPFunctionLibrary::STATIC_GetBoxContainingWorldPoints(TArray<struct
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetBoxContainingWorldPoints");
 
-	UVictoryBPFunctionLibrary_GetBoxContainingWorldPoints_Params params;
-	params.Points = Points;
+	UVictoryBPFunctionLibrary_GetBoxContainingWorldPoints_Params fn_params;
+	fn_params.Points = Points;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Center != nullptr)
-		*Center = params.Center;
+		*Center = fn_params.Center;
 	if (Extent != nullptr)
-		*Extent = params.Extent;
+		*Extent = fn_params.Extent;
 }
 
 
@@ -6313,20 +6313,20 @@ void UVictoryBPFunctionLibrary::STATIC_GetAllWidgetsOfClass(class UObject* World
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetAllWidgetsOfClass");
 
-	UVictoryBPFunctionLibrary_GetAllWidgetsOfClass_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.WidgetClass = WidgetClass;
-	params.TopLevelOnly = TopLevelOnly;
+	UVictoryBPFunctionLibrary_GetAllWidgetsOfClass_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.WidgetClass = WidgetClass;
+	fn_params.TopLevelOnly = TopLevelOnly;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (FoundWidgets != nullptr)
-		*FoundWidgets = params.FoundWidgets;
+		*FoundWidgets = fn_params.FoundWidgets;
 }
 
 
@@ -6342,21 +6342,21 @@ int UVictoryBPFunctionLibrary::STATIC_GetAllBoneNamesBelowBone(class USkeletalMe
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetAllBoneNamesBelowBone");
 
-	UVictoryBPFunctionLibrary_GetAllBoneNamesBelowBone_Params params;
-	params.SkeletalMeshComp = SkeletalMeshComp;
-	params.StartingBoneName = StartingBoneName;
+	UVictoryBPFunctionLibrary_GetAllBoneNamesBelowBone_Params fn_params;
+	fn_params.SkeletalMeshComp = SkeletalMeshComp;
+	fn_params.StartingBoneName = StartingBoneName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (BoneNames != nullptr)
-		*BoneNames = params.BoneNames;
+		*BoneNames = fn_params.BoneNames;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6371,18 +6371,18 @@ struct FRotator UVictoryBPFunctionLibrary::STATIC_GetActorRelativeRotation(class
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetActorRelativeRotation");
 
-	UVictoryBPFunctionLibrary_GetActorRelativeRotation_Params params;
-	params.ParentActor = ParentActor;
-	params.ChildActor = ChildActor;
+	UVictoryBPFunctionLibrary_GetActorRelativeRotation_Params fn_params;
+	fn_params.ParentActor = ParentActor;
+	fn_params.ChildActor = ChildActor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6397,18 +6397,18 @@ struct FVector UVictoryBPFunctionLibrary::STATIC_GetActorRelativeLocation(class 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetActorRelativeLocation");
 
-	UVictoryBPFunctionLibrary_GetActorRelativeLocation_Params params;
-	params.ParentActor = ParentActor;
-	params.ChildActor = ChildActor;
+	UVictoryBPFunctionLibrary_GetActorRelativeLocation_Params fn_params;
+	fn_params.ParentActor = ParentActor;
+	fn_params.ChildActor = ChildActor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6421,13 +6421,13 @@ void UVictoryBPFunctionLibrary::STATIC_FlushPressedKeys(class APlayerController*
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.FlushPressedKeys");
 
-	UVictoryBPFunctionLibrary_FlushPressedKeys_Params params;
-	params.PlayerController = PlayerController;
+	UVictoryBPFunctionLibrary_FlushPressedKeys_Params fn_params;
+	fn_params.PlayerController = PlayerController;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -6445,16 +6445,16 @@ void UVictoryBPFunctionLibrary::STATIC_FlashGameOnTaskBar(class APlayerControlle
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.FlashGameOnTaskBar");
 
-	UVictoryBPFunctionLibrary_FlashGameOnTaskBar_Params params;
-	params.PC = PC;
-	params.FlashContinuous = FlashContinuous;
-	params.MaxFlashCount = MaxFlashCount;
-	params.FlashFrequencyMilliseconds = FlashFrequencyMilliseconds;
+	UVictoryBPFunctionLibrary_FlashGameOnTaskBar_Params fn_params;
+	fn_params.PC = PC;
+	fn_params.FlashContinuous = FlashContinuous;
+	fn_params.MaxFlashCount = MaxFlashCount;
+	fn_params.FlashFrequencyMilliseconds = FlashFrequencyMilliseconds;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -6473,20 +6473,20 @@ bool UVictoryBPFunctionLibrary::STATIC_FileIO__SaveStringTextToFile(const struct
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.FileIO__SaveStringTextToFile");
 
-	UVictoryBPFunctionLibrary_FileIO__SaveStringTextToFile_Params params;
-	params.SaveDirectory = SaveDirectory;
-	params.JoyfulFileName = JoyfulFileName;
-	params.SaveText = SaveText;
-	params.AllowOverWriting = AllowOverWriting;
+	UVictoryBPFunctionLibrary_FileIO__SaveStringTextToFile_Params fn_params;
+	fn_params.SaveDirectory = SaveDirectory;
+	fn_params.JoyfulFileName = JoyfulFileName;
+	fn_params.SaveText = SaveText;
+	fn_params.AllowOverWriting = AllowOverWriting;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6503,20 +6503,20 @@ bool UVictoryBPFunctionLibrary::STATIC_FileIO__SaveStringArrayToFile(const struc
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.FileIO__SaveStringArrayToFile");
 
-	UVictoryBPFunctionLibrary_FileIO__SaveStringArrayToFile_Params params;
-	params.SaveDirectory = SaveDirectory;
-	params.JoyfulFileName = JoyfulFileName;
-	params.SaveText = SaveText;
-	params.AllowOverWriting = AllowOverWriting;
+	UVictoryBPFunctionLibrary_FileIO__SaveStringArrayToFile_Params fn_params;
+	fn_params.SaveDirectory = SaveDirectory;
+	fn_params.JoyfulFileName = JoyfulFileName;
+	fn_params.SaveText = SaveText;
+	fn_params.AllowOverWriting = AllowOverWriting;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6532,19 +6532,19 @@ bool UVictoryBPFunctionLibrary::STATIC_EqualEqual_Vector2DVector2D(const struct 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.EqualEqual_Vector2DVector2D");
 
-	UVictoryBPFunctionLibrary_EqualEqual_Vector2DVector2D_Params params;
-	params.A = A;
-	params.B = B;
-	params.ErrorTolerance = ErrorTolerance;
+	UVictoryBPFunctionLibrary_EqualEqual_Vector2DVector2D_Params fn_params;
+	fn_params.A = A;
+	fn_params.B = B;
+	fn_params.ErrorTolerance = ErrorTolerance;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6566,22 +6566,22 @@ void UVictoryBPFunctionLibrary::STATIC_DrawCircle(class UObject* WorldContextObj
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.DrawCircle");
 
-	UVictoryBPFunctionLibrary_DrawCircle_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.Center = Center;
-	params.Radius = Radius;
-	params.NumPoints = NumPoints;
-	params.Thickness = Thickness;
-	params.LineColor = LineColor;
-	params.YAxis = YAxis;
-	params.ZAxis = ZAxis;
-	params.Duration = Duration;
-	params.PersistentLines = PersistentLines;
+	UVictoryBPFunctionLibrary_DrawCircle_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.Center = Center;
+	fn_params.Radius = Radius;
+	fn_params.NumPoints = NumPoints;
+	fn_params.Thickness = Thickness;
+	fn_params.LineColor = LineColor;
+	fn_params.YAxis = YAxis;
+	fn_params.ZAxis = ZAxis;
+	fn_params.Duration = Duration;
+	fn_params.PersistentLines = PersistentLines;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -6601,18 +6601,18 @@ void UVictoryBPFunctionLibrary::STATIC_Draw__Thick3DLineFromSocket(class USkelet
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Draw__Thick3DLineFromSocket");
 
-	UVictoryBPFunctionLibrary_Draw__Thick3DLineFromSocket_Params params;
-	params.Mesh = Mesh;
-	params.EndPoint = EndPoint;
-	params.Socket = Socket;
-	params.LineColor = LineColor;
-	params.Thickness = Thickness;
-	params.Duration = Duration;
+	UVictoryBPFunctionLibrary_Draw__Thick3DLineFromSocket_Params fn_params;
+	fn_params.Mesh = Mesh;
+	fn_params.EndPoint = EndPoint;
+	fn_params.Socket = Socket;
+	fn_params.LineColor = LineColor;
+	fn_params.Thickness = Thickness;
+	fn_params.Duration = Duration;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -6632,18 +6632,18 @@ void UVictoryBPFunctionLibrary::STATIC_Draw__Thick3DLineFromCharacterSocket(clas
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Draw__Thick3DLineFromCharacterSocket");
 
-	UVictoryBPFunctionLibrary_Draw__Thick3DLineFromCharacterSocket_Params params;
-	params.TheCharacter = TheCharacter;
-	params.EndPoint = EndPoint;
-	params.Socket = Socket;
-	params.LineColor = LineColor;
-	params.Thickness = Thickness;
-	params.Duration = Duration;
+	UVictoryBPFunctionLibrary_Draw__Thick3DLineFromCharacterSocket_Params fn_params;
+	fn_params.TheCharacter = TheCharacter;
+	fn_params.EndPoint = EndPoint;
+	fn_params.Socket = Socket;
+	fn_params.LineColor = LineColor;
+	fn_params.Thickness = Thickness;
+	fn_params.Duration = Duration;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -6662,17 +6662,17 @@ void UVictoryBPFunctionLibrary::STATIC_Draw__Thick3DLineBetweenActors(class AAct
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Draw__Thick3DLineBetweenActors");
 
-	UVictoryBPFunctionLibrary_Draw__Thick3DLineBetweenActors_Params params;
-	params.StartActor = StartActor;
-	params.EndActor = EndActor;
-	params.LineColor = LineColor;
-	params.Thickness = Thickness;
-	params.Duration = Duration;
+	UVictoryBPFunctionLibrary_Draw__Thick3DLineBetweenActors_Params fn_params;
+	fn_params.StartActor = StartActor;
+	fn_params.EndActor = EndActor;
+	fn_params.LineColor = LineColor;
+	fn_params.Thickness = Thickness;
+	fn_params.Duration = Duration;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -6689,18 +6689,18 @@ bool UVictoryBPFunctionLibrary::STATIC_DoesMaterialHaveParameter(class UMaterial
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.DoesMaterialHaveParameter");
 
-	UVictoryBPFunctionLibrary_DoesMaterialHaveParameter_Params params;
-	params.Mat = Mat;
-	params.Parameter = Parameter;
+	UVictoryBPFunctionLibrary_DoesMaterialHaveParameter_Params fn_params;
+	fn_params.Mat = Mat;
+	fn_params.Parameter = Parameter;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6716,21 +6716,21 @@ float UVictoryBPFunctionLibrary::STATIC_DistanceToSurface__DistaceOfPointToMeshS
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.DistanceToSurface__DistaceOfPointToMeshSurface");
 
-	UVictoryBPFunctionLibrary_DistanceToSurface__DistaceOfPointToMeshSurface_Params params;
-	params.TheSMA = TheSMA;
-	params.TestPoint = TestPoint;
+	UVictoryBPFunctionLibrary_DistanceToSurface__DistaceOfPointToMeshSurface_Params fn_params;
+	fn_params.TheSMA = TheSMA;
+	fn_params.TestPoint = TestPoint;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (ClosestSurfacePoint != nullptr)
-		*ClosestSurfacePoint = params.ClosestSurfacePoint;
+		*ClosestSurfacePoint = fn_params.ClosestSurfacePoint;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6745,20 +6745,20 @@ bool UVictoryBPFunctionLibrary::STATIC_Data__GetCharacterBoneLocations(class AAc
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Data__GetCharacterBoneLocations");
 
-	UVictoryBPFunctionLibrary_Data__GetCharacterBoneLocations_Params params;
-	params.TheCharacter = TheCharacter;
+	UVictoryBPFunctionLibrary_Data__GetCharacterBoneLocations_Params fn_params;
+	fn_params.TheCharacter = TheCharacter;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (BoneLocations != nullptr)
-		*BoneLocations = params.BoneLocations;
+		*BoneLocations = fn_params.BoneLocations;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6775,20 +6775,20 @@ class UTextureRenderTarget2D* UVictoryBPFunctionLibrary::STATIC_CreateTextureRen
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.CreateTextureRenderTarget2D");
 
-	UVictoryBPFunctionLibrary_CreateTextureRenderTarget2D_Params params;
-	params.Width = Width;
-	params.Height = Height;
-	params.ClearColor = ClearColor;
-	params.Gamma = Gamma;
+	UVictoryBPFunctionLibrary_CreateTextureRenderTarget2D_Params fn_params;
+	fn_params.Width = Width;
+	fn_params.Height = Height;
+	fn_params.ClearColor = ClearColor;
+	fn_params.Gamma = Gamma;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6806,21 +6806,21 @@ class UPrimitiveComponent* UVictoryBPFunctionLibrary::STATIC_CreatePrimitiveComp
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.CreatePrimitiveComponent");
 
-	UVictoryBPFunctionLibrary_CreatePrimitiveComponent_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.CompClass = CompClass;
-	params.Name = Name;
-	params.Location = Location;
-	params.Rotation = Rotation;
+	UVictoryBPFunctionLibrary_CreatePrimitiveComponent_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.CompClass = CompClass;
+	fn_params.Name = Name;
+	fn_params.Location = Location;
+	fn_params.Rotation = Rotation;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6835,18 +6835,18 @@ struct FPlane UVictoryBPFunctionLibrary::STATIC_CreatePlane(const struct FVector
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.CreatePlane");
 
-	UVictoryBPFunctionLibrary_CreatePlane_Params params;
-	params.Center = Center;
-	params.Normal = Normal;
+	UVictoryBPFunctionLibrary_CreatePlane_Params fn_params;
+	fn_params.Center = Center;
+	fn_params.Normal = Normal;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6861,18 +6861,18 @@ class UObject* UVictoryBPFunctionLibrary::STATIC_CreateObject(class UObject* Wor
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.CreateObject");
 
-	UVictoryBPFunctionLibrary_CreateObject_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.TheObjectClass = TheObjectClass;
+	UVictoryBPFunctionLibrary_CreateObject_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.TheObjectClass = TheObjectClass;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6887,18 +6887,18 @@ bool UVictoryBPFunctionLibrary::STATIC_CreateMD5Hash(const struct FString& FileT
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.CreateMD5Hash");
 
-	UVictoryBPFunctionLibrary_CreateMD5Hash_Params params;
-	params.FileToHash = FileToHash;
-	params.FileToStoreHashTo = FileToStoreHashTo;
+	UVictoryBPFunctionLibrary_CreateMD5Hash_Params fn_params;
+	fn_params.FileToHash = FileToHash;
+	fn_params.FileToStoreHashTo = FileToStoreHashTo;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6914,19 +6914,19 @@ int UVictoryBPFunctionLibrary::STATIC_CountOccurrancesOfSubString(const struct F
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.CountOccurrancesOfSubString");
 
-	UVictoryBPFunctionLibrary_CountOccurrancesOfSubString_Params params;
-	params.Source = Source;
-	params.SubString = SubString;
-	params.SearchCase = SearchCase;
+	UVictoryBPFunctionLibrary_CountOccurrancesOfSubString_Params fn_params;
+	fn_params.Source = Source;
+	fn_params.SubString = SubString;
+	fn_params.SearchCase = SearchCase;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6940,17 +6940,17 @@ struct FRotator UVictoryBPFunctionLibrary::STATIC_Conversions__VectorToRotator(c
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Conversions__VectorToRotator");
 
-	UVictoryBPFunctionLibrary_Conversions__VectorToRotator_Params params;
-	params.TheVector = TheVector;
+	UVictoryBPFunctionLibrary_Conversions__VectorToRotator_Params fn_params;
+	fn_params.TheVector = TheVector;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -6965,20 +6965,20 @@ void UVictoryBPFunctionLibrary::STATIC_Conversions__StringToVector(const struct 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Conversions__StringToVector");
 
-	UVictoryBPFunctionLibrary_Conversions__StringToVector_Params params;
-	params.string = string;
+	UVictoryBPFunctionLibrary_Conversions__StringToVector_Params fn_params;
+	fn_params.string = string;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (ConvertedVector != nullptr)
-		*ConvertedVector = params.ConvertedVector;
+		*ConvertedVector = fn_params.ConvertedVector;
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 }
 
 
@@ -6993,20 +6993,20 @@ void UVictoryBPFunctionLibrary::STATIC_Conversions__StringToRotator(const struct
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Conversions__StringToRotator");
 
-	UVictoryBPFunctionLibrary_Conversions__StringToRotator_Params params;
-	params.string = string;
+	UVictoryBPFunctionLibrary_Conversions__StringToRotator_Params fn_params;
+	fn_params.string = string;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (ConvertedRotator != nullptr)
-		*ConvertedRotator = params.ConvertedRotator;
+		*ConvertedRotator = fn_params.ConvertedRotator;
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 }
 
 
@@ -7021,20 +7021,20 @@ void UVictoryBPFunctionLibrary::STATIC_Conversions__StringToColor(const struct F
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Conversions__StringToColor");
 
-	UVictoryBPFunctionLibrary_Conversions__StringToColor_Params params;
-	params.string = string;
+	UVictoryBPFunctionLibrary_Conversions__StringToColor_Params fn_params;
+	fn_params.string = string;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (ConvertedColor != nullptr)
-		*ConvertedColor = params.ConvertedColor;
+		*ConvertedColor = fn_params.ConvertedColor;
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 }
 
 
@@ -7048,17 +7048,17 @@ struct FVector UVictoryBPFunctionLibrary::STATIC_Conversions__RotatorToVector(co
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Conversions__RotatorToVector");
 
-	UVictoryBPFunctionLibrary_Conversions__RotatorToVector_Params params;
-	params.TheRotator = TheRotator;
+	UVictoryBPFunctionLibrary_Conversions__RotatorToVector_Params fn_params;
+	fn_params.TheRotator = TheRotator;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7072,18 +7072,18 @@ void UVictoryBPFunctionLibrary::STATIC_Conversions__ColorToString(const struct F
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Conversions__ColorToString");
 
-	UVictoryBPFunctionLibrary_Conversions__ColorToString_Params params;
-	params.Color = Color;
+	UVictoryBPFunctionLibrary_Conversions__ColorToString_Params fn_params;
+	fn_params.Color = Color;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (ColorAsString != nullptr)
-		*ColorAsString = params.ColorAsString;
+		*ColorAsString = fn_params.ColorAsString;
 }
 
 
@@ -7097,17 +7097,17 @@ int UVictoryBPFunctionLibrary::STATIC_Conversion__FloatToRoundedInteger(float IN
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Conversion__FloatToRoundedInteger");
 
-	UVictoryBPFunctionLibrary_Conversion__FloatToRoundedInteger_Params params;
-	params.IN_Float = IN_Float;
+	UVictoryBPFunctionLibrary_Conversion__FloatToRoundedInteger_Params fn_params;
+	fn_params.IN_Float = IN_Float;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7118,12 +7118,12 @@ void UVictoryBPFunctionLibrary::STATIC_constructRand()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.constructRand");
 
-	UVictoryBPFunctionLibrary_constructRand_Params params;
+	UVictoryBPFunctionLibrary_constructRand_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -7141,16 +7141,16 @@ void UVictoryBPFunctionLibrary::STATIC_Component_PrestreamTextures(class UMeshCo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Component_PrestreamTextures");
 
-	UVictoryBPFunctionLibrary_Component_PrestreamTextures_Params params;
-	params.Target = Target;
-	params.Seconds = Seconds;
-	params.bEnableStreaming = bEnableStreaming;
-	params.CinematicTextureGroups = CinematicTextureGroups;
+	UVictoryBPFunctionLibrary_Component_PrestreamTextures_Params fn_params;
+	fn_params.Target = Target;
+	fn_params.Seconds = Seconds;
+	fn_params.bEnableStreaming = bEnableStreaming;
+	fn_params.CinematicTextureGroups = CinematicTextureGroups;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -7167,18 +7167,18 @@ bool UVictoryBPFunctionLibrary::STATIC_CompareMD5Hash(const struct FString& MD5H
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.CompareMD5Hash");
 
-	UVictoryBPFunctionLibrary_CompareMD5Hash_Params params;
-	params.MD5HashFile1 = MD5HashFile1;
-	params.MD5HashFile2 = MD5HashFile2;
+	UVictoryBPFunctionLibrary_CompareMD5Hash_Params fn_params;
+	fn_params.MD5HashFile1 = MD5HashFile1;
+	fn_params.MD5HashFile2 = MD5HashFile2;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7196,23 +7196,23 @@ class AStaticMeshActor* UVictoryBPFunctionLibrary::STATIC_Clone__StaticMeshActor
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Clone__StaticMeshActor");
 
-	UVictoryBPFunctionLibrary_Clone__StaticMeshActor_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.ToClone = ToClone;
-	params.LocationOffset = LocationOffset;
-	params.RotationOffset = RotationOffset;
+	UVictoryBPFunctionLibrary_Clone__StaticMeshActor_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.ToClone = ToClone;
+	fn_params.LocationOffset = LocationOffset;
+	fn_params.RotationOffset = RotationOffset;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7225,16 +7225,16 @@ bool UVictoryBPFunctionLibrary::STATIC_ClientWindow__GameWindowIsForeGroundInOS(
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.ClientWindow__GameWindowIsForeGroundInOS");
 
-	UVictoryBPFunctionLibrary_ClientWindow__GameWindowIsForeGroundInOS_Params params;
+	UVictoryBPFunctionLibrary_ClientWindow__GameWindowIsForeGroundInOS_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7249,18 +7249,18 @@ bool UVictoryBPFunctionLibrary::STATIC_CharacterMovement__SetMaxMoveSpeed(class 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.CharacterMovement__SetMaxMoveSpeed");
 
-	UVictoryBPFunctionLibrary_CharacterMovement__SetMaxMoveSpeed_Params params;
-	params.TheCharacter = TheCharacter;
-	params.NewMaxMoveSpeed = NewMaxMoveSpeed;
+	UVictoryBPFunctionLibrary_CharacterMovement__SetMaxMoveSpeed_Params fn_params;
+	fn_params.TheCharacter = TheCharacter;
+	fn_params.NewMaxMoveSpeed = NewMaxMoveSpeed;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7274,17 +7274,17 @@ struct FRotator UVictoryBPFunctionLibrary::STATIC_Character__GetControllerRotati
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Character__GetControllerRotation");
 
-	UVictoryBPFunctionLibrary_Character__GetControllerRotation_Params params;
-	params.TheCharacter = TheCharacter;
+	UVictoryBPFunctionLibrary_Character__GetControllerRotation_Params fn_params;
+	fn_params.TheCharacter = TheCharacter;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7300,19 +7300,19 @@ bool UVictoryBPFunctionLibrary::STATIC_CaptureComponent2D_SaveImage(class UScene
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.CaptureComponent2D_SaveImage");
 
-	UVictoryBPFunctionLibrary_CaptureComponent2D_SaveImage_Params params;
-	params.Target = Target;
-	params.ImagePath = ImagePath;
-	params.ClearColour = ClearColour;
+	UVictoryBPFunctionLibrary_CaptureComponent2D_SaveImage_Params fn_params;
+	fn_params.Target = Target;
+	fn_params.ImagePath = ImagePath;
+	fn_params.ClearColour = ClearColour;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7328,21 +7328,21 @@ bool UVictoryBPFunctionLibrary::STATIC_CaptureComponent2D_Project(class USceneCa
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.CaptureComponent2D_Project");
 
-	UVictoryBPFunctionLibrary_CaptureComponent2D_Project_Params params;
-	params.Target = Target;
-	params.Location = Location;
+	UVictoryBPFunctionLibrary_CaptureComponent2D_Project_Params fn_params;
+	fn_params.Target = Target;
+	fn_params.Location = Location;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutPixelLocation != nullptr)
-		*OutPixelLocation = params.OutPixelLocation;
+		*OutPixelLocation = fn_params.OutPixelLocation;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7358,19 +7358,19 @@ bool UVictoryBPFunctionLibrary::STATIC_Capture2D_SaveImage(class ASceneCapture2D
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Capture2D_SaveImage");
 
-	UVictoryBPFunctionLibrary_Capture2D_SaveImage_Params params;
-	params.Target = Target;
-	params.ImagePath = ImagePath;
-	params.ClearColour = ClearColour;
+	UVictoryBPFunctionLibrary_Capture2D_SaveImage_Params fn_params;
+	fn_params.Target = Target;
+	fn_params.ImagePath = ImagePath;
+	fn_params.ClearColour = ClearColour;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7386,21 +7386,21 @@ bool UVictoryBPFunctionLibrary::STATIC_Capture2D_Project(class ASceneCapture2D* 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Capture2D_Project");
 
-	UVictoryBPFunctionLibrary_Capture2D_Project_Params params;
-	params.Target = Target;
-	params.Location = Location;
+	UVictoryBPFunctionLibrary_Capture2D_Project_Params fn_params;
+	fn_params.Target = Target;
+	fn_params.Location = Location;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutPixelLocation != nullptr)
-		*OutPixelLocation = params.OutPixelLocation;
+		*OutPixelLocation = fn_params.OutPixelLocation;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7416,21 +7416,21 @@ float UVictoryBPFunctionLibrary::STATIC_Calcs__ClosestPointToSourcePoint(const s
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Calcs__ClosestPointToSourcePoint");
 
-	UVictoryBPFunctionLibrary_Calcs__ClosestPointToSourcePoint_Params params;
-	params.Source = Source;
-	params.OtherPoints = OtherPoints;
+	UVictoryBPFunctionLibrary_Calcs__ClosestPointToSourcePoint_Params fn_params;
+	fn_params.Source = Source;
+	fn_params.OtherPoints = OtherPoints;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (ClosestPoint != nullptr)
-		*ClosestPoint = params.ClosestPoint;
+		*ClosestPoint = fn_params.ClosestPoint;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7445,15 +7445,15 @@ void UVictoryBPFunctionLibrary::STATIC_Array_Sort(TArray<int> TargetArray, bool 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Array_Sort");
 
-	UVictoryBPFunctionLibrary_Array_Sort_Params params;
-	params.TargetArray = TargetArray;
-	params.bAscendingOrder = bAscendingOrder;
-	params.VariableName = VariableName;
+	UVictoryBPFunctionLibrary_Array_Sort_Params fn_params;
+	fn_params.TargetArray = TargetArray;
+	fn_params.bAscendingOrder = bAscendingOrder;
+	fn_params.VariableName = VariableName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -7470,18 +7470,18 @@ bool UVictoryBPFunctionLibrary::STATIC_Array_IsValidIndex(TArray<int> TargetArra
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Array_IsValidIndex");
 
-	UVictoryBPFunctionLibrary_Array_IsValidIndex_Params params;
-	params.TargetArray = TargetArray;
-	params.Index = Index;
+	UVictoryBPFunctionLibrary_Array_IsValidIndex_Params fn_params;
+	fn_params.TargetArray = TargetArray;
+	fn_params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7496,18 +7496,18 @@ struct FString UVictoryBPFunctionLibrary::STATIC_AppendMultiple(const struct FSt
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.AppendMultiple");
 
-	UVictoryBPFunctionLibrary_AppendMultiple_Params params;
-	params.A = A;
-	params.B = B;
+	UVictoryBPFunctionLibrary_AppendMultiple_Params fn_params;
+	fn_params.A = A;
+	fn_params.B = B;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7524,23 +7524,23 @@ bool UVictoryBPFunctionLibrary::STATIC_Animation__GetAimOffsetsFromRotation(clas
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Animation__GetAimOffsetsFromRotation");
 
-	UVictoryBPFunctionLibrary_Animation__GetAimOffsetsFromRotation_Params params;
-	params.AnimBPOwner = AnimBPOwner;
-	params.TheRotation = TheRotation;
+	UVictoryBPFunctionLibrary_Animation__GetAimOffsetsFromRotation_Params fn_params;
+	fn_params.AnimBPOwner = AnimBPOwner;
+	fn_params.TheRotation = TheRotation;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Pitch != nullptr)
-		*Pitch = params.Pitch;
+		*Pitch = fn_params.Pitch;
 	if (Yaw != nullptr)
-		*Yaw = params.Yaw;
+		*Yaw = fn_params.Yaw;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7556,22 +7556,22 @@ bool UVictoryBPFunctionLibrary::STATIC_Animation__GetAimOffsets(class AActor* An
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Animation__GetAimOffsets");
 
-	UVictoryBPFunctionLibrary_Animation__GetAimOffsets_Params params;
-	params.AnimBPOwner = AnimBPOwner;
+	UVictoryBPFunctionLibrary_Animation__GetAimOffsets_Params fn_params;
+	fn_params.AnimBPOwner = AnimBPOwner;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Pitch != nullptr)
-		*Pitch = params.Pitch;
+		*Pitch = fn_params.Pitch;
 	if (Yaw != nullptr)
-		*Yaw = params.Yaw;
+		*Yaw = fn_params.Yaw;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7585,14 +7585,14 @@ void UVictoryBPFunctionLibrary::STATIC_AddToStreamingLevels(class UObject* World
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.AddToStreamingLevels");
 
-	UVictoryBPFunctionLibrary_AddToStreamingLevels_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.LevelInstanceInfo = LevelInstanceInfo;
+	UVictoryBPFunctionLibrary_AddToStreamingLevels_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.LevelInstanceInfo = LevelInstanceInfo;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -7608,14 +7608,14 @@ void UVictoryBPFunctionLibrary::STATIC_AddToActorRotation(class AActor* TheActor
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.AddToActorRotation");
 
-	UVictoryBPFunctionLibrary_AddToActorRotation_Params params;
-	params.TheActor = TheActor;
-	params.AddRot = AddRot;
+	UVictoryBPFunctionLibrary_AddToActorRotation_Params fn_params;
+	fn_params.TheActor = TheActor;
+	fn_params.AddRot = AddRot;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -7633,16 +7633,16 @@ void UVictoryBPFunctionLibrary::STATIC_Actor_PrestreamTextures(class AActor* Tar
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Actor_PrestreamTextures");
 
-	UVictoryBPFunctionLibrary_Actor_PrestreamTextures_Params params;
-	params.Target = Target;
-	params.Seconds = Seconds;
-	params.bEnableStreaming = bEnableStreaming;
-	params.CinematicTextureGroups = CinematicTextureGroups;
+	UVictoryBPFunctionLibrary_Actor_PrestreamTextures_Params fn_params;
+	fn_params.Target = Target;
+	fn_params.Seconds = Seconds;
+	fn_params.bEnableStreaming = bEnableStreaming;
+	fn_params.CinematicTextureGroups = CinematicTextureGroups;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -7659,18 +7659,18 @@ bool UVictoryBPFunctionLibrary::STATIC_Actor__TeleportToActor(class AActor* Acto
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Actor__TeleportToActor");
 
-	UVictoryBPFunctionLibrary_Actor__TeleportToActor_Params params;
-	params.ActorToTeleport = ActorToTeleport;
-	params.DestinationActor = DestinationActor;
+	UVictoryBPFunctionLibrary_Actor__TeleportToActor_Params fn_params;
+	fn_params.ActorToTeleport = ActorToTeleport;
+	fn_params.DestinationActor = DestinationActor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7684,18 +7684,18 @@ void UVictoryBPFunctionLibrary::STATIC_Actor__GetAttachedActors(class AActor* Pa
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Actor__GetAttachedActors");
 
-	UVictoryBPFunctionLibrary_Actor__GetAttachedActors_Params params;
-	params.ParentActor = ParentActor;
+	UVictoryBPFunctionLibrary_Actor__GetAttachedActors_Params fn_params;
+	fn_params.ParentActor = ParentActor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (ActorsArray != nullptr)
-		*ActorsArray = params.ActorsArray;
+		*ActorsArray = fn_params.ActorsArray;
 }
 
 
@@ -7710,20 +7710,20 @@ class APlayerController* UVictoryBPFunctionLibrary::STATIC_Accessor__GetPlayerCo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Accessor__GetPlayerController");
 
-	UVictoryBPFunctionLibrary_Accessor__GetPlayerController_Params params;
-	params.TheCharacter = TheCharacter;
+	UVictoryBPFunctionLibrary_Accessor__GetPlayerController_Params fn_params;
+	fn_params.TheCharacter = TheCharacter;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7737,17 +7737,17 @@ struct FString UVictoryBPFunctionLibrary::STATIC_Accessor__GetNameAsString(class
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Accessor__GetNameAsString");
 
-	UVictoryBPFunctionLibrary_Accessor__GetNameAsString_Params params;
-	params.TheObject = TheObject;
+	UVictoryBPFunctionLibrary_Accessor__GetNameAsString_Params fn_params;
+	fn_params.TheObject = TheObject;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7762,20 +7762,20 @@ class USkeletalMeshComponent* UVictoryBPFunctionLibrary::STATIC_Accessor__GetCha
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Accessor__GetCharacterSkeletalMesh");
 
-	UVictoryBPFunctionLibrary_Accessor__GetCharacterSkeletalMesh_Params params;
-	params.TheCharacter = TheCharacter;
+	UVictoryBPFunctionLibrary_Accessor__GetCharacterSkeletalMesh_Params fn_params;
+	fn_params.TheCharacter = TheCharacter;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7788,13 +7788,13 @@ void UVictoryBPHTML::STATIC_VictoryHTML5_SetCursorVisible(bool MakeVisible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPHTML.VictoryHTML5_SetCursorVisible");
 
-	UVictoryBPHTML_VictoryHTML5_SetCursorVisible_Params params;
-	params.MakeVisible = MakeVisible;
+	UVictoryBPHTML_VictoryHTML5_SetCursorVisible_Params fn_params;
+	fn_params.MakeVisible = MakeVisible;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -7809,16 +7809,16 @@ bool UVictoryBPHTML::STATIC_IsHTML()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPHTML.IsHTML");
 
-	UVictoryBPHTML_IsHTML_Params params;
+	UVictoryBPHTML_IsHTML_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7835,20 +7835,20 @@ class UAudioComponent* AVictoryPC::VictoryPlaySpeechSound(class USoundBase* Soun
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryPC.VictoryPlaySpeechSound");
 
-	AVictoryPC_VictoryPlaySpeechSound_Params params;
-	params.Sound = Sound;
-	params.VolumeMultiplier = VolumeMultiplier;
-	params.PitchMultiplier = PitchMultiplier;
-	params.StartTime = StartTime;
+	AVictoryPC_VictoryPlaySpeechSound_Params fn_params;
+	fn_params.Sound = Sound;
+	fn_params.VolumeMultiplier = VolumeMultiplier;
+	fn_params.PitchMultiplier = PitchMultiplier;
+	fn_params.StartTime = StartTime;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7861,16 +7861,16 @@ bool AVictoryPC::VictoryPC_GetMyIP_SendRequest()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryPC.VictoryPC_GetMyIP_SendRequest");
 
-	AVictoryPC_VictoryPC_GetMyIP_SendRequest_Params params;
+	AVictoryPC_VictoryPC_GetMyIP_SendRequest_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7883,12 +7883,12 @@ void AVictoryPC::VictoryPC_GetMyIP_DataReceived(const struct FString& YourIP)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryPC.VictoryPC_GetMyIP_DataReceived");
 
-	AVictoryPC_VictoryPC_GetMyIP_DataReceived_Params params;
-	params.YourIP = YourIP;
+	AVictoryPC_VictoryPC_GetMyIP_DataReceived_Params fn_params;
+	fn_params.YourIP = YourIP;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -7904,14 +7904,14 @@ void AVictoryPC::Subtitles_CPPDelegate(TArray<struct FSubtitleCue> VictorySubtit
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryPC.Subtitles_CPPDelegate");
 
-	AVictoryPC_Subtitles_CPPDelegate_Params params;
-	params.VictorySubtitles = VictorySubtitles;
-	params.CueDuration = CueDuration;
+	AVictoryPC_Subtitles_CPPDelegate_Params fn_params;
+	fn_params.VictorySubtitles = VictorySubtitles;
+	fn_params.CueDuration = CueDuration;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -7927,13 +7927,13 @@ void AVictoryPC::OnVictorySubtitlesQueued(TArray<struct FVictorySubtitleCue> Vic
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryPC.OnVictorySubtitlesQueued");
 
-	AVictoryPC_OnVictorySubtitlesQueued_Params params;
-	params.VictorySubtitles = VictorySubtitles;
-	params.CueDuration = CueDuration;
+	AVictoryPC_OnVictorySubtitlesQueued_Params fn_params;
+	fn_params.VictorySubtitles = VictorySubtitles;
+	fn_params.CueDuration = CueDuration;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -7948,13 +7948,13 @@ void UVictoryTMapComp::String_Vector__Remove(const struct FString& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.String_Vector__Remove");
 
-	UVictoryTMapComp_String_Vector__Remove_Params params;
-	params.Key = Key;
+	UVictoryTMapComp_String_Vector__Remove_Params fn_params;
+	fn_params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -7971,20 +7971,20 @@ struct FVector UVictoryTMapComp::String_Vector__Get(const struct FString& Key, b
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.String_Vector__Get");
 
-	UVictoryTMapComp_String_Vector__Get_Params params;
-	params.Key = Key;
+	UVictoryTMapComp_String_Vector__Get_Params fn_params;
+	fn_params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -7995,12 +7995,12 @@ void UVictoryTMapComp::String_Vector__Clear()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.String_Vector__Clear");
 
-	UVictoryTMapComp_String_Vector__Clear_Params params;
+	UVictoryTMapComp_String_Vector__Clear_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -8016,14 +8016,14 @@ void UVictoryTMapComp::String_Vector__AddPair(const struct FString& Key, const s
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.String_Vector__AddPair");
 
-	UVictoryTMapComp_String_Vector__AddPair_Params params;
-	params.Key = Key;
-	params.Value = Value;
+	UVictoryTMapComp_String_Vector__AddPair_Params fn_params;
+	fn_params.Key = Key;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -8038,13 +8038,13 @@ void UVictoryTMapComp::String_String__Remove(const struct FString& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.String_String__Remove");
 
-	UVictoryTMapComp_String_String__Remove_Params params;
-	params.Key = Key;
+	UVictoryTMapComp_String_String__Remove_Params fn_params;
+	fn_params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -8061,20 +8061,20 @@ struct FString UVictoryTMapComp::String_String__Get(const struct FString& Key, b
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.String_String__Get");
 
-	UVictoryTMapComp_String_String__Get_Params params;
-	params.Key = Key;
+	UVictoryTMapComp_String_String__Get_Params fn_params;
+	fn_params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -8085,12 +8085,12 @@ void UVictoryTMapComp::String_String__Clear()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.String_String__Clear");
 
-	UVictoryTMapComp_String_String__Clear_Params params;
+	UVictoryTMapComp_String_String__Clear_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -8106,14 +8106,14 @@ void UVictoryTMapComp::String_String__AddPair(const struct FString& Key, const s
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.String_String__AddPair");
 
-	UVictoryTMapComp_String_String__AddPair_Params params;
-	params.Key = Key;
-	params.Value = Value;
+	UVictoryTMapComp_String_String__AddPair_Params fn_params;
+	fn_params.Key = Key;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -8128,13 +8128,13 @@ void UVictoryTMapComp::String_Rotator__Remove(const struct FString& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.String_Rotator__Remove");
 
-	UVictoryTMapComp_String_Rotator__Remove_Params params;
-	params.Key = Key;
+	UVictoryTMapComp_String_Rotator__Remove_Params fn_params;
+	fn_params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -8151,20 +8151,20 @@ struct FRotator UVictoryTMapComp::String_Rotator__Get(const struct FString& Key,
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.String_Rotator__Get");
 
-	UVictoryTMapComp_String_Rotator__Get_Params params;
-	params.Key = Key;
+	UVictoryTMapComp_String_Rotator__Get_Params fn_params;
+	fn_params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -8175,12 +8175,12 @@ void UVictoryTMapComp::String_Rotator__Clear()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.String_Rotator__Clear");
 
-	UVictoryTMapComp_String_Rotator__Clear_Params params;
+	UVictoryTMapComp_String_Rotator__Clear_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -8196,14 +8196,14 @@ void UVictoryTMapComp::String_Rotator__AddPair(const struct FString& Key, const 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.String_Rotator__AddPair");
 
-	UVictoryTMapComp_String_Rotator__AddPair_Params params;
-	params.Key = Key;
-	params.Value = Value;
+	UVictoryTMapComp_String_Rotator__AddPair_Params fn_params;
+	fn_params.Key = Key;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -8218,13 +8218,13 @@ void UVictoryTMapComp::String_Int__Remove(const struct FString& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.String_Int__Remove");
 
-	UVictoryTMapComp_String_Int__Remove_Params params;
-	params.Key = Key;
+	UVictoryTMapComp_String_Int__Remove_Params fn_params;
+	fn_params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -8241,20 +8241,20 @@ int UVictoryTMapComp::String_Int__Get(const struct FString& Key, bool* IsValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.String_Int__Get");
 
-	UVictoryTMapComp_String_Int__Get_Params params;
-	params.Key = Key;
+	UVictoryTMapComp_String_Int__Get_Params fn_params;
+	fn_params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -8265,12 +8265,12 @@ void UVictoryTMapComp::String_Int__Clear()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.String_Int__Clear");
 
-	UVictoryTMapComp_String_Int__Clear_Params params;
+	UVictoryTMapComp_String_Int__Clear_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -8286,14 +8286,14 @@ void UVictoryTMapComp::String_Int__AddPair(const struct FString& Key, int Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.String_Int__AddPair");
 
-	UVictoryTMapComp_String_Int__AddPair_Params params;
-	params.Key = Key;
-	params.Value = Value;
+	UVictoryTMapComp_String_Int__AddPair_Params fn_params;
+	fn_params.Key = Key;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -8308,13 +8308,13 @@ void UVictoryTMapComp::String_Actor__Remove(const struct FString& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.String_Actor__Remove");
 
-	UVictoryTMapComp_String_Actor__Remove_Params params;
-	params.Key = Key;
+	UVictoryTMapComp_String_Actor__Remove_Params fn_params;
+	fn_params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -8331,20 +8331,20 @@ class AActor* UVictoryTMapComp::String_Actor__Get(const struct FString& Key, boo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.String_Actor__Get");
 
-	UVictoryTMapComp_String_Actor__Get_Params params;
-	params.Key = Key;
+	UVictoryTMapComp_String_Actor__Get_Params fn_params;
+	fn_params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -8355,12 +8355,12 @@ void UVictoryTMapComp::String_Actor__Clear()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.String_Actor__Clear");
 
-	UVictoryTMapComp_String_Actor__Clear_Params params;
+	UVictoryTMapComp_String_Actor__Clear_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -8376,14 +8376,14 @@ void UVictoryTMapComp::String_Actor__AddPair(const struct FString& Key, class AA
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.String_Actor__AddPair");
 
-	UVictoryTMapComp_String_Actor__AddPair_Params params;
-	params.Key = Key;
-	params.Value = Value;
+	UVictoryTMapComp_String_Actor__AddPair_Params fn_params;
+	fn_params.Key = Key;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -8398,13 +8398,13 @@ void UVictoryTMapComp::Int_Vector__Remove(int Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.Int_Vector__Remove");
 
-	UVictoryTMapComp_Int_Vector__Remove_Params params;
-	params.Key = Key;
+	UVictoryTMapComp_Int_Vector__Remove_Params fn_params;
+	fn_params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -8421,20 +8421,20 @@ struct FVector UVictoryTMapComp::Int_Vector__Get(int Key, bool* IsValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.Int_Vector__Get");
 
-	UVictoryTMapComp_Int_Vector__Get_Params params;
-	params.Key = Key;
+	UVictoryTMapComp_Int_Vector__Get_Params fn_params;
+	fn_params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -8445,12 +8445,12 @@ void UVictoryTMapComp::Int_Vector__Clear()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.Int_Vector__Clear");
 
-	UVictoryTMapComp_Int_Vector__Clear_Params params;
+	UVictoryTMapComp_Int_Vector__Clear_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -8466,14 +8466,14 @@ void UVictoryTMapComp::Int_Vector__AddPair(int Key, const struct FVector& Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.Int_Vector__AddPair");
 
-	UVictoryTMapComp_Int_Vector__AddPair_Params params;
-	params.Key = Key;
-	params.Value = Value;
+	UVictoryTMapComp_Int_Vector__AddPair_Params fn_params;
+	fn_params.Key = Key;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -8489,14 +8489,14 @@ void UVictoryTMapComp::Int_Float__Remove(int Key, float Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.Int_Float__Remove");
 
-	UVictoryTMapComp_Int_Float__Remove_Params params;
-	params.Key = Key;
-	params.Value = Value;
+	UVictoryTMapComp_Int_Float__Remove_Params fn_params;
+	fn_params.Key = Key;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -8513,20 +8513,20 @@ float UVictoryTMapComp::Int_Float__Get(int Key, bool* IsValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.Int_Float__Get");
 
-	UVictoryTMapComp_Int_Float__Get_Params params;
-	params.Key = Key;
+	UVictoryTMapComp_Int_Float__Get_Params fn_params;
+	fn_params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IsValid != nullptr)
-		*IsValid = params.IsValid;
+		*IsValid = fn_params.IsValid;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -8537,12 +8537,12 @@ void UVictoryTMapComp::Int_Float__Clear()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.Int_Float__Clear");
 
-	UVictoryTMapComp_Int_Float__Clear_Params params;
+	UVictoryTMapComp_Int_Float__Clear_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -8558,14 +8558,14 @@ void UVictoryTMapComp::Int_Float__AddPair(int Key, float Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryTMapComp.Int_Float__AddPair");
 
-	UVictoryTMapComp_Int_Float__AddPair_Params params;
-	params.Key = Key;
-	params.Value = Value;
+	UVictoryTMapComp_Int_Float__AddPair_Params fn_params;
+	fn_params.Key = Key;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Baseball_Cap_14.Baseball_Cap_13_C
-// 0x0000 (0x0818 - 0x0818)
+// 0x0000 (0x08D0 - 0x08D0)
 class ABaseball_Cap_13_C : public AClothesItem
 {
 public:

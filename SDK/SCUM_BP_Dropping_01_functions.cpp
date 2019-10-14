@@ -19,11 +19,11 @@ void ABP_Dropping_01_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Dropping_01.BP_Dropping_01_C.UserConstructionScript");
 
-	ABP_Dropping_01_C_UserConstructionScript_Params params;
+	ABP_Dropping_01_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void ABP_Dropping_01_C::OffsetTimeline__FinishedFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Dropping_01.BP_Dropping_01_C.OffsetTimeline__FinishedFunc");
 
-	ABP_Dropping_01_C_OffsetTimeline__FinishedFunc_Params params;
+	ABP_Dropping_01_C_OffsetTimeline__FinishedFunc_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -53,11 +53,11 @@ void ABP_Dropping_01_C::OffsetTimeline__UpdateFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Dropping_01.BP_Dropping_01_C.OffsetTimeline__UpdateFunc");
 
-	ABP_Dropping_01_C_OffsetTimeline__UpdateFunc_Params params;
+	ABP_Dropping_01_C_OffsetTimeline__UpdateFunc_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -76,16 +76,16 @@ void ABP_Dropping_01_C::BndEvt__Shit_03_K2Node_ComponentBoundEvent_0_ComponentHi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Dropping_01.BP_Dropping_01_C.BndEvt__Shit_03_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature");
 
-	ABP_Dropping_01_C_BndEvt__Shit_03_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature_Params params;
-	params.HitComponent = HitComponent;
-	params.OtherActor = OtherActor;
-	params.OtherComp = OtherComp;
-	params.NormalImpulse = NormalImpulse;
-	params.Hit = Hit;
+	ABP_Dropping_01_C_BndEvt__Shit_03_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature_Params fn_params;
+	fn_params.HitComponent = HitComponent;
+	fn_params.OtherActor = OtherActor;
+	fn_params.OtherComp = OtherComp;
+	fn_params.NormalImpulse = NormalImpulse;
+	fn_params.Hit = Hit;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -98,11 +98,11 @@ void ABP_Dropping_01_C::AutoDestroy()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Dropping_01.BP_Dropping_01_C.AutoDestroy");
 
-	ABP_Dropping_01_C_AutoDestroy_Params params;
+	ABP_Dropping_01_C_AutoDestroy_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -115,11 +115,11 @@ void ABP_Dropping_01_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Dropping_01.BP_Dropping_01_C.ReceiveBeginPlay");
 
-	ABP_Dropping_01_C_ReceiveBeginPlay_Params params;
+	ABP_Dropping_01_C_ReceiveBeginPlay_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -134,12 +134,12 @@ void ABP_Dropping_01_C::ExecuteUbergraph_BP_Dropping_01(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Dropping_01.BP_Dropping_01_C.ExecuteUbergraph_BP_Dropping_01");
 
-	ABP_Dropping_01_C_ExecuteUbergraph_BP_Dropping_01_Params params;
-	params.EntryPoint = EntryPoint;
+	ABP_Dropping_01_C_ExecuteUbergraph_BP_Dropping_01_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

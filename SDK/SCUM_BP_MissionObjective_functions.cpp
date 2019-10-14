@@ -19,11 +19,11 @@ void ABP_MissionObjective_C::OnChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MissionObjective.BP_MissionObjective_C.OnChanged");
 
-	ABP_MissionObjective_C_OnChanged_Params params;
+	ABP_MissionObjective_C_OnChanged_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -38,16 +38,16 @@ void ABP_MissionObjective_C::GetDescription(struct FText* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MissionObjective.BP_MissionObjective_C.GetDescription");
 
-	ABP_MissionObjective_C_GetDescription_Params params;
+	ABP_MissionObjective_C_GetDescription_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Value != nullptr)
-		*Value = params.Value;
+		*Value = fn_params.Value;
 }
 
 
@@ -60,16 +60,16 @@ void ABP_MissionObjective_C::IsCompleted(bool* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MissionObjective.BP_MissionObjective_C.IsCompleted");
 
-	ABP_MissionObjective_C_IsCompleted_Params params;
+	ABP_MissionObjective_C_IsCompleted_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Value != nullptr)
-		*Value = params.Value;
+		*Value = fn_params.Value;
 }
 
 
@@ -80,11 +80,11 @@ void ABP_MissionObjective_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MissionObjective.BP_MissionObjective_C.UserConstructionScript");
 
-	ABP_MissionObjective_C_UserConstructionScript_Params params;
+	ABP_MissionObjective_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -99,12 +99,12 @@ void ABP_MissionObjective_C::Changed__DelegateSignature(class ABP_MissionObjecti
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MissionObjective.BP_MissionObjective_C.Changed__DelegateSignature");
 
-	ABP_MissionObjective_C_Changed__DelegateSignature_Params params;
-	params.sender = sender;
+	ABP_MissionObjective_C_Changed__DelegateSignature_Params fn_params;
+	fn_params.sender = sender;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

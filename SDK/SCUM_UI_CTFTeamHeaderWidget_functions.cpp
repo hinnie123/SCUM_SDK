@@ -21,15 +21,15 @@ struct FText UUI_CTFTeamHeaderWidget_C::GetPlayerText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CTFTeamHeaderWidget.UI_CTFTeamHeaderWidget_C.GetPlayerText");
 
-	UUI_CTFTeamHeaderWidget_C_GetPlayerText_Params params;
+	UUI_CTFTeamHeaderWidget_C_GetPlayerText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -42,12 +42,12 @@ void UUI_CTFTeamHeaderWidget_C::SetTeamName(struct FText* Name)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CTFTeamHeaderWidget.UI_CTFTeamHeaderWidget_C.SetTeamName");
 
-	UUI_CTFTeamHeaderWidget_C_SetTeamName_Params params;
-	params.Name = Name;
+	UUI_CTFTeamHeaderWidget_C_SetTeamName_Params fn_params;
+	fn_params.Name = Name;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -60,11 +60,11 @@ void UUI_CTFTeamHeaderWidget_C::SetLeftSide()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CTFTeamHeaderWidget.UI_CTFTeamHeaderWidget_C.SetLeftSide");
 
-	UUI_CTFTeamHeaderWidget_C_SetLeftSide_Params params;
+	UUI_CTFTeamHeaderWidget_C_SetLeftSide_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -77,11 +77,11 @@ void UUI_CTFTeamHeaderWidget_C::SetRightSide()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CTFTeamHeaderWidget.UI_CTFTeamHeaderWidget_C.SetRightSide");
 
-	UUI_CTFTeamHeaderWidget_C_SetRightSide_Params params;
+	UUI_CTFTeamHeaderWidget_C_SetRightSide_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -96,12 +96,12 @@ void UUI_CTFTeamHeaderWidget_C::SetGameEvent(class AGameEventBase** gameEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CTFTeamHeaderWidget.UI_CTFTeamHeaderWidget_C.SetGameEvent");
 
-	UUI_CTFTeamHeaderWidget_C_SetGameEvent_Params params;
-	params.gameEvent = gameEvent;
+	UUI_CTFTeamHeaderWidget_C_SetGameEvent_Params fn_params;
+	fn_params.gameEvent = gameEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -114,11 +114,11 @@ void UUI_CTFTeamHeaderWidget_C::ClearWinCounters()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CTFTeamHeaderWidget.UI_CTFTeamHeaderWidget_C.ClearWinCounters");
 
-	UUI_CTFTeamHeaderWidget_C_ClearWinCounters_Params params;
+	UUI_CTFTeamHeaderWidget_C_ClearWinCounters_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -131,11 +131,11 @@ void UUI_CTFTeamHeaderWidget_C::AddWinCounter()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CTFTeamHeaderWidget.UI_CTFTeamHeaderWidget_C.AddWinCounter");
 
-	UUI_CTFTeamHeaderWidget_C_AddWinCounter_Params params;
+	UUI_CTFTeamHeaderWidget_C_AddWinCounter_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -150,12 +150,12 @@ void UUI_CTFTeamHeaderWidget_C::SetTeamScore(float* Score)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CTFTeamHeaderWidget.UI_CTFTeamHeaderWidget_C.SetTeamScore");
 
-	UUI_CTFTeamHeaderWidget_C_SetTeamScore_Params params;
-	params.Score = Score;
+	UUI_CTFTeamHeaderWidget_C_SetTeamScore_Params fn_params;
+	fn_params.Score = Score;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -170,12 +170,12 @@ void UUI_CTFTeamHeaderWidget_C::SetTeamColours(struct FGameEventTeamColours* col
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CTFTeamHeaderWidget.UI_CTFTeamHeaderWidget_C.SetTeamColours");
 
-	UUI_CTFTeamHeaderWidget_C_SetTeamColours_Params params;
-	params.colours = colours;
+	UUI_CTFTeamHeaderWidget_C_SetTeamColours_Params fn_params;
+	fn_params.colours = colours;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -190,12 +190,12 @@ void UUI_CTFTeamHeaderWidget_C::ExecuteUbergraph_UI_CTFTeamHeaderWidget(int Entr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CTFTeamHeaderWidget.UI_CTFTeamHeaderWidget_C.ExecuteUbergraph_UI_CTFTeamHeaderWidget");
 
-	UUI_CTFTeamHeaderWidget_C_ExecuteUbergraph_UI_CTFTeamHeaderWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_CTFTeamHeaderWidget_C_ExecuteUbergraph_UI_CTFTeamHeaderWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

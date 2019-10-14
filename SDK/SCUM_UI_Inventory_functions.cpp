@@ -19,11 +19,11 @@ void UUI_Inventory_C::RefreshMaxMassAndSlots()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Inventory.UI_Inventory_C.RefreshMaxMassAndSlots");
 
-	UUI_Inventory_C_RefreshMaxMassAndSlots_Params params;
+	UUI_Inventory_C_RefreshMaxMassAndSlots_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -38,12 +38,12 @@ void UUI_Inventory_C::ToggleMinimizePartial(bool adjustPosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Inventory.UI_Inventory_C.ToggleMinimizePartial");
 
-	UUI_Inventory_C_ToggleMinimizePartial_Params params;
-	params.adjustPosition = adjustPosition;
+	UUI_Inventory_C_ToggleMinimizePartial_Params fn_params;
+	fn_params.adjustPosition = adjustPosition;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -58,15 +58,15 @@ bool UUI_Inventory_C::GetMinimizedPartial()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Inventory.UI_Inventory_C.GetMinimizedPartial");
 
-	UUI_Inventory_C_GetMinimizedPartial_Params params;
+	UUI_Inventory_C_GetMinimizedPartial_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -79,15 +79,15 @@ bool UUI_Inventory_C::GetMinimizedFull()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Inventory.UI_Inventory_C.GetMinimizedFull");
 
-	UUI_Inventory_C_GetMinimizedFull_Params params;
+	UUI_Inventory_C_GetMinimizedFull_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -100,12 +100,12 @@ void UUI_Inventory_C::ToggleMinimize(bool adjustPosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Inventory.UI_Inventory_C.ToggleMinimize");
 
-	UUI_Inventory_C_ToggleMinimize_Params params;
-	params.adjustPosition = adjustPosition;
+	UUI_Inventory_C_ToggleMinimize_Params fn_params;
+	fn_params.adjustPosition = adjustPosition;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -120,12 +120,12 @@ void UUI_Inventory_C::SetSize(bool adjustPosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Inventory.UI_Inventory_C.SetSize");
 
-	UUI_Inventory_C_SetSize_Params params;
-	params.adjustPosition = adjustPosition;
+	UUI_Inventory_C_SetSize_Params fn_params;
+	fn_params.adjustPosition = adjustPosition;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -142,17 +142,17 @@ struct FEventReply UUI_Inventory_C::OnMinimizePartialClicked(const struct FGeome
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Inventory.UI_Inventory_C.OnMinimizePartialClicked");
 
-	UUI_Inventory_C_OnMinimizePartialClicked_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_Inventory_C_OnMinimizePartialClicked_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -167,17 +167,17 @@ struct FEventReply UUI_Inventory_C::OnMinimizeAllClicked(const struct FGeometry&
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Inventory.UI_Inventory_C.OnMinimizeAllClicked");
 
-	UUI_Inventory_C_OnMinimizeAllClicked_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_Inventory_C_OnMinimizeAllClicked_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -188,11 +188,11 @@ void UUI_Inventory_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Inventory.UI_Inventory_C.Construct");
 
-	UUI_Inventory_C_Construct_Params params;
+	UUI_Inventory_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -205,11 +205,11 @@ void UUI_Inventory_C::OnSynchronizeProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Inventory.UI_Inventory_C.OnSynchronizeProperties");
 
-	UUI_Inventory_C_OnSynchronizeProperties_Params params;
+	UUI_Inventory_C_OnSynchronizeProperties_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -225,13 +225,13 @@ void UUI_Inventory_C::UpdateDisplayValues(unsigned char* occupiedSlots, float* o
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Inventory.UI_Inventory_C.UpdateDisplayValues");
 
-	UUI_Inventory_C_UpdateDisplayValues_Params params;
-	params.occupiedSlots = occupiedSlots;
-	params.occupiedMass = occupiedMass;
+	UUI_Inventory_C_UpdateDisplayValues_Params fn_params;
+	fn_params.occupiedSlots = occupiedSlots;
+	fn_params.occupiedMass = occupiedMass;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -246,12 +246,12 @@ void UUI_Inventory_C::UpdateImage(class UTexture2D** Texture)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Inventory.UI_Inventory_C.UpdateImage");
 
-	UUI_Inventory_C_UpdateImage_Params params;
-	params.Texture = Texture;
+	UUI_Inventory_C_UpdateImage_Params fn_params;
+	fn_params.Texture = Texture;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -268,14 +268,14 @@ void UUI_Inventory_C::SetMinimizeAndAdjustSize(bool* isMinimizedFull, bool* isMi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Inventory.UI_Inventory_C.SetMinimizeAndAdjustSize");
 
-	UUI_Inventory_C_SetMinimizeAndAdjustSize_Params params;
-	params.isMinimizedFull = isMinimizedFull;
-	params.isMinimizedPartial = isMinimizedPartial;
-	params.adjustPosition = adjustPosition;
+	UUI_Inventory_C_SetMinimizeAndAdjustSize_Params fn_params;
+	fn_params.isMinimizedFull = isMinimizedFull;
+	fn_params.isMinimizedPartial = isMinimizedPartial;
+	fn_params.adjustPosition = adjustPosition;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -290,12 +290,12 @@ void UUI_Inventory_C::SetTitle(struct FText* Title)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Inventory.UI_Inventory_C.SetTitle");
 
-	UUI_Inventory_C_SetTitle_Params params;
-	params.Title = Title;
+	UUI_Inventory_C_SetTitle_Params fn_params;
+	fn_params.Title = Title;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -311,13 +311,13 @@ void UUI_Inventory_C::OnHeaderDoubleClickEvent(const struct FGeometry& Geometry,
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Inventory.UI_Inventory_C.OnHeaderDoubleClickEvent");
 
-	UUI_Inventory_C_OnHeaderDoubleClickEvent_Params params;
-	params.Geometry = Geometry;
-	params.MouseEvent = MouseEvent;
+	UUI_Inventory_C_OnHeaderDoubleClickEvent_Params fn_params;
+	fn_params.Geometry = Geometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -330,11 +330,11 @@ void UUI_Inventory_C::RefreshSize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Inventory.UI_Inventory_C.RefreshSize");
 
-	UUI_Inventory_C_RefreshSize_Params params;
+	UUI_Inventory_C_RefreshSize_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -349,12 +349,12 @@ void UUI_Inventory_C::ExecuteUbergraph_UI_Inventory(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_Inventory.UI_Inventory_C.ExecuteUbergraph_UI_Inventory");
 
-	UUI_Inventory_C_ExecuteUbergraph_UI_Inventory_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_Inventory_C_ExecuteUbergraph_UI_Inventory_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

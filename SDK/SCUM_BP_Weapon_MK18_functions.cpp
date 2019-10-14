@@ -19,11 +19,11 @@ void ABP_Weapon_MK18_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_MK18.BP_Weapon_MK18_C.UserConstructionScript");
 
-	ABP_Weapon_MK18_C_UserConstructionScript_Params params;
+	ABP_Weapon_MK18_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void ABP_Weapon_MK18_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_MK18.BP_Weapon_MK18_C.ReceiveBeginPlay");
 
-	ABP_Weapon_MK18_C_ReceiveBeginPlay_Params params;
+	ABP_Weapon_MK18_C_ReceiveBeginPlay_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -56,13 +56,13 @@ void ABP_Weapon_MK18_C::OnAttachmentAdded(class AWeapon* sender, class AWeaponAt
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_MK18.BP_Weapon_MK18_C.OnAttachmentAdded");
 
-	ABP_Weapon_MK18_C_OnAttachmentAdded_Params params;
-	params.sender = sender;
-	params.Attachment = Attachment;
+	ABP_Weapon_MK18_C_OnAttachmentAdded_Params fn_params;
+	fn_params.sender = sender;
+	fn_params.Attachment = Attachment;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -78,13 +78,13 @@ void ABP_Weapon_MK18_C::OnAttachmentRemoved(class AWeapon* sender, class AWeapon
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_MK18.BP_Weapon_MK18_C.OnAttachmentRemoved");
 
-	ABP_Weapon_MK18_C_OnAttachmentRemoved_Params params;
-	params.sender = sender;
-	params.Attachment = Attachment;
+	ABP_Weapon_MK18_C_OnAttachmentRemoved_Params fn_params;
+	fn_params.sender = sender;
+	fn_params.Attachment = Attachment;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -99,12 +99,12 @@ void ABP_Weapon_MK18_C::ExecuteUbergraph_BP_Weapon_MK18(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_MK18.BP_Weapon_MK18_C.ExecuteUbergraph_BP_Weapon_MK18");
 
-	ABP_Weapon_MK18_C_ExecuteUbergraph_BP_Weapon_MK18_Params params;
-	params.EntryPoint = EntryPoint;
+	ABP_Weapon_MK18_C_ExecuteUbergraph_BP_Weapon_MK18_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

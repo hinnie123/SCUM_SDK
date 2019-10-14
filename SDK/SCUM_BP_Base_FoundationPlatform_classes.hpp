@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Base_FoundationPlatform.BP_Base_FoundationPlatform_C
-// 0x0000 (0x0670 - 0x0670)
+// 0x0000 (0x06C0 - 0x06C0)
 class UBP_Base_FoundationPlatform_C : public UBaseBuildingComponent
 {
 public:

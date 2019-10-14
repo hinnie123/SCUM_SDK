@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Toaster_Pastries2.Toaster_Pastries2_C
-// 0x0000 (0x08C0 - 0x08C0)
+// 0x0000 (0x0958 - 0x0958)
 class AToaster_Pastries2_C : public AFoodItem
 {
 public:

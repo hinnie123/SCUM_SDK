@@ -19,11 +19,11 @@ void UBracketedBackground_C::SetAlarmBackgroundColor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BracketedBackground.BracketedBackground_C.SetAlarmBackgroundColor");
 
-	UBracketedBackground_C_SetAlarmBackgroundColor_Params params;
+	UBracketedBackground_C_SetAlarmBackgroundColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void UBracketedBackground_C::SetNormalBackgroundColor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BracketedBackground.BracketedBackground_C.SetNormalBackgroundColor");
 
-	UBracketedBackground_C_SetNormalBackgroundColor_Params params;
+	UBracketedBackground_C_SetNormalBackgroundColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -55,12 +55,12 @@ void UBracketedBackground_C::SetBackgroundColor(const struct FLinearColor& color
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BracketedBackground.BracketedBackground_C.SetBackgroundColor");
 
-	UBracketedBackground_C_SetBackgroundColor_Params params;
-	params.colorToSet = colorToSet;
+	UBracketedBackground_C_SetBackgroundColor_Params fn_params;
+	fn_params.colorToSet = colorToSet;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

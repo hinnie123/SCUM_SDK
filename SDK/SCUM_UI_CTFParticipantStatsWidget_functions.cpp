@@ -19,11 +19,11 @@ void UUI_CTFParticipantStatsWidget_C::FillLabels()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CTFParticipantStatsWidget.UI_CTFParticipantStatsWidget_C.FillLabels");
 
-	UUI_CTFParticipantStatsWidget_C_FillLabels_Params params;
+	UUI_CTFParticipantStatsWidget_C_FillLabels_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void UUI_CTFParticipantStatsWidget_C::UpdateStats()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CTFParticipantStatsWidget.UI_CTFParticipantStatsWidget_C.UpdateStats");
 
-	UUI_CTFParticipantStatsWidget_C_UpdateStats_Params params;
+	UUI_CTFParticipantStatsWidget_C_UpdateStats_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -55,12 +55,12 @@ void UUI_CTFParticipantStatsWidget_C::ExecuteUbergraph_UI_CTFParticipantStatsWid
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CTFParticipantStatsWidget.UI_CTFParticipantStatsWidget_C.ExecuteUbergraph_UI_CTFParticipantStatsWidget");
 
-	UUI_CTFParticipantStatsWidget_C_ExecuteUbergraph_UI_CTFParticipantStatsWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_CTFParticipantStatsWidget_C_ExecuteUbergraph_UI_CTFParticipantStatsWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

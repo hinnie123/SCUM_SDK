@@ -21,15 +21,15 @@ ESlateVisibility UUI_GameEventPanelWidget_C::GetDropdownVisibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.GetDropdownVisibility");
 
-	UUI_GameEventPanelWidget_C_GetDropdownVisibility_Params params;
+	UUI_GameEventPanelWidget_C_GetDropdownVisibility_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -40,11 +40,11 @@ void UUI_GameEventPanelWidget_C::RestoreSelected()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.RestoreSelected");
 
-	UUI_GameEventPanelWidget_C_RestoreSelected_Params params;
+	UUI_GameEventPanelWidget_C_RestoreSelected_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -55,24 +55,24 @@ void UUI_GameEventPanelWidget_C::RestoreSelected()
 // Parameters:
 // class UComboBoxString*         Dropdown                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // TArray<class AGameEventBase*>  GameEvents                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FString                 Selected                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// struct FString                 selected                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UUI_GameEventPanelWidget_C::UpdateSelection(class UComboBoxString* Dropdown, const struct FString& Selected, TArray<class AGameEventBase*>* GameEvents)
+void UUI_GameEventPanelWidget_C::UpdateSelection(class UComboBoxString* Dropdown, const struct FString& selected, TArray<class AGameEventBase*>* GameEvents)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.UpdateSelection");
 
-	UUI_GameEventPanelWidget_C_UpdateSelection_Params params;
-	params.Dropdown = Dropdown;
-	params.Selected = Selected;
+	UUI_GameEventPanelWidget_C_UpdateSelection_Params fn_params;
+	fn_params.Dropdown = Dropdown;
+	fn_params.selected = selected;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (GameEvents != nullptr)
-		*GameEvents = params.GameEvents;
+		*GameEvents = fn_params.GameEvents;
 }
 
 
@@ -85,16 +85,16 @@ void UUI_GameEventPanelWidget_C::GetSelectedEvent(class AGameEventBase** gameEve
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.GetSelectedEvent");
 
-	UUI_GameEventPanelWidget_C_GetSelectedEvent_Params params;
+	UUI_GameEventPanelWidget_C_GetSelectedEvent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (gameEvent != nullptr)
-		*gameEvent = params.gameEvent;
+		*gameEvent = fn_params.gameEvent;
 }
 
 
@@ -108,17 +108,17 @@ void UUI_GameEventPanelWidget_C::GetGameEventOptionString(class AGameEventBase* 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.GetGameEventOptionString");
 
-	UUI_GameEventPanelWidget_C_GetGameEventOptionString_Params params;
-	params.gameEvent = gameEvent;
+	UUI_GameEventPanelWidget_C_GetGameEventOptionString_Params fn_params;
+	fn_params.gameEvent = gameEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OptionString != nullptr)
-		*OptionString = params.OptionString;
+		*OptionString = fn_params.OptionString;
 }
 
 
@@ -132,13 +132,13 @@ void UUI_GameEventPanelWidget_C::SelectEvent(int Index, bool Current)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.SelectEvent");
 
-	UUI_GameEventPanelWidget_C_SelectEvent_Params params;
-	params.Index = Index;
-	params.Current = Current;
+	UUI_GameEventPanelWidget_C_SelectEvent_Params fn_params;
+	fn_params.Index = Index;
+	fn_params.Current = Current;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -153,12 +153,12 @@ void UUI_GameEventPanelWidget_C::AddCurrentEvent(class AGameEventBase** gameEven
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.AddCurrentEvent");
 
-	UUI_GameEventPanelWidget_C_AddCurrentEvent_Params params;
-	params.gameEvent = gameEvent;
+	UUI_GameEventPanelWidget_C_AddCurrentEvent_Params fn_params;
+	fn_params.gameEvent = gameEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -171,11 +171,11 @@ void UUI_GameEventPanelWidget_C::EmptyLists()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.EmptyLists");
 
-	UUI_GameEventPanelWidget_C_EmptyLists_Params params;
+	UUI_GameEventPanelWidget_C_EmptyLists_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -190,12 +190,12 @@ void UUI_GameEventPanelWidget_C::AddAnnouncedEvent(class AGameEventBase** gameEv
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.AddAnnouncedEvent");
 
-	UUI_GameEventPanelWidget_C_AddAnnouncedEvent_Params params;
-	params.gameEvent = gameEvent;
+	UUI_GameEventPanelWidget_C_AddAnnouncedEvent_Params fn_params;
+	fn_params.gameEvent = gameEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -208,11 +208,11 @@ void UUI_GameEventPanelWidget_C::OnUpdate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnUpdate");
 
-	UUI_GameEventPanelWidget_C_OnUpdate_Params params;
+	UUI_GameEventPanelWidget_C_OnUpdate_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -225,11 +225,11 @@ void UUI_GameEventPanelWidget_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.Construct");
 
-	UUI_GameEventPanelWidget_C_Construct_Params params;
+	UUI_GameEventPanelWidget_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -242,11 +242,11 @@ void UUI_GameEventPanelWidget_C::OnOpened()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnOpened");
 
-	UUI_GameEventPanelWidget_C_OnOpened_Params params;
+	UUI_GameEventPanelWidget_C_OnOpened_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -259,11 +259,11 @@ void UUI_GameEventPanelWidget_C::OnClosed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnClosed");
 
-	UUI_GameEventPanelWidget_C_OnClosed_Params params;
+	UUI_GameEventPanelWidget_C_OnClosed_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -279,13 +279,13 @@ void UUI_GameEventPanelWidget_C::OnEventComboBoxSelectionChanged(const struct FS
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnEventComboBoxSelectionChanged");
 
-	UUI_GameEventPanelWidget_C_OnEventComboBoxSelectionChanged_Params params;
-	params.SelectedItem = SelectedItem;
-	params.SelectionType = SelectionType;
+	UUI_GameEventPanelWidget_C_OnEventComboBoxSelectionChanged_Params fn_params;
+	fn_params.SelectedItem = SelectedItem;
+	fn_params.SelectionType = SelectionType;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -300,12 +300,12 @@ void UUI_GameEventPanelWidget_C::ExecuteUbergraph_UI_GameEventPanelWidget(int En
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.ExecuteUbergraph_UI_GameEventPanelWidget");
 
-	UUI_GameEventPanelWidget_C_ExecuteUbergraph_UI_GameEventPanelWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_GameEventPanelWidget_C_ExecuteUbergraph_UI_GameEventPanelWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

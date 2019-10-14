@@ -21,12 +21,12 @@ void UOxygenSaturationMonitor_C::AlarmControl(int alarmCode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OxygenSaturationMonitor.OxygenSaturationMonitor_C.AlarmControl");
 
-	UOxygenSaturationMonitor_C_AlarmControl_Params params;
-	params.alarmCode = alarmCode;
+	UOxygenSaturationMonitor_C_AlarmControl_Params fn_params;
+	fn_params.alarmCode = alarmCode;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -39,11 +39,11 @@ void UOxygenSaturationMonitor_C::DeactivateAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OxygenSaturationMonitor.OxygenSaturationMonitor_C.DeactivateAlarm");
 
-	UOxygenSaturationMonitor_C_DeactivateAlarm_Params params;
+	UOxygenSaturationMonitor_C_DeactivateAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -56,11 +56,11 @@ void UOxygenSaturationMonitor_C::ActivateAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OxygenSaturationMonitor.OxygenSaturationMonitor_C.ActivateAlarm");
 
-	UOxygenSaturationMonitor_C_ActivateAlarm_Params params;
+	UOxygenSaturationMonitor_C_ActivateAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -76,17 +76,17 @@ void UOxygenSaturationMonitor_C::CheckBloodOxygenationAlarm(float oxygenationLev
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OxygenSaturationMonitor.OxygenSaturationMonitor_C.CheckBloodOxygenationAlarm");
 
-	UOxygenSaturationMonitor_C_CheckBloodOxygenationAlarm_Params params;
-	params.oxygenationLevel = oxygenationLevel;
+	UOxygenSaturationMonitor_C_CheckBloodOxygenationAlarm_Params fn_params;
+	fn_params.oxygenationLevel = oxygenationLevel;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (alarmCode != nullptr)
-		*alarmCode = params.alarmCode;
+		*alarmCode = fn_params.alarmCode;
 }
 
 
@@ -100,17 +100,17 @@ void UOxygenSaturationMonitor_C::SetPrisonerAndLifeComponentToMonitor(class APri
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OxygenSaturationMonitor.OxygenSaturationMonitor_C.SetPrisonerAndLifeComponentToMonitor");
 
-	UOxygenSaturationMonitor_C_SetPrisonerAndLifeComponentToMonitor_Params params;
-	params.prisonerToSet = prisonerToSet;
+	UOxygenSaturationMonitor_C_SetPrisonerAndLifeComponentToMonitor_Params fn_params;
+	fn_params.prisonerToSet = prisonerToSet;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Success != nullptr)
-		*Success = params.Success;
+		*Success = fn_params.Success;
 }
 
 
@@ -123,16 +123,16 @@ void UOxygenSaturationMonitor_C::ProvideOxygenSaturationExtremes(struct FText* O
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OxygenSaturationMonitor.OxygenSaturationMonitor_C.ProvideOxygenSaturationExtremes");
 
-	UOxygenSaturationMonitor_C_ProvideOxygenSaturationExtremes_Params params;
+	UOxygenSaturationMonitor_C_ProvideOxygenSaturationExtremes_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OxygenSaturationExtremes != nullptr)
-		*OxygenSaturationExtremes = params.OxygenSaturationExtremes;
+		*OxygenSaturationExtremes = fn_params.OxygenSaturationExtremes;
 }
 
 
@@ -145,15 +145,15 @@ struct FText UOxygenSaturationMonitor_C::GetHeartRateBPM()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OxygenSaturationMonitor.OxygenSaturationMonitor_C.GetHeartRateBPM");
 
-	UOxygenSaturationMonitor_C_GetHeartRateBPM_Params params;
+	UOxygenSaturationMonitor_C_GetHeartRateBPM_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -164,11 +164,11 @@ void UOxygenSaturationMonitor_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OxygenSaturationMonitor.OxygenSaturationMonitor_C.Construct");
 
-	UOxygenSaturationMonitor_C_Construct_Params params;
+	UOxygenSaturationMonitor_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -184,13 +184,13 @@ void UOxygenSaturationMonitor_C::Tick(struct FGeometry* MyGeometry, float* InDel
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OxygenSaturationMonitor.OxygenSaturationMonitor_C.Tick");
 
-	UOxygenSaturationMonitor_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UOxygenSaturationMonitor_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -203,11 +203,11 @@ void UOxygenSaturationMonitor_C::AlarmOnWindowContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OxygenSaturationMonitor.OxygenSaturationMonitor_C.AlarmOnWindowContent");
 
-	UOxygenSaturationMonitor_C_AlarmOnWindowContent_Params params;
+	UOxygenSaturationMonitor_C_AlarmOnWindowContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -222,12 +222,12 @@ void UOxygenSaturationMonitor_C::ExecuteUbergraph_OxygenSaturationMonitor(int En
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OxygenSaturationMonitor.OxygenSaturationMonitor_C.ExecuteUbergraph_OxygenSaturationMonitor");
 
-	UOxygenSaturationMonitor_C_ExecuteUbergraph_OxygenSaturationMonitor_Params params;
-	params.EntryPoint = EntryPoint;
+	UOxygenSaturationMonitor_C_ExecuteUbergraph_OxygenSaturationMonitor_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

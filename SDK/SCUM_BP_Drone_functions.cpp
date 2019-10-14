@@ -19,11 +19,11 @@ void ABP_Drone_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Drone.BP_Drone_C.UserConstructionScript");
 
-	ABP_Drone_C_UserConstructionScript_Params params;
+	ABP_Drone_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -38,12 +38,12 @@ void ABP_Drone_C::OnSilentModeChanged_BP(bool* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Drone.BP_Drone_C.OnSilentModeChanged_BP");
 
-	ABP_Drone_C_OnSilentModeChanged_BP_Params params;
-	params.Value = Value;
+	ABP_Drone_C_OnSilentModeChanged_BP_Params fn_params;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -58,12 +58,12 @@ void ABP_Drone_C::ExecuteUbergraph_BP_Drone(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Drone.BP_Drone_C.ExecuteUbergraph_BP_Drone");
 
-	ABP_Drone_C_ExecuteUbergraph_BP_Drone_Params params;
-	params.EntryPoint = EntryPoint;
+	ABP_Drone_C_ExecuteUbergraph_BP_Drone_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

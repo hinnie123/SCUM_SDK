@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ImprovisedRail_Long.BP_ImprovisedRail_Long_C
-// 0x0000 (0x0790 - 0x0790)
+// 0x0000 (0x0830 - 0x0830)
 class ABP_ImprovisedRail_Long_C : public AWeaponAttachmentScopeRail
 {
 public:

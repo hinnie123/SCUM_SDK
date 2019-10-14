@@ -21,16 +21,16 @@ void UVitamins_C::shouldAlarmBeOn(bool* shouldAlarmBeOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Vitamins.Vitamins_C.shouldAlarmBeOn");
 
-	UVitamins_C_shouldAlarmBeOn_Params params;
+	UVitamins_C_shouldAlarmBeOn_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (shouldAlarmBeOn != nullptr)
-		*shouldAlarmBeOn = params.shouldAlarmBeOn;
+		*shouldAlarmBeOn = fn_params.shouldAlarmBeOn;
 }
 
 
@@ -41,11 +41,11 @@ void UVitamins_C::SetParentsForChildren()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Vitamins.Vitamins_C.SetParentsForChildren");
 
-	UVitamins_C_SetParentsForChildren_Params params;
+	UVitamins_C_SetParentsForChildren_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -58,11 +58,11 @@ void UVitamins_C::Update()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Vitamins.Vitamins_C.Update");
 
-	UVitamins_C_Update_Params params;
+	UVitamins_C_Update_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -78,17 +78,17 @@ void UVitamins_C::SetPrisonerToMonitor(class APrisoner** Prisoner, bool* Success
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Vitamins.Vitamins_C.SetPrisonerToMonitor");
 
-	UVitamins_C_SetPrisonerToMonitor_Params params;
-	params.Prisoner = Prisoner;
+	UVitamins_C_SetPrisonerToMonitor_Params fn_params;
+	fn_params.Prisoner = Prisoner;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Success != nullptr)
-		*Success = params.Success;
+		*Success = fn_params.Success;
 }
 
 
@@ -101,12 +101,12 @@ void UVitamins_C::AddVitaminToParameterLines(class UParameterPercentageLine_C* N
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Vitamins.Vitamins_C.AddVitaminToParameterLines");
 
-	UVitamins_C_AddVitaminToParameterLines_Params params;
-	params.NewItem = NewItem;
+	UVitamins_C_AddVitaminToParameterLines_Params fn_params;
+	fn_params.NewItem = NewItem;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -119,11 +119,11 @@ void UVitamins_C::PopulateVitaminsParameterLinesArray()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Vitamins.Vitamins_C.PopulateVitaminsParameterLinesArray");
 
-	UVitamins_C_PopulateVitaminsParameterLinesArray_Params params;
+	UVitamins_C_PopulateVitaminsParameterLinesArray_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -136,11 +136,11 @@ void UVitamins_C::Init()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Vitamins.Vitamins_C.Init");
 
-	UVitamins_C_Init_Params params;
+	UVitamins_C_Init_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -155,12 +155,12 @@ void UVitamins_C::SetDefaultTitle(const struct FText& defaultTitle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Vitamins.Vitamins_C.SetDefaultTitle");
 
-	UVitamins_C_SetDefaultTitle_Params params;
-	params.defaultTitle = defaultTitle;
+	UVitamins_C_SetDefaultTitle_Params fn_params;
+	fn_params.defaultTitle = defaultTitle;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -175,12 +175,12 @@ void UVitamins_C::SetContentVisibility(ESlateVisibility Visibility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Vitamins.Vitamins_C.SetContentVisibility");
 
-	UVitamins_C_SetContentVisibility_Params params;
-	params.Visibility = Visibility;
+	UVitamins_C_SetContentVisibility_Params fn_params;
+	fn_params.Visibility = Visibility;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -195,12 +195,12 @@ void UVitamins_C::SetTextColor(const struct FLinearColor& TextColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Vitamins.Vitamins_C.SetTextColor");
 
-	UVitamins_C_SetTextColor_Params params;
-	params.TextColor = TextColor;
+	UVitamins_C_SetTextColor_Params fn_params;
+	fn_params.TextColor = TextColor;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -216,13 +216,13 @@ void UVitamins_C::SetTextColorOfVerticalBox(class UPanelWidget* verticalBoxRef, 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Vitamins.Vitamins_C.SetTextColorOfVerticalBox");
 
-	UVitamins_C_SetTextColorOfVerticalBox_Params params;
-	params.verticalBoxRef = verticalBoxRef;
-	params.TextColor = TextColor;
+	UVitamins_C_SetTextColorOfVerticalBox_Params fn_params;
+	fn_params.verticalBoxRef = verticalBoxRef;
+	fn_params.TextColor = TextColor;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -237,15 +237,15 @@ struct FText UVitamins_C::GetTitleText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Vitamins.Vitamins_C.GetTitleText");
 
-	UVitamins_C_GetTitleText_Params params;
+	UVitamins_C_GetTitleText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -258,16 +258,16 @@ void UVitamins_C::GetDefaultTitle(struct FText* defaultTitle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Vitamins.Vitamins_C.GetDefaultTitle");
 
-	UVitamins_C_GetDefaultTitle_Params params;
+	UVitamins_C_GetDefaultTitle_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (defaultTitle != nullptr)
-		*defaultTitle = params.defaultTitle;
+		*defaultTitle = fn_params.defaultTitle;
 }
 
 
@@ -280,16 +280,16 @@ void UVitamins_C::SelectCustomColor(struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Vitamins.Vitamins_C.SelectCustomColor");
 
-	UVitamins_C_SelectCustomColor_Params params;
+	UVitamins_C_SelectCustomColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Color != nullptr)
-		*Color = params.Color;
+		*Color = fn_params.Color;
 }
 
 
@@ -300,11 +300,11 @@ void UVitamins_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Vitamins.Vitamins_C.Construct");
 
-	UVitamins_C_Construct_Params params;
+	UVitamins_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -320,13 +320,13 @@ void UVitamins_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Vitamins.Vitamins_C.Tick");
 
-	UVitamins_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UVitamins_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -339,11 +339,11 @@ void UVitamins_C::OnPrisonerSet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Vitamins.Vitamins_C.OnPrisonerSet");
 
-	UVitamins_C_OnPrisonerSet_Params params;
+	UVitamins_C_OnPrisonerSet_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -356,11 +356,11 @@ void UVitamins_C::UpdateVitaminsEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Vitamins.Vitamins_C.UpdateVitaminsEvent");
 
-	UVitamins_C_UpdateVitaminsEvent_Params params;
+	UVitamins_C_UpdateVitaminsEvent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -373,11 +373,11 @@ void UVitamins_C::AlarmOnWindowContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Vitamins.Vitamins_C.AlarmOnWindowContent");
 
-	UVitamins_C_AlarmOnWindowContent_Params params;
+	UVitamins_C_AlarmOnWindowContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -390,11 +390,11 @@ void UVitamins_C::AlarmOffWindowContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Vitamins.Vitamins_C.AlarmOffWindowContent");
 
-	UVitamins_C_AlarmOffWindowContent_Params params;
+	UVitamins_C_AlarmOffWindowContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -409,12 +409,12 @@ void UVitamins_C::OnMinimize(bool shouldMinimize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Vitamins.Vitamins_C.OnMinimize");
 
-	UVitamins_C_OnMinimize_Params params;
-	params.shouldMinimize = shouldMinimize;
+	UVitamins_C_OnMinimize_Params fn_params;
+	fn_params.shouldMinimize = shouldMinimize;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -429,12 +429,12 @@ void UVitamins_C::ExecuteUbergraph_Vitamins(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Vitamins.Vitamins_C.ExecuteUbergraph_Vitamins");
 
-	UVitamins_C_ExecuteUbergraph_Vitamins_Params params;
-	params.EntryPoint = EntryPoint;
+	UVitamins_C_ExecuteUbergraph_Vitamins_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

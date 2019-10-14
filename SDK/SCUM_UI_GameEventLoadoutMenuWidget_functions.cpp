@@ -22,17 +22,17 @@ void UUI_GameEventLoadoutMenuWidget_C::UpdateSlotSelection(class UUI_ItemSelecti
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLoadoutMenuWidget.UI_GameEventLoadoutMenuWidget_C.UpdateSlotSelection");
 
-	UUI_GameEventLoadoutMenuWidget_C_UpdateSlotSelection_Params params;
-	params.Slot = Slot;
+	UUI_GameEventLoadoutMenuWidget_C_UpdateSlotSelection_Params fn_params;
+	fn_params.Slot = Slot;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Selection != nullptr)
-		*Selection = params.Selection;
+		*Selection = fn_params.Selection;
 }
 
 
@@ -45,16 +45,16 @@ void UUI_GameEventLoadoutMenuWidget_C::HasAnythingToSelect(bool* HasAnythingToSe
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLoadoutMenuWidget.UI_GameEventLoadoutMenuWidget_C.HasAnythingToSelect");
 
-	UUI_GameEventLoadoutMenuWidget_C_HasAnythingToSelect_Params params;
+	UUI_GameEventLoadoutMenuWidget_C_HasAnythingToSelect_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (HasAnythingToSelect != nullptr)
-		*HasAnythingToSelect = params.HasAnythingToSelect;
+		*HasAnythingToSelect = fn_params.HasAnythingToSelect;
 }
 
 
@@ -67,16 +67,16 @@ void UUI_GameEventLoadoutMenuWidget_C::SomethingSelected(bool* everythingSelecte
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLoadoutMenuWidget.UI_GameEventLoadoutMenuWidget_C.SomethingSelected");
 
-	UUI_GameEventLoadoutMenuWidget_C_SomethingSelected_Params params;
+	UUI_GameEventLoadoutMenuWidget_C_SomethingSelected_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (everythingSelected != nullptr)
-		*everythingSelected = params.everythingSelected;
+		*everythingSelected = fn_params.everythingSelected;
 }
 
 
@@ -87,11 +87,11 @@ void UUI_GameEventLoadoutMenuWidget_C::UpdatePossibleItems()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLoadoutMenuWidget.UI_GameEventLoadoutMenuWidget_C.UpdatePossibleItems");
 
-	UUI_GameEventLoadoutMenuWidget_C_UpdatePossibleItems_Params params;
+	UUI_GameEventLoadoutMenuWidget_C_UpdatePossibleItems_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -104,11 +104,11 @@ void UUI_GameEventLoadoutMenuWidget_C::ApplyLoadout()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLoadoutMenuWidget.UI_GameEventLoadoutMenuWidget_C.ApplyLoadout");
 
-	UUI_GameEventLoadoutMenuWidget_C_ApplyLoadout_Params params;
+	UUI_GameEventLoadoutMenuWidget_C_ApplyLoadout_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -121,11 +121,11 @@ void UUI_GameEventLoadoutMenuWidget_C::BndEvt__UI_MenuButton_K2Node_ComponentBou
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLoadoutMenuWidget.UI_GameEventLoadoutMenuWidget_C.BndEvt__UI_MenuButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
 
-	UUI_GameEventLoadoutMenuWidget_C_BndEvt__UI_MenuButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature_Params params;
+	UUI_GameEventLoadoutMenuWidget_C_BndEvt__UI_MenuButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -138,11 +138,11 @@ void UUI_GameEventLoadoutMenuWidget_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLoadoutMenuWidget.UI_GameEventLoadoutMenuWidget_C.Construct");
 
-	UUI_GameEventLoadoutMenuWidget_C_Construct_Params params;
+	UUI_GameEventLoadoutMenuWidget_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -157,12 +157,12 @@ void UUI_GameEventLoadoutMenuWidget_C::PreConstruct(bool* IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLoadoutMenuWidget.UI_GameEventLoadoutMenuWidget_C.PreConstruct");
 
-	UUI_GameEventLoadoutMenuWidget_C_PreConstruct_Params params;
-	params.IsDesignTime = IsDesignTime;
+	UUI_GameEventLoadoutMenuWidget_C_PreConstruct_Params fn_params;
+	fn_params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -177,12 +177,12 @@ void UUI_GameEventLoadoutMenuWidget_C::ExecuteUbergraph_UI_GameEventLoadoutMenuW
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLoadoutMenuWidget.UI_GameEventLoadoutMenuWidget_C.ExecuteUbergraph_UI_GameEventLoadoutMenuWidget");
 
-	UUI_GameEventLoadoutMenuWidget_C_ExecuteUbergraph_UI_GameEventLoadoutMenuWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_GameEventLoadoutMenuWidget_C_ExecuteUbergraph_UI_GameEventLoadoutMenuWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

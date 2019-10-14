@@ -19,11 +19,11 @@ void ABP_WeaponBullet_762x54FMJ_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WeaponBullet_762x54FMJ.BP_WeaponBullet_762x54FMJ_C.UserConstructionScript");
 
-	ABP_WeaponBullet_762x54FMJ_C_UserConstructionScript_Params params;
+	ABP_WeaponBullet_762x54FMJ_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void ABP_WeaponBullet_762x54FMJ_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WeaponBullet_762x54FMJ.BP_WeaponBullet_762x54FMJ_C.ReceiveBeginPlay");
 
-	ABP_WeaponBullet_762x54FMJ_C_ReceiveBeginPlay_Params params;
+	ABP_WeaponBullet_762x54FMJ_C_ReceiveBeginPlay_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -55,12 +55,12 @@ void ABP_WeaponBullet_762x54FMJ_C::ExecuteUbergraph_BP_WeaponBullet_762x54FMJ(in
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WeaponBullet_762x54FMJ.BP_WeaponBullet_762x54FMJ_C.ExecuteUbergraph_BP_WeaponBullet_762x54FMJ");
 
-	ABP_WeaponBullet_762x54FMJ_C_ExecuteUbergraph_BP_WeaponBullet_762x54FMJ_Params params;
-	params.EntryPoint = EntryPoint;
+	ABP_WeaponBullet_762x54FMJ_C_ExecuteUbergraph_BP_WeaponBullet_762x54FMJ_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

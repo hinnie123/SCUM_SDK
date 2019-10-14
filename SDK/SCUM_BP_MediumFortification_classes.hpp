@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MediumFortification.BP_MediumFortification_C
-// 0x0000 (0x0610 - 0x0610)
+// 0x0000 (0x0620 - 0x0620)
 class UBP_MediumFortification_C : public UFortificationComponent
 {
 public:

@@ -19,11 +19,11 @@ void APrisoner_Left_Arm_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Prisoner_Left_Arm.Prisoner_Left_Arm_C.UserConstructionScript");
 
-	APrisoner_Left_Arm_C_UserConstructionScript_Params params;
+	APrisoner_Left_Arm_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

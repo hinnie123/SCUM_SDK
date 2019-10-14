@@ -21,15 +21,15 @@ ESlateVisibility UUI_GameEventScoreboardWidget_C::GetTogglePromptVisibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventScoreboardWidget.UI_GameEventScoreboardWidget_C.GetTogglePromptVisibility");
 
-	UUI_GameEventScoreboardWidget_C_GetTogglePromptVisibility_Params params;
+	UUI_GameEventScoreboardWidget_C_GetTogglePromptVisibility_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -40,11 +40,11 @@ void UUI_GameEventScoreboardWidget_C::ArrangeTeams()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventScoreboardWidget.UI_GameEventScoreboardWidget_C.ArrangeTeams");
 
-	UUI_GameEventScoreboardWidget_C_ArrangeTeams_Params params;
+	UUI_GameEventScoreboardWidget_C_ArrangeTeams_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -60,13 +60,13 @@ void UUI_GameEventScoreboardWidget_C::UpdateWinCounters(class UUI_GameEventTeamI
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventScoreboardWidget.UI_GameEventScoreboardWidget_C.UpdateWinCounters");
 
-	UUI_GameEventScoreboardWidget_C_UpdateWinCounters_Params params;
-	params.TeamInfoWidget = TeamInfoWidget;
-	params.TeamIndex = TeamIndex;
+	UUI_GameEventScoreboardWidget_C_UpdateWinCounters_Params fn_params;
+	fn_params.TeamInfoWidget = TeamInfoWidget;
+	fn_params.TeamIndex = TeamIndex;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -82,13 +82,13 @@ void UUI_GameEventScoreboardWidget_C::UpdateTeamScore(class UUI_GameEventTeamInf
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventScoreboardWidget.UI_GameEventScoreboardWidget_C.UpdateTeamScore");
 
-	UUI_GameEventScoreboardWidget_C_UpdateTeamScore_Params params;
-	params.TeamInfoWidget = TeamInfoWidget;
-	params.TeamIndex = TeamIndex;
+	UUI_GameEventScoreboardWidget_C_UpdateTeamScore_Params fn_params;
+	fn_params.TeamInfoWidget = TeamInfoWidget;
+	fn_params.TeamIndex = TeamIndex;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -101,11 +101,11 @@ void UUI_GameEventScoreboardWidget_C::InitTeamInfoWidgets()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventScoreboardWidget.UI_GameEventScoreboardWidget_C.InitTeamInfoWidgets");
 
-	UUI_GameEventScoreboardWidget_C_InitTeamInfoWidgets_Params params;
+	UUI_GameEventScoreboardWidget_C_InitTeamInfoWidgets_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -118,11 +118,11 @@ void UUI_GameEventScoreboardWidget_C::UpdateInfoCard()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventScoreboardWidget.UI_GameEventScoreboardWidget_C.UpdateInfoCard");
 
-	UUI_GameEventScoreboardWidget_C_UpdateInfoCard_Params params;
+	UUI_GameEventScoreboardWidget_C_UpdateInfoCard_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -139,17 +139,17 @@ struct FEventReply UUI_GameEventScoreboardWidget_C::OnMouseMove(struct FGeometry
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventScoreboardWidget.UI_GameEventScoreboardWidget_C.OnMouseMove");
 
-	UUI_GameEventScoreboardWidget_C_OnMouseMove_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_GameEventScoreboardWidget_C_OnMouseMove_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -160,11 +160,11 @@ void UUI_GameEventScoreboardWidget_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventScoreboardWidget.UI_GameEventScoreboardWidget_C.Construct");
 
-	UUI_GameEventScoreboardWidget_C_Construct_Params params;
+	UUI_GameEventScoreboardWidget_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -177,11 +177,11 @@ void UUI_GameEventScoreboardWidget_C::OnUpdate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventScoreboardWidget.UI_GameEventScoreboardWidget_C.OnUpdate");
 
-	UUI_GameEventScoreboardWidget_C_OnUpdate_Params params;
+	UUI_GameEventScoreboardWidget_C_OnUpdate_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -194,11 +194,11 @@ void UUI_GameEventScoreboardWidget_C::InitializeScoreboard()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventScoreboardWidget.UI_GameEventScoreboardWidget_C.InitializeScoreboard");
 
-	UUI_GameEventScoreboardWidget_C_InitializeScoreboard_Params params;
+	UUI_GameEventScoreboardWidget_C_InitializeScoreboard_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -213,12 +213,12 @@ void UUI_GameEventScoreboardWidget_C::ExecuteUbergraph_UI_GameEventScoreboardWid
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventScoreboardWidget.UI_GameEventScoreboardWidget_C.ExecuteUbergraph_UI_GameEventScoreboardWidget");
 
-	UUI_GameEventScoreboardWidget_C_ExecuteUbergraph_UI_GameEventScoreboardWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_GameEventScoreboardWidget_C_ExecuteUbergraph_UI_GameEventScoreboardWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

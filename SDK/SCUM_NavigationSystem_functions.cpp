@@ -21,16 +21,16 @@ bool UNavigationPath::IsValid()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.IsValid");
 
-	UNavigationPath_IsValid_Params params;
+	UNavigationPath_IsValid_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -43,16 +43,16 @@ bool UNavigationPath::IsStringPulled()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.IsStringPulled");
 
-	UNavigationPath_IsStringPulled_Params params;
+	UNavigationPath_IsStringPulled_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -65,16 +65,16 @@ bool UNavigationPath::IsPartial()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.IsPartial");
 
-	UNavigationPath_IsPartial_Params params;
+	UNavigationPath_IsPartial_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -87,16 +87,16 @@ float UNavigationPath::GetPathLength()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.GetPathLength");
 
-	UNavigationPath_GetPathLength_Params params;
+	UNavigationPath_GetPathLength_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -109,16 +109,16 @@ float UNavigationPath::GetPathCost()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.GetPathCost");
 
-	UNavigationPath_GetPathCost_Params params;
+	UNavigationPath_GetPathCost_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -131,16 +131,16 @@ struct FString UNavigationPath::GetDebugString()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.GetDebugString");
 
-	UNavigationPath_GetDebugString_Params params;
+	UNavigationPath_GetDebugString_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -153,13 +153,13 @@ void UNavigationPath::EnableRecalculationOnInvalidation(TEnumAsByte<ENavigationO
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.EnableRecalculationOnInvalidation");
 
-	UNavigationPath_EnableRecalculationOnInvalidation_Params params;
-	params.DoRecalculation = DoRecalculation;
+	UNavigationPath_EnableRecalculationOnInvalidation_Params fn_params;
+	fn_params.DoRecalculation = DoRecalculation;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -175,14 +175,14 @@ void UNavigationPath::EnableDebugDrawing(bool bShouldDrawDebugData, const struct
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationPath.EnableDebugDrawing");
 
-	UNavigationPath_EnableDebugDrawing_Params params;
-	params.bShouldDrawDebugData = bShouldDrawDebugData;
-	params.PathColor = PathColor;
+	UNavigationPath_EnableDebugDrawing_Params fn_params;
+	fn_params.bShouldDrawDebugData = bShouldDrawDebugData;
+	fn_params.PathColor = PathColor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -197,13 +197,13 @@ void UNavigationSystemV1::UnregisterNavigationInvoker(class AActor* Invoker)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.UnregisterNavigationInvoker");
 
-	UNavigationSystemV1_UnregisterNavigationInvoker_Params params;
-	params.Invoker = Invoker;
+	UNavigationSystemV1_UnregisterNavigationInvoker_Params fn_params;
+	fn_params.Invoker = Invoker;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -219,14 +219,14 @@ void UNavigationSystemV1::STATIC_SimpleMoveToLocation(class AController* Control
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.SimpleMoveToLocation");
 
-	UNavigationSystemV1_SimpleMoveToLocation_Params params;
-	params.Controller = Controller;
-	params.Goal = Goal;
+	UNavigationSystemV1_SimpleMoveToLocation_Params fn_params;
+	fn_params.Controller = Controller;
+	fn_params.Goal = Goal;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -242,14 +242,14 @@ void UNavigationSystemV1::STATIC_SimpleMoveToActor(class AController* Controller
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.SimpleMoveToActor");
 
-	UNavigationSystemV1_SimpleMoveToActor_Params params;
-	params.Controller = Controller;
-	params.Goal = Goal;
+	UNavigationSystemV1_SimpleMoveToActor_Params fn_params;
+	fn_params.Controller = Controller;
+	fn_params.Goal = Goal;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -264,13 +264,13 @@ void UNavigationSystemV1::SetMaxSimultaneousTileGenerationJobsCount(int MaxNumbe
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.SetMaxSimultaneousTileGenerationJobsCount");
 
-	UNavigationSystemV1_SetMaxSimultaneousTileGenerationJobsCount_Params params;
-	params.MaxNumberOfJobs = MaxNumberOfJobs;
+	UNavigationSystemV1_SetMaxSimultaneousTileGenerationJobsCount_Params fn_params;
+	fn_params.MaxNumberOfJobs = MaxNumberOfJobs;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -285,13 +285,13 @@ void UNavigationSystemV1::SetGeometryGatheringMode(ENavDataGatheringModeConfig N
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.SetGeometryGatheringMode");
 
-	UNavigationSystemV1_SetGeometryGatheringMode_Params params;
-	params.NewMode = NewMode;
+	UNavigationSystemV1_SetGeometryGatheringMode_Params fn_params;
+	fn_params.NewMode = NewMode;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -304,12 +304,12 @@ void UNavigationSystemV1::ResetMaxSimultaneousTileGenerationJobsCount()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.ResetMaxSimultaneousTileGenerationJobsCount");
 
-	UNavigationSystemV1_ResetMaxSimultaneousTileGenerationJobsCount_Params params;
+	UNavigationSystemV1_ResetMaxSimultaneousTileGenerationJobsCount_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -327,16 +327,16 @@ void UNavigationSystemV1::RegisterNavigationInvoker(class AActor* Invoker, float
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.RegisterNavigationInvoker");
 
-	UNavigationSystemV1_RegisterNavigationInvoker_Params params;
-	params.Invoker = Invoker;
-	params.TileGenerationRadius = TileGenerationRadius;
-	params.TileRemovalRadius = TileRemovalRadius;
-	params.NavigationDataToUpdate = NavigationDataToUpdate;
+	UNavigationSystemV1_RegisterNavigationInvoker_Params fn_params;
+	fn_params.Invoker = Invoker;
+	fn_params.TileGenerationRadius = TileGenerationRadius;
+	fn_params.TileRemovalRadius = TileRemovalRadius;
+	fn_params.NavigationDataToUpdate = NavigationDataToUpdate;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -356,21 +356,21 @@ struct FVector UNavigationSystemV1::STATIC_ProjectPointToNavigation(class UObjec
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.ProjectPointToNavigation");
 
-	UNavigationSystemV1_ProjectPointToNavigation_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.Point = Point;
-	params.NavData = NavData;
-	params.FilterClass = FilterClass;
-	params.QueryExtent = QueryExtent;
+	UNavigationSystemV1_ProjectPointToNavigation_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.Point = Point;
+	fn_params.NavData = NavData;
+	fn_params.FilterClass = FilterClass;
+	fn_params.QueryExtent = QueryExtent;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -383,13 +383,13 @@ void UNavigationSystemV1::OnNavigationBoundsUpdated(class ANavMeshBoundsVolume* 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.OnNavigationBoundsUpdated");
 
-	UNavigationSystemV1_OnNavigationBoundsUpdated_Params params;
-	params.NavVolume = NavVolume;
+	UNavigationSystemV1_OnNavigationBoundsUpdated_Params fn_params;
+	fn_params.NavVolume = NavVolume;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -410,24 +410,24 @@ bool UNavigationSystemV1::STATIC_NavigationRaycast(class UObject* WorldContextOb
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.NavigationRaycast");
 
-	UNavigationSystemV1_NavigationRaycast_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.RayStart = RayStart;
-	params.RayEnd = RayEnd;
-	params.FilterClass = FilterClass;
-	params.Querier = Querier;
+	UNavigationSystemV1_NavigationRaycast_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.RayStart = RayStart;
+	fn_params.RayEnd = RayEnd;
+	fn_params.FilterClass = FilterClass;
+	fn_params.Querier = Querier;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (HitLocation != nullptr)
-		*HitLocation = params.HitLocation;
+		*HitLocation = fn_params.HitLocation;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -446,24 +446,24 @@ bool UNavigationSystemV1::STATIC_K2_ProjectPointToNavigation(class UObject* Worl
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.K2_ProjectPointToNavigation");
 
-	UNavigationSystemV1_K2_ProjectPointToNavigation_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.Point = Point;
-	params.NavData = NavData;
-	params.FilterClass = FilterClass;
-	params.QueryExtent = QueryExtent;
+	UNavigationSystemV1_K2_ProjectPointToNavigation_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.Point = Point;
+	fn_params.NavData = NavData;
+	fn_params.FilterClass = FilterClass;
+	fn_params.QueryExtent = QueryExtent;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (ProjectedLocation != nullptr)
-		*ProjectedLocation = params.ProjectedLocation;
+		*ProjectedLocation = fn_params.ProjectedLocation;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -482,24 +482,24 @@ bool UNavigationSystemV1::STATIC_K2_GetRandomReachablePointInRadius(class UObjec
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.K2_GetRandomReachablePointInRadius");
 
-	UNavigationSystemV1_K2_GetRandomReachablePointInRadius_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.Origin = Origin;
-	params.Radius = Radius;
-	params.NavData = NavData;
-	params.FilterClass = FilterClass;
+	UNavigationSystemV1_K2_GetRandomReachablePointInRadius_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.Origin = Origin;
+	fn_params.Radius = Radius;
+	fn_params.NavData = NavData;
+	fn_params.FilterClass = FilterClass;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (RandomLocation != nullptr)
-		*RandomLocation = params.RandomLocation;
+		*RandomLocation = fn_params.RandomLocation;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -518,24 +518,24 @@ bool UNavigationSystemV1::STATIC_K2_GetRandomPointInNavigableRadius(class UObjec
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.K2_GetRandomPointInNavigableRadius");
 
-	UNavigationSystemV1_K2_GetRandomPointInNavigableRadius_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.Origin = Origin;
-	params.Radius = Radius;
-	params.NavData = NavData;
-	params.FilterClass = FilterClass;
+	UNavigationSystemV1_K2_GetRandomPointInNavigableRadius_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.Origin = Origin;
+	fn_params.Radius = Radius;
+	fn_params.NavData = NavData;
+	fn_params.FilterClass = FilterClass;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (RandomLocation != nullptr)
-		*RandomLocation = params.RandomLocation;
+		*RandomLocation = fn_params.RandomLocation;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -549,17 +549,17 @@ bool UNavigationSystemV1::STATIC_IsNavigationBeingBuiltOrLocked(class UObject* W
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.IsNavigationBeingBuiltOrLocked");
 
-	UNavigationSystemV1_IsNavigationBeingBuiltOrLocked_Params params;
-	params.WorldContextObject = WorldContextObject;
+	UNavigationSystemV1_IsNavigationBeingBuiltOrLocked_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -573,17 +573,17 @@ bool UNavigationSystemV1::STATIC_IsNavigationBeingBuilt(class UObject* WorldCont
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.IsNavigationBeingBuilt");
 
-	UNavigationSystemV1_IsNavigationBeingBuilt_Params params;
-	params.WorldContextObject = WorldContextObject;
+	UNavigationSystemV1_IsNavigationBeingBuilt_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -601,21 +601,21 @@ struct FVector UNavigationSystemV1::STATIC_GetRandomReachablePointInRadius(class
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.GetRandomReachablePointInRadius");
 
-	UNavigationSystemV1_GetRandomReachablePointInRadius_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.Origin = Origin;
-	params.Radius = Radius;
-	params.NavData = NavData;
-	params.FilterClass = FilterClass;
+	UNavigationSystemV1_GetRandomReachablePointInRadius_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.Origin = Origin;
+	fn_params.Radius = Radius;
+	fn_params.NavData = NavData;
+	fn_params.FilterClass = FilterClass;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -633,21 +633,21 @@ struct FVector UNavigationSystemV1::STATIC_GetRandomPointInNavigableRadius(class
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.GetRandomPointInNavigableRadius");
 
-	UNavigationSystemV1_GetRandomPointInNavigableRadius_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.Origin = Origin;
-	params.Radius = Radius;
-	params.NavData = NavData;
-	params.FilterClass = FilterClass;
+	UNavigationSystemV1_GetRandomPointInNavigableRadius_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.Origin = Origin;
+	fn_params.Radius = Radius;
+	fn_params.NavData = NavData;
+	fn_params.FilterClass = FilterClass;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -666,24 +666,24 @@ TEnumAsByte<ENavigationQueryResult> UNavigationSystemV1::STATIC_GetPathLength(cl
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.GetPathLength");
 
-	UNavigationSystemV1_GetPathLength_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.PathStart = PathStart;
-	params.PathEnd = PathEnd;
-	params.NavData = NavData;
-	params.FilterClass = FilterClass;
+	UNavigationSystemV1_GetPathLength_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.PathStart = PathStart;
+	fn_params.PathEnd = PathEnd;
+	fn_params.NavData = NavData;
+	fn_params.FilterClass = FilterClass;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (PathLength != nullptr)
-		*PathLength = params.PathLength;
+		*PathLength = fn_params.PathLength;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -702,24 +702,24 @@ TEnumAsByte<ENavigationQueryResult> UNavigationSystemV1::STATIC_GetPathCost(clas
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.GetPathCost");
 
-	UNavigationSystemV1_GetPathCost_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.PathStart = PathStart;
-	params.PathEnd = PathEnd;
-	params.NavData = NavData;
-	params.FilterClass = FilterClass;
+	UNavigationSystemV1_GetPathCost_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.PathStart = PathStart;
+	fn_params.PathEnd = PathEnd;
+	fn_params.NavData = NavData;
+	fn_params.FilterClass = FilterClass;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (PathCost != nullptr)
-		*PathCost = params.PathCost;
+		*PathCost = fn_params.PathCost;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -733,17 +733,17 @@ class UNavigationSystemV1* UNavigationSystemV1::STATIC_GetNavigationSystem(class
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.GetNavigationSystem");
 
-	UNavigationSystemV1_GetNavigationSystem_Params params;
-	params.WorldContextObject = WorldContextObject;
+	UNavigationSystemV1_GetNavigationSystem_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -761,21 +761,21 @@ class UNavigationPath* UNavigationSystemV1::STATIC_FindPathToLocationSynchronous
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.FindPathToLocationSynchronously");
 
-	UNavigationSystemV1_FindPathToLocationSynchronously_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.PathStart = PathStart;
-	params.PathEnd = PathEnd;
-	params.PathfindingContext = PathfindingContext;
-	params.FilterClass = FilterClass;
+	UNavigationSystemV1_FindPathToLocationSynchronously_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.PathStart = PathStart;
+	fn_params.PathEnd = PathEnd;
+	fn_params.PathfindingContext = PathfindingContext;
+	fn_params.FilterClass = FilterClass;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -794,22 +794,22 @@ class UNavigationPath* UNavigationSystemV1::STATIC_FindPathToActorSynchronously(
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavigationSystemV1.FindPathToActorSynchronously");
 
-	UNavigationSystemV1_FindPathToActorSynchronously_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.PathStart = PathStart;
-	params.GoalActor = GoalActor;
-	params.TetherDistance = TetherDistance;
-	params.PathfindingContext = PathfindingContext;
-	params.FilterClass = FilterClass;
+	UNavigationSystemV1_FindPathToActorSynchronously_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.PathStart = PathStart;
+	fn_params.GoalActor = GoalActor;
+	fn_params.TetherDistance = TetherDistance;
+	fn_params.PathfindingContext = PathfindingContext;
+	fn_params.FilterClass = FilterClass;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -822,13 +822,13 @@ void UNavRelevantComponent::SetNavigationRelevancy(bool bRelevant)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavRelevantComponent.SetNavigationRelevancy");
 
-	UNavRelevantComponent_SetNavigationRelevancy_Params params;
-	params.bRelevant = bRelevant;
+	UNavRelevantComponent_SetNavigationRelevancy_Params fn_params;
+	fn_params.bRelevant = bRelevant;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -843,13 +843,13 @@ void UNavModifierComponent::SetAreaClass(class UClass* NewAreaClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavModifierComponent.SetAreaClass");
 
-	UNavModifierComponent_SetAreaClass_Params params;
-	params.NewAreaClass = NewAreaClass;
+	UNavModifierComponent_SetAreaClass_Params fn_params;
+	fn_params.NewAreaClass = NewAreaClass;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -864,13 +864,13 @@ void ANavModifierVolume::SetAreaClass(class UClass* NewAreaClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavigationSystem.NavModifierVolume.SetAreaClass");
 
-	ANavModifierVolume_SetAreaClass_Params params;
-	params.NewAreaClass = NewAreaClass;
+	ANavModifierVolume_SetAreaClass_Params fn_params;
+	fn_params.NewAreaClass = NewAreaClass;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

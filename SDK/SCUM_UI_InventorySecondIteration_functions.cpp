@@ -24,18 +24,18 @@ bool UUI_InventorySecondIteration_C::OnDrop(struct FGeometry* MyGeometry, struct
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_InventorySecondIteration.UI_InventorySecondIteration_C.OnDrop");
 
-	UUI_InventorySecondIteration_C_OnDrop_Params params;
-	params.MyGeometry = MyGeometry;
-	params.PointerEvent = PointerEvent;
-	params.Operation = Operation;
+	UUI_InventorySecondIteration_C_OnDrop_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.PointerEvent = PointerEvent;
+	fn_params.Operation = Operation;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -48,12 +48,12 @@ void UUI_InventorySecondIteration_C::InitFromItem(class AItem* Item)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_InventorySecondIteration.UI_InventorySecondIteration_C.InitFromItem");
 
-	UUI_InventorySecondIteration_C_InitFromItem_Params params;
-	params.Item = Item;
+	UUI_InventorySecondIteration_C_InitFromItem_Params fn_params;
+	fn_params.Item = Item;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -68,16 +68,16 @@ void UUI_InventorySecondIteration_C::GetItem(class AItem** Item)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_InventorySecondIteration.UI_InventorySecondIteration_C.GetItem");
 
-	UUI_InventorySecondIteration_C_GetItem_Params params;
+	UUI_InventorySecondIteration_C_GetItem_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Item != nullptr)
-		*Item = params.Item;
+		*Item = fn_params.Item;
 }
 
 
@@ -88,11 +88,11 @@ void UUI_InventorySecondIteration_C::UpdateItemWidgetHighlightings()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_InventorySecondIteration.UI_InventorySecondIteration_C.UpdateItemWidgetHighlightings");
 
-	UUI_InventorySecondIteration_C_UpdateItemWidgetHighlightings_Params params;
+	UUI_InventorySecondIteration_C_UpdateItemWidgetHighlightings_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -105,11 +105,11 @@ void UUI_InventorySecondIteration_C::Blink()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_InventorySecondIteration.UI_InventorySecondIteration_C.Blink");
 
-	UUI_InventorySecondIteration_C_Blink_Params params;
+	UUI_InventorySecondIteration_C_Blink_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -124,12 +124,12 @@ void UUI_InventorySecondIteration_C::ExecuteUbergraph_UI_InventorySecondIteratio
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_InventorySecondIteration.UI_InventorySecondIteration_C.ExecuteUbergraph_UI_InventorySecondIteration");
 
-	UUI_InventorySecondIteration_C_ExecuteUbergraph_UI_InventorySecondIteration_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_InventorySecondIteration_C_ExecuteUbergraph_UI_InventorySecondIteration_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

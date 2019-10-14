@@ -19,11 +19,11 @@ void UAnimBP_ImprovisedRifle9mm_C::EvaluateGraphExposedInputs_ExecuteUbergraph_A
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimBP_ImprovisedRifle9mm.AnimBP_ImprovisedRifle9mm_C.EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_ImprovisedRifle9mm_AnimGraphNode_BlendListByEnum_522474C6449B9486694881837ACAB472");
 
-	UAnimBP_ImprovisedRifle9mm_C_EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_ImprovisedRifle9mm_AnimGraphNode_BlendListByEnum_522474C6449B9486694881837ACAB472_Params params;
+	UAnimBP_ImprovisedRifle9mm_C_EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_ImprovisedRifle9mm_AnimGraphNode_BlendListByEnum_522474C6449B9486694881837ACAB472_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -38,12 +38,12 @@ void UAnimBP_ImprovisedRifle9mm_C::ExecuteUbergraph_AnimBP_ImprovisedRifle9mm(in
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimBP_ImprovisedRifle9mm.AnimBP_ImprovisedRifle9mm_C.ExecuteUbergraph_AnimBP_ImprovisedRifle9mm");
 
-	UAnimBP_ImprovisedRifle9mm_C_ExecuteUbergraph_AnimBP_ImprovisedRifle9mm_Params params;
-	params.EntryPoint = EntryPoint;
+	UAnimBP_ImprovisedRifle9mm_C_ExecuteUbergraph_AnimBP_ImprovisedRifle9mm_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TakeInHandsRifle.BP_TakeInHandsRifle_C
-// 0x0000 (0x0078 - 0x0078)
+// 0x0000 (0x0088 - 0x0088)
 class UBP_TakeInHandsRifle_C : public UTakeInHandsAssetData
 {
 public:

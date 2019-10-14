@@ -180,8 +180,8 @@ public:
 	int PostAssociatedAkEventAndWaitForEnd(const struct FLatentActionInfo& LatentInfo);
 	int PostAssociatedAkEvent(int CallbackMask, const struct FScriptDelegate& PostEventCallback);
 	int PostAkEventByName(const struct FString& in_EventName);
-	int PostAkEventAndWaitForEnd(class UAkAudioEvent* AkEvent, const struct FString& in_EventName, const struct FLatentActionInfo& LatentInfo);
-	int PostAkEvent(class UAkAudioEvent* AkEvent, int CallbackMask, const struct FScriptDelegate& PostEventCallback, const struct FString& in_EventName);
+	int PostAkEventAndWaitForEnd(class UAkAudioEvent* akEvent, const struct FString& in_EventName, const struct FLatentActionInfo& LatentInfo);
+	int PostAkEvent(class UAkAudioEvent* akEvent, int CallbackMask, const struct FScriptDelegate& PostEventCallback, const struct FString& in_EventName);
 	float GetAttenuationRadius();
 };
 
@@ -286,7 +286,7 @@ public:
 	void STATIC_StartProfilerCapture(const struct FString& Filename);
 	void STATIC_StartOutputCapture(const struct FString& Filename);
 	void STATIC_StartAllAmbientSounds(class UObject* WorldContextObject);
-	class UAkComponent* STATIC_SpawnAkComponentAtLocation(class UObject* WorldContextObject, class UAkAudioEvent* AkEvent, class UAkAuxBus* EarlyReflectionsBus, const struct FVector& Location, const struct FRotator& Orientation, bool AutoPost, const struct FString& EventName, const struct FString& EarlyReflectionsBusName, bool AutoDestroy);
+	class UAkComponent* STATIC_SpawnAkComponentAtLocation(class UObject* WorldContextObject, class UAkAudioEvent* akEvent, class UAkAuxBus* EarlyReflectionsBus, const struct FVector& Location, const struct FRotator& Orientation, bool AutoPost, const struct FString& EventName, const struct FString& EarlyReflectionsBusName, bool AutoDestroy);
 	void STATIC_SetSwitch(const struct FName& SwitchGroup, const struct FName& SwitchState, class AActor* Actor);
 	void STATIC_SetState(const struct FName& StateGroup, const struct FName& State);
 	void STATIC_SetSpeakerAngles(TArray<float> SpeakerAngles, float HeightAngle, const struct FString& DeviceShareset);
@@ -300,11 +300,11 @@ public:
 	void STATIC_SetBusConfig(const struct FString& BusName, EAkChannelConfiguration ChannelConfiguration);
 	void STATIC_PostTrigger(const struct FName& Trigger, class AActor* Actor);
 	void STATIC_PostEventByName(const struct FString& EventName, class AActor* Actor, bool bStopWhenAttachedToDestroyed);
-	int STATIC_PostEventAttached(class UAkAudioEvent* AkEvent, class AActor* Actor, const struct FName& AttachPointName, bool bStopWhenAttachedToDestroyed, const struct FString& EventName);
+	int STATIC_PostEventAttached(class UAkAudioEvent* akEvent, class AActor* Actor, const struct FName& AttachPointName, bool bStopWhenAttachedToDestroyed, const struct FString& EventName);
 	void STATIC_PostEventAtLocationByName(const struct FString& EventName, const struct FVector& Location, const struct FRotator& Orientation, class UObject* WorldContextObject);
-	int STATIC_PostEventAtLocation(class UAkAudioEvent* AkEvent, const struct FVector& Location, const struct FRotator& Orientation, const struct FString& EventName, class UObject* WorldContextObject);
-	int STATIC_PostEvent(class UAkAudioEvent* AkEvent, class AActor* Actor, bool bStopWhenAttachedToDestroyed, const struct FString& EventName);
-	int STATIC_PostAndWaitForEndOfEvent(class UAkAudioEvent* AkEvent, class AActor* Actor, bool bStopWhenAttachedToDestroyed, const struct FString& EventName, const struct FLatentActionInfo& LatentInfo);
+	int STATIC_PostEventAtLocation(class UAkAudioEvent* akEvent, const struct FVector& Location, const struct FRotator& Orientation, const struct FString& EventName, class UObject* WorldContextObject);
+	int STATIC_PostEvent(class UAkAudioEvent* akEvent, class AActor* Actor, bool bStopWhenAttachedToDestroyed, const struct FString& EventName);
+	int STATIC_PostAndWaitForEndOfEvent(class UAkAudioEvent* akEvent, class AActor* Actor, bool bStopWhenAttachedToDestroyed, const struct FString& EventName, const struct FLatentActionInfo& LatentInfo);
 	void STATIC_LoadInitBank();
 	void STATIC_LoadBanks(TArray<class UAkAudioBank*> SoundBanks, bool SynchronizeSoundBanks);
 	void STATIC_LoadBankByName(const struct FString& BankName);
@@ -315,7 +315,7 @@ public:
 	void STATIC_GetSpeakerAngles(const struct FString& DeviceShareset, TArray<float>* SpeakerAngles, float* HeightAngle);
 	float STATIC_GetOcclusionScalingFactor();
 	class UAkComponent* STATIC_GetAkComponent(class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const struct FVector& Location, TEnumAsByte<EAttachLocation> LocationType);
-	void STATIC_ExecuteActionOnEvent(class UAkAudioEvent* AkEvent, EAkActionOnEventType ActionType, class AActor* Actor, int TransitionDuration, EAkCurveInterpolation FadeCurve, int PlayingID);
+	void STATIC_ExecuteActionOnEvent(class UAkAudioEvent* akEvent, EAkActionOnEventType ActionType, class AActor* Actor, int TransitionDuration, EAkCurveInterpolation FadeCurve, int PlayingID);
 	void STATIC_ClearBanks();
 	void STATIC_CancelEventCallback(const struct FScriptDelegate& PostEventCallback);
 	void STATIC_AddOutputCaptureMarker(const struct FString& MarkerText);

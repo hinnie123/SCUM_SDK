@@ -19,11 +19,11 @@ void UUI_CombinedInventory_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CombinedInventory.UI_CombinedInventory_C.Construct");
 
-	UUI_CombinedInventory_C_Construct_Params params;
+	UUI_CombinedInventory_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -38,12 +38,12 @@ void UUI_CombinedInventory_C::SaveLayout(TScriptInterface<class UAttributeMapInt
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CombinedInventory.UI_CombinedInventory_C.SaveLayout");
 
-	UUI_CombinedInventory_C_SaveLayout_Params params;
-	params.Attributes = Attributes;
+	UUI_CombinedInventory_C_SaveLayout_Params fn_params;
+	fn_params.Attributes = Attributes;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -58,12 +58,12 @@ void UUI_CombinedInventory_C::LoadLayout(TScriptInterface<class UAttributeMapInt
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CombinedInventory.UI_CombinedInventory_C.LoadLayout");
 
-	UUI_CombinedInventory_C_LoadLayout_Params params;
-	params.Attributes = Attributes;
+	UUI_CombinedInventory_C_LoadLayout_Params fn_params;
+	fn_params.Attributes = Attributes;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -76,11 +76,11 @@ void UUI_CombinedInventory_C::ResetLayout()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CombinedInventory.UI_CombinedInventory_C.ResetLayout");
 
-	UUI_CombinedInventory_C_ResetLayout_Params params;
+	UUI_CombinedInventory_C_ResetLayout_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -93,11 +93,11 @@ void UUI_CombinedInventory_C::DeferredLoadLayout()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CombinedInventory.UI_CombinedInventory_C.DeferredLoadLayout");
 
-	UUI_CombinedInventory_C_DeferredLoadLayout_Params params;
+	UUI_CombinedInventory_C_DeferredLoadLayout_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -112,12 +112,12 @@ void UUI_CombinedInventory_C::ExecuteUbergraph_UI_CombinedInventory(int EntryPoi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CombinedInventory.UI_CombinedInventory_C.ExecuteUbergraph_UI_CombinedInventory");
 
-	UUI_CombinedInventory_C_ExecuteUbergraph_UI_CombinedInventory_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_CombinedInventory_C_ExecuteUbergraph_UI_CombinedInventory_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

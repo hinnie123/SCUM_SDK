@@ -23,19 +23,19 @@ struct FEventReply UExaminewidget_C::On_IClose_MouseButtonDown_1(const struct FG
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Examinewidget.Examinewidget_C.On_IClose_MouseButtonDown_1");
 
-	UExaminewidget_C_On_IClose_MouseButtonDown_1_Params params;
-	params.MyGeometry = MyGeometry;
+	UExaminewidget_C_On_IClose_MouseButtonDown_1_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (MouseEvent != nullptr)
-		*MouseEvent = params.MouseEvent;
+		*MouseEvent = fn_params.MouseEvent;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -46,11 +46,11 @@ void UExaminewidget_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Examinewidget.Examinewidget_C.Construct");
 
-	UExaminewidget_C_Construct_Params params;
+	UExaminewidget_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -63,11 +63,11 @@ void UExaminewidget_C::OnActivate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Examinewidget.Examinewidget_C.OnActivate");
 
-	UExaminewidget_C_OnActivate_Params params;
+	UExaminewidget_C_OnActivate_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -80,11 +80,11 @@ void UExaminewidget_C::OnClose()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Examinewidget.Examinewidget_C.OnClose");
 
-	UExaminewidget_C_OnClose_Params params;
+	UExaminewidget_C_OnClose_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -99,12 +99,12 @@ void UExaminewidget_C::SetWidgetTitle(struct FText* Title)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Examinewidget.Examinewidget_C.SetWidgetTitle");
 
-	UExaminewidget_C_SetWidgetTitle_Params params;
-	params.Title = Title;
+	UExaminewidget_C_SetWidgetTitle_Params fn_params;
+	fn_params.Title = Title;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -119,12 +119,12 @@ void UExaminewidget_C::ExecuteUbergraph_Examinewidget(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Examinewidget.Examinewidget_C.ExecuteUbergraph_Examinewidget");
 
-	UExaminewidget_C_ExecuteUbergraph_Examinewidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UExaminewidget_C_ExecuteUbergraph_Examinewidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

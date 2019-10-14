@@ -21,16 +21,16 @@ void UWindowsContent_C::GetChildrenWindows(TArray<class UCustomGUIWindow_C*>* ch
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WindowsContent.WindowsContent_C.GetChildrenWindows");
 
-	UWindowsContent_C_GetChildrenWindows_Params params;
+	UWindowsContent_C_GetChildrenWindows_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (childrenWidgets != nullptr)
-		*childrenWidgets = params.childrenWidgets;
+		*childrenWidgets = fn_params.childrenWidgets;
 }
 
 
@@ -43,12 +43,12 @@ void UWindowsContent_C::AddChildWindow(class UCustomGUIWindow_C* childWindowRef)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WindowsContent.WindowsContent_C.AddChildWindow");
 
-	UWindowsContent_C_AddChildWindow_Params params;
-	params.childWindowRef = childWindowRef;
+	UWindowsContent_C_AddChildWindow_Params fn_params;
+	fn_params.childWindowRef = childWindowRef;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -61,11 +61,11 @@ void UWindowsContent_C::NotifyParentOnAlarmSwitchedOffOnContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WindowsContent.WindowsContent_C.NotifyParentOnAlarmSwitchedOffOnContent");
 
-	UWindowsContent_C_NotifyParentOnAlarmSwitchedOffOnContent_Params params;
+	UWindowsContent_C_NotifyParentOnAlarmSwitchedOffOnContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -78,11 +78,11 @@ void UWindowsContent_C::NotifyParentOnAlarmRaisedOnContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WindowsContent.WindowsContent_C.NotifyParentOnAlarmRaisedOnContent");
 
-	UWindowsContent_C_NotifyParentOnAlarmRaisedOnContent_Params params;
+	UWindowsContent_C_NotifyParentOnAlarmRaisedOnContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -95,11 +95,11 @@ void UWindowsContent_C::NotifyParentOnWindowsContentSizeChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WindowsContent.WindowsContent_C.NotifyParentOnWindowsContentSizeChanged");
 
-	UWindowsContent_C_NotifyParentOnWindowsContentSizeChanged_Params params;
+	UWindowsContent_C_NotifyParentOnWindowsContentSizeChanged_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -114,12 +114,12 @@ void UWindowsContent_C::SetParentWindow(class UCustomGUIWindow_C* parentWindowTo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WindowsContent.WindowsContent_C.SetParentWindow");
 
-	UWindowsContent_C_SetParentWindow_Params params;
-	params.parentWindowToSet = parentWindowToSet;
+	UWindowsContent_C_SetParentWindow_Params fn_params;
+	fn_params.parentWindowToSet = parentWindowToSet;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -134,16 +134,16 @@ void UWindowsContent_C::GetParentWindow(class UCustomGUIWindow_C** parentWindow)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WindowsContent.WindowsContent_C.GetParentWindow");
 
-	UWindowsContent_C_GetParentWindow_Params params;
+	UWindowsContent_C_GetParentWindow_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (parentWindow != nullptr)
-		*parentWindow = params.parentWindow;
+		*parentWindow = fn_params.parentWindow;
 }
 
 
@@ -154,11 +154,11 @@ void UWindowsContent_C::WindowContentSizeChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WindowsContent.WindowsContent_C.WindowContentSizeChanged");
 
-	UWindowsContent_C_WindowContentSizeChanged_Params params;
+	UWindowsContent_C_WindowContentSizeChanged_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -173,12 +173,12 @@ void UWindowsContent_C::ExecuteUbergraph_WindowsContent(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WindowsContent.WindowsContent_C.ExecuteUbergraph_WindowsContent");
 
-	UWindowsContent_C_ExecuteUbergraph_WindowsContent_Params params;
-	params.EntryPoint = EntryPoint;
+	UWindowsContent_C_ExecuteUbergraph_WindowsContent_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

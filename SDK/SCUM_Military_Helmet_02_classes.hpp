@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Military_Helmet_02.Military_Helmet_02_C
-// 0x0000 (0x0818 - 0x0818)
+// 0x0000 (0x08D0 - 0x08D0)
 class AMilitary_Helmet_02_C : public AClothesItem
 {
 public:

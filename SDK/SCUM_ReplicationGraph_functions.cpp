@@ -19,12 +19,12 @@ void AReplicationGraphDebugActor::ServerStopDebugging()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ReplicationGraph.ReplicationGraphDebugActor.ServerStopDebugging");
 
-	AReplicationGraphDebugActor_ServerStopDebugging_Params params;
+	AReplicationGraphDebugActor_ServerStopDebugging_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -37,12 +37,12 @@ void AReplicationGraphDebugActor::ServerStartDebugging()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ReplicationGraph.ReplicationGraphDebugActor.ServerStartDebugging");
 
-	AReplicationGraphDebugActor_ServerStartDebugging_Params params;
+	AReplicationGraphDebugActor_ServerStartDebugging_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -58,14 +58,14 @@ void AReplicationGraphDebugActor::ServerSetCullDistanceForClass(class UClass* Cl
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ReplicationGraph.ReplicationGraphDebugActor.ServerSetCullDistanceForClass");
 
-	AReplicationGraphDebugActor_ServerSetCullDistanceForClass_Params params;
-	params.Class = Class;
-	params.CullDistance = CullDistance;
+	AReplicationGraphDebugActor_ServerSetCullDistanceForClass_Params fn_params;
+	fn_params.Class = Class;
+	fn_params.CullDistance = CullDistance;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -80,13 +80,13 @@ void AReplicationGraphDebugActor::ServerPrintAllActorInfo(const struct FString& 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ReplicationGraph.ReplicationGraphDebugActor.ServerPrintAllActorInfo");
 
-	AReplicationGraphDebugActor_ServerPrintAllActorInfo_Params params;
-	params.Str = Str;
+	AReplicationGraphDebugActor_ServerPrintAllActorInfo_Params fn_params;
+	fn_params.Str = Str;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -99,12 +99,12 @@ void AReplicationGraphDebugActor::ServerCellInfo()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ReplicationGraph.ReplicationGraphDebugActor.ServerCellInfo");
 
-	AReplicationGraphDebugActor_ServerCellInfo_Params params;
+	AReplicationGraphDebugActor_ServerCellInfo_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -121,15 +121,15 @@ void AReplicationGraphDebugActor::ClientCellInfo(const struct FVector& CellLocat
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ReplicationGraph.ReplicationGraphDebugActor.ClientCellInfo");
 
-	AReplicationGraphDebugActor_ClientCellInfo_Params params;
-	params.CellLocation = CellLocation;
-	params.CellExtent = CellExtent;
-	params.Actors = Actors;
+	AReplicationGraphDebugActor_ClientCellInfo_Params fn_params;
+	fn_params.CellLocation = CellLocation;
+	fn_params.CellExtent = CellExtent;
+	fn_params.Actors = Actors;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

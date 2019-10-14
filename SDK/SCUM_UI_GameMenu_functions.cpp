@@ -21,15 +21,15 @@ ESlateVisibility UUI_GameMenu_C::Get_CommitSuicide_Visibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.Get_CommitSuicide_Visibility");
 
-	UUI_GameMenu_C_Get_CommitSuicide_Visibility_Params params;
+	UUI_GameMenu_C_Get_CommitSuicide_Visibility_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -40,11 +40,11 @@ void UUI_GameMenu_C::SaveHUDLayout()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.SaveHUDLayout");
 
-	UUI_GameMenu_C_SaveHUDLayout_Params params;
+	UUI_GameMenu_C_SaveHUDLayout_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -61,17 +61,17 @@ struct FEventReply UUI_GameMenu_C::OnPreviewKeyDown(struct FGeometry* MyGeometry
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.OnPreviewKeyDown");
 
-	UUI_GameMenu_C_OnPreviewKeyDown_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InKeyEvent = InKeyEvent;
+	UUI_GameMenu_C_OnPreviewKeyDown_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InKeyEvent = InKeyEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -86,17 +86,17 @@ struct FEventReply UUI_GameMenu_C::OnMouseButtonDoubleClick(struct FGeometry* In
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.OnMouseButtonDoubleClick");
 
-	UUI_GameMenu_C_OnMouseButtonDoubleClick_Params params;
-	params.InMyGeometry = InMyGeometry;
-	params.InMouseEvent = InMouseEvent;
+	UUI_GameMenu_C_OnMouseButtonDoubleClick_Params fn_params;
+	fn_params.InMyGeometry = InMyGeometry;
+	fn_params.InMouseEvent = InMouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -111,17 +111,17 @@ struct FEventReply UUI_GameMenu_C::OnMouseButtonDown(struct FGeometry* MyGeometr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.OnMouseButtonDown");
 
-	UUI_GameMenu_C_OnMouseButtonDown_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_GameMenu_C_OnMouseButtonDown_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -136,17 +136,17 @@ struct FEventReply UUI_GameMenu_C::OnMouseButtonUp(struct FGeometry* MyGeometry,
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.OnMouseButtonUp");
 
-	UUI_GameMenu_C_OnMouseButtonUp_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_GameMenu_C_OnMouseButtonUp_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -157,11 +157,11 @@ void UUI_GameMenu_C::BndEvt__Resume_K2Node_ComponentBoundEvent_81_OnClicked__Del
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.BndEvt__Resume_K2Node_ComponentBoundEvent_81_OnClicked__DelegateSignature");
 
-	UUI_GameMenu_C_BndEvt__Resume_K2Node_ComponentBoundEvent_81_OnClicked__DelegateSignature_Params params;
+	UUI_GameMenu_C_BndEvt__Resume_K2Node_ComponentBoundEvent_81_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -174,11 +174,11 @@ void UUI_GameMenu_C::BndEvt__Quit_K2Node_ComponentBoundEvent_86_OnClicked__Deleg
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.BndEvt__Quit_K2Node_ComponentBoundEvent_86_OnClicked__DelegateSignature");
 
-	UUI_GameMenu_C_BndEvt__Quit_K2Node_ComponentBoundEvent_86_OnClicked__DelegateSignature_Params params;
+	UUI_GameMenu_C_BndEvt__Quit_K2Node_ComponentBoundEvent_86_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -191,11 +191,11 @@ void UUI_GameMenu_C::BndEvt__Menu_K2Node_ComponentBoundEvent_93_OnClicked__Deleg
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.BndEvt__Menu_K2Node_ComponentBoundEvent_93_OnClicked__DelegateSignature");
 
-	UUI_GameMenu_C_BndEvt__Menu_K2Node_ComponentBoundEvent_93_OnClicked__DelegateSignature_Params params;
+	UUI_GameMenu_C_BndEvt__Menu_K2Node_ComponentBoundEvent_93_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -208,11 +208,11 @@ void UUI_GameMenu_C::BndEvt__Options_K2Node_ComponentBoundEvent_103_OnClicked__D
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.BndEvt__Options_K2Node_ComponentBoundEvent_103_OnClicked__DelegateSignature");
 
-	UUI_GameMenu_C_BndEvt__Options_K2Node_ComponentBoundEvent_103_OnClicked__DelegateSignature_Params params;
+	UUI_GameMenu_C_BndEvt__Options_K2Node_ComponentBoundEvent_103_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -225,11 +225,11 @@ void UUI_GameMenu_C::Remove()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.Remove");
 
-	UUI_GameMenu_C_Remove_Params params;
+	UUI_GameMenu_C_Remove_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -242,11 +242,11 @@ void UUI_GameMenu_C::OnESC()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.OnESC");
 
-	UUI_GameMenu_C_OnESC_Params params;
+	UUI_GameMenu_C_OnESC_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -259,11 +259,11 @@ void UUI_GameMenu_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.Construct");
 
-	UUI_GameMenu_C_Construct_Params params;
+	UUI_GameMenu_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -276,11 +276,11 @@ void UUI_GameMenu_C::OnResume()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.OnResume");
 
-	UUI_GameMenu_C_OnResume_Params params;
+	UUI_GameMenu_C_OnResume_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -293,11 +293,11 @@ void UUI_GameMenu_C::BndEvt__Hack_K2Node_ComponentBoundEvent_28_OnButtonClickedE
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.BndEvt__Hack_K2Node_ComponentBoundEvent_28_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_GameMenu_C_BndEvt__Hack_K2Node_ComponentBoundEvent_28_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_GameMenu_C_BndEvt__Hack_K2Node_ComponentBoundEvent_28_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -310,11 +310,11 @@ void UUI_GameMenu_C::BndEvt__UI_MenuButton_C_1_K2Node_ComponentBoundEvent_31_OnC
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.BndEvt__UI_MenuButton_C_1_K2Node_ComponentBoundEvent_31_OnClicked__DelegateSignature");
 
-	UUI_GameMenu_C_BndEvt__UI_MenuButton_C_1_K2Node_ComponentBoundEvent_31_OnClicked__DelegateSignature_Params params;
+	UUI_GameMenu_C_BndEvt__UI_MenuButton_C_1_K2Node_ComponentBoundEvent_31_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -327,11 +327,11 @@ void UUI_GameMenu_C::BndEvt__AddToFavorites_K2Node_ComponentBoundEvent_10_OnClic
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.BndEvt__AddToFavorites_K2Node_ComponentBoundEvent_10_OnClicked__DelegateSignature");
 
-	UUI_GameMenu_C_BndEvt__AddToFavorites_K2Node_ComponentBoundEvent_10_OnClicked__DelegateSignature_Params params;
+	UUI_GameMenu_C_BndEvt__AddToFavorites_K2Node_ComponentBoundEvent_10_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -344,11 +344,11 @@ void UUI_GameMenu_C::OnQuitCanceled()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.OnQuitCanceled");
 
-	UUI_GameMenu_C_OnQuitCanceled_Params params;
+	UUI_GameMenu_C_OnQuitCanceled_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -361,11 +361,11 @@ void UUI_GameMenu_C::OnQuit()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.OnQuit");
 
-	UUI_GameMenu_C_OnQuit_Params params;
+	UUI_GameMenu_C_OnQuit_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -378,11 +378,11 @@ void UUI_GameMenu_C::OnLeaveToMainMenu()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.OnLeaveToMainMenu");
 
-	UUI_GameMenu_C_OnLeaveToMainMenu_Params params;
+	UUI_GameMenu_C_OnLeaveToMainMenu_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -395,11 +395,11 @@ void UUI_GameMenu_C::OnLeaveToMainMenuCanceled()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.OnLeaveToMainMenuCanceled");
 
-	UUI_GameMenu_C_OnLeaveToMainMenuCanceled_Params params;
+	UUI_GameMenu_C_OnLeaveToMainMenuCanceled_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -412,11 +412,11 @@ void UUI_GameMenu_C::OnSuicideCanceled()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.OnSuicideCanceled");
 
-	UUI_GameMenu_C_OnSuicideCanceled_Params params;
+	UUI_GameMenu_C_OnSuicideCanceled_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -429,11 +429,11 @@ void UUI_GameMenu_C::OnSuicideConfirmed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.OnSuicideConfirmed");
 
-	UUI_GameMenu_C_OnSuicideConfirmed_Params params;
+	UUI_GameMenu_C_OnSuicideConfirmed_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -446,11 +446,11 @@ void UUI_GameMenu_C::BndEvt__Statistics_K2Node_ComponentBoundEvent_0_OnClicked__
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.BndEvt__Statistics_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
 
-	UUI_GameMenu_C_BndEvt__Statistics_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature_Params params;
+	UUI_GameMenu_C_BndEvt__Statistics_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -465,12 +465,12 @@ void UUI_GameMenu_C::ExecuteUbergraph_UI_GameMenu(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameMenu.UI_GameMenu_C.ExecuteUbergraph_UI_GameMenu");
 
-	UUI_GameMenu_C_ExecuteUbergraph_UI_GameMenu_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_GameMenu_C_ExecuteUbergraph_UI_GameMenu_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

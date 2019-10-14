@@ -22,16 +22,16 @@ bool UBP_SVD_RemoveMagInsertMag_C::CanExecuteUsingData(struct FWeaponReloadData*
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SVD_RemoveMagInsertMag.BP_SVD_RemoveMagInsertMag_C.CanExecuteUsingData");
 
-	UBP_SVD_RemoveMagInsertMag_C_CanExecuteUsingData_Params params;
-	params.Data = Data;
+	UBP_SVD_RemoveMagInsertMag_C_CanExecuteUsingData_Params fn_params;
+	fn_params.Data = Data;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

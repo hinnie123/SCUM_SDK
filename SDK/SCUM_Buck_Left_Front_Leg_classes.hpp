@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buck_Left_Front_Leg.Buck_Left_Front_Leg_C
-// 0x0000 (0x0790 - 0x0790)
+// 0x0000 (0x0830 - 0x0830)
 class ABuck_Left_Front_Leg_C : public AEquipmentItem
 {
 public:

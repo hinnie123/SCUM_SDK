@@ -19,11 +19,11 @@ void UUI_TeamInfo_C::ClearTeammateNames()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TeamInfo.UI_TeamInfo_C.ClearTeammateNames");
 
-	UUI_TeamInfo_C_ClearTeammateNames_Params params;
+	UUI_TeamInfo_C_ClearTeammateNames_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -38,15 +38,15 @@ ESlateVisibility UUI_TeamInfo_C::GetVisibility_1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TeamInfo.UI_TeamInfo_C.GetVisibility_1");
 
-	UUI_TeamInfo_C_GetVisibility_1_Params params;
+	UUI_TeamInfo_C_GetVisibility_1_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -59,12 +59,12 @@ void UUI_TeamInfo_C::RemoveTeammateName(const struct FString& Name)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TeamInfo.UI_TeamInfo_C.RemoveTeammateName");
 
-	UUI_TeamInfo_C_RemoveTeammateName_Params params;
-	params.Name = Name;
+	UUI_TeamInfo_C_RemoveTeammateName_Params fn_params;
+	fn_params.Name = Name;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -79,12 +79,12 @@ void UUI_TeamInfo_C::AddTeammateName(const struct FString& Name)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TeamInfo.UI_TeamInfo_C.AddTeammateName");
 
-	UUI_TeamInfo_C_AddTeammateName_Params params;
-	params.Name = Name;
+	UUI_TeamInfo_C_AddTeammateName_Params fn_params;
+	fn_params.Name = Name;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -97,11 +97,11 @@ void UUI_TeamInfo_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TeamInfo.UI_TeamInfo_C.Construct");
 
-	UUI_TeamInfo_C_Construct_Params params;
+	UUI_TeamInfo_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -116,12 +116,12 @@ void UUI_TeamInfo_C::ExecuteUbergraph_UI_TeamInfo(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TeamInfo.UI_TeamInfo_C.ExecuteUbergraph_UI_TeamInfo");
 
-	UUI_TeamInfo_C_ExecuteUbergraph_UI_TeamInfo_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_TeamInfo_C_ExecuteUbergraph_UI_TeamInfo_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

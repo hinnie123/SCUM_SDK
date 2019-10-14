@@ -21,15 +21,15 @@ float UItemWidget_C::GetItemDurability()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ItemWidget.ItemWidget_C.GetItemDurability");
 
-	UItemWidget_C_GetItemDurability_Params params;
+	UItemWidget_C_GetItemDurability_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -42,15 +42,15 @@ struct FText UItemWidget_C::GetContainerItemFillPercentage()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ItemWidget.ItemWidget_C.GetContainerItemFillPercentage");
 
-	UItemWidget_C_GetContainerItemFillPercentage_Params params;
+	UItemWidget_C_GetContainerItemFillPercentage_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -63,15 +63,15 @@ struct FText UItemWidget_C::GetWeaponZeroText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ItemWidget.ItemWidget_C.GetWeaponZeroText");
 
-	UItemWidget_C_GetWeaponZeroText_Params params;
+	UItemWidget_C_GetWeaponZeroText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -84,15 +84,15 @@ struct FText UItemWidget_C::GetMassText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ItemWidget.ItemWidget_C.GetMassText");
 
-	UItemWidget_C_GetMassText_Params params;
+	UItemWidget_C_GetMassText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -105,12 +105,12 @@ void UItemWidget_C::InitFromItem(class AItem* Item)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ItemWidget.ItemWidget_C.InitFromItem");
 
-	UItemWidget_C_InitFromItem_Params params;
-	params.Item = Item;
+	UItemWidget_C_InitFromItem_Params fn_params;
+	fn_params.Item = Item;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -125,15 +125,15 @@ int UItemWidget_C::GetStacksCount()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ItemWidget.ItemWidget_C.GetStacksCount");
 
-	UItemWidget_C_GetStacksCount_Params params;
+	UItemWidget_C_GetStacksCount_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -146,15 +146,15 @@ struct FText UItemWidget_C::GetItemHealthText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ItemWidget.ItemWidget_C.GetItemHealthText");
 
-	UItemWidget_C_GetItemHealthText_Params params;
+	UItemWidget_C_GetItemHealthText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -169,17 +169,17 @@ struct FEventReply UItemWidget_C::OnMouseButtonUp(struct FGeometry* MyGeometry, 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ItemWidget.ItemWidget_C.OnMouseButtonUp");
 
-	UItemWidget_C_OnMouseButtonUp_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UItemWidget_C_OnMouseButtonUp_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -192,15 +192,15 @@ struct FText UItemWidget_C::GetItemTotalUsesText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ItemWidget.ItemWidget_C.GetItemTotalUsesText");
 
-	UItemWidget_C_GetItemTotalUsesText_Params params;
+	UItemWidget_C_GetItemTotalUsesText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -213,15 +213,15 @@ struct FText UItemWidget_C::GetItemUsesText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ItemWidget.ItemWidget_C.GetItemUsesText");
 
-	UItemWidget_C_GetItemUsesText_Params params;
+	UItemWidget_C_GetItemUsesText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -236,17 +236,17 @@ struct FEventReply UItemWidget_C::OnKeyChar(struct FGeometry* MyGeometry, struct
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ItemWidget.ItemWidget_C.OnKeyChar");
 
-	UItemWidget_C_OnKeyChar_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InCharacterEvent = InCharacterEvent;
+	UItemWidget_C_OnKeyChar_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InCharacterEvent = InCharacterEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -261,17 +261,17 @@ struct FEventReply UItemWidget_C::OnMouseButtonDown(struct FGeometry* MyGeometry
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ItemWidget.ItemWidget_C.OnMouseButtonDown");
 
-	UItemWidget_C_OnMouseButtonDown_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UItemWidget_C_OnMouseButtonDown_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -286,18 +286,18 @@ void UItemWidget_C::OnDragDetected(struct FGeometry* MyGeometry, struct FPointer
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ItemWidget.ItemWidget_C.OnDragDetected");
 
-	UItemWidget_C_OnDragDetected_Params params;
-	params.MyGeometry = MyGeometry;
-	params.PointerEvent = PointerEvent;
+	UItemWidget_C_OnDragDetected_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.PointerEvent = PointerEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Operation != nullptr)
-		*Operation = params.Operation;
+		*Operation = fn_params.Operation;
 }
 
 
@@ -311,13 +311,13 @@ void UItemWidget_C::OnDragCancelled(struct FPointerEvent* PointerEvent, class UD
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ItemWidget.ItemWidget_C.OnDragCancelled");
 
-	UItemWidget_C_OnDragCancelled_Params params;
-	params.PointerEvent = PointerEvent;
-	params.Operation = Operation;
+	UItemWidget_C_OnDragCancelled_Params fn_params;
+	fn_params.PointerEvent = PointerEvent;
+	fn_params.Operation = Operation;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -330,11 +330,11 @@ void UItemWidget_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ItemWidget.ItemWidget_C.Construct");
 
-	UItemWidget_C_Construct_Params params;
+	UItemWidget_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -347,11 +347,11 @@ void UItemWidget_C::UpdateHighlightStatus()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ItemWidget.ItemWidget_C.UpdateHighlightStatus");
 
-	UItemWidget_C_UpdateHighlightStatus_Params params;
+	UItemWidget_C_UpdateHighlightStatus_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -366,12 +366,12 @@ void UItemWidget_C::SetStacksCount(int* count)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ItemWidget.ItemWidget_C.SetStacksCount");
 
-	UItemWidget_C_SetStacksCount_Params params;
-	params.count = count;
+	UItemWidget_C_SetStacksCount_Params fn_params;
+	fn_params.count = count;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -384,11 +384,11 @@ void UItemWidget_C::BlinkItemContainer()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ItemWidget.ItemWidget_C.BlinkItemContainer");
 
-	UItemWidget_C_BlinkItemContainer_Params params;
+	UItemWidget_C_BlinkItemContainer_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -404,13 +404,13 @@ void UItemWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ItemWidget.ItemWidget_C.Tick");
 
-	UItemWidget_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UItemWidget_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -423,11 +423,11 @@ void UItemWidget_C::MarkAsWeaponWidget()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ItemWidget.ItemWidget_C.MarkAsWeaponWidget");
 
-	UItemWidget_C_MarkAsWeaponWidget_Params params;
+	UItemWidget_C_MarkAsWeaponWidget_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -442,12 +442,12 @@ void UItemWidget_C::ExecuteUbergraph_ItemWidget(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ItemWidget.ItemWidget_C.ExecuteUbergraph_ItemWidget");
 
-	UItemWidget_C_ExecuteUbergraph_ItemWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UItemWidget_C_ExecuteUbergraph_ItemWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -462,12 +462,12 @@ void UItemWidget_C::OnDragCancelledDispatcher__DelegateSignature(class UItemWidg
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ItemWidget.ItemWidget_C.OnDragCancelledDispatcher__DelegateSignature");
 
-	UItemWidget_C_OnDragCancelledDispatcher__DelegateSignature_Params params;
-	params.Item = Item;
+	UItemWidget_C_OnDragCancelledDispatcher__DelegateSignature_Params fn_params;
+	fn_params.Item = Item;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -482,12 +482,12 @@ void UItemWidget_C::OnDragStartDispatcher__DelegateSignature(class UItemWidget_C
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ItemWidget.ItemWidget_C.OnDragStartDispatcher__DelegateSignature");
 
-	UItemWidget_C_OnDragStartDispatcher__DelegateSignature_Params params;
-	params.Item = Item;
+	UItemWidget_C_OnDragStartDispatcher__DelegateSignature_Params fn_params;
+	fn_params.Item = Item;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

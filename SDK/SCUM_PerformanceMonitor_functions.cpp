@@ -21,16 +21,16 @@ void UPerformanceMonitor_C::shouldAlarmBeOn(bool* shouldAlarmBeOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceMonitor.PerformanceMonitor_C.shouldAlarmBeOn");
 
-	UPerformanceMonitor_C_shouldAlarmBeOn_Params params;
+	UPerformanceMonitor_C_shouldAlarmBeOn_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (shouldAlarmBeOn != nullptr)
-		*shouldAlarmBeOn = params.shouldAlarmBeOn;
+		*shouldAlarmBeOn = fn_params.shouldAlarmBeOn;
 }
 
 
@@ -43,16 +43,16 @@ void UPerformanceMonitor_C::GetContentSize(struct FVector2D* contentSize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceMonitor.PerformanceMonitor_C.GetContentSize");
 
-	UPerformanceMonitor_C_GetContentSize_Params params;
+	UPerformanceMonitor_C_GetContentSize_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (contentSize != nullptr)
-		*contentSize = params.contentSize;
+		*contentSize = fn_params.contentSize;
 }
 
 
@@ -63,11 +63,11 @@ void UPerformanceMonitor_C::OnPrisonerSet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceMonitor.PerformanceMonitor_C.OnPrisonerSet");
 
-	UPerformanceMonitor_C_OnPrisonerSet_Params params;
+	UPerformanceMonitor_C_OnPrisonerSet_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -80,11 +80,11 @@ void UPerformanceMonitor_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceMonitor.PerformanceMonitor_C.Construct");
 
-	UPerformanceMonitor_C_Construct_Params params;
+	UPerformanceMonitor_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -97,11 +97,11 @@ void UPerformanceMonitor_C::WindowContentSizeChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceMonitor.PerformanceMonitor_C.WindowContentSizeChanged");
 
-	UPerformanceMonitor_C_WindowContentSizeChanged_Params params;
+	UPerformanceMonitor_C_WindowContentSizeChanged_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -114,11 +114,11 @@ void UPerformanceMonitor_C::AlarmOnWindowContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceMonitor.PerformanceMonitor_C.AlarmOnWindowContent");
 
-	UPerformanceMonitor_C_AlarmOnWindowContent_Params params;
+	UPerformanceMonitor_C_AlarmOnWindowContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -131,11 +131,11 @@ void UPerformanceMonitor_C::AlarmOffWindowContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceMonitor.PerformanceMonitor_C.AlarmOffWindowContent");
 
-	UPerformanceMonitor_C_AlarmOffWindowContent_Params params;
+	UPerformanceMonitor_C_AlarmOffWindowContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -150,12 +150,12 @@ void UPerformanceMonitor_C::ExecuteUbergraph_PerformanceMonitor(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PerformanceMonitor.PerformanceMonitor_C.ExecuteUbergraph_PerformanceMonitor");
 
-	UPerformanceMonitor_C_ExecuteUbergraph_PerformanceMonitor_Params params;
-	params.EntryPoint = EntryPoint;
+	UPerformanceMonitor_C_ExecuteUbergraph_PerformanceMonitor_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

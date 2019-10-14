@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Donkey_Head_Cap.Donkey_Head_Cap_C
-// 0x0000 (0x0778 - 0x0778)
+// 0x0000 (0x0818 - 0x0818)
 class ADonkey_Head_Cap_C : public AItem
 {
 public:

@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Event_2H_Metal_Axe.Event_2H_Metal_Axe_C
-// 0x0010 (0x07D0 - 0x07C0)
+// 0x0010 (0x0870 - 0x0860)
 class AEvent_2H_Metal_Axe_C : public AWeaponItem
 {
 public:
-	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule1;                             // 0x07C0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule;                              // 0x07C8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule1;                             // 0x0860(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule;                              // 0x0868(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

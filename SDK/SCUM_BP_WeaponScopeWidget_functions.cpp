@@ -22,13 +22,13 @@ void UBP_WeaponScopeWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaT
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WeaponScopeWidget.BP_WeaponScopeWidget_C.Tick");
 
-	UBP_WeaponScopeWidget_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UBP_WeaponScopeWidget_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -41,11 +41,11 @@ void UBP_WeaponScopeWidget_C::OnShowElements()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WeaponScopeWidget.BP_WeaponScopeWidget_C.OnShowElements");
 
-	UBP_WeaponScopeWidget_C_OnShowElements_Params params;
+	UBP_WeaponScopeWidget_C_OnShowElements_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -58,11 +58,11 @@ void UBP_WeaponScopeWidget_C::OnHideElements()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WeaponScopeWidget.BP_WeaponScopeWidget_C.OnHideElements");
 
-	UBP_WeaponScopeWidget_C_OnHideElements_Params params;
+	UBP_WeaponScopeWidget_C_OnHideElements_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -75,11 +75,11 @@ void UBP_WeaponScopeWidget_C::OnConstructFinished()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WeaponScopeWidget.BP_WeaponScopeWidget_C.OnConstructFinished");
 
-	UBP_WeaponScopeWidget_C_OnConstructFinished_Params params;
+	UBP_WeaponScopeWidget_C_OnConstructFinished_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -92,11 +92,11 @@ void UBP_WeaponScopeWidget_C::BndEvt__FadeOut_K2Node_ComponentBoundEvent_0_OnWid
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WeaponScopeWidget.BP_WeaponScopeWidget_C.BndEvt__FadeOut_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
 
-	UBP_WeaponScopeWidget_C_BndEvt__FadeOut_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature_Params params;
+	UBP_WeaponScopeWidget_C_BndEvt__FadeOut_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -111,12 +111,12 @@ void UBP_WeaponScopeWidget_C::ExecuteUbergraph_BP_WeaponScopeWidget(int EntryPoi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WeaponScopeWidget.BP_WeaponScopeWidget_C.ExecuteUbergraph_BP_WeaponScopeWidget");
 
-	UBP_WeaponScopeWidget_C_ExecuteUbergraph_BP_WeaponScopeWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UBP_WeaponScopeWidget_C_ExecuteUbergraph_BP_WeaponScopeWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

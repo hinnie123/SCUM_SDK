@@ -19,11 +19,11 @@ void AMenu_C::UpdateDroneVisual()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Menu.Menu_C.UpdateDroneVisual");
 
-	AMenu_C_UpdateDroneVisual_Params params;
+	AMenu_C_UpdateDroneVisual_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -38,12 +38,12 @@ void AMenu_C::InpActEvt_Ctrl_D_K2Node_InputKeyEvent_1(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Menu.Menu_C.InpActEvt_Ctrl_D_K2Node_InputKeyEvent_1");
 
-	AMenu_C_InpActEvt_Ctrl_D_K2Node_InputKeyEvent_1_Params params;
-	params.Key = Key;
+	AMenu_C_InpActEvt_Ctrl_D_K2Node_InputKeyEvent_1_Params fn_params;
+	fn_params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -56,11 +56,11 @@ void AMenu_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Menu.Menu_C.ReceiveBeginPlay");
 
-	AMenu_C_ReceiveBeginPlay_Params params;
+	AMenu_C_ReceiveBeginPlay_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -75,12 +75,12 @@ void AMenu_C::ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Menu.Menu_C.ReceiveTick");
 
-	AMenu_C_ReceiveTick_Params params;
-	params.DeltaSeconds = DeltaSeconds;
+	AMenu_C_ReceiveTick_Params fn_params;
+	fn_params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -93,11 +93,11 @@ void AMenu_C::Recapture()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Menu.Menu_C.Recapture");
 
-	AMenu_C_Recapture_Params params;
+	AMenu_C_Recapture_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -112,12 +112,12 @@ void AMenu_C::ExecuteUbergraph_Menu(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Menu.Menu_C.ExecuteUbergraph_Menu");
 
-	AMenu_C_ExecuteUbergraph_Menu_Params params;
-	params.EntryPoint = EntryPoint;
+	AMenu_C_ExecuteUbergraph_Menu_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

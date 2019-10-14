@@ -21,12 +21,12 @@ void UUI_CaloriesMonitor_C::SetPrisoner(class APrisoner* Prisoner)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CaloriesMonitor.UI_CaloriesMonitor_C.SetPrisoner");
 
-	UUI_CaloriesMonitor_C_SetPrisoner_Params params;
-	params.Prisoner = Prisoner;
+	UUI_CaloriesMonitor_C_SetPrisoner_Params fn_params;
+	fn_params.Prisoner = Prisoner;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -39,11 +39,11 @@ void UUI_CaloriesMonitor_C::Update()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CaloriesMonitor.UI_CaloriesMonitor_C.Update");
 
-	UUI_CaloriesMonitor_C_Update_Params params;
+	UUI_CaloriesMonitor_C_Update_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -59,13 +59,13 @@ void UUI_CaloriesMonitor_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTim
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CaloriesMonitor.UI_CaloriesMonitor_C.Tick");
 
-	UUI_CaloriesMonitor_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UUI_CaloriesMonitor_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -80,12 +80,12 @@ void UUI_CaloriesMonitor_C::ExecuteUbergraph_UI_CaloriesMonitor(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CaloriesMonitor.UI_CaloriesMonitor_C.ExecuteUbergraph_UI_CaloriesMonitor");
 
-	UUI_CaloriesMonitor_C_ExecuteUbergraph_UI_CaloriesMonitor_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_CaloriesMonitor_C_ExecuteUbergraph_UI_CaloriesMonitor_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

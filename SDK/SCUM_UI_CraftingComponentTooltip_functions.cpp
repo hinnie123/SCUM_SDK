@@ -21,12 +21,12 @@ void UUI_CraftingComponentTooltip_C::InitFromItem(class UUI_CraftingComponent_C*
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingComponentTooltip.UI_CraftingComponentTooltip_C.InitFromItem");
 
-	UUI_CraftingComponentTooltip_C_InitFromItem_Params params;
-	params.componentWidget = componentWidget;
+	UUI_CraftingComponentTooltip_C_InitFromItem_Params fn_params;
+	fn_params.componentWidget = componentWidget;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -72,12 +72,12 @@ void UObject::ExecuteUbergraph(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CoreUObject.Object.ExecuteUbergraph");
 
-	UObject_ExecuteUbergraph_Params params;
-	params.EntryPoint = EntryPoint;
+	UObject_ExecuteUbergraph_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

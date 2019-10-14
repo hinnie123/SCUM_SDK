@@ -41,7 +41,7 @@ struct UUI_ContinueOrNewCharacterDialog_C_New__DelegateSignature_Params
 	struct FString                                     Ip;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 	int                                                GameplayPort;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                ResponsePort;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FString                                     authToken;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	struct FString                                     AuthToken;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 };
 
 // Function UI_ContinueOrNewCharacterDialog.UI_ContinueOrNewCharacterDialog_C.Continue__DelegateSignature
@@ -50,7 +50,7 @@ struct UUI_ContinueOrNewCharacterDialog_C_Continue__DelegateSignature_Params
 	struct FString                                     Ip;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 	int                                                GameplayPort;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                ResponsePort;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FString                                     authToken;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	struct FString                                     AuthToken;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 };
 
 }

@@ -19,11 +19,11 @@ void ABP_MenuPlayerController_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuPlayerController.BP_MenuPlayerController_C.UserConstructionScript");
 
-	ABP_MenuPlayerController_C_UserConstructionScript_Params params;
+	ABP_MenuPlayerController_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -38,12 +38,12 @@ void ABP_MenuPlayerController_C::ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuPlayerController.BP_MenuPlayerController_C.ReceiveTick");
 
-	ABP_MenuPlayerController_C_ReceiveTick_Params params;
-	params.DeltaSeconds = DeltaSeconds;
+	ABP_MenuPlayerController_C_ReceiveTick_Params fn_params;
+	fn_params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -56,11 +56,11 @@ void ABP_MenuPlayerController_C::InputComponent_MouseReleased()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuPlayerController.BP_MenuPlayerController_C.InputComponent_MouseReleased");
 
-	ABP_MenuPlayerController_C_InputComponent_MouseReleased_Params params;
+	ABP_MenuPlayerController_C_InputComponent_MouseReleased_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -73,11 +73,11 @@ void ABP_MenuPlayerController_C::InputComponent_MousePressed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuPlayerController.BP_MenuPlayerController_C.InputComponent_MousePressed");
 
-	ABP_MenuPlayerController_C_InputComponent_MousePressed_Params params;
+	ABP_MenuPlayerController_C_InputComponent_MousePressed_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -92,12 +92,12 @@ void ABP_MenuPlayerController_C::ExecuteUbergraph_BP_MenuPlayerController(int En
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuPlayerController.BP_MenuPlayerController_C.ExecuteUbergraph_BP_MenuPlayerController");
 
-	ABP_MenuPlayerController_C_ExecuteUbergraph_BP_MenuPlayerController_Params params;
-	params.EntryPoint = EntryPoint;
+	ABP_MenuPlayerController_C_ExecuteUbergraph_BP_MenuPlayerController_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

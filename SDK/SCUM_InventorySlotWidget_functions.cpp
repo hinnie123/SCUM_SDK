@@ -22,13 +22,13 @@ void UInventorySlotWidget_C::OnDropDispatcher__DelegateSignature(class UInventor
 {
 	static auto fn = UObject::FindObject<UFunction>("Function InventorySlotWidget.InventorySlotWidget_C.OnDropDispatcher__DelegateSignature");
 
-	UInventorySlotWidget_C_OnDropDispatcher__DelegateSignature_Params params;
-	params.Slot = Slot;
-	params.Item = Item;
+	UInventorySlotWidget_C_OnDropDispatcher__DelegateSignature_Params fn_params;
+	fn_params.Slot = Slot;
+	fn_params.Item = Item;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -44,13 +44,13 @@ void UInventorySlotWidget_C::OnDragLeaveDispatcher__DelegateSignature(class UInv
 {
 	static auto fn = UObject::FindObject<UFunction>("Function InventorySlotWidget.InventorySlotWidget_C.OnDragLeaveDispatcher__DelegateSignature");
 
-	UInventorySlotWidget_C_OnDragLeaveDispatcher__DelegateSignature_Params params;
-	params.Slot = Slot;
-	params.Item = Item;
+	UInventorySlotWidget_C_OnDragLeaveDispatcher__DelegateSignature_Params fn_params;
+	fn_params.Slot = Slot;
+	fn_params.Item = Item;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -66,13 +66,13 @@ void UInventorySlotWidget_C::OnDragEnterDispatcher__DelegateSignature(class UInv
 {
 	static auto fn = UObject::FindObject<UFunction>("Function InventorySlotWidget.InventorySlotWidget_C.OnDragEnterDispatcher__DelegateSignature");
 
-	UInventorySlotWidget_C_OnDragEnterDispatcher__DelegateSignature_Params params;
-	params.Slot = Slot;
-	params.Item = Item;
+	UInventorySlotWidget_C_OnDragEnterDispatcher__DelegateSignature_Params fn_params;
+	fn_params.Slot = Slot;
+	fn_params.Item = Item;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

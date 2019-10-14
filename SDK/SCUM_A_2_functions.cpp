@@ -21,12 +21,12 @@ void AA_1_C::ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function A_2.A_1_C.ReceiveTick");
 
-	AA_1_C_ReceiveTick_Params params;
-	params.DeltaSeconds = DeltaSeconds;
+	AA_1_C_ReceiveTick_Params fn_params;
+	fn_params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -41,12 +41,12 @@ void AA_1_C::ExecuteUbergraph_A_2(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function A_2.A_1_C.ExecuteUbergraph_A_2");
 
-	AA_1_C_ExecuteUbergraph_A_2_Params params;
-	params.EntryPoint = EntryPoint;
+	AA_1_C_ExecuteUbergraph_A_2_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

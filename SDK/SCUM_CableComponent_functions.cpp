@@ -23,15 +23,15 @@ void UCableComponent::SetAttachEndTo(class AActor* Actor, const struct FName& Co
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CableComponent.CableComponent.SetAttachEndTo");
 
-	UCableComponent_SetAttachEndTo_Params params;
-	params.Actor = Actor;
-	params.ComponentProperty = ComponentProperty;
-	params.SocketName = SocketName;
+	UCableComponent_SetAttachEndTo_Params fn_params;
+	fn_params.Actor = Actor;
+	fn_params.ComponentProperty = ComponentProperty;
+	fn_params.SocketName = SocketName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -46,17 +46,17 @@ void UCableComponent::GetCableParticleLocations(TArray<struct FVector>* Location
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CableComponent.CableComponent.GetCableParticleLocations");
 
-	UCableComponent_GetCableParticleLocations_Params params;
+	UCableComponent_GetCableParticleLocations_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Locations != nullptr)
-		*Locations = params.Locations;
+		*Locations = fn_params.Locations;
 }
 
 
@@ -69,16 +69,16 @@ class USceneComponent* UCableComponent::GetAttachedComponent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CableComponent.CableComponent.GetAttachedComponent");
 
-	UCableComponent_GetAttachedComponent_Params params;
+	UCableComponent_GetAttachedComponent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -91,16 +91,16 @@ class AActor* UCableComponent::GetAttachedActor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CableComponent.CableComponent.GetAttachedActor");
 
-	UCableComponent_GetAttachedActor_Params params;
+	UCableComponent_GetAttachedActor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

@@ -22,16 +22,16 @@ bool ABP_Weapon_AS_Val_C::CanAddAttachment(class AWeaponAttachment** Attachment)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_AS_Val.BP_Weapon_AS_Val_C.CanAddAttachment");
 
-	ABP_Weapon_AS_Val_C_CanAddAttachment_Params params;
-	params.Attachment = Attachment;
+	ABP_Weapon_AS_Val_C_CanAddAttachment_Params fn_params;
+	fn_params.Attachment = Attachment;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -42,11 +42,11 @@ void ABP_Weapon_AS_Val_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_AS_Val.BP_Weapon_AS_Val_C.UserConstructionScript");
 
-	ABP_Weapon_AS_Val_C_UserConstructionScript_Params params;
+	ABP_Weapon_AS_Val_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

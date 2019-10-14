@@ -1429,13 +1429,13 @@ struct UColorBinding_GetLinearValue_Params
 // Function UMG.ComboBoxString.SetSelectedOption
 struct UComboBoxString_SetSelectedOption_Params
 {
-	struct FString                                     Option;                                                   // (Parm, ZeroConstructor)
+	struct FString                                     option;                                                   // (Parm, ZeroConstructor)
 };
 
 // Function UMG.ComboBoxString.RemoveOption
 struct UComboBoxString_RemoveOption_Params
 {
-	struct FString                                     Option;                                                   // (Parm, ZeroConstructor)
+	struct FString                                     option;                                                   // (Parm, ZeroConstructor)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -1478,7 +1478,7 @@ struct UComboBoxString_GetOptionAtIndex_Params
 // Function UMG.ComboBoxString.FindOptionIndex
 struct UComboBoxString_FindOptionIndex_Params
 {
-	struct FString                                     Option;                                                   // (Parm, ZeroConstructor)
+	struct FString                                     option;                                                   // (Parm, ZeroConstructor)
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -1495,7 +1495,7 @@ struct UComboBoxString_ClearOptions_Params
 // Function UMG.ComboBoxString.AddOption
 struct UComboBoxString_AddOption_Params
 {
-	struct FString                                     Option;                                                   // (Parm, ZeroConstructor)
+	struct FString                                     option;                                                   // (Parm, ZeroConstructor)
 };
 
 // Function UMG.DragDropOperation.Drop

@@ -30,7 +30,7 @@ struct UUI_GameEventPanelWidget_C_UpdateSelection_Params
 {
 	class UComboBoxString*                             Dropdown;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	TArray<class AGameEventBase*>                      GameEvents;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	struct FString                                     Selected;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	struct FString                                     selected;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 };
 
 // Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.GetSelectedEvent

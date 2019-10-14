@@ -21,15 +21,15 @@ struct FText UMainMenuWidget_C::GetCharacterName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MainMenuWidget.MainMenuWidget_C.GetCharacterName");
 
-	UMainMenuWidget_C_GetCharacterName_Params params;
+	UMainMenuWidget_C_GetCharacterName_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -44,17 +44,17 @@ struct FEventReply UMainMenuWidget_C::OnPreviewKeyDown(struct FGeometry* MyGeome
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MainMenuWidget.MainMenuWidget_C.OnPreviewKeyDown");
 
-	UMainMenuWidget_C_OnPreviewKeyDown_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InKeyEvent = InKeyEvent;
+	UMainMenuWidget_C_OnPreviewKeyDown_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InKeyEvent = InKeyEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -65,11 +65,11 @@ void UMainMenuWidget_C::BndEvt__UI_MenuButton_38_K2Node_ComponentBoundEvent_39_O
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MainMenuWidget.MainMenuWidget_C.BndEvt__UI_MenuButton_38_K2Node_ComponentBoundEvent_39_OnClicked__DelegateSignature");
 
-	UMainMenuWidget_C_BndEvt__UI_MenuButton_38_K2Node_ComponentBoundEvent_39_OnClicked__DelegateSignature_Params params;
+	UMainMenuWidget_C_BndEvt__UI_MenuButton_38_K2Node_ComponentBoundEvent_39_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -82,11 +82,11 @@ void UMainMenuWidget_C::BndEvt__ChangeServer_K2Node_ComponentBoundEvent_195_OnCl
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MainMenuWidget.MainMenuWidget_C.BndEvt__ChangeServer_K2Node_ComponentBoundEvent_195_OnClicked__DelegateSignature");
 
-	UMainMenuWidget_C_BndEvt__ChangeServer_K2Node_ComponentBoundEvent_195_OnClicked__DelegateSignature_Params params;
+	UMainMenuWidget_C_BndEvt__ChangeServer_K2Node_ComponentBoundEvent_195_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -99,11 +99,11 @@ void UMainMenuWidget_C::BndEvt__Quit_K2Node_ComponentBoundEvent_214_OnClicked__D
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MainMenuWidget.MainMenuWidget_C.BndEvt__Quit_K2Node_ComponentBoundEvent_214_OnClicked__DelegateSignature");
 
-	UMainMenuWidget_C_BndEvt__Quit_K2Node_ComponentBoundEvent_214_OnClicked__DelegateSignature_Params params;
+	UMainMenuWidget_C_BndEvt__Quit_K2Node_ComponentBoundEvent_214_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -116,11 +116,11 @@ void UMainMenuWidget_C::BndEvt__Quit_K2Node_ComponentBoundEvent_329_OnClicked__D
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MainMenuWidget.MainMenuWidget_C.BndEvt__Quit_K2Node_ComponentBoundEvent_329_OnClicked__DelegateSignature");
 
-	UMainMenuWidget_C_BndEvt__Quit_K2Node_ComponentBoundEvent_329_OnClicked__DelegateSignature_Params params;
+	UMainMenuWidget_C_BndEvt__Quit_K2Node_ComponentBoundEvent_329_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -133,11 +133,11 @@ void UMainMenuWidget_C::OnQuitYesClicked()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MainMenuWidget.MainMenuWidget_C.OnQuitYesClicked");
 
-	UMainMenuWidget_C_OnQuitYesClicked_Params params;
+	UMainMenuWidget_C_OnQuitYesClicked_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -150,11 +150,11 @@ void UMainMenuWidget_C::OnQuitNoClicked()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MainMenuWidget.MainMenuWidget_C.OnQuitNoClicked");
 
-	UMainMenuWidget_C_OnQuitNoClicked_Params params;
+	UMainMenuWidget_C_OnQuitNoClicked_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -167,11 +167,11 @@ void UMainMenuWidget_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MainMenuWidget.MainMenuWidget_C.Construct");
 
-	UMainMenuWidget_C_Construct_Params params;
+	UMainMenuWidget_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -184,11 +184,11 @@ void UMainMenuWidget_C::OnESC()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MainMenuWidget.MainMenuWidget_C.OnESC");
 
-	UMainMenuWidget_C_OnESC_Params params;
+	UMainMenuWidget_C_OnESC_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -201,11 +201,11 @@ void UMainMenuWidget_C::BndEvt__ContinueButton_K2Node_ComponentBoundEvent_47_OnC
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MainMenuWidget.MainMenuWidget_C.BndEvt__ContinueButton_K2Node_ComponentBoundEvent_47_OnClicked__DelegateSignature");
 
-	UMainMenuWidget_C_BndEvt__ContinueButton_K2Node_ComponentBoundEvent_47_OnClicked__DelegateSignature_Params params;
+	UMainMenuWidget_C_BndEvt__ContinueButton_K2Node_ComponentBoundEvent_47_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -218,11 +218,11 @@ void UMainMenuWidget_C::OnNetworkErrorDismissed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MainMenuWidget.MainMenuWidget_C.OnNetworkErrorDismissed");
 
-	UMainMenuWidget_C_OnNetworkErrorDismissed_Params params;
+	UMainMenuWidget_C_OnNetworkErrorDismissed_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -237,12 +237,12 @@ void UMainMenuWidget_C::ExecuteUbergraph_MainMenuWidget(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MainMenuWidget.MainMenuWidget_C.ExecuteUbergraph_MainMenuWidget");
 
-	UMainMenuWidget_C_ExecuteUbergraph_MainMenuWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UMainMenuWidget_C_ExecuteUbergraph_MainMenuWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

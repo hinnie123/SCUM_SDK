@@ -19,11 +19,11 @@ void ASkyLight_Blueprint_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkyLight_Blueprint.SkyLight_Blueprint_C.UserConstructionScript");
 
-	ASkyLight_Blueprint_C_UserConstructionScript_Params params;
+	ASkyLight_Blueprint_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void ASkyLight_Blueprint_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkyLight_Blueprint.SkyLight_Blueprint_C.ReceiveBeginPlay");
 
-	ASkyLight_Blueprint_C_ReceiveBeginPlay_Params params;
+	ASkyLight_Blueprint_C_ReceiveBeginPlay_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -55,12 +55,12 @@ void ASkyLight_Blueprint_C::ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkyLight_Blueprint.SkyLight_Blueprint_C.ReceiveTick");
 
-	ASkyLight_Blueprint_C_ReceiveTick_Params params;
-	params.DeltaSeconds = DeltaSeconds;
+	ASkyLight_Blueprint_C_ReceiveTick_Params fn_params;
+	fn_params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -75,12 +75,12 @@ void ASkyLight_Blueprint_C::ExecuteUbergraph_SkyLight_Blueprint(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkyLight_Blueprint.SkyLight_Blueprint_C.ExecuteUbergraph_SkyLight_Blueprint");
 
-	ASkyLight_Blueprint_C_ExecuteUbergraph_SkyLight_Blueprint_Params params;
-	params.EntryPoint = EntryPoint;
+	ASkyLight_Blueprint_C_ExecuteUbergraph_SkyLight_Blueprint_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

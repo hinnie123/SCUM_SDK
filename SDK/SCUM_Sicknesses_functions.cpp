@@ -23,18 +23,18 @@ void USicknesses_C::HasContentSizeChanged(int oldSicknessCount, int newSicknessC
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.HasContentSizeChanged");
 
-	USicknesses_C_HasContentSizeChanged_Params params;
-	params.oldSicknessCount = oldSicknessCount;
-	params.newSicknessCount = newSicknessCount;
+	USicknesses_C_HasContentSizeChanged_Params fn_params;
+	fn_params.oldSicknessCount = oldSicknessCount;
+	fn_params.newSicknessCount = newSicknessCount;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (contentSizeChanged != nullptr)
-		*contentSizeChanged = params.contentSizeChanged;
+		*contentSizeChanged = fn_params.contentSizeChanged;
 }
 
 
@@ -48,13 +48,13 @@ void USicknesses_C::CheckForAlarms(int previousSicknessCount, int sicknessCount)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.CheckForAlarms");
 
-	USicknesses_C_CheckForAlarms_Params params;
-	params.previousSicknessCount = previousSicknessCount;
-	params.sicknessCount = sicknessCount;
+	USicknesses_C_CheckForAlarms_Params fn_params;
+	fn_params.previousSicknessCount = previousSicknessCount;
+	fn_params.sicknessCount = sicknessCount;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -67,11 +67,11 @@ void USicknesses_C::UpdateSicknessCount()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.UpdateSicknessCount");
 
-	USicknesses_C_UpdateSicknessCount_Params params;
+	USicknesses_C_UpdateSicknessCount_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -89,21 +89,21 @@ void USicknesses_C::SicknessToText(class USickness* sicknessRef, struct FText* S
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.SicknessToText");
 
-	USicknesses_C_SicknessToText_Params params;
-	params.sicknessRef = sicknessRef;
+	USicknesses_C_SicknessToText_Params fn_params;
+	fn_params.sicknessRef = sicknessRef;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (SicknessName != nullptr)
-		*SicknessName = params.SicknessName;
+		*SicknessName = fn_params.SicknessName;
 	if (sicknessState != nullptr)
-		*sicknessState = params.sicknessState;
+		*sicknessState = fn_params.sicknessState;
 	if (sicknessPhase != nullptr)
-		*sicknessPhase = params.sicknessPhase;
+		*sicknessPhase = fn_params.sicknessPhase;
 }
 
 
@@ -117,13 +117,13 @@ void USicknesses_C::FillSicknessLine(class UParameterLine_C* sicknessLineRef, cl
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.FillSicknessLine");
 
-	USicknesses_C_FillSicknessLine_Params params;
-	params.sicknessLineRef = sicknessLineRef;
-	params.Sickness = Sickness;
+	USicknesses_C_FillSicknessLine_Params fn_params;
+	fn_params.sicknessLineRef = sicknessLineRef;
+	fn_params.Sickness = Sickness;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -136,11 +136,11 @@ void USicknesses_C::UpdateSicknessLine()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.UpdateSicknessLine");
 
-	USicknesses_C_UpdateSicknessLine_Params params;
+	USicknesses_C_UpdateSicknessLine_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -156,17 +156,17 @@ void USicknesses_C::CreateSicknessLine(class USickness* sicknessRef, class UPara
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.CreateSicknessLine");
 
-	USicknesses_C_CreateSicknessLine_Params params;
-	params.sicknessRef = sicknessRef;
+	USicknesses_C_CreateSicknessLine_Params fn_params;
+	fn_params.sicknessRef = sicknessRef;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (sicknessParameterLine != nullptr)
-		*sicknessParameterLine = params.sicknessParameterLine;
+		*sicknessParameterLine = fn_params.sicknessParameterLine;
 }
 
 
@@ -179,12 +179,12 @@ void USicknesses_C::ShowSickness(ESlateVisibility Visibility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.ShowSickness");
 
-	USicknesses_C_ShowSickness_Params params;
-	params.Visibility = Visibility;
+	USicknesses_C_ShowSickness_Params fn_params;
+	fn_params.Visibility = Visibility;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -197,11 +197,11 @@ void USicknesses_C::InitSicknesses()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.InitSicknesses");
 
-	USicknesses_C_InitSicknesses_Params params;
+	USicknesses_C_InitSicknesses_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -216,12 +216,12 @@ void USicknesses_C::AddSicknessLine(class UParameterLine_C* sicknessLineRef)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.AddSicknessLine");
 
-	USicknesses_C_AddSicknessLine_Params params;
-	params.sicknessLineRef = sicknessLineRef;
+	USicknesses_C_AddSicknessLine_Params fn_params;
+	fn_params.sicknessLineRef = sicknessLineRef;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -239,19 +239,19 @@ void USicknesses_C::CreateSicknessLineFromText(const struct FText& SicknessName,
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.CreateSicknessLineFromText");
 
-	USicknesses_C_CreateSicknessLineFromText_Params params;
-	params.SicknessName = SicknessName;
-	params.SicknessTextValue = SicknessTextValue;
-	params.SicknessMaxValue = SicknessMaxValue;
+	USicknesses_C_CreateSicknessLineFromText_Params fn_params;
+	fn_params.SicknessName = SicknessName;
+	fn_params.SicknessTextValue = SicknessTextValue;
+	fn_params.SicknessMaxValue = SicknessMaxValue;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (sicknessLine != nullptr)
-		*sicknessLine = params.sicknessLine;
+		*sicknessLine = fn_params.sicknessLine;
 }
 
 
@@ -264,15 +264,15 @@ TArray<class USickness*> USicknesses_C::GetSicknesses()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.GetSicknesses");
 
-	USicknesses_C_GetSicknesses_Params params;
+	USicknesses_C_GetSicknesses_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -285,12 +285,12 @@ void USicknesses_C::SetSicknessCount(int sicknessCountToSet)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.SetSicknessCount");
 
-	USicknesses_C_SetSicknessCount_Params params;
-	params.sicknessCountToSet = sicknessCountToSet;
+	USicknesses_C_SetSicknessCount_Params fn_params;
+	fn_params.sicknessCountToSet = sicknessCountToSet;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -303,11 +303,11 @@ void USicknesses_C::ClearSicknessLines()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.ClearSicknessLines");
 
-	USicknesses_C_ClearSicknessLines_Params params;
+	USicknesses_C_ClearSicknessLines_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -322,16 +322,16 @@ void USicknesses_C::CountSicknesses(int* numberOfSicknesses)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.CountSicknesses");
 
-	USicknesses_C_CountSicknesses_Params params;
+	USicknesses_C_CountSicknesses_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (numberOfSicknesses != nullptr)
-		*numberOfSicknesses = params.numberOfSicknesses;
+		*numberOfSicknesses = fn_params.numberOfSicknesses;
 }
 
 
@@ -344,16 +344,16 @@ void USicknesses_C::HasSicknessCountChanged(bool* sicknessCountChanged)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.HasSicknessCountChanged");
 
-	USicknesses_C_HasSicknessCountChanged_Params params;
+	USicknesses_C_HasSicknessCountChanged_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (sicknessCountChanged != nullptr)
-		*sicknessCountChanged = params.sicknessCountChanged;
+		*sicknessCountChanged = fn_params.sicknessCountChanged;
 }
 
 
@@ -364,11 +364,11 @@ void USicknesses_C::UpdateSicknesses()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.UpdateSicknesses");
 
-	USicknesses_C_UpdateSicknesses_Params params;
+	USicknesses_C_UpdateSicknesses_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -383,15 +383,15 @@ struct FText USicknesses_C::GetTitleText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.GetTitleText");
 
-	USicknesses_C_GetTitleText_Params params;
+	USicknesses_C_GetTitleText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -404,16 +404,16 @@ void USicknesses_C::GetDefaultTitle(struct FText* defaultTitle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.GetDefaultTitle");
 
-	USicknesses_C_GetDefaultTitle_Params params;
+	USicknesses_C_GetDefaultTitle_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (defaultTitle != nullptr)
-		*defaultTitle = params.defaultTitle;
+		*defaultTitle = fn_params.defaultTitle;
 }
 
 
@@ -426,16 +426,16 @@ void USicknesses_C::SelectCustomColor(struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.SelectCustomColor");
 
-	USicknesses_C_SelectCustomColor_Params params;
+	USicknesses_C_SelectCustomColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Color != nullptr)
-		*Color = params.Color;
+		*Color = fn_params.Color;
 }
 
 
@@ -446,11 +446,11 @@ void USicknesses_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.Construct");
 
-	USicknesses_C_Construct_Params params;
+	USicknesses_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -465,12 +465,12 @@ void USicknesses_C::OnMinimize(bool shouldMinimize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.OnMinimize");
 
-	USicknesses_C_OnMinimize_Params params;
-	params.shouldMinimize = shouldMinimize;
+	USicknesses_C_OnMinimize_Params fn_params;
+	fn_params.shouldMinimize = shouldMinimize;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -483,11 +483,11 @@ void USicknesses_C::OnPrisonerSet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.OnPrisonerSet");
 
-	USicknesses_C_OnPrisonerSet_Params params;
+	USicknesses_C_OnPrisonerSet_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -500,11 +500,11 @@ void USicknesses_C::UpdateContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.UpdateContent");
 
-	USicknesses_C_UpdateContent_Params params;
+	USicknesses_C_UpdateContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -517,11 +517,11 @@ void USicknesses_C::SicknessEmergedShouldActivateAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.SicknessEmergedShouldActivateAlarm");
 
-	USicknesses_C_SicknessEmergedShouldActivateAlarm_Params params;
+	USicknesses_C_SicknessEmergedShouldActivateAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -534,11 +534,11 @@ void USicknesses_C::SicknessGoneShouldDeactivateAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.SicknessGoneShouldDeactivateAlarm");
 
-	USicknesses_C_SicknessGoneShouldDeactivateAlarm_Params params;
+	USicknesses_C_SicknessGoneShouldDeactivateAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -553,12 +553,12 @@ void USicknesses_C::ExecuteUbergraph_Sicknesses(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.ExecuteUbergraph_Sicknesses");
 
-	USicknesses_C_ExecuteUbergraph_Sicknesses_Params params;
-	params.EntryPoint = EntryPoint;
+	USicknesses_C_ExecuteUbergraph_Sicknesses_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -571,11 +571,11 @@ void USicknesses_C::AlarmOffSicknessesEventDispatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.AlarmOffSicknessesEventDispatcher__DelegateSignature");
 
-	USicknesses_C_AlarmOffSicknessesEventDispatcher__DelegateSignature_Params params;
+	USicknesses_C_AlarmOffSicknessesEventDispatcher__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -588,11 +588,11 @@ void USicknesses_C::AlarmOnSicknessesEventDispatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sicknesses.Sicknesses_C.AlarmOnSicknessesEventDispatcher__DelegateSignature");
 
-	USicknesses_C_AlarmOnSicknessesEventDispatcher__DelegateSignature_Params params;
+	USicknesses_C_AlarmOnSicknessesEventDispatcher__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

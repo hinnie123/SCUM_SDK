@@ -35,6 +35,7 @@ public:
 	}
 
 
+	void InitFromInventoryNode(const TScriptInterface<class UInventoryNode>& Item);
 	void UpdateDebugText(class AItem* Item);
 	float GetItemDurability();
 	void InitFromCaptionAndDescription(const struct FText& Caption, const struct FText& Description);

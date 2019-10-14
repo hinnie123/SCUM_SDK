@@ -21,12 +21,12 @@ void UServerInfoWidget_C::SetValid(bool Valid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerInfoWidget.ServerInfoWidget_C.SetValid");
 
-	UServerInfoWidget_C_SetValid_Params params;
-	params.Valid = Valid;
+	UServerInfoWidget_C_SetValid_Params fn_params;
+	fn_params.Valid = Valid;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -41,12 +41,12 @@ void UServerInfoWidget_C::Connect(const struct FString& password)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerInfoWidget.ServerInfoWidget_C.Connect");
 
-	UServerInfoWidget_C_Connect_Params params;
-	params.password = password;
+	UServerInfoWidget_C_Connect_Params fn_params;
+	fn_params.password = password;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -61,12 +61,12 @@ void UServerInfoWidget_C::SetColor(const struct FLinearColor& Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerInfoWidget.ServerInfoWidget_C.SetColor");
 
-	UServerInfoWidget_C_SetColor_Params params;
-	params.Color = Color;
+	UServerInfoWidget_C_SetColor_Params fn_params;
+	fn_params.Color = Color;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -81,12 +81,12 @@ void UServerInfoWidget_C::UpdateFromServerInfo(const struct FServerInfo& ServerI
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerInfoWidget.ServerInfoWidget_C.UpdateFromServerInfo");
 
-	UServerInfoWidget_C_UpdateFromServerInfo_Params params;
-	params.ServerInfo = ServerInfo;
+	UServerInfoWidget_C_UpdateFromServerInfo_Params fn_params;
+	fn_params.ServerInfo = ServerInfo;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -99,11 +99,11 @@ void UServerInfoWidget_C::OnSynchronizeProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerInfoWidget.ServerInfoWidget_C.OnSynchronizeProperties");
 
-	UServerInfoWidget_C_OnSynchronizeProperties_Params params;
+	UServerInfoWidget_C_OnSynchronizeProperties_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -116,11 +116,11 @@ void UServerInfoWidget_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_10_OnButto
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerInfoWidget.ServerInfoWidget_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_10_OnButtonClickedEvent__DelegateSignature");
 
-	UServerInfoWidget_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_10_OnButtonClickedEvent__DelegateSignature_Params params;
+	UServerInfoWidget_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_10_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -133,11 +133,11 @@ void UServerInfoWidget_C::BndEvt__Button_1_K2Node_ComponentBoundEvent_26_OnButto
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerInfoWidget.ServerInfoWidget_C.BndEvt__Button_1_K2Node_ComponentBoundEvent_26_OnButtonClickedEvent__DelegateSignature");
 
-	UServerInfoWidget_C_BndEvt__Button_1_K2Node_ComponentBoundEvent_26_OnButtonClickedEvent__DelegateSignature_Params params;
+	UServerInfoWidget_C_BndEvt__Button_1_K2Node_ComponentBoundEvent_26_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -150,11 +150,11 @@ void UServerInfoWidget_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerInfoWidget.ServerInfoWidget_C.Construct");
 
-	UServerInfoWidget_C_Construct_Params params;
+	UServerInfoWidget_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -169,12 +169,12 @@ void UServerInfoWidget_C::ExecuteUbergraph_ServerInfoWidget(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerInfoWidget.ServerInfoWidget_C.ExecuteUbergraph_ServerInfoWidget");
 
-	UServerInfoWidget_C_ExecuteUbergraph_ServerInfoWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UServerInfoWidget_C_ExecuteUbergraph_ServerInfoWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -189,12 +189,12 @@ void UServerInfoWidget_C::OnRemoved__DelegateSignature(const struct FServerInfo&
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerInfoWidget.ServerInfoWidget_C.OnRemoved__DelegateSignature");
 
-	UServerInfoWidget_C_OnRemoved__DelegateSignature_Params params;
-	params.Info = Info;
+	UServerInfoWidget_C_OnRemoved__DelegateSignature_Params fn_params;
+	fn_params.Info = Info;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -209,12 +209,12 @@ void UServerInfoWidget_C::OnDoubleClicked__DelegateSignature(class UServerInfoWi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerInfoWidget.ServerInfoWidget_C.OnDoubleClicked__DelegateSignature");
 
-	UServerInfoWidget_C_OnDoubleClicked__DelegateSignature_Params params;
-	params.ServerInfoWidget = ServerInfoWidget;
+	UServerInfoWidget_C_OnDoubleClicked__DelegateSignature_Params fn_params;
+	fn_params.ServerInfoWidget = ServerInfoWidget;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -229,12 +229,12 @@ void UServerInfoWidget_C::OnClicked__DelegateSignature(class UServerInfoWidget_C
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerInfoWidget.ServerInfoWidget_C.OnClicked__DelegateSignature");
 
-	UServerInfoWidget_C_OnClicked__DelegateSignature_Params params;
-	params.ServerInfoWidget = ServerInfoWidget;
+	UServerInfoWidget_C_OnClicked__DelegateSignature_Params fn_params;
+	fn_params.ServerInfoWidget = ServerInfoWidget;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Wolf_Head_Cap.Wolf_Head_Cap_C
-// 0x0000 (0x0778 - 0x0778)
+// 0x0000 (0x0818 - 0x0818)
 class AWolf_Head_Cap_C : public AItem
 {
 public:

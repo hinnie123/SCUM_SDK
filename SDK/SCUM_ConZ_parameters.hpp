@@ -43,10 +43,20 @@ struct UDesignableUserWidget_GetDefaultPosition_Params
 	struct FVector2D                                   ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
 };
 
+// Function ConZ.ActionProgressWidget.UnPauseProgress
+struct UActionProgressWidget_UnPauseProgress_Params
+{
+};
+
 // Function ConZ.ActionProgressWidget.SetProgress
 struct UActionProgressWidget_SetProgress_Params
 {
 	float                                              progress;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ActionProgressWidget.PauseProgress
+struct UActionProgressWidget_PauseProgress_Params
+{
 };
 
 // DelegateFunction ConZ.ActionProgressWidget.OnActionProgressFinishedEvent__DelegateSignature
@@ -97,6 +107,73 @@ struct USickness_GetPhase_Params
 struct USickness_GetCaption_Params
 {
 	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function ConZ.AdminCommand.Execute
+struct UAdminCommand_Execute_Params
+{
+	TArray<struct FString>                             Arguments;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+};
+
+// Function ConZ.AdminCommand.CanEverBeExecuted
+struct UAdminCommand_CanEverBeExecuted_Params
+{
+	class APlayerController*                           Controller;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	struct FString                                     reasonIfNot;                                              // (Parm, OutParm, ZeroConstructor)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.AdminCommand.CanBeExecuted
+struct UAdminCommand_CanBeExecuted_Params
+{
+	class APlayerController*                           Controller;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	struct FString                                     reasonIfNot;                                              // (Parm, OutParm, ZeroConstructor)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.AdminCommandArgumentCompletion.GetCompletionValues
+struct UAdminCommandArgumentCompletion_GetCompletionValues_Params
+{
+	TArray<struct FString>                             Result;                                                   // (Parm, OutParm, ZeroConstructor)
+};
+
+// Function ConZ.AdminCommandRegistry.UnregisterCommand
+struct UAdminCommandRegistry_UnregisterCommand_Params
+{
+	class UClass*                                      Command;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.AdminCommandRegistry.UnregisterAllCommands
+struct UAdminCommandRegistry_UnregisterAllCommands_Params
+{
+};
+
+// Function ConZ.AdminCommandRegistry.RegisterCommand
+struct UAdminCommandRegistry_RegisterCommand_Params
+{
+	class UClass*                                      Command;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.AdminCommandRegistry.IsCommandRegistered
+struct UAdminCommandRegistry_IsCommandRegistered_Params
+{
+	class UClass*                                      Command;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.AdminCommandRegistry.GetCommands
+struct UAdminCommandRegistry_GetCommands_Params
+{
+	TArray<class UClass*>                              ReturnValue;                                              // (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
+};
+
+// Function ConZ.AdminCommandRegistry.GetCommandByVerb
+struct UAdminCommandRegistry_GetCommandByVerb_Params
+{
+	struct FString                                     verb;                                                     // (Parm, ZeroConstructor)
+	class UClass*                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function ConZ.Item.Use
@@ -163,6 +240,19 @@ struct AItem_Server_Throw_Params
 	struct FVector                                     StartVelocity;                                            // (ConstParm, Parm, ReferenceParm, IsPlainOldData)
 };
 
+// DelegateFunction ConZ.Item.SelectedEvent__DelegateSignature
+struct AItem_SelectedEvent__DelegateSignature_Params
+{
+	bool                                               selected;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.Item.RemoveStacks
+struct AItem_RemoveStacks_Params
+{
+	int                                                stacksToSplit;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	TScriptInterface<class UInventoryNode>             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // DelegateFunction ConZ.Item.PickedUpStateDelegate__DelegateSignature
 struct AItem_PickedUpStateDelegate__DelegateSignature_Params
 {
@@ -172,6 +262,11 @@ struct AItem_PickedUpStateDelegate__DelegateSignature_Params
 
 // Function ConZ.Item.PhysicsSimulationTimerCallback
 struct AItem_PhysicsSimulationTimerCallback_Params
+{
+};
+
+// Function ConZ.Item.OnRightClicked
+struct AItem_OnRightClicked_Params
 {
 };
 
@@ -190,8 +285,18 @@ struct AItem_OnRep_Visibility_Params
 {
 };
 
+// Function ConZ.Item.OnRep_Stacks
+struct AItem_OnRep_Stacks_Params
+{
+};
+
 // Function ConZ.Item.OnRep_MeshIsSimulatingPhysics
 struct AItem_OnRep_MeshIsSimulatingPhysics_Params
+{
+};
+
+// Function ConZ.Item.OnRep_InventoryContainer2D
+struct AItem_OnRep_InventoryContainer2D_Params
 {
 };
 
@@ -214,6 +319,24 @@ struct AItem_OnRep_Damage_Params
 struct AItem_OnProjectileStop_Params
 {
 	struct FHitResult                                  ImpactResult;                                             // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+};
+
+// Function ConZ.Item.OnLocalPrisonerPanelsClosed
+struct AItem_OnLocalPrisonerPanelsClosed_Params
+{
+};
+
+// Function ConZ.Item.OnLocalPrisonerHoveredActorChanged
+struct AItem_OnLocalPrisonerHoveredActorChanged_Params
+{
+	class AActor*                                      hoveredActor;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.Item.OnEditTextWidgetTextAccepted
+struct AItem_OnEditTextWidgetTextAccepted_Params
+{
+	class APrisoner*                                   user;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       Text;                                                     // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
 // Function ConZ.Item.OnDetachedFromItem
@@ -243,6 +366,12 @@ struct AItem_OnAttachedToItem_Params
 // Function ConZ.Item.NetMulticast_SpawnDestroyedEffects
 struct AItem_NetMulticast_SpawnDestroyedEffects_Params
 {
+};
+
+// Function ConZ.Item.NetMulticast_SetPlayerGivenName
+struct AItem_NetMulticast_SetPlayerGivenName_Params
+{
+	struct FString                                     Value;                                                    // (Parm, ZeroConstructor)
 };
 
 // Function ConZ.Item.NetMulticast_SetActorDropLocationAndRotation
@@ -301,7 +430,7 @@ struct AItem_ItemAddedDelegate__DelegateSignature_Params
 struct AItem_Interact_Params
 {
 	class APrisoner*                                   user;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	EInteractionType                                   interactionType;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	EInteractionType                                   InteractionType;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FInteractionData                            InteractionData;                                          // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
@@ -374,6 +503,12 @@ struct AItem_GetTotalWeight_Params
 
 // Function ConZ.Item.GetTotalUses
 struct AItem_GetTotalUses_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.Item.GetStacksCount
+struct AItem_GetStacksCount_Params
 {
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
@@ -463,7 +598,16 @@ struct AItem_GetDamage_Params
 // Function ConZ.Item.GetAllContainedItems
 struct AItem_GetAllContainedItems_Params
 {
+	bool                                               recursive;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	TArray<class AItem*>                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function ConZ.Item.DropAt
+struct AItem_DropAt_Params
+{
+	struct FVector                                     dropLocation;                                             // (Parm, IsPlainOldData)
+	struct FRotator                                    dropRotation;                                             // (Parm, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function ConZ.Item.DropAround
@@ -491,16 +635,23 @@ struct AItem_DebugTextChangedDelegate__DelegateSignature_Params
 	class AItem*                                       Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function ConZ.Item.CanStackWith
+struct AItem_CanStackWith_Params
+{
+	TScriptInterface<class UInventoryNode>             Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.Item.CanStack
+struct AItem_CanStack_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function ConZ.Item.CanInteract
 struct AItem_CanInteract_Params
 {
 	class APrisoner*                                   user;                                                     // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.Item.CanBeEverDropped
-struct AItem_CanBeEverDropped_Params
-{
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -542,6 +693,13 @@ struct AItem_Blink_Params
 	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function ConZ.Item.AutoAddItemToInventoryNode
+struct AItem_AutoAddItemToInventoryNode_Params
+{
+	TScriptInterface<class UInventoryNode>             Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function ConZ.Item.AttachToCharacterHands
 struct AItem_AttachToCharacterHands_Params
 {
@@ -549,10 +707,22 @@ struct AItem_AttachToCharacterHands_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function ConZ.Item.AddStack
+struct AItem_AddStack_Params
+{
+	TScriptInterface<class UInventoryNode>             Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function ConZ.AmmunitionItem.SetAmmoCount
 struct AAmmunitionItem_SetAmmoCount_Params
 {
 	int                                                count;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               replicateToOwner;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.AmmunitionItem.OnRep_AmmoCountOwnerHelper
+struct AAmmunitionItem_OnRep_AmmoCountOwnerHelper_Params
+{
 };
 
 // Function ConZ.AmmunitionItem.OnRep_AmmoCount
@@ -566,6 +736,12 @@ struct AAmmunitionItem_GetAmmoCount_Params
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function ConZ.AmmunitionItem.Client_SetAmmoCount
+struct AAmmunitionItem_Client_SetAmmoCount_Params
+{
+	int                                                count;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function ConZ.AmmunitionBoxItem.OnRep_AmmoCount
 struct AAmmunitionBoxItem_OnRep_AmmoCount_Params
 {
@@ -577,10 +753,10 @@ struct AConZCharacter_SetGender_Params
 	EGender                                            Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function ConZ.ConZCharacter.SetEnvironmentClass
-struct AConZCharacter_SetEnvironmentClass_Params
+// Function ConZ.ConZCharacter.SetEnvironmentDescription
+struct AConZCharacter_SetEnvironmentDescription_Params
 {
-	EEnvironmentClass                                  Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FEnvironmentDescription                     Value;                                                    // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
 // Function ConZ.ConZCharacter.Server_HandleMeleeAttackCapsuleHit
@@ -666,10 +842,10 @@ struct AConZCharacter_GetGender_Params
 	EGender                                            ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function ConZ.ConZCharacter.GetEnvironmentClass
-struct AConZCharacter_GetEnvironmentClass_Params
+// Function ConZ.ConZCharacter.GetEnvironmentDescription
+struct AConZCharacter_GetEnvironmentDescription_Params
 {
-	EEnvironmentClass                                  ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	struct FEnvironmentDescription                     ReturnValue;                                              // (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm)
 };
 
 // Function ConZ.ConZCharacter.GetBodyPartFromBoneName
@@ -808,6 +984,12 @@ struct AAnimal2_OnRep_Health_Params
 {
 };
 
+// Function ConZ.Animal2.NetMulticast_PlaySoundOnClients
+struct AAnimal2_NetMulticast_PlaySoundOnClients_Params
+{
+	EAnimal2Sound                                      SoundToPlay;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function ConZ.Animal2.GenerateBloodMarkerRPC
 struct AAnimal2_GenerateBloodMarkerRPC_Params
 {
@@ -817,11 +999,6 @@ struct AAnimal2_GenerateBloodMarkerRPC_Params
 struct AAnimal2_ClosestPrisoner_Params
 {
 	class APrisoner*                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.Animal2SoundComponent.OnRep_AnimalSound
-struct UAnimal2SoundComponent_OnRep_AnimalSound_Params
-{
 };
 
 // Function ConZ.SkillAction.OnActionFinished
@@ -1313,6 +1490,12 @@ struct UBaseItemWidget_DragCancelled_Params
 {
 };
 
+// Function ConZ.BasicTextWidget.SetCurrentText
+struct UBasicTextWidget_SetCurrentText_Params
+{
+	struct FText                                       Text;                                                     // (ConstParm, Parm, OutParm, ReferenceParm)
+};
+
 // Function ConZ.Bear.PlayAttackMontageOnClients
 struct ABear_PlayAttackMontageOnClients_Params
 {
@@ -1539,6 +1722,27 @@ struct UBodyTemperatureWidget_GetMaxTemperature_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function ConZ.BondageComponent.UpdateVisuals
+struct UBondageComponent_UpdateVisuals_Params
+{
+};
+
+// Function ConZ.BondageComponent.OnRep_BoundBodyPart
+struct UBondageComponent_OnRep_BoundBodyPart_Params
+{
+};
+
+// Function ConZ.BondageComponent.OnRep_BondageItem
+struct UBondageComponent_OnRep_BondageItem_Params
+{
+};
+
+// Function ConZ.BondageComponent.GetBondageItem
+struct UBondageComponent_GetBondageItem_Params
+{
+	class AItem*                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function ConZ.WeaponAttachment.Unequip
 struct AWeaponAttachment_Unequip_Params
 {
@@ -1548,6 +1752,12 @@ struct AWeaponAttachment_Unequip_Params
 struct AWeaponAttachment_GetShakinessModifier_Params
 {
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.WeaponAttachment.GetOwningWeapon
+struct AWeaponAttachment_GetOwningWeapon_Params
+{
+	class AWeapon*                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function ConZ.WeaponAttachment.Equip
@@ -1653,6 +1863,28 @@ struct UMeleeSkill_GetAimOffsetBlendSpaceFP_Params
 	class UBlendSpace*                                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function ConZ.BreathingBarLungsWidget.StopCriticalLungsAnimation
+struct UBreathingBarLungsWidget_StopCriticalLungsAnimation_Params
+{
+};
+
+// Function ConZ.BreathingBarLungsWidget.StartCriticalLungsAnimation
+struct UBreathingBarLungsWidget_StartCriticalLungsAnimation_Params
+{
+};
+
+// Function ConZ.BreathingBarLungsWidget.IsCriticalLungsAnimationPlaying
+struct UBreathingBarLungsWidget_IsCriticalLungsAnimationPlaying_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.BreathingBarLungsWidget.GetCriticalLungsAnimation
+struct UBreathingBarLungsWidget_GetCriticalLungsAnimation_Params
+{
+	class UWidgetAnimation*                            ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
 // Function ConZ.BruisingComponent.MakeCompletelyBruised
 struct UBruisingComponent_MakeCompletelyBruised_Params
 {
@@ -1735,6 +1967,13 @@ struct ABuildingManager_Multicast_UpdateDoorData_Params
 {
 	struct FString                                     runtimeId;                                                // (Parm, ZeroConstructor)
 	struct FDoorRepData                                doorData;                                                 // (ConstParm, Parm, ReferenceParm)
+};
+
+// Function ConZ.BuildingManager.Multicast_UpdateBuildingFortificationsState
+struct ABuildingManager_Multicast_UpdateBuildingFortificationsState_Params
+{
+	struct FString                                     buildingId;                                               // (Parm, ZeroConstructor)
+	TArray<struct FFortificationData>                  FortificationData;                                        // (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 };
 
 // Function ConZ.BuildingManager.Multicast_UpdateBuildingData
@@ -2036,7 +2275,7 @@ struct AWeapon_IsChamberOpened_Params
 // Function ConZ.Weapon.IsAmmoCompatible
 struct AWeapon_IsAmmoCompatible_Params
 {
-	class UClass*                                      projectileClass;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      ProjectileClass;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -2396,6 +2635,90 @@ struct UWeaponActionReloadSequence_CanExecuteUsingData_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function ConZ.WaypointWidget.TieLifetimeToActor
+struct UWaypointWidget_TieLifetimeToActor_Params
+{
+	class AActor*                                      Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.WaypointWidget.SetWorldPosition
+struct UWaypointWidget_SetWorldPosition_Params
+{
+	struct FVector                                     Location;                                                 // (Parm, IsPlainOldData)
+};
+
+// Function ConZ.WaypointWidget.SetTargetActor
+struct UWaypointWidget_SetTargetActor_Params
+{
+	class AActor*                                      Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.WaypointWidget.OnLifetimeTiedActorDestroyed
+struct UWaypointWidget_OnLifetimeTiedActorDestroyed_Params
+{
+	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.WaypointWidget.IsOnScreen
+struct UWaypointWidget_IsOnScreen_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.WaypointWidget.IsAttached
+struct UWaypointWidget_IsAttached_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.WaypointWidget.GetTargetActor
+struct UWaypointWidget_GetTargetActor_Params
+{
+	class AActor*                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.WaypointWidget.GetDistance
+struct UWaypointWidget_GetDistance_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.WaypointWidget.GetAngle
+struct UWaypointWidget_GetAngle_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// DelegateFunction ConZ.ChangeTextWidget.TextAcceptedEvent__DelegateSignature
+struct UChangeTextWidget_TextAcceptedEvent__DelegateSignature_Params
+{
+	class APrisoner*                                   user;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       Text;                                                     // (ConstParm, Parm, OutParm, ReferenceParm)
+};
+
+// Function ConZ.ChangeTextWidget.SetMaxNumberOfCharacters
+struct UChangeTextWidget_SetMaxNumberOfCharacters_Params
+{
+	int                                                Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ChangeTextWidget.SetCurrentInputText_BP
+struct UChangeTextWidget_SetCurrentInputText_BP_Params
+{
+	struct FText                                       Text;                                                     // (ConstParm, Parm, OutParm, ReferenceParm)
+};
+
+// Function ConZ.ChangeTextWidget.OnTextAccepted
+struct UChangeTextWidget_OnTextAccepted_Params
+{
+};
+
+// Function ConZ.ChangeTextWidget.OnCurrentInputTextChanged
+struct UChangeTextWidget_OnCurrentInputTextChanged_Params
+{
+	struct FText                                       Text;                                                     // (Parm)
+};
+
 // Function ConZ.CharacterAction.PlayMontage
 struct UCharacterAction_PlayMontage_Params
 {
@@ -2418,7 +2741,7 @@ struct UCharacterAction_OnProgressWidgetCanceled_Params
 // Function ConZ.CharacterAction.OnPreActionEnd
 struct UCharacterAction_OnPreActionEnd_Params
 {
-	class UCharacterAction*                            action;                                                   // (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UCharacterAction*                            Action;                                                   // (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function ConZ.CharacterAction.OnMontageEnded
@@ -2433,6 +2756,11 @@ struct UCharacterAction_OnMontageBlendingOutStarted_Params
 {
 	class UAnimMontage*                                Montage;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               interrupted;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.CharacterActionComponent.Server_NotifyReadyToDestroy
+struct UCharacterActionComponent_Server_NotifyReadyToDestroy_Params
+{
 };
 
 // Function ConZ.CharacterCreationWidget.StartGame
@@ -3017,6 +3345,12 @@ struct UConsoleHelpers_GetConfigBool_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// DelegateFunction ConZ.ConsoleHelpers.ConsoleFloatChanged__DelegateSignature
+struct UConsoleHelpers_ConsoleFloatChanged__DelegateSignature_Params
+{
+	float                                              Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // DelegateFunction ConZ.ConsoleHelpers.ConsoleBoolChanged__DelegateSignature
 struct UConsoleHelpers_ConsoleBoolChanged__DelegateSignature_Params
 {
@@ -3061,8 +3395,8 @@ struct AElectricalDevice_HasPower_Params
 struct AConZBase_OnElementInteracted_Params
 {
 	class APrisoner*                                   user;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Location;                                                 // (Parm, IsPlainOldData)
-	EInteractionType                                   interactionType;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	EInteractionType                                   InteractionType;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FInteractionData                            InteractionData;                                          // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
 // Function ConZ.ConZBase.GetBaseName
@@ -3088,6 +3422,7 @@ struct AConZBaseManager_OnRep_IsInitialized_Params
 // Function ConZ.ConZBaseManager.NetMulticast_UpdateDoorData
 struct AConZBaseManager_NetMulticast_UpdateDoorData_Params
 {
+	int                                                dataVersion;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     doorLocation;                                             // (ConstParm, Parm, ReferenceParm, IsPlainOldData)
 	struct FDoorRepData                                doorData;                                                 // (ConstParm, Parm, ReferenceParm)
 };
@@ -3095,6 +3430,7 @@ struct AConZBaseManager_NetMulticast_UpdateDoorData_Params
 // Function ConZ.ConZBaseManager.NetMulticast_SpawnBaseElement
 struct AConZBaseManager_NetMulticast_SpawnBaseElement_Params
 {
+	int                                                dataVersion;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FTransform                                  Transform;                                                // (ConstParm, Parm, ReferenceParm, IsPlainOldData)
 	struct FConZBaseData                               baseData;                                                 // (ConstParm, Parm, ReferenceParm)
 	class UClass*                                      ElementClass;                                             // (Parm, ZeroConstructor, IsPlainOldData)
@@ -3113,6 +3449,7 @@ struct AConZBaseManager_NetMulticast_SetDebugModeEnabled_Params
 // Function ConZ.ConZBaseManager.NetMulticast_SetBaseOwnerPlayerId
 struct AConZBaseManager_NetMulticast_SetBaseOwnerPlayerId_Params
 {
+	int                                                dataVersion;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FConZBaseInteractionData                    baseData;                                                 // (ConstParm, Parm, ReferenceParm)
 	int64_t                                            PlayerId;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -3120,13 +3457,15 @@ struct AConZBaseManager_NetMulticast_SetBaseOwnerPlayerId_Params
 // Function ConZ.ConZBaseManager.NetMulticast_ProcessDecay
 struct AConZBaseManager_NetMulticast_ProcessDecay_Params
 {
+	int                                                dataVersion;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              DeltaSeconds;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.ConZBaseManager.NetMulticast_InteractWithElement
 struct AConZBaseManager_NetMulticast_InteractWithElement_Params
 {
-	EInteractionType                                   interactionType;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                dataVersion;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	EInteractionType                                   InteractionType;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FConZBaseInteractionData                    baseData;                                                 // (ConstParm, Parm, ReferenceParm)
 	struct FConZBaseElementInteractionData             baseElementData;                                          // (ConstParm, Parm, ReferenceParm)
 	class APrisoner*                                   user;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
@@ -3135,12 +3474,14 @@ struct AConZBaseManager_NetMulticast_InteractWithElement_Params
 // Function ConZ.ConZBaseManager.NetMulticast_ClearBaseOwnerPlayerId
 struct AConZBaseManager_NetMulticast_ClearBaseOwnerPlayerId_Params
 {
+	int                                                dataVersion;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FConZBaseInteractionData                    baseData;                                                 // (ConstParm, Parm, ReferenceParm)
 };
 
 // Function ConZ.ConZBaseManager.NetMulticast_ApplyDamageToBaseElement
 struct AConZBaseManager_NetMulticast_ApplyDamageToBaseElement_Params
 {
+	int                                                dataVersion;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	int64_t                                            BaseId;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	int64_t                                            ElementID;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     elementLocation;                                          // (Parm, IsPlainOldData)
@@ -3163,7 +3504,7 @@ struct UConZGameInstance_StartMultiplayerGame_Params
 {
 	struct FString                                     Ip;                                                       // (Parm, ZeroConstructor)
 	int                                                GameplayPort;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FString                                     authToken;                                                // (Parm, ZeroConstructor)
+	struct FString                                     AuthToken;                                                // (Parm, ZeroConstructor)
 };
 
 // Function ConZ.ConZGameInstance.SetPlayAsDrone
@@ -3181,6 +3522,12 @@ struct UConZGameInstance_SetCurrentUserProfile_Params
 // Function ConZ.ConZGameInstance.RemoveLoadingWidget
 struct UConZGameInstance_RemoveLoadingWidget_Params
 {
+};
+
+// Function ConZ.ConZGameInstance.OnVoiceChatVolumeChanged
+struct UConZGameInstance_OnVoiceChatVolumeChanged_Params
+{
+	float                                              Volume;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.ConZGameInstance.OnPreLoadMap
@@ -3273,7 +3620,7 @@ struct AConZGameMode_SendHUDMessageToAll_Params
 // Function ConZ.ConZGameMode.KickPlayer
 struct AConZGameMode_KickPlayer_Params
 {
-	class APrisonerPlayerController*                   Player;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	class AConZPlayerController*                       Player;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FString                                     KickReason;                                               // (Parm, ZeroConstructor)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
@@ -3306,6 +3653,12 @@ struct AConZGameMode_GetMissionScheduler_Params
 struct AConZGameMode_GetMissionLevelManager_Params
 {
 	class AMissionLevelManager*                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.ConZGameMode.GetLadderMarkersReplicator
+struct AConZGameMode_GetLadderMarkersReplicator_Params
+{
+	class ALadderMarkersReplicator*                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function ConZ.ConZGameMode.GetItemVirtualizationManager
@@ -3402,6 +3755,13 @@ struct AConZGameState_GetTeams_Params
 	TArray<class AConZTeam*>                           ReturnValue;                                              // (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
 };
 
+// Function ConZ.ConZGameState.GetTeamForUserProfileId
+struct AConZGameState_GetTeamForUserProfileId_Params
+{
+	struct FDbIntegerId                                ID;                                                       // (ConstParm, Parm)
+	class AConZTeam*                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function ConZ.ConZGameState.GetTeamForPrisoner
 struct AConZGameState_GetTeamForPrisoner_Params
 {
@@ -3440,6 +3800,522 @@ struct AConZGameState_AddMemberToTeam_Params
 {
 	class APrisoner*                                   Prisoner;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class AConZTeam*                                   Team;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.ToggleGameMenuEvent
+struct AConZPlayerController_ToggleGameMenuEvent_Params
+{
+};
+
+// Function ConZ.ConZPlayerController.Teleport
+struct AConZPlayerController_Teleport_Params
+{
+	struct FTeleportRequest                            request;                                                  // (ConstParm, Parm, OutParm, ReferenceParm)
+};
+
+// Function ConZ.ConZPlayerController.ShowWarningMessage
+struct AConZPlayerController_ShowWarningMessage_Params
+{
+	struct FString                                     Message;                                                  // (Parm, ZeroConstructor)
+	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.ShowNotification
+struct AConZPlayerController_ShowNotification_Params
+{
+	struct FString                                     Message;                                                  // (Parm, ZeroConstructor)
+	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.ShowKillFeedNotificationOnClient
+struct AConZPlayerController_ShowKillFeedNotificationOnClient_Params
+{
+	struct FString                                     prefix;                                                   // (Parm, ZeroConstructor)
+	struct FString                                     characterName;                                            // (Parm, ZeroConstructor)
+	struct FString                                     suffix;                                                   // (Parm, ZeroConstructor)
+	bool                                               ping;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.SetTeleportWorldStreamingLocationChangeDelay
+struct AConZPlayerController_SetTeleportWorldStreamingLocationChangeDelay_Params
+{
+	float                                              Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.SetRespawnOptionTime
+struct AConZPlayerController_SetRespawnOptionTime_Params
+{
+	ERespawnOption                                     option;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Time;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.SetIsChatDuplicationToMessageNotificationsMuted
+struct AConZPlayerController_SetIsChatDuplicationToMessageNotificationsMuted_Params
+{
+	bool                                               Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.SetGameEventCooldown
+struct AConZPlayerController_SetGameEventCooldown_Params
+{
+	float                                              cooldown;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.SetFamePoints
+struct AConZPlayerController_SetFamePoints_Params
+{
+	float                                              Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.Server_SendProofOfLife
+struct AConZPlayerController_Server_SendProofOfLife_Params
+{
+};
+
+// Function ConZ.ConZPlayerController.Server_RequestSurvivalStats
+struct AConZPlayerController_Server_RequestSurvivalStats_Params
+{
+	uint32_t                                           ID;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FDbIntegerId                                UserProfileId;                                            // (Parm)
+};
+
+// Function ConZ.ConZPlayerController.Server_RequestRespawnWaitTime
+struct AConZPlayerController_Server_RequestRespawnWaitTime_Params
+{
+};
+
+// Function ConZ.ConZPlayerController.Server_RequestGameEventTeamChange
+struct AConZPlayerController_Server_RequestGameEventTeamChange_Params
+{
+	int                                                preferredTeam;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.Server_RequestEventsRankingStats
+struct AConZPlayerController_Server_RequestEventsRankingStats_Params
+{
+	uint32_t                                           ID;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FDbIntegerId                                UserProfileId;                                            // (Parm)
+	int                                                count;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	EEventsRankingStatsOrderByField                    orderByField;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	ESortOrder                                         sortOrder;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.Server_ReportWorldStreamed
+struct AConZPlayerController_Server_ReportWorldStreamed_Params
+{
+};
+
+// Function ConZ.ConZPlayerController.Server_ReportStartLeavingGame
+struct AConZPlayerController_Server_ReportStartLeavingGame_Params
+{
+};
+
+// Function ConZ.ConZPlayerController.Server_ReportCancelLeavingGame
+struct AConZPlayerController_Server_ReportCancelLeavingGame_Params
+{
+};
+
+// Function ConZ.ConZPlayerController.Server_ProcessAdminCommand
+struct AConZPlayerController_Server_ProcessAdminCommand_Params
+{
+	struct FString                                     commandText;                                              // (Parm, ZeroConstructor)
+};
+
+// Function ConZ.ConZPlayerController.Server_LeaveGameEvent
+struct AConZPlayerController_Server_LeaveGameEvent_Params
+{
+};
+
+// Function ConZ.ConZPlayerController.Server_JoinGameEvent
+struct AConZPlayerController_Server_JoinGameEvent_Params
+{
+	class AGameEventBase*                              gameEvent;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                preferredTeam;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.SendServerMessageToClient
+struct AConZPlayerController_SendServerMessageToClient_Params
+{
+	struct FString                                     string;                                                   // (Parm, ZeroConstructor)
+};
+
+// Function ConZ.ConZPlayerController.SendHUDMessageToClient
+struct AConZPlayerController_SendHUDMessageToClient_Params
+{
+	struct FString                                     Message;                                                  // (Parm, ZeroConstructor)
+	bool                                               beep;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.SendHUDMessageToAll
+struct AConZPlayerController_SendHUDMessageToAll_Params
+{
+	struct FString                                     Message;                                                  // (Parm, ZeroConstructor)
+	bool                                               beep;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.SendChatStringToServer
+struct AConZPlayerController_SendChatStringToServer_Params
+{
+	struct FString                                     string;                                                   // (Parm, ZeroConstructor)
+	EChatType                                          chatType;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.SendChatStringToClient
+struct AConZPlayerController_SendChatStringToClient_Params
+{
+	struct FString                                     string;                                                   // (Parm, ZeroConstructor)
+	EChatType                                          chatType;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.SendAnimalEyeSocketYawToServer
+struct AConZPlayerController_SendAnimalEyeSocketYawToServer_Params
+{
+	class AAnimal2*                                    Animal;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      Yaw;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.SaveState
+struct AConZPlayerController_SaveState_Params
+{
+};
+
+// Function ConZ.ConZPlayerController.RepossesOriginalPrisoner
+struct AConZPlayerController_RepossesOriginalPrisoner_Params
+{
+};
+
+// Function ConZ.ConZPlayerController.RemoveServerFromFavorites
+struct AConZPlayerController_RemoveServerFromFavorites_Params
+{
+};
+
+// Function ConZ.ConZPlayerController.RegisterRespawn
+struct AConZPlayerController_RegisterRespawn_Params
+{
+	ERespawnOption                                     option;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.RebuildCompletionsForRegisteredAdminCommands
+struct AConZPlayerController_RebuildCompletionsForRegisteredAdminCommands_Params
+{
+};
+
+// DelegateFunction ConZ.ConZPlayerController.PrisonerSpawnedDelegate__DelegateSignature
+struct AConZPlayerController_PrisonerSpawnedDelegate__DelegateSignature_Params
+{
+	class APrisoner*                                   spawnedPrisoner;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.OnRep_PossessedPawn
+struct AConZPlayerController_OnRep_PossessedPawn_Params
+{
+};
+
+// Function ConZ.ConZPlayerController.OnRep_FamePoints
+struct AConZPlayerController_OnRep_FamePoints_Params
+{
+};
+
+// Function ConZ.ConZPlayerController.LoadState
+struct AConZPlayerController_LoadState_Params
+{
+};
+
+// Function ConZ.ConZPlayerController.LeaveGameEvent
+struct AConZPlayerController_LeaveGameEvent_Params
+{
+};
+
+// Function ConZ.ConZPlayerController.JoinGameEvent
+struct AConZPlayerController_JoinGameEvent_Params
+{
+	class AGameEventBase*                              gameEvent;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                preferredTeam;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.IsTeleportInProgress
+struct AConZPlayerController_IsTeleportInProgress_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.InputComponent_CancelAllControllerActions
+struct AConZPlayerController_InputComponent_CancelAllControllerActions_Params
+{
+};
+
+// Function ConZ.ConZPlayerController.HandleChatMessageCommit
+struct AConZPlayerController_HandleChatMessageCommit_Params
+{
+	struct FText                                       Text;                                                     // (ConstParm, Parm, OutParm, ReferenceParm)
+	EChatType                                          chatType;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.GetUserProfileName
+struct AConZPlayerController_GetUserProfileName_Params
+{
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function ConZ.ConZPlayerController.GetUserProfileId
+struct AConZPlayerController_GetUserProfileId_Params
+{
+	struct FDbIntegerId                                ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function ConZ.ConZPlayerController.GetUserProfile
+struct AConZPlayerController_GetUserProfile_Params
+{
+	class UDbUserProfile*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.GetUserName2
+struct AConZPlayerController_GetUserName2_Params
+{
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function ConZ.ConZPlayerController.GetUserId
+struct AConZPlayerController_GetUserId_Params
+{
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function ConZ.ConZPlayerController.GetTeleportWorldStreamingLocationChangeDelay
+struct AConZPlayerController_GetTeleportWorldStreamingLocationChangeDelay_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.GetServerUserProfileId
+struct AConZPlayerController_GetServerUserProfileId_Params
+{
+	struct FDbIntegerId                                ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function ConZ.ConZPlayerController.GetRespawnWaitTime
+struct AConZPlayerController_GetRespawnWaitTime_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.GetRespawnOptionTimeLeft
+struct AConZPlayerController_GetRespawnOptionTimeLeft_Params
+{
+	ERespawnOption                                     option;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.GetRespawnOptionTime
+struct AConZPlayerController_GetRespawnOptionTime_Params
+{
+	ERespawnOption                                     option;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.GetPrisoner
+struct AConZPlayerController_GetPrisoner_Params
+{
+	class APrisoner*                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.GetPlayerRpcChannel
+struct AConZPlayerController_GetPlayerRpcChannel_Params
+{
+	class UPlayerRpcChannel*                           ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.GetNoiseEmitterComponent
+struct AConZPlayerController_GetNoiseEmitterComponent_Params
+{
+	class UPawnNoiseEmitterComponent*                  ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.GetMissionDialogueManager
+struct AConZPlayerController_GetMissionDialogueManager_Params
+{
+	class AMissionDialogueManager*                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.GetLoginInfo
+struct AConZPlayerController_GetLoginInfo_Params
+{
+	struct FPlayerLoginInfo                            ReturnValue;                                              // (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm)
+};
+
+// Function ConZ.ConZPlayerController.GetIsChatDuplicationToMessageNotificationsMuted
+struct AConZPlayerController_GetIsChatDuplicationToMessageNotificationsMuted_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.GetGameEventCooldown
+struct AConZPlayerController_GetGameEventCooldown_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.GetFamePointsRounded
+struct AConZPlayerController_GetFamePointsRounded_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.GetFamePoints
+struct AConZPlayerController_GetFamePoints_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.GetFameMultiplier
+struct AConZPlayerController_GetFameMultiplier_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.GetFameLevel
+struct AConZPlayerController_GetFameLevel_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.GetDialogueManager
+struct AConZPlayerController_GetDialogueManager_Params
+{
+	class AMissionDialogueManager*                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.GetCameraManager
+struct AConZPlayerController_GetCameraManager_Params
+{
+	class AConZCameraManager*                          ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.GetAdminCommandRegistry
+struct AConZPlayerController_GetAdminCommandRegistry_Params
+{
+	class UAdminCommandRegistry*                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.GetAchievementsManagerClient
+struct AConZPlayerController_GetAchievementsManagerClient_Params
+{
+	class AAchievementsManagerClient*                  ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.Crash
+struct AConZPlayerController_Crash_Params
+{
+};
+
+// Function ConZ.ConZPlayerController.ComputeFameLevel
+struct AConZPlayerController_ComputeFameLevel_Params
+{
+	float                                              FamePoints;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.Client_UpdateRespawnSettings
+struct AConZPlayerController_Client_UpdateRespawnSettings_Params
+{
+	struct FRespawnParameters                          parameters;                                               // (Parm)
+};
+
+// Function ConZ.ConZPlayerController.Client_UpdateAdminCommandPlayerArgumentCompletionValues
+struct AConZPlayerController_Client_UpdateAdminCommandPlayerArgumentCompletionValues_Params
+{
+	TArray<struct FString>                             Values;                                                   // (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+};
+
+// Function ConZ.ConZPlayerController.Client_TestPingLockStuff
+struct AConZPlayerController_Client_TestPingLockStuff_Params
+{
+	float                                              averageDelta;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              averagePing;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              counter;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.Client_SetRespawnWaitTime
+struct AConZPlayerController_Client_SetRespawnWaitTime_Params
+{
+	float                                              Seconds;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.Client_SetRespawnOptionTime
+struct AConZPlayerController_Client_SetRespawnOptionTime_Params
+{
+	ERespawnOption                                     option;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Time;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.Client_SetGameEventCooldown
+struct AConZPlayerController_Client_SetGameEventCooldown_Params
+{
+	float                                              cooldown;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.Client_SaveState
+struct AConZPlayerController_Client_SaveState_Params
+{
+};
+
+// Function ConZ.ConZPlayerController.Client_ReceiveSurvivalStats
+struct AConZPlayerController_Client_ReceiveSurvivalStats_Params
+{
+	uint32_t                                           ID;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FSurvivalStats                              stats;                                                    // (ConstParm, Parm, ReferenceParm)
+};
+
+// Function ConZ.ConZPlayerController.Client_ReceiveEventsRankingStats
+struct AConZPlayerController_Client_ReceiveEventsRankingStats_Params
+{
+	uint32_t                                           ID;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FEventsRankingStatsItem>             stats;                                                    // (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+	int                                                playerRank;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.Client_Login
+struct AConZPlayerController_Client_Login_Params
+{
+	struct FPlayerLoginInfo                            serverLoginInfo;                                          // (ConstParm, Parm, ReferenceParm)
+};
+
+// Function ConZ.ConZPlayerController.Client_ExecuteAdminCommand
+struct AConZPlayerController_Client_ExecuteAdminCommand_Params
+{
+	struct FString                                     commandText;                                              // (Parm, ZeroConstructor)
+};
+
+// Function ConZ.ConZPlayerController.Client_EnableRespawnOption
+struct AConZPlayerController_Client_EnableRespawnOption_Params
+{
+	ERespawnOption                                     option;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.ClearRespawnOptionTimers
+struct AConZPlayerController_ClearRespawnOptionTimers_Params
+{
+};
+
+// Function ConZ.ConZPlayerController.ChatHistoryForward
+struct AConZPlayerController_ChatHistoryForward_Params
+{
+};
+
+// Function ConZ.ConZPlayerController.ChatHistoryBack
+struct AConZPlayerController_ChatHistoryBack_Params
+{
+};
+
+// Function ConZ.ConZPlayerController.CanAddServerToFavorites
+struct AConZPlayerController_CanAddServerToFavorites_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.ConZPlayerController.AddServerToFavorites
+struct AConZPlayerController_AddServerToFavorites_Params
+{
 };
 
 // Function ConZ.ConZReplicationGraph.OnVehicleItemContainerCreated
@@ -3500,6 +4376,13 @@ struct AConZTeam_HasMember_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function ConZ.ConZTeam.GetSuccessorForMember
+struct AConZTeam_GetSuccessorForMember_Params
+{
+	struct FDbIntegerId                                UserProfileId;                                            // (ConstParm, Parm)
+	struct FDbIntegerId                                ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
 // Function ConZ.ConZTeam.GetOnlineMembers
 struct AConZTeam_GetOnlineMembers_Params
 {
@@ -3530,12 +4413,6 @@ struct AConZVehicle4W_WarnAboutMounteeEvictionIfInWater_Params
 {
 };
 
-// Function ConZ.ConZVehicle4W.SetHealth
-struct AConZVehicle4W_SetHealth_Params
-{
-	float                                              Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function ConZ.ConZVehicle4W.Server_StopEngineStalling
 struct AConZVehicle4W_Server_StopEngineStalling_Params
 {
@@ -3547,14 +4424,20 @@ struct AConZVehicle4W_Server_StartEngineStalling_Params
 	struct FVehicleEngineStallingParameters            parameters;                                               // (ConstParm, Parm, ReferenceParm)
 };
 
-// Function ConZ.ConZVehicle4W.Server_SetVehicleHornActive
-struct AConZVehicle4W_Server_SetVehicleHornActive_Params
+// Function ConZ.ConZVehicle4W.Server_SetLightsActive
+struct AConZVehicle4W_Server_SetLightsActive_Params
 {
 	bool                                               Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function ConZ.ConZVehicle4W.Server_SetVehicleEngineState
-struct AConZVehicle4W_Server_SetVehicleEngineState_Params
+// Function ConZ.ConZVehicle4W.Server_SetHornActive
+struct AConZVehicle4W_Server_SetHornActive_Params
+{
+	bool                                               Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZVehicle4W.Server_SetEngineState
+struct AConZVehicle4W_Server_SetEngineState_Params
 {
 	EVehicleEngineState                                Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -3563,7 +4446,7 @@ struct AConZVehicle4W_Server_SetVehicleEngineState_Params
 struct AConZVehicle4W_Server_SendState_Params
 {
 	struct FRigidBodyState                             State;                                                    // (ConstParm, Parm, ReferenceParm)
-	uint32_t                                           packedGearLoadAndRpm;                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	uint32_t                                           packedState;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.ConZVehicle4W.Server_ApplyImpactDamage
@@ -3586,16 +4469,15 @@ struct AConZVehicle4W_ReceiveBeginHit_Params
 	struct FHitResult                                  Hit;                                                      // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 };
 
-// Function ConZ.ConZVehicle4W.OnRep_VehicleHornActive
-struct AConZVehicle4W_OnRep_VehicleHornActive_Params
+// Function ConZ.ConZVehicle4W.OnRep_PackedState
+struct AConZVehicle4W_OnRep_PackedState_Params
 {
-	bool                                               OldValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function ConZ.ConZVehicle4W.OnRep_VehicleEngineState
-struct AConZVehicle4W_OnRep_VehicleEngineState_Params
+// Function ConZ.ConZVehicle4W.OnRep_LightsActive
+struct AConZVehicle4W_OnRep_LightsActive_Params
 {
-	EVehicleEngineState                                OldValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               OldValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.ConZVehicle4W.OnRep_ItemContainerContainedItemsMass
@@ -3604,19 +4486,26 @@ struct AConZVehicle4W_OnRep_ItemContainerContainedItemsMass_Params
 	float                                              OldValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function ConZ.ConZVehicle4W.OnRep_HornActive
+struct AConZVehicle4W_OnRep_HornActive_Params
+{
+	bool                                               OldValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function ConZ.ConZVehicle4W.OnRep_Health
 struct AConZVehicle4W_OnRep_Health_Params
 {
 	float                                              OldValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function ConZ.ConZVehicle4W.OnRep_GearLoadAndRpm
-struct AConZVehicle4W_OnRep_GearLoadAndRpm_Params
+// Function ConZ.ConZVehicle4W.OnRep_EngineState
+struct AConZVehicle4W_OnRep_EngineState_Params
 {
+	EVehicleEngineState                                OldValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function ConZ.ConZVehicle4W.NetMulticast_UpdateVehicleMassProperties
-struct AConZVehicle4W_NetMulticast_UpdateVehicleMassProperties_Params
+// Function ConZ.ConZVehicle4W.NetMulticast_UpdateMassProperties
+struct AConZVehicle4W_NetMulticast_UpdateMassProperties_Params
 {
 };
 
@@ -3643,28 +4532,10 @@ struct AConZVehicle4W_GetWaterImmersionDepth_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function ConZ.ConZVehicle4W.GetMaxHealth
-struct AConZVehicle4W_GetMaxHealth_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function ConZ.ConZVehicle4W.GetItemContainer
 struct AConZVehicle4W_GetItemContainer_Params
 {
-	class AClothesItem*                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.ConZVehicle4W.GetHealthRatio
-struct AConZVehicle4W_GetHealthRatio_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.ConZVehicle4W.GetHealth
-struct AConZVehicle4W_GetHealth_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	class AItem*                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function ConZ.ConZVehicle4W.CanBeInteractedWith
@@ -3689,6 +4560,11 @@ struct UConZVehicleDriveComponent4W_GetSpeedLimiterMaxSpeed_Params
 struct UConZVehicleDriveComponent4W_GetEngineLoad_Params
 {
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.Corpse.OnRep_SourceCharacter
+struct ACorpse_OnRep_SourceCharacter_Params
+{
 };
 
 // Function ConZ.Corpse.OnRep_PoseData
@@ -4445,8 +5321,8 @@ struct ACTFGameEvent_SetCTFParameters_Params
 	struct FCTFParameters                              params;                                                   // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
-// Function ConZ.CTFGameEvent.OnParticipantDeath
-struct ACTFGameEvent_OnParticipantDeath_Params
+// Function ConZ.CTFGameEvent.OnParticipantDied
+struct ACTFGameEvent_OnParticipantDied_Params
 {
 	class APrisoner*                                   victim;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FDamageEvent                                DamageEvent;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
@@ -4522,12 +5398,19 @@ struct AConZDataTransferBeaconClient_Server_ProcessDataTransferEvent_Params
 struct AConZDataTransferBeaconClient_Client_StartReceiveData_Params
 {
 	EDataTransferType                                  Type;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                dataVersion;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.ConZDataTransferBeaconClient.Client_EndReceiveData
 struct AConZDataTransferBeaconClient_Client_EndReceiveData_Params
 {
 	EDataTransferType                                  Type;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ConZDataTransferBeaconClient.Client_AcceptDataChunk_LadderMarkers
+struct AConZDataTransferBeaconClient_Client_AcceptDataChunk_LadderMarkers_Params
+{
+	TArray<unsigned char>                              dataChunk;                                                // (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 };
 
 // Function ConZ.ConZDataTransferBeaconClient.Client_AcceptDataChunk_Doors
@@ -4992,8 +5875,14 @@ struct UDbUserProfile_Refresh_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function ConZ.DbUserProfile.MakeCharacterTemplate
-struct UDbUserProfile_MakeCharacterTemplate_Params
+// Function ConZ.DbUserProfile.MakeCharacterCreationTemplate
+struct UDbUserProfile_MakeCharacterCreationTemplate_Params
+{
+	struct FCharacterTemplate                          ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function ConZ.DbUserProfile.LoadCharacterTemplate
+struct UDbUserProfile_LoadCharacterTemplate_Params
 {
 	struct FCharacterTemplate                          ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
@@ -5122,14 +6011,22 @@ struct ADeer2_OnRep_HartHind_Params
 {
 };
 
-// Function ConZ.DialogueContainerWidget.ShowAvatarAnimation
-struct UDialogueContainerWidget_ShowAvatarAnimation_Params
+// Function ConZ.DialogueContainerWidget.StartAvatarAnimation
+struct UDialogueContainerWidget_StartAvatarAnimation_Params
 {
+	EDialogAnimationState                              AnimationState;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function ConZ.DialogueContainerWidget.HideAvatarAnimation
-struct UDialogueContainerWidget_HideAvatarAnimation_Params
+// Function ConZ.DialogueContainerWidget.GetShowAvatarAnimation
+struct UDialogueContainerWidget_GetShowAvatarAnimation_Params
 {
+	class UWidgetAnimation*                            ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function ConZ.DialogueContainerWidget.GetHideAvatarAnimation
+struct UDialogueContainerWidget_GetHideAvatarAnimation_Params
+{
+	class UWidgetAnimation*                            ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
 // Function ConZ.DigestionItem.GetWeight
@@ -5230,60 +6127,6 @@ struct ADoor_ChangeOpenState_Params
 	bool                                               shouldOpen;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function ConZ.WaypointWidget.TieLifetimeToActor
-struct UWaypointWidget_TieLifetimeToActor_Params
-{
-	class AActor*                                      Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.WaypointWidget.SetWorldPosition
-struct UWaypointWidget_SetWorldPosition_Params
-{
-	struct FVector                                     Location;                                                 // (Parm, IsPlainOldData)
-};
-
-// Function ConZ.WaypointWidget.SetTargetActor
-struct UWaypointWidget_SetTargetActor_Params
-{
-	class AActor*                                      Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.WaypointWidget.OnLifetimeTiedActorDestroyed
-struct UWaypointWidget_OnLifetimeTiedActorDestroyed_Params
-{
-	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.WaypointWidget.IsOnScreen
-struct UWaypointWidget_IsOnScreen_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.WaypointWidget.IsAttached
-struct UWaypointWidget_IsAttached_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.WaypointWidget.GetTargetActor
-struct UWaypointWidget_GetTargetActor_Params
-{
-	class AActor*                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.WaypointWidget.GetDistance
-struct UWaypointWidget_GetDistance_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.WaypointWidget.GetAngle
-struct UWaypointWidget_GetAngle_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function ConZ.DoubleDoor.OnRep_FractureLocation1
 struct ADoubleDoor_OnRep_FractureLocation1_Params
 {
@@ -5340,6 +6183,12 @@ struct AFoodItem_GetCookingAmount_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function ConZ.Drone.Server_TeleportToNextOrPreviousPlayer
+struct ADrone_Server_TeleportToNextOrPreviousPlayer_Params
+{
+	bool                                               Next;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function ConZ.Drone.Server_SetSilentMode
 struct ADrone_Server_SetSilentMode_Params
 {
@@ -5350,12 +6199,6 @@ struct ADrone_Server_SetSilentMode_Params
 struct ADrone_Server_SetCurrentSpeedStep_Params
 {
 	int                                                step;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.Drone.Server_SetActorLocation
-struct ADrone_Server_SetActorLocation_Params
-{
-	struct FVector                                     Location;                                                 // (Parm, IsPlainOldData)
 };
 
 // Function ConZ.Drone.Server_OpenDoor
@@ -5397,6 +6240,11 @@ struct ADrone_OnRep_CurrentSpeedStep_Params
 {
 };
 
+// Function ConZ.Drone.OnProgressWidgetFinished
+struct ADrone_OnProgressWidgetFinished_Params
+{
+};
+
 // Function ConZ.Drone.OnHit
 struct ADrone_OnHit_Params
 {
@@ -5405,6 +6253,18 @@ struct ADrone_OnHit_Params
 	class UPrimitiveComponent*                         OtherComp;                                                // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	struct FVector                                     NormalImpulse;                                            // (Parm, IsPlainOldData)
 	struct FHitResult                                  Hit;                                                      // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+};
+
+// Function ConZ.Drone.NetMulticast_SpawnDestroyedEffects
+struct ADrone_NetMulticast_SpawnDestroyedEffects_Params
+{
+};
+
+// Function ConZ.Drone.NetMulticast_PlaySoundOnClients
+struct ADrone_NetMulticast_PlaySoundOnClients_Params
+{
+	EDroneSound                                        SoundToPlay;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Force;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.Drone.AActor_OnDestroyed
@@ -5443,13 +6303,6 @@ struct ADroneAIController_FindWayTo_Params
 struct ADroneAIController_DynamicCollisionListener_Params
 {
 	struct FDonNavigationDynamicCollisionPayload       CollisionData;                                            // (ConstParm, Parm, OutParm, ReferenceParm)
-};
-
-// Function ConZ.DroneSoundComponent.PlaySoundOnClients
-struct UDroneSoundComponent_PlaySoundOnClients_Params
-{
-	EDroneSound                                        SoundToPlay;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Force;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.DropZoneDroppable.SetGameEvent
@@ -5653,12 +6506,46 @@ struct UEnvironmentStatics_GetExtraAirTemperatureFromHeatSourcesAtLocation_Param
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function ConZ.EnvironmentStatics.GetEnvironmentClassAtLocation
-struct UEnvironmentStatics_GetEnvironmentClassAtLocation_Params
+// Function ConZ.EnvironmentStatics.GetEnvironmentDescriptionAtLocation
+struct UEnvironmentStatics_GetEnvironmentDescriptionAtLocation_Params
 {
 	class UObject*                                     WorldContextObject;                                       // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Location;                                                 // (Parm, IsPlainOldData)
-	EEnvironmentClass                                  ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	struct FEnvironmentDescription                     ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function ConZ.EnvironmentStatics.ApplyRadialDamageWithFalloff
+struct UEnvironmentStatics_ApplyRadialDamageWithFalloff_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              BaseDamage;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              MinimumDamage;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Origin;                                                   // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+	float                                              DamageInnerRadius;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              DamageOuterRadius;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              DamageFalloff;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      DamageTypeClass;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<class AActor*>                              IgnoreActors;                                             // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	class AActor*                                      DamageCauser;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	class AController*                                 InstigatedByController;                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECollisionChannel>                     DamagePreventionChannel;                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.EnvironmentStatics.ApplyRadialDamage
+struct UEnvironmentStatics_ApplyRadialDamage_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              BaseDamage;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Origin;                                                   // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+	float                                              DamageRadius;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      DamageTypeClass;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<class AActor*>                              IgnoreActors;                                             // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	class AActor*                                      DamageCauser;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	class AController*                                 InstigatedByController;                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bDoFullDamage;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECollisionChannel>                     DamagePreventionChannel;                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function ConZ.ExamineContainerWidget.SetWidgetTitle
@@ -5716,6 +6603,47 @@ struct AFireItem_CalculateBurningStage_Params
 {
 };
 
+// Function ConZ.FireworksItem.SetIsFiring
+struct AFireworksItem_SetIsFiring_Params
+{
+	bool                                               IsFiring;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.FireworksItem.OnRep_IsFiring
+struct AFireworksItem_OnRep_IsFiring_Params
+{
+};
+
+// Function ConZ.FireworksItem.LaunchShell
+struct AFireworksItem_LaunchShell_Params
+{
+};
+
+// Function ConZ.FireworksItem.IsFiring
+struct AFireworksItem_IsFiring_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.FireworksItem.GetTotalShells
+struct AFireworksItem_GetTotalShells_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.FireworksItem.GetSecondsBetweenLaunches
+struct AFireworksItem_GetSecondsBetweenLaunches_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.FireworksItem.CanStartFiring
+struct AFireworksItem_CanStartFiring_Params
+{
+	class APrisoner*                                   Prisoner;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function ConZ.FishAIController.UpdatePerception
 struct AFishAIController_UpdatePerception_Params
 {
@@ -5725,6 +6653,51 @@ struct AFishAIController_UpdatePerception_Params
 // Function ConZ.FishSpawner.UpdateWaterVolumeAssignment
 struct AFishSpawner_UpdateWaterVolumeAssignment_Params
 {
+};
+
+// Function ConZ.FlagAreaVisualizer.DestroyVisualizer
+struct AFlagAreaVisualizer_DestroyVisualizer_Params
+{
+};
+
+// Function ConZ.FlareItem.SwitchPointLight
+struct AFlareItem_SwitchPointLight_Params
+{
+	bool                                               turnOn;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.FlareItem.SetState
+struct AFlareItem_SetState_Params
+{
+	EFlareIgniteState                                  State;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.FlareItem.RequestPrisonerIgniteFlare
+struct AFlareItem_RequestPrisonerIgniteFlare_Params
+{
+	class APrisoner*                                   Prisoner;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.FlareItem.OnRep_State
+struct AFlareItem_OnRep_State_Params
+{
+};
+
+// Function ConZ.FlareItem.IsBurning
+struct AFlareItem_IsBurning_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.FlareItem.Ignite
+struct AFlareItem_Ignite_Params
+{
+};
+
+// Function ConZ.FlareItem.GetState
+struct AFlareItem_GetState_Params
+{
+	EFlareIgniteState                                  ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function ConZ.FlashbangItem.Multicast_PlayEffects
@@ -6456,6 +7429,40 @@ struct UHandPanel_GetHandInventory_Params
 	class UHandInventorySecondIteration*               ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
+// Function ConZ.HandPanel3.GetQuickAccessAt
+struct UHandPanel3_GetQuickAccessAt_Params
+{
+	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	class UQuickAccessItemSwitcher3*                   ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function ConZ.HandsHolstersWidget2.OnAttachmentRemoved
+struct UHandsHolstersWidget2_OnAttachmentRemoved_Params
+{
+	class AWeapon*                                     Weapon;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	class AWeaponAttachment*                           Attachment;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.HandsHolstersWidget2.OnAttachmentAdded
+struct UHandsHolstersWidget2_OnAttachmentAdded_Params
+{
+	class AWeapon*                                     Weapon;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	class AWeaponAttachment*                           Attachment;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.HandsHolstersWidget2.InitBlueprint
+struct UHandsHolstersWidget2_InitBlueprint_Params
+{
+	TScriptInterface<class UInventoryNode>             Item;                                                     // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+};
+
+// Function ConZ.HandsHolstersWidget2.Init
+struct UHandsHolstersWidget2_Init_Params
+{
+	TScriptInterface<class UInventoryNode>             Item;                                                     // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	TScriptInterface<class UInventoryContainer>        container;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function ConZ.HasItemSnapMarkersInterface.GetItemSnapMarkers
 struct UHasItemSnapMarkersInterface_GetItemSnapMarkers_Params
 {
@@ -6626,6 +7633,13 @@ struct UHelpers_ParseServerIpAndPort_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function ConZ.Helpers.NormalizeRotator
+struct UHelpers_NormalizeRotator_Params
+{
+	struct FRotator                                    Rotator;                                                  // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+	struct FRotator                                    ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
 // Function ConZ.Helpers.MakeAuthTokenForUser
 struct UHelpers_MakeAuthTokenForUser_Params
 {
@@ -6672,6 +7686,21 @@ struct UHelpers_LineBoxIntersection_Params
 struct UHelpers_IsWorldStreamed_Params
 {
 	class UObject*                                     WorldContextObject;                                       // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.Helpers.IsUserDeveloper
+struct UHelpers_IsUserDeveloper_Params
+{
+	struct FString                                     UserId;                                                   // (Parm, ZeroConstructor)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.Helpers.IsUserAdmin
+struct UHelpers_IsUserAdmin_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	struct FString                                     UserId;                                                   // (Parm, ZeroConstructor)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -6738,6 +7767,11 @@ struct UHelpers_GetDistanceToClosestPlayerPawnOrSpectator_Params
 	class UWorld*                                      World;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Location;                                                 // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.Helpers.GetDeveloperUsers
+struct UHelpers_GetDeveloperUsers_Params
+{
 };
 
 // Function ConZ.Helpers.GetDefaultDedicatedServerResponsePort
@@ -6987,6 +8021,13 @@ struct UHudWidget_SwitchTabMode_Params
 	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function ConZ.HudWidget.ShowWarningMessage
+struct UHudWidget_ShowWarningMessage_Params
+{
+	struct FString                                     Message;                                                  // (Parm, ZeroConstructor)
+	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function ConZ.HudWidget.ShowNotification
 struct UHudWidget_ShowNotification_Params
 {
@@ -7051,6 +8092,11 @@ struct UHudWidget_OpenChat_Params
 {
 };
 
+// Function ConZ.HudWidget.OnPrisonerChanged
+struct UHudWidget_OnPrisonerChanged_Params
+{
+};
+
 // Function ConZ.HudWidget.LoadLayout
 struct UHudWidget_LoadLayout_Params
 {
@@ -7066,7 +8112,7 @@ struct UHudWidget_IsChatOpen_Params
 // Function ConZ.HudWidget.GetVicinityPanel
 struct UHudWidget_GetVicinityPanel_Params
 {
-	class UVicinityPanelSecondIteration*               ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+	class UVicinityPanel3*                             ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
 // Function ConZ.HudWidget.GetTopLevelPanelWidget
@@ -7081,10 +8127,28 @@ struct UHudWidget_GetTabModeSwitcherWidget_Params
 	class UTabModeSwitcherWidget*                      ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
+// Function ConZ.HudWidget.GetPrisonerLifeIndicatorsSprite
+struct UHudWidget_GetPrisonerLifeIndicatorsSprite_Params
+{
+	class UPrisonerLifeIndicatorsSprite*               ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function ConZ.HudWidget.GetPrisoner
+struct UHudWidget_GetPrisoner_Params
+{
+	class APrisoner*                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function ConZ.HudWidget.GetObjectivesContainer
 struct UHudWidget_GetObjectivesContainer_Params
 {
 	class UObjectivesContainerWidget*                  ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function ConZ.HudWidget.GetMissionResultWidget
+struct UHudWidget_GetMissionResultWidget_Params
+{
+	class UMissionResult*                              ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
 // Function ConZ.HudWidget.GetMainCanvasVisibility
@@ -7108,7 +8172,7 @@ struct UHudWidget_GetInventoryPanel_Params
 // Function ConZ.HudWidget.GetHandPanel
 struct UHudWidget_GetHandPanel_Params
 {
-	class UHandPanel*                                  ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+	class UHandPanel3*                                 ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
 // Function ConZ.HudWidget.GetDialogueContainerWidget
@@ -7123,10 +8187,22 @@ struct UHudWidget_GetCraftingPanel_Params
 	class UCraftingPanelWidget*                        ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
+// Function ConZ.HudWidget.GetCompassWidget
+struct UHudWidget_GetCompassWidget_Params
+{
+	class UCompassWidget*                              ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
 // Function ConZ.HudWidget.GetChatWidget
 struct UHudWidget_GetChatWidget_Params
 {
 	class UChatWidget*                                 ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function ConZ.HudWidget.GetBreathingBarLungsWidget
+struct UHudWidget_GetBreathingBarLungsWidget_Params
+{
+	class UBreathingBarLungsWidget*                    ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
 // Function ConZ.HudWidget.GetBCURightPanel
@@ -7332,7 +8408,7 @@ struct UInteractionComponent_LockElectricDoorOnServer_Params
 // Function ConZ.InteractionComponent.InteractWithBaseElement
 struct UInteractionComponent_InteractWithBaseElement_Params
 {
-	EInteractionType                                   interactionType;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	EInteractionType                                   InteractionType;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FConZBaseInteractionData                    baseData;                                                 // (ConstParm, Parm, ReferenceParm)
 	struct FConZBaseElementInteractionData             elementData;                                              // (ConstParm, Parm, ReferenceParm)
 };
@@ -7474,6 +8550,38 @@ struct UInteractionUserWidget_Interact_Params
 {
 };
 
+// Function ConZ.InventoryContainer2D.OnRep_Parent
+struct UInventoryContainer2D_OnRep_Parent_Params
+{
+};
+
+// Function ConZ.InventoryContainer2D.OnRep_Items
+struct UInventoryContainer2D_OnRep_Items_Params
+{
+	TArray<class UObject*>                             _oldItems;                                                // (Parm, ZeroConstructor)
+};
+
+// Function ConZ.InventoryContainer2D.OnRep_Data
+struct UInventoryContainer2D_OnRep_Data_Params
+{
+};
+
+// Function ConZ.InventoryContainer2D.OnActorItemDestroyed
+struct UInventoryContainer2D_OnActorItemDestroyed_Params
+{
+	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.InventoryContainerClothes.OnRep_Data
+struct UInventoryContainerClothes_OnRep_Data_Params
+{
+};
+
+// Function ConZ.InventoryContainerHandsHolsters.OnRep_Data
+struct UInventoryContainerHandsHolsters_OnRep_Data_Params
+{
+};
+
 // Function ConZ.InventoryContainersWidget.RemoveItem
 struct UInventoryContainersWidget_RemoveItem_Params
 {
@@ -7500,6 +8608,53 @@ struct UInventoryContainersWidget_AddItem_Params
 	class UItemUserWidget*                             ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
+// Function ConZ.InventoryContainerTest.OnRep_Parent
+struct UInventoryContainerTest_OnRep_Parent_Params
+{
+};
+
+// Function ConZ.InventoryContainerTest.OnRep_Items
+struct UInventoryContainerTest_OnRep_Items_Params
+{
+	TArray<class UObject*>                             _oldItems;                                                // (Parm, ZeroConstructor)
+};
+
+// Function ConZ.InventoryContainerTest.OnRep_Data
+struct UInventoryContainerTest_OnRep_Data_Params
+{
+	struct FInventoryContainerTestRepData              oldData;                                                  // (Parm)
+};
+
+// Function ConZ.InventoryContainerTest.OnItemDestroyed
+struct UInventoryContainerTest_OnItemDestroyed_Params
+{
+	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.InventoryNode.GetInventoryNodeName
+struct UInventoryNode_GetInventoryNodeName_Params
+{
+	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function ConZ.InventoryNode.GetInventoryNodeIcon
+struct UInventoryNode_GetInventoryNodeIcon_Params
+{
+	class UTexture2D*                                  ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.InventoryNode.GetInventoryNodeDescription
+struct UInventoryNode_GetInventoryNodeDescription_Params
+{
+	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function ConZ.InventoryNode.CanBeEverDropped
+struct UInventoryNode_CanBeEverDropped_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function ConZ.InventoryPanelSecondIteration.UpdateItemWidgetHighlightings
 struct UInventoryPanelSecondIteration_UpdateItemWidgetHighlightings_Params
 {
@@ -7521,6 +8676,18 @@ struct UInventoryPanelSecondIteration_RemoveContainerForItem_Params
 struct UInventoryPanelSecondIteration_AddContainerForItem_Params
 {
 	class AItem*                                       Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.InventoryPanelSideLayerWidget.Init
+struct UInventoryPanelSideLayerWidget_Init_Params
+{
+	TScriptInterface<class UInventoryNode>             Item;                                                     // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+};
+
+// Function ConZ.InventoryPanelThirdIteration.SetDisplayedCharacterName
+struct UInventoryPanelThirdIteration_SetDisplayedCharacterName_Params
+{
+	struct FString                                     Name;                                                     // (Parm, ZeroConstructor)
 };
 
 // Function ConZ.InventorySecondIteration.UpdateItemWidgetHighlightings
@@ -7572,10 +8739,46 @@ struct UItemContainer_Collapse_Params
 {
 };
 
+// Function ConZ.ItemInventoryWidget2.OnExpandToggleClicked
+struct UItemInventoryWidget2_OnExpandToggleClicked_Params
+{
+	bool                                               checked;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ItemInventoryWidget2.InitBlueprint
+struct UItemInventoryWidget2_InitBlueprint_Params
+{
+	TScriptInterface<class UInventoryNode>             Item;                                                     // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+};
+
+// Function ConZ.ItemInventoryWidget2.Init
+struct UItemInventoryWidget2_Init_Params
+{
+	TScriptInterface<class UInventoryNode>             Item;                                                     // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	TScriptInterface<class UInventoryContainer>        container;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ItemInventoryWidget2.Blink
+struct UItemInventoryWidget2_Blink_Params
+{
+};
+
 // Function ConZ.ItemSpawningManager.SimulateExamineSpawner
 struct AItemSpawningManager_SimulateExamineSpawner_Params
 {
 	int                                                numIterations;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ItemStatusWidget.SetTitleText
+struct UItemStatusWidget_SetTitleText_Params
+{
+	struct FString                                     Text;                                                     // (Parm, ZeroConstructor)
+};
+
+// Function ConZ.ItemStatusWidget.SetNameText
+struct UItemStatusWidget_SetNameText_Params
+{
+	struct FString                                     Text;                                                     // (Parm, ZeroConstructor)
 };
 
 // Function ConZ.ItemUserWidget.UpdateHighlightStatus
@@ -7593,6 +8796,12 @@ struct UItemUserWidget_SetItem_Params
 struct UItemUserWidget_SetImage_Params
 {
 	class UTexture2D*                                  Image;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ItemUserWidget.OnItemSelectionChanged
+struct UItemUserWidget_OnItemSelectionChanged_Params
+{
+	bool                                               selected;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // DelegateFunction ConZ.ItemUserWidget.OnClicked__DelegateSignature
@@ -7634,6 +8843,52 @@ struct UItemUserWidget_CreateFromItem_Params
 
 // Function ConZ.ItemUserWidget.BlinkItemContainer
 struct UItemUserWidget_BlinkItemContainer_Params
+{
+};
+
+// Function ConZ.ItemWidget2.UpdateVisuals
+struct UItemWidget2_UpdateVisuals_Params
+{
+};
+
+// DelegateFunction ConZ.ItemWidget2.OnRightClicked__DelegateSignature
+struct UItemWidget2_OnRightClicked__DelegateSignature_Params
+{
+};
+
+// Function ConZ.ItemWidget2.OnDropOperation
+struct UItemWidget2_OnDropOperation_Params
+{
+	class UDragDropOperation*                          Operation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ItemWidget2.OnDragOperationCancelled
+struct UItemWidget2_OnDragOperationCancelled_Params
+{
+	class UDragDropOperation*                          Operation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.ItemWidget2.Init
+struct UItemWidget2_Init_Params
+{
+	TScriptInterface<class UInventoryNode>             Item;                                                     // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	TScriptInterface<class UInventoryContainer>        container;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+};
+
+// Function ConZ.ItemWithText.OnTextAccepted
+struct AItemWithText_OnTextAccepted_Params
+{
+	class APrisoner*                                   user;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       Text;                                                     // (ConstParm, Parm, OutParm, ReferenceParm)
+};
+
+// Function ConZ.ItemWithText.OnRep_Text
+struct AItemWithText_OnRep_Text_Params
+{
+};
+
+// Function ConZ.ItemWithText.OnLocalPrisonerPanelsClosed_ItemWithText
+struct AItemWithText_OnLocalPrisonerPanelsClosed_ItemWithText_Params
 {
 };
 
@@ -7707,6 +8962,20 @@ struct UKeyboardIllumination_FlashAllKeys_Params
 // Function ConZ.KeyboardIllumination.DeInitIllumination
 struct UKeyboardIllumination_DeInitIllumination_Params
 {
+};
+
+// Function ConZ.LadderMarkersReplicator.NetMulticast_UnregisterLadderMarker
+struct ALadderMarkersReplicator_NetMulticast_UnregisterLadderMarker_Params
+{
+	int                                                dataVersion;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FLadderMarker                               marker;                                                   // (ConstParm, Parm, ReferenceParm)
+};
+
+// Function ConZ.LadderMarkersReplicator.NetMulticast_RegisterLadderMarker
+struct ALadderMarkersReplicator_NetMulticast_RegisterLadderMarker_Params
+{
+	int                                                dataVersion;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FLadderMarker                               marker;                                                   // (ConstParm, Parm, ReferenceParm)
 };
 
 // Function ConZ.LocationObjective.OnRep_LocationMarker
@@ -7802,7 +9071,7 @@ struct UMeleeCombatComponent_SetIsInCombatMode_Params
 // Function ConZ.MeleeCombatComponent.Server_StartMeleeAttack
 struct UMeleeCombatComponent_Server_StartMeleeAttack_Params
 {
-	struct FMeleeAction                                action;                                                   // (ConstParm, Parm, ReferenceParm)
+	struct FMeleeAction                                Action;                                                   // (ConstParm, Parm, ReferenceParm)
 };
 
 // Function ConZ.MeleeCombatComponent.Server_EnablePendingBlockOrDodge
@@ -7814,12 +9083,13 @@ struct UMeleeCombatComponent_Server_EnablePendingBlockOrDodge_Params
 // Function ConZ.MeleeCombatComponent.Server_Dodge
 struct UMeleeCombatComponent_Server_Dodge_Params
 {
-	struct FMeleeAction                                action;                                                   // (ConstParm, Parm, ReferenceParm)
+	struct FMeleeAction                                Action;                                                   // (ConstParm, Parm, ReferenceParm)
 };
 
-// Function ConZ.MeleeCombatComponent.OnRep_CurrentMeleeAction
-struct UMeleeCombatComponent_OnRep_CurrentMeleeAction_Params
+// Function ConZ.MeleeCombatComponent.NetMulticast_ExecuteMeleeAction
+struct UMeleeCombatComponent_NetMulticast_ExecuteMeleeAction_Params
 {
+	struct FMeleeAction                                Action;                                                   // (ConstParm, Parm, ReferenceParm)
 };
 
 // Function ConZ.MeleeCombatComponent.IsHoldingBlock
@@ -7849,6 +9119,12 @@ struct UMeleeInterface_CheckMeleeAttackCapsuleCollision_Params
 
 // Function ConZ.MeleeInterface.CanHoldBlock
 struct UMeleeInterface_CanHoldBlock_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.MeleeInterface.CanBeAttackedByMelee
+struct UMeleeInterface_CanBeAttackedByMelee_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
@@ -7933,13 +9209,19 @@ struct AMission_OnMissionAvailable_Params
 // Function ConZ.MissionContainerWidget.StartObjectiveAnimation
 struct UMissionContainerWidget_StartObjectiveAnimation_Params
 {
-	class AObjective*                                  Objective;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	EObjectiveAnimationState                           AnimationState;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function ConZ.MissionContainerWidget.CompleteObjectiveAnimation
-struct UMissionContainerWidget_CompleteObjectiveAnimation_Params
+// Function ConZ.MissionContainerWidget.GetStartObjectiveAnimation
+struct UMissionContainerWidget_GetStartObjectiveAnimation_Params
 {
-	class AObjective*                                  Objective;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class UWidgetAnimation*                            ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function ConZ.MissionContainerWidget.GetCompleteObjectiveAnimation
+struct UMissionContainerWidget_GetCompleteObjectiveAnimation_Params
+{
+	class UWidgetAnimation*                            ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
 // Function ConZ.MissionDialogueManager.StopAllDialogue
@@ -8047,7 +9329,7 @@ struct AMissionManager_IsMissionInvitationReceived_Params
 struct AMissionManager_Client_UpdateMissionsData_Params
 {
 	class UClass*                                      missionClass;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FMissionData                                MissionData;                                              // (Parm)
+	struct FMissionData                                MissionData;                                              // (ConstParm, Parm, ReferenceParm)
 };
 
 // Function ConZ.MissionManager.Client_StartTutorial
@@ -8079,8 +9361,8 @@ struct UMissionPrompt_OnNoClicked_Params
 {
 };
 
-// Function ConZ.MissionResult.OnOkClicked
-struct UMissionResult_OnOkClicked_Params
+// Function ConZ.MissionResult.PlayShowMissionResultAnimation
+struct UMissionResult_PlayShowMissionResultAnimation_Params
 {
 };
 
@@ -8089,6 +9371,26 @@ struct AMissionScheduler_OnLocationEnter_Params
 {
 	class AActor*                                      OverlapedActor;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      OtherActor;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.MoundItem.OnRep_SurfaceType
+struct AMoundItem_OnRep_SurfaceType_Params
+{
+};
+
+// Function ConZ.MoundItem.OnRep_StartFadeDistance
+struct AMoundItem_OnRep_StartFadeDistance_Params
+{
+};
+
+// Function ConZ.MoundItem.OnRep_OwnerProfileId
+struct AMoundItem_OnRep_OwnerProfileId_Params
+{
+};
+
+// Function ConZ.MoundItem.OnRep_EndFadeDistance
+struct AMoundItem_OnRep_EndFadeDistance_Params
+{
 };
 
 // Function ConZ.Mountable.GetMountSlots
@@ -8252,6 +9554,12 @@ struct UMountSlot_GetComponentToMount_Params
 
 // Function ConZ.MountSlot.CanUnmount
 struct UMountSlot_CanUnmount_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.MountSlot.CanMounteeBeAttackedByMelee
+struct UMountSlot_CanMounteeBeAttackedByMelee_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
@@ -8459,6 +9767,12 @@ struct APlaceableActor_Server_Place_Params
 	struct FVector                                     Location;                                                 // (Parm, IsPlainOldData)
 	struct FRotator                                    Rotation;                                                 // (Parm, IsPlainOldData)
 	TArray<struct FTransform>                          tilesTransforms;                                          // (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+	struct FVector                                     secondPlacementPointZero;                                 // (ConstParm, Parm, ReferenceParm, IsPlainOldData)
+};
+
+// Function ConZ.PlaceableActor.OnRep_TilesTransforms
+struct APlaceableActor_OnRep_TilesTransforms_Params
+{
 };
 
 // Function ConZ.PlaceableActor.OnRep_PlacementState
@@ -8551,6 +9865,28 @@ struct UPlayerRpcChannel_Client_IncreaseStat_Params
 	struct FString                                     statId;                                                   // (Parm, ZeroConstructor)
 };
 
+// Function ConZ.PlayerRpcChannel.BaseBuilding_Server_RequestElementStateUpdate
+struct UPlayerRpcChannel_BaseBuilding_Server_RequestElementStateUpdate_Params
+{
+	struct FVector                                     Location;                                                 // (ConstParm, Parm, ReferenceParm, IsPlainOldData)
+	float                                              areaSize;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.PlayerRpcChannel.BaseBuilding_Client_UpdateElementState
+struct UPlayerRpcChannel_BaseBuilding_Client_UpdateElementState_Params
+{
+	struct FVector                                     Location;                                                 // (ConstParm, Parm, ReferenceParm, IsPlainOldData)
+	float                                              areaSize;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FConZOnDemandElementData>            Data;                                                     // (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+};
+
+// Function ConZ.PlayerRpcChannel.AdminCommands_Client_ListSpawnedVehicles
+struct UPlayerRpcChannel_AdminCommands_Client_ListSpawnedVehicles_Params
+{
+	class APlayerController*                           Controller;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FVehicleSpawnerInfo>                 spawnerInfos;                                             // (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+};
+
 // Function ConZ.PowerGenerator.OnRep_IsWorking
 struct APowerGenerator_OnRep_IsWorking_Params
 {
@@ -8589,10 +9925,9 @@ struct APrisoner_UpdatePenisVisibility_Params
 {
 };
 
-// Function ConZ.Prisoner.UpdateMaterialsFadeAmount
-struct APrisoner_UpdateMaterialsFadeAmount_Params
+// Function ConZ.Prisoner.UpdateHairVisuals
+struct APrisoner_UpdateHairVisuals_Params
 {
-	float                                              fadeAmount;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.Prisoner.UpdateHairVisibility
@@ -8612,11 +9947,6 @@ struct APrisoner_UpdateChipLightColorIndex_Params
 
 // Function ConZ.Prisoner.UpdateCensoring
 struct APrisoner_UpdateCensoring_Params
-{
-};
-
-// Function ConZ.Prisoner.Unhide
-struct APrisoner_Unhide_Params
 {
 };
 
@@ -8714,6 +10044,12 @@ struct APrisoner_ShowSpawnScreen_Params
 
 // Function ConZ.Prisoner.ShouldLookatMeleeTarget
 struct APrisoner_ShouldLookatMeleeTarget_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.Prisoner.ShouldIgnoreRotation
+struct APrisoner_ShouldIgnoreRotation_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
@@ -8879,13 +10215,6 @@ struct APrisoner_SetMeleeTarget_Params
 	class AActor*                                      Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function ConZ.Prisoner.SetLocationAndRotationOnServer
-struct APrisoner_SetLocationAndRotationOnServer_Params
-{
-	struct FVector                                     Location;                                                 // (Parm, IsPlainOldData)
-	struct FRotator                                    Rotation;                                                 // (Parm, IsPlainOldData)
-};
-
 // Function ConZ.Prisoner.SetItemInHandsOnClient
 struct APrisoner_SetItemInHandsOnClient_Params
 {
@@ -8904,8 +10233,8 @@ struct APrisoner_SetIsInCombatMode_Params
 	bool                                               Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function ConZ.Prisoner.SetIsCorpse
-struct APrisoner_SetIsCorpse_Params
+// Function ConZ.Prisoner.SetIsEnabled
+struct APrisoner_SetIsEnabled_Params
 {
 	bool                                               Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -8918,6 +10247,12 @@ struct APrisoner_SetIntelligenceOnServer_Params
 
 // Function ConZ.Prisoner.SetIntelligence
 struct APrisoner_SetIntelligence_Params
+{
+	float                                              Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.Prisoner.SetHairLength
+struct APrisoner_SetHairLength_Params
 {
 	float                                              Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -8951,6 +10286,12 @@ struct APrisoner_SetFreeLookEnabledOnServer_Params
 struct APrisoner_SetFreeLookEnabled_Params
 {
 	bool                                               Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.Prisoner.SetFacialHairLength
+struct APrisoner_SetFacialHairLength_Params
+{
+	float                                              Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.Prisoner.SetDexterityOnServer
@@ -9090,6 +10431,12 @@ struct APrisoner_Server_SetMeleeTarget_Params
 	class AActor*                                      Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function ConZ.Prisoner.Server_SetExaminedPrisoner
+struct APrisoner_Server_SetExaminedPrisoner_Params
+{
+	class APrisoner*                                   Prisoner;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function ConZ.Prisoner.Server_SetDangerCooldown
 struct APrisoner_Server_SetDangerCooldown_Params
 {
@@ -9116,14 +10463,13 @@ struct APrisoner_Server_RequestCharacterAction_Params
 	struct FCharacterActionReplicationHelper           Value;                                                    // (ConstParm, Parm, ReferenceParm)
 };
 
-// Function ConZ.Prisoner.Server_ReportClientWantsToSpawn
-struct APrisoner_Server_ReportClientWantsToSpawn_Params
+// Function ConZ.Prisoner.Server_RemoveInventoryNode
+struct APrisoner_Server_RemoveInventoryNode_Params
 {
-};
-
-// Function ConZ.Prisoner.Server_ReportClientReady
-struct APrisoner_Server_ReportClientReady_Params
-{
+	class UObject*                                     Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     container;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FInventoryPositionDataRepHelper             Position;                                                 // (ConstParm, Parm, ReferenceParm)
+	class UObject*                                     Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.Prisoner.Server_OnProjectileArrowStop
@@ -9255,6 +10601,15 @@ struct APrisoner_Server_CharacterActionAck_Params
 	struct FCharacterActionAck                         ack;                                                      // (ConstParm, Parm, ReferenceParm)
 };
 
+// Function ConZ.Prisoner.Server_AddInventoryNode
+struct APrisoner_Server_AddInventoryNode_Params
+{
+	class UObject*                                     Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     container;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FInventoryPositionDataRepHelper             Position;                                                 // (ConstParm, Parm, ReferenceParm)
+	class UObject*                                     Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function ConZ.Prisoner.SendTeamInvitationOnServer
 struct APrisoner_SendTeamInvitationOnServer_Params
 {
@@ -9277,6 +10632,11 @@ struct APrisoner_SendMessageToClient_Params
 
 // Function ConZ.Prisoner.RightShoulderHolsterInteract
 struct APrisoner_RightShoulderHolsterInteract_Params
+{
+};
+
+// Function ConZ.Prisoner.Revive
+struct APrisoner_Revive_Params
 {
 };
 
@@ -9312,6 +10672,11 @@ struct APrisoner_RemoveFromTeamOnServer_Params
 	class APrisoner*                                   member;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function ConZ.Prisoner.RemoveBondage
+struct APrisoner_RemoveBondage_Params
+{
+};
+
 // Function ConZ.Prisoner.RecoverLastSafeLocation
 struct APrisoner_RecoverLastSafeLocation_Params
 {
@@ -9324,6 +10689,11 @@ struct APrisoner_RecoverFromRagdollImmediately_Params
 
 // Function ConZ.Prisoner.RecoverFromRagdoll
 struct APrisoner_RecoverFromRagdoll_Params
+{
+};
+
+// Function ConZ.Prisoner.RecalculateJiggleAmount
+struct APrisoner_RecalculateJiggleAmount_Params
 {
 };
 
@@ -9365,6 +10735,11 @@ struct APrisoner_Preset1_Params
 struct APrisoner_PlaceItemInInventoryOrHolster_Params
 {
 	class AItem*                                       Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// DelegateFunction ConZ.Prisoner.PanelsClosed__DelegateSignature
+struct APrisoner_PanelsClosed__DelegateSignature_Params
+{
 };
 
 // Function ConZ.Prisoner.OpenTabMode
@@ -9459,13 +10834,23 @@ struct APrisoner_OnRep_IsInCombatMode_Params
 {
 };
 
+// Function ConZ.Prisoner.OnRep_IsEnabled
+struct APrisoner_OnRep_IsEnabled_Params
+{
+};
+
 // Function ConZ.Prisoner.OnRep_IsDeluxePlayer
 struct APrisoner_OnRep_IsDeluxePlayer_Params
 {
 };
 
-// Function ConZ.Prisoner.OnRep_IsCorpse
-struct APrisoner_OnRep_IsCorpse_Params
+// Function ConZ.Prisoner.OnRep_HandBondage
+struct APrisoner_OnRep_HandBondage_Params
+{
+};
+
+// Function ConZ.Prisoner.OnRep_HairLength
+struct APrisoner_OnRep_HairLength_Params
 {
 };
 
@@ -9476,6 +10861,11 @@ struct APrisoner_OnRep_GameEvent_Params
 
 // Function ConZ.Prisoner.OnRep_FreeLookEnabled
 struct APrisoner_OnRep_FreeLookEnabled_Params
+{
+};
+
+// Function ConZ.Prisoner.OnRep_FacialHairLength
+struct APrisoner_OnRep_FacialHairLength_Params
 {
 };
 
@@ -9565,6 +10955,20 @@ struct APrisoner_OnHearNoise_Params
 	float                                              Volume;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function ConZ.Prisoner.OnExaminedPrisonerUnequippedItem
+struct APrisoner_OnExaminedPrisonerUnequippedItem_Params
+{
+	class UPrisonerInventoryComponent*                 inventory;                                                // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class AItem*                                       Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.Prisoner.OnExaminedPrisonerEquippedItem
+struct APrisoner_OnExaminedPrisonerEquippedItem_Params
+{
+	class UPrisonerInventoryComponent*                 inventory;                                                // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class AItem*                                       Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function ConZ.Prisoner.OnEndMovingThroughNearbyFoliageInstance
 struct APrisoner_OnEndMovingThroughNearbyFoliageInstance_Params
 {
@@ -9590,38 +10994,18 @@ struct APrisoner_OnBeginMovingThroughNearbyFoliageInstance_Params
 	struct FPrisonerNearbyFoliageInstanceInfo          instanceInfo;                                             // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
-// Function ConZ.Prisoner.NetMulticast_Teleport_SpawnScreen
-struct APrisoner_NetMulticast_Teleport_SpawnScreen_Params
-{
-	bool                                               loadoutMenu;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.Prisoner.NetMulticast_Teleport_MoveAndWaitUntilReady
-struct APrisoner_NetMulticast_Teleport_MoveAndWaitUntilReady_Params
-{
-};
-
-// Function ConZ.Prisoner.NetMulticast_Teleport_Finish
-struct APrisoner_NetMulticast_Teleport_Finish_Params
-{
-};
-
-// Function ConZ.Prisoner.NetMulticast_Teleport_FadeIn
-struct APrisoner_NetMulticast_Teleport_FadeIn_Params
-{
-};
-
-// Function ConZ.Prisoner.NetMulticast_Teleport
-struct APrisoner_NetMulticast_Teleport_Params
-{
-	struct FPrisonerTeleportRequest                    request;                                                  // (ConstParm, Parm, ReferenceParm)
-};
-
 // Function ConZ.Prisoner.NetMulticast_RequestCharacterAction
 struct APrisoner_NetMulticast_RequestCharacterAction_Params
 {
 	struct FCharacterActionReplicationHelper           Value;                                                    // (ConstParm, Parm, ReferenceParm)
 	bool                                               ignoreAutonomousProxy;                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.Prisoner.NetMulticast_PostAudioEventOnPrisoner
+struct APrisoner_NetMulticast_PostAudioEventOnPrisoner_Params
+{
+	class UAkAudioEvent*                               akEvent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               multiCastToClients;                                       // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.Prisoner.NetMulticast_InstrumentStopTone
@@ -9662,6 +11046,13 @@ struct APrisoner_NetMulticast_CharacterActionAck_Params
 {
 	struct FCharacterActionAck                         ack;                                                      // (ConstParm, Parm, ReferenceParm)
 	bool                                               ignoreAutonomousProxy;                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.Prisoner.Multicast_ForceHairUpdate
+struct APrisoner_Multicast_ForceHairUpdate_Params
+{
+	float                                              hairLength;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              facialHairLength;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.Prisoner.MakeUnconscious
@@ -9705,6 +11096,12 @@ struct APrisoner_LeaveCombatMode_Params
 	bool                                               overrideAbilityCheck;                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function ConZ.Prisoner.IsTeleportInProgress
+struct APrisoner_IsTeleportInProgress_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function ConZ.Prisoner.IsPostFreeLookControllerRotationBlendActive
 struct APrisoner_IsPostFreeLookControllerRotationBlendActive_Params
 {
@@ -9737,6 +11134,12 @@ struct APrisoner_IsInCombatMode_Params
 
 // Function ConZ.Prisoner.IsFreeLookEnabled
 struct APrisoner_IsFreeLookEnabled_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.Prisoner.IsEnabled
+struct APrisoner_IsEnabled_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
@@ -9790,7 +11193,7 @@ struct APrisoner_InventoryComponent_ItemEquipped_Params
 struct APrisoner_InteractWithObjectOnServer_Params
 {
 	class UObject*                                     interactable;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	EInteractionType                                   interactionType;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	EInteractionType                                   InteractionType;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FInteractionData                            InteractionData;                                          // (ConstParm, Parm, ReferenceParm)
 };
 
@@ -9799,7 +11202,7 @@ struct APrisoner_InteractedDelegate__DelegateSignature_Params
 {
 	class APrisoner*                                   sender;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	class UObject*                                     interactable;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	EInteractionType                                   interactionType;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	EInteractionType                                   InteractionType;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.Prisoner.InitTextMeshFromName
@@ -9819,6 +11222,12 @@ struct APrisoner_IncreaseCrouchStage_Params
 {
 };
 
+// DelegateFunction ConZ.Prisoner.HoveredActorChanged__DelegateSignature
+struct APrisoner_HoveredActorChanged__DelegateSignature_Params
+{
+	class AActor*                                      hoveredActor;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function ConZ.Prisoner.HolsterItemOnServer
 struct APrisoner_HolsterItemOnServer_Params
 {
@@ -9831,15 +11240,16 @@ struct APrisoner_HitReactComponent_StateChanged_Params
 {
 };
 
-// Function ConZ.Prisoner.Hide
-struct APrisoner_Hide_Params
-{
-};
-
 // Function ConZ.Prisoner.HasItem
 struct APrisoner_HasItem_Params
 {
 	class AItem*                                       Item;                                                     // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.Prisoner.HasHandBondage
+struct APrisoner_HasHandBondage_Params
+{
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -9948,12 +11358,6 @@ struct APrisoner_GetTorsoMeshComponent_Params
 struct APrisoner_GetTimeOfDeath_Params
 {
 	struct FDateTime                                   ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function ConZ.Prisoner.GetTeleportState
-struct APrisoner_GetTeleportState_Params
-{
-	EPrisonerTeleportState                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function ConZ.Prisoner.GetTattooIndex
@@ -10205,10 +11609,22 @@ struct APrisoner_GetHandsMeshComponent_Params
 	class USkeletalMeshComponent*                      ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
+// Function ConZ.Prisoner.GetHandBondage
+struct APrisoner_GetHandBondage_Params
+{
+	class UBondageComponent*                           ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
 // Function ConZ.Prisoner.GetHairMeshComponent
 struct APrisoner_GetHairMeshComponent_Params
 {
 	class USkeletalMeshComponent*                      ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function ConZ.Prisoner.GetHairLength
+struct APrisoner_GetHairLength_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function ConZ.Prisoner.GetGroundMovementParameters
@@ -10233,6 +11649,12 @@ struct APrisoner_GetFeetMeshComponent_Params
 struct APrisoner_GetFacialHairMeshComponent_Params
 {
 	class USkeletalMeshComponent*                      ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function ConZ.Prisoner.GetFacialHairLength
+struct APrisoner_GetFacialHairLength_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function ConZ.Prisoner.GetEyewearMeshComponent
@@ -10320,10 +11742,22 @@ struct APrisoner_GetBreastSizeModified_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function ConZ.Prisoner.GetBreastJiggleAmount
+struct APrisoner_GetBreastJiggleAmount_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function ConZ.Prisoner.GetBodyArmorMeshComponent
 struct APrisoner_GetBodyArmorMeshComponent_Params
 {
 	class USkeletalMeshComponent*                      ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function ConZ.Prisoner.GetBellyJiggleAmount
+struct APrisoner_GetBellyJiggleAmount_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function ConZ.Prisoner.GetBackpackMeshComponent
@@ -10493,6 +11927,14 @@ struct APrisoner_Client_LoadAmmoIntoMagazine_Params
 	int                                                count;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function ConZ.Prisoner.Client_Interact
+struct APrisoner_Client_Interact_Params
+{
+	class UObject*                                     interactable;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	EInteractionType                                   InteractionType;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FInteractionData                            InteractionData;                                          // (ConstParm, Parm, ReferenceParm)
+};
+
 // Function ConZ.Prisoner.Client_HighlightKeyboardOnDamage
 struct APrisoner_Client_HighlightKeyboardOnDamage_Params
 {
@@ -10529,7 +11971,7 @@ struct APrisoner_ChooseFirstMeleeTarget_Params
 // Function ConZ.Prisoner.CharacterAction_End
 struct APrisoner_CharacterAction_End_Params
 {
-	class UCharacterAction*                            action;                                                   // (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UCharacterAction*                            Action;                                                   // (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function ConZ.Prisoner.CarryItem
@@ -10567,11 +12009,6 @@ struct APrisoner_CanEnterMeleeCombatMode_Params
 struct APrisoner_CanEnterCombatMode_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.Prisoner.CancelTeleport
-struct APrisoner_CancelTeleport_Params
-{
 };
 
 // Function ConZ.Prisoner.CancelInteractableDragging
@@ -10626,7 +12063,6 @@ struct APrisoner_ApplyTattoos_Params
 // Function ConZ.Prisoner.ApplySkinMaterials
 struct APrisoner_ApplySkinMaterials_Params
 {
-	bool                                               ShouldApplyHeadMaterial;                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.Prisoner.ApplyPenisSize
@@ -10665,6 +12101,12 @@ struct APrisoner_AddWeaponAttachment_Params
 struct APrisoner_AddToTeamOnServer_Params
 {
 	struct FDbIntegerId                                teamId;                                                   // (ConstParm, Parm)
+};
+
+// Function ConZ.Prisoner.AddHandBondage
+struct APrisoner_AddHandBondage_Params
+{
+	class AItem*                                       bondageItem;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.Prisoner.AcceptTeamInvitationOnServer
@@ -11009,8 +12451,34 @@ struct UPrisonerAppearanceDataAsset_GetAppearanceDataCount_Params
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function ConZ.PrisonerBuryComponent.OnRep_BuryState
+struct UPrisonerBuryComponent_OnRep_BuryState_Params
+{
+};
+
+// Function ConZ.PrisonerCorpse.UpdateWetnessFromPrisoner
+struct APrisonerCorpse_UpdateWetnessFromPrisoner_Params
+{
+	class APrisoner*                                   Prisoner;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerCorpse.UpdateHair
+struct APrisonerCorpse_UpdateHair_Params
+{
+};
+
 // Function ConZ.PrisonerCorpse.OnRep_PenisShowing
 struct APrisonerCorpse_OnRep_PenisShowing_Params
+{
+};
+
+// Function ConZ.PrisonerCorpse.OnRep_HairLength
+struct APrisonerCorpse_OnRep_HairLength_Params
+{
+};
+
+// Function ConZ.PrisonerCorpse.OnRep_FacialHairLength
+struct APrisonerCorpse_OnRep_FacialHairLength_Params
 {
 };
 
@@ -11023,6 +12491,30 @@ struct APrisonerCorpse_OnRep_BreastsShowing_Params
 struct APrisonerCorpse_OnConcealedModeChanged_Params
 {
 	bool                                               Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerCorpse.GetHairMeshComponent
+struct APrisonerCorpse_GetHairMeshComponent_Params
+{
+	class USkeletalMeshComponent*                      ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerCorpse.GetHairLength
+struct APrisonerCorpse_GetHairLength_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerCorpse.GetFacialHairMeshComponent
+struct APrisonerCorpse_GetFacialHairMeshComponent_Params
+{
+	class USkeletalMeshComponent*                      ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerCorpse.GetFacialHairLength
+struct APrisonerCorpse_GetFacialHairLength_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function ConZ.PrisonerHUD.ToggleHUDMode
@@ -11109,6 +12601,40 @@ struct UPrisonerInventoryComponent_UnEquipClothesItem_Params
 	bool                                               placeInInventory;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function ConZ.PrisonerInventoryComponent.SpawnAndDropItemAtOnServer
+struct UPrisonerInventoryComponent_SpawnAndDropItemAtOnServer_Params
+{
+	class ULightItem*                                  Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Location;                                                 // (Parm, IsPlainOldData)
+	struct FRotator                                    Rotation;                                                 // (Parm, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerInventoryComponent.Server_RemoveItemFromQuickAccess
+struct UPrisonerInventoryComponent_Server_RemoveItemFromQuickAccess_Params
+{
+	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerInventoryComponent.Server_PickupCorpse
+struct UPrisonerInventoryComponent_Server_PickupCorpse_Params
+{
+	class ACorpse*                                     Corpse;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerInventoryComponent.Server_InitializeItemVirtualizedInventory
+struct UPrisonerInventoryComponent_Server_InitializeItemVirtualizedInventory_Params
+{
+	class UObject*                                     Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     container;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerInventoryComponent.Server_AddItemToQuickAccess
+struct UPrisonerInventoryComponent_Server_AddItemToQuickAccess_Params
+{
+	class AItem*                                       Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function ConZ.PrisonerInventoryComponent.ResendItemToClientOnServer
 struct UPrisonerInventoryComponent_ResendItemToClientOnServer_Params
 {
@@ -11130,6 +12656,13 @@ struct UPrisonerInventoryComponent_RemoveStolenItemOnServer_Params
 {
 	class APrisoner*                                   stolenPrisoner;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	class AItem*                                       Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerInventoryComponent.RemoveStacks
+struct UPrisonerInventoryComponent_RemoveStacks_Params
+{
+	int                                                stacksToSplit;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	TScriptInterface<class UInventoryNode>             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function ConZ.PrisonerInventoryComponent.RemoveSelectionItemsOnClients
@@ -11171,51 +12704,9 @@ struct UPrisonerInventoryComponent_OnViewingItemDestroyed_Params
 	class AActor*                                      viewingItem;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function ConZ.PrisonerInventoryComponent.OnRep_TorsoItem
-struct UPrisonerInventoryComponent_OnRep_TorsoItem_Params
-{
-	class AClothesItem*                                oldItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerInventoryComponent.OnRep_LegsItem
-struct UPrisonerInventoryComponent_OnRep_LegsItem_Params
-{
-	class AClothesItem*                                oldItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerInventoryComponent.OnRep_HeadUpperItem
-struct UPrisonerInventoryComponent_OnRep_HeadUpperItem_Params
-{
-	class AClothesItem*                                oldItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerInventoryComponent.OnRep_HandsItem
-struct UPrisonerInventoryComponent_OnRep_HandsItem_Params
-{
-	class AClothesItem*                                oldItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerInventoryComponent.OnRep_FeetItem
-struct UPrisonerInventoryComponent_OnRep_FeetItem_Params
-{
-	class AClothesItem*                                oldItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerInventoryComponent.OnRep_EyesItem
-struct UPrisonerInventoryComponent_OnRep_EyesItem_Params
-{
-	class AClothesItem*                                oldItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function ConZ.PrisonerInventoryComponent.OnRep_EquippedItems
 struct UPrisonerInventoryComponent_OnRep_EquippedItems_Params
 {
-};
-
-// Function ConZ.PrisonerInventoryComponent.OnRep_BackItem
-struct UPrisonerInventoryComponent_OnRep_BackItem_Params
-{
-	class AClothesItem*                                oldItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.PrisonerInventoryComponent.OnEquippedItemStaticMeshChanged
@@ -11286,7 +12777,7 @@ struct UPrisonerInventoryComponent_InitializeItemContainerOnServer_Params
 // Function ConZ.PrisonerInventoryComponent.HasSelectionItem
 struct UPrisonerInventoryComponent_HasSelectionItem_Params
 {
-	class AItem*                                       Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class AItem*                                       Item;                                                     // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -11295,6 +12786,25 @@ struct UPrisonerInventoryComponent_GetVicinityItems_Params
 {
 	bool                                               containedItems;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	TArray<class AItem*>                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function ConZ.PrisonerInventoryComponent.GetStacksCount
+struct UPrisonerInventoryComponent_GetStacksCount_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerInventoryComponent.GetMaxHairLength
+struct UPrisonerInventoryComponent_GetMaxHairLength_Params
+{
+	EGender                                            Gender;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerInventoryComponent.GetMaxFacialHairLength
+struct UPrisonerInventoryComponent_GetMaxFacialHairLength_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function ConZ.PrisonerInventoryComponent.GetGearWeightFast
@@ -11405,6 +12915,26 @@ struct UPrisonerInventoryComponent_DropAllItemsOnServer_Params
 	bool                                               removeSelection;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function ConZ.PrisonerInventoryComponent.Client_AddItemToQuickAccess
+struct UPrisonerInventoryComponent_Client_AddItemToQuickAccess_Params
+{
+	class AItem*                                       Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerInventoryComponent.CanStackWith
+struct UPrisonerInventoryComponent_CanStackWith_Params
+{
+	TScriptInterface<class UInventoryNode>             Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerInventoryComponent.CanStack
+struct UPrisonerInventoryComponent_CanStack_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function ConZ.PrisonerInventoryComponent.CanEquipClothesItem
 struct UPrisonerInventoryComponent_CanEquipClothesItem_Params
 {
@@ -11439,6 +12969,12 @@ struct UPrisonerInventoryComponent_AutoAddAllItemsOnServer_Params
 {
 	TArray<class AItem*>                               Items;                                                    // (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 	bool                                               removeSelection;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerInventoryComponent.AddStack
+struct UPrisonerInventoryComponent_AddStack_Params
+{
+	TScriptInterface<class UInventoryNode>             Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.PrisonerInventoryComponent.AddSelectionItemOnClient
@@ -11556,6 +13092,12 @@ struct UPrisonerLifeComponent_SetMusclesOnServer_Params
 	ETestMinMax                                        Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function ConZ.PrisonerLifeComponent.SetIsDiving
+struct UPrisonerLifeComponent_SetIsDiving_Params
+{
+	bool                                               IsDiving;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function ConZ.PrisonerLifeComponent.SetInitialAttributes
 struct UPrisonerLifeComponent_SetInitialAttributes_Params
 {
@@ -11653,6 +13195,18 @@ struct UPrisonerLifeComponent_OnRep_BCUMonitorData_Params
 struct UPrisonerLifeComponent_IsReadyToEat_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerLifeComponent.IsLifeProcessingStopped
+struct UPrisonerLifeComponent_IsLifeProcessingStopped_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerLifeComponent.IsDiving
+struct UPrisonerLifeComponent_IsDiving_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function ConZ.PrisonerLifeComponent.IsConscious
@@ -12043,6 +13597,12 @@ struct UPrisonerLifeComponent_GetPerformanceFailure_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function ConZ.PrisonerLifeComponent.GetOxygenSaturationRate
+struct UPrisonerLifeComponent_GetOxygenSaturationRate_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function ConZ.PrisonerLifeComponent.GetOxygenSaturation
 struct UPrisonerLifeComponent_GetOxygenSaturation_Params
 {
@@ -12086,6 +13646,12 @@ struct UPrisonerLifeComponent_GetMineral_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function ConZ.PrisonerLifeComponent.GetMinBreath
+struct UPrisonerLifeComponent_GetMinBreath_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function ConZ.PrisonerLifeComponent.GetMinBlood
 struct UPrisonerLifeComponent_GetMinBlood_Params
 {
@@ -12106,6 +13672,12 @@ struct UPrisonerLifeComponent_GetMaxHealth_Params
 
 // Function ConZ.PrisonerLifeComponent.GetMaxFoodWeight
 struct UPrisonerLifeComponent_GetMaxFoodWeight_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerLifeComponent.GetMaxBreath
+struct UPrisonerLifeComponent_GetMaxBreath_Params
 {
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
@@ -12683,6 +14255,57 @@ struct UPrisonerLifeComponent_CancelEating_Params
 {
 };
 
+// Function ConZ.PrisonerLifeIndicatorsSprite.ShowBreathingWidgets
+struct UPrisonerLifeIndicatorsSprite_ShowBreathingWidgets_Params
+{
+};
+
+// Function ConZ.PrisonerLifeIndicatorsSprite.ShouldShowBreathingWidgets
+struct UPrisonerLifeIndicatorsSprite_ShouldShowBreathingWidgets_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerLifeIndicatorsSprite.SetBreathingBarPercent
+struct UPrisonerLifeIndicatorsSprite_SetBreathingBarPercent_Params
+{
+	float                                              frontCirclePercent;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              backCirclePercent;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerLifeIndicatorsSprite.OnStartDiving
+struct UPrisonerLifeIndicatorsSprite_OnStartDiving_Params
+{
+};
+
+// Function ConZ.PrisonerLifeIndicatorsSprite.OnEndDiving
+struct UPrisonerLifeIndicatorsSprite_OnEndDiving_Params
+{
+};
+
+// Function ConZ.PrisonerLifeIndicatorsSprite.HideBreathingWidgets
+struct UPrisonerLifeIndicatorsSprite_HideBreathingWidgets_Params
+{
+};
+
+// Function ConZ.PrisonerLifeIndicatorsSprite.GetFrontBreathingBarPercent
+struct UPrisonerLifeIndicatorsSprite_GetFrontBreathingBarPercent_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerLifeIndicatorsSprite.GetBreathingBarLungsWidget
+struct UPrisonerLifeIndicatorsSprite_GetBreathingBarLungsWidget_Params
+{
+	class UBreathingBarLungsWidget*                    ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerLifeIndicatorsSprite.GetBackBreathingBarPercent
+struct UPrisonerLifeIndicatorsSprite_GetBackBreathingBarPercent_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function ConZ.PrisonerLoadout.EquipPrisoner
 struct UPrisonerLoadout_EquipPrisoner_Params
 {
@@ -12701,6 +14324,13 @@ struct UPrisonerMovementComponent_Server_ClimbOffLadder_Params
 {
 };
 
+// Function ConZ.PrisonerMovementComponent.NetMulticast_PlayAnimMontageIfSimulatedProxy
+struct UPrisonerMovementComponent_NetMulticast_PlayAnimMontageIfSimulatedProxy_Params
+{
+	class UAnimMontage*                                Montage;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              PlayRate;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function ConZ.PrisonerMovementComponent.JumpOffLadder
 struct UPrisonerMovementComponent_JumpOffLadder_Params
 {
@@ -12712,6 +14342,12 @@ struct UPrisonerMovementComponent_JumpOffLadder_Params
 struct UPrisonerMovementComponent_IsFlyingOrFalling_Params
 {
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.PrisonerMovementComponent.IsDiving
+struct UPrisonerMovementComponent_IsDiving_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function ConZ.PrisonerMovementComponent.IsClimbingWindow
@@ -12914,494 +14550,13 @@ struct UPrisonerMovementComponent_CanClimb_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function ConZ.PrisonerPlayerController.ToggleGameMenuEvent
-struct APrisonerPlayerController_ToggleGameMenuEvent_Params
+// Function ConZ.PrisonerRestingComponent.OnRep_RestingDataAutonomous
+struct UPrisonerRestingComponent_OnRep_RestingDataAutonomous_Params
 {
 };
 
-// Function ConZ.PrisonerPlayerController.ShowNotification
-struct APrisonerPlayerController_ShowNotification_Params
-{
-	struct FString                                     Message;                                                  // (Parm, ZeroConstructor)
-	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.ShowKillFeedNotificationOnClient
-struct APrisonerPlayerController_ShowKillFeedNotificationOnClient_Params
-{
-	struct FString                                     prefix;                                                   // (Parm, ZeroConstructor)
-	struct FString                                     characterName;                                            // (Parm, ZeroConstructor)
-	struct FString                                     suffix;                                                   // (Parm, ZeroConstructor)
-	bool                                               ping;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.SetRespawnOptionTime
-struct APrisonerPlayerController_SetRespawnOptionTime_Params
-{
-	ERespawnOption                                     Option;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              Time;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.SetIsChatDuplicationToMessageNotificationsMuted
-struct APrisonerPlayerController_SetIsChatDuplicationToMessageNotificationsMuted_Params
-{
-	bool                                               Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.SetGameEventCooldown
-struct APrisonerPlayerController_SetGameEventCooldown_Params
-{
-	float                                              cooldown;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.SetFamePoints
-struct APrisonerPlayerController_SetFamePoints_Params
-{
-	float                                              Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.Server_RequestSurvivalStats
-struct APrisonerPlayerController_Server_RequestSurvivalStats_Params
-{
-	uint32_t                                           ID;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FDbIntegerId                                UserProfileId;                                            // (Parm)
-};
-
-// Function ConZ.PrisonerPlayerController.Server_RequestRespawnWaitTime
-struct APrisonerPlayerController_Server_RequestRespawnWaitTime_Params
-{
-};
-
-// Function ConZ.PrisonerPlayerController.Server_RequestGameEventTeamChange
-struct APrisonerPlayerController_Server_RequestGameEventTeamChange_Params
-{
-	int                                                preferredTeam;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.Server_RequestCharacterStats
-struct APrisonerPlayerController_Server_RequestCharacterStats_Params
-{
-	uint32_t                                           ID;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FDbIntegerId                                UserProfileId;                                            // (Parm)
-	int                                                count;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	EEventsRankingStatsOrderByField                    orderByField;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	ESortOrder                                         sortOrder;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.Server_ReportWorldStreamed
-struct APrisonerPlayerController_Server_ReportWorldStreamed_Params
-{
-};
-
-// Function ConZ.PrisonerPlayerController.Server_ReportStartLeavingGame
-struct APrisonerPlayerController_Server_ReportStartLeavingGame_Params
-{
-};
-
-// Function ConZ.PrisonerPlayerController.Server_ReportCancelLeavingGame
-struct APrisonerPlayerController_Server_ReportCancelLeavingGame_Params
-{
-};
-
-// Function ConZ.PrisonerPlayerController.Server_ProcessAdminCommand
-struct APrisonerPlayerController_Server_ProcessAdminCommand_Params
-{
-	struct FString                                     authToken;                                                // (Parm, ZeroConstructor)
-	struct FString                                     commandText;                                              // (Parm, ZeroConstructor)
-};
-
-// Function ConZ.PrisonerPlayerController.Server_LeaveGameEvent
-struct APrisonerPlayerController_Server_LeaveGameEvent_Params
-{
-};
-
-// Function ConZ.PrisonerPlayerController.Server_JoinGameEvent
-struct APrisonerPlayerController_Server_JoinGameEvent_Params
-{
-	class AGameEventBase*                              gameEvent;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                preferredTeam;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.SendHUDMessageToClient
-struct APrisonerPlayerController_SendHUDMessageToClient_Params
-{
-	struct FString                                     Message;                                                  // (Parm, ZeroConstructor)
-	bool                                               beep;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.SendHUDMessageToAll
-struct APrisonerPlayerController_SendHUDMessageToAll_Params
-{
-	struct FString                                     Message;                                                  // (Parm, ZeroConstructor)
-	bool                                               beep;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.SendChatStringToServer
-struct APrisonerPlayerController_SendChatStringToServer_Params
-{
-	struct FString                                     string;                                                   // (Parm, ZeroConstructor)
-	EChatType                                          chatType;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.SendChatStringToClient
-struct APrisonerPlayerController_SendChatStringToClient_Params
-{
-	struct FString                                     string;                                                   // (Parm, ZeroConstructor)
-	EChatType                                          chatType;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.SendAnimalEyeSocketYawToServer
-struct APrisonerPlayerController_SendAnimalEyeSocketYawToServer_Params
-{
-	class AAnimal2*                                    Animal;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      Yaw;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.SaveState
-struct APrisonerPlayerController_SaveState_Params
-{
-};
-
-// Function ConZ.PrisonerPlayerController.RepossesOriginalPrisoner
-struct APrisonerPlayerController_RepossesOriginalPrisoner_Params
-{
-};
-
-// Function ConZ.PrisonerPlayerController.RemoveServerFromFavorites
-struct APrisonerPlayerController_RemoveServerFromFavorites_Params
-{
-};
-
-// Function ConZ.PrisonerPlayerController.RegisterRespawn
-struct APrisonerPlayerController_RegisterRespawn_Params
-{
-	ERespawnOption                                     Option;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// DelegateFunction ConZ.PrisonerPlayerController.PrisonerSpawnedDelegate__DelegateSignature
-struct APrisonerPlayerController_PrisonerSpawnedDelegate__DelegateSignature_Params
-{
-	class APrisoner*                                   spawnedPrisoner;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.OnRep_PossessedPawn
-struct APrisonerPlayerController_OnRep_PossessedPawn_Params
-{
-};
-
-// Function ConZ.PrisonerPlayerController.OnRep_FamePoints
-struct APrisonerPlayerController_OnRep_FamePoints_Params
-{
-};
-
-// Function ConZ.PrisonerPlayerController.NetMulticast_ProcessAdminCommand_ListPrisonerCapsuleAndMeshLocations
-struct APrisonerPlayerController_NetMulticast_ProcessAdminCommand_ListPrisonerCapsuleAndMeshLocations_Params
-{
-};
-
-// Function ConZ.PrisonerPlayerController.LoadState
-struct APrisonerPlayerController_LoadState_Params
-{
-};
-
-// Function ConZ.PrisonerPlayerController.LeaveGameEvent
-struct APrisonerPlayerController_LeaveGameEvent_Params
-{
-};
-
-// Function ConZ.PrisonerPlayerController.JoinGameEvent
-struct APrisonerPlayerController_JoinGameEvent_Params
-{
-	class AGameEventBase*                              gameEvent;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                preferredTeam;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.InputComponent_CancelAllControllerActions
-struct APrisonerPlayerController_InputComponent_CancelAllControllerActions_Params
-{
-};
-
-// Function ConZ.PrisonerPlayerController.GetUserProfileName
-struct APrisonerPlayerController_GetUserProfileName_Params
-{
-	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function ConZ.PrisonerPlayerController.GetUserProfileId
-struct APrisonerPlayerController_GetUserProfileId_Params
-{
-	struct FDbIntegerId                                ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function ConZ.PrisonerPlayerController.GetUserProfile
-struct APrisonerPlayerController_GetUserProfile_Params
-{
-	class UDbUserProfile*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.GetUserName2
-struct APrisonerPlayerController_GetUserName2_Params
-{
-	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function ConZ.PrisonerPlayerController.GetUserId
-struct APrisonerPlayerController_GetUserId_Params
-{
-	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function ConZ.PrisonerPlayerController.GetServerUserProfileId
-struct APrisonerPlayerController_GetServerUserProfileId_Params
-{
-	struct FDbIntegerId                                ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function ConZ.PrisonerPlayerController.GetRespawnWaitTime
-struct APrisonerPlayerController_GetRespawnWaitTime_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.GetRespawnOptionTimeLeft
-struct APrisonerPlayerController_GetRespawnOptionTimeLeft_Params
-{
-	ERespawnOption                                     Option;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.GetRespawnOptionTime
-struct APrisonerPlayerController_GetRespawnOptionTime_Params
-{
-	ERespawnOption                                     Option;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.GetPrisonerCameraManager
-struct APrisonerPlayerController_GetPrisonerCameraManager_Params
-{
-	class APrisonerCameraManager*                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.GetPrisoner
-struct APrisonerPlayerController_GetPrisoner_Params
-{
-	class APrisoner*                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.GetPlayerRpcChannel
-struct APrisonerPlayerController_GetPlayerRpcChannel_Params
-{
-	class UPlayerRpcChannel*                           ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.GetNoiseEmitterComponent
-struct APrisonerPlayerController_GetNoiseEmitterComponent_Params
-{
-	class UPawnNoiseEmitterComponent*                  ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.GetMissionDialogueManager
-struct APrisonerPlayerController_GetMissionDialogueManager_Params
-{
-	class AMissionDialogueManager*                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.GetLoginInfo
-struct APrisonerPlayerController_GetLoginInfo_Params
-{
-	struct FPlayerLoginInfo                            ReturnValue;                                              // (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm)
-};
-
-// Function ConZ.PrisonerPlayerController.GetIsChatDuplicationToMessageNotificationsMuted
-struct APrisonerPlayerController_GetIsChatDuplicationToMessageNotificationsMuted_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.GetGameEventCooldown
-struct APrisonerPlayerController_GetGameEventCooldown_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.GetFamePointsRounded
-struct APrisonerPlayerController_GetFamePointsRounded_Params
-{
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.GetFamePoints
-struct APrisonerPlayerController_GetFamePoints_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.GetFameMultiplier
-struct APrisonerPlayerController_GetFameMultiplier_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.GetFameLevel
-struct APrisonerPlayerController_GetFameLevel_Params
-{
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.GetDialogueManager
-struct APrisonerPlayerController_GetDialogueManager_Params
-{
-	class AMissionDialogueManager*                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.GetAchievementsManagerClient
-struct APrisonerPlayerController_GetAchievementsManagerClient_Params
-{
-	class AAchievementsManagerClient*                  ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.Crash
-struct APrisonerPlayerController_Crash_Params
-{
-};
-
-// Function ConZ.PrisonerPlayerController.ComputeFameLevel
-struct APrisonerPlayerController_ComputeFameLevel_Params
-{
-	float                                              FamePoints;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.Client_UpdateRespawnSettings
-struct APrisonerPlayerController_Client_UpdateRespawnSettings_Params
-{
-	struct FRespawnParameters                          parameters;                                               // (Parm)
-};
-
-// Function ConZ.PrisonerPlayerController.Client_TestPingLockStuff
-struct APrisonerPlayerController_Client_TestPingLockStuff_Params
-{
-	float                                              averageDelta;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              averagePing;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              counter;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.Client_SetRespawnWaitTime
-struct APrisonerPlayerController_Client_SetRespawnWaitTime_Params
-{
-	float                                              Seconds;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.Client_SetRespawnOptionTime
-struct APrisonerPlayerController_Client_SetRespawnOptionTime_Params
-{
-	ERespawnOption                                     Option;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              Time;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.Client_SetGameEventCooldown
-struct APrisonerPlayerController_Client_SetGameEventCooldown_Params
-{
-	float                                              cooldown;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.Client_SaveState
-struct APrisonerPlayerController_Client_SaveState_Params
-{
-};
-
-// Function ConZ.PrisonerPlayerController.Client_RecieveCharacterStats
-struct APrisonerPlayerController_Client_RecieveCharacterStats_Params
-{
-	uint32_t                                           ID;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	TArray<struct FEventsRankingStatsItem>             stats;                                                    // (ConstParm, Parm, ZeroConstructor, ReferenceParm)
-	int                                                playerRank;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.Client_ReceiveSurvivalStats
-struct APrisonerPlayerController_Client_ReceiveSurvivalStats_Params
-{
-	uint32_t                                           ID;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FSurvivalStats                              stats;                                                    // (ConstParm, Parm, ReferenceParm)
-};
-
-// Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_VisualizeBulletTrajectories
-struct APrisonerPlayerController_Client_ProcessAdminCommand_VisualizeBulletTrajectories_Params
-{
-	int                                                Value;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ResetMissionsEnabled
-struct APrisonerPlayerController_Client_ProcessAdminCommand_ResetMissionsEnabled_Params
-{
-	bool                                               Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ResetAchievements
-struct APrisonerPlayerController_Client_ProcessAdminCommand_ResetAchievements_Params
-{
-};
-
-// Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ListVehicleSpawnerInfos
-struct APrisonerPlayerController_Client_ProcessAdminCommand_ListVehicleSpawnerInfos_Params
-{
-	TArray<struct FVehicleSpawnerInfo>                 spawnerInfos;                                             // (ConstParm, Parm, ZeroConstructor, ReferenceParm)
-};
-
-// Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ListVehicles
-struct APrisonerPlayerController_Client_ProcessAdminCommand_ListVehicles_Params
-{
-	struct FString                                     Filter;                                                   // (Parm, ZeroConstructor)
-};
-
-// Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ListItems
-struct APrisonerPlayerController_Client_ProcessAdminCommand_ListItems_Params
-{
-	struct FString                                     Filter;                                                   // (Parm, ZeroConstructor)
-};
-
-// Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ListCharacters
-struct APrisonerPlayerController_Client_ProcessAdminCommand_ListCharacters_Params
-{
-	struct FString                                     Filter;                                                   // (Parm, ZeroConstructor)
-};
-
-// Function ConZ.PrisonerPlayerController.Client_Login
-struct APrisonerPlayerController_Client_Login_Params
-{
-	struct FPlayerLoginInfo                            serverLoginInfo;                                          // (ConstParm, Parm, ReferenceParm)
-};
-
-// Function ConZ.PrisonerPlayerController.Client_EnableRespawnOption
-struct APrisonerPlayerController_Client_EnableRespawnOption_Params
-{
-	ERespawnOption                                     Option;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.ClearRespawnOptionTimers
-struct APrisonerPlayerController_ClearRespawnOptionTimers_Params
-{
-};
-
-// Function ConZ.PrisonerPlayerController.ChatHistoryForward
-struct APrisonerPlayerController_ChatHistoryForward_Params
-{
-};
-
-// Function ConZ.PrisonerPlayerController.ChatHistoryBack
-struct APrisonerPlayerController_ChatHistoryBack_Params
-{
-};
-
-// Function ConZ.PrisonerPlayerController.CanAddServerToFavorites
-struct APrisonerPlayerController_CanAddServerToFavorites_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.PrisonerPlayerController.AddServerToFavorites
-struct APrisonerPlayerController_AddServerToFavorites_Params
+// Function ConZ.PrisonerRestingComponent.OnRep_RestingData
+struct UPrisonerRestingComponent_OnRep_RestingData_Params
 {
 };
 
@@ -14055,7 +15210,7 @@ struct UServerBrowser_StartNewMultiplayerGame_Params
 	struct FString                                     Ip;                                                       // (Parm, ZeroConstructor)
 	int                                                GameplayPort;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                ResponsePort;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FString                                     authToken;                                                // (Parm, ZeroConstructor)
+	struct FString                                     AuthToken;                                                // (Parm, ZeroConstructor)
 };
 
 // Function ConZ.ServerBrowser.ShutdownPingingThread
@@ -14117,7 +15272,7 @@ struct UServerBrowser_OpenContinueOrNewDialog_Params
 	struct FString                                     Ip;                                                       // (Parm, ZeroConstructor)
 	int                                                GameplayPort;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                ResponsePort;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FString                                     authToken;                                                // (Parm, ZeroConstructor)
+	struct FString                                     AuthToken;                                                // (Parm, ZeroConstructor)
 };
 
 // Function ConZ.ServerBrowser.OnLastPlayedServersTabOpened
@@ -14163,7 +15318,7 @@ struct UServerBrowser_ContinueMultiplayerGame_Params
 	struct FString                                     Ip;                                                       // (Parm, ZeroConstructor)
 	int                                                GameplayPort;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                ResponsePort;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FString                                     authToken;                                                // (Parm, ZeroConstructor)
+	struct FString                                     AuthToken;                                                // (Parm, ZeroConstructor)
 };
 
 // Function ConZ.ServerBrowser.ConnectToServer
@@ -14171,7 +15326,7 @@ struct UServerBrowser_ConnectToServer_Params
 {
 	struct FString                                     Ip;                                                       // (Parm, ZeroConstructor)
 	int                                                ResponsePort;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FString                                     authToken;                                                // (Parm, ZeroConstructor)
+	struct FString                                     AuthToken;                                                // (Parm, ZeroConstructor)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -14265,7 +15420,7 @@ struct USpawnScreen_UpdateInfo_Params
 // Function ConZ.SpawnScreen.EnableRespawnOption
 struct USpawnScreen_EnableRespawnOption_Params
 {
-	ERespawnOption                                     Option;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	ERespawnOption                                     option;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.StatisticsDetailsWidget.OnTravelSubcategoryButtonClicked
@@ -14374,6 +15529,17 @@ struct ATeamDeathmatchGameEvent_GetTeamDeathmatchParameters_Params
 	struct FTeamDeathmatchParameters                   ReturnValue;                                              // (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm)
 };
 
+// Function ConZ.TeleportComponent.Server_ReportClientReadyToFinishTeleport
+struct UTeleportComponent_Server_ReportClientReadyToFinishTeleport_Params
+{
+	unsigned char                                      RequestID;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.TeleportComponent.OnRep_Data
+struct UTeleportComponent_OnRep_Data_Params
+{
+};
+
 // Function ConZ.ThrowingComponent.OnProjectileStopped
 struct UThrowingComponent_OnProjectileStopped_Params
 {
@@ -14422,10 +15588,22 @@ struct UVehicle_SetVehicleSteerAmount_Params
 	float                                              Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function ConZ.Vehicle.SetVehicleLightsActive
+struct UVehicle_SetVehicleLightsActive_Params
+{
+	bool                                               Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function ConZ.Vehicle.SetVehicleHornActive
 struct UVehicle_SetVehicleHornActive_Params
 {
 	bool                                               Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.Vehicle.SetVehicleHealth
+struct UVehicle_SetVehicleHealth_Params
+{
+	float                                              Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.Vehicle.SetVehicleHandbrakeAmount
@@ -14536,6 +15714,12 @@ struct UVehicle_GetVehicleHealthBarCaption_Params
 	struct FText                                       ReturnValue;                                              // (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm)
 };
 
+// Function ConZ.Vehicle.GetVehicleHealth
+struct UVehicle_GetVehicleHealth_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function ConZ.Vehicle.GetVehicleHandbrakeAmount
 struct UVehicle_GetVehicleHandbrakeAmount_Params
 {
@@ -14546,6 +15730,12 @@ struct UVehicle_GetVehicleHandbrakeAmount_Params
 struct UVehicle_GetVehicleEngineState_Params
 {
 	EVehicleEngineState                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.Vehicle.GetVehicleEngineRpm
+struct UVehicle_GetVehicleEngineRpm_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function ConZ.Vehicle.GetVehicleBrakeAmount
@@ -14566,10 +15756,22 @@ struct UVehicle_GetNumVehicleForwardGears_Params
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function ConZ.Vehicle.GetMaxVehicleHealth
+struct UVehicle_GetMaxVehicleHealth_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function ConZ.Vehicle.GetCurrentVehicleGear
 struct UVehicle_GetCurrentVehicleGear_Params
 {
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ConZ.Vehicle.AreVehicleLightsActive
+struct UVehicle_AreVehicleLightsActive_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function ConZ.VehicleCorpse.GetMesh
@@ -14642,6 +15844,18 @@ struct UVicinityItemContainerWidget_DoubleClickedOnHeaderDelegate__DelegateSigna
 // Function ConZ.VicinityItemContainerWidget.DeferredLoadLayout
 struct UVicinityItemContainerWidget_DeferredLoadLayout_Params
 {
+};
+
+// Function ConZ.VicinityPanel3.OnItemActorDestroyed
+struct UVicinityPanel3_OnItemActorDestroyed_Params
+{
+	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.VicinityPanel3.OnCheckBoxCheckedChanged
+struct UVicinityPanel3_OnCheckBoxCheckedChanged_Params
+{
+	bool                                               checked;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.VicinityPanelSecondIteration.UpdateItemWidgetHighlightings
@@ -14766,6 +15980,17 @@ struct AWeaponAttachmentMagazine_SetAmmoCount_Params
 	int                                                amount;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function ConZ.WeaponAttachmentMagazine.OnRep_AmmoCountOwnerHelper
+struct AWeaponAttachmentMagazine_OnRep_AmmoCountOwnerHelper_Params
+{
+};
+
+// Function ConZ.WeaponAttachmentMagazine.Multicast_SetLoadedVariables
+struct AWeaponAttachmentMagazine_Multicast_SetLoadedVariables_Params
+{
+	int                                                ammoCount;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function ConZ.WeaponAttachmentMagazine.GetProjectileClass
 struct AWeaponAttachmentMagazine_GetProjectileClass_Params
 {
@@ -14782,12 +16007,6 @@ struct AWeaponAttachmentMagazine_GetCapacity_Params
 struct AWeaponAttachmentMagazine_GetAmmoCount_Params
 {
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function ConZ.WeaponAttachmentMagazine.Client_SetLoadedVariables
-struct AWeaponAttachmentMagazine_Client_SetLoadedVariables_Params
-{
-	int                                                ammoCount;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.WeaponAttachmentMagazine.AddAmmo
@@ -14843,6 +16062,17 @@ struct AWeaponBow_Server_SetBowStateData_Params
 struct AWeaponBow_Server_SetBowState_Params
 {
 	EWeaponBowState                                    State;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ConZ.WeaponBow.Server_RemoveArrow
+struct AWeaponBow_Server_RemoveArrow_Params
+{
+};
+
+// Function ConZ.WeaponBow.Server_InsertArrow
+struct AWeaponBow_Server_InsertArrow_Params
+{
+	class AAmmunitionArrow*                            arrow;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ConZ.WeaponBow.ReloadArrow

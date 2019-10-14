@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Wooden_Sticks_Bundle_Meduim.Wooden_Sticks_Bundle_Meduim_C
-// 0x0000 (0x0790 - 0x0790)
+// 0x0000 (0x0830 - 0x0830)
 class AWooden_Sticks_Bundle_Meduim_C : public AEquipmentItem
 {
 public:

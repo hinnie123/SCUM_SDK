@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass AnimBP_M1887.AnimBP_M1887_C
-// 0x0570 (0x08F0 - 0x0380)
+// 0x06F0 (0x0A70 - 0x0380)
 class UAnimBP_M1887_C : public UWeaponAnimInstance
 {
 public:
@@ -29,6 +29,8 @@ public:
 	struct FAnimNode_UseCachedPose                     AnimGraphNode_UseCachedPose_1C8F9E2C4B973EC080F01BA2AA7FF79B;// 0x07A0(0x0050)
 	struct FAnimNode_UseCachedPose                     AnimGraphNode_UseCachedPose_B12EFDF949A91607BCD4D790161DA04B;// 0x07F0(0x0050)
 	struct FAnimNode_SequencePlayer                    AnimGraphNode_SequencePlayer_C73B9CB94F6DF84859BC4DBFA3953F8F;// 0x0840(0x00B0)
+	struct FAnimNode_BlendListByBool                   AnimGraphNode_BlendListByBool_B9A0E62F4E174252A6508B96E358EC8B;// 0x08F0(0x00D0)
+	struct FAnimNode_SequencePlayer                    AnimGraphNode_SequencePlayer_ABE5860B4FE88816F6145D830103B393;// 0x09C0(0x00B0)
 
 	static UClass* StaticClass()
 	{
@@ -37,6 +39,7 @@ public:
 	}
 
 
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_M1887_AnimGraphNode_BlendListByBool_B9A0E62F4E174252A6508B96E358EC8B();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_M1887_AnimGraphNode_BlendListByEnum_0EEB33BE4F1351D6D0198887A0E69B31();
 	void ExecuteUbergraph_AnimBP_M1887(int EntryPoint);
 };

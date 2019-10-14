@@ -21,12 +21,12 @@ void UUI_InspectedItem_C::SetIsToolForSomething(bool* IsTool)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_InspectedItem.UI_InspectedItem_C.SetIsToolForSomething");
 
-	UUI_InspectedItem_C_SetIsToolForSomething_Params params;
-	params.IsTool = IsTool;
+	UUI_InspectedItem_C_SetIsToolForSomething_Params fn_params;
+	fn_params.IsTool = IsTool;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -41,12 +41,12 @@ void UUI_InspectedItem_C::ExecuteUbergraph_UI_InspectedItem(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_InspectedItem.UI_InspectedItem_C.ExecuteUbergraph_UI_InspectedItem");
 
-	UUI_InspectedItem_C_ExecuteUbergraph_UI_InspectedItem_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_InspectedItem_C_ExecuteUbergraph_UI_InspectedItem_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

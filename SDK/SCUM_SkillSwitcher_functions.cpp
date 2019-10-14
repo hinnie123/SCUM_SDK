@@ -23,17 +23,17 @@ bool USkillSwitcher_C::IsDifferenceSignificant(float referentValue, float curren
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.IsDifferenceSignificant");
 
-	USkillSwitcher_C_IsDifferenceSignificant_Params params;
-	params.referentValue = referentValue;
-	params.currentValue = currentValue;
+	USkillSwitcher_C_IsDifferenceSignificant_Params fn_params;
+	fn_params.referentValue = referentValue;
+	fn_params.currentValue = currentValue;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -47,17 +47,17 @@ void USkillSwitcher_C::RoundTo1DecPos(float floatNum, float* floatTo1Dec)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.RoundTo1DecPos");
 
-	USkillSwitcher_C_RoundTo1DecPos_Params params;
-	params.floatNum = floatNum;
+	USkillSwitcher_C_RoundTo1DecPos_Params fn_params;
+	fn_params.floatNum = floatNum;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (floatTo1Dec != nullptr)
-		*floatTo1Dec = params.floatTo1Dec;
+		*floatTo1Dec = fn_params.floatTo1Dec;
 }
 
 
@@ -68,11 +68,11 @@ void USkillSwitcher_C::DeactivateIntelligenceAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.DeactivateIntelligenceAlarm");
 
-	USkillSwitcher_C_DeactivateIntelligenceAlarm_Params params;
+	USkillSwitcher_C_DeactivateIntelligenceAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -85,11 +85,11 @@ void USkillSwitcher_C::DeactivateDexterityAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.DeactivateDexterityAlarm");
 
-	USkillSwitcher_C_DeactivateDexterityAlarm_Params params;
+	USkillSwitcher_C_DeactivateDexterityAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -102,11 +102,11 @@ void USkillSwitcher_C::DeactivateConstitutionAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.DeactivateConstitutionAlarm");
 
-	USkillSwitcher_C_DeactivateConstitutionAlarm_Params params;
+	USkillSwitcher_C_DeactivateConstitutionAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -119,11 +119,11 @@ void USkillSwitcher_C::DeactivateStrengthAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.DeactivateStrengthAlarm");
 
-	USkillSwitcher_C_DeactivateStrengthAlarm_Params params;
+	USkillSwitcher_C_DeactivateStrengthAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -136,11 +136,11 @@ void USkillSwitcher_C::InitReferentAttributeValues()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.InitReferentAttributeValues");
 
-	USkillSwitcher_C_InitReferentAttributeValues_Params params;
+	USkillSwitcher_C_InitReferentAttributeValues_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -153,11 +153,11 @@ void USkillSwitcher_C::SetParents()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.SetParents");
 
-	USkillSwitcher_C_SetParents_Params params;
+	USkillSwitcher_C_SetParents_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -172,16 +172,16 @@ void USkillSwitcher_C::shouldAlarmBeOn(bool* shouldAlarmBeOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.shouldAlarmBeOn");
 
-	USkillSwitcher_C_shouldAlarmBeOn_Params params;
+	USkillSwitcher_C_shouldAlarmBeOn_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (shouldAlarmBeOn != nullptr)
-		*shouldAlarmBeOn = params.shouldAlarmBeOn;
+		*shouldAlarmBeOn = fn_params.shouldAlarmBeOn;
 }
 
 
@@ -195,13 +195,13 @@ void USkillSwitcher_C::CheckSkillIntelligenceAlarm(float OldValue, float NewValu
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.CheckSkillIntelligenceAlarm");
 
-	USkillSwitcher_C_CheckSkillIntelligenceAlarm_Params params;
-	params.OldValue = OldValue;
-	params.NewValue = NewValue;
+	USkillSwitcher_C_CheckSkillIntelligenceAlarm_Params fn_params;
+	fn_params.OldValue = OldValue;
+	fn_params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -217,13 +217,13 @@ void USkillSwitcher_C::CheckSkillDexterityAlarm(float OldValue, float NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.CheckSkillDexterityAlarm");
 
-	USkillSwitcher_C_CheckSkillDexterityAlarm_Params params;
-	params.OldValue = OldValue;
-	params.NewValue = NewValue;
+	USkillSwitcher_C_CheckSkillDexterityAlarm_Params fn_params;
+	fn_params.OldValue = OldValue;
+	fn_params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -239,13 +239,13 @@ void USkillSwitcher_C::CheckSkillConstitutionAlarm(float OldValue, float NewValu
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.CheckSkillConstitutionAlarm");
 
-	USkillSwitcher_C_CheckSkillConstitutionAlarm_Params params;
-	params.OldValue = OldValue;
-	params.NewValue = NewValue;
+	USkillSwitcher_C_CheckSkillConstitutionAlarm_Params fn_params;
+	fn_params.OldValue = OldValue;
+	fn_params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -261,13 +261,13 @@ void USkillSwitcher_C::CheckSkillStrengthAlarm(float OldValue, float NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.CheckSkillStrengthAlarm");
 
-	USkillSwitcher_C_CheckSkillStrengthAlarm_Params params;
-	params.OldValue = OldValue;
-	params.NewValue = NewValue;
+	USkillSwitcher_C_CheckSkillStrengthAlarm_Params fn_params;
+	fn_params.OldValue = OldValue;
+	fn_params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -280,11 +280,11 @@ void USkillSwitcher_C::SetPrisonerToMonitorOnChildren()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.SetPrisonerToMonitorOnChildren");
 
-	USkillSwitcher_C_SetPrisonerToMonitorOnChildren_Params params;
+	USkillSwitcher_C_SetPrisonerToMonitorOnChildren_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -297,11 +297,11 @@ void USkillSwitcher_C::UpdateAttributeLevels()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.UpdateAttributeLevels");
 
-	USkillSwitcher_C_UpdateAttributeLevels_Params params;
+	USkillSwitcher_C_UpdateAttributeLevels_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -314,11 +314,11 @@ void USkillSwitcher_C::UpdateButtonBorderSizes()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.UpdateButtonBorderSizes");
 
-	USkillSwitcher_C_UpdateButtonBorderSizes_Params params;
+	USkillSwitcher_C_UpdateButtonBorderSizes_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -331,11 +331,11 @@ void USkillSwitcher_C::SaveButtonBorderXSizes()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.SaveButtonBorderXSizes");
 
-	USkillSwitcher_C_SaveButtonBorderXSizes_Params params;
+	USkillSwitcher_C_SaveButtonBorderXSizes_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -348,11 +348,11 @@ void USkillSwitcher_C::ResetXSizes()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.ResetXSizes");
 
-	USkillSwitcher_C_ResetXSizes_Params params;
+	USkillSwitcher_C_ResetXSizes_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -370,15 +370,15 @@ void USkillSwitcher_C::AdjustXSizes(float sizeIncreaseX0, float sizeIncreaseX1, 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.AdjustXSizes");
 
-	USkillSwitcher_C_AdjustXSizes_Params params;
-	params.sizeIncreaseX0 = sizeIncreaseX0;
-	params.sizeIncreaseX1 = sizeIncreaseX1;
-	params.sizeIncreaseX2 = sizeIncreaseX2;
-	params.sizeIncreaseX3 = sizeIncreaseX3;
+	USkillSwitcher_C_AdjustXSizes_Params fn_params;
+	fn_params.sizeIncreaseX0 = sizeIncreaseX0;
+	fn_params.sizeIncreaseX1 = sizeIncreaseX1;
+	fn_params.sizeIncreaseX2 = sizeIncreaseX2;
+	fn_params.sizeIncreaseX3 = sizeIncreaseX3;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -391,11 +391,11 @@ void USkillSwitcher_C::AdjustButtonSizes()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.AdjustButtonSizes");
 
-	USkillSwitcher_C_AdjustButtonSizes_Params params;
+	USkillSwitcher_C_AdjustButtonSizes_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -408,11 +408,11 @@ void USkillSwitcher_C::AdjustButtonPositions()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.AdjustButtonPositions");
 
-	USkillSwitcher_C_AdjustButtonPositions_Params params;
+	USkillSwitcher_C_AdjustButtonPositions_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -427,12 +427,12 @@ void USkillSwitcher_C::HideButtonBorder(int Selection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.HideButtonBorder");
 
-	USkillSwitcher_C_HideButtonBorder_Params params;
-	params.Selection = Selection;
+	USkillSwitcher_C_HideButtonBorder_Params fn_params;
+	fn_params.Selection = Selection;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -445,11 +445,11 @@ void USkillSwitcher_C::ShowAllButtonBorders()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.ShowAllButtonBorders");
 
-	USkillSwitcher_C_ShowAllButtonBorders_Params params;
+	USkillSwitcher_C_ShowAllButtonBorders_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -464,12 +464,12 @@ void USkillSwitcher_C::SelectActiveSkillContent(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.SelectActiveSkillContent");
 
-	USkillSwitcher_C_SelectActiveSkillContent_Params params;
-	params.Index = Index;
+	USkillSwitcher_C_SelectActiveSkillContent_Params fn_params;
+	fn_params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -484,16 +484,16 @@ void USkillSwitcher_C::GetActiveSkillContent(class USkillsContent_C** activeSkil
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.GetActiveSkillContent");
 
-	USkillSwitcher_C_GetActiveSkillContent_Params params;
+	USkillSwitcher_C_GetActiveSkillContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (activeSkillContent != nullptr)
-		*activeSkillContent = params.activeSkillContent;
+		*activeSkillContent = fn_params.activeSkillContent;
 }
 
 
@@ -504,11 +504,11 @@ void USkillSwitcher_C::InitSkillContents()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.InitSkillContents");
 
-	USkillSwitcher_C_InitSkillContents_Params params;
+	USkillSwitcher_C_InitSkillContents_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -521,11 +521,11 @@ void USkillSwitcher_C::InitSkillContentTypes()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.InitSkillContentTypes");
 
-	USkillSwitcher_C_InitSkillContentTypes_Params params;
+	USkillSwitcher_C_InitSkillContentTypes_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -538,11 +538,11 @@ void USkillSwitcher_C::InitSkillContentsArray()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.InitSkillContentsArray");
 
-	USkillSwitcher_C_InitSkillContentsArray_Params params;
+	USkillSwitcher_C_InitSkillContentsArray_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -557,16 +557,16 @@ void USkillSwitcher_C::GetSkillsCount(int* skillsCount)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.GetSkillsCount");
 
-	USkillSwitcher_C_GetSkillsCount_Params params;
+	USkillSwitcher_C_GetSkillsCount_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (skillsCount != nullptr)
-		*skillsCount = params.skillsCount;
+		*skillsCount = fn_params.skillsCount;
 }
 
 
@@ -577,11 +577,11 @@ void USkillSwitcher_C::OnPrisonerSet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.OnPrisonerSet");
 
-	USkillSwitcher_C_OnPrisonerSet_Params params;
+	USkillSwitcher_C_OnPrisonerSet_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -597,13 +597,13 @@ void USkillSwitcher_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.Tick");
 
-	USkillSwitcher_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	USkillSwitcher_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -616,11 +616,11 @@ void USkillSwitcher_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.Construct");
 
-	USkillSwitcher_C_Construct_Params params;
+	USkillSwitcher_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -633,11 +633,11 @@ void USkillSwitcher_C::BndEvt__SkillTypeButton_0_K2Node_ComponentBoundEvent_575_
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.BndEvt__SkillTypeButton_0_K2Node_ComponentBoundEvent_575_OnClickedSkillTypeButton__DelegateSignature");
 
-	USkillSwitcher_C_BndEvt__SkillTypeButton_0_K2Node_ComponentBoundEvent_575_OnClickedSkillTypeButton__DelegateSignature_Params params;
+	USkillSwitcher_C_BndEvt__SkillTypeButton_0_K2Node_ComponentBoundEvent_575_OnClickedSkillTypeButton__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -650,11 +650,11 @@ void USkillSwitcher_C::BndEvt__SkillTypeButton_1_K2Node_ComponentBoundEvent_581_
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.BndEvt__SkillTypeButton_1_K2Node_ComponentBoundEvent_581_OnClickedSkillTypeButton__DelegateSignature");
 
-	USkillSwitcher_C_BndEvt__SkillTypeButton_1_K2Node_ComponentBoundEvent_581_OnClickedSkillTypeButton__DelegateSignature_Params params;
+	USkillSwitcher_C_BndEvt__SkillTypeButton_1_K2Node_ComponentBoundEvent_581_OnClickedSkillTypeButton__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -667,11 +667,11 @@ void USkillSwitcher_C::BndEvt__SkillTypeButton_2_K2Node_ComponentBoundEvent_588_
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.BndEvt__SkillTypeButton_2_K2Node_ComponentBoundEvent_588_OnClickedSkillTypeButton__DelegateSignature");
 
-	USkillSwitcher_C_BndEvt__SkillTypeButton_2_K2Node_ComponentBoundEvent_588_OnClickedSkillTypeButton__DelegateSignature_Params params;
+	USkillSwitcher_C_BndEvt__SkillTypeButton_2_K2Node_ComponentBoundEvent_588_OnClickedSkillTypeButton__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -684,11 +684,11 @@ void USkillSwitcher_C::BndEvt__SkillTypeButton_3_K2Node_ComponentBoundEvent_596_
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.BndEvt__SkillTypeButton_3_K2Node_ComponentBoundEvent_596_OnClickedSkillTypeButton__DelegateSignature");
 
-	USkillSwitcher_C_BndEvt__SkillTypeButton_3_K2Node_ComponentBoundEvent_596_OnClickedSkillTypeButton__DelegateSignature_Params params;
+	USkillSwitcher_C_BndEvt__SkillTypeButton_3_K2Node_ComponentBoundEvent_596_OnClickedSkillTypeButton__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -701,11 +701,11 @@ void USkillSwitcher_C::UpdateSkillsEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.UpdateSkillsEvent");
 
-	USkillSwitcher_C_UpdateSkillsEvent_Params params;
+	USkillSwitcher_C_UpdateSkillsEvent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -718,11 +718,11 @@ void USkillSwitcher_C::ShouldActivateAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.ShouldActivateAlarm");
 
-	USkillSwitcher_C_ShouldActivateAlarm_Params params;
+	USkillSwitcher_C_ShouldActivateAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -735,11 +735,11 @@ void USkillSwitcher_C::ShouldDeactivateAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.ShouldDeactivateAlarm");
 
-	USkillSwitcher_C_ShouldDeactivateAlarm_Params params;
+	USkillSwitcher_C_ShouldDeactivateAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -752,11 +752,11 @@ void USkillSwitcher_C::AlarmOnWindowContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.AlarmOnWindowContent");
 
-	USkillSwitcher_C_AlarmOnWindowContent_Params params;
+	USkillSwitcher_C_AlarmOnWindowContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -769,11 +769,11 @@ void USkillSwitcher_C::AlarmOffWindowContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.AlarmOffWindowContent");
 
-	USkillSwitcher_C_AlarmOffWindowContent_Params params;
+	USkillSwitcher_C_AlarmOffWindowContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -788,12 +788,12 @@ void USkillSwitcher_C::ExecuteUbergraph_SkillSwitcher(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillSwitcher.SkillSwitcher_C.ExecuteUbergraph_SkillSwitcher");
 
-	USkillSwitcher_C_ExecuteUbergraph_SkillSwitcher_Params params;
-	params.EntryPoint = EntryPoint;
+	USkillSwitcher_C_ExecuteUbergraph_SkillSwitcher_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

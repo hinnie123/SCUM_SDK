@@ -19,11 +19,11 @@ void ABP_Standing_Torch_01_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Standing_Torch_01.BP_Standing_Torch_01_C.UserConstructionScript");
 
-	ABP_Standing_Torch_01_C_UserConstructionScript_Params params;
+	ABP_Standing_Torch_01_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

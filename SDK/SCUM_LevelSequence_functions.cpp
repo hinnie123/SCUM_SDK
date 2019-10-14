@@ -21,13 +21,13 @@ void ULevelSequenceBurnInOptions::SetBurnIn(const struct FSoftClassPath& InBurnI
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn");
 
-	ULevelSequenceBurnInOptions_SetBurnIn_Params params;
-	params.InBurnInClass = InBurnInClass;
+	ULevelSequenceBurnInOptions_SetBurnIn_Params fn_params;
+	fn_params.InBurnInClass = InBurnInClass;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -42,13 +42,13 @@ void ALevelSequenceActor::SetSequence(class ULevelSequence* InSequence)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.SetSequence");
 
-	ALevelSequenceActor_SetSequence_Params params;
-	params.InSequence = InSequence;
+	ALevelSequenceActor_SetSequence_Params fn_params;
+	fn_params.InSequence = InSequence;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -63,13 +63,13 @@ void ALevelSequenceActor::SetEventReceivers(TArray<class AActor*> AdditionalRece
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.SetEventReceivers");
 
-	ALevelSequenceActor_SetEventReceivers_Params params;
-	params.AdditionalReceivers = AdditionalReceivers;
+	ALevelSequenceActor_SetEventReceivers_Params fn_params;
+	fn_params.AdditionalReceivers = AdditionalReceivers;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -86,15 +86,15 @@ void ALevelSequenceActor::SetBinding(const struct FMovieSceneObjectBindingID& Bi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.SetBinding");
 
-	ALevelSequenceActor_SetBinding_Params params;
-	params.Binding = Binding;
-	params.Actors = Actors;
-	params.bAllowBindingsFromAsset = bAllowBindingsFromAsset;
+	ALevelSequenceActor_SetBinding_Params fn_params;
+	fn_params.Binding = Binding;
+	fn_params.Actors = Actors;
+	fn_params.bAllowBindingsFromAsset = bAllowBindingsFromAsset;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -107,12 +107,12 @@ void ALevelSequenceActor::ResetBindings()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.ResetBindings");
 
-	ALevelSequenceActor_ResetBindings_Params params;
+	ALevelSequenceActor_ResetBindings_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -127,13 +127,13 @@ void ALevelSequenceActor::ResetBinding(const struct FMovieSceneObjectBindingID& 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.ResetBinding");
 
-	ALevelSequenceActor_ResetBinding_Params params;
-	params.Binding = Binding;
+	ALevelSequenceActor_ResetBinding_Params fn_params;
+	fn_params.Binding = Binding;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -149,14 +149,14 @@ void ALevelSequenceActor::RemoveBinding(const struct FMovieSceneObjectBindingID&
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.RemoveBinding");
 
-	ALevelSequenceActor_RemoveBinding_Params params;
-	params.Binding = Binding;
-	params.Actor = Actor;
+	ALevelSequenceActor_RemoveBinding_Params fn_params;
+	fn_params.Binding = Binding;
+	fn_params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -173,18 +173,18 @@ class ULevelSequence* ALevelSequenceActor::GetSequence(bool bLoad, bool bInitial
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.GetSequence");
 
-	ALevelSequenceActor_GetSequence_Params params;
-	params.bLoad = bLoad;
-	params.bInitializePlayer = bInitializePlayer;
+	ALevelSequenceActor_GetSequence_Params fn_params;
+	fn_params.bLoad = bLoad;
+	fn_params.bInitializePlayer = bInitializePlayer;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -199,15 +199,15 @@ void ALevelSequenceActor::AddBinding(const struct FMovieSceneObjectBindingID& Bi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceActor.AddBinding");
 
-	ALevelSequenceActor_AddBinding_Params params;
-	params.Binding = Binding;
-	params.Actor = Actor;
-	params.bAllowBindingsFromAsset = bAllowBindingsFromAsset;
+	ALevelSequenceActor_AddBinding_Params fn_params;
+	fn_params.Binding = Binding;
+	fn_params.Actor = Actor;
+	fn_params.bAllowBindingsFromAsset = bAllowBindingsFromAsset;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -222,12 +222,12 @@ void ULevelSequenceBurnIn::SetSettings(class UObject* InSettings)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceBurnIn.SetSettings");
 
-	ULevelSequenceBurnIn_SetSettings_Params params;
-	params.InSettings = InSettings;
+	ULevelSequenceBurnIn_SetSettings_Params fn_params;
+	fn_params.InSettings = InSettings;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -242,16 +242,16 @@ class UClass* ULevelSequenceBurnIn::GetSettingsClass()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceBurnIn.GetSettingsClass");
 
-	ULevelSequenceBurnIn_GetSettingsClass_Params params;
+	ULevelSequenceBurnIn_GetSettingsClass_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -268,22 +268,22 @@ class ULevelSequencePlayer* ULevelSequencePlayer::STATIC_CreateLevelSequencePlay
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.CreateLevelSequencePlayer");
 
-	ULevelSequencePlayer_CreateLevelSequencePlayer_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.LevelSequence = LevelSequence;
-	params.Settings = Settings;
+	ULevelSequencePlayer_CreateLevelSequencePlayer_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.LevelSequence = LevelSequence;
+	fn_params.Settings = Settings;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutActor != nullptr)
-		*OutActor = params.OutActor;
+		*OutActor = fn_params.OutActor;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

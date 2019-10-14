@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Christmas_Paper_03.Christmas_Paper_03_C
-// 0x0000 (0x0790 - 0x0790)
+// 0x0000 (0x0830 - 0x0830)
 class AChristmas_Paper_03_C : public AEquipmentItem
 {
 public:

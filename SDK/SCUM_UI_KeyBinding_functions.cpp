@@ -21,12 +21,12 @@ void UUI_KeyBinding_C::BindKey(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_KeyBinding.UI_KeyBinding_C.BindKey");
 
-	UUI_KeyBinding_C_BindKey_Params params;
-	params.Key = Key;
+	UUI_KeyBinding_C_BindKey_Params fn_params;
+	fn_params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -43,17 +43,17 @@ struct FEventReply UUI_KeyBinding_C::OnMouseButtonDown_1(const struct FGeometry&
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_KeyBinding.UI_KeyBinding_C.OnMouseButtonDown_1");
 
-	UUI_KeyBinding_C_OnMouseButtonDown_1_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_KeyBinding_C_OnMouseButtonDown_1_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -66,12 +66,12 @@ void UUI_KeyBinding_C::Init(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_KeyBinding.UI_KeyBinding_C.Init");
 
-	UUI_KeyBinding_C_Init_Params params;
-	params.Key = Key;
+	UUI_KeyBinding_C_Init_Params fn_params;
+	fn_params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -84,11 +84,11 @@ void UUI_KeyBinding_C::OnSynchronizeProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_KeyBinding.UI_KeyBinding_C.OnSynchronizeProperties");
 
-	UUI_KeyBinding_C_OnSynchronizeProperties_Params params;
+	UUI_KeyBinding_C_OnSynchronizeProperties_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -101,11 +101,11 @@ void UUI_KeyBinding_C::OnDeselected()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_KeyBinding.UI_KeyBinding_C.OnDeselected");
 
-	UUI_KeyBinding_C_OnDeselected_Params params;
+	UUI_KeyBinding_C_OnDeselected_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -120,12 +120,12 @@ void UUI_KeyBinding_C::ExecuteUbergraph_UI_KeyBinding(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_KeyBinding.UI_KeyBinding_C.ExecuteUbergraph_UI_KeyBinding");
 
-	UUI_KeyBinding_C_ExecuteUbergraph_UI_KeyBinding_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_KeyBinding_C_ExecuteUbergraph_UI_KeyBinding_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -140,12 +140,12 @@ void UUI_KeyBinding_C::OnRebindInitiated__DelegateSignature(class UUI_KeyBinding
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_KeyBinding.UI_KeyBinding_C.OnRebindInitiated__DelegateSignature");
 
-	UUI_KeyBinding_C_OnRebindInitiated__DelegateSignature_Params params;
-	params.keyBindingWidget = keyBindingWidget;
+	UUI_KeyBinding_C_OnRebindInitiated__DelegateSignature_Params fn_params;
+	fn_params.keyBindingWidget = keyBindingWidget;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -162,14 +162,14 @@ void UUI_KeyBinding_C::KeyPressed__DelegateSignature(const struct FName& ActionN
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_KeyBinding.UI_KeyBinding_C.KeyPressed__DelegateSignature");
 
-	UUI_KeyBinding_C_KeyPressed__DelegateSignature_Params params;
-	params.ActionName = ActionName;
-	params.actionKey = actionKey;
-	params.Scale = Scale;
+	UUI_KeyBinding_C_KeyPressed__DelegateSignature_Params fn_params;
+	fn_params.ActionName = ActionName;
+	fn_params.actionKey = actionKey;
+	fn_params.Scale = Scale;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

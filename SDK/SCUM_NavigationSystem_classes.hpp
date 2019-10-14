@@ -29,7 +29,7 @@ public:
 	ERuntimeGenerationType                             RuntimeGeneration;                                        // 0x03A4(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x3];                                       // 0x03A5(0x0003) MISSED OFFSET
 	float                                              ObservedPathsTickInterval;                                // 0x03A8(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	uint32_t                                           DataVersion;                                              // 0x03AC(0x0004) (ZeroConstructor, IsPlainOldData)
+	uint32_t                                           dataVersion;                                              // 0x03AC(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData03[0xD0];                                      // 0x03B0(0x00D0) MISSED OFFSET
 	TArray<struct FSupportedAreaData>                  SupportedAreas;                                           // 0x0480(0x0010) (ZeroConstructor)
 	unsigned char                                      UnknownData04[0x58];                                      // 0x0490(0x0058) MISSED OFFSET

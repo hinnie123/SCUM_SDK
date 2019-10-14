@@ -21,15 +21,15 @@ struct FText UUI_ItemContainer_C::GetDurabilityPercentageText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemContainer.UI_ItemContainer_C.GetDurabilityPercentageText");
 
-	UUI_ItemContainer_C_GetDurabilityPercentageText_Params params;
+	UUI_ItemContainer_C_GetDurabilityPercentageText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -42,12 +42,12 @@ void UUI_ItemContainer_C::InitFromItem(class AItem* Item)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemContainer.UI_ItemContainer_C.InitFromItem");
 
-	UUI_ItemContainer_C_InitFromItem_Params params;
-	params.Item = Item;
+	UUI_ItemContainer_C_InitFromItem_Params fn_params;
+	fn_params.Item = Item;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -64,17 +64,17 @@ struct FEventReply UUI_ItemContainer_C::OnMouseButtonDown(struct FGeometry* MyGe
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemContainer.UI_ItemContainer_C.OnMouseButtonDown");
 
-	UUI_ItemContainer_C_OnMouseButtonDown_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_ItemContainer_C_OnMouseButtonDown_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

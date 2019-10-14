@@ -19,11 +19,11 @@ void UUI_TeamInvitationWidget_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TeamInvitationWidget.UI_TeamInvitationWidget_C.Construct");
 
-	UUI_TeamInvitationWidget_C_Construct_Params params;
+	UUI_TeamInvitationWidget_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void UUI_TeamInvitationWidget_C::BndEvt__AcceptButton_K2Node_ComponentBoundEvent
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TeamInvitationWidget.UI_TeamInvitationWidget_C.BndEvt__AcceptButton_K2Node_ComponentBoundEvent_55_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_TeamInvitationWidget_C_BndEvt__AcceptButton_K2Node_ComponentBoundEvent_55_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_TeamInvitationWidget_C_BndEvt__AcceptButton_K2Node_ComponentBoundEvent_55_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -53,11 +53,11 @@ void UUI_TeamInvitationWidget_C::BndEvt__DeclineButton_K2Node_ComponentBoundEven
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TeamInvitationWidget.UI_TeamInvitationWidget_C.BndEvt__DeclineButton_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_TeamInvitationWidget_C_BndEvt__DeclineButton_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_TeamInvitationWidget_C_BndEvt__DeclineButton_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -70,11 +70,11 @@ void UUI_TeamInvitationWidget_C::BndEvt__AcceptButton_K2Node_ComponentBoundEvent
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TeamInvitationWidget.UI_TeamInvitationWidget_C.BndEvt__AcceptButton_K2Node_ComponentBoundEvent_59_OnButtonHoverEvent__DelegateSignature");
 
-	UUI_TeamInvitationWidget_C_BndEvt__AcceptButton_K2Node_ComponentBoundEvent_59_OnButtonHoverEvent__DelegateSignature_Params params;
+	UUI_TeamInvitationWidget_C_BndEvt__AcceptButton_K2Node_ComponentBoundEvent_59_OnButtonHoverEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -87,11 +87,11 @@ void UUI_TeamInvitationWidget_C::BndEvt__AcceptButton_K2Node_ComponentBoundEvent
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TeamInvitationWidget.UI_TeamInvitationWidget_C.BndEvt__AcceptButton_K2Node_ComponentBoundEvent_72_OnButtonHoverEvent__DelegateSignature");
 
-	UUI_TeamInvitationWidget_C_BndEvt__AcceptButton_K2Node_ComponentBoundEvent_72_OnButtonHoverEvent__DelegateSignature_Params params;
+	UUI_TeamInvitationWidget_C_BndEvt__AcceptButton_K2Node_ComponentBoundEvent_72_OnButtonHoverEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -104,11 +104,11 @@ void UUI_TeamInvitationWidget_C::BndEvt__DeclineButton_K2Node_ComponentBoundEven
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TeamInvitationWidget.UI_TeamInvitationWidget_C.BndEvt__DeclineButton_K2Node_ComponentBoundEvent_85_OnButtonHoverEvent__DelegateSignature");
 
-	UUI_TeamInvitationWidget_C_BndEvt__DeclineButton_K2Node_ComponentBoundEvent_85_OnButtonHoverEvent__DelegateSignature_Params params;
+	UUI_TeamInvitationWidget_C_BndEvt__DeclineButton_K2Node_ComponentBoundEvent_85_OnButtonHoverEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -121,11 +121,11 @@ void UUI_TeamInvitationWidget_C::BndEvt__DeclineButton_K2Node_ComponentBoundEven
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TeamInvitationWidget.UI_TeamInvitationWidget_C.BndEvt__DeclineButton_K2Node_ComponentBoundEvent_100_OnButtonHoverEvent__DelegateSignature");
 
-	UUI_TeamInvitationWidget_C_BndEvt__DeclineButton_K2Node_ComponentBoundEvent_100_OnButtonHoverEvent__DelegateSignature_Params params;
+	UUI_TeamInvitationWidget_C_BndEvt__DeclineButton_K2Node_ComponentBoundEvent_100_OnButtonHoverEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -138,11 +138,11 @@ void UUI_TeamInvitationWidget_C::BndEvt__Decline_K2Node_ComponentBoundEvent_44_O
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TeamInvitationWidget.UI_TeamInvitationWidget_C.BndEvt__Decline_K2Node_ComponentBoundEvent_44_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_TeamInvitationWidget_C_BndEvt__Decline_K2Node_ComponentBoundEvent_44_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_TeamInvitationWidget_C_BndEvt__Decline_K2Node_ComponentBoundEvent_44_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -155,11 +155,11 @@ void UUI_TeamInvitationWidget_C::BndEvt__Accept_K2Node_ComponentBoundEvent_67_On
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TeamInvitationWidget.UI_TeamInvitationWidget_C.BndEvt__Accept_K2Node_ComponentBoundEvent_67_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_TeamInvitationWidget_C_BndEvt__Accept_K2Node_ComponentBoundEvent_67_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_TeamInvitationWidget_C_BndEvt__Accept_K2Node_ComponentBoundEvent_67_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -174,12 +174,12 @@ void UUI_TeamInvitationWidget_C::ExecuteUbergraph_UI_TeamInvitationWidget(int En
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TeamInvitationWidget.UI_TeamInvitationWidget_C.ExecuteUbergraph_UI_TeamInvitationWidget");
 
-	UUI_TeamInvitationWidget_C_ExecuteUbergraph_UI_TeamInvitationWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_TeamInvitationWidget_C_ExecuteUbergraph_UI_TeamInvitationWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

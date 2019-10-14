@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Camo_Beanie_06.Camo_Beanie_06_C
-// 0x0000 (0x0818 - 0x0818)
+// 0x0000 (0x08D0 - 0x08D0)
 class ACamo_Beanie_06_C : public AClothesItem
 {
 public:

@@ -22,16 +22,16 @@ bool ABP_Weapon_AKS_74U_C::CanAddAttachment(class AWeaponAttachment** Attachment
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_AKS_74U.BP_Weapon_AKS_74U_C.CanAddAttachment");
 
-	ABP_Weapon_AKS_74U_C_CanAddAttachment_Params params;
-	params.Attachment = Attachment;
+	ABP_Weapon_AKS_74U_C_CanAddAttachment_Params fn_params;
+	fn_params.Attachment = Attachment;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -42,11 +42,11 @@ void ABP_Weapon_AKS_74U_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_AKS_74U.BP_Weapon_AKS_74U_C.UserConstructionScript");
 
-	ABP_Weapon_AKS_74U_C_UserConstructionScript_Params params;
+	ABP_Weapon_AKS_74U_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -59,11 +59,11 @@ void ABP_Weapon_AKS_74U_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_AKS_74U.BP_Weapon_AKS_74U_C.ReceiveBeginPlay");
 
-	ABP_Weapon_AKS_74U_C_ReceiveBeginPlay_Params params;
+	ABP_Weapon_AKS_74U_C_ReceiveBeginPlay_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -79,13 +79,13 @@ void ABP_Weapon_AKS_74U_C::OnAttachmentAdded(class AWeapon* sender, class AWeapo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_AKS_74U.BP_Weapon_AKS_74U_C.OnAttachmentAdded");
 
-	ABP_Weapon_AKS_74U_C_OnAttachmentAdded_Params params;
-	params.sender = sender;
-	params.Attachment = Attachment;
+	ABP_Weapon_AKS_74U_C_OnAttachmentAdded_Params fn_params;
+	fn_params.sender = sender;
+	fn_params.Attachment = Attachment;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -101,13 +101,13 @@ void ABP_Weapon_AKS_74U_C::OnAttachmentRemoved(class AWeapon* sender, class AWea
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_AKS_74U.BP_Weapon_AKS_74U_C.OnAttachmentRemoved");
 
-	ABP_Weapon_AKS_74U_C_OnAttachmentRemoved_Params params;
-	params.sender = sender;
-	params.Attachment = Attachment;
+	ABP_Weapon_AKS_74U_C_OnAttachmentRemoved_Params fn_params;
+	fn_params.sender = sender;
+	fn_params.Attachment = Attachment;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -122,12 +122,12 @@ void ABP_Weapon_AKS_74U_C::ExecuteUbergraph_BP_Weapon_AKS_74U(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_AKS_74U.BP_Weapon_AKS_74U_C.ExecuteUbergraph_BP_Weapon_AKS_74U");
 
-	ABP_Weapon_AKS_74U_C_ExecuteUbergraph_BP_Weapon_AKS_74U_Params params;
-	params.EntryPoint = EntryPoint;
+	ABP_Weapon_AKS_74U_C_ExecuteUbergraph_BP_Weapon_AKS_74U_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

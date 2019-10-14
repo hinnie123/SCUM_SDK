@@ -22,16 +22,16 @@ float U590A1_Reload_Event_NoChamber_C::ExecuteUsingData(struct FWeaponReloadData
 {
 	static auto fn = UObject::FindObject<UFunction>("Function 590A1_Reload_Event_NoChamber.590A1_Reload_Event_NoChamber_C.ExecuteUsingData");
 
-	U590A1_Reload_Event_NoChamber_C_ExecuteUsingData_Params params;
-	params.Data = Data;
+	U590A1_Reload_Event_NoChamber_C_ExecuteUsingData_Params fn_params;
+	fn_params.Data = Data;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -45,16 +45,16 @@ bool U590A1_Reload_Event_NoChamber_C::CanExecuteUsingData(struct FWeaponReloadDa
 {
 	static auto fn = UObject::FindObject<UFunction>("Function 590A1_Reload_Event_NoChamber.590A1_Reload_Event_NoChamber_C.CanExecuteUsingData");
 
-	U590A1_Reload_Event_NoChamber_C_CanExecuteUsingData_Params params;
-	params.Data = Data;
+	U590A1_Reload_Event_NoChamber_C_CanExecuteUsingData_Params fn_params;
+	fn_params.Data = Data;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -67,12 +67,12 @@ void U590A1_Reload_Event_NoChamber_C::OnActionAnimNotify(ECharacterActionNotifyT
 {
 	static auto fn = UObject::FindObject<UFunction>("Function 590A1_Reload_Event_NoChamber.590A1_Reload_Event_NoChamber_C.OnActionAnimNotify");
 
-	U590A1_Reload_Event_NoChamber_C_OnActionAnimNotify_Params params;
-	params.notifyType = notifyType;
+	U590A1_Reload_Event_NoChamber_C_OnActionAnimNotify_Params fn_params;
+	fn_params.notifyType = notifyType;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -87,12 +87,12 @@ void U590A1_Reload_Event_NoChamber_C::ExecuteUbergraph_590A1_Reload_Event_NoCham
 {
 	static auto fn = UObject::FindObject<UFunction>("Function 590A1_Reload_Event_NoChamber.590A1_Reload_Event_NoChamber_C.ExecuteUbergraph_590A1_Reload_Event_NoChamber");
 
-	U590A1_Reload_Event_NoChamber_C_ExecuteUbergraph_590A1_Reload_Event_NoChamber_Params params;
-	params.EntryPoint = EntryPoint;
+	U590A1_Reload_Event_NoChamber_C_ExecuteUbergraph_590A1_Reload_Event_NoChamber_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -23,17 +23,17 @@ struct FEventReply UUI_CraftingRecipe_C::OnMouseButtonDown(struct FGeometry* MyG
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingRecipe.UI_CraftingRecipe_C.OnMouseButtonDown");
 
-	UUI_CraftingRecipe_C_OnMouseButtonDown_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_CraftingRecipe_C_OnMouseButtonDown_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -46,12 +46,12 @@ void UUI_CraftingRecipe_C::SetTooltipFromClass(class UClass** ItemClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingRecipe.UI_CraftingRecipe_C.SetTooltipFromClass");
 
-	UUI_CraftingRecipe_C_SetTooltipFromClass_Params params;
-	params.ItemClass = ItemClass;
+	UUI_CraftingRecipe_C_SetTooltipFromClass_Params fn_params;
+	fn_params.ItemClass = ItemClass;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -64,11 +64,11 @@ void UUI_CraftingRecipe_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingRecipe.UI_CraftingRecipe_C.Construct");
 
-	UUI_CraftingRecipe_C_Construct_Params params;
+	UUI_CraftingRecipe_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -83,12 +83,12 @@ void UUI_CraftingRecipe_C::SetIsGrayedOut(bool* isGrayedOut)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingRecipe.UI_CraftingRecipe_C.SetIsGrayedOut");
 
-	UUI_CraftingRecipe_C_SetIsGrayedOut_Params params;
-	params.isGrayedOut = isGrayedOut;
+	UUI_CraftingRecipe_C_SetIsGrayedOut_Params fn_params;
+	fn_params.isGrayedOut = isGrayedOut;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -103,12 +103,12 @@ void UUI_CraftingRecipe_C::SetAvailabilityState(ERecipeAvailabilityState* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingRecipe.UI_CraftingRecipe_C.SetAvailabilityState");
 
-	UUI_CraftingRecipe_C_SetAvailabilityState_Params params;
-	params.State = State;
+	UUI_CraftingRecipe_C_SetAvailabilityState_Params fn_params;
+	fn_params.State = State;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -123,12 +123,12 @@ void UUI_CraftingRecipe_C::SetIsSelected(bool* isSelected)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingRecipe.UI_CraftingRecipe_C.SetIsSelected");
 
-	UUI_CraftingRecipe_C_SetIsSelected_Params params;
-	params.isSelected = isSelected;
+	UUI_CraftingRecipe_C_SetIsSelected_Params fn_params;
+	fn_params.isSelected = isSelected;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -144,13 +144,13 @@ void UUI_CraftingRecipe_C::SetTooltipFromCaptionAndDescription(struct FText* Cap
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingRecipe.UI_CraftingRecipe_C.SetTooltipFromCaptionAndDescription");
 
-	UUI_CraftingRecipe_C_SetTooltipFromCaptionAndDescription_Params params;
-	params.Caption = Caption;
-	params.Description = Description;
+	UUI_CraftingRecipe_C_SetTooltipFromCaptionAndDescription_Params fn_params;
+	fn_params.Caption = Caption;
+	fn_params.Description = Description;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -165,12 +165,12 @@ void UUI_CraftingRecipe_C::ExecuteUbergraph_UI_CraftingRecipe(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingRecipe.UI_CraftingRecipe_C.ExecuteUbergraph_UI_CraftingRecipe");
 
-	UUI_CraftingRecipe_C_ExecuteUbergraph_UI_CraftingRecipe_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_CraftingRecipe_C_ExecuteUbergraph_UI_CraftingRecipe_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -44,7 +44,7 @@ public:
 	}
 
 
-	void EnableOption(ERespawnOption Option);
+	void EnableOption(ERespawnOption option);
 	void GetSpawnTag(struct FName* spawnTag);
 	ESlateVisibility GetSectorSelectorVisibility();
 	void UpdateOptions();

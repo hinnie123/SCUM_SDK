@@ -21,12 +21,12 @@ void UUI_CriminalRecordText_C::SetValue(const struct FText& Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CriminalRecordText.UI_CriminalRecordText_C.SetValue");
 
-	UUI_CriminalRecordText_C_SetValue_Params params;
-	params.Value = Value;
+	UUI_CriminalRecordText_C_SetValue_Params fn_params;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -39,11 +39,11 @@ void UUI_CriminalRecordText_C::OnSynchronizeProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CriminalRecordText.UI_CriminalRecordText_C.OnSynchronizeProperties");
 
-	UUI_CriminalRecordText_C_OnSynchronizeProperties_Params params;
+	UUI_CriminalRecordText_C_OnSynchronizeProperties_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -58,12 +58,12 @@ void UUI_CriminalRecordText_C::ExecuteUbergraph_UI_CriminalRecordText(int EntryP
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CriminalRecordText.UI_CriminalRecordText_C.ExecuteUbergraph_UI_CriminalRecordText");
 
-	UUI_CriminalRecordText_C_ExecuteUbergraph_UI_CriminalRecordText_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_CriminalRecordText_C_ExecuteUbergraph_UI_CriminalRecordText_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

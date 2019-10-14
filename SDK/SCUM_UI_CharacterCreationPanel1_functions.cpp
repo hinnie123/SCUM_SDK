@@ -12,6 +12,23 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.ApplyPrisonerShirt
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UUI_CharacterCreationPanel1_C::ApplyPrisonerShirt()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.ApplyPrisonerShirt");
+
+	UUI_CharacterCreationPanel1_C_ApplyPrisonerShirt_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.GetBustSize
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -21,16 +38,16 @@ void UUI_CharacterCreationPanel1_C::GetBustSize(float* Size)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.GetBustSize");
 
-	UUI_CharacterCreationPanel1_C_GetBustSize_Params params;
+	UUI_CharacterCreationPanel1_C_GetBustSize_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Size != nullptr)
-		*Size = params.Size;
+		*Size = fn_params.Size;
 }
 
 
@@ -41,11 +58,11 @@ void UUI_CharacterCreationPanel1_C::UpdateAppearanceOptions()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.UpdateAppearanceOptions");
 
-	UUI_CharacterCreationPanel1_C_UpdateAppearanceOptions_Params params;
+	UUI_CharacterCreationPanel1_C_UpdateAppearanceOptions_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -60,16 +77,16 @@ void UUI_CharacterCreationPanel1_C::GetPenisSize(float* Size)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.GetPenisSize");
 
-	UUI_CharacterCreationPanel1_C_GetPenisSize_Params params;
+	UUI_CharacterCreationPanel1_C_GetPenisSize_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Size != nullptr)
-		*Size = params.Size;
+		*Size = fn_params.Size;
 }
 
 
@@ -83,17 +100,17 @@ void UUI_CharacterCreationPanel1_C::IsProfileNameInUse(const struct FString& Nam
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.IsProfileNameInUse");
 
-	UUI_CharacterCreationPanel1_C_IsProfileNameInUse_Params params;
-	params.Name = Name;
+	UUI_CharacterCreationPanel1_C_IsProfileNameInUse_Params fn_params;
+	fn_params.Name = Name;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Result != nullptr)
-		*Result = params.Result;
+		*Result = fn_params.Result;
 }
 
 
@@ -104,11 +121,11 @@ void UUI_CharacterCreationPanel1_C::SetDefaultName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.SetDefaultName");
 
-	UUI_CharacterCreationPanel1_C_SetDefaultName_Params params;
+	UUI_CharacterCreationPanel1_C_SetDefaultName_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -123,15 +140,15 @@ ESlateVisibility UUI_CharacterCreationPanel1_C::GetInUseMsgVisibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.GetInUseMsgVisibility");
 
-	UUI_CharacterCreationPanel1_C_GetInUseMsgVisibility_Params params;
+	UUI_CharacterCreationPanel1_C_GetInUseMsgVisibility_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -145,16 +162,16 @@ bool UUI_CharacterCreationPanel1_C::IsNameValid(const struct FString& characterN
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.IsNameValid");
 
-	UUI_CharacterCreationPanel1_C_IsNameValid_Params params;
-	params.characterName = characterName;
+	UUI_CharacterCreationPanel1_C_IsNameValid_Params fn_params;
+	fn_params.characterName = characterName;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -167,15 +184,15 @@ bool UUI_CharacterCreationPanel1_C::Get_ButtonSwitchToCriminalRecord_bIsEnabled_
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.Get_ButtonSwitchToCriminalRecord_bIsEnabled_1");
 
-	UUI_CharacterCreationPanel1_C_Get_ButtonSwitchToCriminalRecord_bIsEnabled_1_Params params;
+	UUI_CharacterCreationPanel1_C_Get_ButtonSwitchToCriminalRecord_bIsEnabled_1_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -188,12 +205,12 @@ void UUI_CharacterCreationPanel1_C::RandomizeSkillsByAttribute(ESkillAttribute A
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.RandomizeSkillsByAttribute");
 
-	UUI_CharacterCreationPanel1_C_RandomizeSkillsByAttribute_Params params;
-	params.Attribute = Attribute;
+	UUI_CharacterCreationPanel1_C_RandomizeSkillsByAttribute_Params fn_params;
+	fn_params.Attribute = Attribute;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -208,12 +225,12 @@ void UUI_CharacterCreationPanel1_C::PlayPrisonerEnteringSequence(bool backwards)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.PlayPrisonerEnteringSequence");
 
-	UUI_CharacterCreationPanel1_C_PlayPrisonerEnteringSequence_Params params;
-	params.backwards = backwards;
+	UUI_CharacterCreationPanel1_C_PlayPrisonerEnteringSequence_Params fn_params;
+	fn_params.backwards = backwards;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -226,11 +243,11 @@ void UUI_CharacterCreationPanel1_C::RandomizeSkillsPanel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.RandomizeSkillsPanel");
 
-	UUI_CharacterCreationPanel1_C_RandomizeSkillsPanel_Params params;
+	UUI_CharacterCreationPanel1_C_RandomizeSkillsPanel_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -243,11 +260,11 @@ void UUI_CharacterCreationPanel1_C::RandomizeAttributesPanel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.RandomizeAttributesPanel");
 
-	UUI_CharacterCreationPanel1_C_RandomizeAttributesPanel_Params params;
+	UUI_CharacterCreationPanel1_C_RandomizeAttributesPanel_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -262,12 +279,12 @@ void UUI_CharacterCreationPanel1_C::OnSkillSliderDeselected(class UUI_CC_SkillSl
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.OnSkillSliderDeselected");
 
-	UUI_CharacterCreationPanel1_C_OnSkillSliderDeselected_Params params;
-	params.Slider = Slider;
+	UUI_CharacterCreationPanel1_C_OnSkillSliderDeselected_Params fn_params;
+	fn_params.Slider = Slider;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -282,12 +299,12 @@ void UUI_CharacterCreationPanel1_C::OnSkillSliderSelected(class UUI_CC_SkillSlid
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.OnSkillSliderSelected");
 
-	UUI_CharacterCreationPanel1_C_OnSkillSliderSelected_Params params;
-	params.Slider = Slider;
+	UUI_CharacterCreationPanel1_C_OnSkillSliderSelected_Params fn_params;
+	fn_params.Slider = Slider;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -302,16 +319,16 @@ void UUI_CharacterCreationPanel1_C::GetSkillTemplates(TArray<struct FSkillTempla
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.GetSkillTemplates");
 
-	UUI_CharacterCreationPanel1_C_GetSkillTemplates_Params params;
+	UUI_CharacterCreationPanel1_C_GetSkillTemplates_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (allSkills != nullptr)
-		*allSkills = params.allSkills;
+		*allSkills = fn_params.allSkills;
 }
 
 
@@ -325,17 +342,17 @@ void UUI_CharacterCreationPanel1_C::GetSkillTemplatesByAttribute(ESkillAttribute
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.GetSkillTemplatesByAttribute");
 
-	UUI_CharacterCreationPanel1_C_GetSkillTemplatesByAttribute_Params params;
-	params.Attribute = Attribute;
+	UUI_CharacterCreationPanel1_C_GetSkillTemplatesByAttribute_Params fn_params;
+	fn_params.Attribute = Attribute;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (outSkills != nullptr)
-		*outSkills = params.outSkills;
+		*outSkills = fn_params.outSkills;
 }
 
 
@@ -349,13 +366,13 @@ void UUI_CharacterCreationPanel1_C::OnSkillValueChanged(ESkillAttribute Attribut
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.OnSkillValueChanged");
 
-	UUI_CharacterCreationPanel1_C_OnSkillValueChanged_Params params;
-	params.Attribute = Attribute;
-	params.Slider = Slider;
+	UUI_CharacterCreationPanel1_C_OnSkillValueChanged_Params fn_params;
+	fn_params.Attribute = Attribute;
+	fn_params.Slider = Slider;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -370,12 +387,12 @@ void UUI_CharacterCreationPanel1_C::UpdateSkillsForAttribute(ESkillAttribute Att
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.UpdateSkillsForAttribute");
 
-	UUI_CharacterCreationPanel1_C_UpdateSkillsForAttribute_Params params;
-	params.Attribute = Attribute;
+	UUI_CharacterCreationPanel1_C_UpdateSkillsForAttribute_Params fn_params;
+	fn_params.Attribute = Attribute;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -388,11 +405,11 @@ void UUI_CharacterCreationPanel1_C::UpdateSkillsPanel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.UpdateSkillsPanel");
 
-	UUI_CharacterCreationPanel1_C_UpdateSkillsPanel_Params params;
+	UUI_CharacterCreationPanel1_C_UpdateSkillsPanel_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -405,11 +422,11 @@ void UUI_CharacterCreationPanel1_C::InitSkills()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.InitSkills");
 
-	UUI_CharacterCreationPanel1_C_InitSkills_Params params;
+	UUI_CharacterCreationPanel1_C_InitSkills_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -424,12 +441,12 @@ void UUI_CharacterCreationPanel1_C::UpdateTriangle(float DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.UpdateTriangle");
 
-	UUI_CharacterCreationPanel1_C_UpdateTriangle_Params params;
-	params.DeltaTime = DeltaTime;
+	UUI_CharacterCreationPanel1_C_UpdateTriangle_Params fn_params;
+	fn_params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -445,13 +462,13 @@ void UUI_CharacterCreationPanel1_C::ModifyAttributeModifier(class UUI_CC_Attribu
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.ModifyAttributeModifier");
 
-	UUI_CharacterCreationPanel1_C_ModifyAttributeModifier_Params params;
-	params.attributeModifier = attributeModifier;
-	params.modifier = modifier;
+	UUI_CharacterCreationPanel1_C_ModifyAttributeModifier_Params fn_params;
+	fn_params.attributeModifier = attributeModifier;
+	fn_params.modifier = modifier;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -466,12 +483,12 @@ void UUI_CharacterCreationPanel1_C::ModifySetAttributesByAge(const struct FVecto
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.ModifySetAttributesByAge");
 
-	UUI_CharacterCreationPanel1_C_ModifySetAttributesByAge_Params params;
-	params.lastAgeModifiers = lastAgeModifiers;
+	UUI_CharacterCreationPanel1_C_ModifySetAttributesByAge_Params fn_params;
+	fn_params.lastAgeModifiers = lastAgeModifiers;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -487,17 +504,17 @@ void UUI_CharacterCreationPanel1_C::GetAgeBonusForAttribute(ESkillAttribute Attr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.GetAgeBonusForAttribute");
 
-	UUI_CharacterCreationPanel1_C_GetAgeBonusForAttribute_Params params;
-	params.Attribute = Attribute;
+	UUI_CharacterCreationPanel1_C_GetAgeBonusForAttribute_Params fn_params;
+	fn_params.Attribute = Attribute;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (modifier != nullptr)
-		*modifier = params.modifier;
+		*modifier = fn_params.modifier;
 }
 
 
@@ -508,11 +525,11 @@ void UUI_CharacterCreationPanel1_C::UpdateAvailablePoints()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.UpdateAvailablePoints");
 
-	UUI_CharacterCreationPanel1_C_UpdateAvailablePoints_Params params;
+	UUI_CharacterCreationPanel1_C_UpdateAvailablePoints_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -528,13 +545,13 @@ void UUI_CharacterCreationPanel1_C::DecreaseAttributeModifier(class UUI_CC_Attri
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.DecreaseAttributeModifier");
 
-	UUI_CharacterCreationPanel1_C_DecreaseAttributeModifier_Params params;
-	params.attributeModifier = attributeModifier;
-	params.adjustmentStep = adjustmentStep;
+	UUI_CharacterCreationPanel1_C_DecreaseAttributeModifier_Params fn_params;
+	fn_params.attributeModifier = attributeModifier;
+	fn_params.adjustmentStep = adjustmentStep;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -550,13 +567,13 @@ void UUI_CharacterCreationPanel1_C::IncreaseAttributeModifier(class UUI_CC_Attri
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.IncreaseAttributeModifier");
 
-	UUI_CharacterCreationPanel1_C_IncreaseAttributeModifier_Params params;
-	params.attributeModifier = attributeModifier;
-	params.adjustmentStep = adjustmentStep;
+	UUI_CharacterCreationPanel1_C_IncreaseAttributeModifier_Params fn_params;
+	fn_params.attributeModifier = attributeModifier;
+	fn_params.adjustmentStep = adjustmentStep;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -573,18 +590,18 @@ void UUI_CharacterCreationPanel1_C::ApplyTemplateToPrisoners(bool applySkills, b
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.ApplyTemplateToPrisoners");
 
-	UUI_CharacterCreationPanel1_C_ApplyTemplateToPrisoners_Params params;
-	params.applySkills = applySkills;
-	params.applyExact = applyExact;
+	UUI_CharacterCreationPanel1_C_ApplyTemplateToPrisoners_Params fn_params;
+	fn_params.applySkills = applySkills;
+	fn_params.applyExact = applyExact;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (CharacterTemplate != nullptr)
-		*CharacterTemplate = params.CharacterTemplate;
+		*CharacterTemplate = fn_params.CharacterTemplate;
 }
 
 
@@ -598,17 +615,17 @@ void UUI_CharacterCreationPanel1_C::GetNumberTextWithSign(float Number, struct F
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.GetNumberTextWithSign");
 
-	UUI_CharacterCreationPanel1_C_GetNumberTextWithSign_Params params;
-	params.Number = Number;
+	UUI_CharacterCreationPanel1_C_GetNumberTextWithSign_Params fn_params;
+	fn_params.Number = Number;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (numberWithSignText != nullptr)
-		*numberWithSignText = params.numberWithSignText;
+		*numberWithSignText = fn_params.numberWithSignText;
 }
 
 
@@ -621,12 +638,12 @@ void UUI_CharacterCreationPanel1_C::SetAge(int Age)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.SetAge");
 
-	UUI_CharacterCreationPanel1_C_SetAge_Params params;
-	params.Age = Age;
+	UUI_CharacterCreationPanel1_C_SetAge_Params fn_params;
+	fn_params.Age = Age;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -643,19 +660,19 @@ struct FEventReply UUI_CharacterCreationPanel1_C::OnMouseButtonDown_1(const stru
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.OnMouseButtonDown_1");
 
-	UUI_CharacterCreationPanel1_C_OnMouseButtonDown_1_Params params;
-	params.MyGeometry = MyGeometry;
+	UUI_CharacterCreationPanel1_C_OnMouseButtonDown_1_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (MouseEvent != nullptr)
-		*MouseEvent = params.MouseEvent;
+		*MouseEvent = fn_params.MouseEvent;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -666,11 +683,11 @@ void UUI_CharacterCreationPanel1_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.Construct");
 
-	UUI_CharacterCreationPanel1_C_Construct_Params params;
+	UUI_CharacterCreationPanel1_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -680,19 +697,19 @@ void UUI_CharacterCreationPanel1_C::Construct()
 // (BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          LeftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          leftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_CharacterCreationPanel1_C::BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_50_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage)
+void UUI_CharacterCreationPanel1_C::BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_50_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_50_OnIndexChanged__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_50_OnIndexChanged__DelegateSignature_Params params;
-	params.Index = Index;
-	params.LeftoverPercentage = LeftoverPercentage;
+	UUI_CharacterCreationPanel1_C_BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_50_OnIndexChanged__DelegateSignature_Params fn_params;
+	fn_params.Index = Index;
+	fn_params.leftoverPercentage = leftoverPercentage;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -707,12 +724,12 @@ void UUI_CharacterCreationPanel1_C::BndEvt__UI_LeanFatMuscleTriangle_K2Node_Comp
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__UI_LeanFatMuscleTriangle_K2Node_ComponentBoundEvent_5_AttributesChanged__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__UI_LeanFatMuscleTriangle_K2Node_ComponentBoundEvent_5_AttributesChanged__DelegateSignature_Params params;
-	params.Attributes = Attributes;
+	UUI_CharacterCreationPanel1_C_BndEvt__UI_LeanFatMuscleTriangle_K2Node_ComponentBoundEvent_5_AttributesChanged__DelegateSignature_Params fn_params;
+	fn_params.Attributes = Attributes;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -722,19 +739,19 @@ void UUI_CharacterCreationPanel1_C::BndEvt__UI_LeanFatMuscleTriangle_K2Node_Comp
 // (BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          LeftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          leftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_CharacterCreationPanel1_C::BndEvt__TattooSlider_K2Node_ComponentBoundEvent_152_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage)
+void UUI_CharacterCreationPanel1_C::BndEvt__TattooSlider_K2Node_ComponentBoundEvent_152_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__TattooSlider_K2Node_ComponentBoundEvent_152_OnIndexChanged__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__TattooSlider_K2Node_ComponentBoundEvent_152_OnIndexChanged__DelegateSignature_Params params;
-	params.Index = Index;
-	params.LeftoverPercentage = LeftoverPercentage;
+	UUI_CharacterCreationPanel1_C_BndEvt__TattooSlider_K2Node_ComponentBoundEvent_152_OnIndexChanged__DelegateSignature_Params fn_params;
+	fn_params.Index = Index;
+	fn_params.leftoverPercentage = leftoverPercentage;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -744,19 +761,19 @@ void UUI_CharacterCreationPanel1_C::BndEvt__TattooSlider_K2Node_ComponentBoundEv
 // (BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          LeftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          leftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_CharacterCreationPanel1_C::BndEvt__HeadSlider_K2Node_ComponentBoundEvent_153_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage)
+void UUI_CharacterCreationPanel1_C::BndEvt__HeadSlider_K2Node_ComponentBoundEvent_153_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__HeadSlider_K2Node_ComponentBoundEvent_153_OnIndexChanged__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__HeadSlider_K2Node_ComponentBoundEvent_153_OnIndexChanged__DelegateSignature_Params params;
-	params.Index = Index;
-	params.LeftoverPercentage = LeftoverPercentage;
+	UUI_CharacterCreationPanel1_C_BndEvt__HeadSlider_K2Node_ComponentBoundEvent_153_OnIndexChanged__DelegateSignature_Params fn_params;
+	fn_params.Index = Index;
+	fn_params.leftoverPercentage = leftoverPercentage;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -766,19 +783,19 @@ void UUI_CharacterCreationPanel1_C::BndEvt__HeadSlider_K2Node_ComponentBoundEven
 // (BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          LeftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          leftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_CharacterCreationPanel1_C::BndEvt__UI_CC_ProgressBar_C_0_K2Node_ComponentBoundEvent_242_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage)
+void UUI_CharacterCreationPanel1_C::BndEvt__UI_CC_ProgressBar_C_0_K2Node_ComponentBoundEvent_242_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__UI_CC_ProgressBar_C_0_K2Node_ComponentBoundEvent_242_OnIndexChanged__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__UI_CC_ProgressBar_C_0_K2Node_ComponentBoundEvent_242_OnIndexChanged__DelegateSignature_Params params;
-	params.Index = Index;
-	params.LeftoverPercentage = LeftoverPercentage;
+	UUI_CharacterCreationPanel1_C_BndEvt__UI_CC_ProgressBar_C_0_K2Node_ComponentBoundEvent_242_OnIndexChanged__DelegateSignature_Params fn_params;
+	fn_params.Index = Index;
+	fn_params.leftoverPercentage = leftoverPercentage;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -791,11 +808,11 @@ void UUI_CharacterCreationPanel1_C::BndEvt__AttributeModifierStrength_K2Node_Com
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__AttributeModifierStrength_K2Node_ComponentBoundEvent_36_OnIncrease__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__AttributeModifierStrength_K2Node_ComponentBoundEvent_36_OnIncrease__DelegateSignature_Params params;
+	UUI_CharacterCreationPanel1_C_BndEvt__AttributeModifierStrength_K2Node_ComponentBoundEvent_36_OnIncrease__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -808,11 +825,11 @@ void UUI_CharacterCreationPanel1_C::BndEvt__AttributeModifierStrength_K2Node_Com
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__AttributeModifierStrength_K2Node_ComponentBoundEvent_40_OnDecrease__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__AttributeModifierStrength_K2Node_ComponentBoundEvent_40_OnDecrease__DelegateSignature_Params params;
+	UUI_CharacterCreationPanel1_C_BndEvt__AttributeModifierStrength_K2Node_ComponentBoundEvent_40_OnDecrease__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -825,11 +842,11 @@ void UUI_CharacterCreationPanel1_C::BndEvt__AttributeModifierConstitution_K2Node
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__AttributeModifierConstitution_K2Node_ComponentBoundEvent_47_OnIncrease__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__AttributeModifierConstitution_K2Node_ComponentBoundEvent_47_OnIncrease__DelegateSignature_Params params;
+	UUI_CharacterCreationPanel1_C_BndEvt__AttributeModifierConstitution_K2Node_ComponentBoundEvent_47_OnIncrease__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -842,11 +859,11 @@ void UUI_CharacterCreationPanel1_C::BndEvt__AttributeModifierConstitution_K2Node
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__AttributeModifierConstitution_K2Node_ComponentBoundEvent_59_OnDecrease__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__AttributeModifierConstitution_K2Node_ComponentBoundEvent_59_OnDecrease__DelegateSignature_Params params;
+	UUI_CharacterCreationPanel1_C_BndEvt__AttributeModifierConstitution_K2Node_ComponentBoundEvent_59_OnDecrease__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -859,11 +876,11 @@ void UUI_CharacterCreationPanel1_C::BndEvt__AttributeModifierDexterity_K2Node_Co
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__AttributeModifierDexterity_K2Node_ComponentBoundEvent_68_OnIncrease__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__AttributeModifierDexterity_K2Node_ComponentBoundEvent_68_OnIncrease__DelegateSignature_Params params;
+	UUI_CharacterCreationPanel1_C_BndEvt__AttributeModifierDexterity_K2Node_ComponentBoundEvent_68_OnIncrease__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -876,11 +893,11 @@ void UUI_CharacterCreationPanel1_C::BndEvt__AttributeModifierDexterity_K2Node_Co
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__AttributeModifierDexterity_K2Node_ComponentBoundEvent_81_OnDecrease__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__AttributeModifierDexterity_K2Node_ComponentBoundEvent_81_OnDecrease__DelegateSignature_Params params;
+	UUI_CharacterCreationPanel1_C_BndEvt__AttributeModifierDexterity_K2Node_ComponentBoundEvent_81_OnDecrease__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -893,11 +910,11 @@ void UUI_CharacterCreationPanel1_C::BndEvt__AttributeModifierIntelligence_K2Node
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__AttributeModifierIntelligence_K2Node_ComponentBoundEvent_92_OnIncrease__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__AttributeModifierIntelligence_K2Node_ComponentBoundEvent_92_OnIncrease__DelegateSignature_Params params;
+	UUI_CharacterCreationPanel1_C_BndEvt__AttributeModifierIntelligence_K2Node_ComponentBoundEvent_92_OnIncrease__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -910,11 +927,11 @@ void UUI_CharacterCreationPanel1_C::BndEvt__AttributeModifierIntelligence_K2Node
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__AttributeModifierIntelligence_K2Node_ComponentBoundEvent_107_OnDecrease__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__AttributeModifierIntelligence_K2Node_ComponentBoundEvent_107_OnDecrease__DelegateSignature_Params params;
+	UUI_CharacterCreationPanel1_C_BndEvt__AttributeModifierIntelligence_K2Node_ComponentBoundEvent_107_OnDecrease__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -930,13 +947,13 @@ void UUI_CharacterCreationPanel1_C::Tick(struct FGeometry* MyGeometry, float* In
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.Tick");
 
-	UUI_CharacterCreationPanel1_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UUI_CharacterCreationPanel1_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -949,11 +966,11 @@ void UUI_CharacterCreationPanel1_C::BndEvt__UI_MenuButton_1_K2Node_ComponentBoun
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__UI_MenuButton_1_K2Node_ComponentBoundEvent_170_OnClicked__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__UI_MenuButton_1_K2Node_ComponentBoundEvent_170_OnClicked__DelegateSignature_Params params;
+	UUI_CharacterCreationPanel1_C_BndEvt__UI_MenuButton_1_K2Node_ComponentBoundEvent_170_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -966,11 +983,11 @@ void UUI_CharacterCreationPanel1_C::BndEvt__UI_MenuButton_C_1_K2Node_ComponentBo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__UI_MenuButton_C_1_K2Node_ComponentBoundEvent_173_OnClicked__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__UI_MenuButton_C_1_K2Node_ComponentBoundEvent_173_OnClicked__DelegateSignature_Params params;
+	UUI_CharacterCreationPanel1_C_BndEvt__UI_MenuButton_C_1_K2Node_ComponentBoundEvent_173_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -983,11 +1000,11 @@ void UUI_CharacterCreationPanel1_C::BndEvt__ButtonSwitchToCriminalRecord_K2Node_
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__ButtonSwitchToCriminalRecord_K2Node_ComponentBoundEvent_209_OnClicked__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__ButtonSwitchToCriminalRecord_K2Node_ComponentBoundEvent_209_OnClicked__DelegateSignature_Params params;
+	UUI_CharacterCreationPanel1_C_BndEvt__ButtonSwitchToCriminalRecord_K2Node_ComponentBoundEvent_209_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1000,11 +1017,11 @@ void UUI_CharacterCreationPanel1_C::BndEvt__UI_CriminalRecord_K2Node_ComponentBo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__UI_CriminalRecord_K2Node_ComponentBoundEvent_1199_OnOkClicked__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__UI_CriminalRecord_K2Node_ComponentBoundEvent_1199_OnOkClicked__DelegateSignature_Params params;
+	UUI_CharacterCreationPanel1_C_BndEvt__UI_CriminalRecord_K2Node_ComponentBoundEvent_1199_OnOkClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1017,11 +1034,11 @@ void UUI_CharacterCreationPanel1_C::BndEvt__UI_CriminalRecord_K2Node_ComponentBo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__UI_CriminalRecord_K2Node_ComponentBoundEvent_1260_OnCancelClicked__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__UI_CriminalRecord_K2Node_ComponentBoundEvent_1260_OnCancelClicked__DelegateSignature_Params params;
+	UUI_CharacterCreationPanel1_C_BndEvt__UI_CriminalRecord_K2Node_ComponentBoundEvent_1260_OnCancelClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1034,11 +1051,11 @@ void UUI_CharacterCreationPanel1_C::BndEvt__ButtonCancel_K2Node_ComponentBoundEv
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__ButtonCancel_K2Node_ComponentBoundEvent_1387_OnClicked__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__ButtonCancel_K2Node_ComponentBoundEvent_1387_OnClicked__DelegateSignature_Params params;
+	UUI_CharacterCreationPanel1_C_BndEvt__ButtonCancel_K2Node_ComponentBoundEvent_1387_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1051,11 +1068,11 @@ void UUI_CharacterCreationPanel1_C::BndEvt__ButtonRandomizeAttributes_K2Node_Com
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__ButtonRandomizeAttributes_K2Node_ComponentBoundEvent_132_OnClicked__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__ButtonRandomizeAttributes_K2Node_ComponentBoundEvent_132_OnClicked__DelegateSignature_Params params;
+	UUI_CharacterCreationPanel1_C_BndEvt__ButtonRandomizeAttributes_K2Node_ComponentBoundEvent_132_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1068,11 +1085,11 @@ void UUI_CharacterCreationPanel1_C::BndEvt__ButtonRandomizeSkills_K2Node_Compone
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__ButtonRandomizeSkills_K2Node_ComponentBoundEvent_67_OnClicked__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__ButtonRandomizeSkills_K2Node_ComponentBoundEvent_67_OnClicked__DelegateSignature_Params params;
+	UUI_CharacterCreationPanel1_C_BndEvt__ButtonRandomizeSkills_K2Node_ComponentBoundEvent_67_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1088,13 +1105,13 @@ void UUI_CharacterCreationPanel1_C::BndEvt__NameTextSecondPage_K2Node_ComponentB
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__NameTextSecondPage_K2Node_ComponentBoundEvent_489_OnEditableTextBoxCommittedEvent__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__NameTextSecondPage_K2Node_ComponentBoundEvent_489_OnEditableTextBoxCommittedEvent__DelegateSignature_Params params;
-	params.Text = Text;
-	params.CommitMethod = CommitMethod;
+	UUI_CharacterCreationPanel1_C_BndEvt__NameTextSecondPage_K2Node_ComponentBoundEvent_489_OnEditableTextBoxCommittedEvent__DelegateSignature_Params fn_params;
+	fn_params.Text = Text;
+	fn_params.CommitMethod = CommitMethod;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1110,13 +1127,13 @@ void UUI_CharacterCreationPanel1_C::BndEvt__NameText_K2Node_ComponentBoundEvent_
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__NameText_K2Node_ComponentBoundEvent_495_OnEditableTextBoxCommittedEvent__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__NameText_K2Node_ComponentBoundEvent_495_OnEditableTextBoxCommittedEvent__DelegateSignature_Params params;
-	params.Text = Text;
-	params.CommitMethod = CommitMethod;
+	UUI_CharacterCreationPanel1_C_BndEvt__NameText_K2Node_ComponentBoundEvent_495_OnEditableTextBoxCommittedEvent__DelegateSignature_Params fn_params;
+	fn_params.Text = Text;
+	fn_params.CommitMethod = CommitMethod;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1131,12 +1148,12 @@ void UUI_CharacterCreationPanel1_C::BndEvt__NameText_K2Node_ComponentBoundEvent_
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__NameText_K2Node_ComponentBoundEvent_52_OnEditableTextBoxChangedEvent__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__NameText_K2Node_ComponentBoundEvent_52_OnEditableTextBoxChangedEvent__DelegateSignature_Params params;
-	params.Text = Text;
+	UUI_CharacterCreationPanel1_C_BndEvt__NameText_K2Node_ComponentBoundEvent_52_OnEditableTextBoxChangedEvent__DelegateSignature_Params fn_params;
+	fn_params.Text = Text;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1151,12 +1168,12 @@ void UUI_CharacterCreationPanel1_C::BndEvt__NameTextSecondPage_K2Node_ComponentB
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__NameTextSecondPage_K2Node_ComponentBoundEvent_108_OnEditableTextBoxChangedEvent__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__NameTextSecondPage_K2Node_ComponentBoundEvent_108_OnEditableTextBoxChangedEvent__DelegateSignature_Params params;
-	params.Text = Text;
+	UUI_CharacterCreationPanel1_C_BndEvt__NameTextSecondPage_K2Node_ComponentBoundEvent_108_OnEditableTextBoxChangedEvent__DelegateSignature_Params fn_params;
+	fn_params.Text = Text;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1171,12 +1188,12 @@ void UUI_CharacterCreationPanel1_C::ShowErrorDialog(struct FText* Message)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.ShowErrorDialog");
 
-	UUI_CharacterCreationPanel1_C_ShowErrorDialog_Params params;
-	params.Message = Message;
+	UUI_CharacterCreationPanel1_C_ShowErrorDialog_Params fn_params;
+	fn_params.Message = Message;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1189,11 +1206,11 @@ void UUI_CharacterCreationPanel1_C::OnUserProfileCreated()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.OnUserProfileCreated");
 
-	UUI_CharacterCreationPanel1_C_OnUserProfileCreated_Params params;
+	UUI_CharacterCreationPanel1_C_OnUserProfileCreated_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1206,11 +1223,11 @@ void UUI_CharacterCreationPanel1_C::BeginWaitingOnServerResponse()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BeginWaitingOnServerResponse");
 
-	UUI_CharacterCreationPanel1_C_BeginWaitingOnServerResponse_Params params;
+	UUI_CharacterCreationPanel1_C_BeginWaitingOnServerResponse_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1223,11 +1240,11 @@ void UUI_CharacterCreationPanel1_C::EndWaitingOnServerResponse()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.EndWaitingOnServerResponse");
 
-	UUI_CharacterCreationPanel1_C_EndWaitingOnServerResponse_Params params;
+	UUI_CharacterCreationPanel1_C_EndWaitingOnServerResponse_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1240,11 +1257,11 @@ void UUI_CharacterCreationPanel1_C::Keep_Server_Connection_Alive()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.Keep Server Connection Alive");
 
-	UUI_CharacterCreationPanel1_C_Keep_Server_Connection_Alive_Params params;
+	UUI_CharacterCreationPanel1_C_Keep_Server_Connection_Alive_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1254,19 +1271,19 @@ void UUI_CharacterCreationPanel1_C::Keep_Server_Connection_Alive()
 // (BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          LeftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          leftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_CharacterCreationPanel1_C::BndEvt__PenisSizeSlider_K2Node_ComponentBoundEvent_0_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage)
+void UUI_CharacterCreationPanel1_C::BndEvt__PenisSizeSlider_K2Node_ComponentBoundEvent_0_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__PenisSizeSlider_K2Node_ComponentBoundEvent_0_OnIndexChanged__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__PenisSizeSlider_K2Node_ComponentBoundEvent_0_OnIndexChanged__DelegateSignature_Params params;
-	params.Index = Index;
-	params.LeftoverPercentage = LeftoverPercentage;
+	UUI_CharacterCreationPanel1_C_BndEvt__PenisSizeSlider_K2Node_ComponentBoundEvent_0_OnIndexChanged__DelegateSignature_Params fn_params;
+	fn_params.Index = Index;
+	fn_params.leftoverPercentage = leftoverPercentage;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1276,19 +1293,19 @@ void UUI_CharacterCreationPanel1_C::BndEvt__PenisSizeSlider_K2Node_ComponentBoun
 // (BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          LeftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          leftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_CharacterCreationPanel1_C::BndEvt__ConcealedModeSlider_K2Node_ComponentBoundEvent_1_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage)
+void UUI_CharacterCreationPanel1_C::BndEvt__ConcealedModeSlider_K2Node_ComponentBoundEvent_1_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__ConcealedModeSlider_K2Node_ComponentBoundEvent_1_OnIndexChanged__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__ConcealedModeSlider_K2Node_ComponentBoundEvent_1_OnIndexChanged__DelegateSignature_Params params;
-	params.Index = Index;
-	params.LeftoverPercentage = LeftoverPercentage;
+	UUI_CharacterCreationPanel1_C_BndEvt__ConcealedModeSlider_K2Node_ComponentBoundEvent_1_OnIndexChanged__DelegateSignature_Params fn_params;
+	fn_params.Index = Index;
+	fn_params.leftoverPercentage = leftoverPercentage;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1298,19 +1315,19 @@ void UUI_CharacterCreationPanel1_C::BndEvt__ConcealedModeSlider_K2Node_Component
 // (BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          LeftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          leftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_CharacterCreationPanel1_C::BndEvt__UI_CC_ProgressBar_0_K2Node_ComponentBoundEvent_2_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage)
+void UUI_CharacterCreationPanel1_C::BndEvt__UI_CC_ProgressBar_0_K2Node_ComponentBoundEvent_2_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__UI_CC_ProgressBar_0_K2Node_ComponentBoundEvent_2_OnIndexChanged__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__UI_CC_ProgressBar_0_K2Node_ComponentBoundEvent_2_OnIndexChanged__DelegateSignature_Params params;
-	params.Index = Index;
-	params.LeftoverPercentage = LeftoverPercentage;
+	UUI_CharacterCreationPanel1_C_BndEvt__UI_CC_ProgressBar_0_K2Node_ComponentBoundEvent_2_OnIndexChanged__DelegateSignature_Params fn_params;
+	fn_params.Index = Index;
+	fn_params.leftoverPercentage = leftoverPercentage;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1320,19 +1337,19 @@ void UUI_CharacterCreationPanel1_C::BndEvt__UI_CC_ProgressBar_0_K2Node_Component
 // (BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          LeftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          leftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_CharacterCreationPanel1_C::BndEvt__BreastSizeSlider_K2Node_ComponentBoundEvent_3_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage)
+void UUI_CharacterCreationPanel1_C::BndEvt__BreastSizeSlider_K2Node_ComponentBoundEvent_3_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__BreastSizeSlider_K2Node_ComponentBoundEvent_3_OnIndexChanged__DelegateSignature");
 
-	UUI_CharacterCreationPanel1_C_BndEvt__BreastSizeSlider_K2Node_ComponentBoundEvent_3_OnIndexChanged__DelegateSignature_Params params;
-	params.Index = Index;
-	params.LeftoverPercentage = LeftoverPercentage;
+	UUI_CharacterCreationPanel1_C_BndEvt__BreastSizeSlider_K2Node_ComponentBoundEvent_3_OnIndexChanged__DelegateSignature_Params fn_params;
+	fn_params.Index = Index;
+	fn_params.leftoverPercentage = leftoverPercentage;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1347,12 +1364,12 @@ void UUI_CharacterCreationPanel1_C::ExecuteUbergraph_UI_CharacterCreationPanel1(
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.ExecuteUbergraph_UI_CharacterCreationPanel1");
 
-	UUI_CharacterCreationPanel1_C_ExecuteUbergraph_UI_CharacterCreationPanel1_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_CharacterCreationPanel1_C_ExecuteUbergraph_UI_CharacterCreationPanel1_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

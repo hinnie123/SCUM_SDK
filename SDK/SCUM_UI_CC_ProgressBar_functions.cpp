@@ -21,12 +21,12 @@ void UUI_CC_ProgressBar_C::SetFromNormalizedValue(float normalizedValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.SetFromNormalizedValue");
 
-	UUI_CC_ProgressBar_C_SetFromNormalizedValue_Params params;
-	params.normalizedValue = normalizedValue;
+	UUI_CC_ProgressBar_C_SetFromNormalizedValue_Params fn_params;
+	fn_params.normalizedValue = normalizedValue;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -41,16 +41,16 @@ void UUI_CC_ProgressBar_C::GetNormalizedValue(float* normalizedValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.GetNormalizedValue");
 
-	UUI_CC_ProgressBar_C_GetNormalizedValue_Params params;
+	UUI_CC_ProgressBar_C_GetNormalizedValue_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (normalizedValue != nullptr)
-		*normalizedValue = params.normalizedValue;
+		*normalizedValue = fn_params.normalizedValue;
 }
 
 
@@ -63,16 +63,16 @@ void UUI_CC_ProgressBar_C::UpdateSliderFromMouseEvent(struct FPointerEvent* Mous
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.UpdateSliderFromMouseEvent");
 
-	UUI_CC_ProgressBar_C_UpdateSliderFromMouseEvent_Params params;
+	UUI_CC_ProgressBar_C_UpdateSliderFromMouseEvent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (MouseEvent != nullptr)
-		*MouseEvent = params.MouseEvent;
+		*MouseEvent = fn_params.MouseEvent;
 }
 
 
@@ -86,13 +86,13 @@ void UUI_CC_ProgressBar_C::SetSliderFromPercentage(float Percent, bool onlyWhole
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.SetSliderFromPercentage");
 
-	UUI_CC_ProgressBar_C_SetSliderFromPercentage_Params params;
-	params.Percent = Percent;
-	params.onlyWholeNumbers = onlyWholeNumbers;
+	UUI_CC_ProgressBar_C_SetSliderFromPercentage_Params fn_params;
+	fn_params.Percent = Percent;
+	fn_params.onlyWholeNumbers = onlyWholeNumbers;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -108,13 +108,13 @@ void UUI_CC_ProgressBar_C::SetValue(int Index, float leftover)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.SetValue");
 
-	UUI_CC_ProgressBar_C_SetValue_Params params;
-	params.Index = Index;
-	params.leftover = leftover;
+	UUI_CC_ProgressBar_C_SetValue_Params fn_params;
+	fn_params.Index = Index;
+	fn_params.leftover = leftover;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -129,12 +129,12 @@ void UUI_CC_ProgressBar_C::SetTitle(const struct FText& Title)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.SetTitle");
 
-	UUI_CC_ProgressBar_C_SetTitle_Params params;
-	params.Title = Title;
+	UUI_CC_ProgressBar_C_SetTitle_Params fn_params;
+	fn_params.Title = Title;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -147,11 +147,11 @@ void UUI_CC_ProgressBar_C::ProcessIndexChange()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.ProcessIndexChange");
 
-	UUI_CC_ProgressBar_C_ProcessIndexChange_Params params;
+	UUI_CC_ProgressBar_C_ProcessIndexChange_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -168,17 +168,17 @@ struct FEventReply UUI_CC_ProgressBar_C::OnMouseButtonUp(struct FGeometry* MyGeo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.OnMouseButtonUp");
 
-	UUI_CC_ProgressBar_C_OnMouseButtonUp_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_CC_ProgressBar_C_OnMouseButtonUp_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -191,12 +191,12 @@ void UUI_CC_ProgressBar_C::SetEnabledState(bool Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.SetEnabledState");
 
-	UUI_CC_ProgressBar_C_SetEnabledState_Params params;
-	params.Enabled = Enabled;
+	UUI_CC_ProgressBar_C_SetEnabledState_Params fn_params;
+	fn_params.Enabled = Enabled;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -213,17 +213,17 @@ struct FEventReply UUI_CC_ProgressBar_C::OnMouseButtonDown(struct FGeometry* MyG
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.OnMouseButtonDown");
 
-	UUI_CC_ProgressBar_C_OnMouseButtonDown_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_CC_ProgressBar_C_OnMouseButtonDown_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -238,17 +238,17 @@ struct FEventReply UUI_CC_ProgressBar_C::OnMouseMove(struct FGeometry* MyGeometr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.OnMouseMove");
 
-	UUI_CC_ProgressBar_C_OnMouseMove_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_CC_ProgressBar_C_OnMouseMove_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -259,11 +259,11 @@ void UUI_CC_ProgressBar_C::UpdateBarFromIndex()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.UpdateBarFromIndex");
 
-	UUI_CC_ProgressBar_C_UpdateBarFromIndex_Params params;
+	UUI_CC_ProgressBar_C_UpdateBarFromIndex_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -276,11 +276,11 @@ void UUI_CC_ProgressBar_C::InitFromData()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.InitFromData");
 
-	UUI_CC_ProgressBar_C_InitFromData_Params params;
+	UUI_CC_ProgressBar_C_InitFromData_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -293,11 +293,11 @@ void UUI_CC_ProgressBar_C::CreateMarkers()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.CreateMarkers");
 
-	UUI_CC_ProgressBar_C_CreateMarkers_Params params;
+	UUI_CC_ProgressBar_C_CreateMarkers_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -310,11 +310,11 @@ void UUI_CC_ProgressBar_C::OnSynchronizeProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.OnSynchronizeProperties");
 
-	UUI_CC_ProgressBar_C_OnSynchronizeProperties_Params params;
+	UUI_CC_ProgressBar_C_OnSynchronizeProperties_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -327,11 +327,11 @@ void UUI_CC_ProgressBar_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.Construct");
 
-	UUI_CC_ProgressBar_C_Construct_Params params;
+	UUI_CC_ProgressBar_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -347,13 +347,13 @@ void UUI_CC_ProgressBar_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.Tick");
 
-	UUI_CC_ProgressBar_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UUI_CC_ProgressBar_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -368,12 +368,12 @@ void UUI_CC_ProgressBar_C::ExecuteUbergraph_UI_CC_ProgressBar(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.ExecuteUbergraph_UI_CC_ProgressBar");
 
-	UUI_CC_ProgressBar_C_ExecuteUbergraph_UI_CC_ProgressBar_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_CC_ProgressBar_C_ExecuteUbergraph_UI_CC_ProgressBar_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -386,11 +386,11 @@ void UUI_CC_ProgressBar_C::MouseDown__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.MouseDown__DelegateSignature");
 
-	UUI_CC_ProgressBar_C_MouseDown__DelegateSignature_Params params;
+	UUI_CC_ProgressBar_C_MouseDown__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -403,11 +403,11 @@ void UUI_CC_ProgressBar_C::MouseUp__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.MouseUp__DelegateSignature");
 
-	UUI_CC_ProgressBar_C_MouseUp__DelegateSignature_Params params;
+	UUI_CC_ProgressBar_C_MouseUp__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -417,19 +417,19 @@ void UUI_CC_ProgressBar_C::MouseUp__DelegateSignature()
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          LeftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          leftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_CC_ProgressBar_C::OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage)
+void UUI_CC_ProgressBar_C::OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.OnIndexChanged__DelegateSignature");
 
-	UUI_CC_ProgressBar_C_OnIndexChanged__DelegateSignature_Params params;
-	params.Index = Index;
-	params.LeftoverPercentage = LeftoverPercentage;
+	UUI_CC_ProgressBar_C_OnIndexChanged__DelegateSignature_Params fn_params;
+	fn_params.Index = Index;
+	fn_params.leftoverPercentage = leftoverPercentage;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

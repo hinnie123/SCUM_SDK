@@ -19,11 +19,11 @@ void AImprovised_Wooden_Spear_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Improvised_Wooden_Spear.Improvised_Wooden_Spear_C.UserConstructionScript");
 
-	AImprovised_Wooden_Spear_C_UserConstructionScript_Params params;
+	AImprovised_Wooden_Spear_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

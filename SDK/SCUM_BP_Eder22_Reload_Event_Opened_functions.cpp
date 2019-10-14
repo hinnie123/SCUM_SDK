@@ -21,12 +21,12 @@ void UBP_Eder22_Reload_Event_Opened_C::OnActionAnimNotify(ECharacterActionNotify
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Eder22_Reload_Event_Opened.BP_Eder22_Reload_Event_Opened_C.OnActionAnimNotify");
 
-	UBP_Eder22_Reload_Event_Opened_C_OnActionAnimNotify_Params params;
-	params.notifyType = notifyType;
+	UBP_Eder22_Reload_Event_Opened_C_OnActionAnimNotify_Params fn_params;
+	fn_params.notifyType = notifyType;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -41,12 +41,12 @@ void UBP_Eder22_Reload_Event_Opened_C::ExecuteUbergraph_BP_Eder22_Reload_Event_O
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Eder22_Reload_Event_Opened.BP_Eder22_Reload_Event_Opened_C.ExecuteUbergraph_BP_Eder22_Reload_Event_Opened");
 
-	UBP_Eder22_Reload_Event_Opened_C_ExecuteUbergraph_BP_Eder22_Reload_Event_Opened_Params params;
-	params.EntryPoint = EntryPoint;
+	UBP_Eder22_Reload_Event_Opened_C_ExecuteUbergraph_BP_Eder22_Reload_Event_Opened_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Militry_Quiver.Militry_Quiver_C
-// 0x0000 (0x0858 - 0x0858)
+// 0x0000 (0x0910 - 0x0910)
 class AMilitry_Quiver_C : public AQuiver
 {
 public:

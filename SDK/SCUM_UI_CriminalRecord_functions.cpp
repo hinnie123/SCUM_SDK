@@ -21,12 +21,12 @@ void UUI_CriminalRecord_C::InitFromCharacterTemplate(const struct FCharacterTemp
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CriminalRecord.UI_CriminalRecord_C.InitFromCharacterTemplate");
 
-	UUI_CriminalRecord_C_InitFromCharacterTemplate_Params params;
-	params.Template = Template;
+	UUI_CriminalRecord_C_InitFromCharacterTemplate_Params fn_params;
+	fn_params.Template = Template;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -39,11 +39,11 @@ void UUI_CriminalRecord_C::ClearSkills()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CriminalRecord.UI_CriminalRecord_C.ClearSkills");
 
-	UUI_CriminalRecord_C_ClearSkills_Params params;
+	UUI_CriminalRecord_C_ClearSkills_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -59,13 +59,13 @@ void UUI_CriminalRecord_C::ChangeAttribute(ESkillAttribute Attribute, int Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CriminalRecord.UI_CriminalRecord_C.ChangeAttribute");
 
-	UUI_CriminalRecord_C_ChangeAttribute_Params params;
-	params.Attribute = Attribute;
-	params.Value = Value;
+	UUI_CriminalRecord_C_ChangeAttribute_Params fn_params;
+	fn_params.Attribute = Attribute;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -80,12 +80,12 @@ void UUI_CriminalRecord_C::AddSkill(const struct FSkillTemplate& SkillTemplate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CriminalRecord.UI_CriminalRecord_C.AddSkill");
 
-	UUI_CriminalRecord_C_AddSkill_Params params;
-	params.SkillTemplate = SkillTemplate;
+	UUI_CriminalRecord_C_AddSkill_Params fn_params;
+	fn_params.SkillTemplate = SkillTemplate;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -98,11 +98,11 @@ void UUI_CriminalRecord_C::BndEvt__UI_MenuButton_0_K2Node_ComponentBoundEvent_11
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CriminalRecord.UI_CriminalRecord_C.BndEvt__UI_MenuButton_0_K2Node_ComponentBoundEvent_11_OnClicked__DelegateSignature");
 
-	UUI_CriminalRecord_C_BndEvt__UI_MenuButton_0_K2Node_ComponentBoundEvent_11_OnClicked__DelegateSignature_Params params;
+	UUI_CriminalRecord_C_BndEvt__UI_MenuButton_0_K2Node_ComponentBoundEvent_11_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -115,11 +115,11 @@ void UUI_CriminalRecord_C::BndEvt__CancelButton_K2Node_ComponentBoundEvent_20_On
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CriminalRecord.UI_CriminalRecord_C.BndEvt__CancelButton_K2Node_ComponentBoundEvent_20_OnClicked__DelegateSignature");
 
-	UUI_CriminalRecord_C_BndEvt__CancelButton_K2Node_ComponentBoundEvent_20_OnClicked__DelegateSignature_Params params;
+	UUI_CriminalRecord_C_BndEvt__CancelButton_K2Node_ComponentBoundEvent_20_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -134,12 +134,12 @@ void UUI_CriminalRecord_C::ExecuteUbergraph_UI_CriminalRecord(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CriminalRecord.UI_CriminalRecord_C.ExecuteUbergraph_UI_CriminalRecord");
 
-	UUI_CriminalRecord_C_ExecuteUbergraph_UI_CriminalRecord_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_CriminalRecord_C_ExecuteUbergraph_UI_CriminalRecord_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -152,11 +152,11 @@ void UUI_CriminalRecord_C::OnCancelClicked__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CriminalRecord.UI_CriminalRecord_C.OnCancelClicked__DelegateSignature");
 
-	UUI_CriminalRecord_C_OnCancelClicked__DelegateSignature_Params params;
+	UUI_CriminalRecord_C_OnCancelClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -169,11 +169,11 @@ void UUI_CriminalRecord_C::OnOkClicked__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CriminalRecord.UI_CriminalRecord_C.OnOkClicked__DelegateSignature");
 
-	UUI_CriminalRecord_C_OnOkClicked__DelegateSignature_Params params;
+	UUI_CriminalRecord_C_OnOkClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

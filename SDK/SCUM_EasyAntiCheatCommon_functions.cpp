@@ -21,13 +21,13 @@ void UEasyAntiCheatNetComponent::ServerMessage(TArray<unsigned char> Message)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EasyAntiCheatCommon.EasyAntiCheatNetComponent.ServerMessage");
 
-	UEasyAntiCheatNetComponent_ServerMessage_Params params;
-	params.Message = Message;
+	UEasyAntiCheatNetComponent_ServerMessage_Params fn_params;
+	fn_params.Message = Message;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -42,13 +42,13 @@ void UEasyAntiCheatNetComponent::ClientMessage(TArray<unsigned char> Message)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EasyAntiCheatCommon.EasyAntiCheatNetComponent.ClientMessage");
 
-	UEasyAntiCheatNetComponent_ClientMessage_Params params;
-	params.Message = Message;
+	UEasyAntiCheatNetComponent_ClientMessage_Params fn_params;
+	fn_params.Message = Message;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -22,16 +22,16 @@ float UM1887_InsertShellLoopEmpty_C::ExecuteUsingData(struct FWeaponReloadData* 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function M1887_InsertShellLoopEmpty.M1887_InsertShellLoopEmpty_C.ExecuteUsingData");
 
-	UM1887_InsertShellLoopEmpty_C_ExecuteUsingData_Params params;
-	params.Data = Data;
+	UM1887_InsertShellLoopEmpty_C_ExecuteUsingData_Params fn_params;
+	fn_params.Data = Data;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -45,16 +45,16 @@ bool UM1887_InsertShellLoopEmpty_C::CanExecuteUsingData(struct FWeaponReloadData
 {
 	static auto fn = UObject::FindObject<UFunction>("Function M1887_InsertShellLoopEmpty.M1887_InsertShellLoopEmpty_C.CanExecuteUsingData");
 
-	UM1887_InsertShellLoopEmpty_C_CanExecuteUsingData_Params params;
-	params.Data = Data;
+	UM1887_InsertShellLoopEmpty_C_CanExecuteUsingData_Params fn_params;
+	fn_params.Data = Data;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -67,12 +67,12 @@ void UM1887_InsertShellLoopEmpty_C::OnActionAnimNotify(ECharacterActionNotifyTyp
 {
 	static auto fn = UObject::FindObject<UFunction>("Function M1887_InsertShellLoopEmpty.M1887_InsertShellLoopEmpty_C.OnActionAnimNotify");
 
-	UM1887_InsertShellLoopEmpty_C_OnActionAnimNotify_Params params;
-	params.notifyType = notifyType;
+	UM1887_InsertShellLoopEmpty_C_OnActionAnimNotify_Params fn_params;
+	fn_params.notifyType = notifyType;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -87,12 +87,12 @@ void UM1887_InsertShellLoopEmpty_C::ExecuteUbergraph_M1887_InsertShellLoopEmpty(
 {
 	static auto fn = UObject::FindObject<UFunction>("Function M1887_InsertShellLoopEmpty.M1887_InsertShellLoopEmpty_C.ExecuteUbergraph_M1887_InsertShellLoopEmpty");
 
-	UM1887_InsertShellLoopEmpty_C_ExecuteUbergraph_M1887_InsertShellLoopEmpty_Params params;
-	params.EntryPoint = EntryPoint;
+	UM1887_InsertShellLoopEmpty_C_ExecuteUbergraph_M1887_InsertShellLoopEmpty_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

@@ -21,12 +21,12 @@ void UUI_GameEventLeaderboardWidget_C::SetTopShownCount(int count)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.SetTopShownCount");
 
-	UUI_GameEventLeaderboardWidget_C_SetTopShownCount_Params params;
-	params.count = count;
+	UUI_GameEventLeaderboardWidget_C_SetTopShownCount_Params fn_params;
+	fn_params.count = count;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -42,13 +42,13 @@ void UUI_GameEventLeaderboardWidget_C::AssignRowColor(class UUI_GameEventLeaderb
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.AssignRowColor");
 
-	UUI_GameEventLeaderboardWidget_C_AssignRowColor_Params params;
-	params.row = row;
-	params.Rank = Rank;
+	UUI_GameEventLeaderboardWidget_C_AssignRowColor_Params fn_params;
+	fn_params.row = row;
+	fn_params.Rank = Rank;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -61,11 +61,11 @@ void UUI_GameEventLeaderboardWidget_C::UpdateTopList()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.UpdateTopList");
 
-	UUI_GameEventLeaderboardWidget_C_UpdateTopList_Params params;
+	UUI_GameEventLeaderboardWidget_C_UpdateTopList_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -81,13 +81,13 @@ void UUI_GameEventLeaderboardWidget_C::RefreshData(EEventsRankingStatsOrderByFie
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.RefreshData");
 
-	UUI_GameEventLeaderboardWidget_C_RefreshData_Params params;
-	params.orderByField = orderByField;
-	params.sortOrder = sortOrder;
+	UUI_GameEventLeaderboardWidget_C_RefreshData_Params fn_params;
+	fn_params.orderByField = orderByField;
+	fn_params.sortOrder = sortOrder;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -102,12 +102,12 @@ void UUI_GameEventLeaderboardWidget_C::UpdateRankingList(int Rank)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.UpdateRankingList");
 
-	UUI_GameEventLeaderboardWidget_C_UpdateRankingList_Params params;
-	params.Rank = Rank;
+	UUI_GameEventLeaderboardWidget_C_UpdateRankingList_Params fn_params;
+	fn_params.Rank = Rank;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -123,17 +123,17 @@ void UUI_GameEventLeaderboardWidget_C::UpdateList(class UVerticalBox* TargetWidg
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.UpdateList");
 
-	UUI_GameEventLeaderboardWidget_C_UpdateList_Params params;
-	params.TargetWidget = TargetWidget;
+	UUI_GameEventLeaderboardWidget_C_UpdateList_Params fn_params;
+	fn_params.TargetWidget = TargetWidget;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (EventsRankingStatsItems != nullptr)
-		*EventsRankingStatsItems = params.EventsRankingStatsItems;
+		*EventsRankingStatsItems = fn_params.EventsRankingStatsItems;
 }
 
 
@@ -144,11 +144,11 @@ void UUI_GameEventLeaderboardWidget_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.Construct");
 
-	UUI_GameEventLeaderboardWidget_C_Construct_Params params;
+	UUI_GameEventLeaderboardWidget_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -161,11 +161,11 @@ void UUI_GameEventLeaderboardWidget_C::Destruct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.Destruct");
 
-	UUI_GameEventLeaderboardWidget_C_Destruct_Params params;
+	UUI_GameEventLeaderboardWidget_C_Destruct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -178,11 +178,11 @@ void UUI_GameEventLeaderboardWidget_C::UpdateTopPlayers()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.UpdateTopPlayers");
 
-	UUI_GameEventLeaderboardWidget_C_UpdateTopPlayers_Params params;
+	UUI_GameEventLeaderboardWidget_C_UpdateTopPlayers_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -195,11 +195,11 @@ void UUI_GameEventLeaderboardWidget_C::UpdatePlayerRanking()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.UpdatePlayerRanking");
 
-	UUI_GameEventLeaderboardWidget_C_UpdatePlayerRanking_Params params;
+	UUI_GameEventLeaderboardWidget_C_UpdatePlayerRanking_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -214,12 +214,12 @@ void UUI_GameEventLeaderboardWidget_C::ExecuteUbergraph_UI_GameEventLeaderboardW
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventLeaderboardWidget.UI_GameEventLeaderboardWidget_C.ExecuteUbergraph_UI_GameEventLeaderboardWidget");
 
-	UUI_GameEventLeaderboardWidget_C_ExecuteUbergraph_UI_GameEventLeaderboardWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_GameEventLeaderboardWidget_C_ExecuteUbergraph_UI_GameEventLeaderboardWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

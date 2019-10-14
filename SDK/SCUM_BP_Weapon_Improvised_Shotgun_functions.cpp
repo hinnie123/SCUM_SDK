@@ -12,6 +12,27 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_Weapon_Improvised_Shotgun.BP_Weapon_Improvised_Shotgun_C.CanSwitchFiringMode
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ABP_Weapon_Improvised_Shotgun_C::CanSwitchFiringMode()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_Improvised_Shotgun.BP_Weapon_Improvised_Shotgun_C.CanSwitchFiringMode");
+
+	ABP_Weapon_Improvised_Shotgun_C_CanSwitchFiringMode_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
 // Function BP_Weapon_Improvised_Shotgun.BP_Weapon_Improvised_Shotgun_C.UserConstructionScript
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
@@ -19,31 +40,28 @@ void ABP_Weapon_Improvised_Shotgun_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_Improvised_Shotgun.BP_Weapon_Improvised_Shotgun_C.UserConstructionScript");
 
-	ABP_Weapon_Improvised_Shotgun_C_UserConstructionScript_Params params;
+	ABP_Weapon_Improvised_Shotgun_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
 
 
-// Function BP_Weapon_Improvised_Shotgun.BP_Weapon_Improvised_Shotgun_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float*                         DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// Function BP_Weapon_Improvised_Shotgun.BP_Weapon_Improvised_Shotgun_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_Weapon_Improvised_Shotgun_C::ReceiveTick(float* DeltaSeconds)
+void ABP_Weapon_Improvised_Shotgun_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_Improvised_Shotgun.BP_Weapon_Improvised_Shotgun_C.ReceiveTick");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_Improvised_Shotgun.BP_Weapon_Improvised_Shotgun_C.ReceiveBeginPlay");
 
-	ABP_Weapon_Improvised_Shotgun_C_ReceiveTick_Params params;
-	params.DeltaSeconds = DeltaSeconds;
+	ABP_Weapon_Improvised_Shotgun_C_ReceiveBeginPlay_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -58,12 +76,12 @@ void ABP_Weapon_Improvised_Shotgun_C::ExecuteUbergraph_BP_Weapon_Improvised_Shot
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_Improvised_Shotgun.BP_Weapon_Improvised_Shotgun_C.ExecuteUbergraph_BP_Weapon_Improvised_Shotgun");
 
-	ABP_Weapon_Improvised_Shotgun_C_ExecuteUbergraph_BP_Weapon_Improvised_Shotgun_Params params;
-	params.EntryPoint = EntryPoint;
+	ABP_Weapon_Improvised_Shotgun_C_ExecuteUbergraph_BP_Weapon_Improvised_Shotgun_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

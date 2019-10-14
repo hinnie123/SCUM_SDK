@@ -23,19 +23,19 @@ void ULinearTimecodeComponent::STATIC_SetDropTimecodeFrameNumber(const struct FD
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LinearTimecode.LinearTimecodeComponent.SetDropTimecodeFrameNumber");
 
-	ULinearTimecodeComponent_SetDropTimecodeFrameNumber_Params params;
-	params.Timecode = Timecode;
-	params.FrameNumber = FrameNumber;
+	ULinearTimecodeComponent_SetDropTimecodeFrameNumber_Params fn_params;
+	fn_params.Timecode = Timecode;
+	fn_params.FrameNumber = FrameNumber;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutTimecode != nullptr)
-		*OutTimecode = params.OutTimecode;
+		*OutTimecode = fn_params.OutTimecode;
 }
 
 
@@ -49,18 +49,18 @@ void ULinearTimecodeComponent::STATIC_GetDropTimeCodeFrameNumber(const struct FD
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LinearTimecode.LinearTimecodeComponent.GetDropTimeCodeFrameNumber");
 
-	ULinearTimecodeComponent_GetDropTimeCodeFrameNumber_Params params;
-	params.Timecode = Timecode;
+	ULinearTimecodeComponent_GetDropTimeCodeFrameNumber_Params fn_params;
+	fn_params.Timecode = Timecode;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (FrameNumber != nullptr)
-		*FrameNumber = params.FrameNumber;
+		*FrameNumber = fn_params.FrameNumber;
 }
 
 
@@ -73,16 +73,16 @@ int ULinearTimecodeComponent::GetDropFrameNumber()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LinearTimecode.LinearTimecodeComponent.GetDropFrameNumber");
 
-	ULinearTimecodeComponent_GetDropFrameNumber_Params params;
+	ULinearTimecodeComponent_GetDropFrameNumber_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -96,17 +96,17 @@ struct FString UDropTimecodeToStringConversion::STATIC_Conv_DropTimecodeToString
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LinearTimecode.DropTimecodeToStringConversion.Conv_DropTimecodeToString");
 
-	UDropTimecodeToStringConversion_Conv_DropTimecodeToString_Params params;
-	params.InTimecode = InTimecode;
+	UDropTimecodeToStringConversion_Conv_DropTimecodeToString_Params fn_params;
+	fn_params.InTimecode = InTimecode;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

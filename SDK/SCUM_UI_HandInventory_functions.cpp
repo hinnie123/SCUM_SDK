@@ -21,16 +21,16 @@ void UUI_HandInventory_C::GetMinimizedHeight(float* Height)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.GetMinimizedHeight");
 
-	UUI_HandInventory_C_GetMinimizedHeight_Params params;
+	UUI_HandInventory_C_GetMinimizedHeight_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Height != nullptr)
-		*Height = params.Height;
+		*Height = fn_params.Height;
 }
 
 
@@ -41,11 +41,11 @@ void UUI_HandInventory_C::RefreshMaxMassAndSlots()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.RefreshMaxMassAndSlots");
 
-	UUI_HandInventory_C_RefreshMaxMassAndSlots_Params params;
+	UUI_HandInventory_C_RefreshMaxMassAndSlots_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -60,12 +60,12 @@ void UUI_HandInventory_C::ToggleMinimizePartial(bool adjustPosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.ToggleMinimizePartial");
 
-	UUI_HandInventory_C_ToggleMinimizePartial_Params params;
-	params.adjustPosition = adjustPosition;
+	UUI_HandInventory_C_ToggleMinimizePartial_Params fn_params;
+	fn_params.adjustPosition = adjustPosition;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -80,15 +80,15 @@ bool UUI_HandInventory_C::GetMinimizedPartial()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.GetMinimizedPartial");
 
-	UUI_HandInventory_C_GetMinimizedPartial_Params params;
+	UUI_HandInventory_C_GetMinimizedPartial_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -101,15 +101,15 @@ bool UUI_HandInventory_C::GetMinimizedFull()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.GetMinimizedFull");
 
-	UUI_HandInventory_C_GetMinimizedFull_Params params;
+	UUI_HandInventory_C_GetMinimizedFull_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -122,12 +122,12 @@ void UUI_HandInventory_C::ToggleMinimize(bool adjustPosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.ToggleMinimize");
 
-	UUI_HandInventory_C_ToggleMinimize_Params params;
-	params.adjustPosition = adjustPosition;
+	UUI_HandInventory_C_ToggleMinimize_Params fn_params;
+	fn_params.adjustPosition = adjustPosition;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -142,12 +142,12 @@ void UUI_HandInventory_C::SetSize(bool adjustPosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.SetSize");
 
-	UUI_HandInventory_C_SetSize_Params params;
-	params.adjustPosition = adjustPosition;
+	UUI_HandInventory_C_SetSize_Params fn_params;
+	fn_params.adjustPosition = adjustPosition;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -164,17 +164,17 @@ struct FEventReply UUI_HandInventory_C::OnMinimizePartialClicked(const struct FG
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.OnMinimizePartialClicked");
 
-	UUI_HandInventory_C_OnMinimizePartialClicked_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_HandInventory_C_OnMinimizePartialClicked_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -189,17 +189,17 @@ struct FEventReply UUI_HandInventory_C::OnMinimizeAllClicked(const struct FGeome
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.OnMinimizeAllClicked");
 
-	UUI_HandInventory_C_OnMinimizeAllClicked_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UUI_HandInventory_C_OnMinimizeAllClicked_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -210,11 +210,11 @@ void UUI_HandInventory_C::OnSynchronizeProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.OnSynchronizeProperties");
 
-	UUI_HandInventory_C_OnSynchronizeProperties_Params params;
+	UUI_HandInventory_C_OnSynchronizeProperties_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -230,13 +230,13 @@ void UUI_HandInventory_C::UpdateDisplayValues(unsigned char* occupiedSlots, floa
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.UpdateDisplayValues");
 
-	UUI_HandInventory_C_UpdateDisplayValues_Params params;
-	params.occupiedSlots = occupiedSlots;
-	params.occupiedMass = occupiedMass;
+	UUI_HandInventory_C_UpdateDisplayValues_Params fn_params;
+	fn_params.occupiedSlots = occupiedSlots;
+	fn_params.occupiedMass = occupiedMass;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -251,12 +251,12 @@ void UUI_HandInventory_C::UpdateImage(class UTexture2D** Texture)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.UpdateImage");
 
-	UUI_HandInventory_C_UpdateImage_Params params;
-	params.Texture = Texture;
+	UUI_HandInventory_C_UpdateImage_Params fn_params;
+	fn_params.Texture = Texture;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -273,14 +273,14 @@ void UUI_HandInventory_C::SetMinimizeAndAdjustSize(bool* isMinimizedFull, bool* 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.SetMinimizeAndAdjustSize");
 
-	UUI_HandInventory_C_SetMinimizeAndAdjustSize_Params params;
-	params.isMinimizedFull = isMinimizedFull;
-	params.isMinimizedPartial = isMinimizedPartial;
-	params.adjustPosition = adjustPosition;
+	UUI_HandInventory_C_SetMinimizeAndAdjustSize_Params fn_params;
+	fn_params.isMinimizedFull = isMinimizedFull;
+	fn_params.isMinimizedPartial = isMinimizedPartial;
+	fn_params.adjustPosition = adjustPosition;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -293,11 +293,11 @@ void UUI_HandInventory_C::RequestUpdateSize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.RequestUpdateSize");
 
-	UUI_HandInventory_C_RequestUpdateSize_Params params;
+	UUI_HandInventory_C_RequestUpdateSize_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -313,13 +313,13 @@ void UUI_HandInventory_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.Tick");
 
-	UUI_HandInventory_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UUI_HandInventory_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -334,12 +334,12 @@ void UUI_HandInventory_C::SetTitle(struct FText* Title)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.SetTitle");
 
-	UUI_HandInventory_C_SetTitle_Params params;
-	params.Title = Title;
+	UUI_HandInventory_C_SetTitle_Params fn_params;
+	fn_params.Title = Title;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -355,13 +355,13 @@ void UUI_HandInventory_C::OnHeaderDoubleClickEvent(const struct FGeometry& Geome
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.OnHeaderDoubleClickEvent");
 
-	UUI_HandInventory_C_OnHeaderDoubleClickEvent_Params params;
-	params.Geometry = Geometry;
-	params.MouseEvent = MouseEvent;
+	UUI_HandInventory_C_OnHeaderDoubleClickEvent_Params fn_params;
+	fn_params.Geometry = Geometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -374,11 +374,11 @@ void UUI_HandInventory_C::RefreshSize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.RefreshSize");
 
-	UUI_HandInventory_C_RefreshSize_Params params;
+	UUI_HandInventory_C_RefreshSize_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -393,12 +393,12 @@ void UUI_HandInventory_C::SetGridVisibility(ESlateVisibility* gridVisibility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.SetGridVisibility");
 
-	UUI_HandInventory_C_SetGridVisibility_Params params;
-	params.gridVisibility = gridVisibility;
+	UUI_HandInventory_C_SetGridVisibility_Params fn_params;
+	fn_params.gridVisibility = gridVisibility;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -413,12 +413,12 @@ void UUI_HandInventory_C::UpdateWithItem(class AItem** Item)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.UpdateWithItem");
 
-	UUI_HandInventory_C_UpdateWithItem_Params params;
-	params.Item = Item;
+	UUI_HandInventory_C_UpdateWithItem_Params fn_params;
+	fn_params.Item = Item;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -433,12 +433,12 @@ void UUI_HandInventory_C::SaveLayout(TScriptInterface<class UAttributeMapInterfa
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.SaveLayout");
 
-	UUI_HandInventory_C_SaveLayout_Params params;
-	params.Attributes = Attributes;
+	UUI_HandInventory_C_SaveLayout_Params fn_params;
+	fn_params.Attributes = Attributes;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -453,12 +453,12 @@ void UUI_HandInventory_C::LoadLayout(TScriptInterface<class UAttributeMapInterfa
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.LoadLayout");
 
-	UUI_HandInventory_C_LoadLayout_Params params;
-	params.Attributes = Attributes;
+	UUI_HandInventory_C_LoadLayout_Params fn_params;
+	fn_params.Attributes = Attributes;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -471,11 +471,11 @@ void UUI_HandInventory_C::ResetLayout()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.ResetLayout");
 
-	UUI_HandInventory_C_ResetLayout_Params params;
+	UUI_HandInventory_C_ResetLayout_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -488,11 +488,11 @@ void UUI_HandInventory_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.Construct");
 
-	UUI_HandInventory_C_Construct_Params params;
+	UUI_HandInventory_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -507,12 +507,12 @@ void UUI_HandInventory_C::ExecuteUbergraph_UI_HandInventory(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_HandInventory.UI_HandInventory_C.ExecuteUbergraph_UI_HandInventory");
 
-	UUI_HandInventory_C_ExecuteUbergraph_UI_HandInventory_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_HandInventory_C_ExecuteUbergraph_UI_HandInventory_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

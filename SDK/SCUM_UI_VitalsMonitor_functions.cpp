@@ -21,16 +21,16 @@ void UUI_VitalsMonitor_C::GetOxygenSaturationExtremesText(struct FText* OxygenSa
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_VitalsMonitor.UI_VitalsMonitor_C.GetOxygenSaturationExtremesText");
 
-	UUI_VitalsMonitor_C_GetOxygenSaturationExtremesText_Params params;
+	UUI_VitalsMonitor_C_GetOxygenSaturationExtremesText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OxygenSaturationExtremes != nullptr)
-		*OxygenSaturationExtremes = params.OxygenSaturationExtremes;
+		*OxygenSaturationExtremes = fn_params.OxygenSaturationExtremes;
 }
 
 
@@ -43,16 +43,16 @@ void UUI_VitalsMonitor_C::GetTemperatureExtremesText(struct FText* temperatureEx
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_VitalsMonitor.UI_VitalsMonitor_C.GetTemperatureExtremesText");
 
-	UUI_VitalsMonitor_C_GetTemperatureExtremesText_Params params;
+	UUI_VitalsMonitor_C_GetTemperatureExtremesText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (temperatureExtremes != nullptr)
-		*temperatureExtremes = params.temperatureExtremes;
+		*temperatureExtremes = fn_params.temperatureExtremes;
 }
 
 
@@ -65,16 +65,16 @@ void UUI_VitalsMonitor_C::GetRespiratoryRateExtremesText(struct FText* respirato
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_VitalsMonitor.UI_VitalsMonitor_C.GetRespiratoryRateExtremesText");
 
-	UUI_VitalsMonitor_C_GetRespiratoryRateExtremesText_Params params;
+	UUI_VitalsMonitor_C_GetRespiratoryRateExtremesText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (respiratoryRateExtremes != nullptr)
-		*respiratoryRateExtremes = params.respiratoryRateExtremes;
+		*respiratoryRateExtremes = fn_params.respiratoryRateExtremes;
 }
 
 
@@ -87,12 +87,12 @@ void UUI_VitalsMonitor_C::SetPrisoner(class APrisoner* Prisoner)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_VitalsMonitor.UI_VitalsMonitor_C.SetPrisoner");
 
-	UUI_VitalsMonitor_C_SetPrisoner_Params params;
-	params.Prisoner = Prisoner;
+	UUI_VitalsMonitor_C_SetPrisoner_Params fn_params;
+	fn_params.Prisoner = Prisoner;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -108,13 +108,13 @@ void UUI_VitalsMonitor_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_VitalsMonitor.UI_VitalsMonitor_C.Tick");
 
-	UUI_VitalsMonitor_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UUI_VitalsMonitor_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -129,12 +129,12 @@ void UUI_VitalsMonitor_C::ExecuteUbergraph_UI_VitalsMonitor(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_VitalsMonitor.UI_VitalsMonitor_C.ExecuteUbergraph_UI_VitalsMonitor");
 
-	UUI_VitalsMonitor_C_ExecuteUbergraph_UI_VitalsMonitor_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_VitalsMonitor_C_ExecuteUbergraph_UI_VitalsMonitor_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

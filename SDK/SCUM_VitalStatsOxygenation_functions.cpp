@@ -19,11 +19,11 @@ void UVitalStatsOxygenation_C::DisableAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsOxygenation.VitalStatsOxygenation_C.DisableAlarm");
 
-	UVitalStatsOxygenation_C_DisableAlarm_Params params;
+	UVitalStatsOxygenation_C_DisableAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void UVitalStatsOxygenation_C::EnableAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsOxygenation.VitalStatsOxygenation_C.EnableAlarm");
 
-	UVitalStatsOxygenation_C_EnableAlarm_Params params;
+	UVitalStatsOxygenation_C_EnableAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -53,11 +53,11 @@ void UVitalStatsOxygenation_C::CheckAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsOxygenation.VitalStatsOxygenation_C.CheckAlarm");
 
-	UVitalStatsOxygenation_C_CheckAlarm_Params params;
+	UVitalStatsOxygenation_C_CheckAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -70,11 +70,11 @@ void UVitalStatsOxygenation_C::ActivateAlarmColor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsOxygenation.VitalStatsOxygenation_C.ActivateAlarmColor");
 
-	UVitalStatsOxygenation_C_ActivateAlarmColor_Params params;
+	UVitalStatsOxygenation_C_ActivateAlarmColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -87,11 +87,11 @@ void UVitalStatsOxygenation_C::ActivateNormalColor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsOxygenation.VitalStatsOxygenation_C.ActivateNormalColor");
 
-	UVitalStatsOxygenation_C_ActivateNormalColor_Params params;
+	UVitalStatsOxygenation_C_ActivateNormalColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -107,13 +107,13 @@ void UVitalStatsOxygenation_C::SetBackgroundColor(const struct FLinearColor& col
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsOxygenation.VitalStatsOxygenation_C.SetBackgroundColor");
 
-	UVitalStatsOxygenation_C_SetBackgroundColor_Params params;
-	params.colorToSet = colorToSet;
-	params.Visibility = Visibility;
+	UVitalStatsOxygenation_C_SetBackgroundColor_Params fn_params;
+	fn_params.colorToSet = colorToSet;
+	fn_params.Visibility = Visibility;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -128,16 +128,16 @@ void UVitalStatsOxygenation_C::GetOxygenSaturationLevelFloat(float* oxygenSatura
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsOxygenation.VitalStatsOxygenation_C.GetOxygenSaturationLevelFloat");
 
-	UVitalStatsOxygenation_C_GetOxygenSaturationLevelFloat_Params params;
+	UVitalStatsOxygenation_C_GetOxygenSaturationLevelFloat_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (oxygenSaturationLevel != nullptr)
-		*oxygenSaturationLevel = params.oxygenSaturationLevel;
+		*oxygenSaturationLevel = fn_params.oxygenSaturationLevel;
 }
 
 
@@ -150,15 +150,15 @@ struct FText UVitalStatsOxygenation_C::GetOxygenationLevel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsOxygenation.VitalStatsOxygenation_C.GetOxygenationLevel");
 
-	UVitalStatsOxygenation_C_GetOxygenationLevel_Params params;
+	UVitalStatsOxygenation_C_GetOxygenationLevel_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -171,12 +171,12 @@ void UVitalStatsOxygenation_C::SetTextColor(const struct FLinearColor& TextColor
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsOxygenation.VitalStatsOxygenation_C.SetTextColor");
 
-	UVitalStatsOxygenation_C_SetTextColor_Params params;
-	params.TextColor = TextColor;
+	UVitalStatsOxygenation_C_SetTextColor_Params fn_params;
+	fn_params.TextColor = TextColor;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -191,15 +191,15 @@ struct FText UVitalStatsOxygenation_C::GetHeartRateBPM()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsOxygenation.VitalStatsOxygenation_C.GetHeartRateBPM");
 
-	UVitalStatsOxygenation_C_GetHeartRateBPM_Params params;
+	UVitalStatsOxygenation_C_GetHeartRateBPM_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -212,15 +212,15 @@ struct FText UVitalStatsOxygenation_C::GetHealthPercentText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsOxygenation.VitalStatsOxygenation_C.GetHealthPercentText");
 
-	UVitalStatsOxygenation_C_GetHealthPercentText_Params params;
+	UVitalStatsOxygenation_C_GetHealthPercentText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -233,15 +233,15 @@ float UVitalStatsOxygenation_C::GetHealthPercentBar()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsOxygenation.VitalStatsOxygenation_C.GetHealthPercentBar");
 
-	UVitalStatsOxygenation_C_GetHealthPercentBar_Params params;
+	UVitalStatsOxygenation_C_GetHealthPercentBar_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -254,15 +254,15 @@ struct FText UVitalStatsOxygenation_C::GetStaminaPercentText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsOxygenation.VitalStatsOxygenation_C.GetStaminaPercentText");
 
-	UVitalStatsOxygenation_C_GetStaminaPercentText_Params params;
+	UVitalStatsOxygenation_C_GetStaminaPercentText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -275,15 +275,15 @@ float UVitalStatsOxygenation_C::GetStaminaPercentBar()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsOxygenation.VitalStatsOxygenation_C.GetStaminaPercentBar");
 
-	UVitalStatsOxygenation_C_GetStaminaPercentBar_Params params;
+	UVitalStatsOxygenation_C_GetStaminaPercentBar_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -294,11 +294,11 @@ void UVitalStatsOxygenation_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsOxygenation.VitalStatsOxygenation_C.Construct");
 
-	UVitalStatsOxygenation_C_Construct_Params params;
+	UVitalStatsOxygenation_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -314,13 +314,13 @@ void UVitalStatsOxygenation_C::Tick(struct FGeometry* MyGeometry, float* InDelta
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsOxygenation.VitalStatsOxygenation_C.Tick");
 
-	UVitalStatsOxygenation_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UVitalStatsOxygenation_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -335,12 +335,12 @@ void UVitalStatsOxygenation_C::ExecuteUbergraph_VitalStatsOxygenation(int EntryP
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsOxygenation.VitalStatsOxygenation_C.ExecuteUbergraph_VitalStatsOxygenation");
 
-	UVitalStatsOxygenation_C_ExecuteUbergraph_VitalStatsOxygenation_Params params;
-	params.EntryPoint = EntryPoint;
+	UVitalStatsOxygenation_C_ExecuteUbergraph_VitalStatsOxygenation_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

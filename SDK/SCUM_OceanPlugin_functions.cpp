@@ -24,19 +24,19 @@ float UAdvancedBuoyancyComponent::TriangleArea(const struct FVector& A, const st
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.AdvancedBuoyancyComponent.TriangleArea");
 
-	UAdvancedBuoyancyComponent_TriangleArea_Params params;
-	params.A = A;
-	params.B = B;
-	params.C = C;
+	UAdvancedBuoyancyComponent_TriangleArea_Params fn_params;
+	fn_params.A = A;
+	fn_params.B = B;
+	fn_params.C = C;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -53,20 +53,20 @@ TArray<struct FForceTriangle> UAdvancedBuoyancyComponent::SplitTriangle(const st
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.AdvancedBuoyancyComponent.SplitTriangle");
 
-	UAdvancedBuoyancyComponent_SplitTriangle_Params params;
-	params.H = H;
-	params.M = M;
-	params.L = L;
-	params.InArrow = InArrow;
+	UAdvancedBuoyancyComponent_SplitTriangle_Params fn_params;
+	fn_params.H = H;
+	fn_params.M = M;
+	fn_params.L = L;
+	fn_params.InArrow = InArrow;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -80,14 +80,14 @@ void UAdvancedBuoyancyComponent::SetMeshDensity(float NewDensity, float NewWater
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.AdvancedBuoyancyComponent.SetMeshDensity");
 
-	UAdvancedBuoyancyComponent_SetMeshDensity_Params params;
-	params.NewDensity = NewDensity;
-	params.NewWaterDensity = NewWaterDensity;
+	UAdvancedBuoyancyComponent_SetMeshDensity_Params fn_params;
+	fn_params.NewDensity = NewDensity;
+	fn_params.NewWaterDensity = NewWaterDensity;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -104,18 +104,18 @@ float UAdvancedBuoyancyComponent::GetOceanDepthFromGrid(const struct FVector& Po
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.AdvancedBuoyancyComponent.GetOceanDepthFromGrid");
 
-	UAdvancedBuoyancyComponent_GetOceanDepthFromGrid_Params params;
-	params.Position = Position;
-	params.bJustGetHeightAtLocation = bJustGetHeightAtLocation;
+	UAdvancedBuoyancyComponent_GetOceanDepthFromGrid_Params fn_params;
+	fn_params.Position = Position;
+	fn_params.bJustGetHeightAtLocation = bJustGetHeightAtLocation;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -126,12 +126,12 @@ void UAdvancedBuoyancyComponent::GetOcean()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.AdvancedBuoyancyComponent.GetOcean");
 
-	UAdvancedBuoyancyComponent_GetOcean_Params params;
+	UAdvancedBuoyancyComponent_GetOcean_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -147,14 +147,14 @@ void UAdvancedBuoyancyComponent::DrawDebugStuff(const struct FForceTriangle& Tri
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.AdvancedBuoyancyComponent.DrawDebugStuff");
 
-	UAdvancedBuoyancyComponent_DrawDebugStuff_Params params;
-	params.TriForce = TriForce;
-	params.DebugColor = DebugColor;
+	UAdvancedBuoyancyComponent_DrawDebugStuff_Params fn_params;
+	fn_params.TriForce = TriForce;
+	fn_params.DebugColor = DebugColor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -170,14 +170,14 @@ void UAdvancedBuoyancyComponent::ApplySlamForce(const struct FVector& SlamForce,
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.AdvancedBuoyancyComponent.ApplySlamForce");
 
-	UAdvancedBuoyancyComponent_ApplySlamForce_Params params;
-	params.SlamForce = SlamForce;
-	params.TriCenter = TriCenter;
+	UAdvancedBuoyancyComponent_ApplySlamForce_Params fn_params;
+	fn_params.SlamForce = SlamForce;
+	fn_params.TriCenter = TriCenter;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -192,13 +192,13 @@ void UAdvancedBuoyancyComponent::ApplyForce(const struct FForceTriangle& TriForc
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.AdvancedBuoyancyComponent.ApplyForce");
 
-	UAdvancedBuoyancyComponent_ApplyForce_Params params;
-	params.TriForce = TriForce;
+	UAdvancedBuoyancyComponent_ApplyForce_Params fn_params;
+	fn_params.TriForce = TriForce;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -213,16 +213,16 @@ bool ACustomVehicleController::GetIsDriving()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.CustomVehicleController.GetIsDriving");
 
-	ACustomVehicleController_GetIsDriving_Params params;
+	ACustomVehicleController_GetIsDriving_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -233,12 +233,12 @@ void ACustomVehicleController::ExitVehicle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.CustomVehicleController.ExitVehicle");
 
-	ACustomVehicleController_ExitVehicle_Params params;
+	ACustomVehicleController_ExitVehicle_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -253,13 +253,13 @@ void ACustomVehicleController::EnterVehicle(class APawn* Vehicle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.CustomVehicleController.EnterVehicle");
 
-	ACustomVehicleController_EnterVehicle_Params params;
-	params.Vehicle = Vehicle;
+	ACustomVehicleController_EnterVehicle_Params fn_params;
+	fn_params.Vehicle = Vehicle;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -272,12 +272,12 @@ void ACustomVehicleController::EnableBuoyancy()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.CustomVehicleController.EnableBuoyancy");
 
-	ACustomVehicleController_EnableBuoyancy_Params params;
+	ACustomVehicleController_EnableBuoyancy_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -290,12 +290,12 @@ void ACustomVehicleController::DrawBuoyancyPoints()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.CustomVehicleController.DrawBuoyancyPoints");
 
-	ACustomVehicleController_DrawBuoyancyPoints_Params params;
+	ACustomVehicleController_DrawBuoyancyPoints_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -313,16 +313,16 @@ void AFlockFish::OnEndOverlap(class UPrimitiveComponent* activatedComp, class AA
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.FlockFish.OnEndOverlap");
 
-	AFlockFish_OnEndOverlap_Params params;
-	params.activatedComp = activatedComp;
-	params.OtherActor = OtherActor;
-	params.OtherComp = OtherComp;
-	params.OtherBodyIndex = OtherBodyIndex;
+	AFlockFish_OnEndOverlap_Params fn_params;
+	fn_params.activatedComp = activatedComp;
+	fn_params.OtherActor = OtherActor;
+	fn_params.OtherComp = OtherComp;
+	fn_params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -342,18 +342,18 @@ void AFlockFish::OnBeginOverlap(class UPrimitiveComponent* activatedComp, class 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.FlockFish.OnBeginOverlap");
 
-	AFlockFish_OnBeginOverlap_Params params;
-	params.activatedComp = activatedComp;
-	params.OtherActor = OtherActor;
-	params.OtherComp = OtherComp;
-	params.OtherBodyIndex = OtherBodyIndex;
-	params.bFromSweep = bFromSweep;
-	params.SweepResult = SweepResult;
+	AFlockFish_OnBeginOverlap_Params fn_params;
+	fn_params.activatedComp = activatedComp;
+	fn_params.OtherActor = OtherActor;
+	fn_params.OtherComp = OtherComp;
+	fn_params.OtherBodyIndex = OtherBodyIndex;
+	fn_params.bFromSweep = bFromSweep;
+	fn_params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -368,12 +368,12 @@ void AOceanManager::MySetNetworkOffset(float Offset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.OceanManager.MySetNetworkOffset");
 
-	AOceanManager_MySetNetworkOffset_Params params;
-	params.Offset = Offset;
+	AOceanManager_MySetNetworkOffset_Params fn_params;
+	fn_params.Offset = Offset;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -388,13 +388,13 @@ void AOceanManager::LoadLandscapeHeightmap(class UTexture2D* Tex2D)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.OceanManager.LoadLandscapeHeightmap");
 
-	AOceanManager_LoadLandscapeHeightmap_Params params;
-	params.Tex2D = Tex2D;
+	AOceanManager_LoadLandscapeHeightmap_Params fn_params;
+	fn_params.Tex2D = Tex2D;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -413,20 +413,20 @@ struct FVector AOceanManager::GetWaveHeightValue(const struct FVector& Location,
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.OceanManager.GetWaveHeightValue");
 
-	AOceanManager_GetWaveHeightValue_Params params;
-	params.Location = Location;
-	params.World = World;
-	params.HeightOnly = HeightOnly;
-	params.TwoIterations = TwoIterations;
+	AOceanManager_GetWaveHeightValue_Params fn_params;
+	fn_params.Location = Location;
+	fn_params.World = World;
+	fn_params.HeightOnly = HeightOnly;
+	fn_params.TwoIterations = TwoIterations;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -441,18 +441,18 @@ struct FLinearColor AOceanManager::GetHeightmapPixel(float U, float V)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.OceanManager.GetHeightmapPixel");
 
-	AOceanManager_GetHeightmapPixel_Params params;
-	params.U = U;
-	params.V = V;
+	AOceanManager_GetHeightmapPixel_Params fn_params;
+	fn_params.U = U;
+	fn_params.V = V;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -465,13 +465,13 @@ void ATimeManager::SetCurrentLocalTime(float Time)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.TimeManager.SetCurrentLocalTime");
 
-	ATimeManager_SetCurrentLocalTime_Params params;
-	params.Time = Time;
+	ATimeManager_SetCurrentLocalTime_Params fn_params;
+	fn_params.Time = Time;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -487,17 +487,17 @@ bool ATimeManager::IsLeapYear(int Year)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.TimeManager.IsLeapYear");
 
-	ATimeManager_IsLeapYear_Params params;
-	params.Year = Year;
+	ATimeManager_IsLeapYear_Params fn_params;
+	fn_params.Year = Year;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -510,13 +510,13 @@ void ATimeManager::InitializeCalendar(const struct FTimeDate& Time)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.TimeManager.InitializeCalendar");
 
-	ATimeManager_InitializeCalendar_Params params;
-	params.Time = Time;
+	ATimeManager_InitializeCalendar_Params fn_params;
+	fn_params.Time = Time;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -531,13 +531,13 @@ void ATimeManager::IncrementTime(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.TimeManager.IncrementTime");
 
-	ATimeManager_IncrementTime_Params params;
-	params.DeltaSeconds = DeltaSeconds;
+	ATimeManager_IncrementTime_Params fn_params;
+	fn_params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -552,16 +552,16 @@ float ATimeManager::GetYearPhase()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.TimeManager.GetYearPhase");
 
-	ATimeManager_GetYearPhase_Params params;
+	ATimeManager_GetYearPhase_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -574,16 +574,16 @@ float ATimeManager::GetElapsedDayInMinutes()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.TimeManager.GetElapsedDayInMinutes");
 
-	ATimeManager_GetElapsedDayInMinutes_Params params;
+	ATimeManager_GetElapsedDayInMinutes_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -597,17 +597,17 @@ int ATimeManager::GetDaysInYear(int Year)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.TimeManager.GetDaysInYear");
 
-	ATimeManager_GetDaysInYear_Params params;
-	params.Year = Year;
+	ATimeManager_GetDaysInYear_Params fn_params;
+	fn_params.Year = Year;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -622,18 +622,18 @@ int ATimeManager::GetDaysInMonth(int Year, int Month)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.TimeManager.GetDaysInMonth");
 
-	ATimeManager_GetDaysInMonth_Params params;
-	params.Year = Year;
-	params.Month = Month;
+	ATimeManager_GetDaysInMonth_Params fn_params;
+	fn_params.Year = Year;
+	fn_params.Month = Month;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -646,16 +646,16 @@ float ATimeManager::GetDayPhase()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.TimeManager.GetDayPhase");
 
-	ATimeManager_GetDayPhase_Params params;
+	ATimeManager_GetDayPhase_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -669,17 +669,17 @@ int ATimeManager::GetDayOfYear(const struct FTimeDate& Time)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.TimeManager.GetDayOfYear");
 
-	ATimeManager_GetDayOfYear_Params params;
-	params.Time = Time;
+	ATimeManager_GetDayOfYear_Params fn_params;
+	fn_params.Time = Time;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -692,16 +692,16 @@ struct FRotator ATimeManager::CalculateSunAngle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.TimeManager.CalculateSunAngle");
 
-	ATimeManager_CalculateSunAngle_Params params;
+	ATimeManager_CalculateSunAngle_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -714,16 +714,16 @@ float ATimeManager::CalculateMoonPhase()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.TimeManager.CalculateMoonPhase");
 
-	ATimeManager_CalculateMoonPhase_Params params;
+	ATimeManager_CalculateMoonPhase_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -736,16 +736,16 @@ struct FRotator ATimeManager::CalculateMoonAngle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OceanPlugin.TimeManager.CalculateMoonAngle");
 
-	ATimeManager_CalculateMoonAngle_Params params;
+	ATimeManager_CalculateMoonAngle_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

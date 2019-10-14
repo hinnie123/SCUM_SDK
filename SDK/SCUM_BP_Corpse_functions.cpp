@@ -19,11 +19,11 @@ void ABP_Corpse_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Corpse.BP_Corpse_C.UserConstructionScript");
 
-	ABP_Corpse_C_UserConstructionScript_Params params;
+	ABP_Corpse_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

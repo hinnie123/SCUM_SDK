@@ -21,12 +21,12 @@ void UServerBrowserWidget_C::ChangeFilter(const struct FText& Filter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.ChangeFilter");
 
-	UServerBrowserWidget_C_ChangeFilter_Params params;
-	params.Filter = Filter;
+	UServerBrowserWidget_C_ChangeFilter_Params fn_params;
+	fn_params.Filter = Filter;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -42,13 +42,13 @@ void UServerBrowserWidget_C::UpdatePreviewPrisoners(const struct FString& Server
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.UpdatePreviewPrisoners");
 
-	UServerBrowserWidget_C_UpdatePreviewPrisoners_Params params;
-	params.ServerIp = ServerIp;
-	params.ServerResponsePort = ServerResponsePort;
+	UServerBrowserWidget_C_UpdatePreviewPrisoners_Params fn_params;
+	fn_params.ServerIp = ServerIp;
+	fn_params.ServerResponsePort = ServerResponsePort;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -63,16 +63,16 @@ void UServerBrowserWidget_C::GetCurrentUser(class UDbUser** user)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.GetCurrentUser");
 
-	UServerBrowserWidget_C_GetCurrentUser_Params params;
+	UServerBrowserWidget_C_GetCurrentUser_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (user != nullptr)
-		*user = params.user;
+		*user = fn_params.user;
 }
 
 
@@ -83,11 +83,11 @@ void UServerBrowserWidget_C::SaveDirectionConnectionAddress()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.SaveDirectionConnectionAddress");
 
-	UServerBrowserWidget_C_SaveDirectionConnectionAddress_Params params;
+	UServerBrowserWidget_C_SaveDirectionConnectionAddress_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -96,18 +96,18 @@ void UServerBrowserWidget_C::SaveDirectionConnectionAddress()
 // Function ServerBrowserWidget.ServerBrowserWidget_C.ChooseServerAndConnect
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FString                 authToken                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// struct FString                 AuthToken                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UServerBrowserWidget_C::ChooseServerAndConnect(const struct FString& authToken)
+void UServerBrowserWidget_C::ChooseServerAndConnect(const struct FString& AuthToken)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.ChooseServerAndConnect");
 
-	UServerBrowserWidget_C_ChooseServerAndConnect_Params params;
-	params.authToken = authToken;
+	UServerBrowserWidget_C_ChooseServerAndConnect_Params fn_params;
+	fn_params.AuthToken = AuthToken;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -123,18 +123,18 @@ void UServerBrowserWidget_C::ChooseServer(struct FString* Ip, int* ResponsePort)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.ChooseServer");
 
-	UServerBrowserWidget_C_ChooseServer_Params params;
+	UServerBrowserWidget_C_ChooseServer_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Ip != nullptr)
-		*Ip = params.Ip;
+		*Ip = fn_params.Ip;
 	if (ResponsePort != nullptr)
-		*ResponsePort = params.ResponsePort;
+		*ResponsePort = fn_params.ResponsePort;
 }
 
 
@@ -145,11 +145,11 @@ void UServerBrowserWidget_C::HidePasswordPopup()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.HidePasswordPopup");
 
-	UServerBrowserWidget_C_HidePasswordPopup_Params params;
+	UServerBrowserWidget_C_HidePasswordPopup_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -162,11 +162,11 @@ void UServerBrowserWidget_C::ShowPasswordPopup()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.ShowPasswordPopup");
 
-	UServerBrowserWidget_C_ShowPasswordPopup_Params params;
+	UServerBrowserWidget_C_ShowPasswordPopup_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -179,11 +179,11 @@ void UServerBrowserWidget_C::EnterPassword()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.EnterPassword");
 
-	UServerBrowserWidget_C_EnterPassword_Params params;
+	UServerBrowserWidget_C_EnterPassword_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -193,19 +193,19 @@ void UServerBrowserWidget_C::EnterPassword()
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FServerInfo             ServerInfo                     (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FString                 authToken                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// struct FString                 AuthToken                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UServerBrowserWidget_C::ConnectToServerInfo(const struct FServerInfo& ServerInfo, const struct FString& authToken)
+void UServerBrowserWidget_C::ConnectToServerInfo(const struct FServerInfo& ServerInfo, const struct FString& AuthToken)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.ConnectToServerInfo");
 
-	UServerBrowserWidget_C_ConnectToServerInfo_Params params;
-	params.ServerInfo = ServerInfo;
-	params.authToken = authToken;
+	UServerBrowserWidget_C_ConnectToServerInfo_Params fn_params;
+	fn_params.ServerInfo = ServerInfo;
+	fn_params.AuthToken = AuthToken;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -218,11 +218,11 @@ void UServerBrowserWidget_C::UpdateSelectedServer()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.UpdateSelectedServer");
 
-	UServerBrowserWidget_C_UpdateSelectedServer_Params params;
+	UServerBrowserWidget_C_UpdateSelectedServer_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -239,17 +239,17 @@ struct FEventReply UServerBrowserWidget_C::OnPreviewKeyDown(struct FGeometry* My
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.OnPreviewKeyDown");
 
-	UServerBrowserWidget_C_OnPreviewKeyDown_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InKeyEvent = InKeyEvent;
+	UServerBrowserWidget_C_OnPreviewKeyDown_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InKeyEvent = InKeyEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -262,12 +262,12 @@ void UServerBrowserWidget_C::SelectServerForConnection(class UServerInfoWidget_C
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.SelectServerForConnection");
 
-	UServerBrowserWidget_C_SelectServerForConnection_Params params;
-	params.ServerInfo = ServerInfo;
+	UServerBrowserWidget_C_SelectServerForConnection_Params fn_params;
+	fn_params.ServerInfo = ServerInfo;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -282,15 +282,15 @@ bool UServerBrowserWidget_C::Get_Refresh_bIsEnabled_1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.Get_Refresh_bIsEnabled_1");
 
-	UServerBrowserWidget_C_Get_Refresh_bIsEnabled_1_Params params;
+	UServerBrowserWidget_C_Get_Refresh_bIsEnabled_1_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -303,15 +303,15 @@ ESlateVisibility UServerBrowserWidget_C::GetVisibility_1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.GetVisibility_1");
 
-	UServerBrowserWidget_C_GetVisibility_1_Params params;
+	UServerBrowserWidget_C_GetVisibility_1_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -325,13 +325,13 @@ void UServerBrowserWidget_C::ToggleCategory(class UWidget* Widget, class UUI_Men
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.ToggleCategory");
 
-	UServerBrowserWidget_C_ToggleCategory_Params params;
-	params.Widget = Widget;
-	params.Button = Button;
+	UServerBrowserWidget_C_ToggleCategory_Params fn_params;
+	fn_params.Widget = Widget;
+	fn_params.Button = Button;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -346,12 +346,12 @@ void UServerBrowserWidget_C::Scroll(float Delta)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.Scroll");
 
-	UServerBrowserWidget_C_Scroll_Params params;
-	params.Delta = Delta;
+	UServerBrowserWidget_C_Scroll_Params fn_params;
+	fn_params.Delta = Delta;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -368,17 +368,17 @@ struct FEventReply UServerBrowserWidget_C::OnMouseWheel(struct FGeometry* MyGeom
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.OnMouseWheel");
 
-	UServerBrowserWidget_C_OnMouseWheel_Params params;
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
+	UServerBrowserWidget_C_OnMouseWheel_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -389,11 +389,11 @@ void UServerBrowserWidget_C::UpdateList()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.UpdateList");
 
-	UServerBrowserWidget_C_UpdateList_Params params;
+	UServerBrowserWidget_C_UpdateList_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -408,12 +408,12 @@ void UServerBrowserWidget_C::RemoveInfo(int* Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.RemoveInfo");
 
-	UServerBrowserWidget_C_RemoveInfo_Params params;
-	params.Index = Index;
+	UServerBrowserWidget_C_RemoveInfo_Params fn_params;
+	fn_params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -428,12 +428,12 @@ void UServerBrowserWidget_C::AddNewInfo(struct FServerInfo* ServerInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.AddNewInfo");
 
-	UServerBrowserWidget_C_AddNewInfo_Params params;
-	params.ServerInfo = ServerInfo;
+	UServerBrowserWidget_C_AddNewInfo_Params fn_params;
+	fn_params.ServerInfo = ServerInfo;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -449,13 +449,13 @@ void UServerBrowserWidget_C::BndEvt__EditableTextBox_79_K2Node_ComponentBoundEve
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__EditableTextBox_79_K2Node_ComponentBoundEvent_185_OnEditableTextBoxCommittedEvent__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__EditableTextBox_79_K2Node_ComponentBoundEvent_185_OnEditableTextBoxCommittedEvent__DelegateSignature_Params params;
-	params.Text = Text;
-	params.CommitMethod = CommitMethod;
+	UServerBrowserWidget_C_BndEvt__EditableTextBox_79_K2Node_ComponentBoundEvent_185_OnEditableTextBoxCommittedEvent__DelegateSignature_Params fn_params;
+	fn_params.Text = Text;
+	fn_params.CommitMethod = CommitMethod;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -468,11 +468,11 @@ void UServerBrowserWidget_C::BndEvt__UI_MenuButton_50_K2Node_ComponentBoundEvent
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__UI_MenuButton_50_K2Node_ComponentBoundEvent_120_OnClicked__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__UI_MenuButton_50_K2Node_ComponentBoundEvent_120_OnClicked__DelegateSignature_Params params;
+	UServerBrowserWidget_C_BndEvt__UI_MenuButton_50_K2Node_ComponentBoundEvent_120_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -485,11 +485,11 @@ void UServerBrowserWidget_C::BndEvt__Back_K2Node_ComponentBoundEvent_263_OnClick
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__Back_K2Node_ComponentBoundEvent_263_OnClicked__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__Back_K2Node_ComponentBoundEvent_263_OnClicked__DelegateSignature_Params params;
+	UServerBrowserWidget_C_BndEvt__Back_K2Node_ComponentBoundEvent_263_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -502,11 +502,11 @@ void UServerBrowserWidget_C::BndEvt__Connect_K2Node_ComponentBoundEvent_270_OnCl
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__Connect_K2Node_ComponentBoundEvent_270_OnClicked__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__Connect_K2Node_ComponentBoundEvent_270_OnClicked__DelegateSignature_Params params;
+	UServerBrowserWidget_C_BndEvt__Connect_K2Node_ComponentBoundEvent_270_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -519,11 +519,11 @@ void UServerBrowserWidget_C::BndEvt__ServersButton_K2Node_ComponentBoundEvent_10
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__ServersButton_K2Node_ComponentBoundEvent_108_OnClicked__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__ServersButton_K2Node_ComponentBoundEvent_108_OnClicked__DelegateSignature_Params params;
+	UServerBrowserWidget_C_BndEvt__ServersButton_K2Node_ComponentBoundEvent_108_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -538,12 +538,12 @@ void UServerBrowserWidget_C::OnClickedOnServerInfo(class UServerInfoWidget_C* Se
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.OnClickedOnServerInfo");
 
-	UServerBrowserWidget_C_OnClickedOnServerInfo_Params params;
-	params.ServerInfoWidget = ServerInfoWidget;
+	UServerBrowserWidget_C_OnClickedOnServerInfo_Params fn_params;
+	fn_params.ServerInfoWidget = ServerInfoWidget;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -558,12 +558,12 @@ void UServerBrowserWidget_C::OnServerInfoDoubleClicked(class UServerInfoWidget_C
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.OnServerInfoDoubleClicked");
 
-	UServerBrowserWidget_C_OnServerInfoDoubleClicked_Params params;
-	params.ServerInfoWidget = ServerInfoWidget;
+	UServerBrowserWidget_C_OnServerInfoDoubleClicked_Params fn_params;
+	fn_params.ServerInfoWidget = ServerInfoWidget;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -576,11 +576,11 @@ void UServerBrowserWidget_C::BndEvt__UI_MenuButton_C_0_K2Node_ComponentBoundEven
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__UI_MenuButton_C_0_K2Node_ComponentBoundEvent_84_OnClicked__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__UI_MenuButton_C_0_K2Node_ComponentBoundEvent_84_OnClicked__DelegateSignature_Params params;
+	UServerBrowserWidget_C_BndEvt__UI_MenuButton_C_0_K2Node_ComponentBoundEvent_84_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -596,13 +596,13 @@ void UServerBrowserWidget_C::BndEvt__UI_TextInput_C_2_K2Node_ComponentBoundEvent
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__UI_TextInput_C_2_K2Node_ComponentBoundEvent_24_OnTextCommitted__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__UI_TextInput_C_2_K2Node_ComponentBoundEvent_24_OnTextCommitted__DelegateSignature_Params params;
-	params.Text = Text;
-	params.CommitMethod = CommitMethod;
+	UServerBrowserWidget_C_BndEvt__UI_TextInput_C_2_K2Node_ComponentBoundEvent_24_OnTextCommitted__DelegateSignature_Params fn_params;
+	fn_params.Text = Text;
+	fn_params.CommitMethod = CommitMethod;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -618,13 +618,13 @@ void UServerBrowserWidget_C::BndEvt__HostTextInput_K2Node_ComponentBoundEvent_36
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__HostTextInput_K2Node_ComponentBoundEvent_36_OnTextCommitted__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__HostTextInput_K2Node_ComponentBoundEvent_36_OnTextCommitted__DelegateSignature_Params params;
-	params.Text = Text;
-	params.CommitMethod = CommitMethod;
+	UServerBrowserWidget_C_BndEvt__HostTextInput_K2Node_ComponentBoundEvent_36_OnTextCommitted__DelegateSignature_Params fn_params;
+	fn_params.Text = Text;
+	fn_params.CommitMethod = CommitMethod;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -640,13 +640,13 @@ void UServerBrowserWidget_C::BndEvt__MaxPlayersTextInput_K2Node_ComponentBoundEv
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__MaxPlayersTextInput_K2Node_ComponentBoundEvent_45_OnTextCommitted__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__MaxPlayersTextInput_K2Node_ComponentBoundEvent_45_OnTextCommitted__DelegateSignature_Params params;
-	params.Text = Text;
-	params.CommitMethod = CommitMethod;
+	UServerBrowserWidget_C_BndEvt__MaxPlayersTextInput_K2Node_ComponentBoundEvent_45_OnTextCommitted__DelegateSignature_Params fn_params;
+	fn_params.Text = Text;
+	fn_params.CommitMethod = CommitMethod;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -662,13 +662,13 @@ void UServerBrowserWidget_C::BndEvt__MinPlayersTextInput_K2Node_ComponentBoundEv
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__MinPlayersTextInput_K2Node_ComponentBoundEvent_73_OnTextCommitted__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__MinPlayersTextInput_K2Node_ComponentBoundEvent_73_OnTextCommitted__DelegateSignature_Params params;
-	params.Text = Text;
-	params.CommitMethod = CommitMethod;
+	UServerBrowserWidget_C_BndEvt__MinPlayersTextInput_K2Node_ComponentBoundEvent_73_OnTextCommitted__DelegateSignature_Params fn_params;
+	fn_params.Text = Text;
+	fn_params.CommitMethod = CommitMethod;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -681,11 +681,11 @@ void UServerBrowserWidget_C::BndEvt__PasswordPopupCancelButton_K2Node_ComponentB
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__PasswordPopupCancelButton_K2Node_ComponentBoundEvent_931_OnClicked__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__PasswordPopupCancelButton_K2Node_ComponentBoundEvent_931_OnClicked__DelegateSignature_Params params;
+	UServerBrowserWidget_C_BndEvt__PasswordPopupCancelButton_K2Node_ComponentBoundEvent_931_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -698,11 +698,11 @@ void UServerBrowserWidget_C::BndEvt__PasswordPopupOkButton_K2Node_ComponentBound
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__PasswordPopupOkButton_K2Node_ComponentBoundEvent_992_OnClicked__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__PasswordPopupOkButton_K2Node_ComponentBoundEvent_992_OnClicked__DelegateSignature_Params params;
+	UServerBrowserWidget_C_BndEvt__PasswordPopupOkButton_K2Node_ComponentBoundEvent_992_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -718,13 +718,13 @@ void UServerBrowserWidget_C::BndEvt__PasswordPopupTextBox_K2Node_ComponentBoundE
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__PasswordPopupTextBox_K2Node_ComponentBoundEvent_1020_OnEditableTextBoxCommittedEvent__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__PasswordPopupTextBox_K2Node_ComponentBoundEvent_1020_OnEditableTextBoxCommittedEvent__DelegateSignature_Params params;
-	params.Text = Text;
-	params.CommitMethod = CommitMethod;
+	UServerBrowserWidget_C_BndEvt__PasswordPopupTextBox_K2Node_ComponentBoundEvent_1020_OnEditableTextBoxCommittedEvent__DelegateSignature_Params fn_params;
+	fn_params.Text = Text;
+	fn_params.CommitMethod = CommitMethod;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -741,14 +741,14 @@ void UServerBrowserWidget_C::BndEvt__ShowFullServersSlider_K2Node_ComponentBound
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__ShowFullServersSlider_K2Node_ComponentBoundEvent_42_OnValueChanged__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__ShowFullServersSlider_K2Node_ComponentBoundEvent_42_OnValueChanged__DelegateSignature_Params params;
-	params.Index = Index;
-	params.OldIndex = OldIndex;
-	params.Value = Value;
+	UServerBrowserWidget_C_BndEvt__ShowFullServersSlider_K2Node_ComponentBoundEvent_42_OnValueChanged__DelegateSignature_Params fn_params;
+	fn_params.Index = Index;
+	fn_params.OldIndex = OldIndex;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -765,14 +765,14 @@ void UServerBrowserWidget_C::BndEvt__ShowPasswordedOnlySlider_K2Node_ComponentBo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__ShowPasswordedOnlySlider_K2Node_ComponentBoundEvent_58_OnValueChanged__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__ShowPasswordedOnlySlider_K2Node_ComponentBoundEvent_58_OnValueChanged__DelegateSignature_Params params;
-	params.Index = Index;
-	params.OldIndex = OldIndex;
-	params.Value = Value;
+	UServerBrowserWidget_C_BndEvt__ShowPasswordedOnlySlider_K2Node_ComponentBoundEvent_58_OnValueChanged__DelegateSignature_Params fn_params;
+	fn_params.Index = Index;
+	fn_params.OldIndex = OldIndex;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -785,11 +785,11 @@ void UServerBrowserWidget_C::OnESC()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.OnESC");
 
-	UServerBrowserWidget_C_OnESC_Params params;
+	UServerBrowserWidget_C_OnESC_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -802,11 +802,11 @@ void UServerBrowserWidget_C::CancelPassword()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.CancelPassword");
 
-	UServerBrowserWidget_C_CancelPassword_Params params;
+	UServerBrowserWidget_C_CancelPassword_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -819,11 +819,11 @@ void UServerBrowserWidget_C::GoBack()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.GoBack");
 
-	UServerBrowserWidget_C_GoBack_Params params;
+	UServerBrowserWidget_C_GoBack_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -836,11 +836,11 @@ void UServerBrowserWidget_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.Construct");
 
-	UServerBrowserWidget_C_Construct_Params params;
+	UServerBrowserWidget_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -857,14 +857,14 @@ void UServerBrowserWidget_C::BndEvt__ServersCategorySwitch_K2Node_ComponentBound
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__ServersCategorySwitch_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__ServersCategorySwitch_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature_Params params;
-	params.Index = Index;
-	params.OldIndex = OldIndex;
-	params.Value = Value;
+	UServerBrowserWidget_C_BndEvt__ServersCategorySwitch_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature_Params fn_params;
+	fn_params.Index = Index;
+	fn_params.OldIndex = OldIndex;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -877,11 +877,11 @@ void UServerBrowserWidget_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_2_OnBut
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature_Params params;
+	UServerBrowserWidget_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -896,12 +896,12 @@ void UServerBrowserWidget_C::BndEvt__UI_ScrollBar_K2Node_ComponentBoundEvent_1_O
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__UI_ScrollBar_K2Node_ComponentBoundEvent_1_OnSliderMoved__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__UI_ScrollBar_K2Node_ComponentBoundEvent_1_OnSliderMoved__DelegateSignature_Params params;
-	params.Value = Value;
+	UServerBrowserWidget_C_BndEvt__UI_ScrollBar_K2Node_ComponentBoundEvent_1_OnSliderMoved__DelegateSignature_Params fn_params;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -916,12 +916,12 @@ void UServerBrowserWidget_C::OnFavoriteRemoved(const struct FServerInfo& Info)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.OnFavoriteRemoved");
 
-	UServerBrowserWidget_C_OnFavoriteRemoved_Params params;
-	params.Info = Info;
+	UServerBrowserWidget_C_OnFavoriteRemoved_Params fn_params;
+	fn_params.Info = Info;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -936,12 +936,12 @@ void UServerBrowserWidget_C::ShowErrorDialog(struct FText* Message)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.ShowErrorDialog");
 
-	UServerBrowserWidget_C_ShowErrorDialog_Params params;
-	params.Message = Message;
+	UServerBrowserWidget_C_ShowErrorDialog_Params fn_params;
+	fn_params.Message = Message;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -954,11 +954,11 @@ void UServerBrowserWidget_C::BeginWaitingOnServerResponse()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BeginWaitingOnServerResponse");
 
-	UServerBrowserWidget_C_BeginWaitingOnServerResponse_Params params;
+	UServerBrowserWidget_C_BeginWaitingOnServerResponse_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -971,11 +971,11 @@ void UServerBrowserWidget_C::EndWaitingOnServerResponse()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.EndWaitingOnServerResponse");
 
-	UServerBrowserWidget_C_EndWaitingOnServerResponse_Params params;
+	UServerBrowserWidget_C_EndWaitingOnServerResponse_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -990,12 +990,12 @@ void UServerBrowserWidget_C::BndEvt__DirectConnectTextBox_K2Node_ComponentBoundE
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__DirectConnectTextBox_K2Node_ComponentBoundEvent_2_OnEditableTextBoxChangedEvent__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__DirectConnectTextBox_K2Node_ComponentBoundEvent_2_OnEditableTextBoxChangedEvent__DelegateSignature_Params params;
-	params.Text = Text;
+	UServerBrowserWidget_C_BndEvt__DirectConnectTextBox_K2Node_ComponentBoundEvent_2_OnEditableTextBoxChangedEvent__DelegateSignature_Params fn_params;
+	fn_params.Text = Text;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1008,11 +1008,11 @@ void UServerBrowserWidget_C::BndEvt__UI_MenuButton_C_0_K2Node_ComponentBoundEven
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__UI_MenuButton_C_0_K2Node_ComponentBoundEvent_121_OnClicked__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__UI_MenuButton_C_0_K2Node_ComponentBoundEvent_121_OnClicked__DelegateSignature_Params params;
+	UServerBrowserWidget_C_BndEvt__UI_MenuButton_C_0_K2Node_ComponentBoundEvent_121_OnClicked__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1024,21 +1024,21 @@ void UServerBrowserWidget_C::BndEvt__UI_MenuButton_C_0_K2Node_ComponentBoundEven
 // struct FString*                Ip                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // int*                           GameplayPort                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ResponsePort                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString*                authToken                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// struct FString*                AuthToken                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UServerBrowserWidget_C::OpenContinueOrNewDialog(struct FString* Ip, int* GameplayPort, int* ResponsePort, struct FString* authToken)
+void UServerBrowserWidget_C::OpenContinueOrNewDialog(struct FString* Ip, int* GameplayPort, int* ResponsePort, struct FString* AuthToken)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.OpenContinueOrNewDialog");
 
-	UServerBrowserWidget_C_OpenContinueOrNewDialog_Params params;
-	params.Ip = Ip;
-	params.GameplayPort = GameplayPort;
-	params.ResponsePort = ResponsePort;
-	params.authToken = authToken;
+	UServerBrowserWidget_C_OpenContinueOrNewDialog_Params fn_params;
+	fn_params.Ip = Ip;
+	fn_params.GameplayPort = GameplayPort;
+	fn_params.ResponsePort = ResponsePort;
+	fn_params.AuthToken = AuthToken;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1050,21 +1050,21 @@ void UServerBrowserWidget_C::OpenContinueOrNewDialog(struct FString* Ip, int* Ga
 // struct FString                 Ip                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // int                            GameplayPort                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ResponsePort                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 authToken                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// struct FString                 AuthToken                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UServerBrowserWidget_C::OnContinueWithCharacter(const struct FString& Ip, int GameplayPort, int ResponsePort, const struct FString& authToken)
+void UServerBrowserWidget_C::OnContinueWithCharacter(const struct FString& Ip, int GameplayPort, int ResponsePort, const struct FString& AuthToken)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.OnContinueWithCharacter");
 
-	UServerBrowserWidget_C_OnContinueWithCharacter_Params params;
-	params.Ip = Ip;
-	params.GameplayPort = GameplayPort;
-	params.ResponsePort = ResponsePort;
-	params.authToken = authToken;
+	UServerBrowserWidget_C_OnContinueWithCharacter_Params fn_params;
+	fn_params.Ip = Ip;
+	fn_params.GameplayPort = GameplayPort;
+	fn_params.ResponsePort = ResponsePort;
+	fn_params.AuthToken = AuthToken;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1076,21 +1076,21 @@ void UServerBrowserWidget_C::OnContinueWithCharacter(const struct FString& Ip, i
 // struct FString                 Ip                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // int                            GameplayPort                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ResponsePort                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 authToken                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// struct FString                 AuthToken                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UServerBrowserWidget_C::OnCreateNewCharacter(const struct FString& Ip, int GameplayPort, int ResponsePort, const struct FString& authToken)
+void UServerBrowserWidget_C::OnCreateNewCharacter(const struct FString& Ip, int GameplayPort, int ResponsePort, const struct FString& AuthToken)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.OnCreateNewCharacter");
 
-	UServerBrowserWidget_C_OnCreateNewCharacter_Params params;
-	params.Ip = Ip;
-	params.GameplayPort = GameplayPort;
-	params.ResponsePort = ResponsePort;
-	params.authToken = authToken;
+	UServerBrowserWidget_C_OnCreateNewCharacter_Params fn_params;
+	fn_params.Ip = Ip;
+	fn_params.GameplayPort = GameplayPort;
+	fn_params.ResponsePort = ResponsePort;
+	fn_params.AuthToken = AuthToken;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1103,11 +1103,11 @@ void UServerBrowserWidget_C::OnNewCharacterConfirmed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.OnNewCharacterConfirmed");
 
-	UServerBrowserWidget_C_OnNewCharacterConfirmed_Params params;
+	UServerBrowserWidget_C_OnNewCharacterConfirmed_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1120,11 +1120,11 @@ void UServerBrowserWidget_C::NewCharacterCanceled()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.NewCharacterCanceled");
 
-	UServerBrowserWidget_C_NewCharacterCanceled_Params params;
+	UServerBrowserWidget_C_NewCharacterCanceled_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1140,13 +1140,13 @@ void UServerBrowserWidget_C::BndEvt__SortByPing_K2Node_ComponentBoundEvent_882_O
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__SortByPing_K2Node_ComponentBoundEvent_882_OnClicked__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__SortByPing_K2Node_ComponentBoundEvent_882_OnClicked__DelegateSignature_Params params;
-	params.Button = Button;
-	params.Type = Type;
+	UServerBrowserWidget_C_BndEvt__SortByPing_K2Node_ComponentBoundEvent_882_OnClicked__DelegateSignature_Params fn_params;
+	fn_params.Button = Button;
+	fn_params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1159,11 +1159,11 @@ void UServerBrowserWidget_C::ClearSorts()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.ClearSorts");
 
-	UServerBrowserWidget_C_ClearSorts_Params params;
+	UServerBrowserWidget_C_ClearSorts_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1179,13 +1179,13 @@ void UServerBrowserWidget_C::BndEvt__SortByHost_K2Node_ComponentBoundEvent_4_OnC
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__SortByHost_K2Node_ComponentBoundEvent_4_OnClicked__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__SortByHost_K2Node_ComponentBoundEvent_4_OnClicked__DelegateSignature_Params params;
-	params.Button = Button;
-	params.Type = Type;
+	UServerBrowserWidget_C_BndEvt__SortByHost_K2Node_ComponentBoundEvent_4_OnClicked__DelegateSignature_Params fn_params;
+	fn_params.Button = Button;
+	fn_params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1201,13 +1201,13 @@ void UServerBrowserWidget_C::BndEvt__SortByTime_K2Node_ComponentBoundEvent_28_On
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__SortByTime_K2Node_ComponentBoundEvent_28_OnClicked__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__SortByTime_K2Node_ComponentBoundEvent_28_OnClicked__DelegateSignature_Params params;
-	params.Button = Button;
-	params.Type = Type;
+	UServerBrowserWidget_C_BndEvt__SortByTime_K2Node_ComponentBoundEvent_28_OnClicked__DelegateSignature_Params fn_params;
+	fn_params.Button = Button;
+	fn_params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1223,13 +1223,13 @@ void UServerBrowserWidget_C::BndEvt__SortByPlayers_K2Node_ComponentBoundEvent_29
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__SortByPlayers_K2Node_ComponentBoundEvent_29_OnClicked__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__SortByPlayers_K2Node_ComponentBoundEvent_29_OnClicked__DelegateSignature_Params params;
-	params.Button = Button;
-	params.Type = Type;
+	UServerBrowserWidget_C_BndEvt__SortByPlayers_K2Node_ComponentBoundEvent_29_OnClicked__DelegateSignature_Params fn_params;
+	fn_params.Button = Button;
+	fn_params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1245,13 +1245,13 @@ void UServerBrowserWidget_C::BndEvt__SortByPassword_K2Node_ComponentBoundEvent_8
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__SortByPassword_K2Node_ComponentBoundEvent_84_OnClicked__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__SortByPassword_K2Node_ComponentBoundEvent_84_OnClicked__DelegateSignature_Params params;
-	params.Button = Button;
-	params.Type = Type;
+	UServerBrowserWidget_C_BndEvt__SortByPassword_K2Node_ComponentBoundEvent_84_OnClicked__DelegateSignature_Params fn_params;
+	fn_params.Button = Button;
+	fn_params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1267,13 +1267,13 @@ void UServerBrowserWidget_C::BndEvt__SearchBox_K2Node_ComponentBoundEvent_118_On
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__SearchBox_K2Node_ComponentBoundEvent_118_OnEditableTextBoxCommittedEvent__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__SearchBox_K2Node_ComponentBoundEvent_118_OnEditableTextBoxCommittedEvent__DelegateSignature_Params params;
-	params.Text = Text;
-	params.CommitMethod = CommitMethod;
+	UServerBrowserWidget_C_BndEvt__SearchBox_K2Node_ComponentBoundEvent_118_OnEditableTextBoxCommittedEvent__DelegateSignature_Params fn_params;
+	fn_params.Text = Text;
+	fn_params.CommitMethod = CommitMethod;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1288,12 +1288,12 @@ void UServerBrowserWidget_C::BndEvt__SearchBox_K2Node_ComponentBoundEvent_0_OnEd
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.BndEvt__SearchBox_K2Node_ComponentBoundEvent_0_OnEditableTextBoxChangedEvent__DelegateSignature");
 
-	UServerBrowserWidget_C_BndEvt__SearchBox_K2Node_ComponentBoundEvent_0_OnEditableTextBoxChangedEvent__DelegateSignature_Params params;
-	params.Text = Text;
+	UServerBrowserWidget_C_BndEvt__SearchBox_K2Node_ComponentBoundEvent_0_OnEditableTextBoxChangedEvent__DelegateSignature_Params fn_params;
+	fn_params.Text = Text;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1309,13 +1309,13 @@ void UServerBrowserWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.Tick");
 
-	UServerBrowserWidget_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UServerBrowserWidget_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1330,12 +1330,12 @@ void UServerBrowserWidget_C::ExecuteUbergraph_ServerBrowserWidget(int EntryPoint
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.ExecuteUbergraph_ServerBrowserWidget");
 
-	UServerBrowserWidget_C_ExecuteUbergraph_ServerBrowserWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UServerBrowserWidget_C_ExecuteUbergraph_ServerBrowserWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

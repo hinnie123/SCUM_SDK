@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DEagle_50Gold.BP_DEagle_50Gold_C
-// 0x0008 (0x1168 - 0x1160)
-class ABP_DEagle_50Gold_C : public AWeapon
+// 0x0008 (0x12B8 - 0x12B0)
+class ABP_DEagle_50Gold_C : public ABP_DEagle_50_C
 {
 public:
-	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule;                              // 0x1160(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule1;                             // 0x12B0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

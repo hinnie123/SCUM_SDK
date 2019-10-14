@@ -21,12 +21,12 @@ void UVitalStatsBloodPressure_C::AlarmControl(int alarmCode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsBloodPressure.VitalStatsBloodPressure_C.AlarmControl");
 
-	UVitalStatsBloodPressure_C_AlarmControl_Params params;
-	params.alarmCode = alarmCode;
+	UVitalStatsBloodPressure_C_AlarmControl_Params fn_params;
+	fn_params.alarmCode = alarmCode;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -39,11 +39,11 @@ void UVitalStatsBloodPressure_C::DeactivateAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsBloodPressure.VitalStatsBloodPressure_C.DeactivateAlarm");
 
-	UVitalStatsBloodPressure_C_DeactivateAlarm_Params params;
+	UVitalStatsBloodPressure_C_DeactivateAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -56,11 +56,11 @@ void UVitalStatsBloodPressure_C::ActivateAlarm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsBloodPressure.VitalStatsBloodPressure_C.ActivateAlarm");
 
-	UVitalStatsBloodPressure_C_ActivateAlarm_Params params;
+	UVitalStatsBloodPressure_C_ActivateAlarm_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -77,18 +77,18 @@ void UVitalStatsBloodPressure_C::CheckBloodPressureAlarm(int systolicPressure, i
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsBloodPressure.VitalStatsBloodPressure_C.CheckBloodPressureAlarm");
 
-	UVitalStatsBloodPressure_C_CheckBloodPressureAlarm_Params params;
-	params.systolicPressure = systolicPressure;
-	params.diastolicPressure = diastolicPressure;
+	UVitalStatsBloodPressure_C_CheckBloodPressureAlarm_Params fn_params;
+	fn_params.systolicPressure = systolicPressure;
+	fn_params.diastolicPressure = diastolicPressure;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (alarmCode != nullptr)
-		*alarmCode = params.alarmCode;
+		*alarmCode = fn_params.alarmCode;
 }
 
 
@@ -101,15 +101,15 @@ struct FText UVitalStatsBloodPressure_C::GetBloodPressure()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsBloodPressure.VitalStatsBloodPressure_C.GetBloodPressure");
 
-	UVitalStatsBloodPressure_C_GetBloodPressure_Params params;
+	UVitalStatsBloodPressure_C_GetBloodPressure_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -120,11 +120,11 @@ void UVitalStatsBloodPressure_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsBloodPressure.VitalStatsBloodPressure_C.Construct");
 
-	UVitalStatsBloodPressure_C_Construct_Params params;
+	UVitalStatsBloodPressure_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -137,11 +137,11 @@ void UVitalStatsBloodPressure_C::UpdateContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsBloodPressure.VitalStatsBloodPressure_C.UpdateContent");
 
-	UVitalStatsBloodPressure_C_UpdateContent_Params params;
+	UVitalStatsBloodPressure_C_UpdateContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -157,13 +157,13 @@ void UVitalStatsBloodPressure_C::Tick(struct FGeometry* MyGeometry, float* InDel
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsBloodPressure.VitalStatsBloodPressure_C.Tick");
 
-	UVitalStatsBloodPressure_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UVitalStatsBloodPressure_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -178,12 +178,12 @@ void UVitalStatsBloodPressure_C::ExecuteUbergraph_VitalStatsBloodPressure(int En
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalStatsBloodPressure.VitalStatsBloodPressure_C.ExecuteUbergraph_VitalStatsBloodPressure");
 
-	UVitalStatsBloodPressure_C_ExecuteUbergraph_VitalStatsBloodPressure_Params params;
-	params.EntryPoint = EntryPoint;
+	UVitalStatsBloodPressure_C_ExecuteUbergraph_VitalStatsBloodPressure_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

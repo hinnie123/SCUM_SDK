@@ -19,11 +19,11 @@ void UNutritions_C::SetParentsForChildren()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.SetParentsForChildren");
 
-	UNutritions_C_SetParentsForChildren_Params params;
+	UNutritions_C_SetParentsForChildren_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -38,16 +38,16 @@ void UNutritions_C::shouldAlarmBeOn(bool* shouldAlarmBeOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.shouldAlarmBeOn");
 
-	UNutritions_C_shouldAlarmBeOn_Params params;
+	UNutritions_C_shouldAlarmBeOn_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (shouldAlarmBeOn != nullptr)
-		*shouldAlarmBeOn = params.shouldAlarmBeOn;
+		*shouldAlarmBeOn = fn_params.shouldAlarmBeOn;
 }
 
 
@@ -58,11 +58,11 @@ void UNutritions_C::UpdateCaloryWaterConsumRates()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.UpdateCaloryWaterConsumRates");
 
-	UNutritions_C_UpdateCaloryWaterConsumRates_Params params;
+	UNutritions_C_UpdateCaloryWaterConsumRates_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -75,11 +75,11 @@ void UNutritions_C::Init()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.Init");
 
-	UNutritions_C_Init_Params params;
+	UNutritions_C_Init_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -92,11 +92,11 @@ void UNutritions_C::Update()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.Update");
 
-	UNutritions_C_Update_Params params;
+	UNutritions_C_Update_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -109,11 +109,11 @@ void UNutritions_C::UpdateNutritionPercentages()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.UpdateNutritionPercentages");
 
-	UNutritions_C_UpdateNutritionPercentages_Params params;
+	UNutritions_C_UpdateNutritionPercentages_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -126,11 +126,11 @@ void UNutritions_C::UpdateRDAValues()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.UpdateRDAValues");
 
-	UNutritions_C_UpdateRDAValues_Params params;
+	UNutritions_C_UpdateRDAValues_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -143,11 +143,11 @@ void UNutritions_C::UpdateNutritionValues()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.UpdateNutritionValues");
 
-	UNutritions_C_UpdateNutritionValues_Params params;
+	UNutritions_C_UpdateNutritionValues_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -162,12 +162,12 @@ void UNutritions_C::SetDefaultTitle(const struct FText& defaultTitle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.SetDefaultTitle");
 
-	UNutritions_C_SetDefaultTitle_Params params;
-	params.defaultTitle = defaultTitle;
+	UNutritions_C_SetDefaultTitle_Params fn_params;
+	fn_params.defaultTitle = defaultTitle;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -182,12 +182,12 @@ void UNutritions_C::SetContentVisibility(ESlateVisibility Visibility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.SetContentVisibility");
 
-	UNutritions_C_SetContentVisibility_Params params;
-	params.Visibility = Visibility;
+	UNutritions_C_SetContentVisibility_Params fn_params;
+	fn_params.Visibility = Visibility;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -202,12 +202,12 @@ void UNutritions_C::SetTextColor(const struct FLinearColor& TextColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.SetTextColor");
 
-	UNutritions_C_SetTextColor_Params params;
-	params.TextColor = TextColor;
+	UNutritions_C_SetTextColor_Params fn_params;
+	fn_params.TextColor = TextColor;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -223,13 +223,13 @@ void UNutritions_C::SetTextColorOfVerticalBox(class UPanelWidget* verticalBoxRef
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.SetTextColorOfVerticalBox");
 
-	UNutritions_C_SetTextColorOfVerticalBox_Params params;
-	params.verticalBoxRef = verticalBoxRef;
-	params.TextColor = TextColor;
+	UNutritions_C_SetTextColorOfVerticalBox_Params fn_params;
+	fn_params.verticalBoxRef = verticalBoxRef;
+	fn_params.TextColor = TextColor;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -244,15 +244,15 @@ struct FText UNutritions_C::GetTitleText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.GetTitleText");
 
-	UNutritions_C_GetTitleText_Params params;
+	UNutritions_C_GetTitleText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -265,16 +265,16 @@ void UNutritions_C::GetDefaultTitle(struct FText* defaultTitle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.GetDefaultTitle");
 
-	UNutritions_C_GetDefaultTitle_Params params;
+	UNutritions_C_GetDefaultTitle_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (defaultTitle != nullptr)
-		*defaultTitle = params.defaultTitle;
+		*defaultTitle = fn_params.defaultTitle;
 }
 
 
@@ -287,16 +287,16 @@ void UNutritions_C::SelectCustomColor(struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.SelectCustomColor");
 
-	UNutritions_C_SelectCustomColor_Params params;
+	UNutritions_C_SelectCustomColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Color != nullptr)
-		*Color = params.Color;
+		*Color = fn_params.Color;
 }
 
 
@@ -309,12 +309,12 @@ void UNutritions_C::OnMinimize(bool shouldMinimize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.OnMinimize");
 
-	UNutritions_C_OnMinimize_Params params;
-	params.shouldMinimize = shouldMinimize;
+	UNutritions_C_OnMinimize_Params fn_params;
+	fn_params.shouldMinimize = shouldMinimize;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -327,11 +327,11 @@ void UNutritions_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.Construct");
 
-	UNutritions_C_Construct_Params params;
+	UNutritions_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -347,13 +347,13 @@ void UNutritions_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.Tick");
 
-	UNutritions_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UNutritions_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -366,11 +366,11 @@ void UNutritions_C::UpdateNutritionsEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.UpdateNutritionsEvent");
 
-	UNutritions_C_UpdateNutritionsEvent_Params params;
+	UNutritions_C_UpdateNutritionsEvent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -383,11 +383,11 @@ void UNutritions_C::OnPrisonerSet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.OnPrisonerSet");
 
-	UNutritions_C_OnPrisonerSet_Params params;
+	UNutritions_C_OnPrisonerSet_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -400,11 +400,11 @@ void UNutritions_C::AlarmOnWindowContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.AlarmOnWindowContent");
 
-	UNutritions_C_AlarmOnWindowContent_Params params;
+	UNutritions_C_AlarmOnWindowContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -417,11 +417,11 @@ void UNutritions_C::AlarmOffWindowContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.AlarmOffWindowContent");
 
-	UNutritions_C_AlarmOffWindowContent_Params params;
+	UNutritions_C_AlarmOffWindowContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -436,12 +436,12 @@ void UNutritions_C::ExecuteUbergraph_Nutritions(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.ExecuteUbergraph_Nutritions");
 
-	UNutritions_C_ExecuteUbergraph_Nutritions_Params params;
-	params.EntryPoint = EntryPoint;
+	UNutritions_C_ExecuteUbergraph_Nutritions_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

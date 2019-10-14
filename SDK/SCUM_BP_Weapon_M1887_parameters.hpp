@@ -14,6 +14,12 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_Weapon_M1887.BP_Weapon_M1887_C.CanSwitchFiringMode
+struct ABP_Weapon_M1887_C_CanSwitchFiringMode_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function BP_Weapon_M1887.BP_Weapon_M1887_C.GetAmmoReloadCapacity
 struct ABP_Weapon_M1887_C_GetAmmoReloadCapacity_Params
 {
@@ -29,6 +35,11 @@ struct ABP_Weapon_M1887_C_GetWidgetDisplayInfo_Params
 
 // Function BP_Weapon_M1887.BP_Weapon_M1887_C.UserConstructionScript
 struct ABP_Weapon_M1887_C_UserConstructionScript_Params
+{
+};
+
+// Function BP_Weapon_M1887.BP_Weapon_M1887_C.ReceiveBeginPlay
+struct ABP_Weapon_M1887_C_ReceiveBeginPlay_Params
 {
 };
 

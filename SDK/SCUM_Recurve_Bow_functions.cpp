@@ -19,11 +19,11 @@ void ARecurve_Bow_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Recurve_Bow.Recurve_Bow_C.UserConstructionScript");
 
-	ARecurve_Bow_C_UserConstructionScript_Params params;
+	ARecurve_Bow_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -38,12 +38,12 @@ void ARecurve_Bow_C::ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Recurve_Bow.Recurve_Bow_C.ReceiveTick");
 
-	ARecurve_Bow_C_ReceiveTick_Params params;
-	params.DeltaSeconds = DeltaSeconds;
+	ARecurve_Bow_C_ReceiveTick_Params fn_params;
+	fn_params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -58,12 +58,12 @@ void ARecurve_Bow_C::ExecuteUbergraph_Recurve_Bow(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Recurve_Bow.Recurve_Bow_C.ExecuteUbergraph_Recurve_Bow");
 
-	ARecurve_Bow_C_ExecuteUbergraph_Recurve_Bow_Params params;
-	params.EntryPoint = EntryPoint;
+	ARecurve_Bow_C_ExecuteUbergraph_Recurve_Bow_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

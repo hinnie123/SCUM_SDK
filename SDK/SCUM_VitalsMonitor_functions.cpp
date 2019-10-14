@@ -21,16 +21,16 @@ void UVitalsMonitor_C::shouldAlarmBeOn(bool* shouldAlarmBeOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalsMonitor.VitalsMonitor_C.shouldAlarmBeOn");
 
-	UVitalsMonitor_C_shouldAlarmBeOn_Params params;
+	UVitalsMonitor_C_shouldAlarmBeOn_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (shouldAlarmBeOn != nullptr)
-		*shouldAlarmBeOn = params.shouldAlarmBeOn;
+		*shouldAlarmBeOn = fn_params.shouldAlarmBeOn;
 }
 
 
@@ -41,11 +41,11 @@ void UVitalsMonitor_C::Init()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalsMonitor.VitalsMonitor_C.Init");
 
-	UVitalsMonitor_C_Init_Params params;
+	UVitalsMonitor_C_Init_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -61,17 +61,17 @@ void UVitalsMonitor_C::SetPrisonerAndLifeComponentToMonitor(class APrisoner* Pri
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalsMonitor.VitalsMonitor_C.SetPrisonerAndLifeComponentToMonitor");
 
-	UVitalsMonitor_C_SetPrisonerAndLifeComponentToMonitor_Params params;
-	params.Prisoner = Prisoner;
+	UVitalsMonitor_C_SetPrisonerAndLifeComponentToMonitor_Params fn_params;
+	fn_params.Prisoner = Prisoner;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Success != nullptr)
-		*Success = params.Success;
+		*Success = fn_params.Success;
 }
 
 
@@ -84,15 +84,15 @@ struct FText UVitalsMonitor_C::GetHeartRateBPM()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalsMonitor.VitalsMonitor_C.GetHeartRateBPM");
 
-	UVitalsMonitor_C_GetHeartRateBPM_Params params;
+	UVitalsMonitor_C_GetHeartRateBPM_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -103,11 +103,11 @@ void UVitalsMonitor_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalsMonitor.VitalsMonitor_C.Construct");
 
-	UVitalsMonitor_C_Construct_Params params;
+	UVitalsMonitor_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -123,13 +123,13 @@ void UVitalsMonitor_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalsMonitor.VitalsMonitor_C.Tick");
 
-	UVitalsMonitor_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UVitalsMonitor_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -142,11 +142,11 @@ void UVitalsMonitor_C::AlarmOnWindowContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalsMonitor.VitalsMonitor_C.AlarmOnWindowContent");
 
-	UVitalsMonitor_C_AlarmOnWindowContent_Params params;
+	UVitalsMonitor_C_AlarmOnWindowContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -159,11 +159,11 @@ void UVitalsMonitor_C::AlarmOffWindowContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalsMonitor.VitalsMonitor_C.AlarmOffWindowContent");
 
-	UVitalsMonitor_C_AlarmOffWindowContent_Params params;
+	UVitalsMonitor_C_AlarmOffWindowContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -178,12 +178,12 @@ void UVitalsMonitor_C::ExecuteUbergraph_VitalsMonitor(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VitalsMonitor.VitalsMonitor_C.ExecuteUbergraph_VitalsMonitor");
 
-	UVitalsMonitor_C_ExecuteUbergraph_VitalsMonitor_Params params;
-	params.EntryPoint = EntryPoint;
+	UVitalsMonitor_C_ExecuteUbergraph_VitalsMonitor_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

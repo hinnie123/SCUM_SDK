@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Horse_Torso_Half.Horse_Torso_Half_C
-// 0x0000 (0x0790 - 0x0790)
+// 0x0000 (0x0830 - 0x0830)
 class AHorse_Torso_Half_C : public AEquipmentItem
 {
 public:

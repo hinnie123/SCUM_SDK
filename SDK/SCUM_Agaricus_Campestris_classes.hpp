@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Agaricus_Campestris.Agaricus_Campestris_C
-// 0x0000 (0x08C0 - 0x08C0)
+// 0x0000 (0x0958 - 0x0958)
 class AAgaricus_Campestris_C : public AFoodItem
 {
 public:

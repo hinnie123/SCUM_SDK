@@ -22,17 +22,17 @@ bool UCustomMeshComponent::SetCustomMeshTriangles(TArray<struct FCustomMeshTrian
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CustomMeshComponent.CustomMeshComponent.SetCustomMeshTriangles");
 
-	UCustomMeshComponent_SetCustomMeshTriangles_Params params;
-	params.Triangles = Triangles;
+	UCustomMeshComponent_SetCustomMeshTriangles_Params fn_params;
+	fn_params.Triangles = Triangles;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -43,12 +43,12 @@ void UCustomMeshComponent::ClearCustomMeshTriangles()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CustomMeshComponent.CustomMeshComponent.ClearCustomMeshTriangles");
 
-	UCustomMeshComponent_ClearCustomMeshTriangles_Params params;
+	UCustomMeshComponent_ClearCustomMeshTriangles_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -63,13 +63,13 @@ void UCustomMeshComponent::AddCustomMeshTriangles(TArray<struct FCustomMeshTrian
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CustomMeshComponent.CustomMeshComponent.AddCustomMeshTriangles");
 
-	UCustomMeshComponent_AddCustomMeshTriangles_Params params;
-	params.Triangles = Triangles;
+	UCustomMeshComponent_AddCustomMeshTriangles_Params fn_params;
+	fn_params.Triangles = Triangles;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

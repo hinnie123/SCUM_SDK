@@ -19,11 +19,11 @@ void ABP_WeaponSightBase_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WeaponSightBase.BP_WeaponSightBase_C.UserConstructionScript");
 
-	ABP_WeaponSightBase_C_UserConstructionScript_Params params;
+	ABP_WeaponSightBase_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -38,12 +38,12 @@ void ABP_WeaponSightBase_C::OnAttachedToItem(class AItem** Item)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WeaponSightBase.BP_WeaponSightBase_C.OnAttachedToItem");
 
-	ABP_WeaponSightBase_C_OnAttachedToItem_Params params;
-	params.Item = Item;
+	ABP_WeaponSightBase_C_OnAttachedToItem_Params fn_params;
+	fn_params.Item = Item;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -58,12 +58,12 @@ void ABP_WeaponSightBase_C::OnDetachedFromItem(class AItem** Item)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WeaponSightBase.BP_WeaponSightBase_C.OnDetachedFromItem");
 
-	ABP_WeaponSightBase_C_OnDetachedFromItem_Params params;
-	params.Item = Item;
+	ABP_WeaponSightBase_C_OnDetachedFromItem_Params fn_params;
+	fn_params.Item = Item;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -78,12 +78,12 @@ void ABP_WeaponSightBase_C::ExecuteUbergraph_BP_WeaponSightBase(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WeaponSightBase.BP_WeaponSightBase_C.ExecuteUbergraph_BP_WeaponSightBase");
 
-	ABP_WeaponSightBase_C_ExecuteUbergraph_BP_WeaponSightBase_Params params;
-	params.EntryPoint = EntryPoint;
+	ABP_WeaponSightBase_C_ExecuteUbergraph_BP_WeaponSightBase_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

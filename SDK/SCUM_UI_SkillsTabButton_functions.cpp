@@ -19,11 +19,11 @@ void UUI_SkillsTabButton_C::Shrink()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SkillsTabButton.UI_SkillsTabButton_C.Shrink");
 
-	UUI_SkillsTabButton_C_Shrink_Params params;
+	UUI_SkillsTabButton_C_Shrink_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void UUI_SkillsTabButton_C::Enlarge()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SkillsTabButton.UI_SkillsTabButton_C.Enlarge");
 
-	UUI_SkillsTabButton_C_Enlarge_Params params;
+	UUI_SkillsTabButton_C_Enlarge_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -53,11 +53,11 @@ void UUI_SkillsTabButton_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SkillsTabButton.UI_SkillsTabButton_C.Construct");
 
-	UUI_SkillsTabButton_C_Construct_Params params;
+	UUI_SkillsTabButton_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -70,11 +70,11 @@ void UUI_SkillsTabButton_C::OnSynchronizeProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SkillsTabButton.UI_SkillsTabButton_C.OnSynchronizeProperties");
 
-	UUI_SkillsTabButton_C_OnSynchronizeProperties_Params params;
+	UUI_SkillsTabButton_C_OnSynchronizeProperties_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -87,11 +87,11 @@ void UUI_SkillsTabButton_C::BndEvt__MainButton_K2Node_ComponentBoundEvent_100_On
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SkillsTabButton.UI_SkillsTabButton_C.BndEvt__MainButton_K2Node_ComponentBoundEvent_100_OnButtonClickedEvent__DelegateSignature");
 
-	UUI_SkillsTabButton_C_BndEvt__MainButton_K2Node_ComponentBoundEvent_100_OnButtonClickedEvent__DelegateSignature_Params params;
+	UUI_SkillsTabButton_C_BndEvt__MainButton_K2Node_ComponentBoundEvent_100_OnButtonClickedEvent__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -106,12 +106,12 @@ void UUI_SkillsTabButton_C::ExecuteUbergraph_UI_SkillsTabButton(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SkillsTabButton.UI_SkillsTabButton_C.ExecuteUbergraph_UI_SkillsTabButton");
 
-	UUI_SkillsTabButton_C_ExecuteUbergraph_UI_SkillsTabButton_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_SkillsTabButton_C_ExecuteUbergraph_UI_SkillsTabButton_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -124,11 +124,11 @@ void UUI_SkillsTabButton_C::OnClickedDispatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SkillsTabButton.UI_SkillsTabButton_C.OnClickedDispatcher__DelegateSignature");
 
-	UUI_SkillsTabButton_C_OnClickedDispatcher__DelegateSignature_Params params;
+	UUI_SkillsTabButton_C_OnClickedDispatcher__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

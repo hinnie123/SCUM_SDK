@@ -19,11 +19,11 @@ void AWeatherController_C::RecaptureSkyProbe()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeatherController.WeatherController_C.RecaptureSkyProbe");
 
-	AWeatherController_C_RecaptureSkyProbe_Params params;
+	AWeatherController_C_RecaptureSkyProbe_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -36,11 +36,11 @@ void AWeatherController_C::LerpFactors()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeatherController.WeatherController_C.LerpFactors");
 
-	AWeatherController_C_LerpFactors_Params params;
+	AWeatherController_C_LerpFactors_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -53,11 +53,11 @@ void AWeatherController_C::UpdateSkyParameters()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeatherController.WeatherController_C.UpdateSkyParameters");
 
-	AWeatherController_C_UpdateSkyParameters_Params params;
+	AWeatherController_C_UpdateSkyParameters_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -70,11 +70,11 @@ void AWeatherController_C::sunCompute()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeatherController.WeatherController_C.sunCompute");
 
-	AWeatherController_C_sunCompute_Params params;
+	AWeatherController_C_sunCompute_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -87,11 +87,11 @@ void AWeatherController_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeatherController.WeatherController_C.UserConstructionScript");
 
-	AWeatherController_C_UserConstructionScript_Params params;
+	AWeatherController_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -106,12 +106,12 @@ void AWeatherController_C::ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeatherController.WeatherController_C.ReceiveTick");
 
-	AWeatherController_C_ReceiveTick_Params params;
-	params.DeltaSeconds = DeltaSeconds;
+	AWeatherController_C_ReceiveTick_Params fn_params;
+	fn_params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -124,11 +124,11 @@ void AWeatherController_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeatherController.WeatherController_C.ReceiveBeginPlay");
 
-	AWeatherController_C_ReceiveBeginPlay_Params params;
+	AWeatherController_C_ReceiveBeginPlay_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -141,11 +141,11 @@ void AWeatherController_C::NetworkSyncDayTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeatherController.WeatherController_C.NetworkSyncDayTime");
 
-	AWeatherController_C_NetworkSyncDayTime_Params params;
+	AWeatherController_C_NetworkSyncDayTime_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -161,13 +161,13 @@ void AWeatherController_C::StartWeatherTransition(float NewStormIntensity, float
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeatherController.WeatherController_C.StartWeatherTransition");
 
-	AWeatherController_C_StartWeatherTransition_Params params;
-	params.NewStormIntensity = NewStormIntensity;
-	params.TransitionTime = TransitionTime;
+	AWeatherController_C_StartWeatherTransition_Params fn_params;
+	fn_params.NewStormIntensity = NewStormIntensity;
+	fn_params.TransitionTime = TransitionTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -180,11 +180,11 @@ void AWeatherController_C::Recapture()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeatherController.WeatherController_C.Recapture");
 
-	AWeatherController_C_Recapture_Params params;
+	AWeatherController_C_Recapture_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -199,12 +199,12 @@ void AWeatherController_C::Event_SetWindDirection(const struct FVector2D& Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeatherController.WeatherController_C.Event_SetWindDirection");
 
-	AWeatherController_C_Event_SetWindDirection_Params params;
-	params.Value = Value;
+	AWeatherController_C_Event_SetWindDirection_Params fn_params;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -219,12 +219,12 @@ void AWeatherController_C::Event_SetWindSpeed(float Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeatherController.WeatherController_C.Event_SetWindSpeed");
 
-	AWeatherController_C_Event_SetWindSpeed_Params params;
-	params.Value = Value;
+	AWeatherController_C_Event_SetWindSpeed_Params fn_params;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -237,11 +237,11 @@ void AWeatherController_C::ChangeWindDir()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeatherController.WeatherController_C.ChangeWindDir");
 
-	AWeatherController_C_ChangeWindDir_Params params;
+	AWeatherController_C_ChangeWindDir_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -256,12 +256,12 @@ void AWeatherController_C::ExecuteUbergraph_WeatherController(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeatherController.WeatherController_C.ExecuteUbergraph_WeatherController");
 
-	AWeatherController_C_ExecuteUbergraph_WeatherController_Params params;
-	params.EntryPoint = EntryPoint;
+	AWeatherController_C_ExecuteUbergraph_WeatherController_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

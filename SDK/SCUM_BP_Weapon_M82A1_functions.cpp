@@ -21,15 +21,15 @@ bool ABP_Weapon_M82A1_C::GetIgnoreSupportingHandIK()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_M82A1.BP_Weapon_M82A1_C.GetIgnoreSupportingHandIK");
 
-	ABP_Weapon_M82A1_C_GetIgnoreSupportingHandIK_Params params;
+	ABP_Weapon_M82A1_C_GetIgnoreSupportingHandIK_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -42,15 +42,15 @@ bool ABP_Weapon_M82A1_C::CanSwitchFiringMode()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_M82A1.BP_Weapon_M82A1_C.CanSwitchFiringMode");
 
-	ABP_Weapon_M82A1_C_CanSwitchFiringMode_Params params;
+	ABP_Weapon_M82A1_C_CanSwitchFiringMode_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -61,11 +61,11 @@ void ABP_Weapon_M82A1_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_M82A1.BP_Weapon_M82A1_C.UserConstructionScript");
 
-	ABP_Weapon_M82A1_C_UserConstructionScript_Params params;
+	ABP_Weapon_M82A1_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -80,12 +80,12 @@ void ABP_Weapon_M82A1_C::ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_M82A1.BP_Weapon_M82A1_C.ReceiveTick");
 
-	ABP_Weapon_M82A1_C_ReceiveTick_Params params;
-	params.DeltaSeconds = DeltaSeconds;
+	ABP_Weapon_M82A1_C_ReceiveTick_Params fn_params;
+	fn_params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -98,11 +98,11 @@ void ABP_Weapon_M82A1_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_M82A1.BP_Weapon_M82A1_C.ReceiveBeginPlay");
 
-	ABP_Weapon_M82A1_C_ReceiveBeginPlay_Params params;
+	ABP_Weapon_M82A1_C_ReceiveBeginPlay_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -118,13 +118,13 @@ void ABP_Weapon_M82A1_C::OnAttachmentAdded(class AWeapon* sender, class AWeaponA
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_M82A1.BP_Weapon_M82A1_C.OnAttachmentAdded");
 
-	ABP_Weapon_M82A1_C_OnAttachmentAdded_Params params;
-	params.sender = sender;
-	params.Attachment = Attachment;
+	ABP_Weapon_M82A1_C_OnAttachmentAdded_Params fn_params;
+	fn_params.sender = sender;
+	fn_params.Attachment = Attachment;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -140,13 +140,13 @@ void ABP_Weapon_M82A1_C::OnAttachmentRemoved(class AWeapon* sender, class AWeapo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_M82A1.BP_Weapon_M82A1_C.OnAttachmentRemoved");
 
-	ABP_Weapon_M82A1_C_OnAttachmentRemoved_Params params;
-	params.sender = sender;
-	params.Attachment = Attachment;
+	ABP_Weapon_M82A1_C_OnAttachmentRemoved_Params fn_params;
+	fn_params.sender = sender;
+	fn_params.Attachment = Attachment;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -161,12 +161,12 @@ void ABP_Weapon_M82A1_C::ExecuteUbergraph_BP_Weapon_M82A1(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_M82A1.BP_Weapon_M82A1_C.ExecuteUbergraph_BP_Weapon_M82A1");
 
-	ABP_Weapon_M82A1_C_ExecuteUbergraph_BP_Weapon_M82A1_Params params;
-	params.EntryPoint = EntryPoint;
+	ABP_Weapon_M82A1_C_ExecuteUbergraph_BP_Weapon_M82A1_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

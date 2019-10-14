@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Waist_Bag_Small_02.Waist_Bag_Small_02_C
-// 0x0000 (0x0818 - 0x0818)
+// 0x0000 (0x08D0 - 0x08D0)
 class AWaist_Bag_Small_02_C : public AClothesItem
 {
 public:

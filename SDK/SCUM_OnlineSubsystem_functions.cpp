@@ -22,13 +22,13 @@ void UTurnBasedMatchInterface::OnMatchReceivedTurn(const struct FString& Match, 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchReceivedTurn");
 
-	UTurnBasedMatchInterface_OnMatchReceivedTurn_Params params;
-	params.Match = Match;
-	params.bDidBecomeActive = bDidBecomeActive;
+	UTurnBasedMatchInterface_OnMatchReceivedTurn_Params fn_params;
+	fn_params.Match = Match;
+	fn_params.bDidBecomeActive = bDidBecomeActive;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -43,12 +43,12 @@ void UTurnBasedMatchInterface::OnMatchEnded(const struct FString& Match)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchEnded");
 
-	UTurnBasedMatchInterface_OnMatchEnded_Params params;
-	params.Match = Match;
+	UTurnBasedMatchInterface_OnMatchEnded_Params fn_params;
+	fn_params.Match = Match;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

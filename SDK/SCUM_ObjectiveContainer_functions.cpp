@@ -19,11 +19,11 @@ void UObjectiveContainer_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ObjectiveContainer.ObjectiveContainer_C.Construct");
 
-	UObjectiveContainer_C_Construct_Params params;
+	UObjectiveContainer_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -38,12 +38,12 @@ void UObjectiveContainer_C::ExecuteUbergraph_ObjectiveContainer(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ObjectiveContainer.ObjectiveContainer_C.ExecuteUbergraph_ObjectiveContainer");
 
-	UObjectiveContainer_C_ExecuteUbergraph_ObjectiveContainer_Params params;
-	params.EntryPoint = EntryPoint;
+	UObjectiveContainer_C_ExecuteUbergraph_ObjectiveContainer_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -56,11 +56,11 @@ void UObjectiveContainer_C::ObjectiveCompleted__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ObjectiveContainer.ObjectiveContainer_C.ObjectiveCompleted__DelegateSignature");
 
-	UObjectiveContainer_C_ObjectiveCompleted__DelegateSignature_Params params;
+	UObjectiveContainer_C_ObjectiveCompleted__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

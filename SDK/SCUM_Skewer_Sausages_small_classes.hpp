@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Skewer_Sausages_small.Skewer_Sausages_small_C
-// 0x0000 (0x08C0 - 0x08C0)
+// 0x0000 (0x0958 - 0x0958)
 class ASkewer_Sausages_small_C : public AFoodItem
 {
 public:

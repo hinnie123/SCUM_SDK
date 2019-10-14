@@ -19,11 +19,11 @@ void ABP_Prisoner_C::UpdateHair()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.UpdateHair");
 
-	ABP_Prisoner_C_UpdateHair_Params params;
+	ABP_Prisoner_C_UpdateHair_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -39,17 +39,17 @@ void ABP_Prisoner_C::FindOtherPlayersInRange(float SearchDistance, TArray<class 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.FindOtherPlayersInRange");
 
-	ABP_Prisoner_C_FindOtherPlayersInRange_Params params;
-	params.SearchDistance = SearchDistance;
+	ABP_Prisoner_C_FindOtherPlayersInRange_Params fn_params;
+	fn_params.SearchDistance = SearchDistance;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OtherPlayers != nullptr)
-		*OtherPlayers = params.OtherPlayers;
+		*OtherPlayers = fn_params.OtherPlayers;
 }
 
 
@@ -64,14 +64,14 @@ void ABP_Prisoner_C::DebugPrint(const struct FString& MessageString, const struc
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.DebugPrint");
 
-	ABP_Prisoner_C_DebugPrint_Params params;
-	params.MessageString = MessageString;
-	params.ValueString = ValueString;
-	params.Duration = Duration;
+	ABP_Prisoner_C_DebugPrint_Params fn_params;
+	fn_params.MessageString = MessageString;
+	fn_params.ValueString = ValueString;
+	fn_params.Duration = Duration;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -88,18 +88,18 @@ void ABP_Prisoner_C::IKFootTraceToRemove(float TraceDistance, const struct FName
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.IKFootTraceToRemove");
 
-	ABP_Prisoner_C_IKFootTraceToRemove_Params params;
-	params.TraceDistance = TraceDistance;
-	params.Socket = Socket;
+	ABP_Prisoner_C_IKFootTraceToRemove_Params fn_params;
+	fn_params.TraceDistance = TraceDistance;
+	fn_params.Socket = Socket;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (IKOffset != nullptr)
-		*IKOffset = params.IKOffset;
+		*IKOffset = fn_params.IKOffset;
 }
 
 
@@ -110,11 +110,11 @@ void ABP_Prisoner_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.UserConstructionScript");
 
-	ABP_Prisoner_C_UserConstructionScript_Params params;
+	ABP_Prisoner_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -129,12 +129,12 @@ void ABP_Prisoner_C::DrawFootstep(bool flip)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.DrawFootstep");
 
-	ABP_Prisoner_C_DrawFootstep_Params params;
-	params.flip = flip;
+	ABP_Prisoner_C_DrawFootstep_Params fn_params;
+	fn_params.flip = flip;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -149,12 +149,12 @@ void ABP_Prisoner_C::InitTextMeshFromName(struct FString* Name)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.InitTextMeshFromName");
 
-	ABP_Prisoner_C_InitTextMeshFromName_Params params;
-	params.Name = Name;
+	ABP_Prisoner_C_InitTextMeshFromName_Params fn_params;
+	fn_params.Name = Name;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -169,12 +169,12 @@ void ABP_Prisoner_C::ServerProcessVoiceChatData(TArray<unsigned char> Compressed
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.ServerProcessVoiceChatData");
 
-	ABP_Prisoner_C_ServerProcessVoiceChatData_Params params;
-	params.CompressedVoiceData = CompressedVoiceData;
+	ABP_Prisoner_C_ServerProcessVoiceChatData_Params fn_params;
+	fn_params.CompressedVoiceData = CompressedVoiceData;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -190,13 +190,13 @@ void ABP_Prisoner_C::ClientReceiveVoiceData(class ABP_Prisoner_C* FromPlayer, TA
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.ClientReceiveVoiceData");
 
-	ABP_Prisoner_C_ClientReceiveVoiceData_Params params;
-	params.FromPlayer = FromPlayer;
-	params.CompressedVoiceData = CompressedVoiceData;
+	ABP_Prisoner_C_ClientReceiveVoiceData_Params fn_params;
+	fn_params.FromPlayer = FromPlayer;
+	fn_params.CompressedVoiceData = CompressedVoiceData;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -211,12 +211,12 @@ void ABP_Prisoner_C::PlayVoiceChat(TArray<unsigned char> CompressedVoiceData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.PlayVoiceChat");
 
-	ABP_Prisoner_C_PlayVoiceChat_Params params;
-	params.CompressedVoiceData = CompressedVoiceData;
+	ABP_Prisoner_C_PlayVoiceChat_Params fn_params;
+	fn_params.CompressedVoiceData = CompressedVoiceData;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -229,11 +229,11 @@ void ABP_Prisoner_C::BndEvt__VoiceChat_K2Node_ComponentBoundEvent_2_VoiceDataAva
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.BndEvt__VoiceChat_K2Node_ComponentBoundEvent_2_VoiceDataAvailableSignature__DelegateSignature");
 
-	ABP_Prisoner_C_BndEvt__VoiceChat_K2Node_ComponentBoundEvent_2_VoiceDataAvailableSignature__DelegateSignature_Params params;
+	ABP_Prisoner_C_BndEvt__VoiceChat_K2Node_ComponentBoundEvent_2_VoiceDataAvailableSignature__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -246,11 +246,11 @@ void ABP_Prisoner_C::BndEvt__VoiceChat_K2Node_ComponentBoundEvent_0_VoiceChatSta
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.BndEvt__VoiceChat_K2Node_ComponentBoundEvent_0_VoiceChatStateChangedSignature__DelegateSignature");
 
-	ABP_Prisoner_C_BndEvt__VoiceChat_K2Node_ComponentBoundEvent_0_VoiceChatStateChangedSignature__DelegateSignature_Params params;
+	ABP_Prisoner_C_BndEvt__VoiceChat_K2Node_ComponentBoundEvent_0_VoiceChatStateChangedSignature__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -263,11 +263,28 @@ void ABP_Prisoner_C::BndEvt__VoiceChat_K2Node_ComponentBoundEvent_1_VoiceChatSta
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.BndEvt__VoiceChat_K2Node_ComponentBoundEvent_1_VoiceChatStateChangedSignature__DelegateSignature");
 
-	ABP_Prisoner_C_BndEvt__VoiceChat_K2Node_ComponentBoundEvent_1_VoiceChatStateChangedSignature__DelegateSignature_Params params;
+	ABP_Prisoner_C_BndEvt__VoiceChat_K2Node_ComponentBoundEvent_1_VoiceChatStateChangedSignature__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Prisoner.BP_Prisoner_C.UpdateHairVisuals
+// (Event, Protected, BlueprintEvent)
+
+void ABP_Prisoner_C::UpdateHairVisuals()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.UpdateHairVisuals");
+
+	ABP_Prisoner_C_UpdateHairVisuals_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -282,29 +299,12 @@ void ABP_Prisoner_C::ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.ReceiveTick");
 
-	ABP_Prisoner_C_ReceiveTick_Params params;
-	params.DeltaSeconds = DeltaSeconds;
+	ABP_Prisoner_C_ReceiveTick_Params fn_params;
+	fn_params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_Prisoner.BP_Prisoner_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_Prisoner_C::ReceiveBeginPlay()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.ReceiveBeginPlay");
-
-	ABP_Prisoner_C_ReceiveBeginPlay_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -319,12 +319,12 @@ void ABP_Prisoner_C::ExecuteUbergraph_BP_Prisoner(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.ExecuteUbergraph_BP_Prisoner");
 
-	ABP_Prisoner_C_ExecuteUbergraph_BP_Prisoner_Params params;
-	params.EntryPoint = EntryPoint;
+	ABP_Prisoner_C_ExecuteUbergraph_BP_Prisoner_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

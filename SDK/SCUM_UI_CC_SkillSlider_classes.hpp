@@ -39,7 +39,7 @@ public:
 	void SetMaxLevelAndExperience(ESkillLevel Level, float experiencePercentage);
 	void SetSkillLevelAndExperience(ESkillLevel Level, float Experience);
 	void OnSynchronizeProperties();
-	void BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_98_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage);
+	void BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_98_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage);
 	void Construct();
 	void BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_2_MouseUp__DelegateSignature();
 	void BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_6_MouseDown__DelegateSignature();

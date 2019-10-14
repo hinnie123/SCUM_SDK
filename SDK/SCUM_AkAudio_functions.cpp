@@ -19,12 +19,12 @@ void AAkAcousticPortal::OpenPortal()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkAcousticPortal.OpenPortal");
 
-	AAkAcousticPortal_OpenPortal_Params params;
+	AAkAcousticPortal_OpenPortal_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -39,16 +39,16 @@ EAkAcousticPortalState AAkAcousticPortal::GetCurrentState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkAcousticPortal.GetCurrentState");
 
-	AAkAcousticPortal_GetCurrentState_Params params;
+	AAkAcousticPortal_GetCurrentState_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -59,12 +59,12 @@ void AAkAcousticPortal::ClosePortal()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkAcousticPortal.ClosePortal");
 
-	AAkAcousticPortal_ClosePortal_Params params;
+	AAkAcousticPortal_ClosePortal_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -77,12 +77,12 @@ void AAkAmbientSound::StopAmbientSound()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkAmbientSound.StopAmbientSound");
 
-	AAkAmbientSound_StopAmbientSound_Params params;
+	AAkAmbientSound_StopAmbientSound_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -95,12 +95,12 @@ void AAkAmbientSound::StartAmbientSound()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkAmbientSound.StartAmbientSound");
 
-	AAkAmbientSound_StartAmbientSound_Params params;
+	AAkAmbientSound_StartAmbientSound_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -115,13 +115,13 @@ void UAkComponent::UseReverbVolumes(bool inUseReverbVolumes)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.UseReverbVolumes");
 
-	UAkComponent_UseReverbVolumes_Params params;
-	params.inUseReverbVolumes = inUseReverbVolumes;
+	UAkComponent_UseReverbVolumes_Params fn_params;
+	fn_params.inUseReverbVolumes = inUseReverbVolumes;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -141,18 +141,18 @@ void UAkComponent::UseEarlyReflections(class UAkAuxBus* AuxBus, int Order, float
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.UseEarlyReflections");
 
-	UAkComponent_UseEarlyReflections_Params params;
-	params.AuxBus = AuxBus;
-	params.Order = Order;
-	params.BusSendGain = BusSendGain;
-	params.MaxPathLength = MaxPathLength;
-	params.SpotReflectors = SpotReflectors;
-	params.AuxBusName = AuxBusName;
+	UAkComponent_UseEarlyReflections_Params fn_params;
+	fn_params.AuxBus = AuxBus;
+	fn_params.Order = Order;
+	fn_params.BusSendGain = BusSendGain;
+	fn_params.MaxPathLength = MaxPathLength;
+	fn_params.SpotReflectors = SpotReflectors;
+	fn_params.AuxBusName = AuxBusName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -165,12 +165,12 @@ void UAkComponent::Stop()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.Stop");
 
-	UAkComponent_Stop_Params params;
+	UAkComponent_Stop_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -185,13 +185,13 @@ void UAkComponent::SetUseSpatialAudio(bool bNewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.SetUseSpatialAudio");
 
-	UAkComponent_SetUseSpatialAudio_Params params;
-	params.bNewValue = bNewValue;
+	UAkComponent_SetUseSpatialAudio_Params fn_params;
+	fn_params.bNewValue = bNewValue;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -207,14 +207,14 @@ void UAkComponent::SetSwitch(const struct FString& SwitchGroup, const struct FSt
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.SetSwitch");
 
-	UAkComponent_SetSwitch_Params params;
-	params.SwitchGroup = SwitchGroup;
-	params.SwitchState = SwitchState;
+	UAkComponent_SetSwitch_Params fn_params;
+	fn_params.SwitchGroup = SwitchGroup;
+	fn_params.SwitchState = SwitchState;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -229,13 +229,13 @@ void UAkComponent::SetStopWhenOwnerDestroyed(bool bStopWhenOwnerDestroyed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.SetStopWhenOwnerDestroyed");
 
-	UAkComponent_SetStopWhenOwnerDestroyed_Params params;
-	params.bStopWhenOwnerDestroyed = bStopWhenOwnerDestroyed;
+	UAkComponent_SetStopWhenOwnerDestroyed_Params fn_params;
+	fn_params.bStopWhenOwnerDestroyed = bStopWhenOwnerDestroyed;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -252,15 +252,15 @@ void UAkComponent::SetRTPCValue(const struct FString& RTPC, float Value, int Int
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.SetRTPCValue");
 
-	UAkComponent_SetRTPCValue_Params params;
-	params.RTPC = RTPC;
-	params.Value = Value;
-	params.InterpolationTimeMs = InterpolationTimeMs;
+	UAkComponent_SetRTPCValue_Params fn_params;
+	fn_params.RTPC = RTPC;
+	fn_params.Value = Value;
+	fn_params.InterpolationTimeMs = InterpolationTimeMs;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -275,13 +275,13 @@ void UAkComponent::SetOutputBusVolume(float BusVolume)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.SetOutputBusVolume");
 
-	UAkComponent_SetOutputBusVolume_Params params;
-	params.BusVolume = BusVolume;
+	UAkComponent_SetOutputBusVolume_Params fn_params;
+	fn_params.BusVolume = BusVolume;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -296,13 +296,13 @@ void UAkComponent::SetListeners(TArray<class UAkComponent*> Listeners)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.SetListeners");
 
-	UAkComponent_SetListeners_Params params;
-	params.Listeners = Listeners;
+	UAkComponent_SetListeners_Params fn_params;
+	fn_params.Listeners = Listeners;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -317,13 +317,13 @@ void UAkComponent::SetAttenuationScalingFactor(float Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.SetAttenuationScalingFactor");
 
-	UAkComponent_SetAttenuationScalingFactor_Params params;
-	params.Value = Value;
+	UAkComponent_SetAttenuationScalingFactor_Params fn_params;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -338,13 +338,13 @@ void UAkComponent::PostTrigger(const struct FString& Trigger)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.PostTrigger");
 
-	UAkComponent_PostTrigger_Params params;
-	params.Trigger = Trigger;
+	UAkComponent_PostTrigger_Params fn_params;
+	fn_params.Trigger = Trigger;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -360,17 +360,17 @@ int UAkComponent::PostAssociatedAkEventAndWaitForEnd(const struct FLatentActionI
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.PostAssociatedAkEventAndWaitForEnd");
 
-	UAkComponent_PostAssociatedAkEventAndWaitForEnd_Params params;
-	params.LatentInfo = LatentInfo;
+	UAkComponent_PostAssociatedAkEventAndWaitForEnd_Params fn_params;
+	fn_params.LatentInfo = LatentInfo;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -385,18 +385,18 @@ int UAkComponent::PostAssociatedAkEvent(int CallbackMask, const struct FScriptDe
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.PostAssociatedAkEvent");
 
-	UAkComponent_PostAssociatedAkEvent_Params params;
-	params.CallbackMask = CallbackMask;
-	params.PostEventCallback = PostEventCallback;
+	UAkComponent_PostAssociatedAkEvent_Params fn_params;
+	fn_params.CallbackMask = CallbackMask;
+	fn_params.PostEventCallback = PostEventCallback;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -410,75 +410,75 @@ int UAkComponent::PostAkEventByName(const struct FString& in_EventName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.PostAkEventByName");
 
-	UAkComponent_PostAkEventByName_Params params;
-	params.in_EventName = in_EventName;
+	UAkComponent_PostAkEventByName_Params fn_params;
+	fn_params.in_EventName = in_EventName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
 // Function AkAudio.AkComponent.PostAkEventAndWaitForEnd
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UAkAudioEvent*           AkEvent                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UAkAudioEvent*           akEvent                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 in_EventName                   (Parm, ZeroConstructor)
 // struct FLatentActionInfo       LatentInfo                     (Parm)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UAkComponent::PostAkEventAndWaitForEnd(class UAkAudioEvent* AkEvent, const struct FString& in_EventName, const struct FLatentActionInfo& LatentInfo)
+int UAkComponent::PostAkEventAndWaitForEnd(class UAkAudioEvent* akEvent, const struct FString& in_EventName, const struct FLatentActionInfo& LatentInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.PostAkEventAndWaitForEnd");
 
-	UAkComponent_PostAkEventAndWaitForEnd_Params params;
-	params.AkEvent = AkEvent;
-	params.in_EventName = in_EventName;
-	params.LatentInfo = LatentInfo;
+	UAkComponent_PostAkEventAndWaitForEnd_Params fn_params;
+	fn_params.akEvent = akEvent;
+	fn_params.in_EventName = in_EventName;
+	fn_params.LatentInfo = LatentInfo;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
 // Function AkAudio.AkComponent.PostAkEvent
 // (Final, BlueprintCosmetic, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UAkAudioEvent*           AkEvent                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UAkAudioEvent*           akEvent                        (Parm, ZeroConstructor, IsPlainOldData)
 // int                            CallbackMask                   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FScriptDelegate         PostEventCallback              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // struct FString                 in_EventName                   (Parm, ZeroConstructor)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UAkComponent::PostAkEvent(class UAkAudioEvent* AkEvent, int CallbackMask, const struct FScriptDelegate& PostEventCallback, const struct FString& in_EventName)
+int UAkComponent::PostAkEvent(class UAkAudioEvent* akEvent, int CallbackMask, const struct FScriptDelegate& PostEventCallback, const struct FString& in_EventName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.PostAkEvent");
 
-	UAkComponent_PostAkEvent_Params params;
-	params.AkEvent = AkEvent;
-	params.CallbackMask = CallbackMask;
-	params.PostEventCallback = PostEventCallback;
-	params.in_EventName = in_EventName;
+	UAkComponent_PostAkEvent_Params fn_params;
+	fn_params.akEvent = akEvent;
+	fn_params.CallbackMask = CallbackMask;
+	fn_params.PostEventCallback = PostEventCallback;
+	fn_params.in_EventName = in_EventName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -491,16 +491,16 @@ float UAkComponent::GetAttenuationRadius()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.GetAttenuationRadius");
 
-	UAkComponent_GetAttenuationRadius_Params params;
+	UAkComponent_GetAttenuationRadius_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -513,16 +513,16 @@ int UAkAudioInputComponent::PostAssociatedAudioInputEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkAudioInputComponent.PostAssociatedAudioInputEvent");
 
-	UAkAudioInputComponent_PostAssociatedAudioInputEvent_Params params;
+	UAkAudioInputComponent_PostAssociatedAudioInputEvent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -535,13 +535,13 @@ void UAkCheckBox::SetIsChecked(bool InIsChecked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.SetIsChecked");
 
-	UAkCheckBox_SetIsChecked_Params params;
-	params.InIsChecked = InIsChecked;
+	UAkCheckBox_SetIsChecked_Params fn_params;
+	fn_params.InIsChecked = InIsChecked;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -556,13 +556,13 @@ void UAkCheckBox::SetCheckedState(ECheckBoxState InCheckedState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.SetCheckedState");
 
-	UAkCheckBox_SetCheckedState_Params params;
-	params.InCheckedState = InCheckedState;
+	UAkCheckBox_SetCheckedState_Params fn_params;
+	fn_params.InCheckedState = InCheckedState;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -577,13 +577,13 @@ void UAkCheckBox::SetAkItemId(const struct FGuid& ItemId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.SetAkItemId");
 
-	UAkCheckBox_SetAkItemId_Params params;
-	params.ItemId = ItemId;
+	UAkCheckBox_SetAkItemId_Params fn_params;
+	fn_params.ItemId = ItemId;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -598,13 +598,13 @@ void UAkCheckBox::SetAkBoolProperty(const struct FString& ItemProperty)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.SetAkBoolProperty");
 
-	UAkCheckBox_SetAkBoolProperty_Params params;
-	params.ItemProperty = ItemProperty;
+	UAkCheckBox_SetAkBoolProperty_Params fn_params;
+	fn_params.ItemProperty = ItemProperty;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -619,16 +619,16 @@ bool UAkCheckBox::IsPressed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.IsPressed");
 
-	UAkCheckBox_IsPressed_Params params;
+	UAkCheckBox_IsPressed_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -641,16 +641,16 @@ bool UAkCheckBox::IsChecked()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.IsChecked");
 
-	UAkCheckBox_IsChecked_Params params;
+	UAkCheckBox_IsChecked_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -663,16 +663,16 @@ ECheckBoxState UAkCheckBox::GetCheckedState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.GetCheckedState");
 
-	UAkCheckBox_GetCheckedState_Params params;
+	UAkCheckBox_GetCheckedState_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -685,16 +685,16 @@ struct FString UAkCheckBox::GetAkProperty()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.GetAkProperty");
 
-	UAkCheckBox_GetAkProperty_Params params;
+	UAkCheckBox_GetAkProperty_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -707,16 +707,16 @@ struct FGuid UAkCheckBox::GetAkItemId()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.GetAkItemId");
 
-	UAkCheckBox_GetAkItemId_Params params;
+	UAkCheckBox_GetAkItemId_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -730,14 +730,14 @@ void UAkGameplayStatics::STATIC_UseReverbVolumes(bool inUseReverbVolumes, class 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.UseReverbVolumes");
 
-	UAkGameplayStatics_UseReverbVolumes_Params params;
-	params.inUseReverbVolumes = inUseReverbVolumes;
-	params.Actor = Actor;
+	UAkGameplayStatics_UseReverbVolumes_Params fn_params;
+	fn_params.inUseReverbVolumes = inUseReverbVolumes;
+	fn_params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -758,19 +758,19 @@ void UAkGameplayStatics::STATIC_UseEarlyReflections(class AActor* Actor, class U
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.UseEarlyReflections");
 
-	UAkGameplayStatics_UseEarlyReflections_Params params;
-	params.Actor = Actor;
-	params.AuxBus = AuxBus;
-	params.Order = Order;
-	params.BusSendGain = BusSendGain;
-	params.MaxPathLength = MaxPathLength;
-	params.SpotReflectors = SpotReflectors;
-	params.AuxBusName = AuxBusName;
+	UAkGameplayStatics_UseEarlyReflections_Params fn_params;
+	fn_params.Actor = Actor;
+	fn_params.AuxBus = AuxBus;
+	fn_params.Order = Order;
+	fn_params.BusSendGain = BusSendGain;
+	fn_params.MaxPathLength = MaxPathLength;
+	fn_params.SpotReflectors = SpotReflectors;
+	fn_params.AuxBusName = AuxBusName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -785,13 +785,13 @@ void UAkGameplayStatics::STATIC_UnloadBankByName(const struct FString& BankName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.UnloadBankByName");
 
-	UAkGameplayStatics_UnloadBankByName_Params params;
-	params.BankName = BankName;
+	UAkGameplayStatics_UnloadBankByName_Params fn_params;
+	fn_params.BankName = BankName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -807,14 +807,14 @@ void UAkGameplayStatics::STATIC_UnloadBankAsync(class UAkAudioBank* Bank, const 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.UnloadBankAsync");
 
-	UAkGameplayStatics_UnloadBankAsync_Params params;
-	params.Bank = Bank;
-	params.BankUnloadedCallback = BankUnloadedCallback;
+	UAkGameplayStatics_UnloadBankAsync_Params fn_params;
+	fn_params.Bank = Bank;
+	fn_params.BankUnloadedCallback = BankUnloadedCallback;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -832,16 +832,16 @@ void UAkGameplayStatics::STATIC_UnloadBank(class UAkAudioBank* Bank, const struc
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.UnloadBank");
 
-	UAkGameplayStatics_UnloadBank_Params params;
-	params.Bank = Bank;
-	params.BankName = BankName;
-	params.LatentInfo = LatentInfo;
-	params.WorldContextObject = WorldContextObject;
+	UAkGameplayStatics_UnloadBank_Params fn_params;
+	fn_params.Bank = Bank;
+	fn_params.BankName = BankName;
+	fn_params.LatentInfo = LatentInfo;
+	fn_params.WorldContextObject = WorldContextObject;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -854,12 +854,12 @@ void UAkGameplayStatics::STATIC_StopProfilerCapture()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.StopProfilerCapture");
 
-	UAkGameplayStatics_StopProfilerCapture_Params params;
+	UAkGameplayStatics_StopProfilerCapture_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -872,12 +872,12 @@ void UAkGameplayStatics::STATIC_StopOutputCapture()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.StopOutputCapture");
 
-	UAkGameplayStatics_StopOutputCapture_Params params;
+	UAkGameplayStatics_StopOutputCapture_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -892,13 +892,13 @@ void UAkGameplayStatics::STATIC_StopAllAmbientSounds(class UObject* WorldContext
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.StopAllAmbientSounds");
 
-	UAkGameplayStatics_StopAllAmbientSounds_Params params;
-	params.WorldContextObject = WorldContextObject;
+	UAkGameplayStatics_StopAllAmbientSounds_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -911,12 +911,12 @@ void UAkGameplayStatics::STATIC_StopAll()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.StopAll");
 
-	UAkGameplayStatics_StopAll_Params params;
+	UAkGameplayStatics_StopAll_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -931,13 +931,13 @@ void UAkGameplayStatics::STATIC_StopActor(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.StopActor");
 
-	UAkGameplayStatics_StopActor_Params params;
-	params.Actor = Actor;
+	UAkGameplayStatics_StopActor_Params fn_params;
+	fn_params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -952,13 +952,13 @@ void UAkGameplayStatics::STATIC_StartProfilerCapture(const struct FString& Filen
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.StartProfilerCapture");
 
-	UAkGameplayStatics_StartProfilerCapture_Params params;
-	params.Filename = Filename;
+	UAkGameplayStatics_StartProfilerCapture_Params fn_params;
+	fn_params.Filename = Filename;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -973,13 +973,13 @@ void UAkGameplayStatics::STATIC_StartOutputCapture(const struct FString& Filenam
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.StartOutputCapture");
 
-	UAkGameplayStatics_StartOutputCapture_Params params;
-	params.Filename = Filename;
+	UAkGameplayStatics_StartOutputCapture_Params fn_params;
+	fn_params.Filename = Filename;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -994,13 +994,13 @@ void UAkGameplayStatics::STATIC_StartAllAmbientSounds(class UObject* WorldContex
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.StartAllAmbientSounds");
 
-	UAkGameplayStatics_StartAllAmbientSounds_Params params;
-	params.WorldContextObject = WorldContextObject;
+	UAkGameplayStatics_StartAllAmbientSounds_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1010,7 +1010,7 @@ void UAkGameplayStatics::STATIC_StartAllAmbientSounds(class UObject* WorldContex
 // (Final, BlueprintCosmetic, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UAkAudioEvent*           AkEvent                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UAkAudioEvent*           akEvent                        (Parm, ZeroConstructor, IsPlainOldData)
 // class UAkAuxBus*               EarlyReflectionsBus            (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Location                       (Parm, IsPlainOldData)
 // struct FRotator                Orientation                    (Parm, IsPlainOldData)
@@ -1020,29 +1020,29 @@ void UAkGameplayStatics::STATIC_StartAllAmbientSounds(class UObject* WorldContex
 // bool                           AutoDestroy                    (Parm, ZeroConstructor, IsPlainOldData)
 // class UAkComponent*            ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class UAkComponent* UAkGameplayStatics::STATIC_SpawnAkComponentAtLocation(class UObject* WorldContextObject, class UAkAudioEvent* AkEvent, class UAkAuxBus* EarlyReflectionsBus, const struct FVector& Location, const struct FRotator& Orientation, bool AutoPost, const struct FString& EventName, const struct FString& EarlyReflectionsBusName, bool AutoDestroy)
+class UAkComponent* UAkGameplayStatics::STATIC_SpawnAkComponentAtLocation(class UObject* WorldContextObject, class UAkAudioEvent* akEvent, class UAkAuxBus* EarlyReflectionsBus, const struct FVector& Location, const struct FRotator& Orientation, bool AutoPost, const struct FString& EventName, const struct FString& EarlyReflectionsBusName, bool AutoDestroy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.SpawnAkComponentAtLocation");
 
-	UAkGameplayStatics_SpawnAkComponentAtLocation_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.AkEvent = AkEvent;
-	params.EarlyReflectionsBus = EarlyReflectionsBus;
-	params.Location = Location;
-	params.Orientation = Orientation;
-	params.AutoPost = AutoPost;
-	params.EventName = EventName;
-	params.EarlyReflectionsBusName = EarlyReflectionsBusName;
-	params.AutoDestroy = AutoDestroy;
+	UAkGameplayStatics_SpawnAkComponentAtLocation_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
+	fn_params.akEvent = akEvent;
+	fn_params.EarlyReflectionsBus = EarlyReflectionsBus;
+	fn_params.Location = Location;
+	fn_params.Orientation = Orientation;
+	fn_params.AutoPost = AutoPost;
+	fn_params.EventName = EventName;
+	fn_params.EarlyReflectionsBusName = EarlyReflectionsBusName;
+	fn_params.AutoDestroy = AutoDestroy;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1057,15 +1057,15 @@ void UAkGameplayStatics::STATIC_SetSwitch(const struct FName& SwitchGroup, const
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.SetSwitch");
 
-	UAkGameplayStatics_SetSwitch_Params params;
-	params.SwitchGroup = SwitchGroup;
-	params.SwitchState = SwitchState;
-	params.Actor = Actor;
+	UAkGameplayStatics_SetSwitch_Params fn_params;
+	fn_params.SwitchGroup = SwitchGroup;
+	fn_params.SwitchState = SwitchState;
+	fn_params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1081,14 +1081,14 @@ void UAkGameplayStatics::STATIC_SetState(const struct FName& StateGroup, const s
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.SetState");
 
-	UAkGameplayStatics_SetState_Params params;
-	params.StateGroup = StateGroup;
-	params.State = State;
+	UAkGameplayStatics_SetState_Params fn_params;
+	fn_params.StateGroup = StateGroup;
+	fn_params.State = State;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1105,15 +1105,15 @@ void UAkGameplayStatics::STATIC_SetSpeakerAngles(TArray<float> SpeakerAngles, fl
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.SetSpeakerAngles");
 
-	UAkGameplayStatics_SetSpeakerAngles_Params params;
-	params.SpeakerAngles = SpeakerAngles;
-	params.HeightAngle = HeightAngle;
-	params.DeviceShareset = DeviceShareset;
+	UAkGameplayStatics_SetSpeakerAngles_Params fn_params;
+	fn_params.SpeakerAngles = SpeakerAngles;
+	fn_params.HeightAngle = HeightAngle;
+	fn_params.DeviceShareset = DeviceShareset;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1131,16 +1131,16 @@ void UAkGameplayStatics::STATIC_SetRTPCValue(const struct FName& RTPC, float Val
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.SetRTPCValue");
 
-	UAkGameplayStatics_SetRTPCValue_Params params;
-	params.RTPC = RTPC;
-	params.Value = Value;
-	params.InterpolationTimeMs = InterpolationTimeMs;
-	params.Actor = Actor;
+	UAkGameplayStatics_SetRTPCValue_Params fn_params;
+	fn_params.RTPC = RTPC;
+	fn_params.Value = Value;
+	fn_params.InterpolationTimeMs = InterpolationTimeMs;
+	fn_params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1155,13 +1155,13 @@ void UAkGameplayStatics::STATIC_SetPanningRule(EPanningRule PanRule)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.SetPanningRule");
 
-	UAkGameplayStatics_SetPanningRule_Params params;
-	params.PanRule = PanRule;
+	UAkGameplayStatics_SetPanningRule_Params fn_params;
+	fn_params.PanRule = PanRule;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1177,14 +1177,14 @@ void UAkGameplayStatics::STATIC_SetOutputBusVolume(float BusVolume, class AActor
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.SetOutputBusVolume");
 
-	UAkGameplayStatics_SetOutputBusVolume_Params params;
-	params.BusVolume = BusVolume;
-	params.Actor = Actor;
+	UAkGameplayStatics_SetOutputBusVolume_Params fn_params;
+	fn_params.BusVolume = BusVolume;
+	fn_params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1199,13 +1199,13 @@ void UAkGameplayStatics::STATIC_SetOcclusionScalingFactor(float ScalingFactor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.SetOcclusionScalingFactor");
 
-	UAkGameplayStatics_SetOcclusionScalingFactor_Params params;
-	params.ScalingFactor = ScalingFactor;
+	UAkGameplayStatics_SetOcclusionScalingFactor_Params fn_params;
+	fn_params.ScalingFactor = ScalingFactor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1221,14 +1221,14 @@ void UAkGameplayStatics::STATIC_SetOcclusionRefreshInterval(float RefreshInterva
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.SetOcclusionRefreshInterval");
 
-	UAkGameplayStatics_SetOcclusionRefreshInterval_Params params;
-	params.RefreshInterval = RefreshInterval;
-	params.Actor = Actor;
+	UAkGameplayStatics_SetOcclusionRefreshInterval_Params fn_params;
+	fn_params.RefreshInterval = RefreshInterval;
+	fn_params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1245,15 +1245,15 @@ void UAkGameplayStatics::STATIC_SetMultiplePositions(class UAkComponent* GameObj
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.SetMultiplePositions");
 
-	UAkGameplayStatics_SetMultiplePositions_Params params;
-	params.GameObjectAkComponent = GameObjectAkComponent;
-	params.Positions = Positions;
-	params.MultiPositionType = MultiPositionType;
+	UAkGameplayStatics_SetMultiplePositions_Params fn_params;
+	fn_params.GameObjectAkComponent = GameObjectAkComponent;
+	fn_params.Positions = Positions;
+	fn_params.MultiPositionType = MultiPositionType;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1271,16 +1271,16 @@ void UAkGameplayStatics::STATIC_SetMultipleChannelEmitterPositions(class UAkComp
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.SetMultipleChannelEmitterPositions");
 
-	UAkGameplayStatics_SetMultipleChannelEmitterPositions_Params params;
-	params.GameObjectAkComponent = GameObjectAkComponent;
-	params.ChannelMasks = ChannelMasks;
-	params.Positions = Positions;
-	params.MultiPositionType = MultiPositionType;
+	UAkGameplayStatics_SetMultipleChannelEmitterPositions_Params fn_params;
+	fn_params.GameObjectAkComponent = GameObjectAkComponent;
+	fn_params.ChannelMasks = ChannelMasks;
+	fn_params.Positions = Positions;
+	fn_params.MultiPositionType = MultiPositionType;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1296,14 +1296,14 @@ void UAkGameplayStatics::STATIC_SetBusConfig(const struct FString& BusName, EAkC
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.SetBusConfig");
 
-	UAkGameplayStatics_SetBusConfig_Params params;
-	params.BusName = BusName;
-	params.ChannelConfiguration = ChannelConfiguration;
+	UAkGameplayStatics_SetBusConfig_Params fn_params;
+	fn_params.BusName = BusName;
+	fn_params.ChannelConfiguration = ChannelConfiguration;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1319,14 +1319,14 @@ void UAkGameplayStatics::STATIC_PostTrigger(const struct FName& Trigger, class A
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.PostTrigger");
 
-	UAkGameplayStatics_PostTrigger_Params params;
-	params.Trigger = Trigger;
-	params.Actor = Actor;
+	UAkGameplayStatics_PostTrigger_Params fn_params;
+	fn_params.Trigger = Trigger;
+	fn_params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1343,15 +1343,15 @@ void UAkGameplayStatics::STATIC_PostEventByName(const struct FString& EventName,
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.PostEventByName");
 
-	UAkGameplayStatics_PostEventByName_Params params;
-	params.EventName = EventName;
-	params.Actor = Actor;
-	params.bStopWhenAttachedToDestroyed = bStopWhenAttachedToDestroyed;
+	UAkGameplayStatics_PostEventByName_Params fn_params;
+	fn_params.EventName = EventName;
+	fn_params.Actor = Actor;
+	fn_params.bStopWhenAttachedToDestroyed = bStopWhenAttachedToDestroyed;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1360,32 +1360,32 @@ void UAkGameplayStatics::STATIC_PostEventByName(const struct FString& EventName,
 // Function AkAudio.AkGameplayStatics.PostEventAttached
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAkAudioEvent*           AkEvent                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UAkAudioEvent*           akEvent                        (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   AttachPointName                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bStopWhenAttachedToDestroyed   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 EventName                      (Parm, ZeroConstructor)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UAkGameplayStatics::STATIC_PostEventAttached(class UAkAudioEvent* AkEvent, class AActor* Actor, const struct FName& AttachPointName, bool bStopWhenAttachedToDestroyed, const struct FString& EventName)
+int UAkGameplayStatics::STATIC_PostEventAttached(class UAkAudioEvent* akEvent, class AActor* Actor, const struct FName& AttachPointName, bool bStopWhenAttachedToDestroyed, const struct FString& EventName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.PostEventAttached");
 
-	UAkGameplayStatics_PostEventAttached_Params params;
-	params.AkEvent = AkEvent;
-	params.Actor = Actor;
-	params.AttachPointName = AttachPointName;
-	params.bStopWhenAttachedToDestroyed = bStopWhenAttachedToDestroyed;
-	params.EventName = EventName;
+	UAkGameplayStatics_PostEventAttached_Params fn_params;
+	fn_params.akEvent = akEvent;
+	fn_params.Actor = Actor;
+	fn_params.AttachPointName = AttachPointName;
+	fn_params.bStopWhenAttachedToDestroyed = bStopWhenAttachedToDestroyed;
+	fn_params.EventName = EventName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1401,16 +1401,16 @@ void UAkGameplayStatics::STATIC_PostEventAtLocationByName(const struct FString& 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.PostEventAtLocationByName");
 
-	UAkGameplayStatics_PostEventAtLocationByName_Params params;
-	params.EventName = EventName;
-	params.Location = Location;
-	params.Orientation = Orientation;
-	params.WorldContextObject = WorldContextObject;
+	UAkGameplayStatics_PostEventAtLocationByName_Params fn_params;
+	fn_params.EventName = EventName;
+	fn_params.Location = Location;
+	fn_params.Orientation = Orientation;
+	fn_params.WorldContextObject = WorldContextObject;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1419,94 +1419,94 @@ void UAkGameplayStatics::STATIC_PostEventAtLocationByName(const struct FString& 
 // Function AkAudio.AkGameplayStatics.PostEventAtLocation
 // (Final, BlueprintCosmetic, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UAkAudioEvent*           AkEvent                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UAkAudioEvent*           akEvent                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Location                       (Parm, IsPlainOldData)
 // struct FRotator                Orientation                    (Parm, IsPlainOldData)
 // struct FString                 EventName                      (Parm, ZeroConstructor)
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UAkGameplayStatics::STATIC_PostEventAtLocation(class UAkAudioEvent* AkEvent, const struct FVector& Location, const struct FRotator& Orientation, const struct FString& EventName, class UObject* WorldContextObject)
+int UAkGameplayStatics::STATIC_PostEventAtLocation(class UAkAudioEvent* akEvent, const struct FVector& Location, const struct FRotator& Orientation, const struct FString& EventName, class UObject* WorldContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.PostEventAtLocation");
 
-	UAkGameplayStatics_PostEventAtLocation_Params params;
-	params.AkEvent = AkEvent;
-	params.Location = Location;
-	params.Orientation = Orientation;
-	params.EventName = EventName;
-	params.WorldContextObject = WorldContextObject;
+	UAkGameplayStatics_PostEventAtLocation_Params fn_params;
+	fn_params.akEvent = akEvent;
+	fn_params.Location = Location;
+	fn_params.Orientation = Orientation;
+	fn_params.EventName = EventName;
+	fn_params.WorldContextObject = WorldContextObject;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
 // Function AkAudio.AkGameplayStatics.PostEvent
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAkAudioEvent*           AkEvent                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UAkAudioEvent*           akEvent                        (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bStopWhenAttachedToDestroyed   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 EventName                      (Parm, ZeroConstructor)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UAkGameplayStatics::STATIC_PostEvent(class UAkAudioEvent* AkEvent, class AActor* Actor, bool bStopWhenAttachedToDestroyed, const struct FString& EventName)
+int UAkGameplayStatics::STATIC_PostEvent(class UAkAudioEvent* akEvent, class AActor* Actor, bool bStopWhenAttachedToDestroyed, const struct FString& EventName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.PostEvent");
 
-	UAkGameplayStatics_PostEvent_Params params;
-	params.AkEvent = AkEvent;
-	params.Actor = Actor;
-	params.bStopWhenAttachedToDestroyed = bStopWhenAttachedToDestroyed;
-	params.EventName = EventName;
+	UAkGameplayStatics_PostEvent_Params fn_params;
+	fn_params.akEvent = akEvent;
+	fn_params.Actor = Actor;
+	fn_params.bStopWhenAttachedToDestroyed = bStopWhenAttachedToDestroyed;
+	fn_params.EventName = EventName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
 // Function AkAudio.AkGameplayStatics.PostAndWaitForEndOfEvent
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAkAudioEvent*           AkEvent                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UAkAudioEvent*           akEvent                        (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bStopWhenAttachedToDestroyed   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 EventName                      (Parm, ZeroConstructor)
 // struct FLatentActionInfo       LatentInfo                     (Parm)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UAkGameplayStatics::STATIC_PostAndWaitForEndOfEvent(class UAkAudioEvent* AkEvent, class AActor* Actor, bool bStopWhenAttachedToDestroyed, const struct FString& EventName, const struct FLatentActionInfo& LatentInfo)
+int UAkGameplayStatics::STATIC_PostAndWaitForEndOfEvent(class UAkAudioEvent* akEvent, class AActor* Actor, bool bStopWhenAttachedToDestroyed, const struct FString& EventName, const struct FLatentActionInfo& LatentInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.PostAndWaitForEndOfEvent");
 
-	UAkGameplayStatics_PostAndWaitForEndOfEvent_Params params;
-	params.AkEvent = AkEvent;
-	params.Actor = Actor;
-	params.bStopWhenAttachedToDestroyed = bStopWhenAttachedToDestroyed;
-	params.EventName = EventName;
-	params.LatentInfo = LatentInfo;
+	UAkGameplayStatics_PostAndWaitForEndOfEvent_Params fn_params;
+	fn_params.akEvent = akEvent;
+	fn_params.Actor = Actor;
+	fn_params.bStopWhenAttachedToDestroyed = bStopWhenAttachedToDestroyed;
+	fn_params.EventName = EventName;
+	fn_params.LatentInfo = LatentInfo;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1517,12 +1517,12 @@ void UAkGameplayStatics::STATIC_LoadInitBank()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.LoadInitBank");
 
-	UAkGameplayStatics_LoadInitBank_Params params;
+	UAkGameplayStatics_LoadInitBank_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1538,14 +1538,14 @@ void UAkGameplayStatics::STATIC_LoadBanks(TArray<class UAkAudioBank*> SoundBanks
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.LoadBanks");
 
-	UAkGameplayStatics_LoadBanks_Params params;
-	params.SoundBanks = SoundBanks;
-	params.SynchronizeSoundBanks = SynchronizeSoundBanks;
+	UAkGameplayStatics_LoadBanks_Params fn_params;
+	fn_params.SoundBanks = SoundBanks;
+	fn_params.SynchronizeSoundBanks = SynchronizeSoundBanks;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1560,13 +1560,13 @@ void UAkGameplayStatics::STATIC_LoadBankByName(const struct FString& BankName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.LoadBankByName");
 
-	UAkGameplayStatics_LoadBankByName_Params params;
-	params.BankName = BankName;
+	UAkGameplayStatics_LoadBankByName_Params fn_params;
+	fn_params.BankName = BankName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1582,14 +1582,14 @@ void UAkGameplayStatics::STATIC_LoadBankAsync(class UAkAudioBank* Bank, const st
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.LoadBankAsync");
 
-	UAkGameplayStatics_LoadBankAsync_Params params;
-	params.Bank = Bank;
-	params.BankLoadedCallback = BankLoadedCallback;
+	UAkGameplayStatics_LoadBankAsync_Params fn_params;
+	fn_params.Bank = Bank;
+	fn_params.BankLoadedCallback = BankLoadedCallback;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1607,16 +1607,16 @@ void UAkGameplayStatics::STATIC_LoadBank(class UAkAudioBank* Bank, const struct 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.LoadBank");
 
-	UAkGameplayStatics_LoadBank_Params params;
-	params.Bank = Bank;
-	params.BankName = BankName;
-	params.LatentInfo = LatentInfo;
-	params.WorldContextObject = WorldContextObject;
+	UAkGameplayStatics_LoadBank_Params fn_params;
+	fn_params.Bank = Bank;
+	fn_params.BankName = BankName;
+	fn_params.LatentInfo = LatentInfo;
+	fn_params.WorldContextObject = WorldContextObject;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1632,17 +1632,17 @@ bool UAkGameplayStatics::STATIC_IsGame(class UObject* WorldContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.IsGame");
 
-	UAkGameplayStatics_IsGame_Params params;
-	params.WorldContextObject = WorldContextObject;
+	UAkGameplayStatics_IsGame_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1655,16 +1655,16 @@ bool UAkGameplayStatics::STATIC_IsEditor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.IsEditor");
 
-	UAkGameplayStatics_IsEditor_Params params;
+	UAkGameplayStatics_IsEditor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1679,20 +1679,20 @@ void UAkGameplayStatics::STATIC_GetSpeakerAngles(const struct FString& DeviceSha
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.GetSpeakerAngles");
 
-	UAkGameplayStatics_GetSpeakerAngles_Params params;
-	params.DeviceShareset = DeviceShareset;
+	UAkGameplayStatics_GetSpeakerAngles_Params fn_params;
+	fn_params.DeviceShareset = DeviceShareset;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (SpeakerAngles != nullptr)
-		*SpeakerAngles = params.SpeakerAngles;
+		*SpeakerAngles = fn_params.SpeakerAngles;
 	if (HeightAngle != nullptr)
-		*HeightAngle = params.HeightAngle;
+		*HeightAngle = fn_params.HeightAngle;
 }
 
 
@@ -1705,16 +1705,16 @@ float UAkGameplayStatics::STATIC_GetOcclusionScalingFactor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.GetOcclusionScalingFactor");
 
-	UAkGameplayStatics_GetOcclusionScalingFactor_Params params;
+	UAkGameplayStatics_GetOcclusionScalingFactor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1731,49 +1731,49 @@ class UAkComponent* UAkGameplayStatics::STATIC_GetAkComponent(class USceneCompon
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.GetAkComponent");
 
-	UAkGameplayStatics_GetAkComponent_Params params;
-	params.AttachToComponent = AttachToComponent;
-	params.AttachPointName = AttachPointName;
-	params.Location = Location;
-	params.LocationType = LocationType;
+	UAkGameplayStatics_GetAkComponent_Params fn_params;
+	fn_params.AttachToComponent = AttachToComponent;
+	fn_params.AttachPointName = AttachPointName;
+	fn_params.Location = Location;
+	fn_params.LocationType = LocationType;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
 // Function AkAudio.AkGameplayStatics.ExecuteActionOnEvent
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAkAudioEvent*           AkEvent                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UAkAudioEvent*           akEvent                        (Parm, ZeroConstructor, IsPlainOldData)
 // EAkActionOnEventType           ActionType                     (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
 // int                            TransitionDuration             (Parm, ZeroConstructor, IsPlainOldData)
 // EAkCurveInterpolation          FadeCurve                      (Parm, ZeroConstructor, IsPlainOldData)
 // int                            PlayingID                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAkGameplayStatics::STATIC_ExecuteActionOnEvent(class UAkAudioEvent* AkEvent, EAkActionOnEventType ActionType, class AActor* Actor, int TransitionDuration, EAkCurveInterpolation FadeCurve, int PlayingID)
+void UAkGameplayStatics::STATIC_ExecuteActionOnEvent(class UAkAudioEvent* akEvent, EAkActionOnEventType ActionType, class AActor* Actor, int TransitionDuration, EAkCurveInterpolation FadeCurve, int PlayingID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.ExecuteActionOnEvent");
 
-	UAkGameplayStatics_ExecuteActionOnEvent_Params params;
-	params.AkEvent = AkEvent;
-	params.ActionType = ActionType;
-	params.Actor = Actor;
-	params.TransitionDuration = TransitionDuration;
-	params.FadeCurve = FadeCurve;
-	params.PlayingID = PlayingID;
+	UAkGameplayStatics_ExecuteActionOnEvent_Params fn_params;
+	fn_params.akEvent = akEvent;
+	fn_params.ActionType = ActionType;
+	fn_params.Actor = Actor;
+	fn_params.TransitionDuration = TransitionDuration;
+	fn_params.FadeCurve = FadeCurve;
+	fn_params.PlayingID = PlayingID;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1786,12 +1786,12 @@ void UAkGameplayStatics::STATIC_ClearBanks()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.ClearBanks");
 
-	UAkGameplayStatics_ClearBanks_Params params;
+	UAkGameplayStatics_ClearBanks_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1806,13 +1806,13 @@ void UAkGameplayStatics::STATIC_CancelEventCallback(const struct FScriptDelegate
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.CancelEventCallback");
 
-	UAkGameplayStatics_CancelEventCallback_Params params;
-	params.PostEventCallback = PostEventCallback;
+	UAkGameplayStatics_CancelEventCallback_Params fn_params;
+	fn_params.PostEventCallback = PostEventCallback;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1827,13 +1827,13 @@ void UAkGameplayStatics::STATIC_AddOutputCaptureMarker(const struct FString& Mar
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.AddOutputCaptureMarker");
 
-	UAkGameplayStatics_AddOutputCaptureMarker_Params params;
-	params.MarkerText = MarkerText;
+	UAkGameplayStatics_AddOutputCaptureMarker_Params fn_params;
+	fn_params.MarkerText = MarkerText;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -1848,16 +1848,16 @@ EAkMidiEventType UAkMIDIEventCallbackInfo::GetType()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkMIDIEventCallbackInfo.GetType");
 
-	UAkMIDIEventCallbackInfo_GetType_Params params;
+	UAkMIDIEventCallbackInfo_GetType_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1871,19 +1871,19 @@ bool UAkMIDIEventCallbackInfo::GetProgramChange(struct FAkMidiProgramChange* AsP
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkMIDIEventCallbackInfo.GetProgramChange");
 
-	UAkMIDIEventCallbackInfo_GetProgramChange_Params params;
+	UAkMIDIEventCallbackInfo_GetProgramChange_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (AsProgramChange != nullptr)
-		*AsProgramChange = params.AsProgramChange;
+		*AsProgramChange = fn_params.AsProgramChange;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1897,19 +1897,19 @@ bool UAkMIDIEventCallbackInfo::GetPitchBend(struct FAkMidiPitchBend* AsPitchBend
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkMIDIEventCallbackInfo.GetPitchBend");
 
-	UAkMIDIEventCallbackInfo_GetPitchBend_Params params;
+	UAkMIDIEventCallbackInfo_GetPitchBend_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (AsPitchBend != nullptr)
-		*AsPitchBend = params.AsPitchBend;
+		*AsPitchBend = fn_params.AsPitchBend;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1923,19 +1923,19 @@ bool UAkMIDIEventCallbackInfo::GetNoteOn(struct FAkMidiNoteOnOff* AsNoteOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkMIDIEventCallbackInfo.GetNoteOn");
 
-	UAkMIDIEventCallbackInfo_GetNoteOn_Params params;
+	UAkMIDIEventCallbackInfo_GetNoteOn_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (AsNoteOn != nullptr)
-		*AsNoteOn = params.AsNoteOn;
+		*AsNoteOn = fn_params.AsNoteOn;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1949,19 +1949,19 @@ bool UAkMIDIEventCallbackInfo::GetNoteOff(struct FAkMidiNoteOnOff* AsNoteOff)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkMIDIEventCallbackInfo.GetNoteOff");
 
-	UAkMIDIEventCallbackInfo_GetNoteOff_Params params;
+	UAkMIDIEventCallbackInfo_GetNoteOff_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (AsNoteOff != nullptr)
-		*AsNoteOff = params.AsNoteOff;
+		*AsNoteOff = fn_params.AsNoteOff;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -1975,19 +1975,19 @@ bool UAkMIDIEventCallbackInfo::GetNoteAftertouch(struct FAkMidiNoteAftertouch* A
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkMIDIEventCallbackInfo.GetNoteAftertouch");
 
-	UAkMIDIEventCallbackInfo_GetNoteAftertouch_Params params;
+	UAkMIDIEventCallbackInfo_GetNoteAftertouch_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (AsNoteAftertouch != nullptr)
-		*AsNoteAftertouch = params.AsNoteAftertouch;
+		*AsNoteAftertouch = fn_params.AsNoteAftertouch;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2001,19 +2001,19 @@ bool UAkMIDIEventCallbackInfo::GetGeneric(struct FAkMidiGeneric* AsGeneric)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkMIDIEventCallbackInfo.GetGeneric");
 
-	UAkMIDIEventCallbackInfo_GetGeneric_Params params;
+	UAkMIDIEventCallbackInfo_GetGeneric_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (AsGeneric != nullptr)
-		*AsGeneric = params.AsGeneric;
+		*AsGeneric = fn_params.AsGeneric;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2027,19 +2027,19 @@ bool UAkMIDIEventCallbackInfo::GetChannelAftertouch(struct FAkMidiChannelAfterto
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkMIDIEventCallbackInfo.GetChannelAftertouch");
 
-	UAkMIDIEventCallbackInfo_GetChannelAftertouch_Params params;
+	UAkMIDIEventCallbackInfo_GetChannelAftertouch_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (AsChannelAftertouch != nullptr)
-		*AsChannelAftertouch = params.AsChannelAftertouch;
+		*AsChannelAftertouch = fn_params.AsChannelAftertouch;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2052,16 +2052,16 @@ unsigned char UAkMIDIEventCallbackInfo::GetChannel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkMIDIEventCallbackInfo.GetChannel");
 
-	UAkMIDIEventCallbackInfo_GetChannel_Params params;
+	UAkMIDIEventCallbackInfo_GetChannel_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2075,19 +2075,19 @@ bool UAkMIDIEventCallbackInfo::GetCc(struct FAkMidiCc* AsCc)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkMIDIEventCallbackInfo.GetCc");
 
-	UAkMIDIEventCallbackInfo_GetCc_Params params;
+	UAkMIDIEventCallbackInfo_GetCc_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (AsCc != nullptr)
-		*AsCc = params.AsCc;
+		*AsCc = fn_params.AsCc;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2101,17 +2101,17 @@ struct FText UAkItemBoolPropertiesConv::STATIC_Conv_FAkBoolPropertyToControlToTe
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkItemBoolPropertiesConv.Conv_FAkBoolPropertyToControlToText");
 
-	UAkItemBoolPropertiesConv_Conv_FAkBoolPropertyToControlToText_Params params;
-	params.INAkBoolPropertyToControl = INAkBoolPropertyToControl;
+	UAkItemBoolPropertiesConv_Conv_FAkBoolPropertyToControlToText_Params fn_params;
+	fn_params.INAkBoolPropertyToControl = INAkBoolPropertyToControl;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2125,17 +2125,17 @@ struct FString UAkItemBoolPropertiesConv::STATIC_Conv_FAkBoolPropertyToControlTo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkItemBoolPropertiesConv.Conv_FAkBoolPropertyToControlToString");
 
-	UAkItemBoolPropertiesConv_Conv_FAkBoolPropertyToControlToString_Params params;
-	params.INAkBoolPropertyToControl = INAkBoolPropertyToControl;
+	UAkItemBoolPropertiesConv_Conv_FAkBoolPropertyToControlToString_Params fn_params;
+	fn_params.INAkBoolPropertyToControl = INAkBoolPropertyToControl;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2148,13 +2148,13 @@ void UAkItemBoolProperties::SetSearchText(const struct FString& newText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkItemBoolProperties.SetSearchText");
 
-	UAkItemBoolProperties_SetSearchText_Params params;
-	params.newText = newText;
+	UAkItemBoolProperties_SetSearchText_Params fn_params;
+	fn_params.newText = newText;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -2169,16 +2169,16 @@ struct FString UAkItemBoolProperties::GetSelectedProperty()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkItemBoolProperties.GetSelectedProperty");
 
-	UAkItemBoolProperties_GetSelectedProperty_Params params;
+	UAkItemBoolProperties_GetSelectedProperty_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2191,16 +2191,16 @@ struct FString UAkItemBoolProperties::GetSearchText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkItemBoolProperties.GetSearchText");
 
-	UAkItemBoolProperties_GetSearchText_Params params;
+	UAkItemBoolProperties_GetSearchText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2214,17 +2214,17 @@ struct FText UAkItemPropertiesConv::STATIC_Conv_FAkPropertyToControlToText(const
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkItemPropertiesConv.Conv_FAkPropertyToControlToText");
 
-	UAkItemPropertiesConv_Conv_FAkPropertyToControlToText_Params params;
-	params.INAkPropertyToControl = INAkPropertyToControl;
+	UAkItemPropertiesConv_Conv_FAkPropertyToControlToText_Params fn_params;
+	fn_params.INAkPropertyToControl = INAkPropertyToControl;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2238,17 +2238,17 @@ struct FString UAkItemPropertiesConv::STATIC_Conv_FAkPropertyToControlToString(c
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkItemPropertiesConv.Conv_FAkPropertyToControlToString");
 
-	UAkItemPropertiesConv_Conv_FAkPropertyToControlToString_Params params;
-	params.INAkPropertyToControl = INAkPropertyToControl;
+	UAkItemPropertiesConv_Conv_FAkPropertyToControlToString_Params fn_params;
+	fn_params.INAkPropertyToControl = INAkPropertyToControl;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2261,13 +2261,13 @@ void UAkItemProperties::SetSearchText(const struct FString& newText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkItemProperties.SetSearchText");
 
-	UAkItemProperties_SetSearchText_Params params;
-	params.newText = newText;
+	UAkItemProperties_SetSearchText_Params fn_params;
+	fn_params.newText = newText;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -2282,16 +2282,16 @@ struct FString UAkItemProperties::GetSelectedProperty()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkItemProperties.GetSelectedProperty");
 
-	UAkItemProperties_GetSelectedProperty_Params params;
+	UAkItemProperties_GetSelectedProperty_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2304,16 +2304,16 @@ struct FString UAkItemProperties::GetSearchText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkItemProperties.GetSearchText");
 
-	UAkItemProperties_GetSearchText_Params params;
+	UAkItemProperties_GetSearchText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2326,13 +2326,13 @@ void UAkSlider::SetValue(float InValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkSlider.SetValue");
 
-	UAkSlider_SetValue_Params params;
-	params.InValue = InValue;
+	UAkSlider_SetValue_Params fn_params;
+	fn_params.InValue = InValue;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -2347,13 +2347,13 @@ void UAkSlider::SetStepSize(float InValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkSlider.SetStepSize");
 
-	UAkSlider_SetStepSize_Params params;
-	params.InValue = InValue;
+	UAkSlider_SetStepSize_Params fn_params;
+	fn_params.InValue = InValue;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -2368,13 +2368,13 @@ void UAkSlider::SetSliderHandleColor(const struct FLinearColor& InValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkSlider.SetSliderHandleColor");
 
-	UAkSlider_SetSliderHandleColor_Params params;
-	params.InValue = InValue;
+	UAkSlider_SetSliderHandleColor_Params fn_params;
+	fn_params.InValue = InValue;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -2389,13 +2389,13 @@ void UAkSlider::SetSliderBarColor(const struct FLinearColor& InValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkSlider.SetSliderBarColor");
 
-	UAkSlider_SetSliderBarColor_Params params;
-	params.InValue = InValue;
+	UAkSlider_SetSliderBarColor_Params fn_params;
+	fn_params.InValue = InValue;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -2410,13 +2410,13 @@ void UAkSlider::SetLocked(bool InValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkSlider.SetLocked");
 
-	UAkSlider_SetLocked_Params params;
-	params.InValue = InValue;
+	UAkSlider_SetLocked_Params fn_params;
+	fn_params.InValue = InValue;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -2431,13 +2431,13 @@ void UAkSlider::SetIndentHandle(bool InValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkSlider.SetIndentHandle");
 
-	UAkSlider_SetIndentHandle_Params params;
-	params.InValue = InValue;
+	UAkSlider_SetIndentHandle_Params fn_params;
+	fn_params.InValue = InValue;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -2452,13 +2452,13 @@ void UAkSlider::SetAkSliderItemProperty(const struct FString& ItemProperty)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkSlider.SetAkSliderItemProperty");
 
-	UAkSlider_SetAkSliderItemProperty_Params params;
-	params.ItemProperty = ItemProperty;
+	UAkSlider_SetAkSliderItemProperty_Params fn_params;
+	fn_params.ItemProperty = ItemProperty;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -2473,13 +2473,13 @@ void UAkSlider::SetAkSliderItemId(const struct FGuid& ItemId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkSlider.SetAkSliderItemId");
 
-	UAkSlider_SetAkSliderItemId_Params params;
-	params.ItemId = ItemId;
+	UAkSlider_SetAkSliderItemId_Params fn_params;
+	fn_params.ItemId = ItemId;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -2494,16 +2494,16 @@ float UAkSlider::GetValue()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkSlider.GetValue");
 
-	UAkSlider_GetValue_Params params;
+	UAkSlider_GetValue_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2516,16 +2516,16 @@ struct FString UAkSlider::GetAkSliderItemProperty()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkSlider.GetAkSliderItemProperty");
 
-	UAkSlider_GetAkSliderItemProperty_Params params;
+	UAkSlider_GetAkSliderItemProperty_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2538,16 +2538,16 @@ struct FGuid UAkSlider::GetAkSliderItemId()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkSlider.GetAkSliderItemId");
 
-	UAkSlider_GetAkSliderItemId_Params params;
+	UAkSlider_GetAkSliderItemId_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2558,12 +2558,12 @@ void UAkSurfaceReflectorSetComponent::UpdateSurfaceReflectorSet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkSurfaceReflectorSetComponent.UpdateSurfaceReflectorSet");
 
-	UAkSurfaceReflectorSetComponent_UpdateSurfaceReflectorSet_Params params;
+	UAkSurfaceReflectorSetComponent_UpdateSurfaceReflectorSet_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -2576,12 +2576,12 @@ void UAkSurfaceReflectorSetComponent::SendSurfaceReflectorSet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkSurfaceReflectorSetComponent.SendSurfaceReflectorSet");
 
-	UAkSurfaceReflectorSetComponent_SendSurfaceReflectorSet_Params params;
+	UAkSurfaceReflectorSetComponent_SendSurfaceReflectorSet_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -2594,12 +2594,12 @@ void UAkSurfaceReflectorSetComponent::RemoveSurfaceReflectorSet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkSurfaceReflectorSetComponent.RemoveSurfaceReflectorSet");
 
-	UAkSurfaceReflectorSetComponent_RemoveSurfaceReflectorSet_Params params;
+	UAkSurfaceReflectorSetComponent_RemoveSurfaceReflectorSet_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -2616,20 +2616,20 @@ struct FAKWaapiJsonObject UAkWaapiCalls::STATIC_Unsubscribe(const struct FAkWaap
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiCalls.Unsubscribe");
 
-	UAkWaapiCalls_Unsubscribe_Params params;
-	params.SubscriptionId = SubscriptionId;
+	UAkWaapiCalls_Unsubscribe_Params fn_params;
+	fn_params.SubscriptionId = SubscriptionId;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (UnsubscriptionDone != nullptr)
-		*UnsubscriptionDone = params.UnsubscriptionDone;
+		*UnsubscriptionDone = fn_params.UnsubscriptionDone;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2647,24 +2647,24 @@ struct FAKWaapiJsonObject UAkWaapiCalls::STATIC_SubscribeToWaapi(const struct FA
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiCalls.SubscribeToWaapi");
 
-	UAkWaapiCalls_SubscribeToWaapi_Params params;
-	params.WaapiUri = WaapiUri;
-	params.WaapiOptions = WaapiOptions;
-	params.Callback = Callback;
+	UAkWaapiCalls_SubscribeToWaapi_Params fn_params;
+	fn_params.WaapiUri = WaapiUri;
+	fn_params.WaapiOptions = WaapiOptions;
+	fn_params.Callback = Callback;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (SubscriptionId != nullptr)
-		*SubscriptionId = params.SubscriptionId;
+		*SubscriptionId = fn_params.SubscriptionId;
 	if (SubscriptionDone != nullptr)
-		*SubscriptionDone = params.SubscriptionDone;
+		*SubscriptionDone = fn_params.SubscriptionDone;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2678,14 +2678,14 @@ void UAkWaapiCalls::STATIC_SetSubscriptionID(const struct FAkWaapiSubscriptionId
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiCalls.SetSubscriptionID");
 
-	UAkWaapiCalls_SetSubscriptionID_Params params;
-	params.Subscription = Subscription;
-	params.ID = ID;
+	UAkWaapiCalls_SetSubscriptionID_Params fn_params;
+	fn_params.Subscription = Subscription;
+	fn_params.ID = ID;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -2701,17 +2701,17 @@ bool UAkWaapiCalls::STATIC_RegisterWaapiProjectLoadedCallback(const struct FScri
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiCalls.RegisterWaapiProjectLoadedCallback");
 
-	UAkWaapiCalls_RegisterWaapiProjectLoadedCallback_Params params;
-	params.Callback = Callback;
+	UAkWaapiCalls_RegisterWaapiProjectLoadedCallback_Params fn_params;
+	fn_params.Callback = Callback;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2725,17 +2725,17 @@ bool UAkWaapiCalls::STATIC_RegisterWaapiConnectionLostCallback(const struct FScr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiCalls.RegisterWaapiConnectionLostCallback");
 
-	UAkWaapiCalls_RegisterWaapiConnectionLostCallback_Params params;
-	params.Callback = Callback;
+	UAkWaapiCalls_RegisterWaapiConnectionLostCallback_Params fn_params;
+	fn_params.Callback = Callback;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2749,17 +2749,17 @@ int UAkWaapiCalls::STATIC_GetSubscriptionID(const struct FAkWaapiSubscriptionId&
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiCalls.GetSubscriptionID");
 
-	UAkWaapiCalls_GetSubscriptionID_Params params;
-	params.Subscription = Subscription;
+	UAkWaapiCalls_GetSubscriptionID_Params fn_params;
+	fn_params.Subscription = Subscription;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2773,17 +2773,17 @@ struct FText UAkWaapiCalls::STATIC_Conv_FAkWaapiSubscriptionIdToText(const struc
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiCalls.Conv_FAkWaapiSubscriptionIdToText");
 
-	UAkWaapiCalls_Conv_FAkWaapiSubscriptionIdToText_Params params;
-	params.INAkWaapiSubscriptionId = INAkWaapiSubscriptionId;
+	UAkWaapiCalls_Conv_FAkWaapiSubscriptionIdToText_Params fn_params;
+	fn_params.INAkWaapiSubscriptionId = INAkWaapiSubscriptionId;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2797,17 +2797,17 @@ struct FString UAkWaapiCalls::STATIC_Conv_FAkWaapiSubscriptionIdToString(const s
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiCalls.Conv_FAkWaapiSubscriptionIdToString");
 
-	UAkWaapiCalls_Conv_FAkWaapiSubscriptionIdToString_Params params;
-	params.INAkWaapiSubscriptionId = INAkWaapiSubscriptionId;
+	UAkWaapiCalls_Conv_FAkWaapiSubscriptionIdToString_Params fn_params;
+	fn_params.INAkWaapiSubscriptionId = INAkWaapiSubscriptionId;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2823,19 +2823,19 @@ struct FAKWaapiJsonObject UAkWaapiCalls::STATIC_CallWaapi(const struct FAkWaapiU
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiCalls.CallWaapi");
 
-	UAkWaapiCalls_CallWaapi_Params params;
-	params.WaapiUri = WaapiUri;
-	params.WaapiArgs = WaapiArgs;
-	params.WaapiOptions = WaapiOptions;
+	UAkWaapiCalls_CallWaapi_Params fn_params;
+	fn_params.WaapiUri = WaapiUri;
+	fn_params.WaapiArgs = WaapiArgs;
+	fn_params.WaapiOptions = WaapiOptions;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2849,17 +2849,17 @@ struct FText USAkWaapiFieldNamesConv::STATIC_Conv_FAkWaapiFieldNamesToText(const
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.SAkWaapiFieldNamesConv.Conv_FAkWaapiFieldNamesToText");
 
-	USAkWaapiFieldNamesConv_Conv_FAkWaapiFieldNamesToText_Params params;
-	params.INAkWaapiFieldNames = INAkWaapiFieldNames;
+	USAkWaapiFieldNamesConv_Conv_FAkWaapiFieldNamesToText_Params fn_params;
+	fn_params.INAkWaapiFieldNames = INAkWaapiFieldNames;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2873,17 +2873,17 @@ struct FString USAkWaapiFieldNamesConv::STATIC_Conv_FAkWaapiFieldNamesToString(c
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.SAkWaapiFieldNamesConv.Conv_FAkWaapiFieldNamesToString");
 
-	USAkWaapiFieldNamesConv_Conv_FAkWaapiFieldNamesToString_Params params;
-	params.INAkWaapiFieldNames = INAkWaapiFieldNames;
+	USAkWaapiFieldNamesConv_Conv_FAkWaapiFieldNamesToString_Params fn_params;
+	fn_params.INAkWaapiFieldNames = INAkWaapiFieldNames;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2899,19 +2899,19 @@ struct FAKWaapiJsonObject UAkWaapiJsonManager::STATIC_SetStringField(const struc
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiJsonManager.SetStringField");
 
-	UAkWaapiJsonManager_SetStringField_Params params;
-	params.FieldName = FieldName;
-	params.FieldValue = FieldValue;
-	params.Target = Target;
+	UAkWaapiJsonManager_SetStringField_Params fn_params;
+	fn_params.FieldName = FieldName;
+	fn_params.FieldValue = FieldValue;
+	fn_params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2927,19 +2927,19 @@ struct FAKWaapiJsonObject UAkWaapiJsonManager::STATIC_SetObjectField(const struc
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiJsonManager.SetObjectField");
 
-	UAkWaapiJsonManager_SetObjectField_Params params;
-	params.FieldName = FieldName;
-	params.FieldValue = FieldValue;
-	params.Target = Target;
+	UAkWaapiJsonManager_SetObjectField_Params fn_params;
+	fn_params.FieldName = FieldName;
+	fn_params.FieldValue = FieldValue;
+	fn_params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2955,19 +2955,19 @@ struct FAKWaapiJsonObject UAkWaapiJsonManager::STATIC_SetNumberField(const struc
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiJsonManager.SetNumberField");
 
-	UAkWaapiJsonManager_SetNumberField_Params params;
-	params.FieldName = FieldName;
-	params.FieldValue = FieldValue;
-	params.Target = Target;
+	UAkWaapiJsonManager_SetNumberField_Params fn_params;
+	fn_params.FieldName = FieldName;
+	fn_params.FieldValue = FieldValue;
+	fn_params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -2983,19 +2983,19 @@ struct FAKWaapiJsonObject UAkWaapiJsonManager::STATIC_SetBoolField(const struct 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiJsonManager.SetBoolField");
 
-	UAkWaapiJsonManager_SetBoolField_Params params;
-	params.FieldName = FieldName;
-	params.FieldValue = FieldValue;
-	params.Target = Target;
+	UAkWaapiJsonManager_SetBoolField_Params fn_params;
+	fn_params.FieldName = FieldName;
+	fn_params.FieldValue = FieldValue;
+	fn_params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3011,19 +3011,19 @@ struct FAKWaapiJsonObject UAkWaapiJsonManager::STATIC_SetArrayStringFields(const
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiJsonManager.SetArrayStringFields");
 
-	UAkWaapiJsonManager_SetArrayStringFields_Params params;
-	params.FieldName = FieldName;
-	params.FieldStringValues = FieldStringValues;
-	params.Target = Target;
+	UAkWaapiJsonManager_SetArrayStringFields_Params fn_params;
+	fn_params.FieldName = FieldName;
+	fn_params.FieldStringValues = FieldStringValues;
+	fn_params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3039,19 +3039,19 @@ struct FAKWaapiJsonObject UAkWaapiJsonManager::STATIC_SetArrayObjectFields(const
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiJsonManager.SetArrayObjectFields");
 
-	UAkWaapiJsonManager_SetArrayObjectFields_Params params;
-	params.FieldName = FieldName;
-	params.FieldObjectValues = FieldObjectValues;
-	params.Target = Target;
+	UAkWaapiJsonManager_SetArrayObjectFields_Params fn_params;
+	fn_params.FieldName = FieldName;
+	fn_params.FieldObjectValues = FieldObjectValues;
+	fn_params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3066,18 +3066,18 @@ struct FString UAkWaapiJsonManager::STATIC_GetStringField(const struct FAkWaapiF
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiJsonManager.GetStringField");
 
-	UAkWaapiJsonManager_GetStringField_Params params;
-	params.FieldName = FieldName;
-	params.Target = Target;
+	UAkWaapiJsonManager_GetStringField_Params fn_params;
+	fn_params.FieldName = FieldName;
+	fn_params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3092,18 +3092,18 @@ struct FAKWaapiJsonObject UAkWaapiJsonManager::STATIC_GetObjectField(const struc
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiJsonManager.GetObjectField");
 
-	UAkWaapiJsonManager_GetObjectField_Params params;
-	params.FieldName = FieldName;
-	params.Target = Target;
+	UAkWaapiJsonManager_GetObjectField_Params fn_params;
+	fn_params.FieldName = FieldName;
+	fn_params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3118,18 +3118,18 @@ float UAkWaapiJsonManager::STATIC_GetNumberField(const struct FAkWaapiFieldNames
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiJsonManager.GetNumberField");
 
-	UAkWaapiJsonManager_GetNumberField_Params params;
-	params.FieldName = FieldName;
-	params.Target = Target;
+	UAkWaapiJsonManager_GetNumberField_Params fn_params;
+	fn_params.FieldName = FieldName;
+	fn_params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3144,18 +3144,18 @@ int UAkWaapiJsonManager::STATIC_GetIntegerField(const struct FAkWaapiFieldNames&
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiJsonManager.GetIntegerField");
 
-	UAkWaapiJsonManager_GetIntegerField_Params params;
-	params.FieldName = FieldName;
-	params.Target = Target;
+	UAkWaapiJsonManager_GetIntegerField_Params fn_params;
+	fn_params.FieldName = FieldName;
+	fn_params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3170,18 +3170,18 @@ bool UAkWaapiJsonManager::STATIC_GetBoolField(const struct FAkWaapiFieldNames& F
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiJsonManager.GetBoolField");
 
-	UAkWaapiJsonManager_GetBoolField_Params params;
-	params.FieldName = FieldName;
-	params.Target = Target;
+	UAkWaapiJsonManager_GetBoolField_Params fn_params;
+	fn_params.FieldName = FieldName;
+	fn_params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3196,18 +3196,18 @@ TArray<struct FAKWaapiJsonObject> UAkWaapiJsonManager::STATIC_GetArrayField(cons
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiJsonManager.GetArrayField");
 
-	UAkWaapiJsonManager_GetArrayField_Params params;
-	params.FieldName = FieldName;
-	params.Target = Target;
+	UAkWaapiJsonManager_GetArrayField_Params fn_params;
+	fn_params.FieldName = FieldName;
+	fn_params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3221,17 +3221,17 @@ struct FText UAkWaapiJsonManager::STATIC_Conv_FAKWaapiJsonObjectToText(const str
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiJsonManager.Conv_FAKWaapiJsonObjectToText");
 
-	UAkWaapiJsonManager_Conv_FAKWaapiJsonObjectToText_Params params;
-	params.INAKWaapiJsonObject = INAKWaapiJsonObject;
+	UAkWaapiJsonManager_Conv_FAKWaapiJsonObjectToText_Params fn_params;
+	fn_params.INAKWaapiJsonObject = INAKWaapiJsonObject;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3245,17 +3245,17 @@ struct FString UAkWaapiJsonManager::STATIC_Conv_FAKWaapiJsonObjectToString(const
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiJsonManager.Conv_FAKWaapiJsonObjectToString");
 
-	UAkWaapiJsonManager_Conv_FAKWaapiJsonObjectToString_Params params;
-	params.INAKWaapiJsonObject = INAKWaapiJsonObject;
+	UAkWaapiJsonManager_Conv_FAKWaapiJsonObjectToString_Params fn_params;
+	fn_params.INAKWaapiJsonObject = INAKWaapiJsonObject;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3269,17 +3269,17 @@ struct FText UAkWaapiUriConv::STATIC_Conv_FAkWaapiUriToText(const struct FAkWaap
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiUriConv.Conv_FAkWaapiUriToText");
 
-	UAkWaapiUriConv_Conv_FAkWaapiUriToText_Params params;
-	params.INAkWaapiUri = INAkWaapiUri;
+	UAkWaapiUriConv_Conv_FAkWaapiUriToText_Params fn_params;
+	fn_params.INAkWaapiUri = INAkWaapiUri;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3293,17 +3293,17 @@ struct FString UAkWaapiUriConv::STATIC_Conv_FAkWaapiUriToString(const struct FAk
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWaapiUriConv.Conv_FAkWaapiUriToString");
 
-	UAkWaapiUriConv_Conv_FAkWaapiUriToString_Params params;
-	params.INAkWaapiUri = INAkWaapiUri;
+	UAkWaapiUriConv_Conv_FAkWaapiUriToString_Params fn_params;
+	fn_params.INAkWaapiUri = INAkWaapiUri;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3316,13 +3316,13 @@ void UAkWwiseTree::SetSearchText(const struct FString& newText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWwiseTree.SetSearchText");
 
-	UAkWwiseTree_SetSearchText_Params params;
-	params.newText = newText;
+	UAkWwiseTree_SetSearchText_Params fn_params;
+	fn_params.newText = newText;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -3337,16 +3337,16 @@ struct FAkWwiseObjectDetails UAkWwiseTree::GetSelectedItem()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWwiseTree.GetSelectedItem");
 
-	UAkWwiseTree_GetSelectedItem_Params params;
+	UAkWwiseTree_GetSelectedItem_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -3359,16 +3359,16 @@ struct FString UAkWwiseTree::GetSearchText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkWwiseTree.GetSearchText");
 
-	UAkWwiseTree_GetSearchText_Params params;
+	UAkWwiseTree_GetSearchText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

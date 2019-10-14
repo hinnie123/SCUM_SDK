@@ -21,12 +21,12 @@ void UUI_TimeMarker_C::SetNumber(int Number)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TimeMarker.UI_TimeMarker_C.SetNumber");
 
-	UUI_TimeMarker_C_SetNumber_Params params;
-	params.Number = Number;
+	UUI_TimeMarker_C_SetNumber_Params fn_params;
+	fn_params.Number = Number;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

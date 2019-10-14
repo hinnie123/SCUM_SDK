@@ -21,13 +21,13 @@ void UBTTask_FlyTo::Pathfinding_OnFinish(const struct FDoNNavigationQueryData& D
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.BTTask_FlyTo.Pathfinding_OnFinish");
 
-	UBTTask_FlyTo_Pathfinding_OnFinish_Params params;
-	params.Data = Data;
+	UBTTask_FlyTo_Pathfinding_OnFinish_Params fn_params;
+	fn_params.Data = Data;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -42,13 +42,13 @@ void UBTTask_FlyTo::Pathfinding_OnDynamicCollisionAlert(const struct FDonNavigat
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.BTTask_FlyTo.Pathfinding_OnDynamicCollisionAlert");
 
-	UBTTask_FlyTo_Pathfinding_OnDynamicCollisionAlert_Params params;
-	params.Data = Data;
+	UBTTask_FlyTo_Pathfinding_OnDynamicCollisionAlert_Params fn_params;
+	fn_params.Data = Data;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -64,17 +64,17 @@ class ADonNavigationManager* UDonNavigationHelper::STATIC_DonNavigationManagerFo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationHelper.DonNavigationManagerForActor");
 
-	UDonNavigationHelper_DonNavigationManagerForActor_Params params;
-	params.Actor = Actor;
+	UDonNavigationHelper_DonNavigationManagerForActor_Params fn_params;
+	fn_params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -88,17 +88,17 @@ class ADonNavigationManager* UDonNavigationHelper::STATIC_DonNavigationManager(c
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationHelper.DonNavigationManager");
 
-	UDonNavigationHelper_DonNavigationManager_Params params;
-	params.WorldContextObject = WorldContextObject;
+	UDonNavigationHelper_DonNavigationManager_Params fn_params;
+	fn_params.WorldContextObject = WorldContextObject;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -116,18 +116,18 @@ void ADonNavigationManager::VisualizeNAVResult(TArray<struct FVector> PathSoluti
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.VisualizeNAVResult");
 
-	ADonNavigationManager_VisualizeNAVResult_Params params;
-	params.PathSolution = PathSolution;
-	params.Source = Source;
-	params.Destination = Destination;
-	params.Reset = Reset;
-	params.DebugParams = DebugParams;
-	params.LineColor = LineColor;
+	ADonNavigationManager_VisualizeNAVResult_Params fn_params;
+	fn_params.PathSolution = PathSolution;
+	fn_params.Source = Source;
+	fn_params.Destination = Destination;
+	fn_params.Reset = Reset;
+	fn_params.DebugParams = DebugParams;
+	fn_params.LineColor = LineColor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -143,14 +143,14 @@ void ADonNavigationManager::VisualizeDynamicCollisionListeners(const struct FScr
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.VisualizeDynamicCollisionListeners");
 
-	ADonNavigationManager_VisualizeDynamicCollisionListeners_Params params;
-	params.Listener = Listener;
-	params.QueryData = QueryData;
+	ADonNavigationManager_VisualizeDynamicCollisionListeners_Params fn_params;
+	fn_params.Listener = Listener;
+	fn_params.QueryData = QueryData;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -167,15 +167,15 @@ void ADonNavigationManager::StopListeningToDynamicCollisionsForPathIndex(const s
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.StopListeningToDynamicCollisionsForPathIndex");
 
-	ADonNavigationManager_StopListeningToDynamicCollisionsForPathIndex_Params params;
-	params.ListenerToClear = ListenerToClear;
-	params.QueryData = QueryData;
-	params.VolumeIndex = VolumeIndex;
+	ADonNavigationManager_StopListeningToDynamicCollisionsForPathIndex_Params fn_params;
+	fn_params.ListenerToClear = ListenerToClear;
+	fn_params.QueryData = QueryData;
+	fn_params.VolumeIndex = VolumeIndex;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -191,14 +191,14 @@ void ADonNavigationManager::StopListeningToDynamicCollisionsForPath(const struct
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.StopListeningToDynamicCollisionsForPath");
 
-	ADonNavigationManager_StopListeningToDynamicCollisionsForPath_Params params;
-	params.ListenerToClear = ListenerToClear;
-	params.QueryData = QueryData;
+	ADonNavigationManager_StopListeningToDynamicCollisionsForPath_Params fn_params;
+	fn_params.ListenerToClear = ListenerToClear;
+	fn_params.QueryData = QueryData;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -219,22 +219,22 @@ bool ADonNavigationManager::SchedulePathfindingTask(class AActor* Actor, const s
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.SchedulePathfindingTask");
 
-	ADonNavigationManager_SchedulePathfindingTask_Params params;
-	params.Actor = Actor;
-	params.Destination = Destination;
-	params.QueryParams = QueryParams;
-	params.DebugParams = DebugParams;
-	params.ResultHandlerDelegate = ResultHandlerDelegate;
-	params.DynamicCollisionListener = DynamicCollisionListener;
+	ADonNavigationManager_SchedulePathfindingTask_Params fn_params;
+	fn_params.Actor = Actor;
+	fn_params.Destination = Destination;
+	fn_params.QueryParams = QueryParams;
+	fn_params.DebugParams = DebugParams;
+	fn_params.ResultHandlerDelegate = ResultHandlerDelegate;
+	fn_params.DynamicCollisionListener = DynamicCollisionListener;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -257,26 +257,26 @@ bool ADonNavigationManager::ScheduleDynamicCollisionUpdate(class UPrimitiveCompo
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.ScheduleDynamicCollisionUpdate");
 
-	ADonNavigationManager_ScheduleDynamicCollisionUpdate_Params params;
-	params.Mesh = Mesh;
-	params.ResultHandler = ResultHandler;
-	params.CustomCacheIdentifier = CustomCacheIdentifier;
-	params.bReplaceExistingTask = bReplaceExistingTask;
-	params.bDisableCacheUsage = bDisableCacheUsage;
-	params.bReloadCollisionCache = bReloadCollisionCache;
-	params.bUseCheapBoundsCollision = bUseCheapBoundsCollision;
-	params.BoundsScaleFactor = BoundsScaleFactor;
-	params.bForceSynchronousExecution = bForceSynchronousExecution;
-	params.bDrawDebug = bDrawDebug;
+	ADonNavigationManager_ScheduleDynamicCollisionUpdate_Params fn_params;
+	fn_params.Mesh = Mesh;
+	fn_params.ResultHandler = ResultHandler;
+	fn_params.CustomCacheIdentifier = CustomCacheIdentifier;
+	fn_params.bReplaceExistingTask = bReplaceExistingTask;
+	fn_params.bDisableCacheUsage = bDisableCacheUsage;
+	fn_params.bReloadCollisionCache = bReloadCollisionCache;
+	fn_params.bUseCheapBoundsCollision = bUseCheapBoundsCollision;
+	fn_params.BoundsScaleFactor = BoundsScaleFactor;
+	fn_params.bForceSynchronousExecution = bForceSynchronousExecution;
+	fn_params.bDrawDebug = bDrawDebug;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -291,18 +291,18 @@ bool ADonNavigationManager::IsMeshBoundsWithinNavigableWorld(class UPrimitiveCom
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.IsMeshBoundsWithinNavigableWorld");
 
-	ADonNavigationManager_IsMeshBoundsWithinNavigableWorld_Params params;
-	params.Mesh = Mesh;
-	params.BoundsScaleFactor = BoundsScaleFactor;
+	ADonNavigationManager_IsMeshBoundsWithinNavigableWorld_Params fn_params;
+	fn_params.Mesh = Mesh;
+	fn_params.BoundsScaleFactor = BoundsScaleFactor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -316,17 +316,17 @@ bool ADonNavigationManager::IsLocationWithinNavigableWorld(const struct FVector&
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.IsLocationWithinNavigableWorld");
 
-	ADonNavigationManager_IsLocationWithinNavigableWorld_Params params;
-	params.DesiredLocation = DesiredLocation;
+	ADonNavigationManager_IsLocationWithinNavigableWorld_Params fn_params;
+	fn_params.DesiredLocation = DesiredLocation;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -341,18 +341,18 @@ bool ADonNavigationManager::IsLocationBeneathLandscape(const struct FVector& Loc
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.IsLocationBeneathLandscape");
 
-	ADonNavigationManager_IsLocationBeneathLandscape_Params params;
-	params.Location = Location;
-	params.LineTraceHeight = LineTraceHeight;
+	ADonNavigationManager_IsLocationBeneathLandscape_Params fn_params;
+	fn_params.Location = Location;
+	fn_params.LineTraceHeight = LineTraceHeight;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -371,24 +371,24 @@ bool ADonNavigationManager::IsDirectPathSweep(class UPrimitiveComponent* Collisi
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.IsDirectPathSweep");
 
-	ADonNavigationManager_IsDirectPathSweep_Params params;
-	params.CollisionComponent = CollisionComponent;
-	params.Start = Start;
-	params.End = End;
-	params.bFindInitialOverlaps = bFindInitialOverlaps;
-	params.CollisionShapeInflation = CollisionShapeInflation;
+	ADonNavigationManager_IsDirectPathSweep_Params fn_params;
+	fn_params.CollisionComponent = CollisionComponent;
+	fn_params.Start = Start;
+	fn_params.End = End;
+	fn_params.bFindInitialOverlaps = bFindInitialOverlaps;
+	fn_params.CollisionShapeInflation = CollisionShapeInflation;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutHit != nullptr)
-		*OutHit = params.OutHit;
+		*OutHit = fn_params.OutHit;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -406,23 +406,23 @@ bool ADonNavigationManager::IsDirectPathLineTrace(const struct FVector& Start, c
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.IsDirectPathLineTrace");
 
-	ADonNavigationManager_IsDirectPathLineTrace_Params params;
-	params.Start = Start;
-	params.End = End;
-	params.ActorsToIgnore = ActorsToIgnore;
-	params.bFindInitialOverlaps = bFindInitialOverlaps;
+	ADonNavigationManager_IsDirectPathLineTrace_Params fn_params;
+	fn_params.Start = Start;
+	fn_params.End = End;
+	fn_params.ActorsToIgnore = ActorsToIgnore;
+	fn_params.bFindInitialOverlaps = bFindInitialOverlaps;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutHit != nullptr)
-		*OutHit = params.OutHit;
+		*OutHit = fn_params.OutHit;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -441,24 +441,24 @@ bool ADonNavigationManager::IsDirectPathLineSweep(class UPrimitiveComponent* Col
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.IsDirectPathLineSweep");
 
-	ADonNavigationManager_IsDirectPathLineSweep_Params params;
-	params.CollisionComponent = CollisionComponent;
-	params.Start = Start;
-	params.End = End;
-	params.bFindInitialOverlaps = bFindInitialOverlaps;
-	params.CollisionShapeInflation = CollisionShapeInflation;
+	ADonNavigationManager_IsDirectPathLineSweep_Params fn_params;
+	fn_params.CollisionComponent = CollisionComponent;
+	fn_params.Start = Start;
+	fn_params.End = End;
+	fn_params.bFindInitialOverlaps = bFindInitialOverlaps;
+	fn_params.CollisionShapeInflation = CollisionShapeInflation;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutHit != nullptr)
-		*OutHit = params.OutHit;
+		*OutHit = fn_params.OutHit;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -472,17 +472,17 @@ bool ADonNavigationManager::HasTask(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.HasTask");
 
-	ADonNavigationManager_HasTask_Params params;
-	params.Actor = Actor;
+	ADonNavigationManager_HasTask_Params fn_params;
+	fn_params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -501,24 +501,24 @@ struct FVector ADonNavigationManager::FindRandomPointFromActorInNavWorld(class A
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.FindRandomPointFromActorInNavWorld");
 
-	ADonNavigationManager_FindRandomPointFromActorInNavWorld_Params params;
-	params.Actor = Actor;
-	params.Distance = Distance;
-	params.MaxDesiredAltitude = MaxDesiredAltitude;
-	params.MaxZAngularDispacement = MaxZAngularDispacement;
-	params.MaxAttempts = MaxAttempts;
+	ADonNavigationManager_FindRandomPointFromActorInNavWorld_Params fn_params;
+	fn_params.Actor = Actor;
+	fn_params.Distance = Distance;
+	fn_params.MaxDesiredAltitude = MaxDesiredAltitude;
+	fn_params.MaxZAngularDispacement = MaxZAngularDispacement;
+	fn_params.MaxAttempts = MaxAttempts;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (bFoundValidResult != nullptr)
-		*bFoundValidResult = params.bFoundValidResult;
+		*bFoundValidResult = fn_params.bFoundValidResult;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -538,25 +538,25 @@ struct FVector ADonNavigationManager::FindRandomPointAroundOriginInNavWorld(clas
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.FindRandomPointAroundOriginInNavWorld");
 
-	ADonNavigationManager_FindRandomPointAroundOriginInNavWorld_Params params;
-	params.NavigationActor = NavigationActor;
-	params.Origin = Origin;
-	params.Distance = Distance;
-	params.MaxDesiredAltitude = MaxDesiredAltitude;
-	params.MaxZAngularDispacement = MaxZAngularDispacement;
-	params.MaxAttempts = MaxAttempts;
+	ADonNavigationManager_FindRandomPointAroundOriginInNavWorld_Params fn_params;
+	fn_params.NavigationActor = NavigationActor;
+	fn_params.Origin = Origin;
+	fn_params.Distance = Distance;
+	fn_params.MaxDesiredAltitude = MaxDesiredAltitude;
+	fn_params.MaxZAngularDispacement = MaxZAngularDispacement;
+	fn_params.MaxAttempts = MaxAttempts;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (bFoundValidResult != nullptr)
-		*bFoundValidResult = params.bFoundValidResult;
+		*bFoundValidResult = fn_params.bFoundValidResult;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -575,25 +575,25 @@ bool ADonNavigationManager::FindPathSolution_StressTesting(class AActor* Actor, 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.FindPathSolution_StressTesting");
 
-	ADonNavigationManager_FindPathSolution_StressTesting_Params params;
-	params.Actor = Actor;
-	params.Destination = Destination;
-	params.QueryParams = QueryParams;
-	params.DebugParams = DebugParams;
+	ADonNavigationManager_FindPathSolution_StressTesting_Params fn_params;
+	fn_params.Actor = Actor;
+	fn_params.Destination = Destination;
+	fn_params.QueryParams = QueryParams;
+	fn_params.DebugParams = DebugParams;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (PathSolutionRaw != nullptr)
-		*PathSolutionRaw = params.PathSolutionRaw;
+		*PathSolutionRaw = fn_params.PathSolutionRaw;
 	if (PathSolutionOptimized != nullptr)
-		*PathSolutionOptimized = params.PathSolutionOptimized;
+		*PathSolutionOptimized = fn_params.PathSolutionOptimized;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -604,12 +604,12 @@ void ADonNavigationManager::Debug_ToggleWorldBoundaryInGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.Debug_ToggleWorldBoundaryInGame");
 
-	ADonNavigationManager_Debug_ToggleWorldBoundaryInGame_Params params;
+	ADonNavigationManager_Debug_ToggleWorldBoundaryInGame_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -626,15 +626,15 @@ void ADonNavigationManager::Debug_DrawVoxelCollisionProfile(class UPrimitiveComp
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.Debug_DrawVoxelCollisionProfile");
 
-	ADonNavigationManager_Debug_DrawVoxelCollisionProfile_Params params;
-	params.MeshOrPrimitive = MeshOrPrimitive;
-	params.bDrawPersistent = bDrawPersistent;
-	params.Duration = Duration;
+	ADonNavigationManager_Debug_DrawVoxelCollisionProfile_Params fn_params;
+	fn_params.MeshOrPrimitive = MeshOrPrimitive;
+	fn_params.bDrawPersistent = bDrawPersistent;
+	fn_params.Duration = Duration;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -654,18 +654,18 @@ void ADonNavigationManager::Debug_DrawVolumesAroundPoint(const struct FVector& L
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.Debug_DrawVolumesAroundPoint");
 
-	ADonNavigationManager_Debug_DrawVolumesAroundPoint_Params params;
-	params.Location = Location;
-	params.CubeSize = CubeSize;
-	params.DrawPersistentLines = DrawPersistentLines;
-	params.Duration = Duration;
-	params.LineThickness = LineThickness;
-	params.bAutoInitializeVolumes = bAutoInitializeVolumes;
+	ADonNavigationManager_Debug_DrawVolumesAroundPoint_Params fn_params;
+	fn_params.Location = Location;
+	fn_params.CubeSize = CubeSize;
+	fn_params.DrawPersistentLines = DrawPersistentLines;
+	fn_params.Duration = Duration;
+	fn_params.LineThickness = LineThickness;
+	fn_params.bAutoInitializeVolumes = bAutoInitializeVolumes;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -680,13 +680,13 @@ void ADonNavigationManager::Debug_DrawAllVolumes(float LineThickness)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.Debug_DrawAllVolumes");
 
-	ADonNavigationManager_Debug_DrawAllVolumes_Params params;
-	params.LineThickness = LineThickness;
+	ADonNavigationManager_Debug_DrawAllVolumes_Params fn_params;
+	fn_params.LineThickness = LineThickness;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -699,12 +699,12 @@ void ADonNavigationManager::Debug_ClearAllVolumes()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.Debug_ClearAllVolumes");
 
-	ADonNavigationManager_Debug_ClearAllVolumes_Params params;
+	ADonNavigationManager_Debug_ClearAllVolumes_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -717,12 +717,12 @@ void ADonNavigationManager::ConstructBuilder()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.ConstructBuilder");
 
-	ADonNavigationManager_ConstructBuilder_Params params;
+	ADonNavigationManager_ConstructBuilder_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -738,17 +738,17 @@ struct FVector ADonNavigationManager::ClampLocationToNavigableWorld(const struct
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.ClampLocationToNavigableWorld");
 
-	ADonNavigationManager_ClampLocationToNavigableWorld_Params params;
-	params.DesiredLocation = DesiredLocation;
+	ADonNavigationManager_ClampLocationToNavigableWorld_Params fn_params;
+	fn_params.DesiredLocation = DesiredLocation;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -762,17 +762,17 @@ bool ADonNavigationManager::CanNavigate(const struct FVector& Location)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.CanNavigate");
 
-	ADonNavigationManager_CanNavigate_Params params;
-	params.Location = Location;
+	ADonNavigationManager_CanNavigate_Params fn_params;
+	fn_params.Location = Location;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -785,13 +785,13 @@ void ADonNavigationManager::AbortPathfindingTask(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.AbortPathfindingTask");
 
-	ADonNavigationManager_AbortPathfindingTask_Params params;
-	params.Actor = Actor;
+	ADonNavigationManager_AbortPathfindingTask_Params fn_params;
+	fn_params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -806,13 +806,13 @@ void UDonNavigator::OnNextSegment(const struct FVector& NextPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigator.OnNextSegment");
 
-	UDonNavigator_OnNextSegment_Params params;
-	params.NextPoint = NextPoint;
+	UDonNavigator_OnNextSegment_Params fn_params;
+	fn_params.NextPoint = NextPoint;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -827,13 +827,13 @@ void UDonNavigator::OnLocomotionEnd(bool bLocomotionSuccess)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigator.OnLocomotionEnd");
 
-	UDonNavigator_OnLocomotionEnd_Params params;
-	params.bLocomotionSuccess = bLocomotionSuccess;
+	UDonNavigator_OnLocomotionEnd_Params fn_params;
+	fn_params.bLocomotionSuccess = bLocomotionSuccess;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -846,12 +846,12 @@ void UDonNavigator::OnLocomotionBegin()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigator.OnLocomotionBegin");
 
-	UDonNavigator_OnLocomotionBegin_Params params;
+	UDonNavigator_OnLocomotionBegin_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -864,12 +864,12 @@ void UDonNavigator::OnLocomotionAbort()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigator.OnLocomotionAbort");
 
-	UDonNavigator_OnLocomotionAbort_Params params;
+	UDonNavigator_OnLocomotionAbort_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -885,14 +885,14 @@ void UDonNavigator::AddMovementInputCustom(const struct FVector& WorldDirection,
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigator.AddMovementInputCustom");
 
-	UDonNavigator_AddMovementInputCustom_Params params;
-	params.WorldDirection = WorldDirection;
-	params.ScaleValue = ScaleValue;
+	UDonNavigator_AddMovementInputCustom_Params fn_params;
+	fn_params.WorldDirection = WorldDirection;
+	fn_params.ScaleValue = ScaleValue;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

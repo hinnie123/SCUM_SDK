@@ -21,17 +21,17 @@ void UMIDIDeviceManager::STATIC_FindMIDIDevices(TArray<struct FFoundMIDIDevice>*
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MIDIDevice.MIDIDeviceManager.FindMIDIDevices");
 
-	UMIDIDeviceManager_FindMIDIDevices_Params params;
+	UMIDIDeviceManager_FindMIDIDevices_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (OutMIDIDevices != nullptr)
-		*OutMIDIDevices = params.OutMIDIDevices;
+		*OutMIDIDevices = fn_params.OutMIDIDevices;
 }
 
 
@@ -46,18 +46,18 @@ class UMIDIDeviceController* UMIDIDeviceManager::STATIC_CreateMIDIDeviceControll
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MIDIDevice.MIDIDeviceManager.CreateMIDIDeviceController");
 
-	UMIDIDeviceManager_CreateMIDIDeviceController_Params params;
-	params.DeviceID = DeviceID;
-	params.MIDIBufferSize = MIDIBufferSize;
+	UMIDIDeviceManager_CreateMIDIDeviceController_Params fn_params;
+	fn_params.DeviceID = DeviceID;
+	fn_params.MIDIBufferSize = MIDIBufferSize;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

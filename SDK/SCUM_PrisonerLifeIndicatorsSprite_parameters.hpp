@@ -80,6 +80,28 @@ struct UPrisonerLifeIndicatorsSprite_C_OnPrisonerSet_Params
 {
 };
 
+// Function PrisonerLifeIndicatorsSprite.PrisonerLifeIndicatorsSprite_C.OnStartDiving
+struct UPrisonerLifeIndicatorsSprite_C_OnStartDiving_Params
+{
+};
+
+// Function PrisonerLifeIndicatorsSprite.PrisonerLifeIndicatorsSprite_C.SetBreathingBarPercent
+struct UPrisonerLifeIndicatorsSprite_C_SetBreathingBarPercent_Params
+{
+	float*                                             frontCirclePercent;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             backCirclePercent;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function PrisonerLifeIndicatorsSprite.PrisonerLifeIndicatorsSprite_C.HideBreathingWidgets
+struct UPrisonerLifeIndicatorsSprite_C_HideBreathingWidgets_Params
+{
+};
+
+// Function PrisonerLifeIndicatorsSprite.PrisonerLifeIndicatorsSprite_C.ShowBreathingWidgets
+struct UPrisonerLifeIndicatorsSprite_C_ShowBreathingWidgets_Params
+{
+};
+
 // Function PrisonerLifeIndicatorsSprite.PrisonerLifeIndicatorsSprite_C.ExecuteUbergraph_PrisonerLifeIndicatorsSprite
 struct UPrisonerLifeIndicatorsSprite_C_ExecuteUbergraph_PrisonerLifeIndicatorsSprite_Params
 {

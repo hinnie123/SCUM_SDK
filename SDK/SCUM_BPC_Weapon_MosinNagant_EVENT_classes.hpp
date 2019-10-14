@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BPC_Weapon_MosinNagant_EVENT.BPC_Weapon_MosinNagant_EVENT_C
-// 0x0000 (0x11A8 - 0x11A8)
+// 0x0000 (0x12F0 - 0x12F0)
 class ABPC_Weapon_MosinNagant_EVENT_C : public ABP_Weapon_MosinNagant_C
 {
 public:

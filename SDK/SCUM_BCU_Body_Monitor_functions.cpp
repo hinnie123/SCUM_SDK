@@ -21,16 +21,16 @@ void UBCU_Body_Monitor_C::shouldAlarmBeOn(bool* shouldAlarmBeOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.shouldAlarmBeOn");
 
-	UBCU_Body_Monitor_C_shouldAlarmBeOn_Params params;
+	UBCU_Body_Monitor_C_shouldAlarmBeOn_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (shouldAlarmBeOn != nullptr)
-		*shouldAlarmBeOn = params.shouldAlarmBeOn;
+		*shouldAlarmBeOn = fn_params.shouldAlarmBeOn;
 }
 
 
@@ -43,16 +43,16 @@ void UBCU_Body_Monitor_C::GetContentSize(struct FVector2D* contentSize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.GetContentSize");
 
-	UBCU_Body_Monitor_C_GetContentSize_Params params;
+	UBCU_Body_Monitor_C_GetContentSize_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (contentSize != nullptr)
-		*contentSize = params.contentSize;
+		*contentSize = fn_params.contentSize;
 }
 
 
@@ -63,11 +63,11 @@ void UBCU_Body_Monitor_C::SetPrisonerToMonitorOnChildren()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.SetPrisonerToMonitorOnChildren");
 
-	UBCU_Body_Monitor_C_SetPrisonerToMonitorOnChildren_Params params;
+	UBCU_Body_Monitor_C_SetPrisonerToMonitorOnChildren_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -80,11 +80,11 @@ void UBCU_Body_Monitor_C::SetSubTitles()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.SetSubTitles");
 
-	UBCU_Body_Monitor_C_SetSubTitles_Params params;
+	UBCU_Body_Monitor_C_SetSubTitles_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -99,15 +99,15 @@ struct FText UBCU_Body_Monitor_C::GetTitleText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.GetTitleText");
 
-	UBCU_Body_Monitor_C_GetTitleText_Params params;
+	UBCU_Body_Monitor_C_GetTitleText_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -120,16 +120,16 @@ void UBCU_Body_Monitor_C::GetDefaultTitle(struct FText* defaultTitle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.GetDefaultTitle");
 
-	UBCU_Body_Monitor_C_GetDefaultTitle_Params params;
+	UBCU_Body_Monitor_C_GetDefaultTitle_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (defaultTitle != nullptr)
-		*defaultTitle = params.defaultTitle;
+		*defaultTitle = fn_params.defaultTitle;
 }
 
 
@@ -142,16 +142,16 @@ void UBCU_Body_Monitor_C::SelectCustomColor(struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.SelectCustomColor");
 
-	UBCU_Body_Monitor_C_SelectCustomColor_Params params;
+	UBCU_Body_Monitor_C_SelectCustomColor_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
 	if (Color != nullptr)
-		*Color = params.Color;
+		*Color = fn_params.Color;
 }
 
 
@@ -162,11 +162,11 @@ void UBCU_Body_Monitor_C::AlarmSwitchOn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.AlarmSwitchOn");
 
-	UBCU_Body_Monitor_C_AlarmSwitchOn_Params params;
+	UBCU_Body_Monitor_C_AlarmSwitchOn_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -179,11 +179,11 @@ void UBCU_Body_Monitor_C::AlarmSwitchOff()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.AlarmSwitchOff");
 
-	UBCU_Body_Monitor_C_AlarmSwitchOff_Params params;
+	UBCU_Body_Monitor_C_AlarmSwitchOff_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -196,11 +196,11 @@ void UBCU_Body_Monitor_C::AlarmOnSickness()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.AlarmOnSickness");
 
-	UBCU_Body_Monitor_C_AlarmOnSickness_Params params;
+	UBCU_Body_Monitor_C_AlarmOnSickness_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -213,11 +213,11 @@ void UBCU_Body_Monitor_C::AlarmOffSickness()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.AlarmOffSickness");
 
-	UBCU_Body_Monitor_C_AlarmOffSickness_Params params;
+	UBCU_Body_Monitor_C_AlarmOffSickness_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -230,11 +230,11 @@ void UBCU_Body_Monitor_C::AlarmOnBodyCondition()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.AlarmOnBodyCondition");
 
-	UBCU_Body_Monitor_C_AlarmOnBodyCondition_Params params;
+	UBCU_Body_Monitor_C_AlarmOnBodyCondition_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -247,11 +247,11 @@ void UBCU_Body_Monitor_C::AlarmOffBodyCondition()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.AlarmOffBodyCondition");
 
-	UBCU_Body_Monitor_C_AlarmOffBodyCondition_Params params;
+	UBCU_Body_Monitor_C_AlarmOffBodyCondition_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -264,11 +264,11 @@ void UBCU_Body_Monitor_C::BCUBodyMonitorContentSizeChangedEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.BCUBodyMonitorContentSizeChangedEvent");
 
-	UBCU_Body_Monitor_C_BCUBodyMonitorContentSizeChangedEvent_Params params;
+	UBCU_Body_Monitor_C_BCUBodyMonitorContentSizeChangedEvent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -281,11 +281,11 @@ void UBCU_Body_Monitor_C::OnPrisonerSet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.OnPrisonerSet");
 
-	UBCU_Body_Monitor_C_OnPrisonerSet_Params params;
+	UBCU_Body_Monitor_C_OnPrisonerSet_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -301,13 +301,13 @@ void UBCU_Body_Monitor_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.Tick");
 
-	UBCU_Body_Monitor_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
+	UBCU_Body_Monitor_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -320,11 +320,11 @@ void UBCU_Body_Monitor_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.Construct");
 
-	UBCU_Body_Monitor_C_Construct_Params params;
+	UBCU_Body_Monitor_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -339,12 +339,12 @@ void UBCU_Body_Monitor_C::OnMinimize(bool shouldMinimize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.OnMinimize");
 
-	UBCU_Body_Monitor_C_OnMinimize_Params params;
-	params.shouldMinimize = shouldMinimize;
+	UBCU_Body_Monitor_C_OnMinimize_Params fn_params;
+	fn_params.shouldMinimize = shouldMinimize;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -357,11 +357,11 @@ void UBCU_Body_Monitor_C::WindowContentSizeChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.WindowContentSizeChanged");
 
-	UBCU_Body_Monitor_C_WindowContentSizeChanged_Params params;
+	UBCU_Body_Monitor_C_WindowContentSizeChanged_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -374,11 +374,11 @@ void UBCU_Body_Monitor_C::AlarmOnWindowContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.AlarmOnWindowContent");
 
-	UBCU_Body_Monitor_C_AlarmOnWindowContent_Params params;
+	UBCU_Body_Monitor_C_AlarmOnWindowContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -391,11 +391,11 @@ void UBCU_Body_Monitor_C::AlarmOffWindowContent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.AlarmOffWindowContent");
 
-	UBCU_Body_Monitor_C_AlarmOffWindowContent_Params params;
+	UBCU_Body_Monitor_C_AlarmOffWindowContent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -410,12 +410,12 @@ void UBCU_Body_Monitor_C::ExecuteUbergraph_BCU_Body_Monitor(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.ExecuteUbergraph_BCU_Body_Monitor");
 
-	UBCU_Body_Monitor_C_ExecuteUbergraph_BCU_Body_Monitor_Params params;
-	params.EntryPoint = EntryPoint;
+	UBCU_Body_Monitor_C_ExecuteUbergraph_BCU_Body_Monitor_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -430,12 +430,12 @@ void UBCU_Body_Monitor_C::BCUBodyMonitorSizeChangedEventDispatcher__DelegateSign
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.BCUBodyMonitorSizeChangedEventDispatcher__DelegateSignature");
 
-	UBCU_Body_Monitor_C_BCUBodyMonitorSizeChangedEventDispatcher__DelegateSignature_Params params;
-	params.Size = Size;
+	UBCU_Body_Monitor_C_BCUBodyMonitorSizeChangedEventDispatcher__DelegateSignature_Params fn_params;
+	fn_params.Size = Size;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

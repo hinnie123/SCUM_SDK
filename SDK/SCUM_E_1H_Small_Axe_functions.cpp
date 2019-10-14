@@ -19,11 +19,11 @@ void AE_1H_Small_Axe_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function E_1H_Small_Axe.E_1H_Small_Axe_C.UserConstructionScript");
 
-	AE_1H_Small_Axe_C_UserConstructionScript_Params params;
+	AE_1H_Small_Axe_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

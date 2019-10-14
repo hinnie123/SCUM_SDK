@@ -21,12 +21,12 @@ void UUI_UserImage_C::SetImageBrush(const struct FSlateBrush& imageBrush)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_UserImage.UI_UserImage_C.SetImageBrush");
 
-	UUI_UserImage_C_SetImageBrush_Params params;
-	params.imageBrush = imageBrush;
+	UUI_UserImage_C_SetImageBrush_Params fn_params;
+	fn_params.imageBrush = imageBrush;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -41,12 +41,12 @@ void UUI_UserImage_C::SetSizeOverride(const struct FVector2D& sizeOverride)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_UserImage.UI_UserImage_C.SetSizeOverride");
 
-	UUI_UserImage_C_SetSizeOverride_Params params;
-	params.sizeOverride = sizeOverride;
+	UUI_UserImage_C_SetSizeOverride_Params fn_params;
+	fn_params.sizeOverride = sizeOverride;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -59,11 +59,11 @@ void UUI_UserImage_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_UserImage.UI_UserImage_C.Construct");
 
-	UUI_UserImage_C_Construct_Params params;
+	UUI_UserImage_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -78,12 +78,12 @@ void UUI_UserImage_C::ExecuteUbergraph_UI_UserImage(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_UserImage.UI_UserImage_C.ExecuteUbergraph_UI_UserImage");
 
-	UUI_UserImage_C_ExecuteUbergraph_UI_UserImage_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_UserImage_C_ExecuteUbergraph_UI_UserImage_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

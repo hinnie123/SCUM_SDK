@@ -21,16 +21,16 @@ class UCineCameraComponent* ACineCameraActor::GetCineCameraComponent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraActor.GetCineCameraComponent");
 
-	ACineCameraActor_GetCineCameraComponent_Params params;
+	ACineCameraActor_GetCineCameraComponent_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -43,13 +43,13 @@ void UCineCameraComponent::SetLensPresetByName(const struct FString& InPresetNam
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.SetLensPresetByName");
 
-	UCineCameraComponent_SetLensPresetByName_Params params;
-	params.InPresetName = InPresetName;
+	UCineCameraComponent_SetLensPresetByName_Params fn_params;
+	fn_params.InPresetName = InPresetName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -64,13 +64,13 @@ void UCineCameraComponent::SetFilmbackPresetByName(const struct FString& InPrese
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.SetFilmbackPresetByName");
 
-	UCineCameraComponent_SetFilmbackPresetByName_Params params;
-	params.InPresetName = InPresetName;
+	UCineCameraComponent_SetFilmbackPresetByName_Params fn_params;
+	fn_params.InPresetName = InPresetName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -85,16 +85,16 @@ float UCineCameraComponent::GetVerticalFieldOfView()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.GetVerticalFieldOfView");
 
-	UCineCameraComponent_GetVerticalFieldOfView_Params params;
+	UCineCameraComponent_GetVerticalFieldOfView_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -107,16 +107,16 @@ struct FString UCineCameraComponent::GetLensPresetName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.GetLensPresetName");
 
-	UCineCameraComponent_GetLensPresetName_Params params;
+	UCineCameraComponent_GetLensPresetName_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -129,16 +129,16 @@ float UCineCameraComponent::GetHorizontalFieldOfView()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.GetHorizontalFieldOfView");
 
-	UCineCameraComponent_GetHorizontalFieldOfView_Params params;
+	UCineCameraComponent_GetHorizontalFieldOfView_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 
@@ -151,16 +151,16 @@ struct FString UCineCameraComponent::GetFilmbackPresetName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraComponent.GetFilmbackPresetName");
 
-	UCineCameraComponent_GetFilmbackPresetName_Params params;
+	UCineCameraComponent_GetFilmbackPresetName_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	return fn_params.ReturnValue;
 }
 
 

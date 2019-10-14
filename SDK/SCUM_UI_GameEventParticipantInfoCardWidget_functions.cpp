@@ -21,12 +21,12 @@ void UUI_GameEventParticipantInfoCardWidget_C::UpdateStats(class APrisoner** Pri
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventParticipantInfoCardWidget.UI_GameEventParticipantInfoCardWidget_C.UpdateStats");
 
-	UUI_GameEventParticipantInfoCardWidget_C_UpdateStats_Params params;
-	params.Prisoner = Prisoner;
+	UUI_GameEventParticipantInfoCardWidget_C_UpdateStats_Params fn_params;
+	fn_params.Prisoner = Prisoner;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -41,12 +41,12 @@ void UUI_GameEventParticipantInfoCardWidget_C::ExecuteUbergraph_UI_GameEventPart
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventParticipantInfoCardWidget.UI_GameEventParticipantInfoCardWidget_C.ExecuteUbergraph_UI_GameEventParticipantInfoCardWidget");
 
-	UUI_GameEventParticipantInfoCardWidget_C_ExecuteUbergraph_UI_GameEventParticipantInfoCardWidget_Params params;
-	params.EntryPoint = EntryPoint;
+	UUI_GameEventParticipantInfoCardWidget_C_ExecuteUbergraph_UI_GameEventParticipantInfoCardWidget_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }

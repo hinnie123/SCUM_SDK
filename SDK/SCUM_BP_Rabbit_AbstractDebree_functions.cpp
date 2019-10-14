@@ -21,12 +21,12 @@ void ABP_Rabbit_AbstractDebree_C::SpawnDebris(const struct FVector& InImpulseDir
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Rabbit_AbstractDebree.BP_Rabbit_AbstractDebree_C.SpawnDebris");
 
-	ABP_Rabbit_AbstractDebree_C_SpawnDebris_Params params;
-	params.InImpulseDirection = InImpulseDirection;
+	ABP_Rabbit_AbstractDebree_C_SpawnDebris_Params fn_params;
+	fn_params.InImpulseDirection = InImpulseDirection;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -39,11 +39,11 @@ void ABP_Rabbit_AbstractDebree_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Rabbit_AbstractDebree.BP_Rabbit_AbstractDebree_C.UserConstructionScript");
 
-	ABP_Rabbit_AbstractDebree_C_UserConstructionScript_Params params;
+	ABP_Rabbit_AbstractDebree_C_UserConstructionScript_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -67,21 +67,21 @@ void ABP_Rabbit_AbstractDebree_C::ReceivePointDamage(float* Damage, class UDamag
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Rabbit_AbstractDebree.BP_Rabbit_AbstractDebree_C.ReceivePointDamage");
 
-	ABP_Rabbit_AbstractDebree_C_ReceivePointDamage_Params params;
-	params.Damage = Damage;
-	params.DamageType = DamageType;
-	params.HitLocation = HitLocation;
-	params.HitNormal = HitNormal;
-	params.HitComponent = HitComponent;
-	params.BoneName = BoneName;
-	params.ShotFromDirection = ShotFromDirection;
-	params.InstigatedBy = InstigatedBy;
-	params.DamageCauser = DamageCauser;
-	params.HitInfo = HitInfo;
+	ABP_Rabbit_AbstractDebree_C_ReceivePointDamage_Params fn_params;
+	fn_params.Damage = Damage;
+	fn_params.DamageType = DamageType;
+	fn_params.HitLocation = HitLocation;
+	fn_params.HitNormal = HitNormal;
+	fn_params.HitComponent = HitComponent;
+	fn_params.BoneName = BoneName;
+	fn_params.ShotFromDirection = ShotFromDirection;
+	fn_params.InstigatedBy = InstigatedBy;
+	fn_params.DamageCauser = DamageCauser;
+	fn_params.HitInfo = HitInfo;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
@@ -96,12 +96,12 @@ void ABP_Rabbit_AbstractDebree_C::ExecuteUbergraph_BP_Rabbit_AbstractDebree(int 
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Rabbit_AbstractDebree.BP_Rabbit_AbstractDebree_C.ExecuteUbergraph_BP_Rabbit_AbstractDebree");
 
-	ABP_Rabbit_AbstractDebree_C_ExecuteUbergraph_BP_Rabbit_AbstractDebree_Params params;
-	params.EntryPoint = EntryPoint;
+	ABP_Rabbit_AbstractDebree_C_ExecuteUbergraph_BP_Rabbit_AbstractDebree_Params fn_params;
+	fn_params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 
-	UObject::ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &fn_params);
 
 	fn->FunctionFlags = flags;
 }
