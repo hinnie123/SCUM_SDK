@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Beet.Beet_C
-// 0x0000 (0x0958 - 0x0958)
+// 0x0000 (0x0938 - 0x0938)
 class ABeet_C : public AFoodItem
 {
 public:

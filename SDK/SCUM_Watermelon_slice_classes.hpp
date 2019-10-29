@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Watermelon_slice.Watermelon_slice_C
-// 0x0000 (0x0958 - 0x0958)
+// 0x0000 (0x0938 - 0x0938)
 class AWatermelon_slice_C : public AFoodItem
 {
 public:

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Lockpick_Advanced_Item.Lockpick_Advanced_Item_C
-// 0x0000 (0x0830 - 0x0830)
+// 0x0000 (0x0810 - 0x0810)
 class ALockpick_Advanced_Item_C : public AEquipmentItem
 {
 public:

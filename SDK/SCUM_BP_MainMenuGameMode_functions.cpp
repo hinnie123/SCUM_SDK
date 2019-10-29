@@ -15,14 +15,14 @@ namespace SDK
 // Function BP_MainMenuGameMode.BP_MainMenuGameMode_C.UpdatePreviewPrisoners
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UDbUserProfile*          userProfile                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UUserProfile*            UserProfile                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainMenuGameMode_C::UpdatePreviewPrisoners(class UDbUserProfile* userProfile)
+void ABP_MainMenuGameMode_C::UpdatePreviewPrisoners(class UUserProfile* UserProfile)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenuGameMode.BP_MainMenuGameMode_C.UpdatePreviewPrisoners");
 
 	ABP_MainMenuGameMode_C_UpdatePreviewPrisoners_Params fn_params;
-	fn_params.userProfile = userProfile;
+	fn_params.UserProfile = UserProfile;
 
 	auto flags = fn->FunctionFlags;
 

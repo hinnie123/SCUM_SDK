@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Undershirt_01_Deluxe.Undershirt_01_Deluxe_C
-// 0x0000 (0x08D0 - 0x08D0)
+// 0x0000 (0x08B0 - 0x08B0)
 class AUndershirt_01_Deluxe_C : public AClothesItem
 {
 public:

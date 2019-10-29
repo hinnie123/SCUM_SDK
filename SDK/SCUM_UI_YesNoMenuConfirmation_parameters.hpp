@@ -14,8 +14,8 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function UI_YesNoMenuConfirmation.UI_YesNoMenuConfirmation_C.adjustPosition
-struct UUI_YesNoMenuConfirmation_C_adjustPosition_Params
+// Function UI_YesNoMenuConfirmation.UI_YesNoMenuConfirmation_C.AdjustPosition
+struct UUI_YesNoMenuConfirmation_C_AdjustPosition_Params
 {
 	struct FVector2D                                   adjustment;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 };

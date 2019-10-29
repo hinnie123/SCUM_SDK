@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Sandbag.Sandbag_C
-// 0x0000 (0x0818 - 0x0818)
+// 0x0000 (0x07F8 - 0x07F8)
 class ASandbag_C : public AItem
 {
 public:

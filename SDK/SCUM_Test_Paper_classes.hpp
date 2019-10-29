@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Test_Paper.Test_Paper_C
-// 0x0000 (0x0830 - 0x0830)
+// 0x0000 (0x0810 - 0x0810)
 class ATest_Paper_C : public AEquipmentItem
 {
 public:

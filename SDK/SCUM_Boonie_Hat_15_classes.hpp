@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Boonie_Hat_15.Boonie_Hat_14_C
-// 0x0000 (0x08D0 - 0x08D0)
+// 0x0000 (0x08B0 - 0x08B0)
 class ABoonie_Hat_14_C : public AClothesItem
 {
 public:

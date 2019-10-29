@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Aluminium_Strip.Aluminium_Strip_C
-// 0x0000 (0x0830 - 0x0830)
+// 0x0000 (0x0810 - 0x0810)
 class AAluminium_Strip_C : public AEquipmentItem
 {
 public:

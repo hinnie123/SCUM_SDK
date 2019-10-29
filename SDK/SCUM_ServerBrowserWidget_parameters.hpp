@@ -30,7 +30,7 @@ struct UServerBrowserWidget_C_UpdatePreviewPrisoners_Params
 // Function ServerBrowserWidget.ServerBrowserWidget_C.GetCurrentUser
 struct UServerBrowserWidget_C_GetCurrentUser_Params
 {
-	class UDbUser*                                     user;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class UUser*                                       User;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ServerBrowserWidget.ServerBrowserWidget_C.SaveDirectionConnectionAddress

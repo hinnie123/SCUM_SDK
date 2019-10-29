@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bundle_Rag_Stripes.Bundle_Rag_Stripes_C
-// 0x0000 (0x0830 - 0x0830)
+// 0x0000 (0x0810 - 0x0810)
 class ABundle_Rag_Stripes_C : public AEquipmentItem
 {
 public:

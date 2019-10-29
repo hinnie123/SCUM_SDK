@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WeaponSights_XPS300_Holographic.BP_WeaponSights_XPS300_Holographic_C
-// 0x0000 (0x0848 - 0x0848)
+// 0x0000 (0x0828 - 0x0828)
 class ABP_WeaponSights_XPS300_Holographic_C : public ABP_WeaponSightBase_C
 {
 public:

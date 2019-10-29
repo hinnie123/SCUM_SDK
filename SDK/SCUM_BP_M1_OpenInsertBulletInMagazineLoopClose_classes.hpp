@@ -1,0 +1,36 @@
+#pragma once
+
+// SCUM (Dumped by Hinnie) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+namespace SDK
+{
+//---------------------------------------------------------------------------
+//Classes
+//---------------------------------------------------------------------------
+
+// BlueprintGeneratedClass BP_M1_OpenInsertBulletInMagazineLoopClose.BP_M1_OpenInsertBulletInMagazineLoopClose_C
+// 0x0000 (0x0090 - 0x0090)
+class UBP_M1_OpenInsertBulletInMagazineLoopClose_C : public UInsertCartridgeIntoMagazine
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_M1_OpenInsertBulletInMagazineLoopClose.BP_M1_OpenInsertBulletInMagazineLoopClose_C");
+		return ptr;
+	}
+
+
+	bool CanExecuteUsingData(struct FWeaponReloadData* Data);
+};
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

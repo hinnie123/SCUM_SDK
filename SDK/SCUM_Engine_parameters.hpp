@@ -7432,6 +7432,82 @@ struct UProjectileMovementComponent_LimitVelocity_Params
 	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
 };
 
+// Function Engine.Light.ToggleEnabled
+struct ALight_ToggleEnabled_Params
+{
+};
+
+// Function Engine.Light.SetLightFunctionScale
+struct ALight_SetLightFunctionScale_Params
+{
+	struct FVector                                     NewLightFunctionScale;                                    // (Parm, IsPlainOldData)
+};
+
+// Function Engine.Light.SetLightFunctionMaterial
+struct ALight_SetLightFunctionMaterial_Params
+{
+	class UMaterialInterface*                          NewLightFunctionMaterial;                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.Light.SetLightFunctionFadeDistance
+struct ALight_SetLightFunctionFadeDistance_Params
+{
+	float                                              NewLightFunctionFadeDistance;                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.Light.SetLightColor
+struct ALight_SetLightColor_Params
+{
+	struct FLinearColor                                NewLightColor;                                            // (Parm, IsPlainOldData)
+};
+
+// Function Engine.Light.SetEnabled
+struct ALight_SetEnabled_Params
+{
+	bool                                               bSetEnabled;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.Light.SetCastShadows
+struct ALight_SetCastShadows_Params
+{
+	bool                                               bNewValue;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.Light.SetBrightness
+struct ALight_SetBrightness_Params
+{
+	float                                              NewBrightness;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.Light.SetAffectTranslucentLighting
+struct ALight_SetAffectTranslucentLighting_Params
+{
+	bool                                               bNewValue;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.Light.OnRep_bEnabled
+struct ALight_OnRep_bEnabled_Params
+{
+};
+
+// Function Engine.Light.IsEnabled
+struct ALight_IsEnabled_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.Light.GetLightColor
+struct ALight_GetLightColor_Params
+{
+	struct FLinearColor                                ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.Light.GetBrightness
+struct ALight_GetBrightness_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Engine.PostProcessVolume.AddOrUpdateBlendable
 struct APostProcessVolume_AddOrUpdateBlendable_Params
 {
@@ -8872,82 +8948,6 @@ struct UDecalComponent_GetDecalMaterial_Params
 struct UDecalComponent_CreateDynamicMaterialInstance_Params
 {
 	class UMaterialInstanceDynamic*                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.Light.ToggleEnabled
-struct ALight_ToggleEnabled_Params
-{
-};
-
-// Function Engine.Light.SetLightFunctionScale
-struct ALight_SetLightFunctionScale_Params
-{
-	struct FVector                                     NewLightFunctionScale;                                    // (Parm, IsPlainOldData)
-};
-
-// Function Engine.Light.SetLightFunctionMaterial
-struct ALight_SetLightFunctionMaterial_Params
-{
-	class UMaterialInterface*                          NewLightFunctionMaterial;                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.Light.SetLightFunctionFadeDistance
-struct ALight_SetLightFunctionFadeDistance_Params
-{
-	float                                              NewLightFunctionFadeDistance;                             // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.Light.SetLightColor
-struct ALight_SetLightColor_Params
-{
-	struct FLinearColor                                NewLightColor;                                            // (Parm, IsPlainOldData)
-};
-
-// Function Engine.Light.SetEnabled
-struct ALight_SetEnabled_Params
-{
-	bool                                               bSetEnabled;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.Light.SetCastShadows
-struct ALight_SetCastShadows_Params
-{
-	bool                                               bNewValue;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.Light.SetBrightness
-struct ALight_SetBrightness_Params
-{
-	float                                              NewBrightness;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.Light.SetAffectTranslucentLighting
-struct ALight_SetAffectTranslucentLighting_Params
-{
-	bool                                               bNewValue;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.Light.OnRep_bEnabled
-struct ALight_OnRep_bEnabled_Params
-{
-};
-
-// Function Engine.Light.IsEnabled
-struct ALight_IsEnabled_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.Light.GetLightColor
-struct ALight_GetLightColor_Params
-{
-	struct FLinearColor                                ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.Light.GetBrightness
-struct ALight_GetBrightness_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Engine.LightComponentBase.SetCastVolumetricShadow

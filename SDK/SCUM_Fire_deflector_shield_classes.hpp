@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Fire_deflector_shield.Fire_deflector_shield_C
-// 0x0000 (0x0830 - 0x0830)
+// 0x0000 (0x0810 - 0x0810)
 class AFire_deflector_shield_C : public AEquipmentItem
 {
 public:

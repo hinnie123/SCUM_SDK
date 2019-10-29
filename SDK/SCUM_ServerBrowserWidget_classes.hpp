@@ -79,7 +79,7 @@ public:
 
 	void ChangeFilter(const struct FText& Filter);
 	void UpdatePreviewPrisoners(const struct FString& ServerIp, int ServerResponsePort);
-	void GetCurrentUser(class UDbUser** user);
+	void GetCurrentUser(class UUser** User);
 	void SaveDirectionConnectionAddress();
 	void ChooseServerAndConnect(const struct FString& AuthToken);
 	void ChooseServer(struct FString* Ip, int* ResponsePort);

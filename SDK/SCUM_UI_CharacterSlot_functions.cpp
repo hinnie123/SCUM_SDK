@@ -106,14 +106,14 @@ void UUI_CharacterSlot_C::OnDestroyClicked__DelegateSignature(class UUI_Characte
 // Function UI_CharacterSlot.UI_CharacterSlot_C.OnClicked__DelegateSignature
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UDbUserProfile*          userProfile                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UUserProfile*            UserProfile                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_CharacterSlot_C::OnClicked__DelegateSignature(class UDbUserProfile* userProfile)
+void UUI_CharacterSlot_C::OnClicked__DelegateSignature(class UUserProfile* UserProfile)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterSlot.UI_CharacterSlot_C.OnClicked__DelegateSignature");
 
 	UUI_CharacterSlot_C_OnClicked__DelegateSignature_Params fn_params;
-	fn_params.userProfile = userProfile;
+	fn_params.UserProfile = UserProfile;
 
 	auto flags = fn->FunctionFlags;
 

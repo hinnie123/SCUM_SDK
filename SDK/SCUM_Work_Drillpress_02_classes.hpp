@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Work_Drillpress_02.Work_Drillpress_02_C
-// 0x0000 (0x0830 - 0x0830)
+// 0x0000 (0x0810 - 0x0810)
 class AWork_Drillpress_02_C : public AEquipmentItem
 {
 public:

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Armor_Tactical_Vest_06.Armor_Tactical_Vest_06_C
-// 0x0000 (0x08D0 - 0x08D0)
+// 0x0000 (0x08B0 - 0x08B0)
 class AArmor_Tactical_Vest_06_C : public AClothesItem
 {
 public:

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Base_Bench.BP_Base_Bench_C
-// 0x0000 (0x06C0 - 0x06C0)
+// 0x0000 (0x06D0 - 0x06D0)
 class UBP_Base_Bench_C : public UBaseBuildingComponent
 {
 public:

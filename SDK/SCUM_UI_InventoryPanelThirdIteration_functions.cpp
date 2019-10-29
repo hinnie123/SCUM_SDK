@@ -52,108 +52,6 @@ void UUI_InventoryPanelThirdIteration_C::ScrollToEquippedItem(class AItem* Item)
 }
 
 
-// Function UI_InventoryPanelThirdIteration.UI_InventoryPanelThirdIteration_C.OnItemDestroyed
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                  DestroyedActor                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UUI_InventoryPanelThirdIteration_C::OnItemDestroyed(class AActor* DestroyedActor)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UI_InventoryPanelThirdIteration.UI_InventoryPanelThirdIteration_C.OnItemDestroyed");
-
-	UUI_InventoryPanelThirdIteration_C_OnItemDestroyed_Params fn_params;
-	fn_params.DestroyedActor = DestroyedActor;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UI_InventoryPanelThirdIteration.UI_InventoryPanelThirdIteration_C.OnItemPickedUpStateChanged
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AItem*                   Item                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           pickedUp                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UUI_InventoryPanelThirdIteration_C::OnItemPickedUpStateChanged(class AItem* Item, bool pickedUp)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UI_InventoryPanelThirdIteration.UI_InventoryPanelThirdIteration_C.OnItemPickedUpStateChanged");
-
-	UUI_InventoryPanelThirdIteration_C_OnItemPickedUpStateChanged_Params fn_params;
-	fn_params.Item = Item;
-	fn_params.pickedUp = pickedUp;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UI_InventoryPanelThirdIteration.UI_InventoryPanelThirdIteration_C.UpdateContainerForItem
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AItem**                  Item                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UUI_InventoryPanelThirdIteration_C::UpdateContainerForItem(class AItem** Item)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UI_InventoryPanelThirdIteration.UI_InventoryPanelThirdIteration_C.UpdateContainerForItem");
-
-	UUI_InventoryPanelThirdIteration_C_UpdateContainerForItem_Params fn_params;
-	fn_params.Item = Item;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UI_InventoryPanelThirdIteration.UI_InventoryPanelThirdIteration_C.RemoveContainerForItem
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AItem**                  Item                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UUI_InventoryPanelThirdIteration_C::RemoveContainerForItem(class AItem** Item)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UI_InventoryPanelThirdIteration.UI_InventoryPanelThirdIteration_C.RemoveContainerForItem");
-
-	UUI_InventoryPanelThirdIteration_C_RemoveContainerForItem_Params fn_params;
-	fn_params.Item = Item;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UI_InventoryPanelThirdIteration.UI_InventoryPanelThirdIteration_C.AddContainerForItem
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AItem**                  Item                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void UUI_InventoryPanelThirdIteration_C::AddContainerForItem(class AItem** Item)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UI_InventoryPanelThirdIteration.UI_InventoryPanelThirdIteration_C.AddContainerForItem");
-
-	UUI_InventoryPanelThirdIteration_C_AddContainerForItem_Params fn_params;
-	fn_params.Item = Item;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function UI_InventoryPanelThirdIteration.UI_InventoryPanelThirdIteration_C.OnDragLeave
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -167,23 +65,6 @@ void UUI_InventoryPanelThirdIteration_C::OnDragLeave(struct FPointerEvent* Point
 	UUI_InventoryPanelThirdIteration_C_OnDragLeave_Params fn_params;
 	fn_params.PointerEvent = PointerEvent;
 	fn_params.Operation = Operation;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UI_InventoryPanelThirdIteration.UI_InventoryPanelThirdIteration_C.UpdateItemWidgetHighlightings
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void UUI_InventoryPanelThirdIteration_C::UpdateItemWidgetHighlightings()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UI_InventoryPanelThirdIteration.UI_InventoryPanelThirdIteration_C.UpdateItemWidgetHighlightings");
-
-	UUI_InventoryPanelThirdIteration_C_UpdateItemWidgetHighlightings_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 

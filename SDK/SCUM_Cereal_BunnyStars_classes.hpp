@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Cereal_BunnyStars.Cereal_BunnyStars_C
-// 0x0000 (0x0958 - 0x0958)
+// 0x0000 (0x0938 - 0x0938)
 class ACereal_BunnyStars_C : public AFoodItem
 {
 public:

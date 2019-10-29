@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MA1_Spitfire_04.MA1_Spitfire_04_C
-// 0x0000 (0x08D0 - 0x08D0)
+// 0x0000 (0x08B0 - 0x08B0)
 class AMA1_Spitfire_04_C : public AClothesItem
 {
 public:

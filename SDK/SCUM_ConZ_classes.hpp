@@ -135,7 +135,7 @@ public:
 
 
 // Class ConZ.AdminCommand
-// 0x0040 (0x0068 - 0x0028)
+// 0x0058 (0x0080 - 0x0028)
 class UAdminCommand : public UObject
 {
 public:
@@ -151,6 +151,7 @@ public:
 	bool                                               _shouldDisableSingleplayerAchievementsIfExecuted;         // 0x0052(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x5];                                       // 0x0053(0x0005) MISSED OFFSET
 	struct FString                                     _description;                                             // 0x0058(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	unsigned char                                      UnknownData01[0x18];                                      // 0x0068(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -159,14 +160,14 @@ public:
 	}
 
 
-	void Execute(TArray<struct FString> Arguments);
+	bool Execute(TArray<struct FString> Arguments);
 	bool CanEverBeExecuted(class APlayerController* Controller, struct FString* reasonIfNot);
 	bool CanBeExecuted(class APlayerController* Controller, struct FString* reasonIfNot);
 };
 
 
 // Class ConZ.AdminCommand_Announce
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_Announce : public UAdminCommand
 {
 public:
@@ -181,7 +182,7 @@ public:
 
 
 // Class ConZ.AdminCommand_BanPlayer
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_BanPlayer : public UAdminCommand
 {
 public:
@@ -196,7 +197,7 @@ public:
 
 
 // Class ConZ.AdminCommand_CompleteMission
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_CompleteMission : public UAdminCommand
 {
 public:
@@ -211,7 +212,7 @@ public:
 
 
 // Class ConZ.AdminCommand_CrashMajestically
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_CrashMajestically : public UAdminCommand
 {
 public:
@@ -226,7 +227,7 @@ public:
 
 
 // Class ConZ.AdminCommand_DestroyAllVehicles
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_DestroyAllVehicles : public UAdminCommand
 {
 public:
@@ -241,7 +242,7 @@ public:
 
 
 // Class ConZ.AdminCommand_DestroyVehicle
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_DestroyVehicle : public UAdminCommand
 {
 public:
@@ -256,7 +257,7 @@ public:
 
 
 // Class ConZ.AdminCommand_Immortality
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_Immortality : public UAdminCommand
 {
 public:
@@ -271,7 +272,7 @@ public:
 
 
 // Class ConZ.AdminCommand_KickPlayer
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_KickPlayer : public UAdminCommand
 {
 public:
@@ -286,7 +287,7 @@ public:
 
 
 // Class ConZ.AdminCommand_Knockout
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_Knockout : public UAdminCommand
 {
 public:
@@ -301,7 +302,7 @@ public:
 
 
 // Class ConZ.AdminCommand_LeaveCorpse
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_LeaveCorpse : public UAdminCommand
 {
 public:
@@ -315,8 +316,23 @@ public:
 };
 
 
+// Class ConZ.AdminCommand_ListMutedPlayers
+// 0x0000 (0x0080 - 0x0080)
+class UAdminCommand_ListMutedPlayers : public UAdminCommand
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ConZ.AdminCommand_ListMutedPlayers");
+		return ptr;
+	}
+
+};
+
+
 // Class ConZ.AdminCommand_ListPlayers
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_ListPlayers : public UAdminCommand
 {
 public:
@@ -331,12 +347,12 @@ public:
 
 
 // Class ConZ.AdminCommand_ListPrimaryAssets
-// 0x0058 (0x00C0 - 0x0068)
+// 0x0058 (0x00D8 - 0x0080)
 class UAdminCommand_ListPrimaryAssets : public UAdminCommand
 {
 public:
-	struct FPrimaryAssetType                           _primaryAssetType;                                        // 0x0068(0x0008) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0070(0x0050) UNKNOWN PROPERTY: SetProperty ConZ.AdminCommand_ListPrimaryAssets._primaryAssetsToExclude
+	struct FPrimaryAssetType                           _primaryAssetType;                                        // 0x0080(0x0008) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData00[0x50];                                      // 0x0088(0x0050) UNKNOWN PROPERTY: SetProperty ConZ.AdminCommand_ListPrimaryAssets._primaryAssetsToExclude
 
 	static UClass* StaticClass()
 	{
@@ -348,7 +364,7 @@ public:
 
 
 // Class ConZ.AdminCommand_ListSpawnedVehicles
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_ListSpawnedVehicles : public UAdminCommand
 {
 public:
@@ -363,7 +379,7 @@ public:
 
 
 // Class ConZ.AdminCommand_Location
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_Location : public UAdminCommand
 {
 public:
@@ -377,8 +393,38 @@ public:
 };
 
 
+// Class ConZ.AdminCommand_MutePlayer
+// 0x0000 (0x0080 - 0x0080)
+class UAdminCommand_MutePlayer : public UAdminCommand
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ConZ.AdminCommand_MutePlayer");
+		return ptr;
+	}
+
+};
+
+
+// Class ConZ.AdminCommand_PlaceableActorDebug
+// 0x0000 (0x0080 - 0x0080)
+class UAdminCommand_PlaceableActorDebug : public UAdminCommand
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ConZ.AdminCommand_PlaceableActorDebug");
+		return ptr;
+	}
+
+};
+
+
 // Class ConZ.AdminCommand_ResetAchievements
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_ResetAchievements : public UAdminCommand
 {
 public:
@@ -393,7 +439,7 @@ public:
 
 
 // Class ConZ.AdminCommand_ResetMissionEnabled
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_ResetMissionEnabled : public UAdminCommand
 {
 public:
@@ -408,7 +454,7 @@ public:
 
 
 // Class ConZ.AdminCommand_ScheduleWorldEvent
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_ScheduleWorldEvent : public UAdminCommand
 {
 public:
@@ -422,8 +468,23 @@ public:
 };
 
 
+// Class ConZ.AdminCommand_SetDecayTimeDilation
+// 0x0000 (0x0080 - 0x0080)
+class UAdminCommand_SetDecayTimeDilation : public UAdminCommand
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ConZ.AdminCommand_SetDecayTimeDilation");
+		return ptr;
+	}
+
+};
+
+
 // Class ConZ.AdminCommand_SetFamePoints
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_SetFamePoints : public UAdminCommand
 {
 public:
@@ -438,7 +499,7 @@ public:
 
 
 // Class ConZ.AdminCommand_SetFamePointsToAll
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_SetFamePointsToAll : public UAdminCommand
 {
 public:
@@ -453,7 +514,7 @@ public:
 
 
 // Class ConZ.AdminCommand_SetFamePointsToAllOnline
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_SetFamePointsToAllOnline : public UAdminCommand
 {
 public:
@@ -468,7 +529,7 @@ public:
 
 
 // Class ConZ.AdminCommand_SetGodMode
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_SetGodMode : public UAdminCommand
 {
 public:
@@ -483,7 +544,7 @@ public:
 
 
 // Class ConZ.AdminCommand_SetInfiniteAmmo
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_SetInfiniteAmmo : public UAdminCommand
 {
 public:
@@ -498,7 +559,7 @@ public:
 
 
 // Class ConZ.AdminCommand_SetInfiniteStamina
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_SetInfiniteStamina : public UAdminCommand
 {
 public:
@@ -513,7 +574,7 @@ public:
 
 
 // Class ConZ.AdminCommand_SetStamina
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_SetStamina : public UAdminCommand
 {
 public:
@@ -528,7 +589,7 @@ public:
 
 
 // Class ConZ.AdminCommand_SetTime
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_SetTime : public UAdminCommand
 {
 public:
@@ -543,7 +604,7 @@ public:
 
 
 // Class ConZ.AdminCommand_SetWeather
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_SetWeather : public UAdminCommand
 {
 public:
@@ -558,7 +619,7 @@ public:
 
 
 // Class ConZ.AdminCommand_ShowBaseBuildingDebug
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_ShowBaseBuildingDebug : public UAdminCommand
 {
 public:
@@ -573,14 +634,14 @@ public:
 
 
 // Class ConZ.AdminCommand_SpawnPrimaryActorAsset
-// 0x0060 (0x00C8 - 0x0068)
+// 0x0060 (0x00E0 - 0x0080)
 class UAdminCommand_SpawnPrimaryActorAsset : public UAdminCommand
 {
 public:
-	struct FPrimaryAssetType                           _primaryAssetType;                                        // 0x0068(0x0008) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0070(0x0050) UNKNOWN PROPERTY: SetProperty ConZ.AdminCommand_SpawnPrimaryActorAsset._primaryAssetsToExclude
-	int                                                _countArgumentMinValue;                                   // 0x00C0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                _countArgumentMaxValue;                                   // 0x00C4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPrimaryAssetType                           _primaryAssetType;                                        // 0x0080(0x0008) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData00[0x50];                                      // 0x0088(0x0050) UNKNOWN PROPERTY: SetProperty ConZ.AdminCommand_SpawnPrimaryActorAsset._primaryAssetsToExclude
+	int                                                _countArgumentMinValue;                                   // 0x00D8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                _countArgumentMaxValue;                                   // 0x00DC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -592,7 +653,7 @@ public:
 
 
 // Class ConZ.AdminCommand_Teleport
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_Teleport : public UAdminCommand
 {
 public:
@@ -607,7 +668,7 @@ public:
 
 
 // Class ConZ.AdminCommand_TeleportTo
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_TeleportTo : public UAdminCommand
 {
 public:
@@ -622,7 +683,7 @@ public:
 
 
 // Class ConZ.AdminCommand_TeleportTo3pm
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_TeleportTo3pm : public UAdminCommand
 {
 public:
@@ -637,7 +698,7 @@ public:
 
 
 // Class ConZ.AdminCommand_TeleportToMe
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_TeleportToMe : public UAdminCommand
 {
 public:
@@ -652,7 +713,7 @@ public:
 
 
 // Class ConZ.AdminCommand_TeleportToVehicle
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_TeleportToVehicle : public UAdminCommand
 {
 public:
@@ -667,7 +728,7 @@ public:
 
 
 // Class ConZ.AdminCommand_UnbanPlayer
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_UnbanPlayer : public UAdminCommand
 {
 public:
@@ -681,8 +742,23 @@ public:
 };
 
 
+// Class ConZ.AdminCommand_UnmutePlayer
+// 0x0000 (0x0080 - 0x0080)
+class UAdminCommand_UnmutePlayer : public UAdminCommand
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ConZ.AdminCommand_UnmutePlayer");
+		return ptr;
+	}
+
+};
+
+
 // Class ConZ.AdminCommand_VisualizeBulletTrajectories
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0080 - 0x0080)
 class UAdminCommand_VisualizeBulletTrajectories : public UAdminCommand
 {
 public:
@@ -935,132 +1011,137 @@ public:
 
 
 // Class ConZ.Item
-// 0x04F0 (0x0818 - 0x0328)
+// 0x04D0 (0x07F8 - 0x0328)
 class AItem : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x80];                                      // 0x0328(0x0080) MISSED OFFSET
-	struct FScriptMulticastDelegate                    DebugTextChanged;                                         // 0x03A8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    PickedUpState;                                            // 0x03B8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnStaticMeshChanged;                                      // 0x03C8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnSkeletalMeshChanged;                                    // 0x03D8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnItemAddedEvent;                                         // 0x03E8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnItemRemovedEvent;                                       // 0x03F8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnItemMovedEvent;                                         // 0x0408(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0418(0x0010) MISSED OFFSET
-	class UClass*                                      AttachmentSocketMountType;                                // 0x0428(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FAttachmentSocket>                   AttachmentSockets;                                        // 0x0430(0x0010) (Edit, ZeroConstructor)
-	class UClass*                                      HolsterAttachmentSocketMountType;                         // 0x0440(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TMap<class UClass*, struct FAttachmentSocketOffset> AttachmentSocketsOffset;                                  // 0x0448(0x0050) (Edit, ZeroConstructor)
-	class UStaticMeshComponent*                        Mesh;                                                     // 0x0498(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UTexture2D*                                  InventoryIcon;                                            // 0x04A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UTexture2D*                                  InventoryIconInHands;                                     // 0x04A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FText                                       Caption;                                                  // 0x04B0(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly)
-	uint32_t                                           SizeX;                                                    // 0x04C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	uint32_t                                           SizeY;                                                    // 0x04CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               IgnoreMaxContainedWeight;                                 // 0x04D0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x04D1(0x0003) MISSED OFFSET
-	float                                              MaxContainedWeight;                                       // 0x04D4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MaxWaterWeightAsRatioOfWeight;                            // 0x04D8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               IsIgnoredBySpawners;                                      // 0x04DC(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FItemLocation                               ItemLocation;                                             // 0x04DD(0x000C) (Edit, DisableEditOnInstance)
-	EItemRarity                                        Rarity;                                                   // 0x04E9(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x6];                                       // 0x04EA(0x0006) MISSED OFFSET
-	struct FGameplayTagContainer                       ItemSpawnTypes;                                           // 0x04F0(0x0020) (Edit, DisableEditOnInstance)
-	struct FVector                                     SpawnLocationOffset;                                      // 0x0510(0x000C) (Edit, DisableEditOnInstance, IsPlainOldData)
-	struct FRotator                                    SpawnRotationOffset;                                      // 0x051C(0x000C) (Edit, DisableEditOnInstance, IsPlainOldData)
-	float                                              SpawnRotationRandomization;                               // 0x0528(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                Uses;                                                     // 0x052C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FText                                       Description;                                              // 0x0530(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly)
-	TArray<struct FPossibleItemSickness>               PossibleSicknesses;                                       // 0x0548(0x0010) (Edit, ZeroConstructor)
-	TArray<class UClass*>                              TreatSicknesses;                                          // 0x0558(0x0010) (Edit, ZeroConstructor)
-	float                                              DamageOnUse;                                              // 0x0568(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DamageOverTime;                                           // 0x056C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              AutoDestructTime;                                         // 0x0570(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	EItemExhausted                                     IfExhausted;                                              // 0x0574(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	EInteractionType                                   CraftingInteraction;                                      // 0x0575(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x2];                                       // 0x0576(0x0002) MISSED OFFSET
-	class UChoppingRecipeDataAsset*                    ChoppingRecipeDataAsset;                                  // 0x0578(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FText                                       PickupCaption;                                            // 0x0580(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly)
-	bool                                               EnableGlowOnBeginPlay;                                    // 0x0598(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               EnableAwarenessGlow;                                      // 0x0599(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               EnableHoverGlow;                                          // 0x059A(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x5];                                       // 0x059B(0x0005) MISSED OFFSET
-	TArray<class UBaseItemTag*>                        ItemTags;                                                 // 0x05A0(0x0010) (Edit, ZeroConstructor)
-	TArray<class UBaseItemTag*>                        OwnedItemTags;                                            // 0x05B0(0x0010) (Edit, ExportObject, ZeroConstructor)
-	TArray<struct FString>                             ItemSnapTags;                                             // 0x05C0(0x0010) (Edit, ZeroConstructor)
-	EItemNoiseLevel                                    NoiseLevel;                                               // 0x05D0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x7];                                       // 0x05D1(0x0007) MISSED OFFSET
-	struct FItemMotionNoise                            MotionNoise;                                              // 0x05D8(0x0008) (Edit)
-	struct FItemInventoryHandlingSounds                InventoryHandlingSounds;                                  // 0x05E0(0x0008) (Edit)
-	class UDestructibleMesh*                           DestroyedMesh;                                            // 0x05E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DestroyedImpulseStrength;                                 // 0x05F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x4];                                       // 0x05F4(0x0004) MISSED OFFSET
-	class UAkAudioEvent*                               DestroyedSound;                                           // 0x05F8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      HoverWidgetClass;                                         // 0x0600(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x50];                                      // 0x0608(0x0050) MISSED OFFSET
-	class UThrowingComponent*                          ThrowingComponent;                                        // 0x0658(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               ShouldDestroyContainedItemsOnDestroyEvent;                // 0x0660(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData09[0x49];                                      // 0x0661(0x0049) MISSED OFFSET
-	EInteractionType                                   _defaultInteractionOnFloor;                               // 0x06AA(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	EInteractionType                                   _defaultInteractionInInventory;                           // 0x06AB(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	EInteractionType                                   _defaultInteractionEquipped;                              // 0x06AC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData10[0x17];                                      // 0x06AD(0x0017) MISSED OFFSET
-	float                                              _itemLoadingWeightOverride;                               // 0x06C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FText                                       _debugText;                                               // 0x06C8(0x0018) (Net)
-	class AActor*                                      _attachParentObject;                                      // 0x06E0(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FVisibilityReplication                      _visibilityReplication;                                   // 0x06E8(0x0008) (Net)
-	unsigned char                                      UnknownData11[0x14];                                      // 0x06F0(0x0014) MISSED OFFSET
-	unsigned char                                      _waterWeightReplicated;                                   // 0x0704(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData12[0xB];                                       // 0x0705(0x000B) MISSED OFFSET
-	bool                                               _meshIsSimulatingPhysics;                                 // 0x0710(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData13[0x3];                                       // 0x0711(0x0003) MISSED OFFSET
-	float                                              Fuel;                                                     // 0x0714(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Weight;                                                   // 0x0718(0x0004) (Edit, Net, ZeroConstructor, IsPlainOldData)
-	float                                              _damage;                                                  // 0x071C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      _damageReplicated;                                        // 0x0720(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData14[0x3];                                       // 0x0721(0x0003) MISSED OFFSET
-	float                                              _weightUsed;                                              // 0x0724(0x0004) (Edit, Net, ZeroConstructor, IsPlainOldData)
-	bool                                               _isCrafted;                                               // 0x0728(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData15[0x3];                                       // 0x0729(0x0003) MISSED OFFSET
-	float                                              _uncraftTime;                                             // 0x072C(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               _isBusy;                                                  // 0x0730(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               _examined;                                                // 0x0731(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData16[0x16];                                      // 0x0732(0x0016) MISSED OFFSET
-	class USceneComponent*                             _tempSceneComponent;                                      // 0x0748(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	bool                                               _useHandCorrections;                                      // 0x0750(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               _shouldBeMaintained;                                      // 0x0751(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData17[0xE];                                       // 0x0752(0x000E) MISSED OFFSET
-	int64_t                                            _expirationTime;                                          // 0x0760(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               _canBeDropped;                                            // 0x0768(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData18[0x3];                                       // 0x0769(0x0003) MISSED OFFSET
-	int                                                _maxNumberOfContainedItems;                               // 0x076C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               _canContainNonEmptyItems;                                 // 0x0770(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               _blinkOnSpawn;                                            // 0x0771(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               _isPartOfEvent;                                           // 0x0772(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData19[0x1];                                       // 0x0773(0x0001) MISSED OFFSET
-	float                                              _vicinityCheckDistance;                                   // 0x0774(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _updateVisualsFrequency;                                  // 0x0778(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData20[0x4];                                       // 0x077C(0x0004) MISSED OFFSET
-	struct FTimerHandle                                _updateVisualsTimer;                                      // 0x0780(0x0008)
-	TArray<struct FInventoryStackData>                 _stacks;                                                  // 0x0788(0x0010) (Net, ZeroConstructor)
-	TArray<class UClass*>                              _stackableClasses;                                        // 0x0798(0x0010) (Edit, ZeroConstructor)
-	class AItem*                                       _stackExhaustedSuccessorItem;                             // 0x07A8(0x0008) (ZeroConstructor, IsPlainOldData)
-	TScriptInterface<class UInventoryContainer>        _parentContainer;                                         // 0x07B0(0x0010) (ZeroConstructor, IsPlainOldData)
-	TScriptInterface<class UInventoryNode>             _parentInventoryNode;                                     // 0x07C0(0x0010) (ZeroConstructor, IsPlainOldData)
-	bool                                               _canEverBeVirtualized;                                    // 0x07D0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               _hasHighLoadPriorityInVirtualization;                     // 0x07D1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData21[0x2];                                       // 0x07D2(0x0002) MISSED OFFSET
-	float                                              _virtualizationDistance;                                  // 0x07D4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               _canPlaceItemsOn;                                         // 0x07D8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               _shouldShowStatusWidget;                                  // 0x07D9(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               _canBeNamed;                                              // 0x07DA(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData22[0x5];                                       // 0x07DB(0x0005) MISSED OFFSET
-	TWeakObjectPtr<class UItemStatusWidget>            _itemStatusWidget;                                        // 0x07E0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TWeakObjectPtr<class UChangeTextWidget>            _editTextWidget;                                          // 0x07E8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FString                                     _playerGivenName;                                         // 0x07F0(0x0010) (Net, ZeroConstructor)
-	unsigned char                                      UnknownData23[0x10];                                      // 0x0800(0x0010) MISSED OFFSET
-	class UInventoryContainer2D*                       _inventoryContainer2D;                                    // 0x0810(0x0008) (BlueprintVisible, ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x88];                                      // 0x0328(0x0088) MISSED OFFSET
+	struct FScriptMulticastDelegate                    DebugTextChanged;                                         // 0x03B0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    PickedUpState;                                            // 0x03C0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnStaticMeshChanged;                                      // 0x03D0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnSkeletalMeshChanged;                                    // 0x03E0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnItemAddedEvent;                                         // 0x03F0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnItemRemovedEvent;                                       // 0x0400(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnItemMovedEvent;                                         // 0x0410(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0420(0x0010) MISSED OFFSET
+	class UClass*                                      AttachmentSocketMountType;                                // 0x0430(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FAttachmentSocket>                   AttachmentSockets;                                        // 0x0438(0x0010) (Edit, ZeroConstructor)
+	class UClass*                                      HolsterAttachmentSocketMountType;                         // 0x0448(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TMap<class UClass*, struct FAttachmentSocketOffset> AttachmentSocketsOffset;                                  // 0x0450(0x0050) (Edit, ZeroConstructor)
+	class UStaticMeshComponent*                        Mesh;                                                     // 0x04A0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UTexture2D*                                  InventoryIcon;                                            // 0x04A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UTexture2D*                                  InventoryIconInHands;                                     // 0x04B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FText                                       Caption;                                                  // 0x04B8(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly)
+	uint32_t                                           SizeX;                                                    // 0x04D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	uint32_t                                           SizeY;                                                    // 0x04D4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               IgnoreMaxContainedWeight;                                 // 0x04D8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x04D9(0x0003) MISSED OFFSET
+	float                                              MaxContainedWeight;                                       // 0x04DC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MaxWaterWeightAsRatioOfWeight;                            // 0x04E0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               IsIgnoredBySpawners;                                      // 0x04E4(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FItemLocation                               ItemLocation;                                             // 0x04E5(0x000C) (Edit, DisableEditOnInstance)
+	EItemRarity                                        Rarity;                                                   // 0x04F1(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x6];                                       // 0x04F2(0x0006) MISSED OFFSET
+	struct FGameplayTagContainer                       ItemSpawnTypes;                                           // 0x04F8(0x0020) (Edit, DisableEditOnInstance)
+	struct FVector                                     SpawnLocationOffset;                                      // 0x0518(0x000C) (Edit, DisableEditOnInstance, IsPlainOldData)
+	struct FRotator                                    SpawnRotationOffset;                                      // 0x0524(0x000C) (Edit, DisableEditOnInstance, IsPlainOldData)
+	float                                              SpawnRotationRandomization;                               // 0x0530(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                Uses;                                                     // 0x0534(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FText                                       Description;                                              // 0x0538(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly)
+	TArray<struct FPossibleItemSickness>               PossibleSicknesses;                                       // 0x0550(0x0010) (Edit, ZeroConstructor)
+	TArray<class UClass*>                              TreatSicknesses;                                          // 0x0560(0x0010) (Edit, ZeroConstructor)
+	float                                              DamageOnUse;                                              // 0x0570(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DamageOverTime;                                           // 0x0574(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              AutoDestructTime;                                         // 0x0578(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	EItemExhausted                                     IfExhausted;                                              // 0x057C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	EInteractionType                                   CraftingInteraction;                                      // 0x057D(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x2];                                       // 0x057E(0x0002) MISSED OFFSET
+	class UChoppingRecipeDataAsset*                    ChoppingRecipeDataAsset;                                  // 0x0580(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FText                                       PickupCaption;                                            // 0x0588(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly)
+	bool                                               EnableGlowOnBeginPlay;                                    // 0x05A0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               EnableAwarenessGlow;                                      // 0x05A1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               EnableHoverGlow;                                          // 0x05A2(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x5];                                       // 0x05A3(0x0005) MISSED OFFSET
+	TArray<class UBaseItemTag*>                        ItemTags;                                                 // 0x05A8(0x0010) (Edit, ZeroConstructor)
+	TArray<class UBaseItemTag*>                        OwnedItemTags;                                            // 0x05B8(0x0010) (Edit, ExportObject, ZeroConstructor)
+	TArray<struct FString>                             ItemSnapTags;                                             // 0x05C8(0x0010) (Edit, ZeroConstructor)
+	EItemNoiseLevel                                    NoiseLevel;                                               // 0x05D8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x7];                                       // 0x05D9(0x0007) MISSED OFFSET
+	struct FItemMotionNoise                            MotionNoise;                                              // 0x05E0(0x0008) (Edit)
+	struct FItemInventoryHandlingSounds                InventoryHandlingSounds;                                  // 0x05E8(0x0008) (Edit)
+	class UDestructibleMesh*                           DestroyedMesh;                                            // 0x05F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DestroyedImpulseStrength;                                 // 0x05F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData07[0x4];                                       // 0x05FC(0x0004) MISSED OFFSET
+	class UAkAudioEvent*                               DestroyedSound;                                           // 0x0600(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      HoverWidgetClass;                                         // 0x0608(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x18];                                      // 0x0610(0x0018) MISSED OFFSET
+	class UThrowingComponent*                          ThrowingComponent;                                        // 0x0628(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool                                               ShouldDestroyContainedItemsOnDestroyEvent;                // 0x0630(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x48];                                      // 0x0631(0x0048) MISSED OFFSET
+	EInteractionType                                   _defaultInteractionOnFloor;                               // 0x0679(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	EInteractionType                                   _defaultInteractionInInventory;                           // 0x067A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	EInteractionType                                   _defaultInteractionEquipped;                              // 0x067B(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData10[0x14];                                      // 0x067C(0x0014) MISSED OFFSET
+	float                                              _itemLoadingWeightOverride;                               // 0x0690(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData11[0x4];                                       // 0x0694(0x0004) MISSED OFFSET
+	struct FText                                       _debugText;                                               // 0x0698(0x0018) (Net)
+	class AActor*                                      _attachParentObject;                                      // 0x06B0(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FVisibilityReplication                      _visibilityReplication;                                   // 0x06B8(0x0008) (Net)
+	unsigned char                                      UnknownData12[0x14];                                      // 0x06C0(0x0014) MISSED OFFSET
+	unsigned char                                      _waterWeightReplicated;                                   // 0x06D4(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData13[0xB];                                       // 0x06D5(0x000B) MISSED OFFSET
+	bool                                               _meshIsSimulatingPhysics;                                 // 0x06E0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData14[0x3];                                       // 0x06E1(0x0003) MISSED OFFSET
+	float                                              Fuel;                                                     // 0x06E4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Weight;                                                   // 0x06E8(0x0004) (Edit, Net, ZeroConstructor, IsPlainOldData)
+	float                                              _health;                                                  // 0x06EC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _maxHealth;                                               // 0x06F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _defaultMaxHealth;                                        // 0x06F4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	uint16_t                                           _healthReplicated;                                        // 0x06F8(0x0002) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData15[0x2];                                       // 0x06FA(0x0002) MISSED OFFSET
+	float                                              _weightUsed;                                              // 0x06FC(0x0004) (Edit, Net, ZeroConstructor, IsPlainOldData)
+	bool                                               _isCrafted;                                               // 0x0700(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData16[0x3];                                       // 0x0701(0x0003) MISSED OFFSET
+	float                                              _uncraftTime;                                             // 0x0704(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               _isBusy;                                                  // 0x0708(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               _examined;                                                // 0x0709(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData17[0x16];                                      // 0x070A(0x0016) MISSED OFFSET
+	class USceneComponent*                             _tempSceneComponent;                                      // 0x0720(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	bool                                               _useHandCorrections;                                      // 0x0728(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               _shouldBeMaintained;                                      // 0x0729(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData18[0xE];                                       // 0x072A(0x000E) MISSED OFFSET
+	int64_t                                            _expirationTime;                                          // 0x0738(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               _canBeDropped;                                            // 0x0740(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData19[0x3];                                       // 0x0741(0x0003) MISSED OFFSET
+	int                                                _maxNumberOfContainedItems;                               // 0x0744(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               _canContainNonEmptyItems;                                 // 0x0748(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               _blinkOnSpawn;                                            // 0x0749(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               _isPartOfEvent;                                           // 0x074A(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData20[0x1];                                       // 0x074B(0x0001) MISSED OFFSET
+	float                                              _vicinityCheckDistance;                                   // 0x074C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _updateVisualsFrequency;                                  // 0x0750(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData21[0x4];                                       // 0x0754(0x0004) MISSED OFFSET
+	struct FTimerHandle                                _updateVisualsTimer;                                      // 0x0758(0x0008)
+	TArray<struct FInventoryStackData>                 _stacks;                                                  // 0x0760(0x0010) (Net, ZeroConstructor)
+	TArray<class UClass*>                              _stackableClasses;                                        // 0x0770(0x0010) (Edit, ZeroConstructor)
+	class AItem*                                       _stackExhaustedSuccessorItem;                             // 0x0780(0x0008) (ZeroConstructor, IsPlainOldData)
+	TScriptInterface<class UInventoryContainer>        _parentContainer;                                         // 0x0788(0x0010) (ZeroConstructor, IsPlainOldData)
+	TScriptInterface<class UInventoryNode>             _parentInventoryNode;                                     // 0x0798(0x0010) (ZeroConstructor, IsPlainOldData)
+	bool                                               _canEverBeVirtualized;                                    // 0x07A8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               _hasHighLoadPriorityInVirtualization;                     // 0x07A9(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData22[0x2];                                       // 0x07AA(0x0002) MISSED OFFSET
+	float                                              _virtualizationDistance;                                  // 0x07AC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               _canPlaceItemsOn;                                         // 0x07B0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               _shouldShowStatusWidget;                                  // 0x07B1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               _canBeNamed;                                              // 0x07B2(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData23[0x5];                                       // 0x07B3(0x0005) MISSED OFFSET
+	TWeakObjectPtr<class UItemStatusWidget>            _itemStatusWidget;                                        // 0x07B8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TWeakObjectPtr<class UChangeTextWidget>            _editTextWidget;                                          // 0x07C0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FString                                     _playerGivenName;                                         // 0x07C8(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData24[0x10];                                      // 0x07D8(0x0010) MISSED OFFSET
+	float                                              _preferredDamagePerUpdate;                                // 0x07E8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData25[0x4];                                       // 0x07EC(0x0004) MISSED OFFSET
+	class UInventoryContainer2D*                       _inventoryContainer2D;                                    // 0x07F0(0x0008) (BlueprintVisible, ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -1076,8 +1157,9 @@ public:
 	void StaticMeshChangedDelegate__DelegateSignature(class AItem* Item);
 	void SkeletalMeshChangedDelegate__DelegateSignature(class AItem* Item);
 	void SetWeight(float Value);
+	void SetMaxHealth(float maxHealth);
+	void SetHealth(float health);
 	void SetFuel(float Value);
-	void SetDamage(float Damage);
 	void Server_Throw(const struct FVector& ZeroBasedStartPosition, const struct FRotator& StartRotation, const struct FVector& StartVelocity);
 	void SelectedEvent__DelegateSignature(bool selected);
 	TScriptInterface<class UInventoryNode> RemoveStacks(int stacksToSplit);
@@ -1090,13 +1172,13 @@ public:
 	void OnRep_Stacks();
 	void OnRep_MeshIsSimulatingPhysics();
 	void OnRep_InventoryContainer2D();
+	void OnRep_Health();
 	void OnRep_Examined();
 	void OnRep_DebugText();
-	void OnRep_Damage();
 	void OnProjectileStop(const struct FHitResult& ImpactResult);
 	void OnLocalPrisonerPanelsClosed();
 	void OnLocalPrisonerHoveredActorChanged(class AActor* hoveredActor);
-	void OnEditTextWidgetTextAccepted(class APrisoner* user, const struct FText& Text);
+	void OnEditTextWidgetTextAccepted(class APrisoner* User, const struct FText& Text);
 	void OnDetachedFromItem(class AItem* Item);
 	void OnDestroyedEvent(class AActor* Self);
 	void OnContainedItemDestroyed(class AActor* containedItem);
@@ -1104,13 +1186,11 @@ public:
 	void NetMulticast_SpawnDestroyedEffects();
 	void NetMulticast_SetPlayerGivenName(const struct FString& Value);
 	void NetMulticast_SetActorDropLocationAndRotation(const struct FVector& Location, const struct FRotator& Rotation);
-	bool NeedServerDataUpdate();
 	void Multicast_UpdateExpirationTime(int64_t Time);
 	void Multicast_Throw(const struct FVector& ZeroBasedStartPosition, const struct FRotator& StartRotation, const struct FVector& StartVelocity);
 	void ItemRemovedDelegate__DelegateSignature(class AItem* container, class AItem* Item);
 	void ItemMovedDelegate__DelegateSignature(class AItem* container, class AItem* Item, int column, int row);
 	void ItemAddedDelegate__DelegateSignature(class AItem* container, class AItem* Item, int column, int row);
-	void Interact(class APrisoner* user, EInteractionType InteractionType, const struct FInteractionData& InteractionData);
 	bool HasPriorityForContainerItem(class AItem* containerItem);
 	struct FWidgetDisplayInfo GetWidgetDisplayInfo();
 	float GetWetness();
@@ -1124,19 +1204,20 @@ public:
 	float GetTotalWeight();
 	int GetTotalUses();
 	int GetStacksCount();
-	int GetSlotsCount();
 	int GetSizeY();
 	int GetSizeX();
 	int GetRemainingUses();
 	int GetRemaining();
+	float GetNormalizedHealth();
 	float GetNoiseLoudnessWhenPickedUp();
 	float GetNoiseLoudnessWhenDropped();
 	float GetNoiseLoudnessOnGroundImpact();
 	class UMeshComponent* GetMeshComponent();
-	TArray<struct FInteractionStruct> GetInteractions(class UObject* user, class UObject* creator, const struct FInteractionQueryParameters& params);
+	float GetMaxHealth();
+	float GetHealth();
 	float GetFuel();
+	float GetDefaultMaxHealth();
 	void GetDebugText(struct FText* debugText);
-	float GetDamage(bool recalculate);
 	TArray<class AItem*> GetAllContainedItems(bool recursive);
 	bool DropAt(const struct FVector& dropLocation, const struct FRotator& dropRotation);
 	bool DropAround(class AActor* Actor, float Radius);
@@ -1145,7 +1226,6 @@ public:
 	void DebugTextChangedDelegate__DelegateSignature(class AItem* Item);
 	bool CanStackWith(const TScriptInterface<class UInventoryNode>& Item);
 	bool CanStack();
-	bool CanInteract(class APrisoner* user);
 	bool CanBeDroppedBy(class AConZCharacter* Character);
 	bool CanBeCraftedByCharactrer(class ACharacter* Character);
 	bool CanAutoAddItem(class AItem* Item, unsigned char* column, unsigned char* row);
@@ -1158,15 +1238,15 @@ public:
 
 
 // Class ConZ.AmmunitionItem
-// 0x0018 (0x0830 - 0x0818)
+// 0x0018 (0x0810 - 0x07F8)
 class AAmmunitionItem : public AItem
 {
 public:
-	class UClass*                                      ProjectileClass;                                          // 0x0818(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                MaxAmmoCount;                                             // 0x0820(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                _ammoCount;                                               // 0x0824(0x0004) (Edit, Net, ZeroConstructor, IsPlainOldData)
-	int                                                _ammoCountOwnerHelper;                                    // 0x0828(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x082C(0x0004) MISSED OFFSET
+	class UClass*                                      ProjectileClass;                                          // 0x07F8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                MaxAmmoCount;                                             // 0x0800(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                _ammoCount;                                               // 0x0804(0x0004) (Edit, Net, ZeroConstructor, IsPlainOldData)
+	int                                                _ammoCountOwnerHelper;                                    // 0x0808(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x080C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -1184,17 +1264,17 @@ public:
 
 
 // Class ConZ.AmmunitionArrow
-// 0x0020 (0x0850 - 0x0830)
+// 0x0020 (0x0830 - 0x0810)
 class AAmmunitionArrow : public AAmmunitionItem
 {
 public:
-	bool                                               DestroyOnHit;                                             // 0x0830(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0831(0x0007) MISSED OFFSET
-	class UClass*                                      BrokenArrowClass;                                         // 0x0838(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              _muzzleVelocityMultiplier;                                // 0x0840(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _stiffnessFactor;                                         // 0x0844(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _flightRotationCorrectionSpeed;                           // 0x0848(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _elasticityFactorSpread;                                  // 0x084C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               DestroyOnHit;                                             // 0x0810(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0811(0x0007) MISSED OFFSET
+	class UClass*                                      BrokenArrowClass;                                         // 0x0818(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              _muzzleVelocityMultiplier;                                // 0x0820(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _stiffnessFactor;                                         // 0x0824(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _flightRotationCorrectionSpeed;                           // 0x0828(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _elasticityFactorSpread;                                  // 0x082C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -1206,14 +1286,14 @@ public:
 
 
 // Class ConZ.AmmunitionBoxItem
-// 0x0018 (0x0830 - 0x0818)
+// 0x0018 (0x0810 - 0x07F8)
 class AAmmunitionBoxItem : public AItem
 {
 public:
-	class UClass*                                      AmmunitionItemClass;                                      // 0x0818(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      ItemClassToSpawnWhenUnpacked;                             // 0x0820(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                MaxAmmoCount;                                             // 0x0828(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                _ammoCount;                                               // 0x082C(0x0004) (Edit, Net, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      AmmunitionItemClass;                                      // 0x07F8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      ItemClassToSpawnWhenUnpacked;                             // 0x0800(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                MaxAmmoCount;                                             // 0x0808(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                _ammoCount;                                               // 0x080C(0x0004) (Edit, Net, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -1452,7 +1532,7 @@ public:
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0940(0x0010) MISSED OFFSET
 	EAnimalActivityCycle                               ActivityCycle;                                            // 0x0950(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0951(0x0003) MISSED OFFSET
-	float                                              MaxHealth;                                                // 0x0954(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              maxHealth;                                                // 0x0954(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	class UHitReactComponent*                          HitReactComponent;                                        // 0x0958(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 	struct FGameplayTag                                HitReactType;                                             // 0x0960(0x0008) (Edit, BlueprintVisible)
 	struct FName                                       EyesViewPointSocketName;                                  // 0x0968(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
@@ -2588,7 +2668,7 @@ public:
 
 
 // Class ConZ.BaseBuildingComponent
-// 0x00D0 (0x06C0 - 0x05F0)
+// 0x00E0 (0x06D0 - 0x05F0)
 class UBaseBuildingComponent : public UStaticMeshComponent
 {
 public:
@@ -2602,34 +2682,37 @@ public:
 	bool                                               _canBePlacedOnOtherBaseElements;                          // 0x0606(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               _canBePlacedWithoutSnapping;                              // 0x0607(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               _shouldIgnoreSelfWhilePlacing;                            // 0x0608(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      _maxHeightLevel;                                          // 0x0609(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x060A(0x0002) MISSED OFFSET
+	bool                                               _canBeGroundedOnOtherElements;                            // 0x0609(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      _maxHeightLevel;                                          // 0x060A(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x1];                                       // 0x060B(0x0001) MISSED OFFSET
 	float                                              _maxHeightOffsetWhilePlacing;                             // 0x060C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               _addRandomRotation;                                       // 0x0610(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               _shouldDestroyElementsOnTopWhenDestroyed;                 // 0x0611(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FConZBaseBuildingSnappingData               _snappingData;                                            // 0x0612(0x0006) (Edit)
-	TArray<struct FBaseElementSnapMarker>              _snapMarkers;                                             // 0x0618(0x0010) (Edit, ZeroConstructor)
-	struct FRotator                                    _maxRotationWhilePlacing;                                 // 0x0628(0x000C) (Edit, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0634(0x0004) MISSED OFFSET
-	TArray<class UStaticMesh*>                         _staticMeshVariations;                                    // 0x0638(0x0010) (Edit, ZeroConstructor)
-	class UChoppingRecipeDataAsset*                    _choppingRecipeAsset;                                     // 0x0648(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _destructionTime;                                         // 0x0650(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _repairTime;                                              // 0x0654(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _healthPoints;                                            // 0x0658(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _decayPerHour;                                            // 0x065C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _walkingDamagePerSecond;                                  // 0x0660(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _radialDamageMultiplier;                                  // 0x0664(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               _shouldRemoveIntersectingElementsOnDestroy;               // 0x0668(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x7];                                       // 0x0669(0x0007) MISSED OFFSET
-	TArray<class UParticleSystem*>                     _destructionParticles;                                    // 0x0670(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FTransform>                          _destructionParticlesSpawnTransforms;                     // 0x0680(0x0010) (Edit, ZeroConstructor)
-	class UAkAudioEvent*                               _destructionSound;                                        // 0x0690(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               _isDoor;                                                  // 0x0698(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x0699(0x0007) MISSED OFFSET
-	class UClass*                                      _doorClass;                                               // 0x06A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               _hasLadder;                                               // 0x06A8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x7];                                       // 0x06A9(0x0007) MISSED OFFSET
-	TArray<struct FLadderMarker>                       _ladderMarkers;                                           // 0x06B0(0x0010) (Edit, ZeroConstructor)
+	unsigned char                                      UnknownData02[0x2];                                       // 0x0612(0x0002) MISSED OFFSET
+	struct FConZBaseBuildingSnappingData               _snappingData;                                            // 0x0614(0x0010) (Edit)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x0624(0x0004) MISSED OFFSET
+	TArray<struct FBaseElementSnapMarker>              _snapMarkers;                                             // 0x0628(0x0010) (Edit, ZeroConstructor)
+	struct FRotator                                    _maxRotationWhilePlacing;                                 // 0x0638(0x000C) (Edit, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x0644(0x0004) MISSED OFFSET
+	TArray<class UStaticMesh*>                         _staticMeshVariations;                                    // 0x0648(0x0010) (Edit, ZeroConstructor)
+	class UChoppingRecipeDataAsset*                    _choppingRecipeAsset;                                     // 0x0658(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _destructionTime;                                         // 0x0660(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _repairTime;                                              // 0x0664(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _healthPoints;                                            // 0x0668(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _decayPerHour;                                            // 0x066C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _walkingDamagePerSecond;                                  // 0x0670(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _radialDamageMultiplier;                                  // 0x0674(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               _shouldRemoveIntersectingElementsOnDestroy;               // 0x0678(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x7];                                       // 0x0679(0x0007) MISSED OFFSET
+	TArray<class UParticleSystem*>                     _destructionParticles;                                    // 0x0680(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FTransform>                          _destructionParticlesSpawnTransforms;                     // 0x0690(0x0010) (Edit, ZeroConstructor)
+	class UAkAudioEvent*                               _destructionSound;                                        // 0x06A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               _isDoor;                                                  // 0x06A8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x7];                                       // 0x06A9(0x0007) MISSED OFFSET
+	class UClass*                                      _doorClass;                                               // 0x06B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               _hasLadder;                                               // 0x06B8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData07[0x7];                                       // 0x06B9(0x0007) MISSED OFFSET
+	TArray<struct FLadderMarker>                       _ladderMarkers;                                           // 0x06C0(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -2669,8 +2752,8 @@ public:
 	void OnDragEnterEvent(class UInventorySlotUserWidget* inventorySlot, class UBaseItemWidget* Widget);
 	void OnDragCancelledEvent(class UBaseItemWidget* Widget);
 	void InitGrid(const struct FMargin& gridPadding);
-	bool GetSlotsForPanel(class UGridSlot* GridSlot, int Width, int Height, class UGridPanel* panel, int numColumns, int numRows, TArray<class UInventorySlotUserWidget*>* Slots);
-	bool GetSlots(class UGridSlot* GridSlot, int Width, int Height, TArray<class UInventorySlotUserWidget*>* Slots);
+	bool GetSlotsForPanel(class UGridSlot* GridSlot, int Width, int Height, class UGridPanel* panel, int numColumns, int numRows, TArray<class UInventorySlotUserWidget*>* slots);
+	bool GetSlots(class UGridSlot* GridSlot, int Width, int Height, TArray<class UInventorySlotUserWidget*>* slots);
 	TArray<class UItemUserWidget*> GetItemWidgets();
 };
 
@@ -2790,22 +2873,22 @@ public:
 
 
 // Class ConZ.BinocularsItem
-// 0x0060 (0x0878 - 0x0818)
+// 0x0060 (0x0858 - 0x07F8)
 class ABinocularsItem : public AItem
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0818(0x0008) MISSED OFFSET
-	TArray<struct FScopeZoomLevelSettings>             _zoomLevelSettings;                                       // 0x0820(0x0010) (Edit, ZeroConstructor)
-	class UTexture2D*                                  _scopingOverlayTexture;                                   // 0x0830(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                _montageStandingFP;                                       // 0x0838(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                _montageCrouchingFP;                                      // 0x0840(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                _montageProneFP;                                          // 0x0848(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                _montageStandingTP;                                       // 0x0850(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                _montageCrouchingTP;                                      // 0x0858(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                _montageProneTP;                                          // 0x0860(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _scopingStartDelay;                                       // 0x0868(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _scopingStopDelay;                                        // 0x086C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0870(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x07F8(0x0008) MISSED OFFSET
+	TArray<struct FScopeZoomLevelSettings>             _zoomLevelSettings;                                       // 0x0800(0x0010) (Edit, ZeroConstructor)
+	class UTexture2D*                                  _scopingOverlayTexture;                                   // 0x0810(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                _montageStandingFP;                                       // 0x0818(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                _montageCrouchingFP;                                      // 0x0820(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                _montageProneFP;                                          // 0x0828(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                _montageStandingTP;                                       // 0x0830(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                _montageCrouchingTP;                                      // 0x0838(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                _montageProneTP;                                          // 0x0840(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _scopingStartDelay;                                       // 0x0848(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _scopingStopDelay;                                        // 0x084C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0850(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3193,12 +3276,12 @@ public:
 
 
 // Class ConZ.WeaponAttachment
-// 0x0010 (0x0828 - 0x0818)
+// 0x0010 (0x0808 - 0x07F8)
 class AWeaponAttachment : public AItem
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0818(0x0008) MISSED OFFSET
-	class UStaticMesh*                                 _staticMeshWhenAttached;                                  // 0x0820(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x07F8(0x0008) MISSED OFFSET
+	class UStaticMesh*                                 _staticMeshWhenAttached;                                  // 0x0800(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -3215,12 +3298,12 @@ public:
 
 
 // Class ConZ.BowAttachmentSilencer
-// 0x0008 (0x0830 - 0x0828)
+// 0x0008 (0x0810 - 0x0808)
 class ABowAttachmentSilencer : public AWeaponAttachment
 {
 public:
-	float                                              _noiseMultiplier;                                         // 0x0828(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x082C(0x0004) MISSED OFFSET
+	float                                              _noiseMultiplier;                                         // 0x0808(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x080C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3232,12 +3315,12 @@ public:
 
 
 // Class ConZ.BowAttachmentStabilizer
-// 0x0008 (0x0838 - 0x0830)
+// 0x0008 (0x0818 - 0x0810)
 class ABowAttachmentStabilizer : public ABowAttachmentSilencer
 {
 public:
-	float                                              _shakinessModifier;                                       // 0x0830(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0834(0x0004) MISSED OFFSET
+	float                                              _shakinessModifier;                                       // 0x0810(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0814(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3325,7 +3408,7 @@ public:
 
 
 // Class ConZ.BrokenArrow
-// 0x0000 (0x0818 - 0x0818)
+// 0x0000 (0x07F8 - 0x07F8)
 class ABrokenArrow : public AItem
 {
 public:
@@ -3753,12 +3836,14 @@ public:
 
 
 // Class ConZ.WorldEvent
-// 0x0018 (0x0340 - 0x0328)
+// 0x0028 (0x0350 - 0x0328)
 class AWorldEvent : public AActor
 {
 public:
-	class UTexture*                                    IconTexture;                                              // 0x0328(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0330(0x0010) MISSED OFFSET
+	struct FVector                                     Location;                                                 // 0x0328(0x000C) (Net, IsPlainOldData)
+	float                                              Radius;                                                   // 0x0334(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	class UTexture*                                    IconTexture;                                              // 0x0338(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0340(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3773,13 +3858,11 @@ public:
 
 
 // Class ConZ.CargoDropEvent
-// 0x0028 (0x0368 - 0x0340)
+// 0x0018 (0x0368 - 0x0350)
 class ACargoDropEvent : public AWorldEvent
 {
 public:
-	TArray<class UClass*>                              CargoDropClasses;                                         // 0x0340(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FVector                                     Location;                                                 // 0x0350(0x000C) (Net, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x035C(0x0004) MISSED OFFSET
+	TArray<class UClass*>                              CargoDropClasses;                                         // 0x0350(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	class APlayerStart*                                ForcePlayerStart;                                         // 0x0360(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
@@ -3809,25 +3892,25 @@ public:
 
 
 // Class ConZ.WeaponItem
-// 0x0048 (0x0860 - 0x0818)
+// 0x0048 (0x0840 - 0x07F8)
 class AWeaponItem : public AItem
 {
 public:
-	uint32_t                                           SizeXInHands;                                             // 0x0818(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	uint32_t                                           SizeYInHands;                                             // 0x081C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	uint32_t                                           MinRange;                                                 // 0x0820(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	uint32_t                                           MaxRange;                                                 // 0x0824(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	uint32_t                                           MinDamage;                                                // 0x0828(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	uint32_t                                           MaxDamage;                                                // 0x082C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	uint32_t                                           AP;                                                       // 0x0830(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	uint32_t                                           MagazineSize;                                             // 0x0834(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	uint32_t                                           FireModes;                                                // 0x0838(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	uint32_t                                           ROF;                                                      // 0x083C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	uint32_t                                           ReloadTime;                                               // 0x0840(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0844(0x0004) MISSED OFFSET
-	class UWeaponAccuracyGroup*                        AccuracyGroup;                                            // 0x0848(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWeaponDamageGroup*                          DamageGroup;                                              // 0x0850(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWeaponRecoilGroup*                          RecoilGroup;                                              // 0x0858(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	uint32_t                                           SizeXInHands;                                             // 0x07F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	uint32_t                                           SizeYInHands;                                             // 0x07FC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	uint32_t                                           MinRange;                                                 // 0x0800(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	uint32_t                                           MaxRange;                                                 // 0x0804(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	uint32_t                                           MinDamage;                                                // 0x0808(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	uint32_t                                           MaxDamage;                                                // 0x080C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	uint32_t                                           AP;                                                       // 0x0810(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	uint32_t                                           MagazineSize;                                             // 0x0814(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	uint32_t                                           FireModes;                                                // 0x0818(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	uint32_t                                           ROF;                                                      // 0x081C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	uint32_t                                           ReloadTime;                                               // 0x0820(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0824(0x0004) MISSED OFFSET
+	class UWeaponAccuracyGroup*                        AccuracyGroup;                                            // 0x0828(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWeaponDamageGroup*                          DamageGroup;                                              // 0x0830(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWeaponRecoilGroup*                          RecoilGroup;                                              // 0x0838(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -3839,137 +3922,141 @@ public:
 
 
 // Class ConZ.Weapon
-// 0x0A40 (0x12A0 - 0x0860)
+// 0x0A50 (0x1290 - 0x0840)
 class AWeapon : public AWeaponItem
 {
 public:
-	struct FScriptMulticastDelegate                    AttachmentAdded;                                          // 0x0860(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    AttachmentRemoved;                                        // 0x0870(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	class USkeletalMeshComponent*                      SkeletalMesh;                                             // 0x0880(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	EWeaponFiringStateType                             WeaponFiringStateType;                                    // 0x0888(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0889(0x0007) MISSED OFFSET
-	class UWeaponStateFiring*                          TempWeaponStateFiringAutomatic;                           // 0x0890(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWeaponStateFiring*                          TempWeaponStateFiringSemiAutomatic;                       // 0x0898(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWeaponStateFiring*                          TempWeaponStateFiringManual;                              // 0x08A0(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWeaponStateFiring*                          FiringState;                                              // 0x08A8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TArray<class UClass*>                              ReloadActionSequenceClasses;                              // 0x08B0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UWeaponActionReloadSequence*>         ReloadActionSequences;                                    // 0x08C0(0x0010) (ExportObject, ZeroConstructor)
-	class UClass*                                      ProjectileClass;                                          // 0x08D0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      DefaultAmmoClass;                                         // 0x08D8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                RequiredAmmoForShot;                                      // 0x08E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                MaxLoadedAmmo;                                            // 0x08E4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                InitialAmmo;                                              // 0x08E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                InternalMagazineCapacity;                                 // 0x08EC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               IgnoreProceduralDownTheSightFiringAnimation;              // 0x08F0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x08F1(0x0007) MISSED OFFSET
-	class UAnimMontage*                                FireAnimation;                                            // 0x08F8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                FireAnimationLastRound;                                   // 0x0900(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                FireAnimationBody;                                        // 0x0908(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                FirstPersonFireAnimationBody;                             // 0x0910(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                FireAutomaticAnimationBody;                               // 0x0918(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TMap<class UClass*, struct FWeaponAttachmentAnimations> AttachmentsAnimations;                                    // 0x0920(0x0050) (Edit, ZeroConstructor)
-	struct FName                                       MuzzleSocketName;                                         // 0x0970(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FName                                       GripCorrectionSocketName;                                 // 0x0978(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FName                                       AimingDownTheSightsCenterSocketName;                      // 0x0980(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FName                                       EjectCasingSocketName;                                    // 0x0988(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               IgnoreSupportingHandIK;                                   // 0x0990(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x0991(0x0007) MISSED OFFSET
-	struct FName                                       SupportingHandIKSocketName;                               // 0x0998(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     SupportingHandIKLocation;                                 // 0x09A0(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FVector                                     AimingDownTheSightsLocationOffset;                        // 0x09AC(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FVector                                     HolsteredOnPrisonerLocationOffset;                        // 0x09B8(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FRotator                                    HolsteredOnPrisonerRotationOffset;                        // 0x09C4(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	bool                                               IgnoreZeroRangeChange;                                    // 0x09D0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x09D1(0x0003) MISSED OFFSET
-	int                                                zeroRange;                                                // 0x09D4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                ZeroRangeStep;                                            // 0x09D8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                ZeroRangeMax;                                             // 0x09DC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class UProjectileImpactEffects*                    InstantHitImpactEffects;                                  // 0x09E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              FieldOfView;                                              // 0x09E8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DepthOfFieldFocalDistance;                                // 0x09EC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ObstaclesDetectionOffset;                                 // 0x09F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0xC];                                       // 0x09F4(0x000C) MISSED OFFSET
-	struct FPostProcessSettings                        PostProcessSettings;                                      // 0x0A00(0x0520) (Edit)
-	class UAnimSequenceBase*                           RelaxedGripCorrectionAnimationPose[0x4];                  // 0x0F20(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimSequenceBase*                           AimingHipAnimationPose[0x4];                              // 0x0F40(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimSequenceBase*                           AimingDownTheSightsAnimationPose[0x4];                    // 0x0F60(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimSequenceBase*                           AimingDownTheSightsStillAnimationPose[0x4];               // 0x0F80(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimSequenceBase*                           AimingDownTheSightsWalkingAnimationPose[0x4];             // 0x0FA0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimSequenceBase*                           FirstPersonUpperBodyStandIdleAnimation;                   // 0x0FC0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAnimSequenceBase*                           FirstPersonUpperBodyStandWalkAnimation;                   // 0x0FC8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBlendSpace1D*                               FirstPersonUpperBodyStandWalkBlendSpace;                  // 0x0FD0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAnimSequenceBase*                           FirstPersonUpperBodyStandJogAnimation;                    // 0x0FD8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBlendSpace1D*                               FirstPersonUpperBodyStandJogBlendSpace;                   // 0x0FE0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAnimSequenceBase*                           FirstPersonUpperBodyStandRunAnimation;                    // 0x0FE8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAnimSequenceBase*                           FirstPersonUpperBodyCrouchIdleAnimation;                  // 0x0FF0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAnimSequenceBase*                           FirstPersonUpperBodyCrouchWalkAnimation;                  // 0x0FF8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBlendSpace1D*                               FirstPersonUpperBodyCrouchWalkBlendSpace;                 // 0x1000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAnimSequenceBase*                           FirstPersonUpperBodyProneIdleAnimation;                   // 0x1008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBlendSpace*                                 WeaponAimOffsets[0x7];                                    // 0x1010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	EWeaponCategory                                    WeaponCategory;                                           // 0x1048(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               IgnoreAimingSpread;                                       // 0x1049(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               UseCustomWeaponSpreadData;                                // 0x104A(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x1];                                       // 0x104B(0x0001) MISSED OFFSET
-	struct FWeaponSpreadData                           WeaponSpreadData;                                         // 0x104C(0x0040) (Edit)
-	bool                                               UseCustomWeaponViewKickData;                              // 0x108C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x3];                                       // 0x108D(0x0003) MISSED OFFSET
-	struct FWeaponViewKickData                         WeaponViewKickData;                                       // 0x1090(0x0018) (Edit)
-	float                                              ViewKickMultiplier;                                       // 0x10A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxRecoilOffset;                                          // 0x10AC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              RecoilRecoverySpeed;                                      // 0x10B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MuzzleEffectsScaleDistanceStart;                          // 0x10B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MuzzleEffectsScaleDistanceRange;                          // 0x10B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MuzzleEffectsScaleByDistanceFactor;                       // 0x10BC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ChamberBulletDelay;                                       // 0x10C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               ChamberBulletAutomatically;                               // 0x10C4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               TestWeapon;                                               // 0x10C5(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x2];                                       // 0x10C6(0x0002) MISSED OFFSET
-	class UWeaponState*                                _currentState;                                            // 0x10C8(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWeaponState*                                _activeState;                                             // 0x10D0(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWeaponStateEquipping*                       _equippingState;                                          // 0x10D8(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWeaponState*                                _unequippingStateDefault;                                 // 0x10E0(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWeaponState*                                _unequippingState;                                        // 0x10E8(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWeaponState*                                _inactiveState;                                           // 0x10F0(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWeaponState*                                _chamberBulletState;                                      // 0x10F8(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWeaponStateReload*                          _reloadState2;                                            // 0x1100(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UParticleSystem*                             _muzzlePS;                                                // 0x1108(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UParticleSystem*                             _suppressorMuzzlePS;                                      // 0x1110(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    _muzzlePSC;                                               // 0x1118(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class UParticleSystem*                             _smokeAfterShotFiredPS;                                   // 0x1120(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    _smokeAfterShotFiredPSC;                                  // 0x1128(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class UParticleSystem*                             _ejectCasingPS;                                           // 0x1130(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               _fireSingleShotAudioEvent;                                // 0x1138(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               _startAutoFireAudioEvent;                                 // 0x1140(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               _stopAutoFireAudioEvent;                                  // 0x1148(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               _suppressorFireSingleShotAudioEvent;                      // 0x1150(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               _suppressorStartAutoFireAudioEvent;                       // 0x1158(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               _suppressorStopAutoFireAudioEvent;                        // 0x1160(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               _improvisedSuppressorFireSingleShotAudioEvent;            // 0x1168(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               _improvisedSuppressorStartAutoFireAudioEvent;             // 0x1170(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               _improvisedSuppressorStopAutoFireAudioEvent;              // 0x1178(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               _noAmmoAudioEvent;                                        // 0x1180(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               _zeroRangeClickAudioEvent;                                // 0x1188(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               _changeFiringModeAudioEvent;                              // 0x1190(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class APrisoner*                                   _weaponOwner;                                             // 0x1198(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	int                                                _loadedAmmoCount;                                         // 0x11A0(0x0004) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x2];                                       // 0x11A4(0x0002) MISSED OFFSET
-	bool                                               _shouldOverrideUseMuzzleDirectionForShooting;             // 0x11A6(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               _useMuzzleDirectionForShootingOverride;                   // 0x11A7(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	TWeakObjectPtr<class AActor>                       _projectileTargetLocationOverride;                        // 0x11A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData09[0x68];                                      // 0x11B0(0x0068) MISSED OFFSET
-	EWeaponFiringMode                                  _firingMode;                                              // 0x1218(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData10[0x17];                                      // 0x1219(0x0017) MISSED OFFSET
-	TArray<class AWeaponAttachment*>                   _weaponAttachmentsReplicated;                             // 0x1230(0x0010) (Net, ZeroConstructor)
-	unsigned char                                      UnknownData11[0x18];                                      // 0x1240(0x0018) MISSED OFFSET
-	int                                                _internalMagazineAmmoCount;                               // 0x1258(0x0004) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData12[0x5];                                       // 0x125C(0x0005) MISSED OFFSET
-	bool                                               _shouldPlayChamberOpenedIdle;                             // 0x1261(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData13[0xF];                                       // 0x1262(0x000F) MISSED OFFSET
-	bool                                               _isInGameEvent;                                           // 0x1271(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData14[0x6];                                       // 0x1272(0x0006) MISSED OFFSET
-	class UAkAudioEvent*                               _switchADSStateAudioEvent;                                // 0x1278(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _makeNoiseLoudness;                                       // 0x1280(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData15[0x1C];                                      // 0x1284(0x001C) MISSED OFFSET
+	struct FScriptMulticastDelegate                    AttachmentAdded;                                          // 0x0840(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    AttachmentRemoved;                                        // 0x0850(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	class USkeletalMeshComponent*                      SkeletalMesh;                                             // 0x0860(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	EWeaponFiringStateType                             WeaponFiringStateType;                                    // 0x0868(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0869(0x0007) MISSED OFFSET
+	class UWeaponStateFiring*                          TempWeaponStateFiringAutomatic;                           // 0x0870(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWeaponStateFiring*                          TempWeaponStateFiringSemiAutomatic;                       // 0x0878(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWeaponStateFiring*                          TempWeaponStateFiringManual;                              // 0x0880(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWeaponStateFiring*                          FiringState;                                              // 0x0888(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TArray<class UClass*>                              ReloadActionSequenceClasses;                              // 0x0890(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UWeaponActionReloadSequence*>         ReloadActionSequences;                                    // 0x08A0(0x0010) (ExportObject, ZeroConstructor)
+	class UClass*                                      ProjectileClass;                                          // 0x08B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      DefaultAmmoClass;                                         // 0x08B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                RequiredAmmoForShot;                                      // 0x08C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                MaxLoadedAmmo;                                            // 0x08C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                InitialAmmo;                                              // 0x08C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                InternalMagazineCapacity;                                 // 0x08CC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               IgnoreProceduralDownTheSightFiringAnimation;              // 0x08D0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x08D1(0x0007) MISSED OFFSET
+	class UAnimMontage*                                FireAnimation;                                            // 0x08D8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                FireAnimationLastRound;                                   // 0x08E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                FireAnimationBody;                                        // 0x08E8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                FirstPersonFireAnimationBody;                             // 0x08F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                FireAutomaticAnimationBody;                               // 0x08F8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                CheckFiringModeAnimationBody;                             // 0x0900(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TMap<class UClass*, struct FWeaponAttachmentAnimations> AttachmentsAnimations;                                    // 0x0908(0x0050) (Edit, ZeroConstructor)
+	struct FName                                       MuzzleSocketName;                                         // 0x0958(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FName                                       GripCorrectionSocketName;                                 // 0x0960(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FName                                       AimingDownTheSightsCenterSocketName;                      // 0x0968(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FName                                       EjectCasingSocketName;                                    // 0x0970(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               IgnoreSupportingHandIK;                                   // 0x0978(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x0979(0x0007) MISSED OFFSET
+	struct FName                                       SupportingHandIKSocketName;                               // 0x0980(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     SupportingHandIKLocation;                                 // 0x0988(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FVector                                     AimingDownTheSightsLocationOffset;                        // 0x0994(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FVector                                     HolsteredOnPrisonerLocationOffset;                        // 0x09A0(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FRotator                                    HolsteredOnPrisonerRotationOffset;                        // 0x09AC(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	bool                                               IgnoreZeroRangeChange;                                    // 0x09B8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x09B9(0x0003) MISSED OFFSET
+	int                                                zeroRange;                                                // 0x09BC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                ZeroRangeStep;                                            // 0x09C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                ZeroRangeMax;                                             // 0x09C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UProjectileImpactEffects*                    InstantHitImpactEffects;                                  // 0x09C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FieldOfView;                                              // 0x09D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DepthOfFieldFocalDistance;                                // 0x09D4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ObstaclesDetectionOffset;                                 // 0x09D8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x09DC(0x0004) MISSED OFFSET
+	struct FPostProcessSettings                        PostProcessSettings;                                      // 0x09E0(0x0520) (Edit)
+	class UAnimSequenceBase*                           RelaxedGripCorrectionAnimationPose[0x4];                  // 0x0F00(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimSequenceBase*                           AimingHipAnimationPose[0x4];                              // 0x0F20(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimSequenceBase*                           AimingDownTheSightsAnimationPose[0x4];                    // 0x0F40(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimSequenceBase*                           AimingDownTheSightsStillAnimationPose[0x4];               // 0x0F60(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimSequenceBase*                           AimingDownTheSightsWalkingAnimationPose[0x4];             // 0x0F80(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimSequenceBase*                           FirstPersonUpperBodyStandIdleAnimation;                   // 0x0FA0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimSequenceBase*                           FirstPersonUpperBodyStandWalkAnimation;                   // 0x0FA8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBlendSpace1D*                               FirstPersonUpperBodyStandWalkBlendSpace;                  // 0x0FB0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimSequenceBase*                           FirstPersonUpperBodyStandJogAnimation;                    // 0x0FB8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBlendSpace1D*                               FirstPersonUpperBodyStandJogBlendSpace;                   // 0x0FC0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimSequenceBase*                           FirstPersonUpperBodyStandRunAnimation;                    // 0x0FC8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimSequenceBase*                           FirstPersonUpperBodyCrouchIdleAnimation;                  // 0x0FD0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimSequenceBase*                           FirstPersonUpperBodyCrouchWalkAnimation;                  // 0x0FD8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBlendSpace1D*                               FirstPersonUpperBodyCrouchWalkBlendSpace;                 // 0x0FE0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimSequenceBase*                           FirstPersonUpperBodyProneIdleAnimation;                   // 0x0FE8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBlendSpace*                                 WeaponAimOffsets[0x7];                                    // 0x0FF0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	EWeaponCategory                                    WeaponCategory;                                           // 0x1028(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               IgnoreAimingSpread;                                       // 0x1029(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               UseCustomWeaponSpreadData;                                // 0x102A(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x1];                                       // 0x102B(0x0001) MISSED OFFSET
+	struct FWeaponSpreadData                           WeaponSpreadData;                                         // 0x102C(0x0040) (Edit)
+	bool                                               UseCustomWeaponViewKickData;                              // 0x106C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x3];                                       // 0x106D(0x0003) MISSED OFFSET
+	struct FWeaponViewKickData                         WeaponViewKickData;                                       // 0x1070(0x0018) (Edit)
+	float                                              ViewKickMultiplier;                                       // 0x1088(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxRecoilOffset;                                          // 0x108C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              RecoilRecoverySpeed;                                      // 0x1090(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MuzzleEffectsScaleDistanceStart;                          // 0x1094(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MuzzleEffectsScaleDistanceRange;                          // 0x1098(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MuzzleEffectsScaleByDistanceFactor;                       // 0x109C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ChamberBulletDelay;                                       // 0x10A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               ChamberBulletAutomatically;                               // 0x10A4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               TestWeapon;                                               // 0x10A5(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData07[0x2];                                       // 0x10A6(0x0002) MISSED OFFSET
+	class UWeaponState*                                _currentState;                                            // 0x10A8(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWeaponState*                                _activeState;                                             // 0x10B0(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWeaponStateEquipping*                       _equippingState;                                          // 0x10B8(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWeaponState*                                _unequippingStateDefault;                                 // 0x10C0(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWeaponState*                                _unequippingState;                                        // 0x10C8(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWeaponState*                                _inactiveState;                                           // 0x10D0(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWeaponState*                                _chamberBulletState;                                      // 0x10D8(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWeaponStateReload*                          _reloadState2;                                            // 0x10E0(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UParticleSystem*                             _muzzlePS;                                                // 0x10E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UParticleSystem*                             _suppressorMuzzlePS;                                      // 0x10F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    _muzzlePSC;                                               // 0x10F8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class UParticleSystem*                             _smokeAfterShotFiredPS;                                   // 0x1100(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    _smokeAfterShotFiredPSC;                                  // 0x1108(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class UParticleSystem*                             _ejectCasingPS;                                           // 0x1110(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               _fireSingleShotAudioEvent;                                // 0x1118(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               _startAutoFireAudioEvent;                                 // 0x1120(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               _stopAutoFireAudioEvent;                                  // 0x1128(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               _suppressorFireSingleShotAudioEvent;                      // 0x1130(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               _suppressorStartAutoFireAudioEvent;                       // 0x1138(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               _suppressorStopAutoFireAudioEvent;                        // 0x1140(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               _improvisedSuppressorFireSingleShotAudioEvent;            // 0x1148(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               _improvisedSuppressorStartAutoFireAudioEvent;             // 0x1150(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               _improvisedSuppressorStopAutoFireAudioEvent;              // 0x1158(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               _noAmmoAudioEvent;                                        // 0x1160(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               _zeroRangeClickAudioEvent;                                // 0x1168(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               _changeFiringModeAudioEvent;                              // 0x1170(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class APrisoner*                                   _weaponOwner;                                             // 0x1178(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	int                                                _loadedAmmoCount;                                         // 0x1180(0x0004) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x2];                                       // 0x1184(0x0002) MISSED OFFSET
+	bool                                               _shouldOverrideUseMuzzleDirectionForShooting;             // 0x1186(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               _useMuzzleDirectionForShootingOverride;                   // 0x1187(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	TWeakObjectPtr<class AActor>                       _projectileTargetLocationOverride;                        // 0x1188(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x68];                                      // 0x1190(0x0068) MISSED OFFSET
+	EWeaponFiringMode                                  _firingMode;                                              // 0x11F8(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData10[0x17];                                      // 0x11F9(0x0017) MISSED OFFSET
+	TArray<class AWeaponAttachment*>                   _weaponAttachmentsReplicated;                             // 0x1210(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData11[0x18];                                      // 0x1220(0x0018) MISSED OFFSET
+	int                                                _internalMagazineAmmoCount;                               // 0x1238(0x0004) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData12[0x5];                                       // 0x123C(0x0005) MISSED OFFSET
+	bool                                               _shouldPlayChamberOpenedIdle;                             // 0x1241(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData13[0xF];                                       // 0x1242(0x000F) MISSED OFFSET
+	bool                                               _isInGameEvent;                                           // 0x1251(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData14[0x6];                                       // 0x1252(0x0006) MISSED OFFSET
+	class UAkAudioEvent*                               _switchADSStateAudioEvent;                                // 0x1258(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _makeNoiseLoudness;                                       // 0x1260(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData15[0x20];                                      // 0x1264(0x0020) MISSED OFFSET
+	float                                              _staminaDrainMultiplier;                                  // 0x1284(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	EPrisonerTempCategory                              _staminaDrainCategory;                                    // 0x1288(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData16[0x7];                                       // 0x1289(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -4035,6 +4122,7 @@ public:
 	int GetInternalMagazineSpace();
 	int GetInternalMagazineAmmoCount();
 	bool GetIgnoreSupportingHandIK();
+	class UAnimMontage* GetFiringMontage(bool isLastShot);
 	EWeaponFiringMode GetFiringMode();
 	int GetAmmoReloadCapacity(class AAmmunitionItem* ammo);
 	int GetAmmoCount();
@@ -4075,6 +4163,7 @@ public:
 	void RemoveAttachmentFromWeapon(class AWeapon* Weapon, class AWeaponAttachment* Attachment);
 	void OnActionAnimNotify(ECharacterActionNotifyType notifyType);
 	void InsertCartridgeIntoWeapon(class AWeapon* Weapon, class AAmmunitionItem* ammo);
+	void InsertCartridgeIntoMagazine(class AWeaponAttachmentMagazine* magazine, class AAmmunitionItem* ammo);
 	class AWeapon* GetWeapon();
 	void AddAttachmentToWeapon(class AWeapon* Weapon, class AWeaponAttachment* Attachment);
 };
@@ -4177,7 +4266,7 @@ public:
 	}
 
 
-	void TextAcceptedEvent__DelegateSignature(class APrisoner* user, const struct FText& Text);
+	void TextAcceptedEvent__DelegateSignature(class APrisoner* User, const struct FText& Text);
 	void SetMaxNumberOfCharacters(int Value);
 	void SetCurrentInputText_BP(const struct FText& Text);
 	void OnTextAccepted();
@@ -4327,7 +4416,7 @@ public:
 	}
 
 
-	void DeleteCharacter(class UDbUserProfile* userProfile);
+	void DeleteCharacter(class UUserProfile* UserProfile);
 };
 
 
@@ -4405,7 +4494,7 @@ public:
 
 
 // Class ConZ.ChatWidget
-// 0x00B0 (0x02D0 - 0x0220)
+// 0x00C0 (0x02E0 - 0x0220)
 class UChatWidget : public UDesignableUserWidget
 {
 public:
@@ -4417,11 +4506,12 @@ public:
 	struct FLinearColor                                _localChatColor;                                          // 0x0248(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
 	struct FLinearColor                                _globalChatColor;                                         // 0x0258(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
 	struct FLinearColor                                _serverChatColor;                                         // 0x0268(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	struct FLinearColor                                _defaultChatColor;                                        // 0x0278(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	struct FLinearColor                                _suggestionsTextColor;                                    // 0x0288(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0298(0x0008) MISSED OFFSET
-	class UAdminCommandCompletionManager*              _adminCommandCompletionManager;                           // 0x02A0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x28];                                      // 0x02A8(0x0028) MISSED OFFSET
+	struct FLinearColor                                _errorChatColor;                                          // 0x0278(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	struct FLinearColor                                _defaultChatColor;                                        // 0x0288(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	struct FLinearColor                                _suggestionsTextColor;                                    // 0x0298(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02A8(0x0008) MISSED OFFSET
+	class UAdminCommandCompletionManager*              _adminCommandCompletionManager;                           // 0x02B0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x28];                                      // 0x02B8(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -4489,15 +4579,17 @@ public:
 
 
 // Class ConZ.ChestItem
-// 0x0030 (0x0848 - 0x0818)
+// 0x0038 (0x0830 - 0x07F8)
 class AChestItem : public AItem
 {
 public:
-	int                                                _capacityX;                                               // 0x0818(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                _capacityY;                                               // 0x081C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0820(0x0018) MISSED OFFSET
-	int64_t                                            _decayInDays;                                             // 0x0838(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      _decayedChestClass;                                       // 0x0840(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                _capacityX;                                               // 0x07F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                _capacityY;                                               // 0x07FC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0800(0x0018) MISSED OFFSET
+	int64_t                                            _decayInDays;                                             // 0x0818(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      _decayedChestClass;                                       // 0x0820(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               _canContainChestItem;                                     // 0x0828(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0829(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -4846,51 +4938,51 @@ public:
 
 
 // Class ConZ.ClothesItem
-// 0x00B8 (0x08D0 - 0x0818)
+// 0x00B8 (0x08B0 - 0x07F8)
 class AClothesItem : public AItem
 {
 public:
-	class UStaticMesh*                                 FemaleEquippedStaticMesh;                                 // 0x0818(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UStaticMesh*                                 MaleEquippedStaticMesh;                                   // 0x0820(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class USkeletalMesh*                               FemaleEquippedSkeletalMesh;                               // 0x0828(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class USkeletalMesh*                               MaleEquippedSkeletalMesh;                                 // 0x0830(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<class UMaterialInstance*>                   FemaleEquippedMaterialsOverride;                          // 0x0838(0x0010) (Edit, ZeroConstructor)
-	TArray<class UMaterialInstance*>                   MaleEquippedMaterialsOverride;                            // 0x0848(0x0010) (Edit, ZeroConstructor)
-	EClothesType                                       ClothesType;                                              // 0x0858(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      EquipmentLayer;                                           // 0x0859(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x085A(0x0002) MISSED OFFSET
-	uint32_t                                           Warmth;                                                   // 0x085C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	uint32_t                                           Armor;                                                    // 0x0860(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               CoversWrists;                                             // 0x0864(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               HidesHair;                                                // 0x0865(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               HidesFacialHair;                                          // 0x0866(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x1];                                       // 0x0867(0x0001) MISSED OFFSET
-	float                                              MaxFemaleHairLength;                                      // 0x0868(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxMaleHairLength;                                        // 0x086C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxFacialHairLength;                                      // 0x0870(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              BellyJiggleMultiplier;                                    // 0x0874(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              BreastJiggleMultiplier;                                   // 0x0878(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ProjectileHitEnergyAbsorption;                            // 0x087C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ProjectileHitEnergyDamagedAbsorption;                     // 0x0880(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              TotalEnergyAbsorption;                                    // 0x0884(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              SharpMeleeDamageReduction;                                // 0x0888(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              BluntMeleeDamageReduction;                                // 0x088C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	uint32_t                                           CapacityX;                                                // 0x0890(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	uint32_t                                           CapacityY;                                                // 0x0894(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	uint32_t                                           WaterResistance;                                          // 0x0898(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              InwardsWaterPropagationFactor;                            // 0x089C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              OutwardsWaterPropagationFactor;                           // 0x08A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              CamouflageBonus;                                          // 0x08A4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DamageWhenEquipped;                                       // 0x08A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DirtinessWhenEquipped;                                    // 0x08AC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ThermalConductivityFactor;                                // 0x08B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x1];                                       // 0x08B4(0x0001) MISSED OFFSET
-	bool                                               _canBeEquipped;                                           // 0x08B5(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x2];                                       // 0x08B6(0x0002) MISSED OFFSET
-	float                                              _dirtiness;                                               // 0x08B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x4];                                       // 0x08BC(0x0004) MISSED OFFSET
-	unsigned char                                      _dirtinessReplicated;                                     // 0x08C0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0xF];                                       // 0x08C1(0x000F) MISSED OFFSET
+	class UStaticMesh*                                 FemaleEquippedStaticMesh;                                 // 0x07F8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UStaticMesh*                                 MaleEquippedStaticMesh;                                   // 0x0800(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class USkeletalMesh*                               FemaleEquippedSkeletalMesh;                               // 0x0808(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class USkeletalMesh*                               MaleEquippedSkeletalMesh;                                 // 0x0810(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<class UMaterialInstance*>                   FemaleEquippedMaterialsOverride;                          // 0x0818(0x0010) (Edit, ZeroConstructor)
+	TArray<class UMaterialInstance*>                   MaleEquippedMaterialsOverride;                            // 0x0828(0x0010) (Edit, ZeroConstructor)
+	EClothesType                                       ClothesType;                                              // 0x0838(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      EquipmentLayer;                                           // 0x0839(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x083A(0x0002) MISSED OFFSET
+	uint32_t                                           Warmth;                                                   // 0x083C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	uint32_t                                           Armor;                                                    // 0x0840(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               CoversWrists;                                             // 0x0844(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               HidesHair;                                                // 0x0845(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               HidesFacialHair;                                          // 0x0846(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x1];                                       // 0x0847(0x0001) MISSED OFFSET
+	float                                              MaxFemaleHairLength;                                      // 0x0848(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxMaleHairLength;                                        // 0x084C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxFacialHairLength;                                      // 0x0850(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              BellyJiggleMultiplier;                                    // 0x0854(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              BreastJiggleMultiplier;                                   // 0x0858(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ProjectileHitEnergyAbsorption;                            // 0x085C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ProjectileHitEnergyDamagedAbsorption;                     // 0x0860(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              TotalEnergyAbsorption;                                    // 0x0864(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              SharpMeleeDamageReduction;                                // 0x0868(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              BluntMeleeDamageReduction;                                // 0x086C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	uint32_t                                           CapacityX;                                                // 0x0870(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	uint32_t                                           CapacityY;                                                // 0x0874(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	uint32_t                                           WaterResistance;                                          // 0x0878(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              InwardsWaterPropagationFactor;                            // 0x087C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              OutwardsWaterPropagationFactor;                           // 0x0880(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              CamouflageBonus;                                          // 0x0884(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DamageWhenEquipped;                                       // 0x0888(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DirtinessWhenEquipped;                                    // 0x088C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ThermalConductivityFactor;                                // 0x0890(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x1];                                       // 0x0894(0x0001) MISSED OFFSET
+	bool                                               _canBeEquipped;                                           // 0x0895(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x2];                                       // 0x0896(0x0002) MISSED OFFSET
+	float                                              _dirtiness;                                               // 0x0898(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x089C(0x0004) MISSED OFFSET
+	unsigned char                                      _dirtinessReplicated;                                     // 0x08A0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0xF];                                       // 0x08A1(0x000F) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -4969,43 +5061,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class ConZ.CombinedInventoryWidget
-// 0x0048 (0x0268 - 0x0220)
-class UCombinedInventoryWidget : public UDesignableUserWidget
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0220(0x0008) MISSED OFFSET
-	class UGenericItemContainerWidget*                 CurrentInventoryWidget;                                   // 0x0228(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UGenericItemContainerWidget*                 EmptyInventoryWidget;                                     // 0x0230(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TArray<class UGenericItemContainerWidget*>         InventoryWidgets;                                         // 0x0238(0x0010) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst)
-	class UInventoryContainersWidget*                  ContainersWidget;                                         // 0x0248(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UNamedSlot*                                  MainSlot;                                                 // 0x0250(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	struct FVector2D                                   DefaultPosition;                                          // 0x0258(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst, IsPlainOldData)
-	bool                                               NeedLayoutLoading;                                        // 0x0260(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	bool                                               SavedLayoutMinimizedPartial;                              // 0x0261(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	bool                                               SavedLayoutMinimizedFull;                                 // 0x0262(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x5];                                       // 0x0263(0x0005) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ConZ.CombinedInventoryWidget");
-		return ptr;
-	}
-
-
-	void SetSavedLayoutMinimizedPartial(bool Value);
-	void SetSavedLayoutMinimizedFull(bool Value);
-	void SetNeedLayoutLoading(bool Value);
-	void ResizeExtraSlots();
-	void OnItemContainerClicked(class UItemUserWidget* ItemWidget);
-	class UWidget* GetChildWidgetByName(const struct FString& WidgetName);
-	void DeferredLoadLayout();
-	void ChangeActiveInventory(int Index);
-	void AddContainerWidgetFromItem(class AClothesItem* Item, struct FCondensedInventoryContainer* container);
-	void AddContainerWidget(class UGenericItemContainerWidget* Widget);
 };
 
 
@@ -5281,7 +5336,7 @@ public:
 	}
 
 
-	void OnElementInteracted(class APrisoner* user, EInteractionType InteractionType, const struct FInteractionData& InteractionData);
+	void OnElementInteracted(class APrisoner* User, EInteractionType interactionType, const struct FInteractionData& InteractionData);
 	struct FString GetBaseName();
 };
 
@@ -5337,7 +5392,7 @@ public:
 	void NetMulticast_SetDebugModeEnabled(class APrisoner* Prisoner, bool Value);
 	void NetMulticast_SetBaseOwnerPlayerId(int dataVersion, const struct FConZBaseInteractionData& baseData, int64_t PlayerId);
 	void NetMulticast_ProcessDecay(int dataVersion, float DeltaSeconds);
-	void NetMulticast_InteractWithElement(int dataVersion, EInteractionType InteractionType, const struct FConZBaseInteractionData& baseData, const struct FConZBaseElementInteractionData& baseElementData, class APrisoner* user);
+	void NetMulticast_InteractWithElement(int dataVersion, EInteractionType interactionType, const struct FConZBaseInteractionData& baseData, const struct FConZBaseElementInteractionData& baseElementData, class APrisoner* User);
 	void NetMulticast_ClearBaseOwnerPlayerId(int dataVersion, const struct FConZBaseInteractionData& baseData);
 	void NetMulticast_ApplyDamageToBaseElement(int dataVersion, int64_t BaseId, int64_t ElementID, const struct FVector& elementLocation, float DamageAmount);
 };
@@ -5376,7 +5431,7 @@ public:
 
 
 // Class ConZ.ConZGameInstance
-// 0x0100 (0x01A0 - 0x00A0)
+// 0x0178 (0x0218 - 0x00A0)
 class UConZGameInstance : public UGameInstance
 {
 public:
@@ -5391,13 +5446,15 @@ public:
 	class UGameplayLog*                                GameplayLogViolations;                                    // 0x0118(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UGameplayLog*                                GameplayLogChat;                                          // 0x0120(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x8];                                       // 0x0128(0x0008) MISSED OFFSET
-	class UDbConnection*                               _primaryDatabaseConnection;                               // 0x0130(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UDedicatedServerRequest*                     _serverRequest;                                           // 0x0138(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UDbUser*                                     _currentUser;                                             // 0x0140(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UDbUserProfile*                              _currentUserProfile;                                      // 0x0148(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UTexture2D*                                  _loadingScreenTexture;                                    // 0x0150(0x0008) (ZeroConstructor, IsPlainOldData)
-	class ULoadingScreen*                              _loadingScreen;                                           // 0x0158(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x40];                                      // 0x0160(0x0040) MISSED OFFSET
+	TMap<uint32_t, class UDbConnection*>               _databaseConnections;                                     // 0x0130(0x0050) (ZeroConstructor)
+	unsigned char                                      UnknownData02[0x28];                                      // 0x0180(0x0028) MISSED OFFSET
+	class UDedicatedServerRequest*                     _serverRequest;                                           // 0x01A8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UUserManager*                                _userManager;                                             // 0x01B0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UUser*                                       _currentUser;                                             // 0x01B8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UUserProfile*                                _currentUserProfile;                                      // 0x01C0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UTexture2D*                                  _loadingScreenTexture;                                    // 0x01C8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class ULoadingScreen*                              _loadingScreen;                                           // 0x01D0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x40];                                      // 0x01D8(0x0040) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -5409,7 +5466,7 @@ public:
 	void StartSingleplayerGame();
 	void StartMultiplayerGame(const struct FString& Ip, int GameplayPort, const struct FString& AuthToken);
 	void SetPlayAsDrone(bool Value);
-	void SetCurrentUserProfile(class UDbUserProfile* Value);
+	void SetCurrentUserProfile(class UUserProfile* Value);
 	void RemoveLoadingWidget();
 	void OnVoiceChatVolumeChanged(float Volume);
 	void OnPreLoadMap(const struct FString& MapName);
@@ -5417,19 +5474,20 @@ public:
 	void OnPlaySessionEnd(bool quit);
 	bool IsTransitioningMap();
 	void HandleNetworkFailure(class UWorld* World, class UNetDriver* NetDriver, TEnumAsByte<ENetworkFailure> FailureType, const struct FString& ErrorString);
+	class UUserManager* GetUserManager();
 	class UDedicatedServerRequest* GetServerRequest();
-	class UDbConnection* GetPrimaryDatabaseConnection();
 	bool GetPlayAsDrone();
 	struct FText GetLastNetworkError();
-	class UDbUserProfile* GetCurrentUserProfile();
-	class UDbUser* GetCurrentUser();
+	class UDbConnection* GetDatabaseConnection();
+	class UUserProfile* GetCurrentUserProfile();
+	class UUser* GetCurrentUser();
 	void AddLoadingWidget(class ULoadingScreen* Widget);
 	void AddDefaultLoadingWidget();
 };
 
 
 // Class ConZ.ConZGameMode
-// 0x0490 (0x08A0 - 0x0410)
+// 0x04F8 (0x0908 - 0x0410)
 class AConZGameMode : public AGameMode
 {
 public:
@@ -5464,9 +5522,11 @@ public:
 	class ALadderMarkersReplicator*                    _ladderMarkersReplicator;                                 // 0x05A8(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UClass*                                      _dataTransferManagerClass;                                // 0x05B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class ADataTransferManager*                        _dataTransferManager;                                     // 0x05B8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0xC8];                                      // 0x05C0(0x00C8) MISSED OFFSET
-	class UDedicatedServerResponse*                    _serverResponse;                                          // 0x0688(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x210];                                     // 0x0690(0x0210) MISSED OFFSET
+	class UClass*                                      _damageOverTimeDealerClass;                               // 0x05C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class ADamageOverTimeDealer*                       _damageOverTimeDealer;                                    // 0x05C8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0xC8];                                      // 0x05D0(0x00C8) MISSED OFFSET
+	class UDedicatedServerResponse*                    _serverResponse;                                          // 0x0698(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x268];                                     // 0x06A0(0x0268) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -5489,6 +5549,7 @@ public:
 	class AGlobalBirdSpawner2* GetGlobalBirdSpawner();
 	class AGlobalAnimalSpawner* GetGlobalAnimalSpawner();
 	class ADataTransferManager* GetDataTransferManager();
+	class ADamageOverTimeDealer* GetDamageOverTimeDealer();
 	class AConZBaseManager* GetBaseManager();
 	class AAchievementsManagerServer* GetAchievementsManagerServer();
 };
@@ -5510,7 +5571,7 @@ public:
 
 
 // Class ConZ.ConZGameState
-// 0x0288 (0x0610 - 0x0388)
+// 0x02A0 (0x0628 - 0x0388)
 class AConZGameState : public AGameState
 {
 public:
@@ -5534,10 +5595,12 @@ public:
 	TMap<TWeakObjectPtr<class AConZCharacter>, int>    _currentDroneTargetDispatcherMap;                         // 0x04D0(0x0050) (ZeroConstructor)
 	TMap<TWeakObjectPtr<class AConZCharacter>, int>    _droneTargetDispatcherHistoryMap;                         // 0x0520(0x0050) (ZeroConstructor)
 	TMap<TWeakObjectPtr<class AConZCharacter>, class UDroneTargetData*> _droneTargetVisits;                                       // 0x0570(0x0050) (ZeroConstructor)
-	unsigned char                                      UnknownData05[0x20];                                      // 0x05C0(0x0020) MISSED OFFSET
-	class UClass*                                      _ladderMarkersRegistryClass;                              // 0x05E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class ALadderMarkersRegistry*                      _ladderMarkersRegistry;                                   // 0x05E8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x20];                                      // 0x05F0(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData05[0x28];                                      // 0x05C0(0x0028) MISSED OFFSET
+	class UClass*                                      _ladderMarkersRegistryClass;                              // 0x05E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x8];                                       // 0x05F0(0x0008) MISSED OFFSET
+	class ALadderMarkersRegistry*                      _ladderMarkersRegistry;                                   // 0x05F8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class ADoorVirtualizationManager*                  _doorVirtualizationManager;                               // 0x0600(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData07[0x20];                                      // 0x0608(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -5580,7 +5643,7 @@ public:
 
 
 // Class ConZ.ConZPlayerController
-// 0x0270 (0x08E8 - 0x0678)
+// 0x0288 (0x0900 - 0x0678)
 class AConZPlayerController : public APlayerController
 {
 public:
@@ -5591,30 +5654,30 @@ public:
 	float                                              LocalChatDistance;                                        // 0x06A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x06AC(0x0004) MISSED OFFSET
 	class UPlayerRpcChannel*                           _playerRpcChannel;                                        // 0x06B0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x58];                                      // 0x06B8(0x0058) MISSED OFFSET
-	class UDbUserProfile*                              _userProfile;                                             // 0x0710(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x30];                                      // 0x0718(0x0030) MISSED OFFSET
-	class APawn*                                       _possessedPawn;                                           // 0x0748(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x10];                                      // 0x0750(0x0010) MISSED OFFSET
-	class UPawnNoiseEmitterComponent*                  _noiseEmitterComponent;                                   // 0x0760(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x10];                                      // 0x0768(0x0010) MISSED OFFSET
-	float                                              _teleportWorldStreamingLocationChangeDelay;               // 0x0778(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _teleportWorldStreamingTriggerLag;                        // 0x077C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x38];                                      // 0x0780(0x0038) MISSED OFFSET
-	int                                                _repFamePoints;                                           // 0x07B8(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x8C];                                      // 0x07BC(0x008C) MISSED OFFSET
-	int                                                _maxHistorySize;                                          // 0x0848(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x14];                                      // 0x084C(0x0014) MISSED OFFSET
-	float                                              _weatherHeightUpdatePeriod;                               // 0x0860(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData09[0x4];                                       // 0x0864(0x0004) MISSED OFFSET
-	class UAdminCommandRegistry*                       _adminCommandRegistry;                                    // 0x0868(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData10[0x10];                                      // 0x0870(0x0010) MISSED OFFSET
-	class AAchievementsManagerClient*                  _achievementsManagerClient;                               // 0x0880(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UClass*                                      _achievementsManagerClientClass;                          // 0x0888(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      _missionManagerClass;                                     // 0x0890(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class AMissionManager*                             _missionManager;                                          // 0x0898(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      _missionDialogueManagerClass;                             // 0x08A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData11[0x40];                                      // 0x08A8(0x0040) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x60];                                      // 0x06B8(0x0060) MISSED OFFSET
+	class UUserProfile*                                _userProfile;                                             // 0x0718(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x40];                                      // 0x0720(0x0040) MISSED OFFSET
+	class APawn*                                       _possessedPawn;                                           // 0x0760(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x10];                                      // 0x0768(0x0010) MISSED OFFSET
+	class UPawnNoiseEmitterComponent*                  _noiseEmitterComponent;                                   // 0x0778(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x10];                                      // 0x0780(0x0010) MISSED OFFSET
+	float                                              _teleportWorldStreamingLocationChangeDelay;               // 0x0790(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _teleportWorldStreamingTriggerLag;                        // 0x0794(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x38];                                      // 0x0798(0x0038) MISSED OFFSET
+	int                                                _repFamePoints;                                           // 0x07D0(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData07[0x8C];                                      // 0x07D4(0x008C) MISSED OFFSET
+	int                                                _maxHistorySize;                                          // 0x0860(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x14];                                      // 0x0864(0x0014) MISSED OFFSET
+	float                                              _weatherHeightUpdatePeriod;                               // 0x0878(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x4];                                       // 0x087C(0x0004) MISSED OFFSET
+	class UAdminCommandRegistry*                       _adminCommandRegistry;                                    // 0x0880(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData10[0x10];                                      // 0x0888(0x0010) MISSED OFFSET
+	class AAchievementsManagerClient*                  _achievementsManagerClient;                               // 0x0898(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UClass*                                      _achievementsManagerClientClass;                          // 0x08A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      _missionManagerClass;                                     // 0x08A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class AMissionManager*                             _missionManager;                                          // 0x08B0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      _missionDialogueManagerClass;                             // 0x08B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData11[0x40];                                      // 0x08C0(0x0040) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -5666,7 +5729,7 @@ public:
 	void HandleChatMessageCommit(const struct FText& Text, EChatType chatType);
 	struct FString GetUserProfileName();
 	struct FDbIntegerId GetUserProfileId();
-	class UDbUserProfile* GetUserProfile();
+	class UUserProfile* GetUserProfile();
 	struct FString GetUserName2();
 	struct FString GetUserId();
 	float GetTeleportWorldStreamingLocationChangeDelay();
@@ -6208,8 +6271,9 @@ public:
 	struct FItemSpawningSettings                       ItemSpawningSettings;                                     // 0x0560(0x0058) (Edit)
 	class AVolume*                                     IslandBoundsVolume;                                       // 0x05B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               UseVirtualizationSystem;                                  // 0x05C0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               WaitForDataTransferOnLoading;                             // 0x05C1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x05C2(0x0002) MISSED OFFSET
+	bool                                               UseDoorVirtualizationSystem;                              // 0x05C1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               WaitForDataTransferOnLoading;                             // 0x05C2(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x1];                                       // 0x05C3(0x0001) MISSED OFFSET
 	struct FBox2D                                      WorldBounds;                                              // 0x05C4(0x0014) (Edit)
 	struct FGameplayTag                                HeightMapGameplayTag;                                     // 0x05D8(0x0008) (Edit)
 	struct FGameplayTag                                MapPropertiesGameplayTag;                                 // 0x05E0(0x0008) (Edit)
@@ -7004,7 +7068,7 @@ public:
 	}
 
 
-	void SetCTFParameters(const struct FCTFParameters& params);
+	void SetCTFParameters(const struct FCTFParameters& Params);
 	void OnParticipantDied(class APrisoner* victim, const struct FDamageEvent& DamageEvent, class AController* eventInstigator, class AActor* causer);
 	class ACTFFlag* GetFlagB();
 	class ACTFFlag* GetFlagA();
@@ -7162,8 +7226,28 @@ public:
 };
 
 
+// Class ConZ.DamageOverTimeDealer
+// 0x0050 (0x0378 - 0x0328)
+class ADamageOverTimeDealer : public AActor
+{
+public:
+	TArray<struct FDamageOverTimeUpdateGroup>          _updateGroups;                                            // 0x0328(0x0010) (Edit, ZeroConstructor)
+	int                                                _actorLimitPerTick;                                       // 0x0338(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x033C(0x0004) MISSED OFFSET
+	float                                              _timeDilation;                                            // 0x0340(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x34];                                      // 0x0344(0x0034) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ConZ.DamageOverTimeDealer");
+		return ptr;
+	}
+
+};
+
+
 // Class ConZ.DataSingleton
-// 0x04D8 (0x0500 - 0x0028)
+// 0x04E8 (0x0510 - 0x0028)
 class UDataSingleton : public UObject
 {
 public:
@@ -7182,29 +7266,33 @@ public:
 	struct FWeaponSpreadData                           WeaponSpreadData[0x9];                                    // 0x0104(0x0040) (Edit)
 	float                                              BowArrowDeviationDegreesAngleByStep;                      // 0x0344(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FWeaponViewKickData                         WeaponViewKickData[0x9];                                  // 0x0348(0x0018) (Edit)
-	struct FCanvasIcon                                 InteractIcon;                                             // 0x0420(0x0018) (Edit)
-	struct FCanvasIcon                                 BondageIcon;                                              // 0x0438(0x0018) (Edit)
-	class UInputDataAsset*                             DefaultInputData;                                         // 0x0450(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UDerivedWidgetsData*                         Widgets;                                                  // 0x0458(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          PlaceableMaterialValid;                                   // 0x0460(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          PlaceableMaterialInvalid;                                 // 0x0468(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          PlaceableMaterialFriendlyFlagAtLocation;                  // 0x0470(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          PlaceableMaterialEnemyFlagAtLocation;                     // 0x0478(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          PlaceableMaterialRadiusSphere;                            // 0x0480(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          WidgetMaterial;                                           // 0x0488(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UBaseItemTag*                                DivingMaskItemTag;                                        // 0x0490(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UBaseItemTag*                                ToolBoxItemTag;                                           // 0x0498(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UBaseItemTag*                                MushroomItemTag;                                          // 0x04A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UBaseItemTag*                                AlcoholItemTag;                                           // 0x04A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UBaseItemTag*                                SoapItemTag;                                              // 0x04B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      AnimalSkinItemClass;                                      // 0x04B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FPrimaryAssetId>                     AssetsHiddenFromAdminCommands;                            // 0x04C0(0x0010) (Edit, ZeroConstructor)
-	class UMissionDataGroup*                           MissonDataGroup;                                          // 0x04D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UDialogueData*                               DialogueData;                                             // 0x04D8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UNetworkDataIdAsset*                         NetworkDataIdAsset;                                       // 0x04E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWashClothesData*                            WashClothesData;                                          // 0x04E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UBuryData*                                   BuryData;                                                 // 0x04F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class USoundClass*                                 VoiceSoundClass;                                          // 0x04F8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              UpperBoundStaminaAmountToDrain;                           // 0x0420(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              LowerBoundWeaponWeightForStaminaDrain;                    // 0x0424(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              UpperBoundWeaponWeightForStaminaDrain;                    // 0x0428(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x042C(0x0004) MISSED OFFSET
+	struct FCanvasIcon                                 InteractIcon;                                             // 0x0430(0x0018) (Edit)
+	struct FCanvasIcon                                 BondageIcon;                                              // 0x0448(0x0018) (Edit)
+	class UInputDataAsset*                             DefaultInputData;                                         // 0x0460(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UDerivedWidgetsData*                         Widgets;                                                  // 0x0468(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface*                          PlaceableMaterialValid;                                   // 0x0470(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface*                          PlaceableMaterialInvalid;                                 // 0x0478(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface*                          PlaceableMaterialFriendlyFlagAtLocation;                  // 0x0480(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface*                          PlaceableMaterialEnemyFlagAtLocation;                     // 0x0488(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface*                          PlaceableMaterialRadiusSphere;                            // 0x0490(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface*                          WidgetMaterial;                                           // 0x0498(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UBaseItemTag*                                DivingMaskItemTag;                                        // 0x04A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UBaseItemTag*                                ToolBoxItemTag;                                           // 0x04A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UBaseItemTag*                                MushroomItemTag;                                          // 0x04B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UBaseItemTag*                                AlcoholItemTag;                                           // 0x04B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UBaseItemTag*                                SoapItemTag;                                              // 0x04C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      AnimalSkinItemClass;                                      // 0x04C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FPrimaryAssetId>                     AssetsHiddenFromAdminCommands;                            // 0x04D0(0x0010) (Edit, ZeroConstructor)
+	class UMissionDataGroup*                           MissonDataGroup;                                          // 0x04E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UDialogueData*                               DialogueData;                                             // 0x04E8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UNetworkDataIdAsset*                         NetworkDataIdAsset;                                       // 0x04F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWashClothesData*                            WashClothesData;                                          // 0x04F8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UBuryData*                                   BuryData;                                                 // 0x0500(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class USoundClass*                                 VoiceSoundClass;                                          // 0x0508(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -7346,13 +7434,11 @@ public:
 
 
 // Class ConZ.DbConnection
-// 0x0038 (0x0060 - 0x0028)
+// 0x0028 (0x0050 - 0x0028)
 class UDbConnection : public UObject
 {
 public:
 	unsigned char                                      UnknownData00[0x28];                                      // 0x0028(0x0028) MISSED OFFSET
-	class UDbUserTable*                                _userTable;                                               // 0x0050(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UDbUserProfileTable*                         _userProfileTable;                                        // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -7365,200 +7451,6 @@ public:
 	bool IsOpen();
 	EDbConnectionOpenMode GetOpenMode();
 	bool Close();
-};
-
-
-// Class ConZ.DbObject
-// 0x0000 (0x0028 - 0x0028)
-class UDbObject : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ConZ.DbObject");
-		return ptr;
-	}
-
-
-	class UDbConnection* GetConnection();
-};
-
-
-// Class ConZ.DbTable
-// 0x0000 (0x0028 - 0x0028)
-class UDbTable : public UDbObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ConZ.DbTable");
-		return ptr;
-	}
-
-};
-
-
-// Class ConZ.DbTableRow
-// 0x0000 (0x0028 - 0x0028)
-class UDbTableRow : public UDbObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ConZ.DbTableRow");
-		return ptr;
-	}
-
-
-	class UDbTable* GetTable();
-	bool Equals(class UDbTableRow* Other);
-};
-
-
-// Class ConZ.DbUserTable
-// 0x0000 (0x0028 - 0x0028)
-class UDbUserTable : public UDbTable
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ConZ.DbUserTable");
-		return ptr;
-	}
-
-
-	class UDbUser* Insert(const struct FString& ID);
-	class UDbUser* FindOrInsert(const struct FString& ID);
-	class UDbUser* Find(const struct FString& ID);
-	bool Exists(const struct FString& ID);
-	bool Delete(const struct FString& ID);
-};
-
-
-// Class ConZ.DbUser
-// 0x0078 (0x00A0 - 0x0028)
-class UDbUser : public UDbTableRow
-{
-public:
-	unsigned char                                      UnknownData00[0x78];                                      // 0x0028(0x0078) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ConZ.DbUser");
-		return ptr;
-	}
-
-
-	void Unbind();
-	void SetRecentServers(TArray<struct FDbUserServerHistoryItem> Value);
-	void SetProvider(const struct FString& Value);
-	void SetName(const struct FString& Value);
-	void SetLastLoginTime(const struct FDateTime& Value);
-	void SetLastDirectConnectionAddress(const struct FString& Value);
-	void SetIsBanned(bool Value);
-	void SetFavoriteServers(TArray<struct FDbUserServerHistoryItem> Value);
-	void RemoveRecentServerAt(int Index);
-	void RemoveRecentServer(const struct FDbUserServerHistoryItem& Item);
-	void RemoveFavoriteServerAt(int Index);
-	void RemoveFavoriteServer(const struct FDbUserServerHistoryItem& Item);
-	bool Refresh();
-	bool IsBound();
-	bool HasProfileWithName(EDbUserProfileType Type, const struct FString& Name);
-	TArray<struct FDbUserServerHistoryItem> GetRecentServers();
-	struct FString GetProvider();
-	TArray<struct FString> GetProfileNames(EDbUserProfileType Type);
-	struct FString GetName();
-	struct FDateTime GetLastLoginTime();
-	struct FString GetLastDirectConnectionAddress();
-	bool GetIsBanned();
-	struct FString GetId();
-	TArray<struct FDbUserServerHistoryItem> GetFavoriteServers();
-	TArray<class UDbUserProfile*> FindProfiles(EDbUserProfileType Type);
-	class UDbUserProfile* FindProfile(const struct FDbIntegerId& ID);
-	class UDbUserProfile* FindMultiplayerCacheProfile(const struct FString& ServerIp, int ServerResponsePort);
-	bool EndEdit(bool Commit);
-	bool DeleteProfile(const struct FDbIntegerId& ID);
-	class UDbUserProfile* CreateProfileFromTemplate(EDbUserProfileType Type, const struct FCharacterTemplate& Value);
-	class UDbUserProfile* CreateEmptyProfile(EDbUserProfileType Type);
-	class UDbUserProfile* CreateDefaultProfile(EDbUserProfileType Type);
-	void ClearRecentServers();
-	void ClearFavoriteServers();
-	bool BindAndRefresh(const struct FString& ID);
-	void Bind(const struct FString& ID);
-	void BeginEdit();
-	void AddRecentServer(const struct FDbUserServerHistoryItem& Item);
-	void AddFavoriteServer(const struct FDbUserServerHistoryItem& Item);
-};
-
-
-// Class ConZ.DbUserProfileTable
-// 0x0000 (0x0028 - 0x0028)
-class UDbUserProfileTable : public UDbTable
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ConZ.DbUserProfileTable");
-		return ptr;
-	}
-
-
-	class UDbUserProfile* InsertDefault(const struct FString& UserId, EDbUserProfileType profileType);
-	class UDbUserProfile* Insert(const struct FDbIntegerId& ID, const struct FString& UserId, EDbUserProfileType profileType);
-	class UDbUserProfile* FindOrInsert(const struct FDbIntegerId& ID, const struct FString& UserId, EDbUserProfileType profileType);
-	class UDbUserProfile* Find(const struct FDbIntegerId& ID);
-	bool Exists(const struct FDbIntegerId& ID);
-	bool Delete(const struct FDbIntegerId& ID);
-};
-
-
-// Class ConZ.DbUserProfile
-// 0x00A8 (0x00D0 - 0x0028)
-class UDbUserProfile : public UDbTableRow
-{
-public:
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x0028(0x00A8) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ConZ.DbUserProfile");
-		return ptr;
-	}
-
-
-	void Unbind();
-	bool SetUserId(const struct FString& Value);
-	bool SetType(EDbUserProfileType Value);
-	bool SetPrisonerId(const struct FDbIntegerId& Value);
-	bool SetName(const struct FString& Value);
-	bool SetLastLoginTime(const struct FDateTime& Value);
-	bool SetFamePoints(float Value);
-	bool SetCreationTemplateXml(const struct FString& Value);
-	bool SetAuthorityInfo(const struct FDbUserProfileAuthorityInfo& Value);
-	bool Refresh();
-	struct FCharacterTemplate MakeCharacterCreationTemplate();
-	struct FCharacterTemplate LoadCharacterTemplate();
-	bool IsBound();
-	struct FString GetUserId();
-	class UDbUser* GetUser();
-	EDbUserProfileType GetType();
-	struct FDbIntegerId GetPrisonerId();
-	struct FString GetName();
-	struct FDateTime GetLastLoginTime();
-	struct FDbIntegerId GetId();
-	float GetFamePoints();
-	struct FString GetCreationTemplateXml();
-	struct FCharacterTemplate GetCreationTemplate();
-	struct FDbUserProfileAuthorityInfo GetAuthorityInfo();
-	bool EndEdit(bool Commit);
-	bool BindAndRefresh(const struct FDbIntegerId& ID);
-	void Bind(const struct FDbIntegerId& ID);
-	void BeginEdit();
 };
 
 
@@ -7612,7 +7504,7 @@ public:
 	}
 
 
-	void SetDeathmatchParameters(const struct FDeathmatchParameters& params);
+	void SetDeathmatchParameters(const struct FDeathmatchParameters& Params);
 	void RestrictGameEventArea();
 	struct FDeathmatchParameters GetDeathmatchParameters();
 };
@@ -7634,6 +7526,24 @@ public:
 		return ptr;
 	}
 
+};
+
+
+// Class ConZ.Decayable
+// 0x0000 (0x0028 - 0x0028)
+class UDecayable : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ConZ.Decayable");
+		return ptr;
+	}
+
+
+	float GetDamageOverTimeUpdateFrequency();
+	void ApplyDamageOverTime(float DeltaTime);
 };
 
 
@@ -7907,11 +7817,11 @@ public:
 
 
 // Class ConZ.DigestionItem
-// 0x0160 (0x0188 - 0x0028)
+// 0x0168 (0x0190 - 0x0028)
 class UDigestionItem : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x160];                                     // 0x0028(0x0160) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x168];                                     // 0x0028(0x0168) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -7926,7 +7836,7 @@ public:
 	float GetRemainingWeight();
 	float GetRemainingWater();
 	float GetRemainingVolume();
-	int GetId();
+	int GetID();
 	struct FString GetCaption();
 };
 
@@ -8091,6 +8001,22 @@ public:
 };
 
 
+// Class ConZ.DoorVirtualizationManager
+// 0x0120 (0x0448 - 0x0328)
+class ADoorVirtualizationManager : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0x120];                                     // 0x0328(0x0120) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ConZ.DoorVirtualizationManager");
+		return ptr;
+	}
+
+};
+
+
 // Class ConZ.DoubleDoor
 // 0x0020 (0x0460 - 0x0440)
 class ADoubleDoor : public ADoor
@@ -8188,84 +8114,85 @@ public:
 
 
 // Class ConZ.FoodItem
-// 0x0140 (0x0958 - 0x0818)
+// 0x0140 (0x0938 - 0x07F8)
 class AFoodItem : public AItem
 {
 public:
-	float                                              Volume;                                                   // 0x0818(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Energy;                                                   // 0x081C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Water;                                                    // 0x0820(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              EatingTime;                                               // 0x0824(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	EDigestionGroup                                    DigestionGroup;                                           // 0x0828(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0829(0x0003) MISSED OFFSET
-	float                                              Fat;                                                      // 0x082C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              SaturatedFat;                                             // 0x0830(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Sodium;                                                   // 0x0834(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Carbs;                                                    // 0x0838(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Fiber;                                                    // 0x083C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Sugar;                                                    // 0x0840(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Proteins;                                                 // 0x0844(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Alcohol;                                                  // 0x0848(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Vitamin_A;                                                // 0x084C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Vitamin_B1;                                               // 0x0850(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Vitamin_B2;                                               // 0x0854(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Vitamin_B3;                                               // 0x0858(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Vitamin_B4;                                               // 0x085C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Vitamin_B5;                                               // 0x0860(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Vitamin_B6;                                               // 0x0864(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Vitamin_B9;                                               // 0x0868(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Vitamin_B12;                                              // 0x086C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Vitamin_C;                                                // 0x0870(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Vitamin_D;                                                // 0x0874(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Vitamin_E;                                                // 0x0878(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Vitamin_K;                                                // 0x087C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Calcium;                                                  // 0x0880(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Iron;                                                     // 0x0884(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Magnesium;                                                // 0x0888(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Phosphorus;                                               // 0x088C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Potassium;                                                // 0x0890(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Zinc;                                                     // 0x0894(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Copper;                                                   // 0x0898(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Manganese;                                                // 0x089C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Selenium;                                                 // 0x08A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               Cookable;                                                 // 0x08A4(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x08A5(0x0003) MISSED OFFSET
-	float                                              CookingTime;                                              // 0x08A8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MinCookingTemperature;                                    // 0x08AC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MaxCookingTemperature;                                    // 0x08B0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MinCookingSpeed;                                          // 0x08B4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MaxCookingSpeed;                                          // 0x08B8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              ThermalConductivityFactor;                                // 0x08BC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              QualitySensitivityFactor;                                 // 0x08C0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              FreezingTemperature;                                      // 0x08C4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              RoomTemperature;                                          // 0x08C8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              ShelfLife;                                                // 0x08CC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              SpoilageRateCooked;                                       // 0x08D0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              SpoilageRateFrozen;                                       // 0x08D4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               IsConsumable;                                             // 0x08D8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               CanCheckTaste;                                            // 0x08D9(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x6];                                       // 0x08DA(0x0006) MISSED OFFSET
-	class UParticleSystemComponent*                    SteamComponent;                                           // 0x08E0(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UParticleSystem*                             SteamParticles;                                           // 0x08E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    SmokeComponent;                                           // 0x08F0(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UParticleSystem*                             SmokeParticles;                                           // 0x08F8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UStaticMesh*                                 ItemOpenedMesh;                                           // 0x0900(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UStaticMesh*                                 ItemEmptyMesh;                                            // 0x0908(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               StartEatingAudioEvent;                                    // 0x0910(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               StopEatingAudioEvent;                                     // 0x0918(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               StartCookingAudioEvent;                                   // 0x0920(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               StopCookingAudioEvent;                                    // 0x0928(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _caloriesBonus;                                           // 0x0930(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _catchSicknessModifier;                                   // 0x0934(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               _itemOpened;                                              // 0x0938(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x0939(0x0003) MISSED OFFSET
-	float                                              _temperature;                                             // 0x093C(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	float                                              _environmentTemperature;                                  // 0x0940(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               _isCooking;                                               // 0x0944(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x3];                                       // 0x0945(0x0003) MISSED OFFSET
-	float                                              _cookedAmount;                                            // 0x0948(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x8];                                       // 0x094C(0x0008) MISSED OFFSET
-	float                                              _spoilAmount;                                             // 0x0954(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              Volume;                                                   // 0x07F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Energy;                                                   // 0x07FC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Water;                                                    // 0x0800(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              EatingTime;                                               // 0x0804(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	EDigestionGroup                                    DigestionGroup;                                           // 0x0808(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0809(0x0003) MISSED OFFSET
+	float                                              Fat;                                                      // 0x080C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              SaturatedFat;                                             // 0x0810(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Sodium;                                                   // 0x0814(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Carbs;                                                    // 0x0818(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Fiber;                                                    // 0x081C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Sugar;                                                    // 0x0820(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Proteins;                                                 // 0x0824(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Alcohol;                                                  // 0x0828(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Vitamin_A;                                                // 0x082C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Vitamin_B1;                                               // 0x0830(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Vitamin_B2;                                               // 0x0834(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Vitamin_B3;                                               // 0x0838(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Vitamin_B4;                                               // 0x083C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Vitamin_B5;                                               // 0x0840(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Vitamin_B6;                                               // 0x0844(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Vitamin_B9;                                               // 0x0848(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Vitamin_B12;                                              // 0x084C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Vitamin_C;                                                // 0x0850(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Vitamin_D;                                                // 0x0854(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Vitamin_E;                                                // 0x0858(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Vitamin_K;                                                // 0x085C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Calcium;                                                  // 0x0860(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Iron;                                                     // 0x0864(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Magnesium;                                                // 0x0868(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Phosphorus;                                               // 0x086C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Potassium;                                                // 0x0870(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Zinc;                                                     // 0x0874(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Copper;                                                   // 0x0878(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Manganese;                                                // 0x087C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Selenium;                                                 // 0x0880(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               Cookable;                                                 // 0x0884(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0885(0x0003) MISSED OFFSET
+	float                                              CookingTime;                                              // 0x0888(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MinCookingTemperature;                                    // 0x088C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MaxCookingTemperature;                                    // 0x0890(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MinCookingSpeed;                                          // 0x0894(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MaxCookingSpeed;                                          // 0x0898(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              ThermalConductivityFactor;                                // 0x089C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              QualitySensitivityFactor;                                 // 0x08A0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              FreezingTemperature;                                      // 0x08A4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              RoomTemperature;                                          // 0x08A8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              ShelfLife;                                                // 0x08AC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              SpoilageRateCooked;                                       // 0x08B0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              SpoilageRateFrozen;                                       // 0x08B4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               IsConsumable;                                             // 0x08B8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               CanCheckTaste;                                            // 0x08B9(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x6];                                       // 0x08BA(0x0006) MISSED OFFSET
+	class UParticleSystemComponent*                    SteamComponent;                                           // 0x08C0(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UParticleSystem*                             SteamParticles;                                           // 0x08C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    SmokeComponent;                                           // 0x08D0(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UParticleSystem*                             SmokeParticles;                                           // 0x08D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UStaticMesh*                                 ItemOpenedMesh;                                           // 0x08E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UStaticMesh*                                 ItemEmptyMesh;                                            // 0x08E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               StartEatingAudioEvent;                                    // 0x08F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               StopEatingAudioEvent;                                     // 0x08F8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               StartCookingAudioEvent;                                   // 0x0900(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               StopCookingAudioEvent;                                    // 0x0908(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _caloriesBonus;                                           // 0x0910(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _catchSicknessModifier;                                   // 0x0914(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               _itemOpened;                                              // 0x0918(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x0919(0x0003) MISSED OFFSET
+	float                                              _temperature;                                             // 0x091C(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              _environmentTemperature;                                  // 0x0920(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               _isCooking;                                               // 0x0924(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x3];                                       // 0x0925(0x0003) MISSED OFFSET
+	float                                              _cookedAmount;                                            // 0x0928(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x4];                                       // 0x092C(0x0004) MISSED OFFSET
+	float                                              _spoilAmount;                                             // 0x0930(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x4];                                       // 0x0934(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -8287,11 +8214,11 @@ public:
 
 
 // Class ConZ.DrinkItem
-// 0x0008 (0x0960 - 0x0958)
+// 0x0008 (0x0940 - 0x0938)
 class ADrinkItem : public AFoodItem
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0958(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0938(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -8364,7 +8291,7 @@ public:
 
 
 // Class ConZ.Drone
-// 0x0220 (0x0B60 - 0x0940)
+// 0x0210 (0x0B50 - 0x0940)
 class ADrone : public AConZCharacter
 {
 public:
@@ -8384,19 +8311,19 @@ public:
 	class UAkAudioEvent*                               EngineAudioEvent;                                         // 0x0988(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class UAkAudioEvent*                               EngineStopAudioEvent;                                     // 0x0990(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class UAkAudioEvent*                               SelfDestructAudioEvent;                                   // 0x0998(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x38];                                      // 0x09A0(0x0038) MISSED OFFSET
-	class UMaterialInterface*                          _nightVisionMaterial;                                     // 0x09D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      _currentSpeedStep;                                        // 0x09E0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x09E1(0x0003) MISSED OFFSET
-	float                                              _movementInertia;                                         // 0x09E4(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0xA0];                                      // 0x09E8(0x00A0) MISSED OFFSET
-	float                                              _health;                                                  // 0x0A88(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x1D];                                      // 0x0A8C(0x001D) MISSED OFFSET
-	bool                                               _silentMode;                                              // 0x0AA9(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x9A];                                      // 0x0AAA(0x009A) MISSED OFFSET
-	float                                              _interactionDistance;                                     // 0x0B44(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class UActionProgressWidget*                       _progressWidget;                                          // 0x0B48(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x10];                                      // 0x0B50(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x30];                                      // 0x09A0(0x0030) MISSED OFFSET
+	class UMaterialInterface*                          _nightVisionMaterial;                                     // 0x09D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      _currentSpeedStep;                                        // 0x09D8(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x09D9(0x0003) MISSED OFFSET
+	float                                              _movementInertia;                                         // 0x09DC(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0xA0];                                      // 0x09E0(0x00A0) MISSED OFFSET
+	float                                              _health;                                                  // 0x0A80(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x1D];                                      // 0x0A84(0x001D) MISSED OFFSET
+	bool                                               _silentMode;                                              // 0x0AA1(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x9A];                                      // 0x0AA2(0x009A) MISSED OFFSET
+	float                                              _interactionDistance;                                     // 0x0B3C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UActionProgressWidget*                       _progressWidget;                                          // 0x0B40(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x8];                                       // 0x0B48(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -8419,7 +8346,6 @@ public:
 	void OnHit(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
 	void NetMulticast_SpawnDestroyedEffects();
 	void NetMulticast_PlaySoundOnClients(EDroneSound SoundToPlay, bool Force);
-	void AActor_OnDestroyed(class AActor* ActorDestroyed);
 };
 
 
@@ -8671,7 +8597,7 @@ public:
 	}
 
 
-	void SetDropZoneParameters(const struct FDropZoneParameters& params);
+	void SetDropZoneParameters(const struct FDropZoneParameters& Params);
 	void OnRep_CapturingTeam();
 	class ADropZoneSlot* GetSlot();
 	float GetPhaseTimeLeft();
@@ -8688,12 +8614,12 @@ public:
 
 
 // Class ConZ.DropZoneKey
-// 0x0010 (0x0828 - 0x0818)
+// 0x0010 (0x0808 - 0x07F8)
 class ADropZoneKey : public AItem
 {
 public:
-	class USphereComponent*                            SphereComponent;                                          // 0x0818(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class ADropZoneGameEvent*                          _gameEvent;                                               // 0x0820(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            SphereComponent;                                          // 0x07F8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class ADropZoneGameEvent*                          _gameEvent;                                               // 0x0800(0x0008) (Net, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -8972,16 +8898,16 @@ public:
 
 
 // Class ConZ.EquipmentItem
-// 0x0018 (0x0830 - 0x0818)
+// 0x0018 (0x0810 - 0x07F8)
 class AEquipmentItem : public AItem
 {
 public:
-	uint32_t                                           MinRange;                                                 // 0x0818(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	uint32_t                                           MaxRange;                                                 // 0x081C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	uint32_t                                           MinDamage;                                                // 0x0820(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	uint32_t                                           MaxDamage;                                                // 0x0824(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	uint32_t                                           AP;                                                       // 0x0828(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x082C(0x0004) MISSED OFFSET
+	uint32_t                                           MinRange;                                                 // 0x07F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	uint32_t                                           MaxRange;                                                 // 0x07FC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	uint32_t                                           MinDamage;                                                // 0x0800(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	uint32_t                                           MaxDamage;                                                // 0x0804(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	uint32_t                                           AP;                                                       // 0x0808(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x080C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -9098,31 +9024,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class ConZ.ExamineContainerWidget
-// 0x0048 (0x02A0 - 0x0258)
-class UExamineContainerWidget : public UBaseItemContainerWidget
-{
-public:
-	unsigned char                                      MaxWidth;                                                 // 0x0258(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      MaxHeight;                                                // 0x0259(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x025A(0x0006) MISSED OFFSET
-	struct FScriptMulticastDelegate                    ClosingWidgetDelegate;                                    // 0x0260(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnWidgetIsEmpty;                                          // 0x0270(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0280(0x0020) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ConZ.ExamineContainerWidget");
-		return ptr;
-	}
-
-
-	void SetWidgetTitle(const struct FText& Title);
-	void OnWidgetIsEmpty__DelegateSignature();
-	void OnClose__DelegateSignature();
 };
 
 
@@ -9251,24 +9152,24 @@ public:
 
 
 // Class ConZ.FireItem
-// 0x0068 (0x0898 - 0x0830)
+// 0x0068 (0x0878 - 0x0810)
 class AFireItem : public AEquipmentItem
 {
 public:
-	float                                              FuelCapacity;                                             // 0x0830(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FuelDuration;                                             // 0x0834(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              BurningSpeed;                                             // 0x0838(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              BurningSpeedRain;                                         // 0x083C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FHeatSourceParameters                       HeatSourceParameters;                                     // 0x0840(0x0020) (Edit)
-	class UAkAudioEvent*                               StartBurningAudioEvent;                                   // 0x0860(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               StopBurningAudioEvent;                                    // 0x0868(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAkComponent*                                AudioComponent;                                           // 0x0870(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UParticleSystemComponent*                    FireComponent;                                            // 0x0878(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	float                                              TouchDamage;                                              // 0x0880(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               _isBurning;                                               // 0x0884(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xB];                                       // 0x0885(0x000B) MISSED OFFSET
-	int                                                _burningStage;                                            // 0x0890(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0894(0x0004) MISSED OFFSET
+	float                                              FuelCapacity;                                             // 0x0810(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FuelDuration;                                             // 0x0814(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              BurningSpeed;                                             // 0x0818(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              BurningSpeedRain;                                         // 0x081C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FHeatSourceParameters                       HeatSourceParameters;                                     // 0x0820(0x0020) (Edit)
+	class UAkAudioEvent*                               StartBurningAudioEvent;                                   // 0x0840(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               StopBurningAudioEvent;                                    // 0x0848(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkComponent*                                AudioComponent;                                           // 0x0850(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UParticleSystemComponent*                    FireComponent;                                            // 0x0858(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	float                                              TouchDamage;                                              // 0x0860(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               _isBurning;                                               // 0x0864(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xB];                                       // 0x0865(0x000B) MISSED OFFSET
+	int                                                _burningStage;                                            // 0x0870(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0874(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -9288,19 +9189,19 @@ public:
 
 
 // Class ConZ.FireplaceItem
-// 0x0050 (0x08E8 - 0x0898)
+// 0x0050 (0x08C8 - 0x0878)
 class AFireplaceItem : public AFireItem
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0898(0x0008) MISSED OFFSET
-	class USceneComponent*                             CookingComponent;                                         // 0x08A0(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	TArray<class UStaticMesh*>                         FireplaceMesh;                                            // 0x08A8(0x0010) (Edit, ZeroConstructor)
-	int                                                MaterialSwitchIndex;                                      // 0x08B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x08BC(0x0004) MISSED OFFSET
-	class UMaterialInterface*                          LitMaterial;                                              // 0x08C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          UnlitMaterial;                                            // 0x08C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class USphereComponent*                            SphereCollider;                                           // 0x08D0(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	TArray<struct FItemSnapMarker>                     _itemSnapMarkers;                                         // 0x08D8(0x0010) (Edit, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0878(0x0008) MISSED OFFSET
+	class USceneComponent*                             CookingComponent;                                         // 0x0880(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	TArray<class UStaticMesh*>                         FireplaceMesh;                                            // 0x0888(0x0010) (Edit, ZeroConstructor)
+	int                                                MaterialSwitchIndex;                                      // 0x0898(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x089C(0x0004) MISSED OFFSET
+	class UMaterialInterface*                          LitMaterial;                                              // 0x08A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface*                          UnlitMaterial;                                            // 0x08A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            SphereCollider;                                           // 0x08B0(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	TArray<struct FItemSnapMarker>                     _itemSnapMarkers;                                         // 0x08B8(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -9312,16 +9213,16 @@ public:
 
 
 // Class ConZ.FireworksItem
-// 0x0020 (0x0838 - 0x0818)
+// 0x0020 (0x0818 - 0x07F8)
 class AFireworksItem : public AItem
 {
 public:
-	bool                                               _isFiring;                                                // 0x0818(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0819(0x0007) MISSED OFFSET
-	int                                                _totalShells;                                             // 0x0820(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xC];                                       // 0x0824(0x000C) MISSED OFFSET
-	float                                              _secondsBetweenLaunches;                                  // 0x0830(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0834(0x0004) MISSED OFFSET
+	bool                                               _isFiring;                                                // 0x07F8(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x07F9(0x0007) MISSED OFFSET
+	int                                                _totalShells;                                             // 0x0800(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xC];                                       // 0x0804(0x000C) MISSED OFFSET
+	float                                              _secondsBetweenLaunches;                                  // 0x0810(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0814(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -9430,27 +9331,27 @@ public:
 
 
 // Class ConZ.FlareItem
-// 0x0090 (0x08A8 - 0x0818)
+// 0x0090 (0x0888 - 0x07F8)
 class AFlareItem : public AItem
 {
 public:
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0818(0x0001) MISSED OFFSET
-	EFlareIgniteState                                  _repState;                                                // 0x0819(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x081A(0x0006) MISSED OFFSET
-	struct FName                                       _effectsSocket;                                           // 0x0820(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x0828(0x0008) MISSED OFFSET
-	class UAkAudioEvent*                               _flareIgnitedAudioEvent;                                  // 0x0830(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               _flareExtinguishedAudioEvent;                             // 0x0838(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _particlesLoopStartBlend;                                 // 0x0840(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _particlesLoopDuration;                                   // 0x0844(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class UParticleSystem*                             _flareIgnitedParticle;                                    // 0x0848(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UParticleSystem*                             _flareLoopParticle;                                       // 0x0850(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UParticleSystem*                             _flareExtinguishedParticle;                               // 0x0858(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _autoDestroyTimeOnUse;                                    // 0x0860(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0xC];                                       // 0x0864(0x000C) MISSED OFFSET
-	struct FLinearColor                                _pointLightColor;                                         // 0x0870(0x0010) (Edit, IsPlainOldData)
-	class UMaterialInterface*                          _pointLightFunctionMaterial;                              // 0x0880(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x20];                                      // 0x0888(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x1];                                       // 0x07F8(0x0001) MISSED OFFSET
+	EFlareIgniteState                                  _repState;                                                // 0x07F9(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x6];                                       // 0x07FA(0x0006) MISSED OFFSET
+	struct FName                                       _effectsSocket;                                           // 0x0800(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x8];                                       // 0x0808(0x0008) MISSED OFFSET
+	class UAkAudioEvent*                               _flareIgnitedAudioEvent;                                  // 0x0810(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               _flareExtinguishedAudioEvent;                             // 0x0818(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _particlesLoopStartBlend;                                 // 0x0820(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _particlesLoopDuration;                                   // 0x0824(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UParticleSystem*                             _flareIgnitedParticle;                                    // 0x0828(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UParticleSystem*                             _flareLoopParticle;                                       // 0x0830(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UParticleSystem*                             _flareExtinguishedParticle;                               // 0x0838(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _autoDestroyTimeOnUse;                                    // 0x0840(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0xC];                                       // 0x0844(0x000C) MISSED OFFSET
+	struct FLinearColor                                _pointLightColor;                                         // 0x0850(0x0010) (Edit, IsPlainOldData)
+	class UMaterialInterface*                          _pointLightFunctionMaterial;                              // 0x0860(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x20];                                      // 0x0868(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -9470,14 +9371,14 @@ public:
 
 
 // Class ConZ.FlashbangItem
-// 0x0018 (0x0830 - 0x0818)
+// 0x0018 (0x0810 - 0x07F8)
 class AFlashbangItem : public AItem
 {
 public:
-	float                                              ExplosionDelay;                                           // 0x0818(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x081C(0x0004) MISSED OFFSET
-	class UClass*                                      FlashbangEffectsClass;                                    // 0x0820(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0828(0x0008) MISSED OFFSET
+	float                                              ExplosionDelay;                                           // 0x07F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x07FC(0x0004) MISSED OFFSET
+	class UClass*                                      FlashbangEffectsClass;                                    // 0x0800(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0808(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -9578,6 +9479,27 @@ public:
 
 	float GetWalkAnimationSpeed();
 	float GetRunAnimationSpeed();
+};
+
+
+// Class ConZ.FogSphere
+// 0x0010 (0x0338 - 0x0328)
+class AFogSphere : public AActor
+{
+public:
+	bool                                               _shouldExistOnDedicatedServer;                            // 0x0328(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0329(0x0007) MISSED OFFSET
+	class UCurveFloat*                                 _densityVersusTimeOfDay;                                  // 0x0330(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ConZ.FogSphere");
+		return ptr;
+	}
+
+
+	void SetFogDensity(float Density);
+	void OnTimeOfDayChanged(float timeOfDay);
 };
 
 
@@ -9741,20 +9663,20 @@ public:
 
 
 // Class ConZ.FragGrenadeItem
-// 0x0038 (0x0850 - 0x0818)
+// 0x0038 (0x0830 - 0x07F8)
 class AFragGrenadeItem : public AItem
 {
 public:
-	class UAkAudioEvent*                               ExplosionAudioEvent;                                      // 0x0818(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _explosionDamage;                                         // 0x0820(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _explosionOuterRadius;                                    // 0x0824(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _explosionInnerRadius;                                    // 0x0828(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _explosionFalloff;                                        // 0x082C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _explosionDelay;                                          // 0x0830(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _explosionImpulse_OBSOLETE;                               // 0x0834(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0838(0x0008) MISSED OFFSET
-	class UParticleSystem*                             _explosionParticle;                                       // 0x0840(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      _explosionCameraShakeClass;                               // 0x0848(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               ExplosionAudioEvent;                                      // 0x07F8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _explosionDamage;                                         // 0x0800(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _explosionOuterRadius;                                    // 0x0804(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _explosionInnerRadius;                                    // 0x0808(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _explosionFalloff;                                        // 0x080C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _explosionDelay;                                          // 0x0810(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _explosionImpulse_OBSOLETE;                               // 0x0814(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0818(0x0008) MISSED OFFSET
+	class UParticleSystem*                             _explosionParticle;                                       // 0x0820(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      _explosionCameraShakeClass;                               // 0x0828(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -9768,7 +9690,7 @@ public:
 
 
 // Class ConZ.FuelCanister
-// 0x0000 (0x0830 - 0x0830)
+// 0x0000 (0x0810 - 0x0810)
 class AFuelCanister : public AEquipmentItem
 {
 public:
@@ -10168,44 +10090,6 @@ public:
 };
 
 
-// Class ConZ.GenericItemContainerWidget
-// 0x0050 (0x02A8 - 0x0258)
-class UGenericItemContainerWidget : public UBaseItemContainerWidget
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0258(0x0008) MISSED OFFSET
-	TWeakObjectPtr<class AItem>                        containerItem;                                            // 0x0260(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UNamedSlot*                                  UnderInventorySlot;                                       // 0x0268(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	TArray<class UGenericItemContainerWidget*>         LinkedWidgets;                                            // 0x0270(0x0010) (ExportObject, ZeroConstructor)
-	TWeakObjectPtr<class UGenericItemContainerWidget>  ParentWidget;                                             // 0x0280(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TWeakObjectPtr<class UCombinedInventoryWidget>     ParentCombinedInventory;                                  // 0x0288(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               InventoryJustSwitchedToThis;                              // 0x0290(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               IsContainersPanelMinimized;                               // 0x0291(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x0292(0x0006) MISSED OFFSET
-	class UImage*                                      MainExtraSlotImage;                                       // 0x0298(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UImage*                                      ExtraSlotBackground;                                      // 0x02A0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ConZ.GenericItemContainerWidget");
-		return ptr;
-	}
-
-
-	void UpdateVisualsFromItem(class AItem* Item);
-	void UpdateImageFromBodySlot(EBodySlot bodySlot);
-	void SetResizableWindowParentSlot(class UCanvasPanelSlot* PanelSlot);
-	void SetMinimizationState(bool minimizePartial, bool minimizeFull);
-	void RefreshOccupiedSlotsAndMassVisuals();
-	void OnClose();
-	bool GetMinimizedPartial();
-	bool GetMinimizedFull();
-	void ChangeTitle(const struct FText& Title);
-	void BlinkItemContainer();
-	void AdjustSize(const struct FVector2D& oldSize);
-};
-
-
 // Class ConZ.GhostTrailComponent
 // 0x0000 (0x00F0 - 0x00F0)
 class UGhostTrailComponent : public UActorComponent
@@ -10337,97 +10221,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class ConZ.HandInventorySecondIteration
-// 0x0010 (0x0268 - 0x0258)
-class UHandInventorySecondIteration : public UBaseItemContainerWidget
-{
-public:
-	class UGridPanel*                                  _addonsGridPanel;                                         // 0x0258(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AItem*                                       _equippedItem;                                            // 0x0260(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ConZ.HandInventorySecondIteration");
-		return ptr;
-	}
-
-
-	void UpdateVisuals();
-	void UpdateItemWidgetHighlightings();
-	void OnWeaponAttachmentRemoved(class AWeapon* sender, class AWeaponAttachment* Attachment);
-	void OnWeaponAttachmentAdded(class AWeapon* sender, class AWeaponAttachment* Attachment);
-	void OnItemPickedUpStateChanged(class AItem* Item, bool pickedUp);
-	void OnItemDestroyed(class AActor* Actor);
-	void EquipItem(class AItem* Item);
-};
-
-
-// Class ConZ.InventoryUserWidget
-// 0x0008 (0x0260 - 0x0258)
-class UInventoryUserWidget : public UBaseItemContainerWidget
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0258(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ConZ.InventoryUserWidget");
-		return ptr;
-	}
-
-
-	void UpdateImage(class UTexture2D* Texture);
-	void UpdateDisplayValues(unsigned char occupiedSlots, float occupiedMass);
-	void SetTitle(const struct FText& Title);
-	void SetMinimizeAndAdjustSize(bool isMinimizedFull, bool isMinimizedPartial, bool adjustPosition);
-	bool GetMinimizedPartial();
-	bool GetMinimizedFull();
-};
-
-
-// Class ConZ.HandInventoryWidget
-// 0x0020 (0x0280 - 0x0260)
-class UHandInventoryWidget : public UInventoryUserWidget
-{
-public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0260(0x0010) MISSED OFFSET
-	class AItem*                                       EquippedItem;                                             // 0x0270(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UGridPanel*                                  _addonsGridPanel;                                         // 0x0278(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ConZ.HandInventoryWidget");
-		return ptr;
-	}
-
-
-	void UpdateWithItem(class AItem* Item);
-	void SetGridVisibility(ESlateVisibility gridVisibility);
-	void SetAddonsVisibility(bool Value);
-	void RequestUpdateSize();
-};
-
-
-// Class ConZ.HandPanel
-// 0x0000 (0x0220 - 0x0220)
-class UHandPanel : public UDesignableUserWidget
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ConZ.HandPanel");
-		return ptr;
-	}
-
-
-	void UpdateItemWidgetHighlightings();
-	class UShoulderHolsterWidget* GetShoulderHolster(int holsterId);
-	class UQuickAccessItemSwitcher* GetQuickAccessAt(int Index);
-	class UHandInventorySecondIteration* GetHandInventory();
 };
 
 
@@ -10609,7 +10402,7 @@ public:
 
 
 	float GetQuantity();
-	int GetId();
+	int GetID();
 	struct FString GetCaption();
 };
 
@@ -10720,14 +10513,13 @@ public:
 	bool STATIC_PasteLocationAndRotationFromClipboard(struct FVector* Location, struct FRotator* Rotation);
 	bool STATIC_ParseServerIpAndPort(const struct FString& Text, struct FString* Ip, int* Port);
 	struct FRotator STATIC_NormalizeRotator(const struct FRotator& Rotator);
-	struct FString STATIC_MakeAuthTokenForUser(class UDbUser* user, const struct FString& password);
-	struct FString STATIC_MakeAuthTokenForCurrentUser(class AActor* Context, const struct FString& password);
+	struct FString STATIC_MakeAuthTokenForUser(class UUser* User, const struct FString& password);
+	struct FString STATIC_MakeAuthTokenForCurrentUser(class UObject* WorldContextObject, const struct FString& password);
 	struct FString STATIC_MakeAuthToken(const struct FString& UserId, const struct FString& password);
 	struct FDateTime STATIC_LocalToUtcDateTime(const struct FDateTime& Local);
 	bool STATIC_LineBoxIntersection(const struct FBox& Box, const struct FVector& Start, const struct FVector& End, const struct FVector& startToEnd, struct FVector* HitLocation);
 	bool STATIC_IsWorldStreamed(class UObject* WorldContextObject);
 	bool STATIC_IsUserDeveloper(const struct FString& UserId);
-	bool STATIC_IsUserAdmin(class UObject* WorldContextObject, const struct FString& UserId);
 	bool STATIC_IsPointWithinCircle(const struct FVector2D& Point, const struct FVector2D& circleCenter, float circleRadius);
 	bool STATIC_IsDeluxeVersionInstalled();
 	struct FVector2D STATIC_GetRandomPointWithinTwoCircles(const struct FVector2D& centerA, float radiusA, const struct FVector2D& centerB, float radiusB);
@@ -10741,8 +10533,8 @@ public:
 	class UDataSingleton* STATIC_GetDataSingleton();
 	class UObject* STATIC_GetClassDefaultObject(class UClass* ObjectClass);
 	float STATIC_GetCircleYForX(float X, const struct FVector2D& Center, float Radius, bool Up);
-	struct FString STATIC_GetAuthTokenForUser(class UDbUser* user, const struct FString& ServerIp, int ServerResponsePort);
-	struct FString STATIC_GetAuthTokenForCurrentUser(class AActor* Context, const struct FString& ServerIp, int ServerResponsePort);
+	struct FString STATIC_GetAuthTokenForUser(class UUser* User, const struct FString& ServerIp, int ServerResponsePort);
+	struct FString STATIC_GetAuthTokenForCurrentUser(class UObject* WorldContextObject, const struct FString& ServerIp, int ServerResponsePort);
 	class UActorComponent* STATIC_GetActorComponentByName(class AActor* Actor, const struct FName& Name);
 	struct FVector STATIC_GetActorBoundsCenter(class AActor* Actor, bool onlyCollidingComponents);
 	bool STATIC_FindTeleportSpotInArea(class AActor* Actor, float minRadius, float MaxRadius, int numIterationsPerRadius, int numIterationsPerSlice, struct FVector* Location, struct FRotator* Rotation);
@@ -10988,7 +10780,7 @@ public:
 	class UMissionResult* GetMissionResultWidget();
 	bool GetMainCanvasVisibility();
 	class UJournalPanelWidget* GetJournalPanelWidget();
-	class UInventoryPanelSecondIteration* GetInventoryPanel();
+	class UInventoryPanelThirdIteration* GetInventoryPanel();
 	class UHandPanel3* GetHandPanel();
 	class UDialogueContainerWidget* GetDialogueContainerWidget();
 	class UCraftingPanelWidget* GetCraftingPanel();
@@ -11073,6 +10865,23 @@ public:
 };
 
 
+// Class ConZ.InsertCartridgeIntoMagazine
+// 0x0010 (0x0090 - 0x0080)
+class UInsertCartridgeIntoMagazine : public UWeaponActionReloadSequence
+{
+public:
+	struct FName                                       MontageEndSectionName;                                    // 0x0080(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0088(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ConZ.InsertCartridgeIntoMagazine");
+		return ptr;
+	}
+
+};
+
+
 // Class ConZ.InsertMagazine
 // 0x0000 (0x0080 - 0x0080)
 class UInsertMagazine : public UWeaponActionReloadSequence
@@ -11125,48 +10934,48 @@ public:
 
 
 // Class ConZ.InstrumentItem
-// 0x01F8 (0x0A10 - 0x0818)
+// 0x01F8 (0x09F0 - 0x07F8)
 class AInstrumentItem : public AItem
 {
 public:
-	unsigned char                                      UnknownData00[0xC];                                       // 0x0818(0x000C) MISSED OFFSET
-	int                                                _numberOfOctaves;                                         // 0x0824(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                _playInstrumentStartMontageFP;                            // 0x0828(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                _playInstrumentStartMontageTP;                            // 0x0830(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                _playInstrumentStopMontageFP;                             // 0x0838(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                _playInstrumentStopMontageTP;                             // 0x0840(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimSequenceBase*                           _playInstrumentIdleAnimationFP;                           // 0x0848(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimSequenceBase*                           _playInstrumentPlayingAnimationFP;                        // 0x0850(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimSequenceBase*                           _playInstrumentIdleAnimationTP;                           // 0x0858(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimSequenceBase*                           _playInstrumentPlayingAnimationTP;                        // 0x0860(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _playingPoseHoldTime;                                     // 0x0868(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x086C(0x0004) MISSED OFFSET
-	TArray<class UAkAudioEvent*>                       _noteCStart;                                              // 0x0870(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteCStop;                                               // 0x0880(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteDStart;                                              // 0x0890(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteDStop;                                               // 0x08A0(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteDbStart;                                             // 0x08B0(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteDbStop;                                              // 0x08C0(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteEStart;                                              // 0x08D0(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteEStop;                                               // 0x08E0(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteEbStart;                                             // 0x08F0(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteEbStop;                                              // 0x0900(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteFStart;                                              // 0x0910(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteFStop;                                               // 0x0920(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteGStart;                                              // 0x0930(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteGStop;                                               // 0x0940(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteGbStart;                                             // 0x0950(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteGbStop;                                              // 0x0960(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteAStart;                                              // 0x0970(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteAStop;                                               // 0x0980(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteAbStart;                                             // 0x0990(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteAbStop;                                              // 0x09A0(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteBStart;                                              // 0x09B0(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteBStop;                                               // 0x09C0(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteBbStart;                                             // 0x09D0(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteBbStop;                                              // 0x09E0(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteC2Start;                                             // 0x09F0(0x0010) (Edit, ZeroConstructor)
-	TArray<class UAkAudioEvent*>                       _noteC2Stop;                                              // 0x0A00(0x0010) (Edit, ZeroConstructor)
+	unsigned char                                      UnknownData00[0xC];                                       // 0x07F8(0x000C) MISSED OFFSET
+	int                                                _numberOfOctaves;                                         // 0x0804(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                _playInstrumentStartMontageFP;                            // 0x0808(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                _playInstrumentStartMontageTP;                            // 0x0810(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                _playInstrumentStopMontageFP;                             // 0x0818(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                _playInstrumentStopMontageTP;                             // 0x0820(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimSequenceBase*                           _playInstrumentIdleAnimationFP;                           // 0x0828(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimSequenceBase*                           _playInstrumentPlayingAnimationFP;                        // 0x0830(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimSequenceBase*                           _playInstrumentIdleAnimationTP;                           // 0x0838(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimSequenceBase*                           _playInstrumentPlayingAnimationTP;                        // 0x0840(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _playingPoseHoldTime;                                     // 0x0848(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x084C(0x0004) MISSED OFFSET
+	TArray<class UAkAudioEvent*>                       _noteCStart;                                              // 0x0850(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteCStop;                                               // 0x0860(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteDStart;                                              // 0x0870(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteDStop;                                               // 0x0880(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteDbStart;                                             // 0x0890(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteDbStop;                                              // 0x08A0(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteEStart;                                              // 0x08B0(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteEStop;                                               // 0x08C0(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteEbStart;                                             // 0x08D0(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteEbStop;                                              // 0x08E0(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteFStart;                                              // 0x08F0(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteFStop;                                               // 0x0900(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteGStart;                                              // 0x0910(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteGStop;                                               // 0x0920(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteGbStart;                                             // 0x0930(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteGbStop;                                              // 0x0940(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteAStart;                                              // 0x0950(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteAStop;                                               // 0x0960(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteAbStart;                                             // 0x0970(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteAbStop;                                              // 0x0980(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteBStart;                                              // 0x0990(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteBStop;                                               // 0x09A0(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteBbStart;                                             // 0x09B0(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteBbStop;                                              // 0x09C0(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteC2Start;                                             // 0x09D0(0x0010) (Edit, ZeroConstructor)
+	TArray<class UAkAudioEvent*>                       _noteC2Stop;                                              // 0x09E0(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -11189,11 +10998,23 @@ public:
 		return ptr;
 	}
 
+
+	void OnHovered(class APrisoner* Prisoner);
+	bool IsAbleToInteractWithItem(class AItem* Item);
+	void InteractWithItem(class APlayerController* PlayerController, class AItem* Item, EInteractionType interactionType, const struct FInteractionData& InteractionData);
+	void Interact(class APrisoner* User, EInteractionType interactionType, const struct FInteractionData& InteractionData);
+	EInteractionState GetStateForInteractionWithItem(class AItem* Item);
+	TArray<struct FInteractionStruct> GetInteractionsWithItem(class UObject* User, class AItem* Item);
+	TArray<struct FInteractionStruct> GetInteractions(class UObject* User, class UObject* creator, const struct FInteractionQueryParameters& Params);
+	struct FText GetInteractionHint(class UObject* User);
+	struct FInteractionStruct GetDefaultInteractionForPrisoner(class APrisoner* Prisoner, const struct FInteractionQueryParameters& Params);
+	struct FInteractionStruct GetDefaultInteractionForDrone(class ADrone* Drone, const struct FInteractionQueryParameters& Params);
+	bool CanInteract(class APrisoner* User);
 };
 
 
 // Class ConZ.InteractionComponent
-// 0x0168 (0x0258 - 0x00F0)
+// 0x0160 (0x0250 - 0x00F0)
 class UInteractionComponent : public UActorComponent
 {
 public:
@@ -11210,11 +11031,11 @@ public:
 	int                                                SavedGroundSearchLocationsCount;                          // 0x011C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x18];                                      // 0x0120(0x0018) MISSED OFFSET
 	TArray<class UInteractionAction*>                  _actions;                                                 // 0x0138(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData02[0xB0];                                      // 0x0148(0x00B0) MISSED OFFSET
-	struct FSpawnedItems                               _replicatedExamineSpawnedItems;                           // 0x01F8(0x0018) (Net)
-	struct FSpawnedItems                               _replicatedPickupSpawnedItem;                             // 0x0210(0x0018) (Net)
-	unsigned char                                      UnknownData03[0x2C];                                      // 0x0228(0x002C) MISSED OFFSET
-	float                                              _drinkAllowedThreshold;                                   // 0x0254(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0xA8];                                      // 0x0148(0x00A8) MISSED OFFSET
+	struct FSpawnedItems                               _replicatedExamineSpawnedItems;                           // 0x01F0(0x0018) (Net)
+	struct FSpawnedItems                               _replicatedPickupSpawnedItem;                             // 0x0208(0x0018) (Net)
+	unsigned char                                      UnknownData03[0x2C];                                      // 0x0220(0x002C) MISSED OFFSET
+	float                                              _drinkAllowedThreshold;                                   // 0x024C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -11225,13 +11046,14 @@ public:
 
 	void UseItemOnServer(class AItem* Item, int usage, float usageWeight, bool Eat);
 	void UpdateItemDataOnServer(class AItem* Item);
-	void UpdateExistenceOnClient(bool Exists);
+	void UpdateExistenceOnClient(bool exists);
 	void UnspawnExaminedItemsOnServer(bool destroyItems);
 	void UnexamineItemOnServer(class AItem* Item);
 	void UnexamineItemOnClient(class AItem* Item);
 	void UncraftItemOnServer(class AItem* Item);
 	void TankFuelOnServer(class AFuelTank* FuelTank, class AFuelCanister* FuelCanister, float quantity);
 	void StoreItemsOnServer(class UMeshComponent* MeshComponent, int InstanceIndex, const struct FVector& instanceLocation, TArray<class AItem*> storeItems);
+	void StopExamining();
 	void PickupItemOnServer(class UMeshComponent* MeshComponent, int InstanceIndex, class UStaticMesh* StaticMesh, const struct FVector& pickupLocation, EPickupItemOperation Operation);
 	void PickupItemOnClients(class UMeshComponent* MeshComponent, int InstanceIndex, class UStaticMesh* StaticMesh, const struct FVector& pickupLocation);
 	void OperateGeneratorOnServer(class APowerGenerator* generator, bool working);
@@ -11241,15 +11063,13 @@ public:
 	void OnRep_PickupSpawnedItem();
 	void OnRep_ExamineSpawnedItems();
 	void LockElectricDoorOnServer(class ADoor* Door, bool Lock, const struct FString& password);
-	void InteractWithBaseElement(EInteractionType InteractionType, const struct FConZBaseInteractionData& baseData, const struct FConZBaseElementInteractionData& elementData);
+	void InteractWithBaseElement(EInteractionType interactionType, const struct FConZBaseInteractionData& baseData, const struct FConZBaseElementInteractionData& elementData);
 	void FinishPickupItemOnServer();
 	void FinishExaminePrisonerOnServer(class APrisoner* Prisoner);
 	void FinishExamineObjectOnServer();
 	void FillWaterOnServer(class AItem* Item, float Ratio, float salinity);
 	void FillCanisterOnServer(class AFuelPump* FuelPump, class AFuelCanister* FuelCanister, float quantity);
 	void ExecuteInteractionOnServer(class AItem* interactionItem, EInteractionType Interaction, const struct FServerCraftableItem& CraftableItem);
-	void ExamineWidgetIsEmpty();
-	void ExamineWidgetClose();
 	void ExaminePrisonerOnServer(class APrisoner* Prisoner);
 	void ExamineObjectOnServer(class UMeshComponent* MeshComponent, int InstanceIndex, const struct FVector& instanceLocation);
 	void DestroyItemOnServer(class AItem* Item);
@@ -11587,30 +11407,6 @@ public:
 };
 
 
-// Class ConZ.InventoryContainersWidget
-// 0x0028 (0x0248 - 0x0220)
-class UInventoryContainersWidget : public UDesignableUserWidget
-{
-public:
-	class UGridPanel*                                  MainGridPanel;                                            // 0x0220(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TArray<class AItem*>                               Items;                                                    // 0x0228(0x0010) (ZeroConstructor)
-	class UGenericItemContainerWidget*                 ParentWidget;                                             // 0x0238(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UImage*                                      ExtraSlotImage;                                           // 0x0240(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ConZ.InventoryContainersWidget");
-		return ptr;
-	}
-
-
-	void RemoveItem(class AItem* Item);
-	class UItemUserWidget* GetWidgetForItem(class AItem* Item);
-	void ChangeTitle(const struct FText& Title);
-	class UItemUserWidget* AddItem(class AItem* Item);
-};
-
-
 // Class ConZ.InventoryPositionDataTest
 // 0x0008 (0x0030 - 0x0028)
 class UInventoryPositionDataTest : public UInventoryPositionData
@@ -11811,26 +11607,6 @@ public:
 };
 
 
-// Class ConZ.InventoryPanelSecondIteration
-// 0x0000 (0x0220 - 0x0220)
-class UInventoryPanelSecondIteration : public UDesignableUserWidget
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ConZ.InventoryPanelSecondIteration");
-		return ptr;
-	}
-
-
-	void UpdateItemWidgetHighlightings();
-	void UpdateContainerForItem(class AItem* Item);
-	void RemoveContainerForItem(class AItem* Item);
-	void AddContainerForItem(class AItem* Item);
-};
-
-
 // Class ConZ.InventoryPanelSideLayerWidget
 // 0x0008 (0x0228 - 0x0220)
 class UInventoryPanelSideLayerWidget : public UDesignableUserWidget
@@ -11851,7 +11627,7 @@ public:
 
 // Class ConZ.InventoryPanelThirdIteration
 // 0x0130 (0x0350 - 0x0220)
-class UInventoryPanelThirdIteration : public UInventoryPanelSecondIteration
+class UInventoryPanelThirdIteration : public UDesignableUserWidget
 {
 public:
 	TWeakObjectPtr<class ACharacter>                   _displayedCharacter;                                      // 0x0220(0x0008) (ZeroConstructor, IsPlainOldData)
@@ -11872,7 +11648,11 @@ public:
 	}
 
 
+	void UpdateItemWidgetHighlightings();
+	void UpdateContainerForItem(class AItem* Item);
 	void SetDisplayedCharacterName(const struct FString& Name);
+	void RemoveContainerForItem(class AItem* Item);
+	void AddContainerForItem(class AItem* Item);
 };
 
 
@@ -11888,26 +11668,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class ConZ.InventorySecondIteration
-// 0x0008 (0x0260 - 0x0258)
-class UInventorySecondIteration : public UBaseItemContainerWidget
-{
-public:
-	class AItem*                                       _item;                                                    // 0x0258(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ConZ.InventorySecondIteration");
-		return ptr;
-	}
-
-
-	void UpdateItemWidgetHighlightings();
-	void UpdateContainer();
-	void Blink();
 };
 
 
@@ -11963,30 +11723,6 @@ public:
 	void InteractWith(class APrisoner* Prisoner);
 	void Init(class UClass* ItemClass, class UTexture2D* Texture);
 	void Examine();
-};
-
-
-// Class ConZ.ItemContainer
-// 0x0018 (0x0238 - 0x0220)
-class UItemContainer : public UDesignableUserWidget
-{
-public:
-	class UGridPanel*                                  MainGridPanel;                                            // 0x0220(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class AItem*                                       UnderlyingItem;                                           // 0x0228(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               _isHands;                                                 // 0x0230(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               _isCollapsed;                                             // 0x0231(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x0232(0x0006) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ConZ.ItemContainer");
-		return ptr;
-	}
-
-
-	void ShowInteractions(class AItem* Item);
-	void Expand();
-	void Collapse();
 };
 
 
@@ -12275,17 +12011,17 @@ public:
 
 
 // Class ConZ.ItemWithText
-// 0x0040 (0x0858 - 0x0818)
+// 0x0058 (0x0850 - 0x07F8)
 class AItemWithText : public AItem
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0818(0x0008) MISSED OFFSET
-	int                                                MaxTextCharactersPerRow;                                  // 0x0820(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                MaxTextRows;                                              // 0x0824(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UWidgetComponent*                            _textWidgetComponent;                                     // 0x0828(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	struct FString                                     _text;                                                    // 0x0830(0x0010) (Net, ZeroConstructor)
-	struct FDbIntegerId                                _owningUserProfileId;                                     // 0x0840(0x0008) (Net)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0848(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x07F8(0x0008) MISSED OFFSET
+	int                                                MaxTextCharactersPerRow;                                  // 0x0800(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                MaxTextRows;                                              // 0x0804(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UWidgetComponent*                            _textWidgetComponent;                                     // 0x0808(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	struct FString                                     _text;                                                    // 0x0810(0x0010) (Net, ZeroConstructor)
+	struct FDbIntegerId                                _owningUserProfileId;                                     // 0x0820(0x0008) (Net)
+	unsigned char                                      UnknownData01[0x28];                                      // 0x0828(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -12294,7 +12030,7 @@ public:
 	}
 
 
-	void OnTextAccepted(class APrisoner* user, const struct FText& Text);
+	void OnTextAccepted(class APrisoner* User, const struct FText& Text);
 	void OnRep_Text();
 	void OnLocalPrisonerPanelsClosed_ItemWithText();
 };
@@ -12586,18 +12322,19 @@ public:
 
 
 // Class ConZ.LightItem
-// 0x0080 (0x00A8 - 0x0028)
+// 0x0088 (0x00B0 - 0x0028)
 class ULightItem : public UObject
 {
 public:
 	unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) MISSED OFFSET
 	class UClass*                                      _itemClass;                                               // 0x0048(0x0008) (Net, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x10];                                      // 0x0050(0x0010) MISSED OFFSET
-	struct FLightItemData                              _data;                                                    // 0x0060(0x0018) (Net)
-	TScriptInterface<class UInventoryContainer>        _owningContainer;                                         // 0x0078(0x0010) (ZeroConstructor, IsPlainOldData)
-	TScriptInterface<class UInventoryNode>             _owningNode;                                              // 0x0088(0x0010) (ZeroConstructor, IsPlainOldData)
-	bool                                               _firstReplication;                                        // 0x0098(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0xF];                                       // 0x0099(0x000F) MISSED OFFSET
+	struct FLightItemData                              _data;                                                    // 0x0060(0x001C) (Net)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x007C(0x0004) MISSED OFFSET
+	TScriptInterface<class UInventoryContainer>        _owningContainer;                                         // 0x0080(0x0010) (ZeroConstructor, IsPlainOldData)
+	TScriptInterface<class UInventoryNode>             _owningNode;                                              // 0x0090(0x0010) (ZeroConstructor, IsPlainOldData)
+	bool                                               _firstReplication;                                        // 0x00A0(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0xF];                                       // 0x00A1(0x000F) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -12850,7 +12587,7 @@ public:
 
 
 // Class ConZ.LookoutItem
-// 0x0000 (0x0818 - 0x0818)
+// 0x0000 (0x07F8 - 0x07F8)
 class ALookoutItem : public AItem
 {
 public:
@@ -12895,7 +12632,7 @@ public:
 	}
 
 
-	void UpdatePreviewPrisoner(class APrisoner* Prisoner, class UDbUserProfile* profile);
+	void UpdatePreviewPrisoner(class APrisoner* Prisoner, class UUserProfile* profile);
 	void UITransition(class UClass** newWidget);
 };
 
@@ -12962,17 +12699,22 @@ public:
 
 
 // Class ConZ.MechanoidsManager
-// 0x0058 (0x0380 - 0x0328)
+// 0x0068 (0x0390 - 0x0328)
 class AMechanoidsManager : public AActor
 {
 public:
 	class UClass*                                      DroneSpawnClass;                                          // 0x0328(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              SendDroneIntervalPerPlayer;                               // 0x0330(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DroneSpawnDistance;                                       // 0x0334(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DroneSpawnHeight;                                         // 0x0338(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DroneCheckForNearbyPlayerDistance;                        // 0x033C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   DronePatrolDistanceRange;                                 // 0x0340(0x0008) (Edit, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x38];                                      // 0x0348(0x0038) MISSED OFFSET
+	float                                              DroneSpawnDistance;                                       // 0x0330(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DroneSpawnHeight;                                         // 0x0334(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              DroneCheckForNearbyPlayerDistance;                        // 0x0338(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   DronePatrolDistanceRange;                                 // 0x033C(0x0008) (Edit, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x34];                                      // 0x0344(0x0034) MISSED OFFSET
+	float                                              _minDroneTargetInitialVisitTime;                          // 0x0378(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _maxDroneTargetInitialVisitTime;                          // 0x037C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _minDroneTargetRevisitTime;                               // 0x0380(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _maxDroneTargetRevisitTime;                               // 0x0384(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _droneVisitClusterRadius;                                 // 0x0388(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x038C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -12980,6 +12722,8 @@ public:
 		return ptr;
 	}
 
+
+	void Drone_OnDestroyed(class AActor* sender);
 };
 
 
@@ -13055,14 +12799,14 @@ public:
 
 
 // Class ConZ.MedicationItem
-// 0x0008 (0x0820 - 0x0818)
+// 0x0008 (0x0800 - 0x07F8)
 class AMedicationItem : public AItem
 {
 public:
-	EMedicationUsage                                   usage;                                                    // 0x0818(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	EMedicationType                                    Type;                                                     // 0x0819(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x081A(0x0002) MISSED OFFSET
-	float                                              DailyDoses;                                               // 0x081C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	EMedicationUsage                                   usage;                                                    // 0x07F8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	EMedicationType                                    Type;                                                     // 0x07F9(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x07FA(0x0002) MISSED OFFSET
+	float                                              DailyDoses;                                               // 0x07FC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -13651,24 +13395,24 @@ public:
 
 
 // Class ConZ.MoundItem
-// 0x0050 (0x0868 - 0x0818)
+// 0x0050 (0x0848 - 0x07F8)
 class AMoundItem : public AItem
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0818(0x0008) MISSED OFFSET
-	struct FDbIntegerId                                _userProfileId;                                           // 0x0820(0x0008) (Net)
-	class UClass*                                      _moundItemClass;                                          // 0x0828(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UMaterialBillboardComponent*                 _spriteMarkerBillboard;                                   // 0x0830(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class UMaterialInstanceDynamic*                    _distanceBasedDynMat;                                     // 0x0838(0x0008) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EPhysicalSurface>                      _surfaceType;                                             // 0x0840(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0841(0x0007) MISSED OFFSET
-	int64_t                                            _timeToDecay;                                             // 0x0848(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	float                                              _minStartFadeDistance;                                    // 0x0850(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _maxStartFadeDistance;                                    // 0x0854(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _minEndFadeDistance;                                      // 0x0858(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _maxEndFadeDistance;                                      // 0x085C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _startFadeDistance;                                       // 0x0860(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	float                                              _endFadeDistance;                                         // 0x0864(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x07F8(0x0008) MISSED OFFSET
+	struct FDbIntegerId                                _userProfileId;                                           // 0x0800(0x0008) (Net)
+	class UClass*                                      _moundItemClass;                                          // 0x0808(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UMaterialBillboardComponent*                 _spriteMarkerBillboard;                                   // 0x0810(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UMaterialInstanceDynamic*                    _distanceBasedDynMat;                                     // 0x0818(0x0008) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EPhysicalSurface>                      _surfaceType;                                             // 0x0820(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0821(0x0007) MISSED OFFSET
+	int64_t                                            _timeToDecay;                                             // 0x0828(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              _minStartFadeDistance;                                    // 0x0830(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _maxStartFadeDistance;                                    // 0x0834(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _minEndFadeDistance;                                      // 0x0838(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _maxEndFadeDistance;                                      // 0x083C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _startFadeDistance;                                       // 0x0840(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              _endFadeDistance;                                         // 0x0844(0x0004) (Net, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -13799,16 +13543,16 @@ public:
 
 
 // Class ConZ.NightVisionGogglesItem
-// 0x0030 (0x0900 - 0x08D0)
+// 0x0030 (0x08E0 - 0x08B0)
 class ANightVisionGogglesItem : public AClothesItem
 {
 public:
-	class UStaticMesh*                                 EquippedStaticMeshWhenActivated;                          // 0x08D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               ActivatedSound;                                           // 0x08D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               DeactivatedSound;                                         // 0x08E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FScriptMulticastDelegate                    ActivatedChanged;                                         // 0x08E8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	bool                                               _isActivated;                                             // 0x08F8(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x08F9(0x0007) MISSED OFFSET
+	class UStaticMesh*                                 EquippedStaticMeshWhenActivated;                          // 0x08B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               ActivatedSound;                                           // 0x08B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               DeactivatedSound;                                         // 0x08C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FScriptMulticastDelegate                    ActivatedChanged;                                         // 0x08C8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	bool                                               _isActivated;                                             // 0x08D8(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x08D9(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -13918,31 +13662,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class ConZ.ObjectSelectionContainerWidget
-// 0x0040 (0x0298 - 0x0258)
-class UObjectSelectionContainerWidget : public UBaseItemContainerWidget
-{
-public:
-	unsigned char                                      MaxWidth;                                                 // 0x0258(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      MaxHeight;                                                // 0x0259(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x025A(0x0006) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnDoubleClickedOnHeader;                                  // 0x0260(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData01[0x28];                                      // 0x0270(0x0028) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ConZ.ObjectSelectionContainerWidget");
-		return ptr;
-	}
-
-
-	void OnInteractionObjectDestroyed(class AActor* Actor);
-	bool HasItem(class AItem* Item);
-	void DoubleClickedOnHeaderDelegate__DelegateSignature(class UObjectSelectionContainerWidget* Widget);
-	void Close();
 };
 
 
@@ -14234,7 +13953,7 @@ public:
 
 
 // Class ConZ.PlaceableActor
-// 0x0180 (0x04A8 - 0x0328)
+// 0x01A8 (0x04D0 - 0x0328)
 class APlaceableActor : public AActor
 {
 public:
@@ -14260,10 +13979,11 @@ public:
 	bool                                               _isPlacementAllowed;                                      // 0x03E0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData05[0x5F];                                      // 0x03E1(0x005F) MISSED OFFSET
 	class UClass*                                      _baseBuildingBlockToSpawn;                                // 0x0440(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x24];                                      // 0x0448(0x0024) MISSED OFFSET
-	struct FVector                                     _secondPlacedPointZero;                                   // 0x046C(0x000C) (Net, IsPlainOldData)
-	TArray<struct FTransform>                          _tilesTransforms;                                         // 0x0478(0x0010) (Net, ZeroConstructor)
-	unsigned char                                      UnknownData07[0x20];                                      // 0x0488(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData06[0x40];                                      // 0x0448(0x0040) MISSED OFFSET
+	struct FVector                                     _secondPlacedPointZero;                                   // 0x0488(0x000C) (Net, IsPlainOldData)
+	unsigned char                                      UnknownData07[0x4];                                       // 0x0494(0x0004) MISSED OFFSET
+	TArray<struct FTransform>                          _tilesTransforms;                                         // 0x0498(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData08[0x28];                                      // 0x04A8(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -14334,6 +14054,9 @@ public:
 	void Server_SwitchActiveMission(class UClass* missionClass);
 	void Server_ResetMission(class UClass* missionClass, EMissionType MissionType, bool restartMission);
 	void Server_ReportUnachievedAchievements(class APlayerController* PlayerController, TArray<struct FString> achievementsIds);
+	void ItemWithText_Server_RequestStateUpdate(class AItemWithText* Item);
+	void ItemWithText_Client_UpdateState(class AItemWithText* Item, const struct FString& OwnerName);
+	void InteractWithObjectOnServer(class UObject* interactable, class APrisoner* User, EInteractionType interactionType, const struct FInteractionData& InteractionData);
 	void Client_UnlockAchievement(class APlayerController* PlayerController, const struct FString& AchievementID);
 	void Client_IncreaseStat(class APlayerController* PlayerController, const struct FString& statId);
 	void BaseBuilding_Server_RequestElementStateUpdate(const struct FVector& Location, float areaSize);
@@ -14414,7 +14137,7 @@ public:
 
 
 // Class ConZ.Prisoner
-// 0x19C0 (0x2300 - 0x0940)
+// 0x19D0 (0x2310 - 0x0940)
 class APrisoner : public AConZCharacter
 {
 public:
@@ -14579,7 +14302,7 @@ public:
 	unsigned char                                      UnknownData17[0x4];                                       // 0x0FA4(0x0004) MISSED OFFSET
 	class UMaterialParameterCollection*                _commonParameterCollection;                               // 0x0FA8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData18[0x8];                                       // 0x0FB0(0x0008) MISSED OFFSET
-	class UDbUserProfile*                              _userProfile;                                             // 0x0FB8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UUserProfile*                                _userProfile;                                             // 0x0FB8(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FString                                     _userId;                                                  // 0x0FC0(0x0010) (Net, ZeroConstructor)
 	struct FDbIntegerId                                _serverUserProfileId;                                     // 0x0FD0(0x0008) (Net)
 	struct FString                                     _userProfileName;                                         // 0x0FD8(0x0010) (Net, ZeroConstructor)
@@ -14778,74 +14501,74 @@ public:
 	uint32_t                                           _packedWaterWeight;                                       // 0x1FA0(0x0004) (Net, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData50[0x8];                                       // 0x1FA4(0x0008) MISSED OFFSET
 	float                                              _wetnessReachableFromSkyChecksInterval;                   // 0x1FAC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData51[0x10];                                      // 0x1FB0(0x0010) MISSED OFFSET
-	class AGameEventBase*                              _gameEvent;                                               // 0x1FC0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class UPrisonerLoadout*                            _gameEventLoadout;                                        // 0x1FC8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData52[0x10];                                      // 0x1FD0(0x0010) MISSED OFFSET
-	struct FPrisonerNearbyFoliageInfo                  _nearbyFoliageInfo;                                       // 0x1FE0(0x0010)
-	unsigned char                                      UnknownData53[0xA0];                                      // 0x1FF0(0x00A0) MISSED OFFSET
-	class UWidgetComponent*                            _nameWidgetComponent;                                     // 0x2090(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	int                                                _chipLightColorIndex;                                     // 0x2098(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData54[0x4];                                       // 0x209C(0x0004) MISSED OFFSET
-	class UBaseItemTag*                                SaveSpawnLocationTag;                                     // 0x20A0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData55[0x1C];                                      // 0x20A8(0x001C) MISSED OFFSET
-	bool                                               _isDeluxePlayer;                                          // 0x20C4(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               _isTalking;                                               // 0x20C5(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData56[0x2];                                       // 0x20C6(0x0002) MISSED OFFSET
-	float                                              _dedicatedServerHandleFootstepInterval;                   // 0x20C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData57[0x4];                                       // 0x20CC(0x0004) MISSED OFFSET
-	TWeakObjectPtr<class APrisoner>                    _examinedPrisoner;                                        // 0x20D0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData58[0x18];                                      // 0x20D8(0x0018) MISSED OFFSET
-	EPlayingInstrumentState                            _playingInstrumentState;                                  // 0x20F0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData59[0x1];                                       // 0x20F1(0x0001) MISSED OFFSET
-	ECarryingItemState                                 _carryingItemState;                                       // 0x20F2(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData60[0xD];                                       // 0x20F3(0x000D) MISSED OFFSET
-	float                                              _playInstrumentEventNetworkDelay;                         // 0x2100(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData61[0x8];                                       // 0x2104(0x0008) MISSED OFFSET
-	float                                              _playInstrumentExitStateDuration;                         // 0x210C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData62[0x10];                                      // 0x2110(0x0010) MISSED OFFSET
-	float                                              _breastSizeMin;                                           // 0x2120(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              _breastSizeMax;                                           // 0x2124(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              _breastSizeDeluxeModifier;                                // 0x2128(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              _breastSizeAdminModifier;                                 // 0x212C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     _penisLocationLean;                                       // 0x2130(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	struct FVector                                     _penisLocationFat;                                        // 0x213C(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	struct FVector                                     _penisHandleLocationLean;                                 // 0x2148(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	struct FVector                                     _penisHandleLocationFat;                                  // 0x2154(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	float                                              _penisMinSizeHandleZ;                                     // 0x2160(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              _penisMaxSizeHandleZ;                                     // 0x2164(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               _shouldShowPenisOverride;                                 // 0x2168(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData63[0x3];                                       // 0x2169(0x0003) MISSED OFFSET
-	float                                              _penisSizeMin;                                            // 0x216C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              _penisSizeMax;                                            // 0x2170(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              _penisSizeDeluxeModifier;                                 // 0x2174(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              _penisSizeAdminModifier;                                  // 0x2178(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData64[0x8];                                       // 0x217C(0x0008) MISSED OFFSET
-	float                                              _mountSpeedThreshold;                                     // 0x2184(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _unmountSpeedThreshold;                                   // 0x2188(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _unmountSpeedThresholdForRagdoll;                         // 0x218C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _mountTiltAngleForRagdoll;                                // 0x2190(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData65[0x14];                                      // 0x2194(0x0014) MISSED OFFSET
-	struct FPrisonerMountReplication                   _repMount;                                                // 0x21A8(0x0010) (Net)
-	class UMIDIDeviceController*                       _midiDeviceController;                                    // 0x21B8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData66[0x38];                                      // 0x21C0(0x0038) MISSED OFFSET
-	float                                              _rareSuicideAnimationChance;                              // 0x21F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               _hasInfiniteAmmo;                                         // 0x21FC(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               _isInGodMode;                                             // 0x21FD(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               _isImmortal;                                              // 0x21FE(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData67[0x21];                                      // 0x21FF(0x0021) MISSED OFFSET
-	float                                              _hairLength;                                              // 0x2220(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
-	float                                              _facialHairLength;                                        // 0x2224(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData68[0xC];                                       // 0x2228(0x000C) MISSED OFFSET
-	float                                              _hairGrowthTotalTime;                                     // 0x2234(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              _facialHairGrowthTotalTime;                               // 0x2238(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              _hairUpdateRate;                                          // 0x223C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               _enablePerComponentReplicationFrequency;                  // 0x2240(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData69[0x3];                                       // 0x2241(0x0003) MISSED OFFSET
-	float                                              _componentsReplicationFrequency[0x5];                     // 0x2244(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData70[0x34];                                      // 0x2258(0x0034) MISSED OFFSET
-	float                                              _maxRestingAngle;                                         // 0x228C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData71[0x70];                                      // 0x2290(0x0070) MISSED OFFSET
+	unsigned char                                      UnknownData51[0x18];                                      // 0x1FB0(0x0018) MISSED OFFSET
+	class AGameEventBase*                              _gameEvent;                                               // 0x1FC8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class UPrisonerLoadout*                            _gameEventLoadout;                                        // 0x1FD0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData52[0x10];                                      // 0x1FD8(0x0010) MISSED OFFSET
+	struct FPrisonerNearbyFoliageInfo                  _nearbyFoliageInfo;                                       // 0x1FE8(0x0010)
+	unsigned char                                      UnknownData53[0xA0];                                      // 0x1FF8(0x00A0) MISSED OFFSET
+	class UWidgetComponent*                            _nameWidgetComponent;                                     // 0x2098(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	int                                                _chipLightColorIndex;                                     // 0x20A0(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData54[0x4];                                       // 0x20A4(0x0004) MISSED OFFSET
+	class UBaseItemTag*                                SaveSpawnLocationTag;                                     // 0x20A8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData55[0x1C];                                      // 0x20B0(0x001C) MISSED OFFSET
+	bool                                               _isDeluxePlayer;                                          // 0x20CC(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               _isTalking;                                               // 0x20CD(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData56[0x2];                                       // 0x20CE(0x0002) MISSED OFFSET
+	float                                              _dedicatedServerHandleFootstepInterval;                   // 0x20D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData57[0x4];                                       // 0x20D4(0x0004) MISSED OFFSET
+	TWeakObjectPtr<class APrisoner>                    _examinedPrisoner;                                        // 0x20D8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData58[0x18];                                      // 0x20E0(0x0018) MISSED OFFSET
+	EPlayingInstrumentState                            _playingInstrumentState;                                  // 0x20F8(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData59[0x1];                                       // 0x20F9(0x0001) MISSED OFFSET
+	ECarryingItemState                                 _carryingItemState;                                       // 0x20FA(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData60[0xD];                                       // 0x20FB(0x000D) MISSED OFFSET
+	float                                              _playInstrumentEventNetworkDelay;                         // 0x2108(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData61[0x8];                                       // 0x210C(0x0008) MISSED OFFSET
+	float                                              _playInstrumentExitStateDuration;                         // 0x2114(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData62[0x18];                                      // 0x2118(0x0018) MISSED OFFSET
+	float                                              _breastSizeMin;                                           // 0x2130(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              _breastSizeMax;                                           // 0x2134(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              _breastSizeDeluxeModifier;                                // 0x2138(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              _breastSizeAdminModifier;                                 // 0x213C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     _penisLocationLean;                                       // 0x2140(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	struct FVector                                     _penisLocationFat;                                        // 0x214C(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	struct FVector                                     _penisHandleLocationLean;                                 // 0x2158(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	struct FVector                                     _penisHandleLocationFat;                                  // 0x2164(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	float                                              _penisMinSizeHandleZ;                                     // 0x2170(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              _penisMaxSizeHandleZ;                                     // 0x2174(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               _shouldShowPenisOverride;                                 // 0x2178(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData63[0x3];                                       // 0x2179(0x0003) MISSED OFFSET
+	float                                              _penisSizeMin;                                            // 0x217C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              _penisSizeMax;                                            // 0x2180(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              _penisSizeDeluxeModifier;                                 // 0x2184(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              _penisSizeAdminModifier;                                  // 0x2188(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData64[0x8];                                       // 0x218C(0x0008) MISSED OFFSET
+	float                                              _mountSpeedThreshold;                                     // 0x2194(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _unmountSpeedThreshold;                                   // 0x2198(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _unmountSpeedThresholdForRagdoll;                         // 0x219C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _mountTiltAngleForRagdoll;                                // 0x21A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData65[0x14];                                      // 0x21A4(0x0014) MISSED OFFSET
+	struct FPrisonerMountReplication                   _repMount;                                                // 0x21B8(0x0010) (Net)
+	class UMIDIDeviceController*                       _midiDeviceController;                                    // 0x21C8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData66[0x38];                                      // 0x21D0(0x0038) MISSED OFFSET
+	float                                              _rareSuicideAnimationChance;                              // 0x2208(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               _hasInfiniteAmmo;                                         // 0x220C(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               _isInGodMode;                                             // 0x220D(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               _isImmortal;                                              // 0x220E(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData67[0x21];                                      // 0x220F(0x0021) MISSED OFFSET
+	float                                              _hairLength;                                              // 0x2230(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
+	float                                              _facialHairLength;                                        // 0x2234(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData68[0xC];                                       // 0x2238(0x000C) MISSED OFFSET
+	float                                              _hairGrowthTotalTime;                                     // 0x2244(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              _facialHairGrowthTotalTime;                               // 0x2248(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              _hairUpdateRate;                                          // 0x224C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               _enablePerComponentReplicationFrequency;                  // 0x2250(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData69[0x3];                                       // 0x2251(0x0003) MISSED OFFSET
+	float                                              _componentsReplicationFrequency[0x5];                     // 0x2254(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData70[0x34];                                      // 0x2268(0x0034) MISSED OFFSET
+	float                                              _maxRestingAngle;                                         // 0x229C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData71[0x70];                                      // 0x22A0(0x0070) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -15067,8 +14790,8 @@ public:
 	bool IsActivelyParticipatingInGameEvent();
 	void InventoryComponent_ItemUnequipped(class UPrisonerInventoryComponent* sender, class AItem* Item);
 	void InventoryComponent_ItemEquipped(class UPrisonerInventoryComponent* sender, class AItem* Item);
-	void InteractWithObjectOnServer(class UObject* interactable, EInteractionType InteractionType, const struct FInteractionData& InteractionData);
-	void InteractedDelegate__DelegateSignature(class APrisoner* sender, class UObject* interactable, EInteractionType InteractionType);
+	void InteractWithObjectOnServer(class UObject* interactable, EInteractionType interactionType, const struct FInteractionData& InteractionData);
+	void InteractedDelegate__DelegateSignature(class APrisoner* sender, class UObject* interactable, EInteractionType interactionType);
 	void InitTextMeshFromName(const struct FString& Name);
 	void InitFromCharacterTemplate(const struct FCharacterTemplate& CharacterTemplate);
 	void IncreaseCrouchStage();
@@ -15088,7 +14811,7 @@ public:
 	struct FPrisonerWaterMovementParameters GetWaterMovementParameters();
 	class UVisionEffectsComponent* GetVisionEffectsComponent();
 	struct FString GetUserProfileName();
-	class UDbUserProfile* GetUserProfile();
+	class UUserProfile* GetUserProfile();
 	struct FString GetUserId();
 	class UStaticMeshComponent* GetUpperMouthMeshComponent();
 	class USkeletalMeshComponent* GetUpperHeadSkeletalMeshComponent();
@@ -15188,7 +14911,7 @@ public:
 	void Client_RequestCharacterAction(const struct FCharacterActionReplicationHelper& Value, bool cancelExecutingAction);
 	void Client_OnTakeDamage(float Damage, const struct FDamageEvent& DamageEvent, class AController* eventInstigator, class AActor* DamageCauser);
 	void Client_LoadAmmoIntoMagazine(class AWeaponAttachmentMagazine* magazine, int count);
-	void Client_Interact(class UObject* interactable, EInteractionType InteractionType, const struct FInteractionData& InteractionData);
+	void Client_Interact(class UObject* interactable, EInteractionType interactionType, const struct FInteractionData& InteractionData);
 	void Client_HighlightKeyboardOnDamage();
 	void Client_FadeOutVision(float Duration);
 	void Client_FadeInVision(float Duration);
@@ -17982,39 +17705,32 @@ public:
 
 
 // Class ConZ.PrisonerInventoryComponent
-// 0x02C8 (0x03B8 - 0x00F0)
+// 0x0220 (0x0310 - 0x00F0)
 class UPrisonerInventoryComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x00F0(0x0020) MISSED OFFSET
-	struct FScriptMulticastDelegate                    ItemEquipped;                                             // 0x0110(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    ItemUnequipped;                                           // 0x0120(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	class UObjectSelectionContainerWidget*             SelectionWidget;                                          // 0x0130(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TArray<class UCraftingInfoWidget*>                 CraftingInfoWidgets;                                      // 0x0138(0x0010) (ExportObject, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0148(0x0010) MISSED OFFSET
-	float                                              AddSelectionDuration;                                     // 0x0158(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              AddSelectionReplicationDelay;                             // 0x015C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              TickFrequency;                                            // 0x0160(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0164(0x0004) MISSED OFFSET
-	class UVicinityItemContainerWidget*                VicinityWidget;                                           // 0x0168(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TArray<class UClass*>                              _startingClothesFemale;                                   // 0x0170(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UClass*>                              _startingClothesFemaleDeluxe;                             // 0x0180(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UClass*>                              _startingClothesMale;                                     // 0x0190(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UClass*>                              _startingClothesMaleDeluxe;                               // 0x01A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UCombinedInventoryWidget*>            _inventoryWidgets;                                        // 0x01B0(0x0010) (ExportObject, ZeroConstructor)
-	TMap<TWeakObjectPtr<class AItem>, TWeakObjectPtr<class UGenericItemContainerWidget>> _viewingItemContainerWidgets;                             // 0x01C0(0x0050) (ExportObject, ZeroConstructor)
-	class UHandInventoryWidget*                        _handWidget;                                              // 0x0210(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x8];                                       // 0x0218(0x0008) MISSED OFFSET
-	class UStaticMesh*                                 _chipMesh;                                                // 0x0220(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FItemArray>                          _oldEquippedItems;                                        // 0x0228(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData04[0x20];                                      // 0x0238(0x0020) MISSED OFFSET
-	TMap<TWeakObjectPtr<class AItem>, uint32_t>        _vicinityItems;                                           // 0x0258(0x0050) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData05[0x8];                                       // 0x02A8(0x0008) MISSED OFFSET
-	TMap<struct FGameplayTag, struct FClothesPartSet>  _clothesPartsToDamageByMeleeAttackCapsuleAttachment;      // 0x02B0(0x0050) (Edit, ZeroConstructor)
-	class UInventoryContainerClothes*                  _inventoryClothes;                                        // 0x0300(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UInventoryContainerHandsHolsters*            _inventoryHandsHolsters;                                  // 0x0308(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UInventoryContainerTest*                     _inventorySelection;                                      // 0x0310(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData06[0xA0];                                      // 0x0318(0x00A0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x00F0(0x0010) MISSED OFFSET
+	struct FScriptMulticastDelegate                    ItemEquipped;                                             // 0x0100(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    ItemUnequipped;                                           // 0x0110(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	TArray<class UCraftingInfoWidget*>                 CraftingInfoWidgets;                                      // 0x0120(0x0010) (ExportObject, ZeroConstructor)
+	float                                              AddSelectionDuration;                                     // 0x0130(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              AddSelectionReplicationDelay;                             // 0x0134(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              TickFrequency;                                            // 0x0138(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x013C(0x0004) MISSED OFFSET
+	TArray<class UClass*>                              _startingClothesFemale;                                   // 0x0140(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UClass*>                              _startingClothesFemaleDeluxe;                             // 0x0150(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UClass*>                              _startingClothesMale;                                     // 0x0160(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UClass*>                              _startingClothesMaleDeluxe;                               // 0x0170(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char                                      UnknownData02[0x8];                                       // 0x0180(0x0008) MISSED OFFSET
+	class UStaticMesh*                                 _chipMesh;                                                // 0x0188(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x20];                                      // 0x0190(0x0020) MISSED OFFSET
+	TMap<TWeakObjectPtr<class AItem>, uint32_t>        _vicinityItems;                                           // 0x01B0(0x0050) (Edit, ZeroConstructor)
+	unsigned char                                      UnknownData04[0x8];                                       // 0x0200(0x0008) MISSED OFFSET
+	TMap<struct FGameplayTag, struct FClothesPartSet>  _clothesPartsToDamageByMeleeAttackCapsuleAttachment;      // 0x0208(0x0050) (Edit, ZeroConstructor)
+	class UInventoryContainerClothes*                  _inventoryClothes;                                        // 0x0258(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UInventoryContainerHandsHolsters*            _inventoryHandsHolsters;                                  // 0x0260(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UInventoryContainerTest*                     _inventorySelection;                                      // 0x0268(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData05[0xA0];                                      // 0x0270(0x00A0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -18023,8 +17739,6 @@ public:
 	}
 
 
-	void UpdateItemContainerOnServer(class AItem* Item, const struct FCondensedInventoryContainer& container, EItemContainerOperation Operation);
-	void UpdateItemContainerOnClient(class AItem* Item, const struct FCondensedInventoryContainer& container, EItemContainerOperation Operation);
 	void UnEquipStolenClothesItemOnServer(class APrisoner* stolenPrisoner, class AClothesItem* Item);
 	void UnEquipClothesItemOnServer(class AClothesItem* Item, bool placeInInventory);
 	void UnEquipClothesItem(class AClothesItem* Item, bool placeInInventory);
@@ -18033,26 +17747,19 @@ public:
 	void Server_PickupCorpse(class ACorpse* Corpse);
 	void Server_InitializeItemVirtualizedInventory(class UObject* Item, class UObject* container);
 	void Server_AddItemToQuickAccess(class AItem* Item, int Index);
-	void ResendItemToClientOnServer(class AItem* containingItem, unsigned char column, unsigned char row);
-	void ReportItemNotReceived(unsigned char containerId, unsigned char column, unsigned char row);
 	void RemoveStolenItemOnServer(class APrisoner* stolenPrisoner, class AItem* Item);
 	TScriptInterface<class UInventoryNode> RemoveStacks(int stacksToSplit);
 	void RemoveSelectionItemsOnClients(TArray<class AItem*> Items, bool allClients);
 	void RemoveSelectionItemsOnClient(TArray<class AItem*> Items);
 	void RemoveItemOnServer(class AItem* Item);
-	void RemoveItemOnClient(unsigned char containerId, class AItem* Item);
 	void OnViewingItemPickedUpStateChanged(class AItem* Item, bool pickedUp);
 	void OnViewingItemDestroyed(class AActor* viewingItem);
-	void OnRep_EquippedItems();
 	void OnEquippedItemStaticMeshChanged(class AItem* Item);
 	void OnEquippedItemSkeletalMeshChanged(class AItem* Item);
 	void OnEquippedClothesDestroyed(class AActor* Actor);
-	void MoveItemOnServer(unsigned char oldContainerId, unsigned char newContainerId, class AItem* Item, unsigned char column, unsigned char row);
-	void MoveItemOnClient(unsigned char oldContainerId, unsigned char newContainerId, class AItem* Item, unsigned char column, unsigned char row);
 	void ItemUnequippedDelegate__DelegateSignature(class UPrisonerInventoryComponent* sender, class AItem* Item);
 	void ItemEquippedDelegate__DelegateSignature(class UPrisonerInventoryComponent* sender, class AItem* Item);
 	bool IsClothesItemEquipped(class AClothesItem* Item);
-	void InitializeItemContainerOnServer(class AClothesItem* Item);
 	bool HasSelectionItem(class AItem* Item);
 	TArray<class AItem*> GetVicinityItems(bool containedItems);
 	int GetStacksCount();
@@ -18065,7 +17772,6 @@ public:
 	EBodySlot GetBodySlotForClothesType(EClothesType ClothesType);
 	EBodySlot GetBodySlotForBodyPart(EBodyPart bodyPart);
 	TArray<class AItem*> GetAllItems(bool containedItems);
-	void ForceInitiateDropOnClient(class AItem* Item);
 	void FinishAddSelectionItemOnServer();
 	void EquipItemInHandsOnServer(class AItem* Item);
 	void EquipItemInHandsOnClient(class AItem* Item);
@@ -18085,8 +17791,6 @@ public:
 	void AutoAddAllItemsOnServer(TArray<class AItem*> Items, bool removeSelection);
 	void AddStack(const TScriptInterface<class UInventoryNode>& Item);
 	void AddSelectionItemOnClient(class AItem* Item);
-	void AddItemOnServer(unsigned char containerId, class AItem* Item, unsigned char column, unsigned char row);
-	void AddItemOnClient(unsigned char containerId, class AItem* Item, unsigned char column, unsigned char row);
 	void AddEquippedClothesOnServer(unsigned char containerId, class AClothesItem* Item, unsigned char column, unsigned char row);
 	void AddDefaultEquipment();
 };
@@ -19172,25 +18876,6 @@ public:
 };
 
 
-// Class ConZ.QuickAccessItemSwitcher
-// 0x0018 (0x0270 - 0x0258)
-class UQuickAccessItemSwitcher : public UBaseItemContainerWidget
-{
-public:
-	int                                                Index;                                                    // 0x0258(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x025C(0x0004) MISSED OFFSET
-	class AItem*                                       _item;                                                    // 0x0260(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UTextBlock*                                  _nameText;                                                // 0x0268(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ConZ.QuickAccessItemSwitcher");
-		return ptr;
-	}
-
-};
-
-
 // Class ConZ.QuickAccessItemSwitcher3
 // 0x0030 (0x0250 - 0x0220)
 class UQuickAccessItemSwitcher3 : public UInventoryContainerWidget2
@@ -19242,17 +18927,17 @@ public:
 
 
 // Class ConZ.Quiver
-// 0x0040 (0x0910 - 0x08D0)
+// 0x0040 (0x08F0 - 0x08B0)
 class AQuiver : public AClothesItem
 {
 public:
-	class USkeletalMesh*                               AlternativeSkeletalMesh;                                  // 0x08D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       ArrowsBoneName;                                           // 0x08D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      TempArrowClass;                                           // 0x08E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        _arrowMeshComponent;                                      // 0x08E8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TArray<class UStaticMeshComponent*>                _arrowMeshComponentsArray2;                               // 0x08F0(0x0010) (ExportObject, ZeroConstructor)
-	class USkeletalMeshComponent*                      _alternativeEquippedMesh;                                 // 0x0900(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0908(0x0008) MISSED OFFSET
+	class USkeletalMesh*                               AlternativeSkeletalMesh;                                  // 0x08B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ArrowsBoneName;                                           // 0x08B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      TempArrowClass;                                           // 0x08C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        _arrowMeshComponent;                                      // 0x08C8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TArray<class UStaticMeshComponent*>                _arrowMeshComponentsArray2;                               // 0x08D0(0x0010) (ExportObject, ZeroConstructor)
+	class USkeletalMeshComponent*                      _alternativeEquippedMesh;                                 // 0x08E0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x08E8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -19391,11 +19076,11 @@ public:
 
 
 // Class ConZ.RadioItem
-// 0x0008 (0x0820 - 0x0818)
+// 0x0008 (0x0800 - 0x07F8)
 class ARadioItem : public AItem
 {
 public:
-	class URadioComponent*                             _radioComponent;                                          // 0x0818(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class URadioComponent*                             _radioComponent;                                          // 0x07F8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -19661,11 +19346,13 @@ public:
 
 
 // Class ConZ.ReportingManager
-// 0x04E0 (0x0808 - 0x0328)
+// 0x04F0 (0x0818 - 0x0328)
 class AReportingManager : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x4E0];                                     // 0x0328(0x04E0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x180];                                     // 0x0328(0x0180) MISSED OFFSET
+	struct FScriptMulticastDelegate                    PrisonerWhistled;                                         // 0x04A8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData01[0x360];                                     // 0x04B8(0x0360) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -20299,11 +19986,11 @@ public:
 
 
 // Class ConZ.ShelterItem
-// 0x0008 (0x0820 - 0x0818)
+// 0x0008 (0x0800 - 0x07F8)
 class AShelterItem : public AItem
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0818(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x07F8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -20311,31 +19998,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class ConZ.ShoulderHolsterWidget
-// 0x0018 (0x0270 - 0x0258)
-class UShoulderHolsterWidget : public UBaseItemContainerWidget
-{
-public:
-	class UGridPanel*                                  _addonsGridPanel;                                         // 0x0258(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AItem*                                       _equippedItem;                                            // 0x0260(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                _index;                                                   // 0x0268(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x026C(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ConZ.ShoulderHolsterWidget");
-		return ptr;
-	}
-
-
-	void UpdateVisuals();
-	void UpdateItemWidgetHighlightings();
-	void OnWeaponAttachmentRemoved(class AWeapon* sender, class AWeaponAttachment* Attachment);
-	void OnWeaponAttachmentAdded(class AWeapon* sender, class AWeaponAttachment* Attachment);
-	void EquipItem(class AItem* Item);
 };
 
 
@@ -20388,42 +20050,42 @@ public:
 
 
 // Class ConZ.Sledge
-// 0x01E8 (0x0A00 - 0x0818)
+// 0x01E8 (0x09E0 - 0x07F8)
 class ASledge : public AItem
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0818(0x0008) MISSED OFFSET
-	struct FVehicleSpawnParameters                     _spawnParameters;                                         // 0x0820(0x0030) (Edit, DisableEditOnInstance)
-	TArray<class USledgeMountSlot*>                    _mountSlots;                                              // 0x0850(0x0010) (ExportObject, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x88];                                      // 0x0860(0x0088) MISSED OFFSET
-	float                                              _floorTraceDistance;                                      // 0x08E8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _tiltAngleToUnmountMountees;                              // 0x08EC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x08F0(0x0004) MISSED OFFSET
-	float                                              _accelerationForceMagnitude;                              // 0x08F4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _decelerationForceMagnitude;                              // 0x08F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _steeringForceMagnitude;                                  // 0x08FC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     _steeringForceOffset;                                     // 0x0900(0x000C) (Edit, IsPlainOldData)
-	float                                              _sidewaysBrakingForceMagnitude;                           // 0x090C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class UCurveFloat*                                 _dragForceMagnitudeVsSpeed;                               // 0x0910(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UCurveFloat*                                 _maxSpeedVsGroundSlopeAngle;                              // 0x0918(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UPhysicsAsset*                               _physicsAssetWhenBoarded;                                 // 0x0920(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UParticleSystem*                             _defaultMovementParticleSystem;                           // 0x0928(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TMap<class UPhysicalMaterial*, class UParticleSystem*> _movementParticleSystems;                                 // 0x0930(0x0050) (Edit, ZeroConstructor)
-	float                                              _movementParticlesActivationSpeed;                        // 0x0980(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _movementParticlesDeleteDelay;                            // 0x0984(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _rigidBodyStatePositionErrorTolerance;                    // 0x0988(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _rigidBodyStateRotationErrorTolerance;                    // 0x098C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _distanceErrorToHardSnapToRemoteLocation;                 // 0x0990(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x0994(0x0004) MISSED OFFSET
-	class UAkAudioEvent*                               _sledgeMovementStartAudioEvent;                           // 0x0998(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               _sledgeMovementStopAudioEvent;                            // 0x09A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _velocityUpdateInterval;                                  // 0x09A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x14];                                      // 0x09AC(0x0014) MISSED OFFSET
-	uint32_t                                           _controls;                                                // 0x09C0(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x14];                                      // 0x09C4(0x0014) MISSED OFFSET
-	struct FVector                                     _movementParticlesPosition;                               // 0x09D8(0x000C) (Edit, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x4];                                       // 0x09E4(0x0004) MISSED OFFSET
-	struct FText                                       _healthBarCaption;                                        // 0x09E8(0x0018) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x07F8(0x0008) MISSED OFFSET
+	struct FVehicleSpawnParameters                     _spawnParameters;                                         // 0x0800(0x0030) (Edit, DisableEditOnInstance)
+	TArray<class USledgeMountSlot*>                    _mountSlots;                                              // 0x0830(0x0010) (ExportObject, ZeroConstructor)
+	unsigned char                                      UnknownData01[0x88];                                      // 0x0840(0x0088) MISSED OFFSET
+	float                                              _floorTraceDistance;                                      // 0x08C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _tiltAngleToUnmountMountees;                              // 0x08CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x08D0(0x0004) MISSED OFFSET
+	float                                              _accelerationForceMagnitude;                              // 0x08D4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _decelerationForceMagnitude;                              // 0x08D8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _steeringForceMagnitude;                                  // 0x08DC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     _steeringForceOffset;                                     // 0x08E0(0x000C) (Edit, IsPlainOldData)
+	float                                              _sidewaysBrakingForceMagnitude;                           // 0x08EC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UCurveFloat*                                 _dragForceMagnitudeVsSpeed;                               // 0x08F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UCurveFloat*                                 _maxSpeedVsGroundSlopeAngle;                              // 0x08F8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPhysicsAsset*                               _physicsAssetWhenBoarded;                                 // 0x0900(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UParticleSystem*                             _defaultMovementParticleSystem;                           // 0x0908(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TMap<class UPhysicalMaterial*, class UParticleSystem*> _movementParticleSystems;                                 // 0x0910(0x0050) (Edit, ZeroConstructor)
+	float                                              _movementParticlesActivationSpeed;                        // 0x0960(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _movementParticlesDeleteDelay;                            // 0x0964(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _rigidBodyStatePositionErrorTolerance;                    // 0x0968(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _rigidBodyStateRotationErrorTolerance;                    // 0x096C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _distanceErrorToHardSnapToRemoteLocation;                 // 0x0970(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x0974(0x0004) MISSED OFFSET
+	class UAkAudioEvent*                               _sledgeMovementStartAudioEvent;                           // 0x0978(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               _sledgeMovementStopAudioEvent;                            // 0x0980(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _velocityUpdateInterval;                                  // 0x0988(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x14];                                      // 0x098C(0x0014) MISSED OFFSET
+	uint32_t                                           _controls;                                                // 0x09A0(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x14];                                      // 0x09A4(0x0014) MISSED OFFSET
+	struct FVector                                     _movementParticlesPosition;                               // 0x09B8(0x000C) (Edit, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x4];                                       // 0x09C4(0x0004) MISSED OFFSET
+	struct FText                                       _healthBarCaption;                                        // 0x09C8(0x0018) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -20555,18 +20217,18 @@ public:
 
 
 // Class ConZ.SmokeGrenadeItem
-// 0x0038 (0x0850 - 0x0818)
+// 0x0038 (0x0830 - 0x07F8)
 class ASmokeGrenadeItem : public AItem
 {
 public:
-	class UAkComponent*                                AudioComponent;                                           // 0x0818(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UAkAudioEvent*                               SmokeStartedAudioEvent;                                   // 0x0820(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAkAudioEvent*                               SmokeStoppedAudioEvent;                                   // 0x0828(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              SmokeSoundDuration;                                       // 0x0830(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _explosionDelay;                                          // 0x0834(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0838(0x0008) MISSED OFFSET
-	class UParticleSystem*                             _smokeParticle;                                           // 0x0840(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0848(0x0008) MISSED OFFSET
+	class UAkComponent*                                AudioComponent;                                           // 0x07F8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UAkAudioEvent*                               SmokeStartedAudioEvent;                                   // 0x0800(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAkAudioEvent*                               SmokeStoppedAudioEvent;                                   // 0x0808(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              SmokeSoundDuration;                                       // 0x0810(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _explosionDelay;                                          // 0x0814(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0818(0x0008) MISSED OFFSET
+	class UParticleSystem*                             _smokeParticle;                                           // 0x0820(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0828(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -21227,7 +20889,7 @@ public:
 	}
 
 
-	void SetTeamDeathmatchParameters(const struct FTeamDeathmatchParameters& params);
+	void SetTeamDeathmatchParameters(const struct FTeamDeathmatchParameters& Params);
 	void RestrictGameEventArea();
 	struct FTeamDeathmatchParameters GetTeamDeathmatchParameters();
 };
@@ -21477,6 +21139,48 @@ public:
 };
 
 
+// Class ConZ.TimeControllableLight
+// 0x0018 (0x0350 - 0x0338)
+class ATimeControllableLight : public ALight
+{
+public:
+	bool                                               _shouldExistOnDedicatedServer;                            // 0x0338(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0339(0x0007) MISSED OFFSET
+	class UCurveFloat*                                 _intensityVsTimeOfDayCurve;                               // 0x0340(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPointLightComponent*                        _pointLightComponent;                                     // 0x0348(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ConZ.TimeControllableLight");
+		return ptr;
+	}
+
+
+	void OnTimeOfDayChanged(float timeOfDay);
+};
+
+
+// Class ConZ.TimeControllableSpotLight
+// 0x0018 (0x0350 - 0x0338)
+class ATimeControllableSpotLight : public ALight
+{
+public:
+	bool                                               _shouldExistOnDedicatedServer;                            // 0x0338(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0339(0x0007) MISSED OFFSET
+	class UCurveFloat*                                 _intensityVsTimeOfDayCurve;                               // 0x0340(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class USpotLightComponent*                         _pointLightComponent;                                     // 0x0348(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ConZ.TimeControllableSpotLight");
+		return ptr;
+	}
+
+
+	void OnTimeOfDayChanged(float timeOfDay);
+};
+
+
 // Class ConZ.ToggleCamouflageAction
 // 0x0008 (0x00A8 - 0x00A0)
 class UToggleCamouflageAction : public USkillAction
@@ -21523,7 +21227,7 @@ public:
 	class UClass*                                      AnimalClass;                                              // 0x0350(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              Duration;                                                 // 0x0358(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Direction;                                                // 0x035C(0x000C) (BlueprintVisible, IsPlainOldData)
-	float                                              Health;                                                   // 0x0368(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              health;                                                   // 0x0368(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0xC];                                       // 0x036C(0x000C) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -21550,7 +21254,7 @@ public:
 	class UClass*                                      AnimalClass;                                              // 0x0358(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              Duration;                                                 // 0x0360(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Direction;                                                // 0x0364(0x000C) (BlueprintVisible, IsPlainOldData)
-	float                                              Health;                                                   // 0x0370(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              health;                                                   // 0x0370(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	EBleedingSeverity                                  BleedingSeverity;                                         // 0x0374(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               ShowBleedingInfo;                                         // 0x0375(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               ShowWoundInfo;                                            // 0x0376(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -21680,6 +21384,111 @@ public:
 		return ptr;
 	}
 
+};
+
+
+// Class ConZ.UserManager
+// 0x0078 (0x00A0 - 0x0028)
+class UUserManager : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x78];                                      // 0x0028(0x0078) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ConZ.UserManager");
+		return ptr;
+	}
+
+
+	class UUserProfile* FindUserProfile(const struct FDbIntegerId& ID);
+	class UUser* FindUser(const struct FString& ID);
+	class UUser* FindOrCreateUser(const struct FString& ID);
+	bool DeleteUser(const struct FString& ID);
+};
+
+
+// Class ConZ.User
+// 0x00E8 (0x0110 - 0x0028)
+class UUser : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0xE8];                                      // 0x0028(0x00E8) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ConZ.User");
+		return ptr;
+	}
+
+
+	void SetRecentServers(TArray<struct FUserServerHistoryItem> Value);
+	void SetProvider(const struct FString& Value);
+	void SetName(const struct FString& Value);
+	void SetLastLoginTime(const struct FDateTime& Value);
+	void SetLastDirectConnectionAddress(const struct FString& Value);
+	void SetIsBanned(bool Value);
+	void SetFavoriteServers(TArray<struct FUserServerHistoryItem> Value);
+	void RemoveRecentServerAt(int Index);
+	void RemoveRecentServer(const struct FUserServerHistoryItem& Item);
+	void RemoveFavoriteServerAt(int Index);
+	void RemoveFavoriteServer(const struct FUserServerHistoryItem& Item);
+	bool HasProfileWithName(EUserProfileType Type, const struct FString& Name);
+	TArray<struct FUserServerHistoryItem> GetRecentServers();
+	struct FString GetProvider();
+	TArray<struct FString> GetProfileNames(EUserProfileType Type);
+	struct FString GetName();
+	struct FDateTime GetLastLoginTime();
+	struct FString GetLastDirectConnectionAddress();
+	bool GetIsBanned();
+	struct FString GetID();
+	TArray<struct FUserServerHistoryItem> GetFavoriteServers();
+	TArray<class UUserProfile*> FindProfiles(EUserProfileType Type);
+	class UUserProfile* FindProfile(const struct FDbIntegerId& ID);
+	class UUserProfile* FindMultiplayerCacheProfile(const struct FString& ServerIp, int ServerResponsePort);
+	bool DeleteProfile(const struct FDbIntegerId& ID);
+	class UUserProfile* CreateProfileFromTemplate(EUserProfileType Type, const struct FCharacterTemplate& Value);
+	class UUserProfile* CreateEmptyProfile(EUserProfileType Type);
+	class UUserProfile* CreateDefaultProfile(EUserProfileType Type);
+	void ClearRecentServers();
+	void ClearFavoriteServers();
+	void AddRecentServer(const struct FUserServerHistoryItem& Item);
+	void AddFavoriteServer(const struct FUserServerHistoryItem& Item);
+};
+
+
+// Class ConZ.UserProfile
+// 0x00B0 (0x00D8 - 0x0028)
+class UUserProfile : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0xB0];                                      // 0x0028(0x00B0) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ConZ.UserProfile");
+		return ptr;
+	}
+
+
+	void SetPrisonerId(const struct FDbIntegerId& Value);
+	void SetName(const struct FString& Value);
+	void SetLastLoginTime(const struct FDateTime& Value);
+	void SetFamePoints(float Value);
+	void SetCreationTemplateXml(const struct FString& Value);
+	void SetAuthorityInfo(const struct FUserProfileAuthorityInfo& Value);
+	struct FCharacterTemplate MakeCharacterTemplate();
+	struct FCharacterTemplate LoadCharacterTemplate();
+	class UUser* GetUser();
+	EUserProfileType GetType();
+	struct FDbIntegerId GetPrisonerId();
+	struct FString GetName();
+	struct FDateTime GetLastLoginTime();
+	struct FDbIntegerId GetID();
+	float GetFamePoints();
+	struct FString GetCreationTemplateXml();
+	struct FCharacterTemplate GetCreationTemplate();
+	struct FUserProfileAuthorityInfo GetAuthorityInfo();
 };
 
 
@@ -21926,39 +21735,6 @@ public:
 };
 
 
-// Class ConZ.VicinityItemContainerWidget
-// 0x0038 (0x0290 - 0x0258)
-class UVicinityItemContainerWidget : public UBaseItemContainerWidget
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0258(0x0008) MISSED OFFSET
-	unsigned char                                      MaxWidth;                                                 // 0x0260(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      MaxHeight;                                                // 0x0261(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               NeedLayoutLoading;                                        // 0x0262(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	bool                                               SavedLayoutMinimized;                                     // 0x0263(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0264(0x0004) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnDoubleClickedOnHeader;                                  // 0x0268(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	float                                              DefaultWidth;                                             // 0x0278(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DefaultHeight;                                            // 0x027C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   DefaultPosition;                                          // 0x0280(0x0008) (Edit, IsPlainOldData)
-	float                                              _detectionRadius;                                         // 0x0288(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x028C(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ConZ.VicinityItemContainerWidget");
-		return ptr;
-	}
-
-
-	void SetSavedLayoutMinimized(bool Value);
-	void SetNeedLayoutLoading(bool Value);
-	void OnVicinityItemPickedUpStateChanged(class AItem* Item, bool PickedUpState);
-	void DoubleClickedOnHeaderDelegate__DelegateSignature(class UObjectSelectionContainerWidget* Widget);
-	void DeferredLoadLayout();
-};
-
-
 // Class ConZ.VicinityPanel3
 // 0x01C0 (0x03E0 - 0x0220)
 class UVicinityPanel3 : public UDesignableUserWidget
@@ -21984,31 +21760,6 @@ public:
 
 	void OnItemActorDestroyed(class AActor* Actor);
 	void OnCheckBoxCheckedChanged(bool checked);
-};
-
-
-// Class ConZ.VicinityPanelSecondIteration
-// 0x0018 (0x0238 - 0x0220)
-class UVicinityPanelSecondIteration : public UDesignableUserWidget
-{
-public:
-	bool                                               _isMinimized;                                             // 0x0220(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0221(0x0007) MISSED OFFSET
-	TArray<class AItem*>                               _items;                                                   // 0x0228(0x0010) (BlueprintVisible, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ConZ.VicinityPanelSecondIteration");
-		return ptr;
-	}
-
-
-	void UpdateItemWidgetHighlightings();
-	void RemoveItem(class AItem* Item);
-	void Minimize();
-	void Maximize();
-	bool GetIsMinimized();
-	void AutoAddItem(class AItem* Item);
 };
 
 
@@ -22061,16 +21812,33 @@ public:
 	struct FPostProcessSettings                        _postProcessSettings;                                     // 0x0200(0x0520) (Edit)
 	unsigned char                                      UnknownData06[0x68];                                      // 0x0720(0x0068) MISSED OFFSET
 	class UMaterialInstanceDynamic*                    _drunkennessMaterialInstance;                             // 0x0788(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x4];                                       // 0x0790(0x0004) MISSED OFFSET
-	float                                              _DOFBlurTime;                                             // 0x0794(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _DOFClearBlurTime;                                        // 0x0798(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _DOFScopingBlurTime;                                      // 0x079C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _DOFBlurDistanceADS;                                      // 0x07A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData08[0xC];                                       // 0x07A4(0x000C) MISSED OFFSET
+	class UMaterialInterface*                          _headgearOverlayMaterialInstance;                         // 0x0790(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData07[0x4];                                       // 0x0798(0x0004) MISSED OFFSET
+	float                                              _DOFBlurTime;                                             // 0x079C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _DOFClearBlurTime;                                        // 0x07A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _DOFScopingBlurTime;                                      // 0x07A4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _DOFBlurDistanceADS;                                      // 0x07A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x4];                                       // 0x07AC(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class ConZ.VisionEffectsComponent");
+		return ptr;
+	}
+
+};
+
+
+// Class ConZ.VisualOverlayItemTag
+// 0x0008 (0x0038 - 0x0030)
+class UVisualOverlayItemTag : public UBaseItemTag
+{
+public:
+	class UMaterialInterface*                          OverlayMaterial;                                          // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ConZ.VisualOverlayItemTag");
 		return ptr;
 	}
 
@@ -22484,16 +22252,16 @@ public:
 
 
 // Class ConZ.WeaponAttachmentMagazine
-// 0x0018 (0x0840 - 0x0828)
+// 0x0018 (0x0820 - 0x0808)
 class AWeaponAttachmentMagazine : public AWeaponAttachment
 {
 public:
-	class UClass*                                      AmmunitionItemClass;                                      // 0x0828(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               RequiresFullCapacityOnLoad;                               // 0x0830(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0831(0x0003) MISSED OFFSET
-	int                                                _ammoCount;                                               // 0x0834(0x0004) (Edit, Net, ZeroConstructor, IsPlainOldData)
-	int                                                _ammoCountOwnerHelper;                                    // 0x0838(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	int                                                _capacity;                                                // 0x083C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      AmmunitionItemClass;                                      // 0x0808(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               RequiresFullCapacityOnLoad;                               // 0x0810(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0811(0x0003) MISSED OFFSET
+	int                                                _ammoCount;                                               // 0x0814(0x0004) (Edit, Net, ZeroConstructor, IsPlainOldData)
+	int                                                _ammoCountOwnerHelper;                                    // 0x0818(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	int                                                _capacity;                                                // 0x081C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -22503,6 +22271,7 @@ public:
 
 
 	void SetAmmoCount(int amount);
+	void Server_InsertCartridgeIntoMagazine(class AAmmunitionItem* ammo);
 	void OnRep_AmmoCountOwnerHelper();
 	void Multicast_SetLoadedVariables(int ammoCount);
 	class UClass* GetProjectileClass();
@@ -22513,13 +22282,13 @@ public:
 
 
 // Class ConZ.WeaponAttachmentSight
-// 0x0018 (0x0840 - 0x0828)
+// 0x0018 (0x0820 - 0x0808)
 class AWeaponAttachmentSight : public AWeaponAttachment
 {
 public:
-	struct FName                                       ViewCenterSocketName;                                     // 0x0828(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     AimingDownTheSightsLocationOffset;                        // 0x0830(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x083C(0x0004) MISSED OFFSET
+	struct FName                                       ViewCenterSocketName;                                     // 0x0808(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     AimingDownTheSightsLocationOffset;                        // 0x0810(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x081C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -22531,28 +22300,28 @@ public:
 
 
 // Class ConZ.WeaponAttachmentScope
-// 0x0100 (0x0940 - 0x0840)
+// 0x0100 (0x0920 - 0x0820)
 class AWeaponAttachmentScope : public AWeaponAttachmentSight
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0840(0x0008) MISSED OFFSET
-	TArray<struct FScopeZoomLevelSettings>             ZoomLevelSettings;                                        // 0x0848(0x0010) (Edit, ZeroConstructor)
-	class UTexture2D*                                  ScopingTexture;                                           // 0x0858(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                _montageStandingFP;                                       // 0x0860(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                _montageCrouchingFP;                                      // 0x0868(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                _montageProneFP;                                          // 0x0870(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                _montageStandingTP;                                       // 0x0878(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                _montageCrouchingTP;                                      // 0x0880(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                _montageProneTP;                                          // 0x0888(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _scopingStartDelay;                                       // 0x0890(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _scopingStopDelay;                                        // 0x0894(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class UTextureRenderTarget2D*                      TextRenderTarget;                                         // 0x0898(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      WeaponScopeWidget;                                        // 0x08A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       GlassCenterSocketName;                                    // 0x08A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                WindageInitialOffset;                                     // 0x08B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x08B4(0x0004) MISSED OFFSET
-	class UAkAudioEvent*                               WindageClickAudioEvent;                                   // 0x08B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x80];                                      // 0x08C0(0x0080) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0820(0x0008) MISSED OFFSET
+	TArray<struct FScopeZoomLevelSettings>             ZoomLevelSettings;                                        // 0x0828(0x0010) (Edit, ZeroConstructor)
+	class UTexture2D*                                  ScopingTexture;                                           // 0x0838(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                _montageStandingFP;                                       // 0x0840(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                _montageCrouchingFP;                                      // 0x0848(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                _montageProneFP;                                          // 0x0850(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                _montageStandingTP;                                       // 0x0858(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                _montageCrouchingTP;                                      // 0x0860(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                _montageProneTP;                                          // 0x0868(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _scopingStartDelay;                                       // 0x0870(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _scopingStopDelay;                                        // 0x0874(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UTextureRenderTarget2D*                      TextRenderTarget;                                         // 0x0878(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      WeaponScopeWidget;                                        // 0x0880(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       GlassCenterSocketName;                                    // 0x0888(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                WindageInitialOffset;                                     // 0x0890(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0894(0x0004) MISSED OFFSET
+	class UAkAudioEvent*                               WindageClickAudioEvent;                                   // 0x0898(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x80];                                      // 0x08A0(0x0080) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -22568,11 +22337,11 @@ public:
 
 
 // Class ConZ.WeaponAttachmentScopeRail
-// 0x0008 (0x0830 - 0x0828)
+// 0x0008 (0x0810 - 0x0808)
 class AWeaponAttachmentScopeRail : public AWeaponAttachment
 {
 public:
-	struct FName                                       ScopeSocketName;                                          // 0x0828(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ScopeSocketName;                                          // 0x0808(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -22584,14 +22353,14 @@ public:
 
 
 // Class ConZ.WeaponAttachmentSuppressor
-// 0x0010 (0x0838 - 0x0828)
+// 0x0010 (0x0818 - 0x0808)
 class AWeaponAttachmentSuppressor : public AWeaponAttachment
 {
 public:
-	struct FName                                       MuzzleSocketName;                                         // 0x0828(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              NoiseMultiplier;                                          // 0x0830(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               IsImprovised;                                             // 0x0834(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0835(0x0003) MISSED OFFSET
+	struct FName                                       MuzzleSocketName;                                         // 0x0808(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              NoiseMultiplier;                                          // 0x0810(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               IsImprovised;                                             // 0x0814(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0815(0x0003) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -22603,60 +22372,60 @@ public:
 
 
 // Class ConZ.WeaponBow
-// 0x0450 (0x16F0 - 0x12A0)
+// 0x0450 (0x16E0 - 0x1290)
 class AWeaponBow : public AWeapon
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x12A0(0x0008) MISSED OFFSET
-	struct FBodyWeaponAnimation                        RemoveArrowAnimations;                                    // 0x12A8(0x0010) (Edit, BlueprintVisible)
-	struct FBodyWeaponAnimation                        UnableToDrawAnimations;                                   // 0x12B8(0x0010) (Edit, BlueprintVisible)
-	struct FBodyWeaponAnimation                        DrawAnimations2[0x3];                                     // 0x12C8(0x0010) (Edit)
-	struct FBodyWeaponAnimation                        DrawWhileAnticipatingDrawAnimations2[0x3];                // 0x12F8(0x0010) (Edit)
-	struct FBodyWeaponAnimation                        CancelDrawAnimations2[0x3];                               // 0x1328(0x0010) (Edit)
-	struct FBodyWeaponAnimation                        LooseAnimations2[0x3];                                    // 0x1358(0x0010) (Edit)
-	struct FBodyWeaponAnimation                        LooseLastShotAnimations2[0x3];                            // 0x1388(0x0010) (Edit)
-	struct FWeaponBowAimOffsets                        AimOffsets[0x7];                                          // 0x13B8(0x0018) (Edit)
-	struct FWeaponBowArmsShake                         ArmsShakeAnimamtion[0x4];                                 // 0x1460(0x0030) (Edit)
-	struct FBodyWeaponAnimation                        DrawAnimations;                                           // 0x1520(0x0010) (Edit, BlueprintVisible)
-	struct FBodyWeaponAnimation                        DrawWhileAnticipatingDrawAnimations;                      // 0x1530(0x0010) (Edit, BlueprintVisible)
-	struct FBodyWeaponAnimation                        CancelDrawAnimations;                                     // 0x1540(0x0010) (Edit, BlueprintVisible)
-	struct FBodyWeaponAnimation                        LooseAnimations;                                          // 0x1550(0x0010) (Edit, BlueprintVisible)
-	struct FBodyWeaponAnimation                        LooseLastShotAnimations;                                  // 0x1560(0x0010) (Edit, BlueprintVisible)
-	class UAnimSequenceBase*                           WeaponAimingDownTheSightsAnimationPose;                   // 0x1570(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimSequenceBase*                           WeaponAimingDownTheSightsStillAnimationPose;              // 0x1578(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWeaponState*                                AnticipateDrawState2;                                     // 0x1580(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWeaponState*                                DrawState3;                                               // 0x1588(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWeaponState*                                CancelFiringState;                                        // 0x1590(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWeaponState*                                AnticipateFiringState;                                    // 0x1598(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWeaponState*                                FireState;                                                // 0x15A0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWeaponState*                                FireAndInsertArrowState;                                  // 0x15A8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UAkAudioEvent*                               _fireNoArrowAudioEvent;                                   // 0x15B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       _arrowSocketName;                                         // 0x15B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _muzzleVelocity;                                          // 0x15C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _drawWeight;                                              // 0x15C4(0x0004) (Edit, Net, ZeroConstructor, IsPlainOldData)
-	float                                              _compoundBowFullDrawHoldTime;                             // 0x15C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _armShakeTimerDecreaseRate;                               // 0x15CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _damageOnUsage;                                           // 0x15D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x15D4(0x0004) MISSED OFFSET
-	class UWeaponState*                                _bowActiveState2;                                         // 0x15D8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWeaponState*                                _bowInsertArrowState;                                     // 0x15E0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWeaponState*                                _bowRemoveArrowState;                                     // 0x15E8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWeaponStateFiring*                          _bowFiringState2;                                         // 0x15F0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x28];                                      // 0x15F8(0x0028) MISSED OFFSET
-	EWeaponBowState                                    _bowState;                                                // 0x1620(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x1621(0x0003) MISSED OFFSET
-	struct FWeaponBowStateDataReplicated               _weaponBowStateDataReplicated;                            // 0x1624(0x000C) (Net)
-	class UStaticMeshComponent*                        _arrowMeshComponent;                                      // 0x1630(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FProjectileArrowData                        _projectileArrowData;                                     // 0x1638(0x0018) (Net)
-	unsigned char                                      UnknownData04[0x50];                                      // 0x1650(0x0050) MISSED OFFSET
-	bool                                               _isCompound;                                              // 0x16A0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x7];                                       // 0x16A1(0x0007) MISSED OFFSET
-	class UStaticMeshComponent*                        _handTriggerMeshComponent;                                // 0x16A8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               _ignoreArrowStiffness;                                    // 0x16B0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x3];                                       // 0x16B1(0x0003) MISSED OFFSET
-	float                                              _letOff;                                                  // 0x16B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       _handTriggerBoneName;                                     // 0x16B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x30];                                      // 0x16C0(0x0030) MISSED OFFSET
+	struct FBodyWeaponAnimation                        InsertArrowAnimations;                                    // 0x1290(0x0010) (Edit, BlueprintVisible)
+	struct FBodyWeaponAnimation                        RemoveArrowAnimations;                                    // 0x12A0(0x0010) (Edit, BlueprintVisible)
+	struct FBodyWeaponAnimation                        UnableToDrawAnimations;                                   // 0x12B0(0x0010) (Edit, BlueprintVisible)
+	struct FBodyWeaponAnimation                        DrawAnimations2[0x3];                                     // 0x12C0(0x0010) (Edit)
+	struct FBodyWeaponAnimation                        DrawWhileAnticipatingDrawAnimations2[0x3];                // 0x12F0(0x0010) (Edit)
+	struct FBodyWeaponAnimation                        CancelDrawAnimations2[0x3];                               // 0x1320(0x0010) (Edit)
+	struct FBodyWeaponAnimation                        LooseAnimations2[0x3];                                    // 0x1350(0x0010) (Edit)
+	struct FBodyWeaponAnimation                        LooseLastShotAnimations2[0x3];                            // 0x1380(0x0010) (Edit)
+	struct FWeaponBowAimOffsets                        AimOffsets[0x7];                                          // 0x13B0(0x0018) (Edit)
+	struct FWeaponBowArmsShake                         ArmsShakeAnimamtion[0x4];                                 // 0x1458(0x0030) (Edit)
+	struct FBodyWeaponAnimation                        DrawAnimations;                                           // 0x1518(0x0010) (Edit, BlueprintVisible)
+	struct FBodyWeaponAnimation                        DrawWhileAnticipatingDrawAnimations;                      // 0x1528(0x0010) (Edit, BlueprintVisible)
+	struct FBodyWeaponAnimation                        CancelDrawAnimations;                                     // 0x1538(0x0010) (Edit, BlueprintVisible)
+	struct FBodyWeaponAnimation                        LooseAnimations;                                          // 0x1548(0x0010) (Edit, BlueprintVisible)
+	struct FBodyWeaponAnimation                        LooseLastShotAnimations;                                  // 0x1558(0x0010) (Edit, BlueprintVisible)
+	class UAnimSequenceBase*                           WeaponAimingDownTheSightsAnimationPose;                   // 0x1568(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimSequenceBase*                           WeaponAimingDownTheSightsStillAnimationPose;              // 0x1570(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWeaponState*                                AnticipateDrawState2;                                     // 0x1578(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWeaponState*                                DrawState3;                                               // 0x1580(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWeaponState*                                CancelFiringState;                                        // 0x1588(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWeaponState*                                AnticipateFiringState;                                    // 0x1590(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWeaponState*                                FireState;                                                // 0x1598(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWeaponState*                                FireAndInsertArrowState;                                  // 0x15A0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UAkAudioEvent*                               _fireNoArrowAudioEvent;                                   // 0x15A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       _arrowSocketName;                                         // 0x15B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _muzzleVelocity;                                          // 0x15B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _drawWeight;                                              // 0x15BC(0x0004) (Edit, Net, ZeroConstructor, IsPlainOldData)
+	float                                              _compoundBowFullDrawHoldTime;                             // 0x15C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _armShakeTimerDecreaseRate;                               // 0x15C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _damageOnUsage;                                           // 0x15C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x15CC(0x0004) MISSED OFFSET
+	class UWeaponState*                                _bowActiveState2;                                         // 0x15D0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWeaponState*                                _bowInsertArrowState;                                     // 0x15D8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWeaponState*                                _bowRemoveArrowState;                                     // 0x15E0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWeaponStateFiring*                          _bowFiringState2;                                         // 0x15E8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x28];                                      // 0x15F0(0x0028) MISSED OFFSET
+	EWeaponBowState                                    _bowState;                                                // 0x1618(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x1619(0x0003) MISSED OFFSET
+	struct FWeaponBowStateDataReplicated               _weaponBowStateDataReplicated;                            // 0x161C(0x000C) (Net)
+	class UStaticMeshComponent*                        _arrowMeshComponent;                                      // 0x1628(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FProjectileArrowData                        _projectileArrowData;                                     // 0x1630(0x0018) (Net)
+	unsigned char                                      UnknownData03[0x50];                                      // 0x1648(0x0050) MISSED OFFSET
+	bool                                               _isCompound;                                              // 0x1698(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x7];                                       // 0x1699(0x0007) MISSED OFFSET
+	class UStaticMeshComponent*                        _handTriggerMeshComponent;                                // 0x16A0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool                                               _ignoreArrowStiffness;                                    // 0x16A8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x3];                                       // 0x16A9(0x0003) MISSED OFFSET
+	float                                              _letOff;                                                  // 0x16AC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FName                                       _handTriggerBoneName;                                     // 0x16B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x28];                                      // 0x16B8(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -22734,11 +22503,11 @@ public:
 
 
 // Class ConZ.WeaponHolsterItem
-// 0x0008 (0x08D8 - 0x08D0)
+// 0x0008 (0x08B8 - 0x08B0)
 class AWeaponHolsterItem : public AClothesItem
 {
 public:
-	class AWeapon*                                     _holsteredWeapon;                                         // 0x08D0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class AWeapon*                                     _holsteredWeapon;                                         // 0x08B0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -23185,35 +22954,36 @@ public:
 
 
 // Class ConZ.WeatherController
-// 0x0068 (0x0390 - 0x0328)
+// 0x0080 (0x03A8 - 0x0328)
 class AWeatherController : public AActor
 {
 public:
-	float                                              TimeOfDay;                                                // 0x0328(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
-	float                                              TimeOfDaySpeed;                                           // 0x032C(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
-	float                                              Level1_RainStartWhenStormIs;                              // 0x0330(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              Level2_RainStartWhenStormIs;                              // 0x0334(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              Level3_RainStartWhenStormIs;                              // 0x0338(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              WaterTemperature;                                         // 0x033C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              WaterTemperature_Storm;                                   // 0x0340(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              WaterTemperatureHeightModifier;                           // 0x0344(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              AirTemperature;                                           // 0x0348(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              AirTemperature_Storm;                                     // 0x034C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              AirTemperatureHeightModifier;                             // 0x0350(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              AirPressure;                                              // 0x0354(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              AirPressure_Storm;                                        // 0x0358(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              AirPressureHeightModifier;                                // 0x035C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              RelativeHumidity;                                         // 0x0360(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              RelativeHumidity_Storm;                                   // 0x0364(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              RelativeHumidityHeightModifier;                           // 0x0368(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxHeightAboveSeaLevelMeters;                             // 0x036C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              StormIntensity;                                           // 0x0370(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   WindDir;                                                  // 0x0374(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	float                                              WindSpeed_Result;                                         // 0x037C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              _nightTimeBegin;                                          // 0x0380(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _nightTimeEnd;                                            // 0x0384(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _duskTimeBegin;                                           // 0x0388(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              _dawnTimeEnd;                                             // 0x038C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0328(0x0018) MISSED OFFSET
+	float                                              timeOfDay;                                                // 0x0340(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
+	float                                              TimeOfDaySpeed;                                           // 0x0344(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
+	float                                              Level1_RainStartWhenStormIs;                              // 0x0348(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              Level2_RainStartWhenStormIs;                              // 0x034C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              Level3_RainStartWhenStormIs;                              // 0x0350(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              WaterTemperature;                                         // 0x0354(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              WaterTemperature_Storm;                                   // 0x0358(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              WaterTemperatureHeightModifier;                           // 0x035C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              AirTemperature;                                           // 0x0360(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              AirTemperature_Storm;                                     // 0x0364(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              AirTemperatureHeightModifier;                             // 0x0368(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              AirPressure;                                              // 0x036C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              AirPressure_Storm;                                        // 0x0370(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              AirPressureHeightModifier;                                // 0x0374(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              RelativeHumidity;                                         // 0x0378(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              RelativeHumidity_Storm;                                   // 0x037C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              RelativeHumidityHeightModifier;                           // 0x0380(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxHeightAboveSeaLevelMeters;                             // 0x0384(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              StormIntensity;                                           // 0x0388(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   WindDir;                                                  // 0x038C(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	float                                              WindSpeed_Result;                                         // 0x0394(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              _nightTimeBegin;                                          // 0x0398(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _nightTimeEnd;                                            // 0x039C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _duskTimeBegin;                                           // 0x03A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              _dawnTimeEnd;                                             // 0x03A4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

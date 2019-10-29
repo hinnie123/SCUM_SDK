@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Christmas_tree.Christmas_tree_C
-// 0x0000 (0x0818 - 0x0818)
+// 0x0000 (0x07F8 - 0x07F8)
 class AChristmas_tree_C : public AItem
 {
 public:

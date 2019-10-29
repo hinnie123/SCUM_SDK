@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Shemagh_Scarf_07.Shemagh_Scarf_07_C
-// 0x0000 (0x08D0 - 0x08D0)
+// 0x0000 (0x08B0 - 0x08B0)
 class AShemagh_Scarf_07_C : public AClothesItem
 {
 public:

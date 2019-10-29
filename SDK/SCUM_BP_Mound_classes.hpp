@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Mound.BP_Mound_C
-// 0x0000 (0x0868 - 0x0868)
+// 0x0000 (0x0848 - 0x0848)
 class ABP_Mound_C : public AMoundItem
 {
 public:

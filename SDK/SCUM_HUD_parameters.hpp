@@ -101,7 +101,7 @@ struct UHUD_C_GetBCULeftPanel_Params
 // Function HUD.HUD_C.GetInventoryPanel
 struct UHUD_C_GetInventoryPanel_Params
 {
-	class UInventoryPanelSecondIteration*              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+	class UInventoryPanelThirdIteration*               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
 // Function HUD.HUD_C.CompleteInitialization
@@ -173,16 +173,6 @@ struct UHUD_C_StartMonitorsInitialization_Params
 
 // Function HUD.HUD_C.PrisonerValidation
 struct UHUD_C_PrisonerValidation_Params
-{
-};
-
-// Function HUD.HUD_C.SetUpVicinityWidget
-struct UHUD_C_SetUpVicinityWidget_Params
-{
-};
-
-// Function HUD.HUD_C.SetVicinityWidgetFromCode
-struct UHUD_C_SetVicinityWidgetFromCode_Params
 {
 };
 

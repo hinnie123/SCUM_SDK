@@ -264,14 +264,14 @@ void UUI_CharacterSelection_C::OnCharacterDeleted(class UUI_CharacterSlot_C* Wid
 // Function UI_CharacterSelection.UI_CharacterSelection_C.OnCharacterSelected
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UDbUserProfile*          userProfile                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UUserProfile*            UserProfile                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_CharacterSelection_C::OnCharacterSelected(class UDbUserProfile* userProfile)
+void UUI_CharacterSelection_C::OnCharacterSelected(class UUserProfile* UserProfile)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterSelection.UI_CharacterSelection_C.OnCharacterSelected");
 
 	UUI_CharacterSelection_C_OnCharacterSelected_Params fn_params;
-	fn_params.userProfile = userProfile;
+	fn_params.UserProfile = UserProfile;
 
 	auto flags = fn->FunctionFlags;
 

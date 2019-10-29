@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Isopropyl_alcohol.Isopropyl_alcohol_C
-// 0x0000 (0x0960 - 0x0960)
+// 0x0000 (0x0940 - 0x0940)
 class AIsopropyl_alcohol_C : public ADrinkItem
 {
 public:

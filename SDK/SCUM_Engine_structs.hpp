@@ -9209,7 +9209,7 @@ struct FRadialDamageParams
 // 0x0030 (0x0040 - 0x0010)
 struct FRadialDamageEvent : public FDamageEvent
 {
-	struct FRadialDamageParams                         params;                                                   // 0x0010(0x0014)
+	struct FRadialDamageParams                         Params;                                                   // 0x0010(0x0014)
 	struct FVector                                     Origin;                                                   // 0x0024(0x000C) (IsPlainOldData)
 	TArray<struct FHitResult>                          ComponentHits;                                            // 0x0030(0x0010) (ZeroConstructor)
 };

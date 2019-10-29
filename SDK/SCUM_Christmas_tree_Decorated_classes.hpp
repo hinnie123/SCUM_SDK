@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Christmas_tree_Decorated.Christmas_tree_Decorated_C
-// 0x0008 (0x0820 - 0x0818)
+// 0x0008 (0x0800 - 0x07F8)
 class AChristmas_tree_Decorated_C : public AItem
 {
 public:
-	class UStaticMeshComponent*                        StaticMesh;                                               // 0x0818(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh;                                               // 0x07F8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

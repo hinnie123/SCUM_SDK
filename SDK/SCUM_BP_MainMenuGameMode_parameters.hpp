@@ -17,7 +17,7 @@ namespace SDK
 // Function BP_MainMenuGameMode.BP_MainMenuGameMode_C.UpdatePreviewPrisoners
 struct ABP_MainMenuGameMode_C_UpdatePreviewPrisoners_Params
 {
-	class UDbUserProfile*                              userProfile;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UUserProfile*                                UserProfile;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_MainMenuGameMode.BP_MainMenuGameMode_C.UserConstructionScript

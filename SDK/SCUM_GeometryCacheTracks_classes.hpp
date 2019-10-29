@@ -17,7 +17,7 @@ namespace SDK
 class UMovieSceneGeometryCacheSection : public UMovieSceneSection
 {
 public:
-	struct FMovieSceneGeometryCacheParams              params;                                                   // 0x00E0(0x0028) (Edit)
+	struct FMovieSceneGeometryCacheParams              Params;                                                   // 0x00E0(0x0028) (Edit)
 
 	static UClass* StaticClass()
 	{

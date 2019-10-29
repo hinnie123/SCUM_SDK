@@ -31,7 +31,7 @@ public:
 	}
 
 
-	void adjustPosition(const struct FVector2D& adjustment);
+	void AdjustPosition(const struct FVector2D& adjustment);
 	void Init(class UCanvasPanel* CanvasPanel, const struct FText& Message);
 	void BndEvt__UI_MenuButton_K2Node_ComponentBoundEvent_6_OnClicked__DelegateSignature();
 	void BndEvt__UI_MenuButton_0_K2Node_ComponentBoundEvent_8_OnClicked__DelegateSignature();

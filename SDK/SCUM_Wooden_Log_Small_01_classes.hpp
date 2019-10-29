@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Wooden_Log_Small_01.Wooden_Log_Small_01_C
-// 0x0000 (0x0830 - 0x0830)
+// 0x0000 (0x0810 - 0x0810)
 class AWooden_Log_Small_01_C : public AEquipmentItem
 {
 public:

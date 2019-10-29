@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass QuinineSulphate_Pils_03.QuinineSulphate_Pils_03_C
-// 0x0000 (0x0820 - 0x0820)
+// 0x0000 (0x0800 - 0x0800)
 class AQuinineSulphate_Pils_03_C : public AMedicationItem
 {
 public:

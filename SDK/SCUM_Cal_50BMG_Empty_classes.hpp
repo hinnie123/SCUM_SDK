@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Cal_50BMG_Empty.Cal_50BMG_Empty_C
-// 0x0000 (0x0830 - 0x0830)
+// 0x0000 (0x0810 - 0x0810)
 class ACal_50BMG_Empty_C : public AAmmunitionItem
 {
 public:

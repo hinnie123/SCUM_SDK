@@ -309,9 +309,9 @@ class UUserWidget* UHUD_C::GetBCULeftPanel()
 // Function HUD.HUD_C.GetInventoryPanel
 // (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// class UInventoryPanelSecondIteration* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UInventoryPanelThirdIteration* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class UInventoryPanelSecondIteration* UHUD_C::GetInventoryPanel()
+class UInventoryPanelThirdIteration* UHUD_C::GetInventoryPanel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.GetInventoryPanel");
 
@@ -570,40 +570,6 @@ void UHUD_C::PrisonerValidation()
 	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.PrisonerValidation");
 
 	UHUD_C_PrisonerValidation_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function HUD.HUD_C.SetUpVicinityWidget
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UHUD_C::SetUpVicinityWidget()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.SetUpVicinityWidget");
-
-	UHUD_C_SetUpVicinityWidget_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function HUD.HUD_C.SetVicinityWidgetFromCode
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UHUD_C::SetVicinityWidgetFromCode()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.SetVicinityWidgetFromCode");
-
-	UHUD_C_SetVicinityWidgetFromCode_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 

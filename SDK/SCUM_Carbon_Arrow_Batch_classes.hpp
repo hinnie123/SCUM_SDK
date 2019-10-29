@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Carbon_Arrow_Batch.Carbon_Arrow_Batch_C
-// 0x0000 (0x0818 - 0x0818)
+// 0x0000 (0x07F8 - 0x07F8)
 class ACarbon_Arrow_Batch_C : public AItem
 {
 public:

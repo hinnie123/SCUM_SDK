@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Zombie_01_Head_No_teeth.Zombie_01_Head_No_teeth_C
-// 0x0000 (0x0830 - 0x0830)
+// 0x0000 (0x0810 - 0x0810)
 class AZombie_01_Head_No_teeth_C : public AEquipmentItem
 {
 public:

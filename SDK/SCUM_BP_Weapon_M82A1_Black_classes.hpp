@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Weapon_M82A1_Black.BP_Weapon_M82A1_Black_C
-// 0x0000 (0x12B8 - 0x12B8)
+// 0x0000 (0x12A8 - 0x12A8)
 class ABP_Weapon_M82A1_Black_C : public ABP_Weapon_M82A1_C
 {
 public:

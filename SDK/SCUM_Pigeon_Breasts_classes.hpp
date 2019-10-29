@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Pigeon_Breasts.Pigeon_Breasts_C
-// 0x0000 (0x0958 - 0x0958)
+// 0x0000 (0x0938 - 0x0938)
 class APigeon_Breasts_C : public AFoodItem
 {
 public:

@@ -28,7 +28,7 @@ public:
 	}
 
 
-	void UpdatePreviewPrisoners(class UDbUserProfile* userProfile);
+	void UpdatePreviewPrisoners(class UUserProfile* UserProfile);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float* DeltaSeconds);

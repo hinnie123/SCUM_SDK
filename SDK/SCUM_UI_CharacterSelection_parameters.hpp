@@ -91,7 +91,7 @@ struct UUI_CharacterSelection_C_OnCharacterDeleted_Params
 // Function UI_CharacterSelection.UI_CharacterSelection_C.OnCharacterSelected
 struct UUI_CharacterSelection_C_OnCharacterSelected_Params
 {
-	class UDbUserProfile*                              userProfile;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UUserProfile*                                UserProfile;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UI_CharacterSelection.UI_CharacterSelection_C.ExecuteUbergraph_UI_CharacterSelection

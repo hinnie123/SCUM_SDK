@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeaponScope_ACOG_01.WeaponScope_ACOG_01_C
-// 0x0000 (0x0940 - 0x0940)
+// 0x0000 (0x0920 - 0x0920)
 class AWeaponScope_ACOG_01_C : public AWeaponAttachmentScope
 {
 public:

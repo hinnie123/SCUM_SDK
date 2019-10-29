@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WeaponSights_M1_Experimental.BP_WeaponSights_M1_Experimental_C
-// 0x0000 (0x0848 - 0x0848)
+// 0x0000 (0x0828 - 0x0828)
 class ABP_WeaponSights_M1_Experimental_C : public ABP_WeaponSightBase_C
 {
 public:

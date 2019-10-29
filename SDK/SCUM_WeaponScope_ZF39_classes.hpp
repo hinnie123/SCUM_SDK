@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeaponScope_ZF39.WeaponScope_ZF39_C
-// 0x0000 (0x0940 - 0x0940)
+// 0x0000 (0x0920 - 0x0920)
 class AWeaponScope_ZF39_C : public AWeaponAttachmentScope
 {
 public:

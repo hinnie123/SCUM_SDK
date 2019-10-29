@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_M1_Clip.BP_M1_Clip_C
-// 0x0000 (0x0840 - 0x0840)
+// 0x0000 (0x0820 - 0x0820)
 class ABP_M1_Clip_C : public AWeaponAttachmentMagazine
 {
 public:
@@ -24,6 +24,10 @@ public:
 		return ptr;
 	}
 
+
+	EInteractionState GetStateForInteractionWithItem(class AItem** Item);
+	struct FInteractionStruct GetDefaultInteractionForPrisoner(class APrisoner** Prisoner, struct FInteractionQueryParameters* Params);
+	void UserConstructionScript();
 };
 
 

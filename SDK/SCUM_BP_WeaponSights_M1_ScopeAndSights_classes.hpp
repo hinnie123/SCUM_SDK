@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WeaponSights_M1_ScopeAndSights.BP_WeaponSights_M1_ScopeAndSights_C
-// 0x0000 (0x0940 - 0x0940)
+// 0x0000 (0x0920 - 0x0920)
 class ABP_WeaponSights_M1_ScopeAndSights_C : public AWeaponAttachmentScope
 {
 public:

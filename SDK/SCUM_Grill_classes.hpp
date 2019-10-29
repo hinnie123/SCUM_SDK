@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Grill.Grill_C
-// 0x0000 (0x08E8 - 0x08E8)
+// 0x0000 (0x08C8 - 0x08C8)
 class AGrill_C : public AFireplaceItem
 {
 public:

@@ -26,47 +26,11 @@ struct UUI_InventoryPanelThirdIteration_C_ScrollToEquippedItem_Params
 	class AItem*                                       Item;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function UI_InventoryPanelThirdIteration.UI_InventoryPanelThirdIteration_C.OnItemDestroyed
-struct UUI_InventoryPanelThirdIteration_C_OnItemDestroyed_Params
-{
-	class AActor*                                      DestroyedActor;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UI_InventoryPanelThirdIteration.UI_InventoryPanelThirdIteration_C.OnItemPickedUpStateChanged
-struct UUI_InventoryPanelThirdIteration_C_OnItemPickedUpStateChanged_Params
-{
-	class AItem*                                       Item;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               pickedUp;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UI_InventoryPanelThirdIteration.UI_InventoryPanelThirdIteration_C.UpdateContainerForItem
-struct UUI_InventoryPanelThirdIteration_C_UpdateContainerForItem_Params
-{
-	class AItem**                                      Item;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UI_InventoryPanelThirdIteration.UI_InventoryPanelThirdIteration_C.RemoveContainerForItem
-struct UUI_InventoryPanelThirdIteration_C_RemoveContainerForItem_Params
-{
-	class AItem**                                      Item;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UI_InventoryPanelThirdIteration.UI_InventoryPanelThirdIteration_C.AddContainerForItem
-struct UUI_InventoryPanelThirdIteration_C_AddContainerForItem_Params
-{
-	class AItem**                                      Item;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function UI_InventoryPanelThirdIteration.UI_InventoryPanelThirdIteration_C.OnDragLeave
 struct UUI_InventoryPanelThirdIteration_C_OnDragLeave_Params
 {
 	struct FPointerEvent*                              PointerEvent;                                             // (BlueprintVisible, BlueprintReadOnly, Parm)
 	class UDragDropOperation**                         Operation;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UI_InventoryPanelThirdIteration.UI_InventoryPanelThirdIteration_C.UpdateItemWidgetHighlightings
-struct UUI_InventoryPanelThirdIteration_C_UpdateItemWidgetHighlightings_Params
-{
 };
 
 // Function UI_InventoryPanelThirdIteration.UI_InventoryPanelThirdIteration_C.SetDisplayedCharacterName

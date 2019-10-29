@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Base_WoodenDoorFrame_Double.BP_Base_WoodenDoorFrame_Double_C
-// 0x0000 (0x06C0 - 0x06C0)
+// 0x0000 (0x06D0 - 0x06D0)
 class UBP_Base_WoodenDoorFrame_Double_C : public UBaseBuildingComponent
 {
 public:

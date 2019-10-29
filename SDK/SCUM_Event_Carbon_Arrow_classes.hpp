@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Event_Carbon_Arrow.Event_Carbon_Arrow_C
-// 0x0000 (0x0850 - 0x0850)
+// 0x0000 (0x0830 - 0x0830)
 class AEvent_Carbon_Arrow_C : public AAmmunitionArrow
 {
 public:

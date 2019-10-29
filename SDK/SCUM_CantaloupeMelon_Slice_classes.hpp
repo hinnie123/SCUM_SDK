@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass CantaloupeMelon_Slice.CantaloupeMelon_Slice_C
-// 0x0000 (0x0958 - 0x0958)
+// 0x0000 (0x0938 - 0x0938)
 class ACantaloupeMelon_Slice_C : public AFoodItem
 {
 public:

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Harmonica.BP_Harmonica_C
-// 0x0000 (0x0A10 - 0x0A10)
+// 0x0000 (0x09F0 - 0x09F0)
 class ABP_Harmonica_C : public AInstrumentItem
 {
 public:

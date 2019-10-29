@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Wolf_Right_Back_Leg.Wolf_Right_Back_Leg_C
-// 0x0000 (0x0830 - 0x0830)
+// 0x0000 (0x0810 - 0x0810)
 class AWolf_Right_Back_Leg_C : public AEquipmentItem
 {
 public:

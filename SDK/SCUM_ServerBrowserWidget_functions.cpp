@@ -57,9 +57,9 @@ void UServerBrowserWidget_C::UpdatePreviewPrisoners(const struct FString& Server
 // Function ServerBrowserWidget.ServerBrowserWidget_C.GetCurrentUser
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// class UDbUser*                 user                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class UUser*                   User                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UServerBrowserWidget_C::GetCurrentUser(class UDbUser** user)
+void UServerBrowserWidget_C::GetCurrentUser(class UUser** User)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ServerBrowserWidget.ServerBrowserWidget_C.GetCurrentUser");
 
@@ -71,8 +71,8 @@ void UServerBrowserWidget_C::GetCurrentUser(class UDbUser** user)
 
 	fn->FunctionFlags = flags;
 
-	if (user != nullptr)
-		*user = fn_params.user;
+	if (User != nullptr)
+		*User = fn_params.User;
 }
 
 

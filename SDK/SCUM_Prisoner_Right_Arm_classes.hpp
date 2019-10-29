@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Prisoner_Right_Arm.Prisoner_Right_Arm_C
-// 0x0000 (0x0830 - 0x0830)
+// 0x0000 (0x0810 - 0x0810)
 class APrisoner_Right_Arm_C : public AEquipmentItem
 {
 public:

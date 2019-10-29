@@ -12,6 +12,100 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.GetFiringMontage
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// bool*                          isLastShot                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UAnimMontage* ABP_Weapon_M1_Garand_C::GetFiringMontage(bool* isLastShot)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.GetFiringMontage");
+
+	ABP_Weapon_M1_Garand_C_GetFiringMontage_Params fn_params;
+	fn_params.isLastShot = isLastShot;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
+// Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.CanAddAttachment
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class AWeaponAttachment**      Attachment                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ABP_Weapon_M1_Garand_C::CanAddAttachment(class AWeaponAttachment** Attachment)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.CanAddAttachment");
+
+	ABP_Weapon_M1_Garand_C_CanAddAttachment_Params fn_params;
+	fn_params.Attachment = Attachment;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
+// Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.UpdateReloadData
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FWeaponReloadData       reloadDataIn                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FWeaponReloadData       reloadDataOut                  (Parm, OutParm)
+
+void ABP_Weapon_M1_Garand_C::UpdateReloadData(struct FWeaponReloadData* reloadDataIn, struct FWeaponReloadData* reloadDataOut)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.UpdateReloadData");
+
+	ABP_Weapon_M1_Garand_C_UpdateReloadData_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	if (reloadDataIn != nullptr)
+		*reloadDataIn = fn_params.reloadDataIn;
+	if (reloadDataOut != nullptr)
+		*reloadDataOut = fn_params.reloadDataOut;
+}
+
+
+// Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.GetAmmoReloadCapacity
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// class AAmmunitionItem**        ammo                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int ABP_Weapon_M1_Garand_C::GetAmmoReloadCapacity(class AAmmunitionItem** ammo)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.GetAmmoReloadCapacity");
+
+	ABP_Weapon_M1_Garand_C_GetAmmoReloadCapacity_Params fn_params;
+	fn_params.ammo = ammo;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
 // Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.CanSwitchFiringMode
 // (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:

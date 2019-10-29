@@ -44,7 +44,7 @@ struct UUI_CharacterSlot_C_OnDestroyClicked__DelegateSignature_Params
 // Function UI_CharacterSlot.UI_CharacterSlot_C.OnClicked__DelegateSignature
 struct UUI_CharacterSlot_C_OnClicked__DelegateSignature_Params
 {
-	class UDbUserProfile*                              userProfile;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UUserProfile*                                UserProfile;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

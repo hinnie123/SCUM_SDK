@@ -24954,6 +24954,276 @@ struct FVector UProjectileMovementComponent::LimitVelocity(const struct FVector&
 }
 
 
+// Function Engine.Light.ToggleEnabled
+// (Final, Native, Public, BlueprintCallable)
+
+void ALight::ToggleEnabled()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.ToggleEnabled");
+
+	ALight_ToggleEnabled_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Light.SetLightFunctionScale
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 NewLightFunctionScale          (Parm, IsPlainOldData)
+
+void ALight::SetLightFunctionScale(const struct FVector& NewLightFunctionScale)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetLightFunctionScale");
+
+	ALight_SetLightFunctionScale_Params fn_params;
+	fn_params.NewLightFunctionScale = NewLightFunctionScale;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Light.SetLightFunctionMaterial
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMaterialInterface*      NewLightFunctionMaterial       (Parm, ZeroConstructor, IsPlainOldData)
+
+void ALight::SetLightFunctionMaterial(class UMaterialInterface* NewLightFunctionMaterial)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetLightFunctionMaterial");
+
+	ALight_SetLightFunctionMaterial_Params fn_params;
+	fn_params.NewLightFunctionMaterial = NewLightFunctionMaterial;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Light.SetLightFunctionFadeDistance
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          NewLightFunctionFadeDistance   (Parm, ZeroConstructor, IsPlainOldData)
+
+void ALight::SetLightFunctionFadeDistance(float NewLightFunctionFadeDistance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetLightFunctionFadeDistance");
+
+	ALight_SetLightFunctionFadeDistance_Params fn_params;
+	fn_params.NewLightFunctionFadeDistance = NewLightFunctionFadeDistance;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Light.SetLightColor
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FLinearColor            NewLightColor                  (Parm, IsPlainOldData)
+
+void ALight::SetLightColor(const struct FLinearColor& NewLightColor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetLightColor");
+
+	ALight_SetLightColor_Params fn_params;
+	fn_params.NewLightColor = NewLightColor;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Light.SetEnabled
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bSetEnabled                    (Parm, ZeroConstructor, IsPlainOldData)
+
+void ALight::SetEnabled(bool bSetEnabled)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetEnabled");
+
+	ALight_SetEnabled_Params fn_params;
+	fn_params.bSetEnabled = bSetEnabled;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Light.SetCastShadows
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bNewValue                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void ALight::SetCastShadows(bool bNewValue)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetCastShadows");
+
+	ALight_SetCastShadows_Params fn_params;
+	fn_params.bNewValue = bNewValue;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Light.SetBrightness
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          NewBrightness                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void ALight::SetBrightness(float NewBrightness)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetBrightness");
+
+	ALight_SetBrightness_Params fn_params;
+	fn_params.NewBrightness = NewBrightness;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Light.SetAffectTranslucentLighting
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bNewValue                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void ALight::SetAffectTranslucentLighting(bool bNewValue)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetAffectTranslucentLighting");
+
+	ALight_SetAffectTranslucentLighting_Params fn_params;
+	fn_params.bNewValue = bNewValue;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Light.OnRep_bEnabled
+// (Native, Public)
+
+void ALight::OnRep_bEnabled()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.OnRep_bEnabled");
+
+	ALight_OnRep_bEnabled_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Light.IsEnabled
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ALight::IsEnabled()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.IsEnabled");
+
+	ALight_IsEnabled_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
+// Function Engine.Light.GetLightColor
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FLinearColor            ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FLinearColor ALight::GetLightColor()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.GetLightColor");
+
+	ALight_GetLightColor_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
+// Function Engine.Light.GetBrightness
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float ALight::GetBrightness()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.GetBrightness");
+
+	ALight_GetBrightness_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
 // Function Engine.PostProcessVolume.AddOrUpdateBlendable
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -29810,276 +30080,6 @@ class UMaterialInstanceDynamic* UDecalComponent::CreateDynamicMaterialInstance()
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.DecalComponent.CreateDynamicMaterialInstance");
 
 	UDecalComponent_CreateDynamicMaterialInstance_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	return fn_params.ReturnValue;
-}
-
-
-// Function Engine.Light.ToggleEnabled
-// (Final, Native, Public, BlueprintCallable)
-
-void ALight::ToggleEnabled()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.ToggleEnabled");
-
-	ALight_ToggleEnabled_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.Light.SetLightFunctionScale
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 NewLightFunctionScale          (Parm, IsPlainOldData)
-
-void ALight::SetLightFunctionScale(const struct FVector& NewLightFunctionScale)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetLightFunctionScale");
-
-	ALight_SetLightFunctionScale_Params fn_params;
-	fn_params.NewLightFunctionScale = NewLightFunctionScale;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.Light.SetLightFunctionMaterial
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UMaterialInterface*      NewLightFunctionMaterial       (Parm, ZeroConstructor, IsPlainOldData)
-
-void ALight::SetLightFunctionMaterial(class UMaterialInterface* NewLightFunctionMaterial)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetLightFunctionMaterial");
-
-	ALight_SetLightFunctionMaterial_Params fn_params;
-	fn_params.NewLightFunctionMaterial = NewLightFunctionMaterial;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.Light.SetLightFunctionFadeDistance
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          NewLightFunctionFadeDistance   (Parm, ZeroConstructor, IsPlainOldData)
-
-void ALight::SetLightFunctionFadeDistance(float NewLightFunctionFadeDistance)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetLightFunctionFadeDistance");
-
-	ALight_SetLightFunctionFadeDistance_Params fn_params;
-	fn_params.NewLightFunctionFadeDistance = NewLightFunctionFadeDistance;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.Light.SetLightColor
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FLinearColor            NewLightColor                  (Parm, IsPlainOldData)
-
-void ALight::SetLightColor(const struct FLinearColor& NewLightColor)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetLightColor");
-
-	ALight_SetLightColor_Params fn_params;
-	fn_params.NewLightColor = NewLightColor;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.Light.SetEnabled
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bSetEnabled                    (Parm, ZeroConstructor, IsPlainOldData)
-
-void ALight::SetEnabled(bool bSetEnabled)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetEnabled");
-
-	ALight_SetEnabled_Params fn_params;
-	fn_params.bSetEnabled = bSetEnabled;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.Light.SetCastShadows
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bNewValue                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void ALight::SetCastShadows(bool bNewValue)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetCastShadows");
-
-	ALight_SetCastShadows_Params fn_params;
-	fn_params.bNewValue = bNewValue;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.Light.SetBrightness
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          NewBrightness                  (Parm, ZeroConstructor, IsPlainOldData)
-
-void ALight::SetBrightness(float NewBrightness)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetBrightness");
-
-	ALight_SetBrightness_Params fn_params;
-	fn_params.NewBrightness = NewBrightness;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.Light.SetAffectTranslucentLighting
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bNewValue                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void ALight::SetAffectTranslucentLighting(bool bNewValue)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetAffectTranslucentLighting");
-
-	ALight_SetAffectTranslucentLighting_Params fn_params;
-	fn_params.bNewValue = bNewValue;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.Light.OnRep_bEnabled
-// (Native, Public)
-
-void ALight::OnRep_bEnabled()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.OnRep_bEnabled");
-
-	ALight_OnRep_bEnabled_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.Light.IsEnabled
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool ALight::IsEnabled()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.IsEnabled");
-
-	ALight_IsEnabled_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	return fn_params.ReturnValue;
-}
-
-
-// Function Engine.Light.GetLightColor
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FLinearColor            ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
-
-struct FLinearColor ALight::GetLightColor()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.GetLightColor");
-
-	ALight_GetLightColor_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	return fn_params.ReturnValue;
-}
-
-
-// Function Engine.Light.GetBrightness
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float ALight::GetBrightness()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.GetBrightness");
-
-	ALight_GetBrightness_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

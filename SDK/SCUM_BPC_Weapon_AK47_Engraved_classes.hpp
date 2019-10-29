@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BPC_Weapon_AK47_Engraved.BPC_Weapon_AK47_Engraved_C
-// 0x0000 (0x12A8 - 0x12A8)
+// 0x0000 (0x1298 - 0x1298)
 class ABPC_Weapon_AK47_Engraved_C : public ABP_Weapon_AK47_C
 {
 public:

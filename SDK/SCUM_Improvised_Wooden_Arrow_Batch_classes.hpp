@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Improvised_Wooden_Arrow_Batch.Improvised_Wooden_Arrow_Batch_C
-// 0x0000 (0x0818 - 0x0818)
+// 0x0000 (0x07F8 - 0x07F8)
 class AImprovised_Wooden_Arrow_Batch_C : public AItem
 {
 public:

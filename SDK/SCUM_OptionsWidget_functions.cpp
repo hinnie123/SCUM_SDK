@@ -201,14 +201,14 @@ void UOptionsWidget_C::SetDynamicShadowsQuality(int Value)
 // Function OptionsWidget.OptionsWidget_C.UpdateSupportedResolutions
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           fullscreen                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Fullscreen                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UOptionsWidget_C::UpdateSupportedResolutions(bool fullscreen)
+void UOptionsWidget_C::UpdateSupportedResolutions(bool Fullscreen)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OptionsWidget.OptionsWidget_C.UpdateSupportedResolutions");
 
 	UOptionsWidget_C_UpdateSupportedResolutions_Params fn_params;
-	fn_params.fullscreen = fullscreen;
+	fn_params.Fullscreen = Fullscreen;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1729,6 +1729,23 @@ void UOptionsWidget_C::BndEvt__VoiceChatSlider_K2Node_ComponentBoundEvent_9_OnVa
 	fn_params.Index = Index;
 	fn_params.OldIndex = OldIndex;
 	fn_params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function OptionsWidget.OptionsWidget_C.BndEvt__MouseSensitivityDrone_K2Node_ComponentBoundEvent_10_MouseUp__DelegateSignature
+// (BlueprintEvent)
+
+void UOptionsWidget_C::BndEvt__MouseSensitivityDrone_K2Node_ComponentBoundEvent_10_MouseUp__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function OptionsWidget.OptionsWidget_C.BndEvt__MouseSensitivityDrone_K2Node_ComponentBoundEvent_10_MouseUp__DelegateSignature");
+
+	UOptionsWidget_C_BndEvt__MouseSensitivityDrone_K2Node_ComponentBoundEvent_10_MouseUp__DelegateSignature_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 

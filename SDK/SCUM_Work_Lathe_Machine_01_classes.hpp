@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Work_Lathe_Machine_01.Work_Lathe_Machine_01_C
-// 0x0000 (0x0830 - 0x0830)
+// 0x0000 (0x0810 - 0x0810)
 class AWork_Lathe_Machine_01_C : public AEquipmentItem
 {
 public:

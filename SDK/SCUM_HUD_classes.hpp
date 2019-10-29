@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass HUD.HUD_C
-// 0x0129 (0x03A1 - 0x0278)
+// 0x0119 (0x0391 - 0x0278)
 class UHUD_C : public UHudWidget
 {
 public:
@@ -56,13 +56,11 @@ public:
 	bool                                               _shouldRefreshBCUBodyMonitorSize;                         // 0x0386(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               _shouldRefreshRDAMonitorSize;                             // 0x0387(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               _shouldRefreshPerformanceMonitorSize;                     // 0x0388(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0389(0x0007) MISSED OFFSET
-	class UUI_VicinityItemContainer_C*                 VicinityWidget;                                           // 0x0390(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	bool                                               _isValidForInitialization;                                // 0x0398(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               _isInitialized;                                           // 0x0399(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x039A(0x0002) MISSED OFFSET
-	float                                              _lastBCULeftPanelDesiredHeight;                           // 0x039C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               _chatOpen;                                                // 0x03A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               _isValidForInitialization;                                // 0x0389(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               _isInitialized;                                           // 0x038A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1];                                       // 0x038B(0x0001) MISSED OFFSET
+	float                                              _lastBCULeftPanelDesiredHeight;                           // 0x038C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               _chatOpen;                                                // 0x0390(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -85,7 +83,7 @@ public:
 	class UTabModeSwitcherWidget* GetTabModeSwitcherWidget();
 	class UUserWidget* GetBCURightPanel();
 	class UUserWidget* GetBCULeftPanel();
-	class UInventoryPanelSecondIteration* GetInventoryPanel();
+	class UInventoryPanelThirdIteration* GetInventoryPanel();
 	void CompleteInitialization();
 	void StartInitialization();
 	void CompleteMonitorsInitialization();
@@ -99,8 +97,6 @@ public:
 	void AttachHUDMonitors();
 	void StartMonitorsInitialization();
 	void PrisonerValidation();
-	void SetUpVicinityWidget();
-	void SetVicinityWidgetFromCode();
 	bool ShouldSerializeWidgetLayout(class UWidget** Widget);
 	class UPanelWidget* GetTopLevelPanelWidget();
 	void ShowWarning(EWarningType Type);

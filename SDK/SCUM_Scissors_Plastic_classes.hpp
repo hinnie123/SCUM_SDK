@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Scissors_Plastic.Scissors_Plastic_C
-// 0x0000 (0x0830 - 0x0830)
+// 0x0000 (0x0810 - 0x0810)
 class AScissors_Plastic_C : public AEquipmentItem
 {
 public:

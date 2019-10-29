@@ -3657,6 +3657,38 @@ public:
 };
 
 
+// Class Engine.Light
+// 0x0010 (0x0338 - 0x0328)
+class ALight : public AActor
+{
+public:
+	class ULightComponent*                             LightComponent;                                           // 0x0328(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	unsigned char                                      bEnabled : 1;                                             // 0x0330(0x0001) (Net)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0331(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Engine.Light");
+		return ptr;
+	}
+
+
+	void ToggleEnabled();
+	void SetLightFunctionScale(const struct FVector& NewLightFunctionScale);
+	void SetLightFunctionMaterial(class UMaterialInterface* NewLightFunctionMaterial);
+	void SetLightFunctionFadeDistance(float NewLightFunctionFadeDistance);
+	void SetLightColor(const struct FLinearColor& NewLightColor);
+	void SetEnabled(bool bSetEnabled);
+	void SetCastShadows(bool bNewValue);
+	void SetBrightness(float NewBrightness);
+	void SetAffectTranslucentLighting(bool bNewValue);
+	void OnRep_bEnabled();
+	bool IsEnabled();
+	struct FLinearColor GetLightColor();
+	float GetBrightness();
+};
+
+
 // Class Engine.PostProcessVolume
 // 0x0540 (0x08A0 - 0x0360)
 class APostProcessVolume : public AVolume
@@ -7191,38 +7223,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class Engine.Light
-// 0x0010 (0x0338 - 0x0328)
-class ALight : public AActor
-{
-public:
-	class ULightComponent*                             LightComponent;                                           // 0x0328(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	unsigned char                                      bEnabled : 1;                                             // 0x0330(0x0001) (Net)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0331(0x0007) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Engine.Light");
-		return ptr;
-	}
-
-
-	void ToggleEnabled();
-	void SetLightFunctionScale(const struct FVector& NewLightFunctionScale);
-	void SetLightFunctionMaterial(class UMaterialInterface* NewLightFunctionMaterial);
-	void SetLightFunctionFadeDistance(float NewLightFunctionFadeDistance);
-	void SetLightColor(const struct FLinearColor& NewLightColor);
-	void SetEnabled(bool bSetEnabled);
-	void SetCastShadows(bool bNewValue);
-	void SetBrightness(float NewBrightness);
-	void SetAffectTranslucentLighting(bool bNewValue);
-	void OnRep_bEnabled();
-	bool IsEnabled();
-	struct FLinearColor GetLightColor();
-	float GetBrightness();
 };
 
 

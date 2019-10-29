@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass 2_pieces_Ear_Necklace.2_pieces_Ear_Necklace_C
-// 0x0000 (0x08D0 - 0x08D0)
+// 0x0000 (0x08B0 - 0x08B0)
 class A2_pieces_Ear_Necklace_C : public AClothesItem
 {
 public:

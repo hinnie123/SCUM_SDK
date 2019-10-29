@@ -125,7 +125,7 @@ public:
 class UPanelWidget : public UWidget
 {
 public:
-	TArray<class UPanelSlot*>                          Slots;                                                    // 0x0100(0x0010) (ExportObject, ZeroConstructor)
+	TArray<class UPanelSlot*>                          slots;                                                    // 0x0100(0x0010) (ExportObject, ZeroConstructor)
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0110(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()

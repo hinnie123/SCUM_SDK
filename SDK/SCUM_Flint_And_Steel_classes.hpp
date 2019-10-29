@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Flint_And_Steel.Flint_And_Steel_C
-// 0x0000 (0x0830 - 0x0830)
+// 0x0000 (0x0810 - 0x0810)
 class AFlint_And_Steel_C : public AEquipmentItem
 {
 public:

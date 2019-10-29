@@ -22,7 +22,7 @@ public:
 	class UImage*                                      Image_2;                                                  // 0x0360(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	class UTextBlock*                                  PlayerName;                                               // 0x0368(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	class USizeBox*                                    SizeBox_1;                                                // 0x0370(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
-	TMap<class AItem*, class UUI_InventorySecondIteration_C*> InventoryContainers;                                      // 0x0378(0x0050) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	TMap<class AItem*, class UObject*>                 InventoryContainers;                                      // 0x0378(0x0050) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
 	TMap<class AItem*, class UScrollBoxSlot*>          InventoryScrollSlots;                                     // 0x03C8(0x0050) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
 
 	static UClass* StaticClass()
@@ -34,13 +34,7 @@ public:
 
 	void ReinitializeForPrisoner(class APrisoner* Prisoner);
 	void ScrollToEquippedItem(class AItem* Item);
-	void OnItemDestroyed(class AActor* DestroyedActor);
-	void OnItemPickedUpStateChanged(class AItem* Item, bool pickedUp);
-	void UpdateContainerForItem(class AItem** Item);
-	void RemoveContainerForItem(class AItem** Item);
-	void AddContainerForItem(class AItem** Item);
 	void OnDragLeave(struct FPointerEvent* PointerEvent, class UDragDropOperation** Operation);
-	void UpdateItemWidgetHighlightings();
 	void SetDisplayedCharacterName(struct FString* Name);
 	void ExecuteUbergraph_UI_InventoryPanelThirdIteration(int EntryPoint);
 };

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass 12_Gauge_FlareCartridge.12_Gauge_FlareCartridge_C
-// 0x0000 (0x0830 - 0x0830)
+// 0x0000 (0x0810 - 0x0810)
 class A12_Gauge_FlareCartridge_C : public AAmmunitionItem
 {
 public:

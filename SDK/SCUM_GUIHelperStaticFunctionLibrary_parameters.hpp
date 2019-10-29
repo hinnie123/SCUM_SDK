@@ -35,7 +35,7 @@ struct UGUIHelperStaticFunctionLibrary_C_LinearCoordinatesToString_Params
 // Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.HealthToString
 struct UGUIHelperStaticFunctionLibrary_C_HealthToString_Params
 {
-	float                                              Health;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              health;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class UObject*                                     __WorldContext;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FString                                     healthString;                                             // (Parm, OutParm, ZeroConstructor)
 };

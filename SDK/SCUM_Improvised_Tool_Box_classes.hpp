@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Improvised_Tool_Box.Improvised_Tool_Box_C
-// 0x0000 (0x0830 - 0x0830)
+// 0x0000 (0x0810 - 0x0810)
 class AImprovised_Tool_Box_C : public AEquipmentItem
 {
 public:

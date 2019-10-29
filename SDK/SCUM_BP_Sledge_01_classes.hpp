@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Sledge_01.BP_Sledge_01_C
-// 0x0000 (0x0A28 - 0x0A28)
+// 0x0000 (0x0A08 - 0x0A08)
 class ABP_Sledge_01_C : public ABP_Sledge_Base_C
 {
 public:
