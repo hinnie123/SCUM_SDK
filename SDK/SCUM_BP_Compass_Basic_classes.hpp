@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Compass_Basic.BP_Compass_Basic_C
-// 0x0000 (0x0810 - 0x0810)
+// 0x0000 (0x0858 - 0x0858)
 class ABP_Compass_Basic_C : public AEquipmentItem
 {
 public:

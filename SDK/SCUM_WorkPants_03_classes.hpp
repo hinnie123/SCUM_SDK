@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WorkPants_03.WorkPants_03_C
-// 0x0000 (0x08B0 - 0x08B0)
+// 0x0000 (0x08F8 - 0x08F8)
 class AWorkPants_03_C : public AClothesItem
 {
 public:

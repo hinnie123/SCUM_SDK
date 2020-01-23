@@ -12,6 +12,29 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.CanReloadUsingData
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// struct FWeaponReloadData*      Data                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ABP_Weapon_M1_Garand_C::CanReloadUsingData(struct FWeaponReloadData* Data)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.CanReloadUsingData");
+
+	ABP_Weapon_M1_Garand_C_CanReloadUsingData_Params fn_params;
+	fn_params.Data = Data;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
 // Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.GetFiringMontage
 // (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
@@ -24,29 +47,6 @@ class UAnimMontage* ABP_Weapon_M1_Garand_C::GetFiringMontage(bool* isLastShot)
 
 	ABP_Weapon_M1_Garand_C_GetFiringMontage_Params fn_params;
 	fn_params.isLastShot = isLastShot;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	return fn_params.ReturnValue;
-}
-
-
-// Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.CanAddAttachment
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// class AWeaponAttachment**      Attachment                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool ABP_Weapon_M1_Garand_C::CanAddAttachment(class AWeaponAttachment** Attachment)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.CanAddAttachment");
-
-	ABP_Weapon_M1_Garand_C_CanAddAttachment_Params fn_params;
-	fn_params.Attachment = Attachment;
 
 	auto flags = fn->FunctionFlags;
 

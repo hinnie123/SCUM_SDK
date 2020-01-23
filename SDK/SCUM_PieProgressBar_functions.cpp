@@ -97,14 +97,14 @@ void UPieProgressBar_C::SetTextColor(class UTextBlock* textWidget, const struct 
 // Function PieProgressBar.PieProgressBar_C.SetCircularBarColor
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            CircularBarColor               (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FLinearColor            circularBarColor               (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UPieProgressBar_C::SetCircularBarColor(const struct FLinearColor& CircularBarColor)
+void UPieProgressBar_C::SetCircularBarColor(const struct FLinearColor& circularBarColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.SetCircularBarColor");
 
 	UPieProgressBar_C_SetCircularBarColor_Params fn_params;
-	fn_params.CircularBarColor = CircularBarColor;
+	fn_params.circularBarColor = circularBarColor;
 
 	auto flags = fn->FunctionFlags;
 
@@ -117,9 +117,9 @@ void UPieProgressBar_C::SetCircularBarColor(const struct FLinearColor& CircularB
 // Function PieProgressBar.PieProgressBar_C.GetCircularBarColor
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            CircularBarColor               (Parm, OutParm, IsPlainOldData)
+// struct FLinearColor            circularBarColor               (Parm, OutParm, IsPlainOldData)
 
-void UPieProgressBar_C::GetCircularBarColor(struct FLinearColor* CircularBarColor)
+void UPieProgressBar_C::GetCircularBarColor(struct FLinearColor* circularBarColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.GetCircularBarColor");
 
@@ -131,22 +131,22 @@ void UPieProgressBar_C::GetCircularBarColor(struct FLinearColor* CircularBarColo
 
 	fn->FunctionFlags = flags;
 
-	if (CircularBarColor != nullptr)
-		*CircularBarColor = fn_params.CircularBarColor;
+	if (circularBarColor != nullptr)
+		*circularBarColor = fn_params.circularBarColor;
 }
 
 
 // Function PieProgressBar.PieProgressBar_C.SetOuterCircleColor
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            outerCircleColor               (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FLinearColor            OuterCircleColor               (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UPieProgressBar_C::SetOuterCircleColor(const struct FLinearColor& outerCircleColor)
+void UPieProgressBar_C::SetOuterCircleColor(const struct FLinearColor& OuterCircleColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.SetOuterCircleColor");
 
 	UPieProgressBar_C_SetOuterCircleColor_Params fn_params;
-	fn_params.outerCircleColor = outerCircleColor;
+	fn_params.OuterCircleColor = OuterCircleColor;
 
 	auto flags = fn->FunctionFlags;
 
@@ -159,9 +159,9 @@ void UPieProgressBar_C::SetOuterCircleColor(const struct FLinearColor& outerCirc
 // Function PieProgressBar.PieProgressBar_C.GetOuterCircleColor
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            outerCircleColor               (Parm, OutParm, IsPlainOldData)
+// struct FLinearColor            OuterCircleColor               (Parm, OutParm, IsPlainOldData)
 
-void UPieProgressBar_C::GetOuterCircleColor(struct FLinearColor* outerCircleColor)
+void UPieProgressBar_C::GetOuterCircleColor(struct FLinearColor* OuterCircleColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.GetOuterCircleColor");
 
@@ -173,8 +173,8 @@ void UPieProgressBar_C::GetOuterCircleColor(struct FLinearColor* outerCircleColo
 
 	fn->FunctionFlags = flags;
 
-	if (outerCircleColor != nullptr)
-		*outerCircleColor = fn_params.outerCircleColor;
+	if (OuterCircleColor != nullptr)
+		*OuterCircleColor = fn_params.OuterCircleColor;
 }
 
 

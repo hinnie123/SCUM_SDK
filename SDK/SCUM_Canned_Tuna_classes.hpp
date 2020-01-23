@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Canned_Tuna.Canned_Tuna_C
-// 0x0000 (0x0938 - 0x0938)
+// 0x0000 (0x0980 - 0x0980)
 class ACanned_Tuna_C : public AFoodItem
 {
 public:

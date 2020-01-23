@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Snowballs_02.Snowballs_02_C
-// 0x0000 (0x0938 - 0x0938)
+// 0x0000 (0x0980 - 0x0980)
 class ASnowballs_02_C : public AFoodItem
 {
 public:

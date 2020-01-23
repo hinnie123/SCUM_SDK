@@ -13,10 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_M1_OpenEjectClipInsertClip.BP_M1_OpenEjectClipInsertClip_C
-// 0x0000 (0x0080 - 0x0080)
+// 0x0008 (0x0088 - 0x0080)
 class UBP_M1_OpenEjectClipInsertClip_C : public URemoveMagazineInsertMagazine
 {
 public:
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0080(0x0008) (Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{
@@ -26,6 +27,8 @@ public:
 
 
 	bool CanExecuteUsingData(struct FWeaponReloadData* Data);
+	void OnActionAnimNotify(ECharacterActionNotifyType* notifyType);
+	void ExecuteUbergraph_BP_M1_OpenEjectClipInsertClip(int EntryPoint);
 };
 
 

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass UI_Skills.UI_Skills_C
-// 0x01F4 (0x03FC - 0x0208)
+// 0x0208 (0x0410 - 0x0208)
 class UUI_Skills_C : public UUserWidget
 {
 public:
@@ -82,6 +82,8 @@ public:
 	bool                                               _isMinimized;                                             // 0x03F4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x03F5(0x0003) MISSED OFFSET
 	int                                                _numberOfPointsToTrack;                                   // 0x03F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x03FC(0x0004) MISSED OFFSET
+	TArray<class UClass*>                              HiddenSkills;                                             // 0x0400(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -90,6 +92,7 @@ public:
 	}
 
 
+	void ShouldSkillBeVisible(class USkill* Skill, bool* visible);
 	void UpdateAttributeChange();
 	void InitTimePeriodsBarForHorizontalBox(class UHorizontalBox* HorizontalBox);
 	void RefreshGraph();

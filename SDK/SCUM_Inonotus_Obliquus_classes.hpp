@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Inonotus_Obliquus.Inonotus_Obliquus_C
-// 0x0000 (0x0938 - 0x0938)
+// 0x0000 (0x0980 - 0x0980)
 class AInonotus_Obliquus_C : public AFoodItem
 {
 public:

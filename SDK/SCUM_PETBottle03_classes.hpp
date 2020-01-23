@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PETBottle03.PETBottle03_C
-// 0x0000 (0x0940 - 0x0940)
+// 0x0000 (0x0988 - 0x0988)
 class APETBottle03_C : public ADrinkItem
 {
 public:

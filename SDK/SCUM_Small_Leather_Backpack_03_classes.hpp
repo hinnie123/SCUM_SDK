@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Small_Leather_Backpack_03.Small_Leather_Backpack_03_C
-// 0x0000 (0x08B0 - 0x08B0)
+// 0x0000 (0x08F8 - 0x08F8)
 class ASmall_Leather_Backpack_03_C : public AClothesItem
 {
 public:

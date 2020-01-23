@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Birthday_Cap.Birthday_Cap_C
-// 0x0000 (0x08B0 - 0x08B0)
+// 0x0000 (0x08F8 - 0x08F8)
 class ABirthday_Cap_C : public AClothesItem
 {
 public:

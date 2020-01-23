@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Fried_Egg_01.Fried_Egg_01_C
-// 0x0000 (0x0938 - 0x0938)
+// 0x0000 (0x0980 - 0x0980)
 class AFried_Egg_01_C : public AFoodItem
 {
 public:

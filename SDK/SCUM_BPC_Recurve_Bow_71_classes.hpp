@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BPC_Recurve_Bow_71.BPC_Recurve_Bow_70_C
-// 0x0000 (0x16E8 - 0x16E8)
+// 0x0000 (0x17A8 - 0x17A8)
 class ABPC_Recurve_Bow_70_C : public ARecurve_Bow_C
 {
 public:

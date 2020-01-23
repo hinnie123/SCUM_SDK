@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Donkey_skinned.Donkey_Skinned_C
-// 0x0000 (0x0810 - 0x0810)
+// 0x0000 (0x0858 - 0x0858)
 class ADonkey_Skinned_C : public AEquipmentItem
 {
 public:

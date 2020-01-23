@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Jack_o_Lantern_02.Jack_o_Lantern_02_C
-// 0x0000 (0x0810 - 0x0810)
+// 0x0000 (0x0858 - 0x0858)
 class AJack_o_Lantern_02_C : public AEquipmentItem
 {
 public:

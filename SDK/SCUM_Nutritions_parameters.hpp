@@ -19,10 +19,10 @@ struct UNutritions_C_SetParentsForChildren_Params
 {
 };
 
-// Function Nutritions.Nutritions_C.shouldAlarmBeOn
-struct UNutritions_C_shouldAlarmBeOn_Params
+// Function Nutritions.Nutritions_C.ShouldAlarmBeOn
+struct UNutritions_C_ShouldAlarmBeOn_Params
 {
-	bool                                               shouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ShouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Nutritions.Nutritions_C.UpdateCaloryWaterConsumRates

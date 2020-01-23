@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Base_ImprovisedCross.BP_Base_ImprovisedCross_C
-// 0x0000 (0x06D0 - 0x06D0)
+// 0x0000 (0x0710 - 0x0710)
 class UBP_Base_ImprovisedCross_C : public UBaseBuildingComponent
 {
 public:

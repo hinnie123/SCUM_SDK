@@ -28,7 +28,7 @@ struct USkillsContent_C_SkillToText_Params
 	struct FText                                       skillNameText;                                            // (Parm, OutParm)
 	struct FText                                       skillPointsText;                                          // (Parm, OutParm)
 	struct FText                                       maxValueText;                                             // (Parm, OutParm)
-	float                                              percentage;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              Percentage;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	float                                              skillLevelPercentage;                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -73,7 +73,7 @@ struct USkillsContent_C_SkillToSkillText_Params
 	struct FText                                       skillNameText;                                            // (Parm, OutParm)
 	struct FText                                       skillPointsText;                                          // (Parm, OutParm)
 	struct FText                                       maxValueText;                                             // (Parm, OutParm)
-	float                                              percentage;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              Percentage;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	float                                              skillLevelPercentage;                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -102,7 +102,7 @@ struct USkillsContent_C_CreateSkillLine_Params
 	struct FText                                       skillName;                                                // (BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FText                                       skillValueText;                                           // (BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FText                                       maxSkillValueText;                                        // (BlueprintVisible, BlueprintReadOnly, Parm)
-	float                                              percentage;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Percentage;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              skillLevelPercentage;                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class USkillLine2_C*                               skillLineRef;                                             // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };

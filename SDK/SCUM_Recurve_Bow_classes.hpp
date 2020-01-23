@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Recurve_Bow.Recurve_Bow_C
-// 0x0008 (0x16E8 - 0x16E0)
+// 0x0008 (0x17A8 - 0x17A0)
 class ARecurve_Bow_C : public AWeaponBow
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x16E0(0x0008) (Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x17A0(0x0008) (Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

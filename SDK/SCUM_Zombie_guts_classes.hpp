@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Zombie_guts.Zombie_guts_C
-// 0x0000 (0x0938 - 0x0938)
+// 0x0000 (0x0980 - 0x0980)
 class AZombie_guts_C : public AFoodItem
 {
 public:

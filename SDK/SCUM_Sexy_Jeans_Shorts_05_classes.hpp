@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Sexy_Jeans_Shorts_05.Sexy_Jeans_Shorts_05_C
-// 0x0000 (0x08B0 - 0x08B0)
+// 0x0000 (0x08F8 - 0x08F8)
 class ASexy_Jeans_Shorts_05_C : public AClothesItem
 {
 public:

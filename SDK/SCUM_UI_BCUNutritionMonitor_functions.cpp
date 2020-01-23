@@ -15,15 +15,15 @@ namespace SDK
 // Function UI_BCUNutritionMonitor.UI_BCUNutritionMonitor_C.CheckIfNutritionPercentageIsSatisfying
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// float                          percentage                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Percentage                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          satisfying                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UUI_BCUNutritionMonitor_C::CheckIfNutritionPercentageIsSatisfying(float percentage, float* satisfying)
+void UUI_BCUNutritionMonitor_C::CheckIfNutritionPercentageIsSatisfying(float Percentage, float* satisfying)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_BCUNutritionMonitor.UI_BCUNutritionMonitor_C.CheckIfNutritionPercentageIsSatisfying");
 
 	UUI_BCUNutritionMonitor_C_CheckIfNutritionPercentageIsSatisfying_Params fn_params;
-	fn_params.percentage = percentage;
+	fn_params.Percentage = Percentage;
 
 	auto flags = fn->FunctionFlags;
 

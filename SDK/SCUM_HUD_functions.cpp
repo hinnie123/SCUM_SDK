@@ -12,6 +12,27 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function HUD.HUD_C.GetVisibility_VicinityBackgroundImage
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ESlateVisibility UHUD_C::GetVisibility_VicinityBackgroundImage()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.GetVisibility_VicinityBackgroundImage");
+
+	UHUD_C_GetVisibility_VicinityBackgroundImage_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
 // Function HUD.HUD_C.GetCompassWidget
 // (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
@@ -627,13 +648,15 @@ class UPanelWidget* UHUD_C::GetTopLevelPanelWidget()
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EWarningType                   Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           playSounds                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UHUD_C::ShowWarning(EWarningType Type)
+void UHUD_C::ShowWarning(EWarningType Type, bool playSounds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.ShowWarning");
 
 	UHUD_C_ShowWarning_Params fn_params;
 	fn_params.Type = Type;
+	fn_params.playSounds = playSounds;
 
 	auto flags = fn->FunctionFlags;
 
@@ -907,37 +930,19 @@ void UHUD_C::GetPrisonerLifeComponent(class UPrisonerLifeComponent** LifeCompone
 }
 
 
-// Function HUD.HUD_C.RemoveTeammateName
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// struct FString*                Name                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-
-void UHUD_C::RemoveTeammateName(struct FString* Name)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.RemoveTeammateName");
-
-	UHUD_C_RemoveTeammateName_Params fn_params;
-	fn_params.Name = Name;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function HUD.HUD_C.AddWarning
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EWarningType*                  warningType                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          playSounds                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UHUD_C::AddWarning(EWarningType* warningType)
+void UHUD_C::AddWarning(EWarningType* warningType, bool* playSounds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.AddWarning");
 
 	UHUD_C_AddWarning_Params fn_params;
 	fn_params.warningType = warningType;
+	fn_params.playSounds = playSounds;
 
 	auto flags = fn->FunctionFlags;
 
@@ -992,26 +997,6 @@ void UHUD_C::ClearTeammateNames()
 	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.ClearTeammateNames");
 
 	UHUD_C_ClearTeammateNames_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function HUD.HUD_C.AddTeammateName
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// struct FString*                Name                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-
-void UHUD_C::AddTeammateName(struct FString* Name)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.AddTeammateName");
-
-	UHUD_C_AddTeammateName_Params fn_params;
-	fn_params.Name = Name;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1077,6 +1062,46 @@ void UHUD_C::UpdateAttributesHistory()
 }
 
 
+// Function HUD.HUD_C.RemoveTeammateName
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// struct FString*                Name                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void UHUD_C::RemoveTeammateName(struct FString* Name)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.RemoveTeammateName");
+
+	UHUD_C_RemoveTeammateName_Params fn_params;
+	fn_params.Name = Name;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HUD.HUD_C.AddTeammateName
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// struct FString*                Name                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void UHUD_C::AddTeammateName(struct FString* Name)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.AddTeammateName");
+
+	UHUD_C_AddTeammateName_Params fn_params;
+	fn_params.Name = Name;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function HUD.HUD_C.AddMessageToScreen
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
@@ -1116,23 +1141,6 @@ void UHUD_C::AddMessage(TEnumAsByte<EMessageType> Type, const struct FText& Text
 	fn_params.Type = Type;
 	fn_params.Text = Text;
 	fn_params.Duration = Duration;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function HUD.HUD_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UHUD_C::Construct()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.Construct");
-
-	UHUD_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1184,6 +1192,23 @@ void UHUD_C::OnPerformanceMonitorMaximized()
 	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.OnPerformanceMonitorMaximized");
 
 	UHUD_C_OnPerformanceMonitorMaximized_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HUD.HUD_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UHUD_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.Construct");
+
+	UHUD_C_Construct_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1359,14 +1384,16 @@ void UHUD_C::CloseChat()
 // Parameters:
 // struct FString*                Message                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // float*                         Duration                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor*           TextColor                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UHUD_C::ShowWarningMessage(struct FString* Message, float* Duration)
+void UHUD_C::ShowWarningMessage(struct FString* Message, float* Duration, struct FLinearColor* TextColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.ShowWarningMessage");
 
 	UHUD_C_ShowWarningMessage_Params fn_params;
 	fn_params.Message = Message;
 	fn_params.Duration = Duration;
+	fn_params.TextColor = TextColor;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1473,6 +1500,45 @@ void UHUD_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 	UHUD_C_Tick_Params fn_params;
 	fn_params.MyGeometry = MyGeometry;
 	fn_params.InDeltaTime = InDeltaTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HUD.HUD_C.ShowLevelUpNotification
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USkill**                 Skill                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ESkillLevel*                   skillLevel                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UHUD_C::ShowLevelUpNotification(class USkill** Skill, ESkillLevel* skillLevel)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.ShowLevelUpNotification");
+
+	UHUD_C_ShowLevelUpNotification_Params fn_params;
+	fn_params.Skill = Skill;
+	fn_params.skillLevel = skillLevel;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HUD.HUD_C.ShowTrapsDetectedNotification
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UHUD_C::ShowTrapsDetectedNotification()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.ShowTrapsDetectedNotification");
+
+	UHUD_C_ShowTrapsDetectedNotification_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 

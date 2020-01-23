@@ -26,8 +26,8 @@ public:
 	class UImage*                                      ImageAttribute_4Full;                                     // 0x02B8(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	struct FLinearColor                                AlarmColor;                                               // 0x02C0(0x0010) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
 	struct FLinearColor                                NormalColor;                                              // 0x02D0(0x0010) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
-	struct FLinearColor                                outerCircleColor;                                         // 0x02E0(0x0010) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
-	struct FLinearColor                                CircularBarColor;                                         // 0x02F0(0x0010) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
+	struct FLinearColor                                OuterCircleColor;                                         // 0x02E0(0x0010) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
+	struct FLinearColor                                circularBarColor;                                         // 0x02F0(0x0010) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -40,10 +40,10 @@ public:
 	struct FText GetPercentageText();
 	void SetImageColor(class UImage* Image, const struct FLinearColor& Color);
 	void SetTextColor(class UTextBlock* textWidget, const struct FLinearColor& Color);
-	void SetCircularBarColor(const struct FLinearColor& CircularBarColor);
-	void GetCircularBarColor(struct FLinearColor* CircularBarColor);
-	void SetOuterCircleColor(const struct FLinearColor& outerCircleColor);
-	void GetOuterCircleColor(struct FLinearColor* outerCircleColor);
+	void SetCircularBarColor(const struct FLinearColor& circularBarColor);
+	void GetCircularBarColor(struct FLinearColor* circularBarColor);
+	void SetOuterCircleColor(const struct FLinearColor& OuterCircleColor);
+	void GetOuterCircleColor(struct FLinearColor* OuterCircleColor);
 	void GetNormalColor(struct FLinearColor* NormalColor);
 	void SetNormalColor(const struct FLinearColor& NormalColor);
 	void UpdatePercentageArc();

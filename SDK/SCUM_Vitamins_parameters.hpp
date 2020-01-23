@@ -14,10 +14,10 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Vitamins.Vitamins_C.shouldAlarmBeOn
-struct UVitamins_C_shouldAlarmBeOn_Params
+// Function Vitamins.Vitamins_C.ShouldAlarmBeOn
+struct UVitamins_C_ShouldAlarmBeOn_Params
 {
-	bool                                               shouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ShouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Vitamins.Vitamins_C.SetParentsForChildren

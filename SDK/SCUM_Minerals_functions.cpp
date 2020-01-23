@@ -12,16 +12,16 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Minerals.Minerals_C.shouldAlarmBeOn
+// Function Minerals.Minerals_C.ShouldAlarmBeOn
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UMinerals_C::shouldAlarmBeOn()
+bool UMinerals_C::ShouldAlarmBeOn()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Minerals.Minerals_C.shouldAlarmBeOn");
+	static auto fn = UObject::FindObject<UFunction>("Function Minerals.Minerals_C.ShouldAlarmBeOn");
 
-	UMinerals_C_shouldAlarmBeOn_Params fn_params;
+	UMinerals_C_ShouldAlarmBeOn_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 

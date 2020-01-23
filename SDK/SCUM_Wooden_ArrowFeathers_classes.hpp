@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Wooden_ArrowFeathers.Wooden_ArrowFeathers_C
-// 0x0000 (0x0830 - 0x0830)
+// 0x0000 (0x0878 - 0x0878)
 class AWooden_ArrowFeathers_C : public AAmmunitionArrow
 {
 public:

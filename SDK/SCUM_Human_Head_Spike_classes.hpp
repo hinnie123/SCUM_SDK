@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Human_Head_Spike.Human_Head_Spike_C
-// 0x0000 (0x07F8 - 0x07F8)
+// 0x0000 (0x0840 - 0x0840)
 class AHuman_Head_Spike_C : public AItem
 {
 public:

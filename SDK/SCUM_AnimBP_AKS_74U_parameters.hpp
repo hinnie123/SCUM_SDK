@@ -14,6 +14,16 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function AnimBP_AKS_74U.AnimBP_AKS_74U_C.EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AKS_74U_AnimGraphNode_BlendListByBool_0DACF6C1466DC186137D6AA207487AE9
+struct UAnimBP_AKS_74U_C_EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AKS_74U_AnimGraphNode_BlendListByBool_0DACF6C1466DC186137D6AA207487AE9_Params
+{
+};
+
+// Function AnimBP_AKS_74U.AnimBP_AKS_74U_C.EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AKS_74U_AnimGraphNode_BlendListByEnum_F24C7AB64A3DB25F69078584A586E22E
+struct UAnimBP_AKS_74U_C_EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AKS_74U_AnimGraphNode_BlendListByEnum_F24C7AB64A3DB25F69078584A586E22E_Params
+{
+};
+
 // Function AnimBP_AKS_74U.AnimBP_AKS_74U_C.EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AKS_74U_AnimGraphNode_ModifyBone_23F30FFD4C2F66EBC99D01A878391CBA
 struct UAnimBP_AKS_74U_C_EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AKS_74U_AnimGraphNode_ModifyBone_23F30FFD4C2F66EBC99D01A878391CBA_Params
 {

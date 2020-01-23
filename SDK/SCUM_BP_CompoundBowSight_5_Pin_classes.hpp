@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CompoundBowSight_5_Pin.BP_CompoundBowSight_5_Pin_C
-// 0x0000 (0x0820 - 0x0820)
+// 0x0000 (0x0878 - 0x0878)
 class ABP_CompoundBowSight_5_Pin_C : public AWeaponAttachmentSight
 {
 public:

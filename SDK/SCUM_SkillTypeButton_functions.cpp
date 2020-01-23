@@ -201,14 +201,14 @@ void USkillTypeButton_C::IncreaseSizeX(float sizeChangeX)
 // Function SkillTypeButton.SkillTypeButton_C.SetOffset
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          offsetX                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          OffsetX                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void USkillTypeButton_C::SetOffset(float offsetX)
+void USkillTypeButton_C::SetOffset(float OffsetX)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillTypeButton.SkillTypeButton_C.SetOffset");
 
 	USkillTypeButton_C_SetOffset_Params fn_params;
-	fn_params.offsetX = offsetX;
+	fn_params.OffsetX = OffsetX;
 
 	auto flags = fn->FunctionFlags;
 

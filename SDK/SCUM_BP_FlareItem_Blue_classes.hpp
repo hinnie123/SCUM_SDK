@@ -13,8 +13,8 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FlareItem_Blue.BP_FlareItem_Blue_C
-// 0x0000 (0x0888 - 0x0888)
-class ABP_FlareItem_Blue_C : public ABP_FlareItem_C
+// 0x0000 (0x08D0 - 0x08D0)
+class ABP_FlareItem_Blue_C : public AFlareItem
 {
 public:
 
@@ -24,6 +24,8 @@ public:
 		return ptr;
 	}
 
+
+	void UserConstructionScript();
 };
 
 

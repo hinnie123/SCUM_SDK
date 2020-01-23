@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Bulletproof_Vest_01_Event.BP_Bulletproof_Vest_01_Event_C
-// 0x0000 (0x08B0 - 0x08B0)
+// 0x0000 (0x08F8 - 0x08F8)
 class ABP_Bulletproof_Vest_01_Event_C : public AClothesItem
 {
 public:

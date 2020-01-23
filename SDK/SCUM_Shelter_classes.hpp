@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Shelter.Shelter_C
-// 0x0000 (0x0800 - 0x0800)
+// 0x0000 (0x0848 - 0x0848)
 class AShelter_C : public AShelterItem
 {
 public:

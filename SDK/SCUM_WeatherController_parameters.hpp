@@ -39,6 +39,18 @@ struct AWeatherController_C_UserConstructionScript_Params
 {
 };
 
+// Function WeatherController.WeatherController_C.NetworkSyncDayTime
+struct AWeatherController_C_NetworkSyncDayTime_Params
+{
+};
+
+// Function WeatherController.WeatherController_C.StartWeatherTransition
+struct AWeatherController_C_StartWeatherTransition_Params
+{
+	float                                              newStormIntensity;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              TransitionTime;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function WeatherController.WeatherController_C.ReceiveTick
 struct AWeatherController_C_ReceiveTick_Params
 {
@@ -48,18 +60,6 @@ struct AWeatherController_C_ReceiveTick_Params
 // Function WeatherController.WeatherController_C.ReceiveBeginPlay
 struct AWeatherController_C_ReceiveBeginPlay_Params
 {
-};
-
-// Function WeatherController.WeatherController_C.NetworkSyncDayTime
-struct AWeatherController_C_NetworkSyncDayTime_Params
-{
-};
-
-// Function WeatherController.WeatherController_C.StartWeatherTransition
-struct AWeatherController_C_StartWeatherTransition_Params
-{
-	float                                              NewStormIntensity;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              TransitionTime;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeatherController.WeatherController_C.Recapture
@@ -81,6 +81,11 @@ struct AWeatherController_C_Event_SetWindSpeed_Params
 
 // Function WeatherController.WeatherController_C.ChangeWindDir
 struct AWeatherController_C_ChangeWindDir_Params
+{
+};
+
+// Function WeatherController.WeatherController_C.UpdateWeatherVisuals
+struct AWeatherController_C_UpdateWeatherVisuals_Params
 {
 };
 

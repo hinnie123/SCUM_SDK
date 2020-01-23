@@ -47,7 +47,7 @@ struct UOxygenSaturationMonitor_C_SetPrisonerAndLifeComponentToMonitor_Params
 // Function OxygenSaturationMonitor.OxygenSaturationMonitor_C.ProvideOxygenSaturationExtremes
 struct UOxygenSaturationMonitor_C_ProvideOxygenSaturationExtremes_Params
 {
-	struct FText                                       OxygenSaturationExtremes;                                 // (Parm, OutParm)
+	struct FText                                       oxygenSaturationExtremes;                                 // (Parm, OutParm)
 };
 
 // Function OxygenSaturationMonitor.OxygenSaturationMonitor_C.GetHeartRateBPM

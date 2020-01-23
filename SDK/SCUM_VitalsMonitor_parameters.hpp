@@ -14,10 +14,10 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function VitalsMonitor.VitalsMonitor_C.shouldAlarmBeOn
-struct UVitalsMonitor_C_shouldAlarmBeOn_Params
+// Function VitalsMonitor.VitalsMonitor_C.ShouldAlarmBeOn
+struct UVitalsMonitor_C_ShouldAlarmBeOn_Params
 {
-	bool                                               shouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ShouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function VitalsMonitor.VitalsMonitor_C.Init

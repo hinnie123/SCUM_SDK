@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Smoked_Boar_Steak.Smoked_Boar_Steak_C
-// 0x0000 (0x0938 - 0x0938)
+// 0x0000 (0x0980 - 0x0980)
 class ASmoked_Boar_Steak_C : public AFoodItem
 {
 public:

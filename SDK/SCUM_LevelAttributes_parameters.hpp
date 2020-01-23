@@ -14,10 +14,10 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function LevelAttributes.LevelAttributes_C.shouldAlarmBeOn
-struct ULevelAttributes_C_shouldAlarmBeOn_Params
+// Function LevelAttributes.LevelAttributes_C.ShouldAlarmBeOn
+struct ULevelAttributes_C_ShouldAlarmBeOn_Params
 {
-	bool                                               shouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ShouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function LevelAttributes.LevelAttributes_C.UpdateReferentValue

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Lock_Items_Medium.Lock_Items_Medium_C
-// 0x0000 (0x07F8 - 0x07F8)
+// 0x0000 (0x0840 - 0x0840)
 class ALock_Items_Medium_C : public AItem
 {
 public:

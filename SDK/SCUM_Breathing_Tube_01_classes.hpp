@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Breathing_Tube_01.Breathing_Tube_01_C
-// 0x0000 (0x08B0 - 0x08B0)
+// 0x0000 (0x08F8 - 0x08F8)
 class ABreathing_Tube_01_C : public AClothesItem
 {
 public:

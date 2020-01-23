@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BlankSign.BP_BlankSign_C
-// 0x0000 (0x0850 - 0x0850)
+// 0x0000 (0x0898 - 0x0898)
 class ABP_BlankSign_C : public AItemWithText
 {
 public:

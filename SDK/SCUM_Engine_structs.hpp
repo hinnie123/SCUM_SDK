@@ -541,6 +541,169 @@ enum class EAutoPossessAI : uint8_t
 };
 
 
+// Enum Engine.ERelativeTransformSpace
+enum class ERelativeTransformSpace : uint8_t
+{
+	RTS_World                      = 0,
+	RTS_Actor                      = 1,
+	RTS_Component                  = 2,
+	RTS_ParentBoneSpace            = 3,
+	RTS_MAX                        = 4
+};
+
+
+// Enum Engine.EDetailMode
+enum class EDetailMode : uint8_t
+{
+	DM_Low                         = 0,
+	DM_Medium                      = 1,
+	DM_High                        = 2,
+	DM_MAX                         = 3
+};
+
+
+// Enum Engine.EComponentMobility
+enum class EComponentMobility : uint8_t
+{
+	Static                         = 0,
+	Stationary                     = 1,
+	Movable                        = 2,
+	EComponentMobility_MAX         = 3
+};
+
+
+// Enum Engine.ERadialImpulseFalloff
+enum class ERadialImpulseFalloff : uint8_t
+{
+	RIF_Constant                   = 0,
+	RIF_Linear                     = 1,
+	RIF_MAX                        = 2
+};
+
+
+// Enum Engine.ECollisionEnabled
+enum class ECollisionEnabled : uint8_t
+{
+	NoCollision                    = 0,
+	QueryOnly                      = 1,
+	PhysicsOnly                    = 2,
+	QueryAndPhysics                = 3,
+	ECollisionEnabled_MAX          = 4
+};
+
+
+// Enum Engine.ECollisionResponse
+enum class ECollisionResponse : uint8_t
+{
+	ECR_Ignore                     = 0,
+	ECR_Overlap                    = 1,
+	ECR_Block                      = 2,
+	ECR_MAX                        = 3
+};
+
+
+// Enum Engine.EWalkableSlopeBehavior
+enum class EWalkableSlopeBehavior : uint8_t
+{
+	WalkableSlope_Default          = 0,
+	WalkableSlope_Increase         = 1,
+	WalkableSlope_Decrease         = 2,
+	WalkableSlope_Unwalkable       = 3,
+	WalkableSlope_Max              = 4
+};
+
+
+// Enum Engine.EDOFMode
+enum class EDOFMode : uint8_t
+{
+	Default                        = 0,
+	SixDOF                         = 1,
+	YZPlane                        = 2,
+	XZPlane                        = 3,
+	XYPlane                        = 4,
+	CustomPlane                    = 5,
+	None                           = 6,
+	EDOFMode_MAX                   = 7
+};
+
+
+// Enum Engine.ERendererStencilMask
+enum class ERendererStencilMask : uint8_t
+{
+	ERSM_Default                   = 0,
+	ERSM                           = 1,
+	ERSM01                         = 2,
+	ERSM02                         = 3,
+	ERSM03                         = 4,
+	ERSM04                         = 5,
+	ERSM05                         = 6,
+	ERSM06                         = 7,
+	ERSM07                         = 8,
+	ERSM08                         = 9,
+	ERSM_MAX                       = 10
+};
+
+
+// Enum Engine.ESleepFamily
+enum class ESleepFamily : uint8_t
+{
+	Normal                         = 0,
+	Sensitive                      = 1,
+	Custom                         = 2,
+	ESleepFamily_MAX               = 3
+};
+
+
+// Enum Engine.ECanBeCharacterBase
+enum class ECanBeCharacterBase : uint8_t
+{
+	ECB_No                         = 0,
+	ECB_Yes                        = 1,
+	ECB_Owner                      = 2,
+	ECB_MAX                        = 3
+};
+
+
+// Enum Engine.EHasCustomNavigableGeometry
+enum class EHasCustomNavigableGeometry : uint8_t
+{
+	No                             = 0,
+	Yes                            = 1,
+	EvenIfNotCollidable            = 2,
+	DontExport                     = 3,
+	EHasCustomNavigableGeometry_MAX = 4
+};
+
+
+// Enum Engine.ELightmapType
+enum class ELightmapType : uint8_t
+{
+	Default                        = 0,
+	ForceSurface                   = 1,
+	ForceVolumetric                = 2,
+	ELightmapType_MAX              = 3
+};
+
+
+// Enum Engine.EIndirectLightingCacheQuality
+enum class EIndirectLightingCacheQuality : uint8_t
+{
+	ILCQ_Off                       = 0,
+	ILCQ_Point                     = 1,
+	ILCQ_Volume                    = 2,
+	ILCQ_MAX                       = 3
+};
+
+
+// Enum Engine.ESceneDepthPriorityGroup
+enum class ESceneDepthPriorityGroup : uint8_t
+{
+	SDPG_World                     = 0,
+	SDPG_Foreground                = 1,
+	SDPG_MAX                       = 2
+};
+
+
 // Enum Engine.EDepthOfFieldMethod
 enum class EDepthOfFieldMethod : uint8_t
 {
@@ -1137,20 +1300,6 @@ enum class EDynamicActorScene : uint8_t
 };
 
 
-// Enum Engine.EDOFMode
-enum class EDOFMode : uint8_t
-{
-	Default                        = 0,
-	SixDOF                         = 1,
-	YZPlane                        = 2,
-	XZPlane                        = 3,
-	XYPlane                        = 4,
-	CustomPlane                    = 5,
-	None                           = 6,
-	EDOFMode_MAX                   = 7
-};
-
-
 // Enum Engine.EBodyCollisionResponse
 enum class EBodyCollisionResponse : uint8_t
 {
@@ -1559,16 +1708,6 @@ enum class EComponentSocketType : uint8_t
 };
 
 
-// Enum Engine.EComponentMobility
-enum class EComponentMobility : uint8_t
-{
-	Static                         = 0,
-	Stationary                     = 1,
-	Movable                        = 2,
-	EComponentMobility_MAX         = 3
-};
-
-
 // Enum Engine.EPhysicalSurface
 enum class EPhysicalSurface : uint8_t
 {
@@ -1640,17 +1779,6 @@ enum class EPhysicalSurface : uint8_t
 };
 
 
-// Enum Engine.EWalkableSlopeBehavior
-enum class EWalkableSlopeBehavior : uint8_t
-{
-	WalkableSlope_Default          = 0,
-	WalkableSlope_Increase         = 1,
-	WalkableSlope_Decrease         = 2,
-	WalkableSlope_Unwalkable       = 3,
-	WalkableSlope_Max              = 4
-};
-
-
 // Enum Engine.EUpdateRateShiftBucket
 enum class EUpdateRateShiftBucket : uint8_t
 {
@@ -1694,17 +1822,6 @@ enum class ELightMapPaddingType : uint8_t
 };
 
 
-// Enum Engine.ECollisionEnabled
-enum class ECollisionEnabled : uint8_t
-{
-	NoCollision                    = 0,
-	QueryOnly                      = 1,
-	PhysicsOnly                    = 2,
-	QueryAndPhysics                = 3,
-	ECollisionEnabled_MAX          = 4
-};
-
-
 // Enum Engine.ETimelineSigType
 enum class ETimelineSigType : uint8_t
 {
@@ -1714,25 +1831,6 @@ enum class ETimelineSigType : uint8_t
 	ETS_LinearColorSignature       = 3,
 	ETS_InvalidSignature           = 4,
 	ETS_MAX                        = 5
-};
-
-
-// Enum Engine.ESleepFamily
-enum class ESleepFamily : uint8_t
-{
-	Normal                         = 0,
-	Sensitive                      = 1,
-	Custom                         = 2,
-	ESleepFamily_MAX               = 3
-};
-
-
-// Enum Engine.ERadialImpulseFalloff
-enum class ERadialImpulseFalloff : uint8_t
-{
-	RIF_Constant                   = 0,
-	RIF_Linear                     = 1,
-	RIF_MAX                        = 2
 };
 
 
@@ -1753,16 +1851,6 @@ enum class EFilterInterpolationType : uint8_t
 	BSIT_Linear                    = 1,
 	BSIT_Cubic                     = 2,
 	BSIT_MAX                       = 3
-};
-
-
-// Enum Engine.ECollisionResponse
-enum class ECollisionResponse : uint8_t
-{
-	ECR_Ignore                     = 0,
-	ECR_Overlap                    = 1,
-	ECR_Block                      = 2,
-	ECR_MAX                        = 3
 };
 
 
@@ -1967,35 +2055,6 @@ enum class EOcclusionCombineMode : uint8_t
 	OCM_Minimum                    = 0,
 	OCM_Multiply                   = 1,
 	OCM_MAX                        = 2
-};
-
-
-// Enum Engine.ELightmapType
-enum class ELightmapType : uint8_t
-{
-	Default                        = 0,
-	ForceSurface                   = 1,
-	ForceVolumetric                = 2,
-	ELightmapType_MAX              = 3
-};
-
-
-// Enum Engine.EIndirectLightingCacheQuality
-enum class EIndirectLightingCacheQuality : uint8_t
-{
-	ILCQ_Off                       = 0,
-	ILCQ_Point                     = 1,
-	ILCQ_Volume                    = 2,
-	ILCQ_MAX                       = 3
-};
-
-
-// Enum Engine.ESceneDepthPriorityGroup
-enum class ESceneDepthPriorityGroup : uint8_t
-{
-	SDPG_World                     = 0,
-	SDPG_Foreground                = 1,
-	SDPG_MAX                       = 2
 };
 
 
@@ -3274,44 +3333,6 @@ enum class EFrictionCombineMode : uint8_t
 };
 
 
-// Enum Engine.ERendererStencilMask
-enum class ERendererStencilMask : uint8_t
-{
-	ERSM_Default                   = 0,
-	ERSM                           = 1,
-	ERSM01                         = 2,
-	ERSM02                         = 3,
-	ERSM03                         = 4,
-	ERSM04                         = 5,
-	ERSM05                         = 6,
-	ERSM06                         = 7,
-	ERSM07                         = 8,
-	ERSM08                         = 9,
-	ERSM_MAX                       = 10
-};
-
-
-// Enum Engine.EHasCustomNavigableGeometry
-enum class EHasCustomNavigableGeometry : uint8_t
-{
-	No                             = 0,
-	Yes                            = 1,
-	EvenIfNotCollidable            = 2,
-	DontExport                     = 3,
-	EHasCustomNavigableGeometry_MAX = 4
-};
-
-
-// Enum Engine.ECanBeCharacterBase
-enum class ECanBeCharacterBase : uint8_t
-{
-	ECB_No                         = 0,
-	ECB_Yes                        = 1,
-	ECB_Owner                      = 2,
-	ECB_MAX                        = 3
-};
-
-
 // Enum Engine.EReflectionSourceType
 enum class EReflectionSourceType : uint8_t
 {
@@ -3562,9 +3583,8 @@ enum class EAntiAliasingMethod : uint8_t
 	AAM_None                       = 0,
 	AAM_FXAA                       = 1,
 	AAM_TemporalAA                 = 2,
-	AAM_DLAA                       = 3,
-	AAM_MSAA                       = 4,
-	AAM_MAX                        = 5
+	AAM_MSAA                       = 3,
+	AAM_MAX                        = 4
 };
 
 
@@ -3575,27 +3595,6 @@ enum class ESceneCapturePrimitiveRenderMode : uint8_t
 	PRM_RenderScenePrimitives      = 1,
 	PRM_UseShowOnlyList            = 2,
 	PRM_MAX                        = 3
-};
-
-
-// Enum Engine.ERelativeTransformSpace
-enum class ERelativeTransformSpace : uint8_t
-{
-	RTS_World                      = 0,
-	RTS_Actor                      = 1,
-	RTS_Component                  = 2,
-	RTS_ParentBoneSpace            = 3,
-	RTS_MAX                        = 4
-};
-
-
-// Enum Engine.EDetailMode
-enum class EDetailMode : uint8_t
-{
-	DM_Low                         = 0,
-	DM_Medium                      = 1,
-	DM_High                        = 2,
-	DM_MAX                         = 3
 };
 
 
@@ -9323,7 +9322,7 @@ struct FAnimationRecordingSettings
 struct FComponentSpacePose
 {
 	TArray<struct FTransform>                          Transforms;                                               // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FName>                               Names;                                                    // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FName>                               names;                                                    // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct Engine.LocalSpacePose
@@ -9331,7 +9330,7 @@ struct FComponentSpacePose
 struct FLocalSpacePose
 {
 	TArray<struct FTransform>                          Transforms;                                               // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FName>                               Names;                                                    // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FName>                               names;                                                    // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct Engine.NamedTransform

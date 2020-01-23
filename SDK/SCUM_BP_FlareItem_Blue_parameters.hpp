@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_FlareItem_Blue.BP_FlareItem_Blue_C.UserConstructionScript
+struct ABP_FlareItem_Blue_C_UserConstructionScript_Params
+{
+};
+
 }
 
 #ifdef _MSC_VER

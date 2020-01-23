@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Magazine_DEagle_358.BP_Magazine_DEagle_357_C
-// 0x0000 (0x0820 - 0x0820)
+// 0x0000 (0x0878 - 0x0878)
 class ABP_Magazine_DEagle_357_C : public AWeaponAttachmentMagazine
 {
 public:

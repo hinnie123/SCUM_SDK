@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Cantharellus_Cibarius.Cantharellus_Cibarius_C
-// 0x0000 (0x0938 - 0x0938)
+// 0x0000 (0x0980 - 0x0980)
 class ACantharellus_Cibarius_C : public AFoodItem
 {
 public:

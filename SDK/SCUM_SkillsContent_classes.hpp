@@ -37,17 +37,17 @@ public:
 
 
 	void FilterSkillsBySkillType(TArray<class USkill*>* allSkills, TArray<class USkill*>* skillsOfType);
-	void SkillToText(class USkill* skillRef, struct FText* skillNameText, struct FText* skillPointsText, struct FText* maxValueText, float* percentage, float* skillLevelPercentage);
+	void SkillToText(class USkill* skillRef, struct FText* skillNameText, struct FText* skillPointsText, struct FText* maxValueText, float* Percentage, float* skillLevelPercentage);
 	void IsSkillTypeMatching(class USkill* Skill, bool* matchingSkill);
 	void CountSkills(TArray<class USkill*>* skillArray, int* skillCount);
 	void ClearSkillLinesContent();
 	void UpdateSkillsCount(TArray<class USkill*>* skillArray);
 	bool HasSkillCountChanged(TArray<class USkill*>* skillArray);
-	void SkillToSkillText(const struct FString& skillName, float ExperiencePoints, ESkillLevel skillLevel, struct FText* skillNameText, struct FText* skillPointsText, struct FText* maxValueText, float* percentage, float* skillLevelPercentage);
+	void SkillToSkillText(const struct FString& skillName, float ExperiencePoints, ESkillLevel skillLevel, struct FText* skillNameText, struct FText* skillPointsText, struct FText* maxValueText, float* Percentage, float* skillLevelPercentage);
 	void GetSkillsCount(int* count);
 	TArray<class USkill*> GetAllSkills();
 	void FillSkillLine(class USkillLine2_C* skillLine2Ref, class USkill* Skill);
-	void CreateSkillLine(const struct FText& skillName, const struct FText& skillValueText, const struct FText& maxSkillValueText, float percentage, float skillLevelPercentage, class USkillLine2_C** skillLineRef);
+	void CreateSkillLine(const struct FText& skillName, const struct FText& skillValueText, const struct FText& maxSkillValueText, float Percentage, float skillLevelPercentage, class USkillLine2_C** skillLineRef);
 	void AddSkillLine(class USkillLine2_C* skillLineRef);
 	void SetSkillsCount(int count);
 	void InitSkillsContentCountAndType(ESkillAttribute skillType);

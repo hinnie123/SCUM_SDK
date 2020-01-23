@@ -33,7 +33,7 @@ public:
 	}
 
 
-	void shouldAlarmBeOn(bool* shouldAlarmBeOn);
+	void ShouldAlarmBeOn(bool* ShouldAlarmBeOn);
 	void GetContentSize(struct FVector2D* contentSize);
 	void OnPrisonerSet();
 	void Construct();

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WeaponSights_AimPRO.BP_WeaponSights_AimPRO_C
-// 0x0000 (0x0828 - 0x0828)
+// 0x0000 (0x0880 - 0x0880)
 class ABP_WeaponSights_AimPRO_C : public ABP_WeaponSightBase_C
 {
 public:

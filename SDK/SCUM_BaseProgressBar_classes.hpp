@@ -37,14 +37,14 @@ public:
 	void PercentageToUITextWOPercSign(float Value, struct FText* percentageString);
 	void GetAlarmThresholdHigh(float* alarmThreshold);
 	void SetAlarmThresholdHigh(float alarmThreshold);
-	void CheckAlarmThresholdHigh(bool* shouldAlarmBeOn);
+	void CheckAlarmThresholdHigh(bool* ShouldAlarmBeOn);
 	void SetAlarmThresholdHighActive(bool shouldBeActive);
 	void GetIsAlarmOn(bool* isAlarmOn);
 	void PercentageToUIText(float Value, struct FText* percentageString);
 	void SetClamping(bool shouldEnableClamping);
 	void PercentageToText(float Value, struct FText* PercentageText);
 	void GetPreviousPercentage(float* prevPercentage);
-	void CheckAlarmThreshold(bool* shouldAlarmBeOn);
+	void CheckAlarmThreshold(bool* ShouldAlarmBeOn);
 	void AlarmSwitchOn();
 	void AlarmSwitchOff();
 	void GetAlarmThreshold(float* alarmThreshold);
@@ -59,7 +59,7 @@ public:
 	void IncreasePercentage(float IncreasePercentage);
 	void decreasePercentage(float decreasePercentage);
 	void SetPercentage(float percentInputToSet);
-	void GetPercentage(float* percentage);
+	void GetPercentage(float* Percentage);
 };
 
 

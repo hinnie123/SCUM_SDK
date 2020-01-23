@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WeaponBullet_ShotgunShell.BP_WeaponBullet_ShotgunShell_C
-// 0x0008 (0x0510 - 0x0508)
+// 0x0008 (0x0530 - 0x0528)
 class ABP_WeaponBullet_ShotgunShell_C : public AProjectileShotgun
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0508(0x0008) (Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0528(0x0008) (Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

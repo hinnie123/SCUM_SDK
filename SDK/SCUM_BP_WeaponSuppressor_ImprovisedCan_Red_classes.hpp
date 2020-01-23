@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WeaponSuppressor_ImprovisedCan_Red.BP_WeaponSuppressor_ImprovisedCan_Red_C
-// 0x0000 (0x0818 - 0x0818)
+// 0x0000 (0x0870 - 0x0870)
 class ABP_WeaponSuppressor_ImprovisedCan_Red_C : public AWeaponAttachmentSuppressor
 {
 public:

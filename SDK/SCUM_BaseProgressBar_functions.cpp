@@ -81,9 +81,9 @@ void UBaseProgressBar_C::SetAlarmThresholdHigh(float alarmThreshold)
 // Function BaseProgressBar.BaseProgressBar_C.CheckAlarmThresholdHigh
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           shouldAlarmBeOn                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           ShouldAlarmBeOn                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBaseProgressBar_C::CheckAlarmThresholdHigh(bool* shouldAlarmBeOn)
+void UBaseProgressBar_C::CheckAlarmThresholdHigh(bool* ShouldAlarmBeOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.CheckAlarmThresholdHigh");
 
@@ -95,8 +95,8 @@ void UBaseProgressBar_C::CheckAlarmThresholdHigh(bool* shouldAlarmBeOn)
 
 	fn->FunctionFlags = flags;
 
-	if (shouldAlarmBeOn != nullptr)
-		*shouldAlarmBeOn = fn_params.shouldAlarmBeOn;
+	if (ShouldAlarmBeOn != nullptr)
+		*ShouldAlarmBeOn = fn_params.ShouldAlarmBeOn;
 }
 
 
@@ -235,9 +235,9 @@ void UBaseProgressBar_C::GetPreviousPercentage(float* prevPercentage)
 // Function BaseProgressBar.BaseProgressBar_C.CheckAlarmThreshold
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           shouldAlarmBeOn                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           ShouldAlarmBeOn                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBaseProgressBar_C::CheckAlarmThreshold(bool* shouldAlarmBeOn)
+void UBaseProgressBar_C::CheckAlarmThreshold(bool* ShouldAlarmBeOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.CheckAlarmThreshold");
 
@@ -249,8 +249,8 @@ void UBaseProgressBar_C::CheckAlarmThreshold(bool* shouldAlarmBeOn)
 
 	fn->FunctionFlags = flags;
 
-	if (shouldAlarmBeOn != nullptr)
-		*shouldAlarmBeOn = fn_params.shouldAlarmBeOn;
+	if (ShouldAlarmBeOn != nullptr)
+		*ShouldAlarmBeOn = fn_params.ShouldAlarmBeOn;
 }
 
 
@@ -537,9 +537,9 @@ void UBaseProgressBar_C::SetPercentage(float percentInputToSet)
 // Function BaseProgressBar.BaseProgressBar_C.GetPercentage
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// float                          percentage                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          Percentage                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBaseProgressBar_C::GetPercentage(float* percentage)
+void UBaseProgressBar_C::GetPercentage(float* Percentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.GetPercentage");
 
@@ -551,8 +551,8 @@ void UBaseProgressBar_C::GetPercentage(float* percentage)
 
 	fn->FunctionFlags = flags;
 
-	if (percentage != nullptr)
-		*percentage = fn_params.percentage;
+	if (Percentage != nullptr)
+		*Percentage = fn_params.Percentage;
 }
 
 

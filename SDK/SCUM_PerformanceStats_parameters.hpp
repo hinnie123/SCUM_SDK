@@ -24,10 +24,10 @@ struct UPerformanceStats_C_SetParentsForChildren_Params
 {
 };
 
-// Function PerformanceStats.PerformanceStats_C.shouldAlarmBeOn
-struct UPerformanceStats_C_shouldAlarmBeOn_Params
+// Function PerformanceStats.PerformanceStats_C.ShouldAlarmBeOn
+struct UPerformanceStats_C_ShouldAlarmBeOn_Params
 {
-	bool                                               shouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ShouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function PerformanceStats.PerformanceStats_C.UpdateParameterLines

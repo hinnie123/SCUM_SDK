@@ -378,7 +378,7 @@ struct FMovieSceneColorSectionTemplate : public FMovieScenePropertySectionTempla
 // 0x00A0 (0x00C0 - 0x0020)
 struct FMovieSceneEventSectionTemplate : public FMovieSceneEvalTemplate
 {
-	struct FMovieSceneEventSectionData                 EventData;                                                // 0x0020(0x0088)
+	struct FMovieSceneEventSectionData                 eventData;                                                // 0x0020(0x0088)
 	TArray<struct FMovieSceneObjectBindingID>          EventReceivers;                                           // 0x00A8(0x0010) (ZeroConstructor)
 	unsigned char                                      bFireEventsWhenForwards : 1;                              // 0x00B8(0x0001)
 	unsigned char                                      bFireEventsWhenBackwards : 1;                             // 0x00B8(0x0001)

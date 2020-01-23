@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bundle_Of_Saftey_Pins.Bundle_Of_Saftey_Pins_C
-// 0x0000 (0x0810 - 0x0810)
+// 0x0000 (0x0858 - 0x0858)
 class ABundle_Of_Saftey_Pins_C : public AEquipmentItem
 {
 public:

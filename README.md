@@ -38,6 +38,13 @@ void init_sdk()
 	offset = *(int32_t*)(total_objects_addr + 3);
 	SDK::TUObjectArray::g_total_objects = (uintptr_t)(total_objects_addr + 7 + offset) - (uintptr_t)GetModuleHandleA(0);
 }
+
+Loop actors like so:
+auto actors = g_World->PersistentLevel->GetActors();
+for (size_t i = 0; i < actors.Num(); ++i)
+{
+	SDK::AActor* actor = actors[i];
+}
 ```
 
 Useful files:

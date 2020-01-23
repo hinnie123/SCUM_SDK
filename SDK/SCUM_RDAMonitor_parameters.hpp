@@ -14,10 +14,10 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function RDAMonitor.RDAMonitor_C.shouldAlarmBeOn
-struct URDAMonitor_C_shouldAlarmBeOn_Params
+// Function RDAMonitor.RDAMonitor_C.ShouldAlarmBeOn
+struct URDAMonitor_C_ShouldAlarmBeOn_Params
 {
-	bool                                               shouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ShouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RDAMonitor.RDAMonitor_C.GetContentSize

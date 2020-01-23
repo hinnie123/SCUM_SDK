@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Chili_con_Carne_Preparation.Chili_con_Carne_Preparation_C
-// 0x0000 (0x0938 - 0x0938)
+// 0x0000 (0x0980 - 0x0980)
 class AChili_con_Carne_Preparation_C : public AFoodItem
 {
 public:

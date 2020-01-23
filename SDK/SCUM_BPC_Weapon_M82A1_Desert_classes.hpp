@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BPC_Weapon_M82A1_Desert.BPC_Weapon_M82A1_Desert_C
-// 0x0000 (0x12A8 - 0x12A8)
+// 0x0000 (0x1368 - 0x1368)
 class ABPC_Weapon_M82A1_Desert_C : public ABP_Weapon_M82A1_C
 {
 public:

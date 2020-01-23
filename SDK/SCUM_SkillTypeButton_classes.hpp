@@ -48,7 +48,7 @@ public:
 	void SetSizeX(float SizeX);
 	void GetBorderSizeX(float* borderSizeX);
 	void IncreaseSizeX(float sizeChangeX);
-	void SetOffset(float offsetX);
+	void SetOffset(float OffsetX);
 	void SetSkillTypeLevel(float SkillTypeLevel);
 	void ShowBorder();
 	void HideBorder();

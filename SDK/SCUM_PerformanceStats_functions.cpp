@@ -46,16 +46,16 @@ void UPerformanceStats_C::SetParentsForChildren()
 }
 
 
-// Function PerformanceStats.PerformanceStats_C.shouldAlarmBeOn
+// Function PerformanceStats.PerformanceStats_C.ShouldAlarmBeOn
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                           shouldAlarmBeOn                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           ShouldAlarmBeOn                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UPerformanceStats_C::shouldAlarmBeOn(bool* shouldAlarmBeOn)
+void UPerformanceStats_C::ShouldAlarmBeOn(bool* ShouldAlarmBeOn)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.shouldAlarmBeOn");
+	static auto fn = UObject::FindObject<UFunction>("Function PerformanceStats.PerformanceStats_C.ShouldAlarmBeOn");
 
-	UPerformanceStats_C_shouldAlarmBeOn_Params fn_params;
+	UPerformanceStats_C_ShouldAlarmBeOn_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -63,8 +63,8 @@ void UPerformanceStats_C::shouldAlarmBeOn(bool* shouldAlarmBeOn)
 
 	fn->FunctionFlags = flags;
 
-	if (shouldAlarmBeOn != nullptr)
-		*shouldAlarmBeOn = fn_params.shouldAlarmBeOn;
+	if (ShouldAlarmBeOn != nullptr)
+		*ShouldAlarmBeOn = fn_params.ShouldAlarmBeOn;
 }
 
 

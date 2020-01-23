@@ -1022,6 +1022,56 @@ struct UTextBlock_GetDynamicFontMaterial_Params
 	class UMaterialInstanceDynamic*                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function UMG.WidgetSwitcher.SetActiveWidgetIndex
+struct UWidgetSwitcher_SetActiveWidgetIndex_Params
+{
+	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.WidgetSwitcher.SetActiveWidget
+struct UWidgetSwitcher_SetActiveWidget_Params
+{
+	class UWidget*                                     Widget;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// Function UMG.WidgetSwitcher.GetWidgetAtIndex
+struct UWidgetSwitcher_GetWidgetAtIndex_Params
+{
+	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	class UWidget*                                     ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function UMG.WidgetSwitcher.GetNumWidgets
+struct UWidgetSwitcher_GetNumWidgets_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetSwitcher.GetActiveWidgetIndex
+struct UWidgetSwitcher_GetActiveWidgetIndex_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.WidgetSwitcher.GetActiveWidget
+struct UWidgetSwitcher_GetActiveWidget_Params
+{
+	class UWidget*                                     ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function UMG.RichTextBlock.SetText
+struct URichTextBlock_SetText_Params
+{
+	struct FText                                       InText;                                                   // (ConstParm, Parm, OutParm, ReferenceParm)
+};
+
+// Function UMG.RichTextBlock.GetDecoratorByClass
+struct URichTextBlock_GetDecoratorByClass_Params
+{
+	class UClass*                                      DecoratorClass;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	class URichTextBlockDecorator*                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function UMG.AsyncTaskDownloadImage.DownloadImage
 struct UAsyncTaskDownloadImage_DownloadImage_Params
 {
@@ -2314,19 +2364,6 @@ struct URetainerBox_GetEffectMaterial_Params
 	class UMaterialInstanceDynamic*                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function UMG.RichTextBlock.SetText
-struct URichTextBlock_SetText_Params
-{
-	struct FText                                       InText;                                                   // (ConstParm, Parm, OutParm, ReferenceParm)
-};
-
-// Function UMG.RichTextBlock.GetDecoratorByClass
-struct URichTextBlock_GetDecoratorByClass_Params
-{
-	class UClass*                                      DecoratorClass;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	class URichTextBlockDecorator*                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function UMG.SafeZone.SetSidesToPad
 struct USafeZone_SetSidesToPad_Params
 {
@@ -2407,6 +2444,12 @@ struct UScrollBox_SetScrollbarThickness_Params
 struct UScrollBox_SetOrientation_Params
 {
 	TEnumAsByte<EOrientation>                          NewOrientation;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function UMG.ScrollBox.SetConsumeMouseWheel
+struct UScrollBox_SetConsumeMouseWheel_Params
+{
+	EConsumeMouseWheel                                 NewConsumeMouseWheel;                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UMG.ScrollBox.SetAlwaysShowScrollbar
@@ -3704,43 +3747,6 @@ struct UWidgetLayoutLibrary_GetMousePositionOnViewport_Params
 struct UWidgetLayoutLibrary_GetMousePositionOnPlatform_Params
 {
 	struct FVector2D                                   ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetSwitcher.SetActiveWidgetIndex
-struct UWidgetSwitcher_SetActiveWidgetIndex_Params
-{
-	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function UMG.WidgetSwitcher.SetActiveWidget
-struct UWidgetSwitcher_SetActiveWidget_Params
-{
-	class UWidget*                                     Widget;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-};
-
-// Function UMG.WidgetSwitcher.GetWidgetAtIndex
-struct UWidgetSwitcher_GetWidgetAtIndex_Params
-{
-	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	class UWidget*                                     ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function UMG.WidgetSwitcher.GetNumWidgets
-struct UWidgetSwitcher_GetNumWidgets_Params
-{
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetSwitcher.GetActiveWidgetIndex
-struct UWidgetSwitcher_GetActiveWidgetIndex_Params
-{
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function UMG.WidgetSwitcher.GetActiveWidget
-struct UWidgetSwitcher_GetActiveWidget_Params
-{
-	class UWidget*                                     ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
 // Function UMG.WidgetSwitcherSlot.SetVerticalAlignment

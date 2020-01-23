@@ -417,15 +417,15 @@ void UUI_CC_ProgressBar_C::MouseUp__DelegateSignature()
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          leftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          LeftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_CC_ProgressBar_C::OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage)
+void UUI_CC_ProgressBar_C::OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_ProgressBar.UI_CC_ProgressBar_C.OnIndexChanged__DelegateSignature");
 
 	UUI_CC_ProgressBar_C_OnIndexChanged__DelegateSignature_Params fn_params;
 	fn_params.Index = Index;
-	fn_params.leftoverPercentage = leftoverPercentage;
+	fn_params.LeftoverPercentage = LeftoverPercentage;
 
 	auto flags = fn->FunctionFlags;
 

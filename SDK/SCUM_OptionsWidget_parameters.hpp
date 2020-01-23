@@ -75,7 +75,7 @@ struct UOptionsWidget_C_SetDynamicShadowsQuality_Params
 // Function OptionsWidget.OptionsWidget_C.UpdateSupportedResolutions
 struct UOptionsWidget_C_UpdateSupportedResolutions_Params
 {
-	bool                                               Fullscreen;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               fullscreen;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function OptionsWidget.OptionsWidget_C.ToggleCategory
@@ -571,6 +571,30 @@ struct UOptionsWidget_C_BndEvt__VoiceChatSlider_K2Node_ComponentBoundEvent_9_OnV
 // Function OptionsWidget.OptionsWidget_C.BndEvt__MouseSensitivityDrone_K2Node_ComponentBoundEvent_10_MouseUp__DelegateSignature
 struct UOptionsWidget_C_BndEvt__MouseSensitivityDrone_K2Node_ComponentBoundEvent_10_MouseUp__DelegateSignature_Params
 {
+};
+
+// Function OptionsWidget.OptionsWidget_C.BndEvt__VSync_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature
+struct UOptionsWidget_C_BndEvt__VSync_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature_Params
+{
+	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                OldIndex;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       Value;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function OptionsWidget.OptionsWidget_C.BndEvt__AudioPanning_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature
+struct UOptionsWidget_C_BndEvt__AudioPanning_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature_Params
+{
+	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                OldIndex;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       Value;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function OptionsWidget.OptionsWidget_C.BndEvt__ShowSimpleTooltipOnHover_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature
+struct UOptionsWidget_C_BndEvt__ShowSimpleTooltipOnHover_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature_Params
+{
+	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                OldIndex;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       Value;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function OptionsWidget.OptionsWidget_C.ExecuteUbergraph_OptionsWidget

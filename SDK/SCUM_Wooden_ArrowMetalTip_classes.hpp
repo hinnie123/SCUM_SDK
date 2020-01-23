@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Wooden_ArrowMetalTip.Wooden_ArrowMetalTip_C
-// 0x0000 (0x0830 - 0x0830)
+// 0x0000 (0x0878 - 0x0878)
 class AWooden_ArrowMetalTip_C : public AAmmunitionArrow
 {
 public:

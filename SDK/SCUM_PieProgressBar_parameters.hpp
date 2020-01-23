@@ -42,25 +42,25 @@ struct UPieProgressBar_C_SetTextColor_Params
 // Function PieProgressBar.PieProgressBar_C.SetCircularBarColor
 struct UPieProgressBar_C_SetCircularBarColor_Params
 {
-	struct FLinearColor                                CircularBarColor;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	struct FLinearColor                                circularBarColor;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 };
 
 // Function PieProgressBar.PieProgressBar_C.GetCircularBarColor
 struct UPieProgressBar_C_GetCircularBarColor_Params
 {
-	struct FLinearColor                                CircularBarColor;                                         // (Parm, OutParm, IsPlainOldData)
+	struct FLinearColor                                circularBarColor;                                         // (Parm, OutParm, IsPlainOldData)
 };
 
 // Function PieProgressBar.PieProgressBar_C.SetOuterCircleColor
 struct UPieProgressBar_C_SetOuterCircleColor_Params
 {
-	struct FLinearColor                                outerCircleColor;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	struct FLinearColor                                OuterCircleColor;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 };
 
 // Function PieProgressBar.PieProgressBar_C.GetOuterCircleColor
 struct UPieProgressBar_C_GetOuterCircleColor_Params
 {
-	struct FLinearColor                                outerCircleColor;                                         // (Parm, OutParm, IsPlainOldData)
+	struct FLinearColor                                OuterCircleColor;                                         // (Parm, OutParm, IsPlainOldData)
 };
 
 // Function PieProgressBar.PieProgressBar_C.GetNormalColor

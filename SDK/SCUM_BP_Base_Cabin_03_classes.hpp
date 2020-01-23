@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Base_Cabin_03.BP_Base_Cabin_03_C
-// 0x0000 (0x06D0 - 0x06D0)
+// 0x0000 (0x0710 - 0x0710)
 class UBP_Base_Cabin_03_C : public UBaseBuildingComponent
 {
 public:

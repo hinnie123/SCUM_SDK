@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Improvised_Water_container.Improvised_Water_container_C
-// 0x0000 (0x0940 - 0x0940)
+// 0x0000 (0x0988 - 0x0988)
 class AImprovised_Water_container_C : public ADrinkItem
 {
 public:

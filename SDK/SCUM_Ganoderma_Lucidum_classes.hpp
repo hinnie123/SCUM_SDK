@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Ganoderma_Lucidum.Ganoderma_Lucidum_C
-// 0x0000 (0x0938 - 0x0938)
+// 0x0000 (0x0980 - 0x0980)
 class AGanoderma_Lucidum_C : public AFoodItem
 {
 public:

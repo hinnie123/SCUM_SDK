@@ -76,7 +76,7 @@ public:
 	void DeactivateStrengthAlarm();
 	void InitReferentAttributeValues();
 	void SetParents();
-	void shouldAlarmBeOn(bool* shouldAlarmBeOn);
+	void ShouldAlarmBeOn(bool* ShouldAlarmBeOn);
 	void CheckSkillIntelligenceAlarm(float OldValue, float NewValue);
 	void CheckSkillDexterityAlarm(float OldValue, float NewValue);
 	void CheckSkillConstitutionAlarm(float OldValue, float NewValue);

@@ -44,10 +44,10 @@ void USkillsContent_C::FilterSkillsBySkillType(TArray<class USkill*>* allSkills,
 // struct FText                   skillNameText                  (Parm, OutParm)
 // struct FText                   skillPointsText                (Parm, OutParm)
 // struct FText                   maxValueText                   (Parm, OutParm)
-// float                          percentage                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          Percentage                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          skillLevelPercentage           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void USkillsContent_C::SkillToText(class USkill* skillRef, struct FText* skillNameText, struct FText* skillPointsText, struct FText* maxValueText, float* percentage, float* skillLevelPercentage)
+void USkillsContent_C::SkillToText(class USkill* skillRef, struct FText* skillNameText, struct FText* skillPointsText, struct FText* maxValueText, float* Percentage, float* skillLevelPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillsContent.SkillsContent_C.SkillToText");
 
@@ -66,8 +66,8 @@ void USkillsContent_C::SkillToText(class USkill* skillRef, struct FText* skillNa
 		*skillPointsText = fn_params.skillPointsText;
 	if (maxValueText != nullptr)
 		*maxValueText = fn_params.maxValueText;
-	if (percentage != nullptr)
-		*percentage = fn_params.percentage;
+	if (Percentage != nullptr)
+		*Percentage = fn_params.Percentage;
 	if (skillLevelPercentage != nullptr)
 		*skillLevelPercentage = fn_params.skillLevelPercentage;
 }
@@ -195,10 +195,10 @@ bool USkillsContent_C::HasSkillCountChanged(TArray<class USkill*>* skillArray)
 // struct FText                   skillNameText                  (Parm, OutParm)
 // struct FText                   skillPointsText                (Parm, OutParm)
 // struct FText                   maxValueText                   (Parm, OutParm)
-// float                          percentage                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          Percentage                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          skillLevelPercentage           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void USkillsContent_C::SkillToSkillText(const struct FString& skillName, float ExperiencePoints, ESkillLevel skillLevel, struct FText* skillNameText, struct FText* skillPointsText, struct FText* maxValueText, float* percentage, float* skillLevelPercentage)
+void USkillsContent_C::SkillToSkillText(const struct FString& skillName, float ExperiencePoints, ESkillLevel skillLevel, struct FText* skillNameText, struct FText* skillPointsText, struct FText* maxValueText, float* Percentage, float* skillLevelPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillsContent.SkillsContent_C.SkillToSkillText");
 
@@ -219,8 +219,8 @@ void USkillsContent_C::SkillToSkillText(const struct FString& skillName, float E
 		*skillPointsText = fn_params.skillPointsText;
 	if (maxValueText != nullptr)
 		*maxValueText = fn_params.maxValueText;
-	if (percentage != nullptr)
-		*percentage = fn_params.percentage;
+	if (Percentage != nullptr)
+		*Percentage = fn_params.Percentage;
 	if (skillLevelPercentage != nullptr)
 		*skillLevelPercentage = fn_params.skillLevelPercentage;
 }
@@ -297,11 +297,11 @@ void USkillsContent_C::FillSkillLine(class USkillLine2_C* skillLine2Ref, class U
 // struct FText                   skillName                      (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   skillValueText                 (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   maxSkillValueText              (BlueprintVisible, BlueprintReadOnly, Parm)
-// float                          percentage                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Percentage                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          skillLevelPercentage           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class USkillLine2_C*           skillLineRef                   (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void USkillsContent_C::CreateSkillLine(const struct FText& skillName, const struct FText& skillValueText, const struct FText& maxSkillValueText, float percentage, float skillLevelPercentage, class USkillLine2_C** skillLineRef)
+void USkillsContent_C::CreateSkillLine(const struct FText& skillName, const struct FText& skillValueText, const struct FText& maxSkillValueText, float Percentage, float skillLevelPercentage, class USkillLine2_C** skillLineRef)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillsContent.SkillsContent_C.CreateSkillLine");
 
@@ -309,7 +309,7 @@ void USkillsContent_C::CreateSkillLine(const struct FText& skillName, const stru
 	fn_params.skillName = skillName;
 	fn_params.skillValueText = skillValueText;
 	fn_params.maxSkillValueText = maxSkillValueText;
-	fn_params.percentage = percentage;
+	fn_params.Percentage = Percentage;
 	fn_params.skillLevelPercentage = skillLevelPercentage;
 
 	auto flags = fn->FunctionFlags;

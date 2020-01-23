@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Magnifying_Glass1.Magnifying_Glass1_C
-// 0x0000 (0x0810 - 0x0810)
+// 0x0000 (0x0858 - 0x0858)
 class AMagnifying_Glass1_C : public AEquipmentItem
 {
 public:

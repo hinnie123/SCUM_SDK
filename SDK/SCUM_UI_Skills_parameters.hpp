@@ -14,6 +14,13 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function UI_Skills.UI_Skills_C.ShouldSkillBeVisible
+struct UUI_Skills_C_ShouldSkillBeVisible_Params
+{
+	class USkill*                                      Skill;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               visible;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function UI_Skills.UI_Skills_C.UpdateAttributeChange
 struct UUI_Skills_C_UpdateAttributeChange_Params
 {

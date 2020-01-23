@@ -201,14 +201,14 @@ void UOptionsWidget_C::SetDynamicShadowsQuality(int Value)
 // Function OptionsWidget.OptionsWidget_C.UpdateSupportedResolutions
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           Fullscreen                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           fullscreen                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UOptionsWidget_C::UpdateSupportedResolutions(bool Fullscreen)
+void UOptionsWidget_C::UpdateSupportedResolutions(bool fullscreen)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OptionsWidget.OptionsWidget_C.UpdateSupportedResolutions");
 
 	UOptionsWidget_C_UpdateSupportedResolutions_Params fn_params;
-	fn_params.Fullscreen = Fullscreen;
+	fn_params.fullscreen = fullscreen;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1746,6 +1746,78 @@ void UOptionsWidget_C::BndEvt__MouseSensitivityDrone_K2Node_ComponentBoundEvent_
 	static auto fn = UObject::FindObject<UFunction>("Function OptionsWidget.OptionsWidget_C.BndEvt__MouseSensitivityDrone_K2Node_ComponentBoundEvent_10_MouseUp__DelegateSignature");
 
 	UOptionsWidget_C_BndEvt__MouseSensitivityDrone_K2Node_ComponentBoundEvent_10_MouseUp__DelegateSignature_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function OptionsWidget.OptionsWidget_C.BndEvt__VSync_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            OldIndex                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText                   Value                          (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UOptionsWidget_C::BndEvt__VSync_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature(int Index, int OldIndex, const struct FText& Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function OptionsWidget.OptionsWidget_C.BndEvt__VSync_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature");
+
+	UOptionsWidget_C_BndEvt__VSync_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature_Params fn_params;
+	fn_params.Index = Index;
+	fn_params.OldIndex = OldIndex;
+	fn_params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function OptionsWidget.OptionsWidget_C.BndEvt__AudioPanning_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            OldIndex                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText                   Value                          (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UOptionsWidget_C::BndEvt__AudioPanning_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature(int Index, int OldIndex, const struct FText& Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function OptionsWidget.OptionsWidget_C.BndEvt__AudioPanning_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature");
+
+	UOptionsWidget_C_BndEvt__AudioPanning_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature_Params fn_params;
+	fn_params.Index = Index;
+	fn_params.OldIndex = OldIndex;
+	fn_params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function OptionsWidget.OptionsWidget_C.BndEvt__ShowSimpleTooltipOnHover_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            OldIndex                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText                   Value                          (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UOptionsWidget_C::BndEvt__ShowSimpleTooltipOnHover_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature(int Index, int OldIndex, const struct FText& Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function OptionsWidget.OptionsWidget_C.BndEvt__ShowSimpleTooltipOnHover_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature");
+
+	UOptionsWidget_C_BndEvt__ShowSimpleTooltipOnHover_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature_Params fn_params;
+	fn_params.Index = Index;
+	fn_params.OldIndex = OldIndex;
+	fn_params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
 

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Base_WoodenDoor_Double.BP_Base_WoodenDoor_Double_C
-// 0x0000 (0x06D0 - 0x06D0)
+// 0x0000 (0x0710 - 0x0710)
 class UBP_Base_WoodenDoor_Double_C : public UBaseBuildingComponent
 {
 public:

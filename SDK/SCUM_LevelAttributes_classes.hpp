@@ -51,7 +51,7 @@ public:
 	}
 
 
-	void shouldAlarmBeOn(bool* shouldAlarmBeOn);
+	void ShouldAlarmBeOn(bool* ShouldAlarmBeOn);
 	void UpdateReferentValue(float currentValue, float tollerance, float UpdateInterval, float* lastReferentValue, float* timeSinceLastUpdate, bool* referentValueUpdated);
 	void InitAttributeValues();
 	void CalculateChangeSpeed(float currentValue, float lastValue, float UpdateInterval, float* Speed);

@@ -36,7 +36,7 @@ struct UBaseProgressBar_C_SetAlarmThresholdHigh_Params
 // Function BaseProgressBar.BaseProgressBar_C.CheckAlarmThresholdHigh
 struct UBaseProgressBar_C_CheckAlarmThresholdHigh_Params
 {
-	bool                                               shouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ShouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BaseProgressBar.BaseProgressBar_C.SetAlarmThresholdHighActive
@@ -80,7 +80,7 @@ struct UBaseProgressBar_C_GetPreviousPercentage_Params
 // Function BaseProgressBar.BaseProgressBar_C.CheckAlarmThreshold
 struct UBaseProgressBar_C_CheckAlarmThreshold_Params
 {
-	bool                                               shouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ShouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BaseProgressBar.BaseProgressBar_C.AlarmSwitchOn
@@ -168,7 +168,7 @@ struct UBaseProgressBar_C_SetPercentage_Params
 // Function BaseProgressBar.BaseProgressBar_C.GetPercentage
 struct UBaseProgressBar_C_GetPercentage_Params
 {
-	float                                              percentage;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              Percentage;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 }

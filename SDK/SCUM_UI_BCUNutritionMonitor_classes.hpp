@@ -86,7 +86,7 @@ public:
 	}
 
 
-	void CheckIfNutritionPercentageIsSatisfying(float percentage, float* satisfying);
+	void CheckIfNutritionPercentageIsSatisfying(float Percentage, float* satisfying);
 	void UpdateNutritionLines();
 	void UpdateMinerals();
 	void UpdateVitamins();

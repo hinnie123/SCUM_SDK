@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BowSilencer_SlipOn.BP_BowSilencer_SlipOn_C
-// 0x0000 (0x0810 - 0x0810)
+// 0x0000 (0x0868 - 0x0868)
 class ABP_BowSilencer_SlipOn_C : public ABowAttachmentSilencer
 {
 public:

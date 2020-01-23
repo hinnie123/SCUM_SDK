@@ -12,6 +12,31 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function UI_Item2.UI_Item2_C.OnPreviewKeyDown
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FKeyEvent*              InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UUI_Item2_C::OnPreviewKeyDown(struct FGeometry* MyGeometry, struct FKeyEvent* InKeyEvent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_Item2.UI_Item2_C.OnPreviewKeyDown");
+
+	UUI_Item2_C_OnPreviewKeyDown_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InKeyEvent = InKeyEvent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
 // Function UI_Item2.UI_Item2_C.UpdateVisualszzz
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -29,19 +54,31 @@ void UUI_Item2_C::UpdateVisualszzz()
 }
 
 
-// Function UI_Item2.UI_Item2_C.Tick
+// Function UI_Item2.UI_Item2_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
-// float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_Item2_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
+void UUI_Item2_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UI_Item2.UI_Item2_C.Tick");
+	static auto fn = UObject::FindObject<UFunction>("Function UI_Item2.UI_Item2_C.Construct");
 
-	UUI_Item2_C_Tick_Params fn_params;
-	fn_params.MyGeometry = MyGeometry;
-	fn_params.InDeltaTime = InDeltaTime;
+	UUI_Item2_C_Construct_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UI_Item2.UI_Item2_C.UpdateVisuals
+// (Event, Protected, BlueprintEvent)
+
+void UUI_Item2_C::UpdateVisuals()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_Item2.UI_Item2_C.UpdateVisuals");
+
+	UUI_Item2_C_UpdateVisuals_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -73,14 +110,61 @@ void UUI_Item2_C::Init(TScriptInterface<class UInventoryNode>* Item, TScriptInte
 }
 
 
-// Function UI_Item2.UI_Item2_C.UpdateVisuals
-// (Event, Protected, BlueprintEvent)
+// Function UI_Item2.UI_Item2_C.OnMouseEnter
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintEvent)
+// Parameters:
+// struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UUI_Item2_C::UpdateVisuals()
+void UUI_Item2_C::OnMouseEnter(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UI_Item2.UI_Item2_C.UpdateVisuals");
+	static auto fn = UObject::FindObject<UFunction>("Function UI_Item2.UI_Item2_C.OnMouseEnter");
 
-	UUI_Item2_C_UpdateVisuals_Params fn_params;
+	UUI_Item2_C_OnMouseEnter_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.MouseEvent = MouseEvent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UI_Item2.UI_Item2_C.OnMouseLeave
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintEvent)
+// Parameters:
+// struct FPointerEvent*          MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UUI_Item2_C::OnMouseLeave(struct FPointerEvent* MouseEvent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_Item2.UI_Item2_C.OnMouseLeave");
+
+	UUI_Item2_C_OnMouseLeave_Params fn_params;
+	fn_params.MouseEvent = MouseEvent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UI_Item2.UI_Item2_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// float*                         InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UUI_Item2_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_Item2.UI_Item2_C.Tick");
+
+	UUI_Item2_C_Tick_Params fn_params;
+	fn_params.MyGeometry = MyGeometry;
+	fn_params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 

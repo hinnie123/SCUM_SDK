@@ -12,16 +12,16 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function LevelAttributes.LevelAttributes_C.shouldAlarmBeOn
+// Function LevelAttributes.LevelAttributes_C.ShouldAlarmBeOn
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                           shouldAlarmBeOn                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           ShouldAlarmBeOn                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ULevelAttributes_C::shouldAlarmBeOn(bool* shouldAlarmBeOn)
+void ULevelAttributes_C::ShouldAlarmBeOn(bool* ShouldAlarmBeOn)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.shouldAlarmBeOn");
+	static auto fn = UObject::FindObject<UFunction>("Function LevelAttributes.LevelAttributes_C.ShouldAlarmBeOn");
 
-	ULevelAttributes_C_shouldAlarmBeOn_Params fn_params;
+	ULevelAttributes_C_ShouldAlarmBeOn_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -29,8 +29,8 @@ void ULevelAttributes_C::shouldAlarmBeOn(bool* shouldAlarmBeOn)
 
 	fn->FunctionFlags = flags;
 
-	if (shouldAlarmBeOn != nullptr)
-		*shouldAlarmBeOn = fn_params.shouldAlarmBeOn;
+	if (ShouldAlarmBeOn != nullptr)
+		*ShouldAlarmBeOn = fn_params.ShouldAlarmBeOn;
 }
 
 

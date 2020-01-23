@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Base_BasicTent.BP_Base_BasicTent_C
-// 0x0000 (0x06D0 - 0x06D0)
+// 0x0000 (0x0710 - 0x0710)
 class UBP_Base_BasicTent_C : public UBaseBuildingComponent
 {
 public:

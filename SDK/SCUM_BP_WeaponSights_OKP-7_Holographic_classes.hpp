@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WeaponSights_OKP-7_Holographic.BP_WeaponSights_OKP-7_Holographic_C
-// 0x0000 (0x0828 - 0x0828)
+// 0x0000 (0x0880 - 0x0880)
 class ABP_WeaponSights_OKP_7_Holographic_C : public ABP_WeaponSightBase_C
 {
 public:

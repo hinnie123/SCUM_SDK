@@ -697,15 +697,15 @@ void UUI_CharacterCreationPanel1_C::Construct()
 // (BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          leftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          LeftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_CharacterCreationPanel1_C::BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_50_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage)
+void UUI_CharacterCreationPanel1_C::BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_50_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_50_OnIndexChanged__DelegateSignature");
 
 	UUI_CharacterCreationPanel1_C_BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_50_OnIndexChanged__DelegateSignature_Params fn_params;
 	fn_params.Index = Index;
-	fn_params.leftoverPercentage = leftoverPercentage;
+	fn_params.LeftoverPercentage = LeftoverPercentage;
 
 	auto flags = fn->FunctionFlags;
 
@@ -739,15 +739,15 @@ void UUI_CharacterCreationPanel1_C::BndEvt__UI_LeanFatMuscleTriangle_K2Node_Comp
 // (BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          leftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          LeftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_CharacterCreationPanel1_C::BndEvt__TattooSlider_K2Node_ComponentBoundEvent_152_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage)
+void UUI_CharacterCreationPanel1_C::BndEvt__TattooSlider_K2Node_ComponentBoundEvent_152_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__TattooSlider_K2Node_ComponentBoundEvent_152_OnIndexChanged__DelegateSignature");
 
 	UUI_CharacterCreationPanel1_C_BndEvt__TattooSlider_K2Node_ComponentBoundEvent_152_OnIndexChanged__DelegateSignature_Params fn_params;
 	fn_params.Index = Index;
-	fn_params.leftoverPercentage = leftoverPercentage;
+	fn_params.LeftoverPercentage = LeftoverPercentage;
 
 	auto flags = fn->FunctionFlags;
 
@@ -761,15 +761,15 @@ void UUI_CharacterCreationPanel1_C::BndEvt__TattooSlider_K2Node_ComponentBoundEv
 // (BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          leftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          LeftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_CharacterCreationPanel1_C::BndEvt__HeadSlider_K2Node_ComponentBoundEvent_153_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage)
+void UUI_CharacterCreationPanel1_C::BndEvt__HeadSlider_K2Node_ComponentBoundEvent_153_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__HeadSlider_K2Node_ComponentBoundEvent_153_OnIndexChanged__DelegateSignature");
 
 	UUI_CharacterCreationPanel1_C_BndEvt__HeadSlider_K2Node_ComponentBoundEvent_153_OnIndexChanged__DelegateSignature_Params fn_params;
 	fn_params.Index = Index;
-	fn_params.leftoverPercentage = leftoverPercentage;
+	fn_params.LeftoverPercentage = LeftoverPercentage;
 
 	auto flags = fn->FunctionFlags;
 
@@ -783,15 +783,15 @@ void UUI_CharacterCreationPanel1_C::BndEvt__HeadSlider_K2Node_ComponentBoundEven
 // (BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          leftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          LeftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_CharacterCreationPanel1_C::BndEvt__UI_CC_ProgressBar_C_0_K2Node_ComponentBoundEvent_242_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage)
+void UUI_CharacterCreationPanel1_C::BndEvt__UI_CC_ProgressBar_C_0_K2Node_ComponentBoundEvent_242_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__UI_CC_ProgressBar_C_0_K2Node_ComponentBoundEvent_242_OnIndexChanged__DelegateSignature");
 
 	UUI_CharacterCreationPanel1_C_BndEvt__UI_CC_ProgressBar_C_0_K2Node_ComponentBoundEvent_242_OnIndexChanged__DelegateSignature_Params fn_params;
 	fn_params.Index = Index;
-	fn_params.leftoverPercentage = leftoverPercentage;
+	fn_params.LeftoverPercentage = LeftoverPercentage;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1271,15 +1271,15 @@ void UUI_CharacterCreationPanel1_C::Keep_Server_Connection_Alive()
 // (BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          leftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          LeftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_CharacterCreationPanel1_C::BndEvt__PenisSizeSlider_K2Node_ComponentBoundEvent_0_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage)
+void UUI_CharacterCreationPanel1_C::BndEvt__PenisSizeSlider_K2Node_ComponentBoundEvent_0_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__PenisSizeSlider_K2Node_ComponentBoundEvent_0_OnIndexChanged__DelegateSignature");
 
 	UUI_CharacterCreationPanel1_C_BndEvt__PenisSizeSlider_K2Node_ComponentBoundEvent_0_OnIndexChanged__DelegateSignature_Params fn_params;
 	fn_params.Index = Index;
-	fn_params.leftoverPercentage = leftoverPercentage;
+	fn_params.LeftoverPercentage = LeftoverPercentage;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1293,15 +1293,15 @@ void UUI_CharacterCreationPanel1_C::BndEvt__PenisSizeSlider_K2Node_ComponentBoun
 // (BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          leftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          LeftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_CharacterCreationPanel1_C::BndEvt__ConcealedModeSlider_K2Node_ComponentBoundEvent_1_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage)
+void UUI_CharacterCreationPanel1_C::BndEvt__ConcealedModeSlider_K2Node_ComponentBoundEvent_1_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__ConcealedModeSlider_K2Node_ComponentBoundEvent_1_OnIndexChanged__DelegateSignature");
 
 	UUI_CharacterCreationPanel1_C_BndEvt__ConcealedModeSlider_K2Node_ComponentBoundEvent_1_OnIndexChanged__DelegateSignature_Params fn_params;
 	fn_params.Index = Index;
-	fn_params.leftoverPercentage = leftoverPercentage;
+	fn_params.LeftoverPercentage = LeftoverPercentage;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1315,15 +1315,15 @@ void UUI_CharacterCreationPanel1_C::BndEvt__ConcealedModeSlider_K2Node_Component
 // (BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          leftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          LeftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_CharacterCreationPanel1_C::BndEvt__UI_CC_ProgressBar_0_K2Node_ComponentBoundEvent_2_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage)
+void UUI_CharacterCreationPanel1_C::BndEvt__UI_CC_ProgressBar_0_K2Node_ComponentBoundEvent_2_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__UI_CC_ProgressBar_0_K2Node_ComponentBoundEvent_2_OnIndexChanged__DelegateSignature");
 
 	UUI_CharacterCreationPanel1_C_BndEvt__UI_CC_ProgressBar_0_K2Node_ComponentBoundEvent_2_OnIndexChanged__DelegateSignature_Params fn_params;
 	fn_params.Index = Index;
-	fn_params.leftoverPercentage = leftoverPercentage;
+	fn_params.LeftoverPercentage = LeftoverPercentage;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1337,15 +1337,15 @@ void UUI_CharacterCreationPanel1_C::BndEvt__UI_CC_ProgressBar_0_K2Node_Component
 // (BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          leftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          LeftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_CharacterCreationPanel1_C::BndEvt__BreastSizeSlider_K2Node_ComponentBoundEvent_3_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage)
+void UUI_CharacterCreationPanel1_C::BndEvt__BreastSizeSlider_K2Node_ComponentBoundEvent_3_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CharacterCreationPanel1.UI_CharacterCreationPanel1_C.BndEvt__BreastSizeSlider_K2Node_ComponentBoundEvent_3_OnIndexChanged__DelegateSignature");
 
 	UUI_CharacterCreationPanel1_C_BndEvt__BreastSizeSlider_K2Node_ComponentBoundEvent_3_OnIndexChanged__DelegateSignature_Params fn_params;
 	fn_params.Index = Index;
-	fn_params.leftoverPercentage = leftoverPercentage;
+	fn_params.LeftoverPercentage = LeftoverPercentage;
 
 	auto flags = fn->FunctionFlags;
 

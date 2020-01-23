@@ -12,6 +12,30 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function UI_Skills.UI_Skills_C.ShouldSkillBeVisible
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USkill*                  Skill                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           visible                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UUI_Skills_C::ShouldSkillBeVisible(class USkill* Skill, bool* visible)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_Skills.UI_Skills_C.ShouldSkillBeVisible");
+
+	UUI_Skills_C_ShouldSkillBeVisible_Params fn_params;
+	fn_params.Skill = Skill;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	if (visible != nullptr)
+		*visible = fn_params.visible;
+}
+
+
 // Function UI_Skills.UI_Skills_C.UpdateAttributeChange
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 

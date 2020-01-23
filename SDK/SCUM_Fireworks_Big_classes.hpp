@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Fireworks_Big.Fireworks_Big_C
-// 0x0000 (0x08E0 - 0x08E0)
+// 0x0000 (0x0930 - 0x0930)
 class AFireworks_Big_C : public AFireworks_Small_C
 {
 public:

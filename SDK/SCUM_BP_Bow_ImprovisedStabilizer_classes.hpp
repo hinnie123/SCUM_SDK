@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Bow_ImprovisedStabilizer.BP_Bow_ImprovisedStabilizer_C
-// 0x0000 (0x0818 - 0x0818)
+// 0x0000 (0x0870 - 0x0870)
 class ABP_Bow_ImprovisedStabilizer_C : public ABowAttachmentStabilizer
 {
 public:

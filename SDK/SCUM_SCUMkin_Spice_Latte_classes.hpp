@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SCUMkin_Spice_Latte.SCUMkin_Spice_Latte_C
-// 0x0000 (0x0940 - 0x0940)
+// 0x0000 (0x0988 - 0x0988)
 class ASCUMkin_Spice_Latte_C : public ADrinkItem
 {
 public:

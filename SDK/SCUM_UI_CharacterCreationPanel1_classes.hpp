@@ -180,11 +180,11 @@ public:
 	void SetAge(int Age);
 	struct FEventReply OnMouseButtonDown_1(const struct FGeometry& MyGeometry, struct FPointerEvent* MouseEvent);
 	void Construct();
-	void BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_50_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage);
+	void BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_50_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage);
 	void BndEvt__UI_LeanFatMuscleTriangle_K2Node_ComponentBoundEvent_5_AttributesChanged__DelegateSignature(const struct FVector4& Attributes);
-	void BndEvt__TattooSlider_K2Node_ComponentBoundEvent_152_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage);
-	void BndEvt__HeadSlider_K2Node_ComponentBoundEvent_153_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage);
-	void BndEvt__UI_CC_ProgressBar_C_0_K2Node_ComponentBoundEvent_242_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage);
+	void BndEvt__TattooSlider_K2Node_ComponentBoundEvent_152_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage);
+	void BndEvt__HeadSlider_K2Node_ComponentBoundEvent_153_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage);
+	void BndEvt__UI_CC_ProgressBar_C_0_K2Node_ComponentBoundEvent_242_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage);
 	void BndEvt__AttributeModifierStrength_K2Node_ComponentBoundEvent_36_OnIncrease__DelegateSignature();
 	void BndEvt__AttributeModifierStrength_K2Node_ComponentBoundEvent_40_OnDecrease__DelegateSignature();
 	void BndEvt__AttributeModifierConstitution_K2Node_ComponentBoundEvent_47_OnIncrease__DelegateSignature();
@@ -211,10 +211,10 @@ public:
 	void BeginWaitingOnServerResponse();
 	void EndWaitingOnServerResponse();
 	void Keep_Server_Connection_Alive();
-	void BndEvt__PenisSizeSlider_K2Node_ComponentBoundEvent_0_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage);
-	void BndEvt__ConcealedModeSlider_K2Node_ComponentBoundEvent_1_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage);
-	void BndEvt__UI_CC_ProgressBar_0_K2Node_ComponentBoundEvent_2_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage);
-	void BndEvt__BreastSizeSlider_K2Node_ComponentBoundEvent_3_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage);
+	void BndEvt__PenisSizeSlider_K2Node_ComponentBoundEvent_0_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage);
+	void BndEvt__ConcealedModeSlider_K2Node_ComponentBoundEvent_1_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage);
+	void BndEvt__UI_CC_ProgressBar_0_K2Node_ComponentBoundEvent_2_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage);
+	void BndEvt__BreastSizeSlider_K2Node_ComponentBoundEvent_3_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage);
 	void ExecuteUbergraph_UI_CharacterCreationPanel1(int EntryPoint);
 };
 

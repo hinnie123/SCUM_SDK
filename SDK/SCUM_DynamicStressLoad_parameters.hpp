@@ -19,10 +19,10 @@ struct UDynamicStressLoad_C_SetParentsForChildren_Params
 {
 };
 
-// Function DynamicStressLoad.DynamicStressLoad_C.shouldAlarmBeOn
-struct UDynamicStressLoad_C_shouldAlarmBeOn_Params
+// Function DynamicStressLoad.DynamicStressLoad_C.ShouldAlarmBeOn
+struct UDynamicStressLoad_C_ShouldAlarmBeOn_Params
 {
-	bool                                               shouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ShouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DynamicStressLoad.DynamicStressLoad_C.SetColorOfSelectedTextFields

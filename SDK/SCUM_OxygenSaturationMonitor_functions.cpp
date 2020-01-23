@@ -117,9 +117,9 @@ void UOxygenSaturationMonitor_C::SetPrisonerAndLifeComponentToMonitor(class APri
 // Function OxygenSaturationMonitor.OxygenSaturationMonitor_C.ProvideOxygenSaturationExtremes
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   OxygenSaturationExtremes       (Parm, OutParm)
+// struct FText                   oxygenSaturationExtremes       (Parm, OutParm)
 
-void UOxygenSaturationMonitor_C::ProvideOxygenSaturationExtremes(struct FText* OxygenSaturationExtremes)
+void UOxygenSaturationMonitor_C::ProvideOxygenSaturationExtremes(struct FText* oxygenSaturationExtremes)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OxygenSaturationMonitor.OxygenSaturationMonitor_C.ProvideOxygenSaturationExtremes");
 
@@ -131,8 +131,8 @@ void UOxygenSaturationMonitor_C::ProvideOxygenSaturationExtremes(struct FText* O
 
 	fn->FunctionFlags = flags;
 
-	if (OxygenSaturationExtremes != nullptr)
-		*OxygenSaturationExtremes = fn_params.OxygenSaturationExtremes;
+	if (oxygenSaturationExtremes != nullptr)
+		*oxygenSaturationExtremes = fn_params.oxygenSaturationExtremes;
 }
 
 

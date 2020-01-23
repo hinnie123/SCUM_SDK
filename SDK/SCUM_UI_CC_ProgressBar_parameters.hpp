@@ -139,7 +139,7 @@ struct UUI_CC_ProgressBar_C_MouseUp__DelegateSignature_Params
 struct UUI_CC_ProgressBar_C_OnIndexChanged__DelegateSignature_Params
 {
 	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              leftoverPercentage;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              LeftoverPercentage;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

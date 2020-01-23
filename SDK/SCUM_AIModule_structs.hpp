@@ -928,7 +928,7 @@ struct FEnvQueryResult
 // 0x0001
 struct FGenericTeamId
 {
-	unsigned char                                      teamId;                                                   // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      TeamID;                                                   // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 }

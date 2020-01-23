@@ -97,6 +97,45 @@ void AWeatherController_C::UserConstructionScript()
 }
 
 
+// Function WeatherController.WeatherController_C.NetworkSyncDayTime
+// (BlueprintCallable, BlueprintEvent)
+
+void AWeatherController_C::NetworkSyncDayTime()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeatherController.WeatherController_C.NetworkSyncDayTime");
+
+	AWeatherController_C_NetworkSyncDayTime_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function WeatherController.WeatherController_C.StartWeatherTransition
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                          newStormIntensity              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          TransitionTime                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void AWeatherController_C::StartWeatherTransition(float newStormIntensity, float TransitionTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeatherController.WeatherController_C.StartWeatherTransition");
+
+	AWeatherController_C_StartWeatherTransition_Params fn_params;
+	fn_params.newStormIntensity = newStormIntensity;
+	fn_params.TransitionTime = TransitionTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function WeatherController.WeatherController_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -125,45 +164,6 @@ void AWeatherController_C::ReceiveBeginPlay()
 	static auto fn = UObject::FindObject<UFunction>("Function WeatherController.WeatherController_C.ReceiveBeginPlay");
 
 	AWeatherController_C_ReceiveBeginPlay_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function WeatherController.WeatherController_C.NetworkSyncDayTime
-// (BlueprintCallable, BlueprintEvent)
-
-void AWeatherController_C::NetworkSyncDayTime()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function WeatherController.WeatherController_C.NetworkSyncDayTime");
-
-	AWeatherController_C_NetworkSyncDayTime_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function WeatherController.WeatherController_C.StartWeatherTransition
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                          NewStormIntensity              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          TransitionTime                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void AWeatherController_C::StartWeatherTransition(float NewStormIntensity, float TransitionTime)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function WeatherController.WeatherController_C.StartWeatherTransition");
-
-	AWeatherController_C_StartWeatherTransition_Params fn_params;
-	fn_params.NewStormIntensity = NewStormIntensity;
-	fn_params.TransitionTime = TransitionTime;
 
 	auto flags = fn->FunctionFlags;
 
@@ -238,6 +238,23 @@ void AWeatherController_C::ChangeWindDir()
 	static auto fn = UObject::FindObject<UFunction>("Function WeatherController.WeatherController_C.ChangeWindDir");
 
 	AWeatherController_C_ChangeWindDir_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function WeatherController.WeatherController_C.UpdateWeatherVisuals
+// (Event, Public, BlueprintEvent)
+
+void AWeatherController_C::UpdateWeatherVisuals()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeatherController.WeatherController_C.UpdateWeatherVisuals");
+
+	AWeatherController_C_UpdateWeatherVisuals_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 

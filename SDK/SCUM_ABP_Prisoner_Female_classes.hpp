@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass ABP_Prisoner_Female.ABP_Prisoner_Female_C
-// 0x0000 (0x50E48 - 0x50E48)
+// 0x0000 (0x70608 - 0x70608)
 class UABP_Prisoner_Female_C : public UABP_Prisoner_C
 {
 public:

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BPC_Weapon_SDASS.BPC_Weapon_SDASS_C
-// 0x0000 (0x12A4 - 0x12A4)
+// 0x0000 (0x1364 - 0x1364)
 class ABPC_Weapon_SDASS_C : public ABP_Weapon_590A11_C
 {
 public:

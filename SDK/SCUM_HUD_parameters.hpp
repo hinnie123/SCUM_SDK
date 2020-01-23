@@ -14,6 +14,12 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function HUD.HUD_C.GetVisibility_VicinityBackgroundImage
+struct UHUD_C_GetVisibility_VicinityBackgroundImage_Params
+{
+	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function HUD.HUD_C.GetCompassWidget
 struct UHUD_C_GetCompassWidget_Params
 {
@@ -193,6 +199,7 @@ struct UHUD_C_GetTopLevelPanelWidget_Params
 struct UHUD_C_ShowWarning_Params
 {
 	EWarningType                                       Type;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               playSounds;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function HUD.HUD_C.RefreshMonitorSizes
@@ -272,16 +279,11 @@ struct UHUD_C_GetPrisonerLifeComponent_Params
 	class UPrisonerLifeComponent*                      LifeComponent;                                            // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
-// Function HUD.HUD_C.RemoveTeammateName
-struct UHUD_C_RemoveTeammateName_Params
-{
-	struct FString*                                    Name;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-};
-
 // Function HUD.HUD_C.AddWarning
 struct UHUD_C_AddWarning_Params
 {
 	EWarningType*                                      warningType;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              playSounds;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function HUD.HUD_C.ObjectiveChanged
@@ -298,12 +300,6 @@ struct UHUD_C_ToggleMonitorsVisibility_Params
 // Function HUD.HUD_C.ClearTeammateNames
 struct UHUD_C_ClearTeammateNames_Params
 {
-};
-
-// Function HUD.HUD_C.AddTeammateName
-struct UHUD_C_AddTeammateName_Params
-{
-	struct FString*                                    Name;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 };
 
 // Function HUD.HUD_C.AddChatLine
@@ -323,6 +319,18 @@ struct UHUD_C_UpdateAttributesHistory_Params
 {
 };
 
+// Function HUD.HUD_C.RemoveTeammateName
+struct UHUD_C_RemoveTeammateName_Params
+{
+	struct FString*                                    Name;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+};
+
+// Function HUD.HUD_C.AddTeammateName
+struct UHUD_C_AddTeammateName_Params
+{
+	struct FString*                                    Name;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+};
+
 // Function HUD.HUD_C.AddMessageToScreen
 struct UHUD_C_AddMessageToScreen_Params
 {
@@ -339,11 +347,6 @@ struct UHUD_C_AddMessage_Params
 	float                                              Duration;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function HUD.HUD_C.Construct
-struct UHUD_C_Construct_Params
-{
-};
-
 // Function HUD.HUD_C.OnBCUBodyMonitorMaximized
 struct UHUD_C_OnBCUBodyMonitorMaximized_Params
 {
@@ -356,6 +359,11 @@ struct UHUD_C_OnRDAMonitorMaximized_Params
 
 // Function HUD.HUD_C.OnPerformanceMonitorMaximized
 struct UHUD_C_OnPerformanceMonitorMaximized_Params
+{
+};
+
+// Function HUD.HUD_C.Construct
+struct UHUD_C_Construct_Params
 {
 };
 
@@ -414,6 +422,7 @@ struct UHUD_C_ShowWarningMessage_Params
 {
 	struct FString*                                    Message;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 	float*                                             Duration;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor*                               TextColor;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 };
 
 // Function HUD.HUD_C.OnPrisonerChanged
@@ -448,6 +457,18 @@ struct UHUD_C_Tick_Params
 {
 	struct FGeometry*                                  MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 	float*                                             InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function HUD.HUD_C.ShowLevelUpNotification
+struct UHUD_C_ShowLevelUpNotification_Params
+{
+	class USkill**                                     Skill;                                                    // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ESkillLevel*                                       skillLevel;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function HUD.HUD_C.ShowTrapsDetectedNotification
+struct UHUD_C_ShowTrapsDetectedNotification_Params
+{
 };
 
 // Function HUD.HUD_C.ExecuteUbergraph_HUD

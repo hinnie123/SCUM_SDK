@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FlareItem.BP_FlareItem_C
-// 0x0000 (0x0888 - 0x0888)
+// 0x0000 (0x08D0 - 0x08D0)
 class ABP_FlareItem_C : public AFlareItem
 {
 public:

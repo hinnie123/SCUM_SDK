@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Halloween_Mask_Clown.Halloween_Mask_Clown_C
-// 0x0000 (0x08B0 - 0x08B0)
+// 0x0000 (0x08F8 - 0x08F8)
 class AHalloween_Mask_Clown_C : public AClothesItem
 {
 public:

@@ -15,14 +15,14 @@ namespace SDK
 // Function UI_CC_SkillSlider.UI_CC_SkillSlider_C.SetPercentage
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          percentage                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Percentage                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_CC_SkillSlider_C::SetPercentage(float percentage)
+void UUI_CC_SkillSlider_C::SetPercentage(float Percentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_SkillSlider.UI_CC_SkillSlider_C.SetPercentage");
 
 	UUI_CC_SkillSlider_C_SetPercentage_Params fn_params;
-	fn_params.percentage = percentage;
+	fn_params.Percentage = Percentage;
 
 	auto flags = fn->FunctionFlags;
 
@@ -119,15 +119,15 @@ void UUI_CC_SkillSlider_C::OnSynchronizeProperties()
 // (BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          leftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          LeftoverPercentage             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_CC_SkillSlider_C::BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_98_OnIndexChanged__DelegateSignature(int Index, float leftoverPercentage)
+void UUI_CC_SkillSlider_C::BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_98_OnIndexChanged__DelegateSignature(int Index, float LeftoverPercentage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CC_SkillSlider.UI_CC_SkillSlider_C.BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_98_OnIndexChanged__DelegateSignature");
 
 	UUI_CC_SkillSlider_C_BndEvt__UI_CC_ProgressBar_K2Node_ComponentBoundEvent_98_OnIndexChanged__DelegateSignature_Params fn_params;
 	fn_params.Index = Index;
-	fn_params.leftoverPercentage = leftoverPercentage;
+	fn_params.LeftoverPercentage = LeftoverPercentage;
 
 	auto flags = fn->FunctionFlags;
 
