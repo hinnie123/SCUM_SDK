@@ -1,7 +1,7 @@
 # SCUM_SDK
 SDK for the game SCUM
 
-UPDATED FOR LATEST VERSION: 0.3.68.20018 [January 20, 2020]
+UPDATED FOR LATEST VERSION: 0.3.75.21392 [March 31, 2020]
 
 Useful game info:
 ```
