@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WeaponSuppressor_M82A1.BP_WeaponSuppressor_M82A1_C
-// 0x0000 (0x0870 - 0x0870)
+// 0x0000 (0x0800 - 0x0800)
 class ABP_WeaponSuppressor_M82A1_C : public AWeaponAttachmentSuppressor
 {
 public:

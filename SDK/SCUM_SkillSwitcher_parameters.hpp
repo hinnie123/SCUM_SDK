@@ -59,10 +59,10 @@ struct USkillSwitcher_C_SetParents_Params
 {
 };
 
-// Function SkillSwitcher.SkillSwitcher_C.ShouldAlarmBeOn
-struct USkillSwitcher_C_ShouldAlarmBeOn_Params
+// Function SkillSwitcher.SkillSwitcher_C.shouldAlarmBeOn
+struct USkillSwitcher_C_shouldAlarmBeOn_Params
 {
-	bool                                               ShouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               shouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function SkillSwitcher.SkillSwitcher_C.CheckSkillIntelligenceAlarm

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Tactical_Sunglasses_02.Tactical_Sunglasses_02_C
-// 0x0000 (0x08F8 - 0x08F8)
+// 0x0000 (0x0898 - 0x0898)
 class ATactical_Sunglasses_02_C : public AClothesItem
 {
 public:

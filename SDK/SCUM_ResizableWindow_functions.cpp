@@ -60,9 +60,9 @@ void UResizableWindow_C::SaveHUDLayout()
 // Function ResizableWindow.ResizableWindow_C.GetParentHUD
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UHUD_C*                  ParentHUD                      (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UHUD_C*                  parentHUD                      (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UResizableWindow_C::GetParentHUD(class UHUD_C** ParentHUD)
+void UResizableWindow_C::GetParentHUD(class UHUD_C** parentHUD)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ResizableWindow.ResizableWindow_C.GetParentHUD");
 
@@ -74,22 +74,22 @@ void UResizableWindow_C::GetParentHUD(class UHUD_C** ParentHUD)
 
 	fn->FunctionFlags = flags;
 
-	if (ParentHUD != nullptr)
-		*ParentHUD = fn_params.ParentHUD;
+	if (parentHUD != nullptr)
+		*parentHUD = fn_params.parentHUD;
 }
 
 
 // Function ResizableWindow.ResizableWindow_C.SetParentHUD
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UHUD_C*                  ParentHUD                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UHUD_C*                  parentHUD                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UResizableWindow_C::SetParentHUD(class UHUD_C* ParentHUD)
+void UResizableWindow_C::SetParentHUD(class UHUD_C* parentHUD)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ResizableWindow.ResizableWindow_C.SetParentHUD");
 
 	UResizableWindow_C_SetParentHUD_Params fn_params;
-	fn_params.ParentHUD = ParentHUD;
+	fn_params.parentHUD = parentHUD;
 
 	auto flags = fn->FunctionFlags;
 
@@ -141,18 +141,18 @@ struct FVector2D UResizableWindow_C::GetPosition()
 }
 
 
-// Function ResizableWindow.ResizableWindow_C.AdjustPosition
+// Function ResizableWindow.ResizableWindow_C.adjustPosition
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector2D               positionToAdjust               (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FGeometry               localGeometry                  (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector2D               Output                         (Parm, OutParm, IsPlainOldData)
 
-void UResizableWindow_C::AdjustPosition(const struct FVector2D& positionToAdjust, const struct FGeometry& localGeometry, struct FVector2D* Output)
+void UResizableWindow_C::adjustPosition(const struct FVector2D& positionToAdjust, const struct FGeometry& localGeometry, struct FVector2D* Output)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ResizableWindow.ResizableWindow_C.AdjustPosition");
+	static auto fn = UObject::FindObject<UFunction>("Function ResizableWindow.ResizableWindow_C.adjustPosition");
 
-	UResizableWindow_C_AdjustPosition_Params fn_params;
+	UResizableWindow_C_adjustPosition_Params fn_params;
 	fn_params.positionToAdjust = positionToAdjust;
 	fn_params.localGeometry = localGeometry;
 

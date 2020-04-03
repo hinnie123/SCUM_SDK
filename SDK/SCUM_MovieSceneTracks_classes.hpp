@@ -570,7 +570,7 @@ class UMovieSceneEventSection : public UMovieSceneSection
 {
 public:
 	struct FNameCurve                                  Events;                                                   // 0x00E0(0x0068) (Deprecated)
-	struct FMovieSceneEventSectionData                 eventData;                                                // 0x0148(0x0088)
+	struct FMovieSceneEventSectionData                 EventData;                                                // 0x0148(0x0088)
 
 	static UClass* StaticClass()
 	{
@@ -852,7 +852,7 @@ public:
 class UMovieSceneSkeletalAnimationSection : public UMovieSceneSection
 {
 public:
-	struct FMovieSceneSkeletalAnimationParams          Params;                                                   // 0x00E0(0x00C8) (Edit)
+	struct FMovieSceneSkeletalAnimationParams          params;                                                   // 0x00E0(0x00C8) (Edit)
 	class UAnimSequence*                               AnimSequence;                                             // 0x01A8(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData)
 	class UAnimSequenceBase*                           Animation;                                                // 0x01B0(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData)
 	float                                              StartOffset;                                              // 0x01B8(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)

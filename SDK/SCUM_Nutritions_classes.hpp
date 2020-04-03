@@ -50,7 +50,7 @@ public:
 
 
 	void SetParentsForChildren();
-	void ShouldAlarmBeOn(bool* ShouldAlarmBeOn);
+	void shouldAlarmBeOn(bool* shouldAlarmBeOn);
 	void UpdateCaloryWaterConsumRates();
 	void Init();
 	void Update();

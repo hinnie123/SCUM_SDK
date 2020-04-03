@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Weapon_MP5_A2Stock.BP_Weapon_MP5_A2Stock_C
-// 0x0000 (0x0860 - 0x0860)
+// 0x0000 (0x07F0 - 0x07F0)
 class ABP_Weapon_MP5_A2Stock_C : public AWeaponAttachment
 {
 public:

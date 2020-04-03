@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Abundant_03.Abundant_03_C
-// 0x0000 (0x0840 - 0x0840)
+// 0x0000 (0x07E0 - 0x07E0)
 class AAbundant_03_C : public AItem
 {
 public:

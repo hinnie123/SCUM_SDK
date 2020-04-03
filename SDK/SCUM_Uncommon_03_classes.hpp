@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Uncommon_03.Uncommon_03_C
-// 0x0000 (0x0840 - 0x0840)
+// 0x0000 (0x07E0 - 0x07E0)
 class AUncommon_03_C : public AItem
 {
 public:

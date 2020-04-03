@@ -12,16 +12,16 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function VitalsMonitor.VitalsMonitor_C.ShouldAlarmBeOn
+// Function VitalsMonitor.VitalsMonitor_C.shouldAlarmBeOn
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                           ShouldAlarmBeOn                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           shouldAlarmBeOn                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UVitalsMonitor_C::ShouldAlarmBeOn(bool* ShouldAlarmBeOn)
+void UVitalsMonitor_C::shouldAlarmBeOn(bool* shouldAlarmBeOn)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VitalsMonitor.VitalsMonitor_C.ShouldAlarmBeOn");
+	static auto fn = UObject::FindObject<UFunction>("Function VitalsMonitor.VitalsMonitor_C.shouldAlarmBeOn");
 
-	UVitalsMonitor_C_ShouldAlarmBeOn_Params fn_params;
+	UVitalsMonitor_C_shouldAlarmBeOn_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -29,8 +29,8 @@ void UVitalsMonitor_C::ShouldAlarmBeOn(bool* ShouldAlarmBeOn)
 
 	fn->FunctionFlags = flags;
 
-	if (ShouldAlarmBeOn != nullptr)
-		*ShouldAlarmBeOn = fn_params.ShouldAlarmBeOn;
+	if (shouldAlarmBeOn != nullptr)
+		*shouldAlarmBeOn = fn_params.shouldAlarmBeOn;
 }
 
 

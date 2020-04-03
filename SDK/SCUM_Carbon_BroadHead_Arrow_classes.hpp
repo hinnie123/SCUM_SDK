@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Carbon_BroadHead_Arrow.Carbon_BroadHead_Arrow_C
-// 0x0000 (0x0878 - 0x0878)
+// 0x0000 (0x0810 - 0x0810)
 class ACarbon_BroadHead_Arrow_C : public AAmmunitionArrow
 {
 public:

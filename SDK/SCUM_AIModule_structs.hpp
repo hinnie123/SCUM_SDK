@@ -882,7 +882,7 @@ struct FPawnActionStack
 // 0x0018
 struct FPawnActionEvent
 {
-	class UPawnAction*                                 Action;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UPawnAction*                                 action;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0008(0x0010) MISSED OFFSET
 };
 
@@ -928,7 +928,7 @@ struct FEnvQueryResult
 // 0x0001
 struct FGenericTeamId
 {
-	unsigned char                                      TeamID;                                                   // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      teamId;                                                   // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 }

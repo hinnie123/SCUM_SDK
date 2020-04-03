@@ -17,7 +17,7 @@ namespace SDK
 // Function UI_SpawnMenuWidget.UI_SpawnMenuWidget_C.EnableOption
 struct UUI_SpawnMenuWidget_C_EnableOption_Params
 {
-	ERespawnOption                                     option;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ERespawnOption                                     Option;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UI_SpawnMenuWidget.UI_SpawnMenuWidget_C.GetSpawnTag

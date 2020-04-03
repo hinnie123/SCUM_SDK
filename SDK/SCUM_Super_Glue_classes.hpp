@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Super_Glue.Super_Glue_C
-// 0x0000 (0x0858 - 0x0858)
+// 0x0000 (0x07F8 - 0x07F8)
 class ASuper_Glue_C : public AEquipmentItem
 {
 public:

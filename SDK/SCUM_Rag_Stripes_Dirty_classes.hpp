@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Rag_Stripes_Dirty.Rag_Stripes_Dirty_C
-// 0x0000 (0x0858 - 0x0858)
+// 0x0000 (0x07F8 - 0x07F8)
 class ARag_Stripes_Dirty_C : public AEquipmentItem
 {
 public:

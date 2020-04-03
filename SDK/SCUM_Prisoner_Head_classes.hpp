@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Prisoner_Head.Prisoner_Head_C
-// 0x0000 (0x0858 - 0x0858)
+// 0x0000 (0x07F8 - 0x07F8)
 class APrisoner_Head_C : public AEquipmentItem
 {
 public:

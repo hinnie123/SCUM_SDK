@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Walnut.Walnut_C
-// 0x0000 (0x0980 - 0x0980)
+// 0x0000 (0x0928 - 0x0928)
 class AWalnut_C : public AFoodItem
 {
 public:

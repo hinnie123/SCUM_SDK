@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass AnimBP_AKS_74U.AnimBP_AKS_74U_C
-// 0x0CD4 (0x1054 - 0x0380)
+// 0x08E4 (0x0C64 - 0x0380)
 class UAnimBP_AKS_74U_C : public UWeaponAnimInstance
 {
 public:
@@ -34,15 +34,7 @@ public:
 	struct FAnimNode_ModifyBone                        AnimGraphNode_ModifyBone_23F30FFD4C2F66EBC99D01A878391CBA;// 0x0A70(0x0160)
 	struct FAnimNode_ConvertLocalToComponentSpace      AnimGraphNode_LocalToComponentSpace_A516F1D74D9DB181895AFFBF768CD046;// 0x0BD0(0x0048)
 	struct FAnimNode_ConvertComponentToLocalSpace      AnimGraphNode_ComponentToLocalSpace_9AEDD9CF42A67B4579E326BF95A4BCB6;// 0x0C18(0x0048)
-	struct FAnimNode_Slot                              AnimGraphNode_Slot_BCAC5C5349CB7CBC40C1BB84A9B64BFB;      // 0x0C60(0x0070)
-	struct FAnimNode_Slot                              AnimGraphNode_Slot_B9CB061E4D40951C886FA8BC17C6EDD0;      // 0x0CD0(0x0070)
-	struct FAnimNode_Slot                              AnimGraphNode_Slot_487C0B5C4BF6309CDBBDF4AC8A3A727C;      // 0x0D40(0x0070)
-	struct FAnimNode_BlendListByEnum                   AnimGraphNode_BlendListByEnum_F24C7AB64A3DB25F69078584A586E22E;// 0x0DB0(0x00E0)
-	struct FAnimNode_UseCachedPose                     AnimGraphNode_UseCachedPose_B982A9434348C011861F0FBD6FC462F3;// 0x0E90(0x0050)
-	struct FAnimNode_UseCachedPose                     AnimGraphNode_UseCachedPose_15960DBF459B771BEAEC0785730FE752;// 0x0EE0(0x0050)
-	struct FAnimNode_UseCachedPose                     AnimGraphNode_UseCachedPose_3FDB60D84B2DC830BF010C9AA458706E;// 0x0F30(0x0050)
-	struct FAnimNode_BlendListByBool                   AnimGraphNode_BlendListByBool_0DACF6C1466DC186137D6AA207487AE9;// 0x0F80(0x00D0)
-	float                                              IronSightsHideAlpha;                                      // 0x1050(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              IronSightsHideAlpha;                                      // 0x0C60(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -51,8 +43,6 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AKS_74U_AnimGraphNode_BlendListByBool_0DACF6C1466DC186137D6AA207487AE9();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AKS_74U_AnimGraphNode_BlendListByEnum_F24C7AB64A3DB25F69078584A586E22E();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AKS_74U_AnimGraphNode_ModifyBone_23F30FFD4C2F66EBC99D01A878391CBA();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AKS_74U_AnimGraphNode_BlendListByBool_5776B9914AC5CFC06C3AE6B838EC8E65();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_AKS_74U_AnimGraphNode_BlendListByEnum_A410198E491529D79243C9B392E5AF8A();

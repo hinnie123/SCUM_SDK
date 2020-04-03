@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TakeInHandsTorch.BP_TakeInHandsTorch_C
-// 0x0000 (0x0088 - 0x0088)
+// 0x0000 (0x0078 - 0x0078)
 class UBP_TakeInHandsTorch_C : public UTakeInHandsAssetData
 {
 public:

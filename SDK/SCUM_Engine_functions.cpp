@@ -4389,10 +4389,10 @@ void APlayerController::PlayHapticEffect(class UHapticFeedbackEffect_Base* Hapti
 // bool                           bAffectsLeftSmall              (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bAffectsRightLarge             (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bAffectsRightSmall             (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EDynamicForceFeedbackAction> Action                         (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EDynamicForceFeedbackAction> action                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FLatentActionInfo       LatentInfo                     (Parm)
 
-void APlayerController::PlayDynamicForceFeedback(float Intensity, float Duration, bool bAffectsLeftLarge, bool bAffectsLeftSmall, bool bAffectsRightLarge, bool bAffectsRightSmall, TEnumAsByte<EDynamicForceFeedbackAction> Action, const struct FLatentActionInfo& LatentInfo)
+void APlayerController::PlayDynamicForceFeedback(float Intensity, float Duration, bool bAffectsLeftLarge, bool bAffectsLeftSmall, bool bAffectsRightLarge, bool bAffectsRightSmall, TEnumAsByte<EDynamicForceFeedbackAction> action, const struct FLatentActionInfo& LatentInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerController.PlayDynamicForceFeedback");
 
@@ -4403,7 +4403,7 @@ void APlayerController::PlayDynamicForceFeedback(float Intensity, float Duration
 	fn_params.bAffectsLeftSmall = bAffectsLeftSmall;
 	fn_params.bAffectsRightLarge = bAffectsRightLarge;
 	fn_params.bAffectsRightSmall = bAffectsRightSmall;
-	fn_params.Action = Action;
+	fn_params.action = action;
 	fn_params.LatentInfo = LatentInfo;
 
 	auto flags = fn->FunctionFlags;
@@ -21136,643 +21136,6 @@ struct FString UAnimNotifyState::GetNotifyName()
 }
 
 
-// Function Engine.PlayerCameraManager.StopCameraShake
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UCameraShake*            ShakeInstance                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bImmediately                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void APlayerCameraManager::StopCameraShake(class UCameraShake* ShakeInstance, bool bImmediately)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.StopCameraShake");
-
-	APlayerCameraManager_StopCameraShake_Params fn_params;
-	fn_params.ShakeInstance = ShakeInstance;
-	fn_params.bImmediately = bImmediately;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.PlayerCameraManager.StopCameraFade
-// (Native, Public, BlueprintCallable)
-
-void APlayerCameraManager::StopCameraFade()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.StopCameraFade");
-
-	APlayerCameraManager_StopCameraFade_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.PlayerCameraManager.StopCameraAnimInst
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UCameraAnimInst*         AnimInst                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bImmediate                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void APlayerCameraManager::StopCameraAnimInst(class UCameraAnimInst* AnimInst, bool bImmediate)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.StopCameraAnimInst");
-
-	APlayerCameraManager_StopCameraAnimInst_Params fn_params;
-	fn_params.AnimInst = AnimInst;
-	fn_params.bImmediate = bImmediate;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.PlayerCameraManager.StopAllInstancesOfCameraShake
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UClass*                  Shake                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bImmediately                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void APlayerCameraManager::StopAllInstancesOfCameraShake(class UClass* Shake, bool bImmediately)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.StopAllInstancesOfCameraShake");
-
-	APlayerCameraManager_StopAllInstancesOfCameraShake_Params fn_params;
-	fn_params.Shake = Shake;
-	fn_params.bImmediately = bImmediately;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.PlayerCameraManager.StopAllInstancesOfCameraAnim
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UCameraAnim*             Anim                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bImmediate                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void APlayerCameraManager::StopAllInstancesOfCameraAnim(class UCameraAnim* Anim, bool bImmediate)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.StopAllInstancesOfCameraAnim");
-
-	APlayerCameraManager_StopAllInstancesOfCameraAnim_Params fn_params;
-	fn_params.Anim = Anim;
-	fn_params.bImmediate = bImmediate;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.PlayerCameraManager.StopAllCameraShakes
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bImmediately                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void APlayerCameraManager::StopAllCameraShakes(bool bImmediately)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.StopAllCameraShakes");
-
-	APlayerCameraManager_StopAllCameraShakes_Params fn_params;
-	fn_params.bImmediately = bImmediately;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.PlayerCameraManager.StopAllCameraAnims
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bImmediate                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void APlayerCameraManager::StopAllCameraAnims(bool bImmediate)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.StopAllCameraAnims");
-
-	APlayerCameraManager_StopAllCameraAnims_Params fn_params;
-	fn_params.bImmediate = bImmediate;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.PlayerCameraManager.StartCameraFade
-// (Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// float                          FromAlpha                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ToAlpha                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Duration                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            Color                          (Parm, IsPlainOldData)
-// bool                           bShouldFadeAudio               (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bHoldWhenFinished              (Parm, ZeroConstructor, IsPlainOldData)
-
-void APlayerCameraManager::StartCameraFade(float FromAlpha, float ToAlpha, float Duration, const struct FLinearColor& Color, bool bShouldFadeAudio, bool bHoldWhenFinished)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.StartCameraFade");
-
-	APlayerCameraManager_StartCameraFade_Params fn_params;
-	fn_params.FromAlpha = FromAlpha;
-	fn_params.ToAlpha = ToAlpha;
-	fn_params.Duration = Duration;
-	fn_params.Color = Color;
-	fn_params.bShouldFadeAudio = bShouldFadeAudio;
-	fn_params.bHoldWhenFinished = bHoldWhenFinished;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.PlayerCameraManager.SetManualCameraFade
-// (Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// float                          InFadeAmount                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            Color                          (Parm, IsPlainOldData)
-// bool                           bInFadeAudio                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void APlayerCameraManager::SetManualCameraFade(float InFadeAmount, const struct FLinearColor& Color, bool bInFadeAudio)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.SetManualCameraFade");
-
-	APlayerCameraManager_SetManualCameraFade_Params fn_params;
-	fn_params.InFadeAmount = InFadeAmount;
-	fn_params.Color = Color;
-	fn_params.bInFadeAudio = bInFadeAudio;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.PlayerCameraManager.RemoveCameraModifier
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UCameraModifier*         ModifierToRemove               (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool APlayerCameraManager::RemoveCameraModifier(class UCameraModifier* ModifierToRemove)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.RemoveCameraModifier");
-
-	APlayerCameraManager_RemoveCameraModifier_Params fn_params;
-	fn_params.ModifierToRemove = ModifierToRemove;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	return fn_params.ReturnValue;
-}
-
-
-// Function Engine.PlayerCameraManager.RemoveCameraLensEffect
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class AEmitterCameraLensEffectBase* Emitter                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void APlayerCameraManager::RemoveCameraLensEffect(class AEmitterCameraLensEffectBase* Emitter)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.RemoveCameraLensEffect");
-
-	APlayerCameraManager_RemoveCameraLensEffect_Params fn_params;
-	fn_params.Emitter = Emitter;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.PlayerCameraManager.PlayCameraShake
-// (Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UClass*                  ShakeClass                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Scale                          (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<ECameraAnimPlaySpace> PlaySpace                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRotator                UserPlaySpaceRot               (Parm, IsPlainOldData)
-// class UCameraShake*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UCameraShake* APlayerCameraManager::PlayCameraShake(class UClass* ShakeClass, float Scale, TEnumAsByte<ECameraAnimPlaySpace> PlaySpace, const struct FRotator& UserPlaySpaceRot)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.PlayCameraShake");
-
-	APlayerCameraManager_PlayCameraShake_Params fn_params;
-	fn_params.ShakeClass = ShakeClass;
-	fn_params.Scale = Scale;
-	fn_params.PlaySpace = PlaySpace;
-	fn_params.UserPlaySpaceRot = UserPlaySpaceRot;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	return fn_params.ReturnValue;
-}
-
-
-// Function Engine.PlayerCameraManager.PlayCameraAnim
-// (Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UCameraAnim*             Anim                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Rate                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Scale                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BlendInTime                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BlendOutTime                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bLoop                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bRandomStartTime               (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Duration                       (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<ECameraAnimPlaySpace> PlaySpace                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRotator                UserPlaySpaceRot               (Parm, IsPlainOldData)
-// class UCameraAnimInst*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UCameraAnimInst* APlayerCameraManager::PlayCameraAnim(class UCameraAnim* Anim, float Rate, float Scale, float BlendInTime, float BlendOutTime, bool bLoop, bool bRandomStartTime, float Duration, TEnumAsByte<ECameraAnimPlaySpace> PlaySpace, const struct FRotator& UserPlaySpaceRot)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.PlayCameraAnim");
-
-	APlayerCameraManager_PlayCameraAnim_Params fn_params;
-	fn_params.Anim = Anim;
-	fn_params.Rate = Rate;
-	fn_params.Scale = Scale;
-	fn_params.BlendInTime = BlendInTime;
-	fn_params.BlendOutTime = BlendOutTime;
-	fn_params.bLoop = bLoop;
-	fn_params.bRandomStartTime = bRandomStartTime;
-	fn_params.Duration = Duration;
-	fn_params.PlaySpace = PlaySpace;
-	fn_params.UserPlaySpaceRot = UserPlaySpaceRot;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	return fn_params.ReturnValue;
-}
-
-
-// Function Engine.PlayerCameraManager.PhotographyCameraModify
-// (BlueprintCosmetic, Native, Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
-// Parameters:
-// struct FVector                 NewCameraLocation              (ConstParm, Parm, IsPlainOldData)
-// struct FVector                 PreviousCameraLocation         (ConstParm, Parm, IsPlainOldData)
-// struct FVector                 OriginalCameraLocation         (ConstParm, Parm, IsPlainOldData)
-// struct FVector                 ResultCameraLocation           (Parm, OutParm, IsPlainOldData)
-
-void APlayerCameraManager::PhotographyCameraModify(const struct FVector& NewCameraLocation, const struct FVector& PreviousCameraLocation, const struct FVector& OriginalCameraLocation, struct FVector* ResultCameraLocation)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.PhotographyCameraModify");
-
-	APlayerCameraManager_PhotographyCameraModify_Params fn_params;
-	fn_params.NewCameraLocation = NewCameraLocation;
-	fn_params.PreviousCameraLocation = PreviousCameraLocation;
-	fn_params.OriginalCameraLocation = OriginalCameraLocation;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	if (ResultCameraLocation != nullptr)
-		*ResultCameraLocation = fn_params.ResultCameraLocation;
-}
-
-
-// Function Engine.PlayerCameraManager.OnPhotographySessionStart
-// (BlueprintCosmetic, Native, Event, Public, BlueprintEvent)
-
-void APlayerCameraManager::OnPhotographySessionStart()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.OnPhotographySessionStart");
-
-	APlayerCameraManager_OnPhotographySessionStart_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.PlayerCameraManager.OnPhotographySessionEnd
-// (BlueprintCosmetic, Native, Event, Public, BlueprintEvent)
-
-void APlayerCameraManager::OnPhotographySessionEnd()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.OnPhotographySessionEnd");
-
-	APlayerCameraManager_OnPhotographySessionEnd_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.PlayerCameraManager.OnPhotographyMultiPartCaptureStart
-// (BlueprintCosmetic, Native, Event, Public, BlueprintEvent)
-
-void APlayerCameraManager::OnPhotographyMultiPartCaptureStart()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.OnPhotographyMultiPartCaptureStart");
-
-	APlayerCameraManager_OnPhotographyMultiPartCaptureStart_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.PlayerCameraManager.OnPhotographyMultiPartCaptureEnd
-// (BlueprintCosmetic, Native, Event, Public, BlueprintEvent)
-
-void APlayerCameraManager::OnPhotographyMultiPartCaptureEnd()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.OnPhotographyMultiPartCaptureEnd");
-
-	APlayerCameraManager_OnPhotographyMultiPartCaptureEnd_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.PlayerCameraManager.GetOwningPlayerController
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class APlayerController*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class APlayerController* APlayerCameraManager::GetOwningPlayerController()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.GetOwningPlayerController");
-
-	APlayerCameraManager_GetOwningPlayerController_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	return fn_params.ReturnValue;
-}
-
-
-// Function Engine.PlayerCameraManager.GetFOVAngle
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float APlayerCameraManager::GetFOVAngle()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.GetFOVAngle");
-
-	APlayerCameraManager_GetFOVAngle_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	return fn_params.ReturnValue;
-}
-
-
-// Function Engine.PlayerCameraManager.GetCameraRotation
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
-
-struct FRotator APlayerCameraManager::GetCameraRotation()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.GetCameraRotation");
-
-	APlayerCameraManager_GetCameraRotation_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	return fn_params.ReturnValue;
-}
-
-
-// Function Engine.PlayerCameraManager.GetCameraLocation
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
-
-struct FVector APlayerCameraManager::GetCameraLocation()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.GetCameraLocation");
-
-	APlayerCameraManager_GetCameraLocation_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	return fn_params.ReturnValue;
-}
-
-
-// Function Engine.PlayerCameraManager.FindCameraModifierByClass
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UClass*                  ModifierClass                  (Parm, ZeroConstructor, IsPlainOldData)
-// class UCameraModifier*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UCameraModifier* APlayerCameraManager::FindCameraModifierByClass(class UClass* ModifierClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.FindCameraModifierByClass");
-
-	APlayerCameraManager_FindCameraModifierByClass_Params fn_params;
-	fn_params.ModifierClass = ModifierClass;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	return fn_params.ReturnValue;
-}
-
-
-// Function Engine.PlayerCameraManager.ClearCameraLensEffects
-// (Native, Public, BlueprintCallable)
-
-void APlayerCameraManager::ClearCameraLensEffects()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.ClearCameraLensEffects");
-
-	APlayerCameraManager_ClearCameraLensEffects_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.PlayerCameraManager.BlueprintUpdateCamera
-// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
-// Parameters:
-// class AActor*                  CameraTarget                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 NewCameraLocation              (Parm, OutParm, IsPlainOldData)
-// struct FRotator                NewCameraRotation              (Parm, OutParm, IsPlainOldData)
-// float                          NewCameraFOV                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool APlayerCameraManager::BlueprintUpdateCamera(class AActor* CameraTarget, struct FVector* NewCameraLocation, struct FRotator* NewCameraRotation, float* NewCameraFOV)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.BlueprintUpdateCamera");
-
-	APlayerCameraManager_BlueprintUpdateCamera_Params fn_params;
-	fn_params.CameraTarget = CameraTarget;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	if (NewCameraLocation != nullptr)
-		*NewCameraLocation = fn_params.NewCameraLocation;
-	if (NewCameraRotation != nullptr)
-		*NewCameraRotation = fn_params.NewCameraRotation;
-	if (NewCameraFOV != nullptr)
-		*NewCameraFOV = fn_params.NewCameraFOV;
-
-	return fn_params.ReturnValue;
-}
-
-
-// Function Engine.PlayerCameraManager.AddNewCameraModifier
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UClass*                  ModifierClass                  (Parm, ZeroConstructor, IsPlainOldData)
-// class UCameraModifier*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UCameraModifier* APlayerCameraManager::AddNewCameraModifier(class UClass* ModifierClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.AddNewCameraModifier");
-
-	APlayerCameraManager_AddNewCameraModifier_Params fn_params;
-	fn_params.ModifierClass = ModifierClass;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	return fn_params.ReturnValue;
-}
-
-
-// Function Engine.PlayerCameraManager.AddCameraLensEffect
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UClass*                  LensEffectEmitterClass         (Parm, ZeroConstructor, IsPlainOldData)
-// class AEmitterCameraLensEffectBase* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class AEmitterCameraLensEffectBase* APlayerCameraManager::AddCameraLensEffect(class UClass* LensEffectEmitterClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.AddCameraLensEffect");
-
-	APlayerCameraManager_AddCameraLensEffect_Params fn_params;
-	fn_params.LensEffectEmitterClass = LensEffectEmitterClass;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	return fn_params.ReturnValue;
-}
-
-
 // Function Engine.GameInstance.ReceiveShutdown
 // (Event, Public, BlueprintEvent)
 
@@ -24588,6 +23951,643 @@ float UCapsuleComponent::GetScaledCapsuleHalfHeight()
 }
 
 
+// Function Engine.PlayerCameraManager.StopCameraShake
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UCameraShake*            ShakeInstance                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bImmediately                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void APlayerCameraManager::StopCameraShake(class UCameraShake* ShakeInstance, bool bImmediately)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.StopCameraShake");
+
+	APlayerCameraManager_StopCameraShake_Params fn_params;
+	fn_params.ShakeInstance = ShakeInstance;
+	fn_params.bImmediately = bImmediately;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.PlayerCameraManager.StopCameraFade
+// (Native, Public, BlueprintCallable)
+
+void APlayerCameraManager::StopCameraFade()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.StopCameraFade");
+
+	APlayerCameraManager_StopCameraFade_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.PlayerCameraManager.StopCameraAnimInst
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UCameraAnimInst*         AnimInst                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bImmediate                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void APlayerCameraManager::StopCameraAnimInst(class UCameraAnimInst* AnimInst, bool bImmediate)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.StopCameraAnimInst");
+
+	APlayerCameraManager_StopCameraAnimInst_Params fn_params;
+	fn_params.AnimInst = AnimInst;
+	fn_params.bImmediate = bImmediate;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.PlayerCameraManager.StopAllInstancesOfCameraShake
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  Shake                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bImmediately                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void APlayerCameraManager::StopAllInstancesOfCameraShake(class UClass* Shake, bool bImmediately)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.StopAllInstancesOfCameraShake");
+
+	APlayerCameraManager_StopAllInstancesOfCameraShake_Params fn_params;
+	fn_params.Shake = Shake;
+	fn_params.bImmediately = bImmediately;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.PlayerCameraManager.StopAllInstancesOfCameraAnim
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UCameraAnim*             Anim                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bImmediate                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void APlayerCameraManager::StopAllInstancesOfCameraAnim(class UCameraAnim* Anim, bool bImmediate)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.StopAllInstancesOfCameraAnim");
+
+	APlayerCameraManager_StopAllInstancesOfCameraAnim_Params fn_params;
+	fn_params.Anim = Anim;
+	fn_params.bImmediate = bImmediate;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.PlayerCameraManager.StopAllCameraShakes
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bImmediately                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void APlayerCameraManager::StopAllCameraShakes(bool bImmediately)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.StopAllCameraShakes");
+
+	APlayerCameraManager_StopAllCameraShakes_Params fn_params;
+	fn_params.bImmediately = bImmediately;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.PlayerCameraManager.StopAllCameraAnims
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bImmediate                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void APlayerCameraManager::StopAllCameraAnims(bool bImmediate)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.StopAllCameraAnims");
+
+	APlayerCameraManager_StopAllCameraAnims_Params fn_params;
+	fn_params.bImmediate = bImmediate;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.PlayerCameraManager.StartCameraFade
+// (Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// float                          FromAlpha                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ToAlpha                        (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Duration                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor            Color                          (Parm, IsPlainOldData)
+// bool                           bShouldFadeAudio               (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bHoldWhenFinished              (Parm, ZeroConstructor, IsPlainOldData)
+
+void APlayerCameraManager::StartCameraFade(float FromAlpha, float ToAlpha, float Duration, const struct FLinearColor& Color, bool bShouldFadeAudio, bool bHoldWhenFinished)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.StartCameraFade");
+
+	APlayerCameraManager_StartCameraFade_Params fn_params;
+	fn_params.FromAlpha = FromAlpha;
+	fn_params.ToAlpha = ToAlpha;
+	fn_params.Duration = Duration;
+	fn_params.Color = Color;
+	fn_params.bShouldFadeAudio = bShouldFadeAudio;
+	fn_params.bHoldWhenFinished = bHoldWhenFinished;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.PlayerCameraManager.SetManualCameraFade
+// (Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// float                          InFadeAmount                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor            Color                          (Parm, IsPlainOldData)
+// bool                           bInFadeAudio                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void APlayerCameraManager::SetManualCameraFade(float InFadeAmount, const struct FLinearColor& Color, bool bInFadeAudio)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.SetManualCameraFade");
+
+	APlayerCameraManager_SetManualCameraFade_Params fn_params;
+	fn_params.InFadeAmount = InFadeAmount;
+	fn_params.Color = Color;
+	fn_params.bInFadeAudio = bInFadeAudio;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.PlayerCameraManager.RemoveCameraModifier
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UCameraModifier*         ModifierToRemove               (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APlayerCameraManager::RemoveCameraModifier(class UCameraModifier* ModifierToRemove)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.RemoveCameraModifier");
+
+	APlayerCameraManager_RemoveCameraModifier_Params fn_params;
+	fn_params.ModifierToRemove = ModifierToRemove;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
+// Function Engine.PlayerCameraManager.RemoveCameraLensEffect
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class AEmitterCameraLensEffectBase* Emitter                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void APlayerCameraManager::RemoveCameraLensEffect(class AEmitterCameraLensEffectBase* Emitter)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.RemoveCameraLensEffect");
+
+	APlayerCameraManager_RemoveCameraLensEffect_Params fn_params;
+	fn_params.Emitter = Emitter;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.PlayerCameraManager.PlayCameraShake
+// (Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UClass*                  ShakeClass                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Scale                          (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<ECameraAnimPlaySpace> PlaySpace                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                UserPlaySpaceRot               (Parm, IsPlainOldData)
+// class UCameraShake*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UCameraShake* APlayerCameraManager::PlayCameraShake(class UClass* ShakeClass, float Scale, TEnumAsByte<ECameraAnimPlaySpace> PlaySpace, const struct FRotator& UserPlaySpaceRot)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.PlayCameraShake");
+
+	APlayerCameraManager_PlayCameraShake_Params fn_params;
+	fn_params.ShakeClass = ShakeClass;
+	fn_params.Scale = Scale;
+	fn_params.PlaySpace = PlaySpace;
+	fn_params.UserPlaySpaceRot = UserPlaySpaceRot;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
+// Function Engine.PlayerCameraManager.PlayCameraAnim
+// (Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UCameraAnim*             Anim                           (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Rate                           (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Scale                          (Parm, ZeroConstructor, IsPlainOldData)
+// float                          BlendInTime                    (Parm, ZeroConstructor, IsPlainOldData)
+// float                          BlendOutTime                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bLoop                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bRandomStartTime               (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Duration                       (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<ECameraAnimPlaySpace> PlaySpace                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                UserPlaySpaceRot               (Parm, IsPlainOldData)
+// class UCameraAnimInst*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UCameraAnimInst* APlayerCameraManager::PlayCameraAnim(class UCameraAnim* Anim, float Rate, float Scale, float BlendInTime, float BlendOutTime, bool bLoop, bool bRandomStartTime, float Duration, TEnumAsByte<ECameraAnimPlaySpace> PlaySpace, const struct FRotator& UserPlaySpaceRot)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.PlayCameraAnim");
+
+	APlayerCameraManager_PlayCameraAnim_Params fn_params;
+	fn_params.Anim = Anim;
+	fn_params.Rate = Rate;
+	fn_params.Scale = Scale;
+	fn_params.BlendInTime = BlendInTime;
+	fn_params.BlendOutTime = BlendOutTime;
+	fn_params.bLoop = bLoop;
+	fn_params.bRandomStartTime = bRandomStartTime;
+	fn_params.Duration = Duration;
+	fn_params.PlaySpace = PlaySpace;
+	fn_params.UserPlaySpaceRot = UserPlaySpaceRot;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
+// Function Engine.PlayerCameraManager.PhotographyCameraModify
+// (BlueprintCosmetic, Native, Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
+// Parameters:
+// struct FVector                 NewCameraLocation              (ConstParm, Parm, IsPlainOldData)
+// struct FVector                 PreviousCameraLocation         (ConstParm, Parm, IsPlainOldData)
+// struct FVector                 OriginalCameraLocation         (ConstParm, Parm, IsPlainOldData)
+// struct FVector                 ResultCameraLocation           (Parm, OutParm, IsPlainOldData)
+
+void APlayerCameraManager::PhotographyCameraModify(const struct FVector& NewCameraLocation, const struct FVector& PreviousCameraLocation, const struct FVector& OriginalCameraLocation, struct FVector* ResultCameraLocation)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.PhotographyCameraModify");
+
+	APlayerCameraManager_PhotographyCameraModify_Params fn_params;
+	fn_params.NewCameraLocation = NewCameraLocation;
+	fn_params.PreviousCameraLocation = PreviousCameraLocation;
+	fn_params.OriginalCameraLocation = OriginalCameraLocation;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	if (ResultCameraLocation != nullptr)
+		*ResultCameraLocation = fn_params.ResultCameraLocation;
+}
+
+
+// Function Engine.PlayerCameraManager.OnPhotographySessionStart
+// (BlueprintCosmetic, Native, Event, Public, BlueprintEvent)
+
+void APlayerCameraManager::OnPhotographySessionStart()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.OnPhotographySessionStart");
+
+	APlayerCameraManager_OnPhotographySessionStart_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.PlayerCameraManager.OnPhotographySessionEnd
+// (BlueprintCosmetic, Native, Event, Public, BlueprintEvent)
+
+void APlayerCameraManager::OnPhotographySessionEnd()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.OnPhotographySessionEnd");
+
+	APlayerCameraManager_OnPhotographySessionEnd_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.PlayerCameraManager.OnPhotographyMultiPartCaptureStart
+// (BlueprintCosmetic, Native, Event, Public, BlueprintEvent)
+
+void APlayerCameraManager::OnPhotographyMultiPartCaptureStart()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.OnPhotographyMultiPartCaptureStart");
+
+	APlayerCameraManager_OnPhotographyMultiPartCaptureStart_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.PlayerCameraManager.OnPhotographyMultiPartCaptureEnd
+// (BlueprintCosmetic, Native, Event, Public, BlueprintEvent)
+
+void APlayerCameraManager::OnPhotographyMultiPartCaptureEnd()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.OnPhotographyMultiPartCaptureEnd");
+
+	APlayerCameraManager_OnPhotographyMultiPartCaptureEnd_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.PlayerCameraManager.GetOwningPlayerController
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class APlayerController*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class APlayerController* APlayerCameraManager::GetOwningPlayerController()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.GetOwningPlayerController");
+
+	APlayerCameraManager_GetOwningPlayerController_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
+// Function Engine.PlayerCameraManager.GetFOVAngle
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float APlayerCameraManager::GetFOVAngle()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.GetFOVAngle");
+
+	APlayerCameraManager_GetFOVAngle_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
+// Function Engine.PlayerCameraManager.GetCameraRotation
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FRotator APlayerCameraManager::GetCameraRotation()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.GetCameraRotation");
+
+	APlayerCameraManager_GetCameraRotation_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
+// Function Engine.PlayerCameraManager.GetCameraLocation
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FVector APlayerCameraManager::GetCameraLocation()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.GetCameraLocation");
+
+	APlayerCameraManager_GetCameraLocation_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
+// Function Engine.PlayerCameraManager.FindCameraModifierByClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  ModifierClass                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UCameraModifier*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UCameraModifier* APlayerCameraManager::FindCameraModifierByClass(class UClass* ModifierClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.FindCameraModifierByClass");
+
+	APlayerCameraManager_FindCameraModifierByClass_Params fn_params;
+	fn_params.ModifierClass = ModifierClass;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
+// Function Engine.PlayerCameraManager.ClearCameraLensEffects
+// (Native, Public, BlueprintCallable)
+
+void APlayerCameraManager::ClearCameraLensEffects()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.ClearCameraLensEffects");
+
+	APlayerCameraManager_ClearCameraLensEffects_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.PlayerCameraManager.BlueprintUpdateCamera
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
+// Parameters:
+// class AActor*                  CameraTarget                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 NewCameraLocation              (Parm, OutParm, IsPlainOldData)
+// struct FRotator                NewCameraRotation              (Parm, OutParm, IsPlainOldData)
+// float                          NewCameraFOV                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APlayerCameraManager::BlueprintUpdateCamera(class AActor* CameraTarget, struct FVector* NewCameraLocation, struct FRotator* NewCameraRotation, float* NewCameraFOV)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.BlueprintUpdateCamera");
+
+	APlayerCameraManager_BlueprintUpdateCamera_Params fn_params;
+	fn_params.CameraTarget = CameraTarget;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	if (NewCameraLocation != nullptr)
+		*NewCameraLocation = fn_params.NewCameraLocation;
+	if (NewCameraRotation != nullptr)
+		*NewCameraRotation = fn_params.NewCameraRotation;
+	if (NewCameraFOV != nullptr)
+		*NewCameraFOV = fn_params.NewCameraFOV;
+
+	return fn_params.ReturnValue;
+}
+
+
+// Function Engine.PlayerCameraManager.AddNewCameraModifier
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  ModifierClass                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UCameraModifier*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UCameraModifier* APlayerCameraManager::AddNewCameraModifier(class UClass* ModifierClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.AddNewCameraModifier");
+
+	APlayerCameraManager_AddNewCameraModifier_Params fn_params;
+	fn_params.ModifierClass = ModifierClass;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
+// Function Engine.PlayerCameraManager.AddCameraLensEffect
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  LensEffectEmitterClass         (Parm, ZeroConstructor, IsPlainOldData)
+// class AEmitterCameraLensEffectBase* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AEmitterCameraLensEffectBase* APlayerCameraManager::AddCameraLensEffect(class UClass* LensEffectEmitterClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.AddCameraLensEffect");
+
+	APlayerCameraManager_AddCameraLensEffect_Params fn_params;
+	fn_params.LensEffectEmitterClass = LensEffectEmitterClass;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
 // Function Engine.CameraComponent.SetUseFieldOfViewForLOD
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -24942,276 +24942,6 @@ struct FVector UProjectileMovementComponent::LimitVelocity(const struct FVector&
 
 	UProjectileMovementComponent_LimitVelocity_Params fn_params;
 	fn_params.NewVelocity = NewVelocity;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	return fn_params.ReturnValue;
-}
-
-
-// Function Engine.Light.ToggleEnabled
-// (Final, Native, Public, BlueprintCallable)
-
-void ALight::ToggleEnabled()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.ToggleEnabled");
-
-	ALight_ToggleEnabled_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.Light.SetLightFunctionScale
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 NewLightFunctionScale          (Parm, IsPlainOldData)
-
-void ALight::SetLightFunctionScale(const struct FVector& NewLightFunctionScale)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetLightFunctionScale");
-
-	ALight_SetLightFunctionScale_Params fn_params;
-	fn_params.NewLightFunctionScale = NewLightFunctionScale;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.Light.SetLightFunctionMaterial
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UMaterialInterface*      NewLightFunctionMaterial       (Parm, ZeroConstructor, IsPlainOldData)
-
-void ALight::SetLightFunctionMaterial(class UMaterialInterface* NewLightFunctionMaterial)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetLightFunctionMaterial");
-
-	ALight_SetLightFunctionMaterial_Params fn_params;
-	fn_params.NewLightFunctionMaterial = NewLightFunctionMaterial;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.Light.SetLightFunctionFadeDistance
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          NewLightFunctionFadeDistance   (Parm, ZeroConstructor, IsPlainOldData)
-
-void ALight::SetLightFunctionFadeDistance(float NewLightFunctionFadeDistance)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetLightFunctionFadeDistance");
-
-	ALight_SetLightFunctionFadeDistance_Params fn_params;
-	fn_params.NewLightFunctionFadeDistance = NewLightFunctionFadeDistance;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.Light.SetLightColor
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FLinearColor            NewLightColor                  (Parm, IsPlainOldData)
-
-void ALight::SetLightColor(const struct FLinearColor& NewLightColor)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetLightColor");
-
-	ALight_SetLightColor_Params fn_params;
-	fn_params.NewLightColor = NewLightColor;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.Light.SetEnabled
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bSetEnabled                    (Parm, ZeroConstructor, IsPlainOldData)
-
-void ALight::SetEnabled(bool bSetEnabled)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetEnabled");
-
-	ALight_SetEnabled_Params fn_params;
-	fn_params.bSetEnabled = bSetEnabled;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.Light.SetCastShadows
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bNewValue                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void ALight::SetCastShadows(bool bNewValue)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetCastShadows");
-
-	ALight_SetCastShadows_Params fn_params;
-	fn_params.bNewValue = bNewValue;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.Light.SetBrightness
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          NewBrightness                  (Parm, ZeroConstructor, IsPlainOldData)
-
-void ALight::SetBrightness(float NewBrightness)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetBrightness");
-
-	ALight_SetBrightness_Params fn_params;
-	fn_params.NewBrightness = NewBrightness;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.Light.SetAffectTranslucentLighting
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bNewValue                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void ALight::SetAffectTranslucentLighting(bool bNewValue)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetAffectTranslucentLighting");
-
-	ALight_SetAffectTranslucentLighting_Params fn_params;
-	fn_params.bNewValue = bNewValue;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.Light.OnRep_bEnabled
-// (Native, Public)
-
-void ALight::OnRep_bEnabled()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.OnRep_bEnabled");
-
-	ALight_OnRep_bEnabled_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.Light.IsEnabled
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool ALight::IsEnabled()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.IsEnabled");
-
-	ALight_IsEnabled_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	return fn_params.ReturnValue;
-}
-
-
-// Function Engine.Light.GetLightColor
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FLinearColor            ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
-
-struct FLinearColor ALight::GetLightColor()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.GetLightColor");
-
-	ALight_GetLightColor_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	return fn_params.ReturnValue;
-}
-
-
-// Function Engine.Light.GetBrightness
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float ALight::GetBrightness()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.GetBrightness");
-
-	ALight_GetBrightness_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -26936,10 +26666,10 @@ void UBlueprintMapLibrary::STATIC_Map_Add(TMap<int, int> TargetMap, int Key, int
 // int                            inSecondsFromNow               (Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   Title                          (ConstParm, Parm, OutParm, ReferenceParm)
 // struct FText                   Body                           (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FText                   Action                         (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FText                   action                         (ConstParm, Parm, OutParm, ReferenceParm)
 // struct FString                 ActivationEvent                (Parm, ZeroConstructor)
 
-void UBlueprintPlatformLibrary::STATIC_ScheduleLocalNotificationFromNow(int inSecondsFromNow, const struct FText& Title, const struct FText& Body, const struct FText& Action, const struct FString& ActivationEvent)
+void UBlueprintPlatformLibrary::STATIC_ScheduleLocalNotificationFromNow(int inSecondsFromNow, const struct FText& Title, const struct FText& Body, const struct FText& action, const struct FString& ActivationEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.BlueprintPlatformLibrary.ScheduleLocalNotificationFromNow");
 
@@ -26947,7 +26677,7 @@ void UBlueprintPlatformLibrary::STATIC_ScheduleLocalNotificationFromNow(int inSe
 	fn_params.inSecondsFromNow = inSecondsFromNow;
 	fn_params.Title = Title;
 	fn_params.Body = Body;
-	fn_params.Action = Action;
+	fn_params.action = action;
 	fn_params.ActivationEvent = ActivationEvent;
 
 	auto flags = fn->FunctionFlags;
@@ -27014,10 +26744,10 @@ void UBlueprintPlatformLibrary::STATIC_ScheduleLocalNotificationBadgeAtTime(cons
 // bool                           LocalTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   Title                          (ConstParm, Parm, OutParm, ReferenceParm)
 // struct FText                   Body                           (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FText                   Action                         (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FText                   action                         (ConstParm, Parm, OutParm, ReferenceParm)
 // struct FString                 ActivationEvent                (Parm, ZeroConstructor)
 
-void UBlueprintPlatformLibrary::STATIC_ScheduleLocalNotificationAtTime(const struct FDateTime& FireDateTime, bool LocalTime, const struct FText& Title, const struct FText& Body, const struct FText& Action, const struct FString& ActivationEvent)
+void UBlueprintPlatformLibrary::STATIC_ScheduleLocalNotificationAtTime(const struct FDateTime& FireDateTime, bool LocalTime, const struct FText& Title, const struct FText& Body, const struct FText& action, const struct FString& ActivationEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.BlueprintPlatformLibrary.ScheduleLocalNotificationAtTime");
 
@@ -27026,7 +26756,7 @@ void UBlueprintPlatformLibrary::STATIC_ScheduleLocalNotificationAtTime(const str
 	fn_params.LocalTime = LocalTime;
 	fn_params.Title = Title;
 	fn_params.Body = Body;
-	fn_params.Action = Action;
+	fn_params.action = action;
 	fn_params.ActivationEvent = ActivationEvent;
 
 	auto flags = fn->FunctionFlags;
@@ -30080,6 +29810,276 @@ class UMaterialInstanceDynamic* UDecalComponent::CreateDynamicMaterialInstance()
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.DecalComponent.CreateDynamicMaterialInstance");
 
 	UDecalComponent_CreateDynamicMaterialInstance_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
+// Function Engine.Light.ToggleEnabled
+// (Final, Native, Public, BlueprintCallable)
+
+void ALight::ToggleEnabled()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.ToggleEnabled");
+
+	ALight_ToggleEnabled_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Light.SetLightFunctionScale
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 NewLightFunctionScale          (Parm, IsPlainOldData)
+
+void ALight::SetLightFunctionScale(const struct FVector& NewLightFunctionScale)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetLightFunctionScale");
+
+	ALight_SetLightFunctionScale_Params fn_params;
+	fn_params.NewLightFunctionScale = NewLightFunctionScale;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Light.SetLightFunctionMaterial
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMaterialInterface*      NewLightFunctionMaterial       (Parm, ZeroConstructor, IsPlainOldData)
+
+void ALight::SetLightFunctionMaterial(class UMaterialInterface* NewLightFunctionMaterial)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetLightFunctionMaterial");
+
+	ALight_SetLightFunctionMaterial_Params fn_params;
+	fn_params.NewLightFunctionMaterial = NewLightFunctionMaterial;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Light.SetLightFunctionFadeDistance
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          NewLightFunctionFadeDistance   (Parm, ZeroConstructor, IsPlainOldData)
+
+void ALight::SetLightFunctionFadeDistance(float NewLightFunctionFadeDistance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetLightFunctionFadeDistance");
+
+	ALight_SetLightFunctionFadeDistance_Params fn_params;
+	fn_params.NewLightFunctionFadeDistance = NewLightFunctionFadeDistance;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Light.SetLightColor
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FLinearColor            NewLightColor                  (Parm, IsPlainOldData)
+
+void ALight::SetLightColor(const struct FLinearColor& NewLightColor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetLightColor");
+
+	ALight_SetLightColor_Params fn_params;
+	fn_params.NewLightColor = NewLightColor;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Light.SetEnabled
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bSetEnabled                    (Parm, ZeroConstructor, IsPlainOldData)
+
+void ALight::SetEnabled(bool bSetEnabled)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetEnabled");
+
+	ALight_SetEnabled_Params fn_params;
+	fn_params.bSetEnabled = bSetEnabled;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Light.SetCastShadows
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bNewValue                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void ALight::SetCastShadows(bool bNewValue)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetCastShadows");
+
+	ALight_SetCastShadows_Params fn_params;
+	fn_params.bNewValue = bNewValue;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Light.SetBrightness
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          NewBrightness                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void ALight::SetBrightness(float NewBrightness)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetBrightness");
+
+	ALight_SetBrightness_Params fn_params;
+	fn_params.NewBrightness = NewBrightness;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Light.SetAffectTranslucentLighting
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bNewValue                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void ALight::SetAffectTranslucentLighting(bool bNewValue)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetAffectTranslucentLighting");
+
+	ALight_SetAffectTranslucentLighting_Params fn_params;
+	fn_params.bNewValue = bNewValue;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Light.OnRep_bEnabled
+// (Native, Public)
+
+void ALight::OnRep_bEnabled()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.OnRep_bEnabled");
+
+	ALight_OnRep_bEnabled_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Light.IsEnabled
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ALight::IsEnabled()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.IsEnabled");
+
+	ALight_IsEnabled_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
+// Function Engine.Light.GetLightColor
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FLinearColor            ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FLinearColor ALight::GetLightColor()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.GetLightColor");
+
+	ALight_GetLightColor_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
+// Function Engine.Light.GetBrightness
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float ALight::GetBrightness()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.GetBrightness");
+
+	ALight_GetBrightness_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

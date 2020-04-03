@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BPC_Improvised_Bow_36.BPC_Improvised_Bow_35_C
-// 0x0000 (0x17A8 - 0x17A8)
+// 0x0000 (0x16B8 - 0x16B8)
 class ABPC_Improvised_Bow_35_C : public AImprovised_Bow_C
 {
 public:

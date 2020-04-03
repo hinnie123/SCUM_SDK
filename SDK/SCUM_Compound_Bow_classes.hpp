@@ -13,15 +13,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Compound_Bow.Compound_Bow_C
-// 0x0018 (0x17B8 - 0x17A0)
+// 0x0018 (0x16C8 - 0x16B0)
 class ACompound_Bow_C : public AWeaponBow
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x17A0(0x0008) (Transient, DuplicateTransient)
-	float                                              SightHideAlpha;                                           // 0x17A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DrawWeightMin;                                            // 0x17AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DrawWeightMax;                                            // 0x17B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DrawWeightToSet;                                          // 0x17B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x16B0(0x0008) (Transient, DuplicateTransient)
+	float                                              SightHideAlpha;                                           // 0x16B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DrawWeightMin;                                            // 0x16BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DrawWeightMax;                                            // 0x16C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DrawWeightToSet;                                          // 0x16C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

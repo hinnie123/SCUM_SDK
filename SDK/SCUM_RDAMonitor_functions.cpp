@@ -12,16 +12,16 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function RDAMonitor.RDAMonitor_C.ShouldAlarmBeOn
+// Function RDAMonitor.RDAMonitor_C.shouldAlarmBeOn
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                           ShouldAlarmBeOn                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           shouldAlarmBeOn                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void URDAMonitor_C::ShouldAlarmBeOn(bool* ShouldAlarmBeOn)
+void URDAMonitor_C::shouldAlarmBeOn(bool* shouldAlarmBeOn)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RDAMonitor.RDAMonitor_C.ShouldAlarmBeOn");
+	static auto fn = UObject::FindObject<UFunction>("Function RDAMonitor.RDAMonitor_C.shouldAlarmBeOn");
 
-	URDAMonitor_C_ShouldAlarmBeOn_Params fn_params;
+	URDAMonitor_C_shouldAlarmBeOn_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -29,8 +29,8 @@ void URDAMonitor_C::ShouldAlarmBeOn(bool* ShouldAlarmBeOn)
 
 	fn->FunctionFlags = flags;
 
-	if (ShouldAlarmBeOn != nullptr)
-		*ShouldAlarmBeOn = fn_params.ShouldAlarmBeOn;
+	if (shouldAlarmBeOn != nullptr)
+		*shouldAlarmBeOn = fn_params.shouldAlarmBeOn;
 }
 
 

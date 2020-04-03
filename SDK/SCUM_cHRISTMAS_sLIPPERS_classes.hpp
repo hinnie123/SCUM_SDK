@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass cHRISTMAS_sLIPPERS.Christmas_Slippers_C
-// 0x0000 (0x08F8 - 0x08F8)
+// 0x0000 (0x0898 - 0x0898)
 class AChristmas_Slippers_C : public AClothesItem
 {
 public:

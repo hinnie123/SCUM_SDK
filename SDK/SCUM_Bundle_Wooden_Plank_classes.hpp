@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bundle_Wooden_Plank.Bundle_Wooden_Plank_C
-// 0x0000 (0x0858 - 0x0858)
+// 0x0000 (0x07F8 - 0x07F8)
 class ABundle_Wooden_Plank_C : public AEquipmentItem
 {
 public:

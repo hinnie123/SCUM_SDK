@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass 12_Gauge.12_Gauge_C
-// 0x0000 (0x0858 - 0x0858)
+// 0x0000 (0x07F0 - 0x07F0)
 class A12_Gauge_C : public AAmmunitionItem
 {
 public:

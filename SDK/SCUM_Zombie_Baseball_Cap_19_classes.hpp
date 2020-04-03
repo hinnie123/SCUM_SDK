@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Zombie_Baseball_Cap_19.Zombie_Baseball_Cap_18_C
-// 0x0000 (0x08F8 - 0x08F8)
+// 0x0000 (0x0898 - 0x0898)
 class AZombie_Baseball_Cap_18_C : public AClothesItem
 {
 public:

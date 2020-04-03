@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TakeInHandsMelee1H.BP_TakeInHandsMelee1H_C
-// 0x0000 (0x0088 - 0x0088)
+// 0x0000 (0x0078 - 0x0078)
 class UBP_TakeInHandsMelee1H_C : public UTakeInHandsAssetData
 {
 public:

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeaponScope_HuntingScope.WeaponScope_HuntingScope_C
-// 0x0000 (0x0978 - 0x0978)
+// 0x0000 (0x0908 - 0x0908)
 class AWeaponScope_HuntingScope_C : public AWeaponAttachmentScope
 {
 public:

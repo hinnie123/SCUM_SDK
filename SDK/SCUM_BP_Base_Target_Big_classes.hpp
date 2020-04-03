@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Base_Target_Big.BP_Base_Target_Big_C
-// 0x0000 (0x0710 - 0x0710)
+// 0x0000 (0x06B0 - 0x06B0)
 class UBP_Base_Target_Big_C : public UBaseBuildingComponent
 {
 public:

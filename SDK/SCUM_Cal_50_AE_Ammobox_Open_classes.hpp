@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Cal_50_AE_Ammobox_Open.Cal_50_AE_Ammobox_Open_C
-// 0x0000 (0x0858 - 0x0858)
+// 0x0000 (0x07F8 - 0x07F8)
 class ACal_50_AE_Ammobox_Open_C : public AAmmunitionBoxItem
 {
 public:

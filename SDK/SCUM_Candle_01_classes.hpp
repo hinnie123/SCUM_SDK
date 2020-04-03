@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Candle_01.Candle_01_C
-// 0x0008 (0x08C8 - 0x08C0)
+// 0x0008 (0x0868 - 0x0860)
 class ACandle_01_C : public AFireItem
 {
 public:
-	class UPointLightComponent*                        PointLight;                                               // 0x08C0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UPointLightComponent*                        PointLight;                                               // 0x0860(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

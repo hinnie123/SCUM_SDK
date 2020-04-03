@@ -41,7 +41,7 @@ public:
 
 	void BindKey(const struct FKey& Key);
 	struct FEventReply OnMouseButtonDown_1(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-	void Init(const struct FKey& Key, bool Shift, bool Ctrl, bool Alt);
+	void Init(const struct FKey& Key);
 	void OnSynchronizeProperties();
 	void OnDeselected();
 	void ExecuteUbergraph_UI_KeyBinding(int EntryPoint);

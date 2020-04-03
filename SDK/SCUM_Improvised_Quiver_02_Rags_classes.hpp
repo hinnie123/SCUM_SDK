@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Improvised_Quiver_02_Rags.Improvised_Quiver_02_Rags_C
-// 0x0000 (0x0938 - 0x0938)
+// 0x0000 (0x08D8 - 0x08D8)
 class AImprovised_Quiver_02_Rags_C : public AQuiver
 {
 public:

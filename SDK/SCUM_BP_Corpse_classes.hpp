@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Corpse.BP_Corpse_C
-// 0x0008 (0x0508 - 0x0500)
+// 0x0008 (0x04F8 - 0x04F0)
 class ABP_Corpse_C : public ACorpse
 {
 public:
-	class AActor*                                      CloneSource;                                              // 0x0500(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
+	class AActor*                                      CloneSource;                                              // 0x04F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

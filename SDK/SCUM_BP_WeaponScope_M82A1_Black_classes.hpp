@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WeaponScope_M82A1_Black.BP_WeaponScope_M82A1_Black_C
-// 0x0000 (0x0978 - 0x0978)
+// 0x0000 (0x0908 - 0x0908)
 class ABP_WeaponScope_M82A1_Black_C : public AWeaponAttachmentScope
 {
 public:

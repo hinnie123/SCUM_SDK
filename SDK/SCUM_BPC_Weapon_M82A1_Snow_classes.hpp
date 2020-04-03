@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BPC_Weapon_M82A1_Snow.BPC_Weapon_M82A1_Snow_C
-// 0x0000 (0x1368 - 0x1368)
+// 0x0000 (0x1278 - 0x1278)
 class ABPC_Weapon_M82A1_Snow_C : public ABP_Weapon_M82A1_C
 {
 public:

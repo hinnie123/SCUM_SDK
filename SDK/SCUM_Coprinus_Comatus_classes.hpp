@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Coprinus_Comatus.Coprinus_Comatus_C
-// 0x0000 (0x0980 - 0x0980)
+// 0x0000 (0x0928 - 0x0928)
 class ACoprinus_Comatus_C : public AFoodItem
 {
 public:

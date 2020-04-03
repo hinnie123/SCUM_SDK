@@ -202,23 +202,6 @@ void UUI_TabModeTabsContainer_C::BndEvt__JournalTab_K2Node_ComponentBoundEvent_4
 }
 
 
-// Function UI_TabModeTabsContainer.UI_TabModeTabsContainer_C.BndEvt__SquadTab_K2Node_ComponentBoundEvent_5_Clicked__DelegateSignature
-// (BlueprintEvent)
-
-void UUI_TabModeTabsContainer_C::BndEvt__SquadTab_K2Node_ComponentBoundEvent_5_Clicked__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UI_TabModeTabsContainer.UI_TabModeTabsContainer_C.BndEvt__SquadTab_K2Node_ComponentBoundEvent_5_Clicked__DelegateSignature");
-
-	UUI_TabModeTabsContainer_C_BndEvt__SquadTab_K2Node_ComponentBoundEvent_5_Clicked__DelegateSignature_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function UI_TabModeTabsContainer.UI_TabModeTabsContainer_C.ExecuteUbergraph_UI_TabModeTabsContainer
 // ()
 // Parameters:

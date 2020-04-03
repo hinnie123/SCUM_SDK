@@ -12,16 +12,16 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BCU_Body_Monitor.BCU_Body_Monitor_C.ShouldAlarmBeOn
+// Function BCU_Body_Monitor.BCU_Body_Monitor_C.shouldAlarmBeOn
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                           ShouldAlarmBeOn                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           shouldAlarmBeOn                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBCU_Body_Monitor_C::ShouldAlarmBeOn(bool* ShouldAlarmBeOn)
+void UBCU_Body_Monitor_C::shouldAlarmBeOn(bool* shouldAlarmBeOn)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.ShouldAlarmBeOn");
+	static auto fn = UObject::FindObject<UFunction>("Function BCU_Body_Monitor.BCU_Body_Monitor_C.shouldAlarmBeOn");
 
-	UBCU_Body_Monitor_C_ShouldAlarmBeOn_Params fn_params;
+	UBCU_Body_Monitor_C_shouldAlarmBeOn_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -29,8 +29,8 @@ void UBCU_Body_Monitor_C::ShouldAlarmBeOn(bool* ShouldAlarmBeOn)
 
 	fn->FunctionFlags = flags;
 
-	if (ShouldAlarmBeOn != nullptr)
-		*ShouldAlarmBeOn = fn_params.ShouldAlarmBeOn;
+	if (shouldAlarmBeOn != nullptr)
+		*shouldAlarmBeOn = fn_params.shouldAlarmBeOn;
 }
 
 

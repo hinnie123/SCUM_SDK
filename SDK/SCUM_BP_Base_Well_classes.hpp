@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Base_Well.BP_Base_Well_C
-// 0x0000 (0x0710 - 0x0710)
+// 0x0000 (0x06B0 - 0x06B0)
 class UBP_Base_Well_C : public UBaseBuildingComponent
 {
 public:

@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CTFGameEvent.BP_CTFGameEvent_C
-// 0x0008 (0x07B0 - 0x07A8)
+// 0x0008 (0x07A0 - 0x0798)
 class ABP_CTFGameEvent_C : public ACTFGameEvent
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x07A8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0798(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

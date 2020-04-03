@@ -37,7 +37,7 @@ struct FMovieSceneGeometryCacheSectionTemplateParameters : public FMovieSceneGeo
 // 0x0038 (0x0058 - 0x0020)
 struct FMovieSceneGeometryCacheSectionTemplate : public FMovieSceneEvalTemplate
 {
-	struct FMovieSceneGeometryCacheSectionTemplateParameters Params;                                                   // 0x0020(0x0038)
+	struct FMovieSceneGeometryCacheSectionTemplateParameters params;                                                   // 0x0020(0x0038)
 };
 
 }

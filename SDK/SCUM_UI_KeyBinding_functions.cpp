@@ -61,19 +61,13 @@ struct FEventReply UUI_KeyBinding_C::OnMouseButtonDown_1(const struct FGeometry&
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
-// bool                           Shift                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Ctrl                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Alt                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_KeyBinding_C::Init(const struct FKey& Key, bool Shift, bool Ctrl, bool Alt)
+void UUI_KeyBinding_C::Init(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_KeyBinding.UI_KeyBinding_C.Init");
 
 	UUI_KeyBinding_C_Init_Params fn_params;
 	fn_params.Key = Key;
-	fn_params.Shift = Shift;
-	fn_params.Ctrl = Ctrl;
-	fn_params.Alt = Alt;
 
 	auto flags = fn->FunctionFlags;
 

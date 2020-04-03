@@ -46,7 +46,7 @@ public:
 	void UpdateInfo(bool* loadoutMenu);
 	void BndEvt__Button_0_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature();
 	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
-	void EnableRespawnOption(ERespawnOption* option);
+	void EnableRespawnOption(ERespawnOption* Option);
 	void ExecuteUbergraph_UI_SpawnScreenWidget(int EntryPoint);
 };
 

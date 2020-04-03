@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BowSilencer.BP_BowSilencer_C
-// 0x0000 (0x0868 - 0x0868)
+// 0x0000 (0x07F8 - 0x07F8)
 class ABP_BowSilencer_C : public ABowAttachmentSilencer
 {
 public:

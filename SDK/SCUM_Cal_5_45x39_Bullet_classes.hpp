@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Cal_5_45x39_Bullet.Cal_5_45x39_Bullet_C
-// 0x0000 (0x0858 - 0x0858)
+// 0x0000 (0x07F0 - 0x07F0)
 class ACal_5_45x39_Bullet_C : public AAmmunitionItem
 {
 public:

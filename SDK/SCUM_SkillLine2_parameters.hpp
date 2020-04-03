@@ -39,7 +39,7 @@ struct USkillLine2_C_SkilLevelToMaxSkillValueText_Params
 // Function SkillLine2.SkillLine2_C.SetSkillValueText
 struct USkillLine2_C_SetSkillValueText_Params
 {
-	struct FText                                       valueText;                                                // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText                                       ValueText;                                                // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function SkillLine2.SkillLine2_C.UpdateSkill

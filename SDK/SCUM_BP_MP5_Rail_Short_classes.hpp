@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MP5_Rail_Short.BP_MP5_Rail_Short_C
-// 0x0000 (0x0868 - 0x0868)
+// 0x0000 (0x07F8 - 0x07F8)
 class ABP_MP5_Rail_Short_C : public AWeaponAttachmentScopeRail
 {
 public:

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Painkillers_01.Painkillers_01_C
-// 0x0000 (0x0848 - 0x0848)
+// 0x0000 (0x07E8 - 0x07E8)
 class APainkillers_01_C : public AMedicationItem
 {
 public:

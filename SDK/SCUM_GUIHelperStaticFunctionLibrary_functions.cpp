@@ -71,16 +71,16 @@ void UGUIHelperStaticFunctionLibrary_C::STATIC_LinearCoordinatesToString(const s
 // Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.HealthToString
 // (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// float                          health                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Health                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 healthString                   (Parm, OutParm, ZeroConstructor)
 
-void UGUIHelperStaticFunctionLibrary_C::STATIC_HealthToString(float health, class UObject* __WorldContext, struct FString* healthString)
+void UGUIHelperStaticFunctionLibrary_C::STATIC_HealthToString(float Health, class UObject* __WorldContext, struct FString* healthString)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.HealthToString");
 
 	UGUIHelperStaticFunctionLibrary_C_HealthToString_Params fn_params;
-	fn_params.health = health;
+	fn_params.Health = Health;
 	fn_params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;

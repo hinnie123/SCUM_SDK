@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WeaponFlashHider.BP_WeaponFlashHider_C
-// 0x0000 (0x0870 - 0x0870)
+// 0x0000 (0x0800 - 0x0800)
 class ABP_WeaponFlashHider_C : public AWeaponAttachmentSuppressor
 {
 public:

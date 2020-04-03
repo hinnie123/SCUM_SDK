@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bear_Improvised_Pants.Bear_Improvised_Pants_C
-// 0x0000 (0x08F8 - 0x08F8)
+// 0x0000 (0x0898 - 0x0898)
 class ABear_Improvised_Pants_C : public AClothesItem
 {
 public:

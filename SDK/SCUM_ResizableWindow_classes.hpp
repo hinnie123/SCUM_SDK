@@ -89,7 +89,7 @@ public:
 	bool                                               _shouldRefreshSize;                                       // 0x0598(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData09[0x7];                                       // 0x0599(0x0007) MISSED OFFSET
 	struct FScriptMulticastDelegate                    OnHeaderDoubleClickDispatcher;                            // 0x05A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	class UHUD_C*                                      ParentHUD;                                                // 0x05B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UHUD_C*                                      parentHUD;                                                // 0x05B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -100,11 +100,11 @@ public:
 
 	void InitializeHUDMonitor(const struct FString& displayLabelName, bool footerV2Activity, bool enableResizability, const struct FText& titleToSet, class UHUD_C* parentHUDRef);
 	void SaveHUDLayout();
-	void GetParentHUD(class UHUD_C** ParentHUD);
-	void SetParentHUD(class UHUD_C* ParentHUD);
+	void GetParentHUD(class UHUD_C** parentHUD);
+	void SetParentHUD(class UHUD_C* parentHUD);
 	struct FVector2D GetSize();
 	struct FVector2D GetPosition();
-	void AdjustPosition(const struct FVector2D& positionToAdjust, const struct FGeometry& localGeometry, struct FVector2D* Output);
+	void adjustPosition(const struct FVector2D& positionToAdjust, const struct FGeometry& localGeometry, struct FVector2D* Output);
 	void MaximizeMinimizableWidgets();
 	bool HasAnyChildren(class UPanelWidget* PanelWidget);
 	struct FEventReply OnHeaderDoubleClick(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);

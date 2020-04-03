@@ -14,8 +14,8 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Minerals.Minerals_C.ShouldAlarmBeOn
-struct UMinerals_C_ShouldAlarmBeOn_Params
+// Function Minerals.Minerals_C.shouldAlarmBeOn
+struct UMinerals_C_shouldAlarmBeOn_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };

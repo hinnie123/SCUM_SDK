@@ -27,7 +27,7 @@ public:
 
 	void STATIC_ShowErrorDialog(const struct FText& Message, class UCanvasPanel* Canvas, class UWidget* widgetToDisable, class UObject* __WorldContext, class UUI_ErrorMessage_C** messageWidget);
 	void STATIC_LinearCoordinatesToString(const struct FVector& Coordinates, class UObject* __WorldContext, struct FString* coordinatesString);
-	void STATIC_HealthToString(float health, class UObject* __WorldContext, struct FString* healthString);
+	void STATIC_HealthToString(float Health, class UObject* __WorldContext, struct FString* healthString);
 	void STATIC_ValueToDescriptionString(const struct FString& preLabel, float Value, const struct FString& postLabel, class UObject* __WorldContext, struct FString* descriptionString);
 	void STATIC_ValueToString(float Value, class UObject* __WorldContext, struct FString* ValueString);
 	void STATIC_LinearVectorDistanceToString(const struct FVector& Acceleration, class UObject* __WorldContext, struct FString* accelerationString);

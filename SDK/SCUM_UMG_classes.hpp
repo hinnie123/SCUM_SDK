@@ -125,7 +125,7 @@ public:
 class UPanelWidget : public UWidget
 {
 public:
-	TArray<class UPanelSlot*>                          slots;                                                    // 0x0100(0x0010) (ExportObject, ZeroConstructor)
+	TArray<class UPanelSlot*>                          Slots;                                                    // 0x0100(0x0010) (ExportObject, ZeroConstructor)
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0110(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -341,69 +341,6 @@ public:
 	struct FText GetText();
 	class UMaterialInstanceDynamic* GetDynamicOutlineMaterial();
 	class UMaterialInstanceDynamic* GetDynamicFontMaterial();
-};
-
-
-// Class UMG.WidgetSwitcher
-// 0x0018 (0x0130 - 0x0118)
-class UWidgetSwitcher : public UPanelWidget
-{
-public:
-	int                                                ActiveWidgetIndex;                                        // 0x0118(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x14];                                      // 0x011C(0x0014) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class UMG.WidgetSwitcher");
-		return ptr;
-	}
-
-
-	void SetActiveWidgetIndex(int Index);
-	void SetActiveWidget(class UWidget* Widget);
-	class UWidget* GetWidgetAtIndex(int Index);
-	int GetNumWidgets();
-	int GetActiveWidgetIndex();
-	class UWidget* GetActiveWidget();
-};
-
-
-// Class UMG.RichTextBlock
-// 0x0240 (0x0360 - 0x0120)
-class URichTextBlock : public UTextLayoutWidget
-{
-public:
-	struct FText                                       Text;                                                     // 0x0120(0x0018) (Edit)
-	class UDataTable*                                  TextStyleSet;                                             // 0x0138(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<class UClass*>                              DecoratorClasses;                                         // 0x0140(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x1F0];                                     // 0x0150(0x01F0) MISSED OFFSET
-	TArray<class URichTextBlockDecorator*>             InstanceDecorators;                                       // 0x0340(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0350(0x0010) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class UMG.RichTextBlock");
-		return ptr;
-	}
-
-
-	void SetText(const struct FText& InText);
-	class URichTextBlockDecorator* GetDecoratorByClass(class UClass* DecoratorClass);
-};
-
-
-// Class UMG.RichTextBlockDecorator
-// 0x0000 (0x0028 - 0x0028)
-class URichTextBlockDecorator : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class UMG.RichTextBlockDecorator");
-		return ptr;
-	}
-
 };
 
 
@@ -896,18 +833,18 @@ public:
 	}
 
 
-	void SetSelectedOption(const struct FString& option);
-	bool RemoveOption(const struct FString& option);
+	void SetSelectedOption(const struct FString& Option);
+	bool RemoveOption(const struct FString& Option);
 	void RefreshOptions();
 	void OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
 	void OnOpeningEvent__DelegateSignature();
 	struct FString GetSelectedOption();
 	int GetOptionCount();
 	struct FString GetOptionAtIndex(int Index);
-	int FindOptionIndex(const struct FString& option);
+	int FindOptionIndex(const struct FString& Option);
 	void ClearSelection();
 	void ClearOptions();
-	void AddOption(const struct FString& option);
+	void AddOption(const struct FString& Option);
 };
 
 
@@ -1858,6 +1795,45 @@ public:
 };
 
 
+// Class UMG.RichTextBlock
+// 0x0240 (0x0360 - 0x0120)
+class URichTextBlock : public UTextLayoutWidget
+{
+public:
+	struct FText                                       Text;                                                     // 0x0120(0x0018) (Edit)
+	class UDataTable*                                  TextStyleSet;                                             // 0x0138(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<class UClass*>                              DecoratorClasses;                                         // 0x0140(0x0010) (Edit, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x1F0];                                     // 0x0150(0x01F0) MISSED OFFSET
+	TArray<class URichTextBlockDecorator*>             InstanceDecorators;                                       // 0x0340(0x0010) (ZeroConstructor, Transient)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0350(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class UMG.RichTextBlock");
+		return ptr;
+	}
+
+
+	void SetText(const struct FText& InText);
+	class URichTextBlockDecorator* GetDecoratorByClass(class UClass* DecoratorClass);
+};
+
+
+// Class UMG.RichTextBlockDecorator
+// 0x0000 (0x0028 - 0x0028)
+class URichTextBlockDecorator : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class UMG.RichTextBlockDecorator");
+		return ptr;
+	}
+
+};
+
+
 // Class UMG.RichTextBlockImageDecorator
 // 0x0008 (0x0030 - 0x0028)
 class URichTextBlockImageDecorator : public URichTextBlockDecorator
@@ -2027,7 +2003,6 @@ public:
 	void SetScrollBarVisibility(ESlateVisibility NewScrollBarVisibility);
 	void SetScrollbarThickness(const struct FVector2D& NewScrollbarThickness);
 	void SetOrientation(TEnumAsByte<EOrientation> NewOrientation);
-	void SetConsumeMouseWheel(EConsumeMouseWheel NewConsumeMouseWheel);
 	void SetAlwaysShowScrollbar(bool NewAlwaysShowScrollbar);
 	void SetAllowOverscroll(bool NewAllowOverscroll);
 	void ScrollWidgetIntoView(class UWidget* WidgetToFind, bool AnimateScroll, EDescendantScrollDestination ScrollDestination);
@@ -2859,6 +2834,30 @@ public:
 		return ptr;
 	}
 
+};
+
+
+// Class UMG.WidgetSwitcher
+// 0x0018 (0x0130 - 0x0118)
+class UWidgetSwitcher : public UPanelWidget
+{
+public:
+	int                                                ActiveWidgetIndex;                                        // 0x0118(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x14];                                      // 0x011C(0x0014) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class UMG.WidgetSwitcher");
+		return ptr;
+	}
+
+
+	void SetActiveWidgetIndex(int Index);
+	void SetActiveWidget(class UWidget* Widget);
+	class UWidget* GetWidgetAtIndex(int Index);
+	int GetNumWidgets();
+	int GetActiveWidgetIndex();
+	class UWidget* GetActiveWidget();
 };
 
 

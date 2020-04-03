@@ -39,7 +39,7 @@ public:
 	}
 
 
-	void ShouldAlarmBeOn(bool* ShouldAlarmBeOn);
+	void shouldAlarmBeOn(bool* shouldAlarmBeOn);
 	void GetContentSize(struct FVector2D* contentSize);
 	void SetPrisonerToMonitorOnChildren();
 	void Init();

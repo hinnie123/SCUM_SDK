@@ -15,9 +15,9 @@ namespace SDK
 // Function UI_VitalsMonitor.UI_VitalsMonitor_C.GetOxygenSaturationExtremesText
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   oxygenSaturationExtremes       (Parm, OutParm)
+// struct FText                   OxygenSaturationExtremes       (Parm, OutParm)
 
-void UUI_VitalsMonitor_C::GetOxygenSaturationExtremesText(struct FText* oxygenSaturationExtremes)
+void UUI_VitalsMonitor_C::GetOxygenSaturationExtremesText(struct FText* OxygenSaturationExtremes)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_VitalsMonitor.UI_VitalsMonitor_C.GetOxygenSaturationExtremesText");
 
@@ -29,8 +29,8 @@ void UUI_VitalsMonitor_C::GetOxygenSaturationExtremesText(struct FText* oxygenSa
 
 	fn->FunctionFlags = flags;
 
-	if (oxygenSaturationExtremes != nullptr)
-		*oxygenSaturationExtremes = fn_params.oxygenSaturationExtremes;
+	if (OxygenSaturationExtremes != nullptr)
+		*OxygenSaturationExtremes = fn_params.OxygenSaturationExtremes;
 }
 
 

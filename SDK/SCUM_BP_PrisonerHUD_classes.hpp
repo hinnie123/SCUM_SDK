@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PrisonerHUD.BP_PrisonerHUD_C
-// 0x0008 (0x0550 - 0x0548)
+// 0x0008 (0x0538 - 0x0530)
 class ABP_PrisonerHUD_C : public APrisonerHUD
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0548(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0530(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -17,7 +17,7 @@ namespace SDK
 // Function UI_BCUNutritionMonitor.UI_BCUNutritionMonitor_C.CheckIfNutritionPercentageIsSatisfying
 struct UUI_BCUNutritionMonitor_C_CheckIfNutritionPercentageIsSatisfying_Params
 {
-	float                                              Percentage;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              percentage;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              satisfying;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

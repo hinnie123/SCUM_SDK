@@ -39,7 +39,7 @@ public:
 
 
 	void SetParentsForChildren();
-	void ShouldAlarmBeOn(bool* ShouldAlarmBeOn);
+	void shouldAlarmBeOn(bool* shouldAlarmBeOn);
 	void UpdateParameterLines();
 	void SetPrisonerToMonitor(class APrisoner** Prisoner, bool* Success);
 	void SetDefaultTitle(const struct FText& defaultTitle);

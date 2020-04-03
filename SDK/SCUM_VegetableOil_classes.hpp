@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass VegetableOil.VegetableOil_C
-// 0x0000 (0x0988 - 0x0988)
+// 0x0000 (0x0930 - 0x0930)
 class AVegetableOil_C : public ADrinkItem
 {
 public:

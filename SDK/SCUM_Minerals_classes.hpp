@@ -39,7 +39,7 @@ public:
 	}
 
 
-	bool ShouldAlarmBeOn();
+	bool shouldAlarmBeOn();
 	void SetParentsForChildren();
 	void Update();
 	void SetPrisonerToMonitor(class APrisoner** Prisoner, bool* Success);

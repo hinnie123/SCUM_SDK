@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bundle_Of_Stone_Tips.Bundle_Of_Stone_Tips_C
-// 0x0000 (0x0858 - 0x0858)
+// 0x0000 (0x07F8 - 0x07F8)
 class ABundle_Of_Stone_Tips_C : public AEquipmentItem
 {
 public:

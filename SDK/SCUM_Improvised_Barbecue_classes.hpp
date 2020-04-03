@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Improvised_Barbecue.Improvised_Barbecue_C
-// 0x0008 (0x0848 - 0x0840)
+// 0x0008 (0x07E8 - 0x07E0)
 class AImprovised_Barbecue_C : public AItem
 {
 public:
-	class UStaticMeshComponent*                        SM_Improvised_Barbecue_01;                                // 0x0840(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        SM_Improvised_Barbecue_01;                                // 0x07E0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -14,10 +14,10 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BCU_Body_Monitor.BCU_Body_Monitor_C.ShouldAlarmBeOn
-struct UBCU_Body_Monitor_C_ShouldAlarmBeOn_Params
+// Function BCU_Body_Monitor.BCU_Body_Monitor_C.shouldAlarmBeOn
+struct UBCU_Body_Monitor_C_shouldAlarmBeOn_Params
 {
-	bool                                               ShouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               shouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BCU_Body_Monitor.BCU_Body_Monitor_C.GetContentSize

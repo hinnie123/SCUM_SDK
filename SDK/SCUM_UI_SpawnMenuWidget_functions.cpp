@@ -15,14 +15,14 @@ namespace SDK
 // Function UI_SpawnMenuWidget.UI_SpawnMenuWidget_C.EnableOption
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// ERespawnOption                 option                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ERespawnOption                 Option                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_SpawnMenuWidget_C::EnableOption(ERespawnOption option)
+void UUI_SpawnMenuWidget_C::EnableOption(ERespawnOption Option)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnMenuWidget.UI_SpawnMenuWidget_C.EnableOption");
 
 	UUI_SpawnMenuWidget_C_EnableOption_Params fn_params;
-	fn_params.option = option;
+	fn_params.Option = Option;
 
 	auto flags = fn->FunctionFlags;
 

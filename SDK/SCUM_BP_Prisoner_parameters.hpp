@@ -47,12 +47,6 @@ struct ABP_Prisoner_C_UserConstructionScript_Params
 {
 };
 
-// Function BP_Prisoner.BP_Prisoner_C.DrawFootstep
-struct ABP_Prisoner_C_DrawFootstep_Params
-{
-	bool                                               flip;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function BP_Prisoner.BP_Prisoner_C.InitTextMeshFromName
 struct ABP_Prisoner_C_InitTextMeshFromName_Params
 {
@@ -93,8 +87,19 @@ struct ABP_Prisoner_C_BndEvt__VoiceChat_K2Node_ComponentBoundEvent_1_VoiceChatSt
 {
 };
 
+// Function BP_Prisoner.BP_Prisoner_C.DrawFootstep
+struct ABP_Prisoner_C_DrawFootstep_Params
+{
+	bool                                               flip;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function BP_Prisoner.BP_Prisoner_C.UpdateHairVisuals
 struct ABP_Prisoner_C_UpdateHairVisuals_Params
+{
+};
+
+// Function BP_Prisoner.BP_Prisoner_C.ReceiveBeginPlay
+struct ABP_Prisoner_C_ReceiveBeginPlay_Params
 {
 };
 

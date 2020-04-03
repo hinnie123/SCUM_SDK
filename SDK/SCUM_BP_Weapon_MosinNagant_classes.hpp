@@ -13,14 +13,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Weapon_MosinNagant.BP_Weapon_MosinNagant_C
-// 0x0050 (0x13A0 - 0x1350)
+// 0x0050 (0x12B0 - 0x1260)
 class ABP_Weapon_MosinNagant_C : public AWeapon
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1350(0x0008) (Transient, DuplicateTransient)
-	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule;                              // 0x1358(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FWeaponReloadData                           FinalReloadData;                                          // 0x1360(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FWeaponReloadData                           NewVar_1;                                                 // 0x1380(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1260(0x0008) (Transient, DuplicateTransient)
+	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule;                              // 0x1268(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FWeaponReloadData                           FinalReloadData;                                          // 0x1270(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FWeaponReloadData                           NewVar_1;                                                 // 0x1290(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

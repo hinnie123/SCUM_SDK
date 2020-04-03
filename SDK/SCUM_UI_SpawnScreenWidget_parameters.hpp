@@ -78,7 +78,7 @@ struct UUI_SpawnScreenWidget_C_Tick_Params
 // Function UI_SpawnScreenWidget.UI_SpawnScreenWidget_C.EnableRespawnOption
 struct UUI_SpawnScreenWidget_C_EnableRespawnOption_Params
 {
-	ERespawnOption*                                    option;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ERespawnOption*                                    Option;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UI_SpawnScreenWidget.UI_SpawnScreenWidget_C.ExecuteUbergraph_UI_SpawnScreenWidget

@@ -14,34 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.CanReloadUsingData
-struct ABP_Weapon_M1_Garand_C_CanReloadUsingData_Params
-{
-	struct FWeaponReloadData*                          Data;                                                     // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.GetFiringMontage
-struct ABP_Weapon_M1_Garand_C_GetFiringMontage_Params
-{
-	bool*                                              isLastShot;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.UpdateReloadData
-struct ABP_Weapon_M1_Garand_C_UpdateReloadData_Params
-{
-	struct FWeaponReloadData                           reloadDataIn;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FWeaponReloadData                           reloadDataOut;                                            // (Parm, OutParm)
-};
-
-// Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.GetAmmoReloadCapacity
-struct ABP_Weapon_M1_Garand_C_GetAmmoReloadCapacity_Params
-{
-	class AAmmunitionItem**                            ammo;                                                     // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function BP_Weapon_M1_Garand.BP_Weapon_M1_Garand_C.CanSwitchFiringMode
 struct ABP_Weapon_M1_Garand_C_CanSwitchFiringMode_Params
 {

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Metal_Arrow.Metal_Arrow_C
-// 0x0000 (0x0878 - 0x0878)
+// 0x0000 (0x0810 - 0x0810)
 class AMetal_Arrow_C : public AAmmunitionArrow
 {
 public:

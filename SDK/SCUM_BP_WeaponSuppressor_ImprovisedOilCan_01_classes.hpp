@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WeaponSuppressor_ImprovisedOilCan_01.BP_WeaponSuppressor_ImprovisedOilCan_01_C
-// 0x0000 (0x0870 - 0x0870)
+// 0x0000 (0x0800 - 0x0800)
 class ABP_WeaponSuppressor_ImprovisedOilCan_01_C : public AWeaponAttachmentSuppressor
 {
 public:

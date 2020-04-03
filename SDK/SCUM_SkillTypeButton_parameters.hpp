@@ -72,7 +72,7 @@ struct USkillTypeButton_C_IncreaseSizeX_Params
 // Function SkillTypeButton.SkillTypeButton_C.SetOffset
 struct USkillTypeButton_C_SetOffset_Params
 {
-	float                                              OffsetX;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              offsetX;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function SkillTypeButton.SkillTypeButton_C.SetSkillTypeLevel

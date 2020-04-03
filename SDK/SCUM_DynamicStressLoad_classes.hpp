@@ -48,7 +48,7 @@ public:
 
 
 	void SetParentsForChildren();
-	void ShouldAlarmBeOn(bool* ShouldAlarmBeOn);
+	void shouldAlarmBeOn(bool* shouldAlarmBeOn);
 	void SetColorOfSelectedTextFields(const struct FLinearColor& color_SpecifiedColor);
 	void AdjustUnitsValues();
 	void AdjustTextColors();

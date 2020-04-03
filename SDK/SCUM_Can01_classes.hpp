@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Can01.Can01_C
-// 0x0000 (0x0988 - 0x0988)
+// 0x0000 (0x0930 - 0x0930)
 class ACan01_C : public ADrinkItem
 {
 public:

@@ -32,9 +32,6 @@ struct UUI_KeyBinding_C_OnMouseButtonDown_1_Params
 struct UUI_KeyBinding_C_Init_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                               Shift;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Ctrl;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Alt;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UI_KeyBinding.UI_KeyBinding_C.OnSynchronizeProperties

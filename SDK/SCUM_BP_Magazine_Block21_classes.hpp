@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Magazine_Block21.BP_Magazine_Block21_C
-// 0x0000 (0x0878 - 0x0878)
+// 0x0000 (0x0808 - 0x0808)
 class ABP_Magazine_Block21_C : public AWeaponAttachmentMagazine
 {
 public:

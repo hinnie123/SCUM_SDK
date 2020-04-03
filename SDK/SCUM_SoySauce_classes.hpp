@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SoySauce.SoySauce_C
-// 0x0000 (0x0988 - 0x0988)
+// 0x0000 (0x0930 - 0x0930)
 class ASoySauce_C : public ADrinkItem
 {
 public:

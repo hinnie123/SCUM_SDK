@@ -29,16 +29,16 @@ void UNutritions_C::SetParentsForChildren()
 }
 
 
-// Function Nutritions.Nutritions_C.ShouldAlarmBeOn
+// Function Nutritions.Nutritions_C.shouldAlarmBeOn
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                           ShouldAlarmBeOn                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           shouldAlarmBeOn                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UNutritions_C::ShouldAlarmBeOn(bool* ShouldAlarmBeOn)
+void UNutritions_C::shouldAlarmBeOn(bool* shouldAlarmBeOn)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.ShouldAlarmBeOn");
+	static auto fn = UObject::FindObject<UFunction>("Function Nutritions.Nutritions_C.shouldAlarmBeOn");
 
-	UNutritions_C_ShouldAlarmBeOn_Params fn_params;
+	UNutritions_C_shouldAlarmBeOn_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -46,8 +46,8 @@ void UNutritions_C::ShouldAlarmBeOn(bool* ShouldAlarmBeOn)
 
 	fn->FunctionFlags = flags;
 
-	if (ShouldAlarmBeOn != nullptr)
-		*ShouldAlarmBeOn = fn_params.ShouldAlarmBeOn;
+	if (shouldAlarmBeOn != nullptr)
+		*shouldAlarmBeOn = fn_params.shouldAlarmBeOn;
 }
 
 

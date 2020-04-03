@@ -12,16 +12,16 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function UI_YesNoMenuConfirmation.UI_YesNoMenuConfirmation_C.AdjustPosition
+// Function UI_YesNoMenuConfirmation.UI_YesNoMenuConfirmation_C.adjustPosition
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector2D               adjustment                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UUI_YesNoMenuConfirmation_C::AdjustPosition(const struct FVector2D& adjustment)
+void UUI_YesNoMenuConfirmation_C::adjustPosition(const struct FVector2D& adjustment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UI_YesNoMenuConfirmation.UI_YesNoMenuConfirmation_C.AdjustPosition");
+	static auto fn = UObject::FindObject<UFunction>("Function UI_YesNoMenuConfirmation.UI_YesNoMenuConfirmation_C.adjustPosition");
 
-	UUI_YesNoMenuConfirmation_C_AdjustPosition_Params fn_params;
+	UUI_YesNoMenuConfirmation_C_adjustPosition_Params fn_params;
 	fn_params.adjustment = adjustment;
 
 	auto flags = fn->FunctionFlags;

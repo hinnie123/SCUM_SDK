@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BPC_WeaponSuppressor_ImprovisedBottle_Grey.BPC_WeaponSuppressor_ImprovisedBottle_Grey_C
-// 0x0000 (0x0870 - 0x0870)
+// 0x0000 (0x0800 - 0x0800)
 class ABPC_WeaponSuppressor_ImprovisedBottle_Grey_C : public ABP_WeaponSuppressor_ImprovisedBottle_White_C
 {
 public:

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass GlassBottle04.GlassBottle04_C
-// 0x0000 (0x0988 - 0x0988)
+// 0x0000 (0x0930 - 0x0930)
 class AGlassBottle04_C : public ADrinkItem
 {
 public:

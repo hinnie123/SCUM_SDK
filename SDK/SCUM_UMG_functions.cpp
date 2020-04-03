@@ -3450,183 +3450,6 @@ class UMaterialInstanceDynamic* UTextBlock::GetDynamicFontMaterial()
 }
 
 
-// Function UMG.WidgetSwitcher.SetActiveWidgetIndex
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void UWidgetSwitcher::SetActiveWidgetIndex(int Index)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.SetActiveWidgetIndex");
-
-	UWidgetSwitcher_SetActiveWidgetIndex_Params fn_params;
-	fn_params.Index = Index;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.WidgetSwitcher.SetActiveWidget
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UWidget*                 Widget                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-void UWidgetSwitcher::SetActiveWidget(class UWidget* Widget)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.SetActiveWidget");
-
-	UWidgetSwitcher_SetActiveWidget_Params fn_params;
-	fn_params.Widget = Widget;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.WidgetSwitcher.GetWidgetAtIndex
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget*                 ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-
-class UWidget* UWidgetSwitcher::GetWidgetAtIndex(int Index)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.GetWidgetAtIndex");
-
-	UWidgetSwitcher_GetWidgetAtIndex_Params fn_params;
-	fn_params.Index = Index;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	return fn_params.ReturnValue;
-}
-
-
-// Function UMG.WidgetSwitcher.GetNumWidgets
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UWidgetSwitcher::GetNumWidgets()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.GetNumWidgets");
-
-	UWidgetSwitcher_GetNumWidgets_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	return fn_params.ReturnValue;
-}
-
-
-// Function UMG.WidgetSwitcher.GetActiveWidgetIndex
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UWidgetSwitcher::GetActiveWidgetIndex()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.GetActiveWidgetIndex");
-
-	UWidgetSwitcher_GetActiveWidgetIndex_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	return fn_params.ReturnValue;
-}
-
-
-// Function UMG.WidgetSwitcher.GetActiveWidget
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UWidget*                 ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-
-class UWidget* UWidgetSwitcher::GetActiveWidget()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.GetActiveWidget");
-
-	UWidgetSwitcher_GetActiveWidget_Params fn_params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	return fn_params.ReturnValue;
-}
-
-
-// Function UMG.RichTextBlock.SetText
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// struct FText                   InText                         (ConstParm, Parm, OutParm, ReferenceParm)
-
-void URichTextBlock::SetText(const struct FText& InText)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetText");
-
-	URichTextBlock_SetText_Params fn_params;
-	fn_params.InText = InText;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.RichTextBlock.GetDecoratorByClass
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UClass*                  DecoratorClass                 (Parm, ZeroConstructor, IsPlainOldData)
-// class URichTextBlockDecorator* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class URichTextBlockDecorator* URichTextBlock::GetDecoratorByClass(class UClass* DecoratorClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.GetDecoratorByClass");
-
-	URichTextBlock_GetDecoratorByClass_Params fn_params;
-	fn_params.DecoratorClass = DecoratorClass;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-
-	return fn_params.ReturnValue;
-}
-
-
 // Function UMG.AsyncTaskDownloadImage.DownloadImage
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -5061,14 +4884,14 @@ struct FLinearColor UColorBinding::GetLinearValue()
 // Function UMG.ComboBoxString.SetSelectedOption
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 option                         (Parm, ZeroConstructor)
+// struct FString                 Option                         (Parm, ZeroConstructor)
 
-void UComboBoxString::SetSelectedOption(const struct FString& option)
+void UComboBoxString::SetSelectedOption(const struct FString& Option)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.SetSelectedOption");
 
 	UComboBoxString_SetSelectedOption_Params fn_params;
-	fn_params.option = option;
+	fn_params.Option = Option;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -5082,15 +4905,15 @@ void UComboBoxString::SetSelectedOption(const struct FString& option)
 // Function UMG.ComboBoxString.RemoveOption
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 option                         (Parm, ZeroConstructor)
+// struct FString                 Option                         (Parm, ZeroConstructor)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UComboBoxString::RemoveOption(const struct FString& option)
+bool UComboBoxString::RemoveOption(const struct FString& Option)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.RemoveOption");
 
 	UComboBoxString_RemoveOption_Params fn_params;
-	fn_params.option = option;
+	fn_params.Option = Option;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -5231,15 +5054,15 @@ struct FString UComboBoxString::GetOptionAtIndex(int Index)
 // Function UMG.ComboBoxString.FindOptionIndex
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 option                         (Parm, ZeroConstructor)
+// struct FString                 Option                         (Parm, ZeroConstructor)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UComboBoxString::FindOptionIndex(const struct FString& option)
+int UComboBoxString::FindOptionIndex(const struct FString& Option)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.FindOptionIndex");
 
 	UComboBoxString_FindOptionIndex_Params fn_params;
-	fn_params.option = option;
+	fn_params.Option = Option;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -5291,14 +5114,14 @@ void UComboBoxString::ClearOptions()
 // Function UMG.ComboBoxString.AddOption
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 option                         (Parm, ZeroConstructor)
+// struct FString                 Option                         (Parm, ZeroConstructor)
 
-void UComboBoxString::AddOption(const struct FString& option)
+void UComboBoxString::AddOption(const struct FString& Option)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.AddOption");
 
 	UComboBoxString_AddOption_Params fn_params;
-	fn_params.option = option;
+	fn_params.Option = Option;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -8168,6 +7991,51 @@ class UMaterialInstanceDynamic* URetainerBox::GetEffectMaterial()
 }
 
 
+// Function UMG.RichTextBlock.SetText
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FText                   InText                         (ConstParm, Parm, OutParm, ReferenceParm)
+
+void URichTextBlock::SetText(const struct FText& InText)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.SetText");
+
+	URichTextBlock_SetText_Params fn_params;
+	fn_params.InText = InText;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.RichTextBlock.GetDecoratorByClass
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  DecoratorClass                 (Parm, ZeroConstructor, IsPlainOldData)
+// class URichTextBlockDecorator* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class URichTextBlockDecorator* URichTextBlock::GetDecoratorByClass(class UClass* DecoratorClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.RichTextBlock.GetDecoratorByClass");
+
+	URichTextBlock_GetDecoratorByClass_Params fn_params;
+	fn_params.DecoratorClass = DecoratorClass;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
 // Function UMG.SafeZone.SetSidesToPad
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -8439,27 +8307,6 @@ void UScrollBox::SetOrientation(TEnumAsByte<EOrientation> NewOrientation)
 
 	UScrollBox_SetOrientation_Params fn_params;
 	fn_params.NewOrientation = NewOrientation;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.ScrollBox.SetConsumeMouseWheel
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// EConsumeMouseWheel             NewConsumeMouseWheel           (Parm, ZeroConstructor, IsPlainOldData)
-
-void UScrollBox::SetConsumeMouseWheel(EConsumeMouseWheel NewConsumeMouseWheel)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.SetConsumeMouseWheel");
-
-	UScrollBox_SetConsumeMouseWheel_Params fn_params;
-	fn_params.NewConsumeMouseWheel = NewConsumeMouseWheel;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -12932,6 +12779,138 @@ struct FVector2D UWidgetLayoutLibrary::STATIC_GetMousePositionOnPlatform()
 	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.GetMousePositionOnPlatform");
 
 	UWidgetLayoutLibrary_GetMousePositionOnPlatform_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
+// Function UMG.WidgetSwitcher.SetActiveWidgetIndex
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UWidgetSwitcher::SetActiveWidgetIndex(int Index)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.SetActiveWidgetIndex");
+
+	UWidgetSwitcher_SetActiveWidgetIndex_Params fn_params;
+	fn_params.Index = Index;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.WidgetSwitcher.SetActiveWidget
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UWidget*                 Widget                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UWidgetSwitcher::SetActiveWidget(class UWidget* Widget)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.SetActiveWidget");
+
+	UWidgetSwitcher_SetActiveWidget_Params fn_params;
+	fn_params.Widget = Widget;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.WidgetSwitcher.GetWidgetAtIndex
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget*                 ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UWidget* UWidgetSwitcher::GetWidgetAtIndex(int Index)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.GetWidgetAtIndex");
+
+	UWidgetSwitcher_GetWidgetAtIndex_Params fn_params;
+	fn_params.Index = Index;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
+// Function UMG.WidgetSwitcher.GetNumWidgets
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UWidgetSwitcher::GetNumWidgets()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.GetNumWidgets");
+
+	UWidgetSwitcher_GetNumWidgets_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
+// Function UMG.WidgetSwitcher.GetActiveWidgetIndex
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UWidgetSwitcher::GetActiveWidgetIndex()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.GetActiveWidgetIndex");
+
+	UWidgetSwitcher_GetActiveWidgetIndex_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+
+	return fn_params.ReturnValue;
+}
+
+
+// Function UMG.WidgetSwitcher.GetActiveWidget
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UWidget*                 ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UWidget* UWidgetSwitcher::GetActiveWidget()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.GetActiveWidget");
+
+	UWidgetSwitcher_GetActiveWidget_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

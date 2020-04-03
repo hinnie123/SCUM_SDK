@@ -4779,17 +4779,17 @@ bool UPawnActionsComponent::K2_PushAction(class UPawnAction* newAction, TEnumAsB
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class APawn*                   Pawn                           (Parm, ZeroConstructor, IsPlainOldData)
-// class UPawnAction*             Action                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UPawnAction*             action                         (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EAIRequestPriority> Priority                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UPawnActionsComponent::STATIC_K2_PerformAction(class APawn* Pawn, class UPawnAction* Action, TEnumAsByte<EAIRequestPriority> Priority)
+bool UPawnActionsComponent::STATIC_K2_PerformAction(class APawn* Pawn, class UPawnAction* action, TEnumAsByte<EAIRequestPriority> Priority)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AIModule.PawnActionsComponent.K2_PerformAction");
 
 	UPawnActionsComponent_K2_PerformAction_Params fn_params;
 	fn_params.Pawn = Pawn;
-	fn_params.Action = Action;
+	fn_params.action = action;
 	fn_params.Priority = Priority;
 
 	auto flags = fn->FunctionFlags;

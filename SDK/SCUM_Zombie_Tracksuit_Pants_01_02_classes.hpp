@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Zombie_Tracksuit_Pants_01_02.Zombie_Tracksuit_Pants_01_02_C
-// 0x0000 (0x08F8 - 0x08F8)
+// 0x0000 (0x0898 - 0x0898)
 class AZombie_Tracksuit_Pants_01_02_C : public AClothesItem
 {
 public:

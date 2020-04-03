@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Carbon_Electrodes.Carbon_Electrodes_C
-// 0x0000 (0x0858 - 0x0858)
+// 0x0000 (0x07F8 - 0x07F8)
 class ACarbon_Electrodes_C : public AEquipmentItem
 {
 public:

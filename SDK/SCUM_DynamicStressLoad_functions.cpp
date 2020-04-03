@@ -29,16 +29,16 @@ void UDynamicStressLoad_C::SetParentsForChildren()
 }
 
 
-// Function DynamicStressLoad.DynamicStressLoad_C.ShouldAlarmBeOn
+// Function DynamicStressLoad.DynamicStressLoad_C.shouldAlarmBeOn
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                           ShouldAlarmBeOn                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           shouldAlarmBeOn                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UDynamicStressLoad_C::ShouldAlarmBeOn(bool* ShouldAlarmBeOn)
+void UDynamicStressLoad_C::shouldAlarmBeOn(bool* shouldAlarmBeOn)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function DynamicStressLoad.DynamicStressLoad_C.ShouldAlarmBeOn");
+	static auto fn = UObject::FindObject<UFunction>("Function DynamicStressLoad.DynamicStressLoad_C.shouldAlarmBeOn");
 
-	UDynamicStressLoad_C_ShouldAlarmBeOn_Params fn_params;
+	UDynamicStressLoad_C_shouldAlarmBeOn_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -46,8 +46,8 @@ void UDynamicStressLoad_C::ShouldAlarmBeOn(bool* ShouldAlarmBeOn)
 
 	fn->FunctionFlags = flags;
 
-	if (ShouldAlarmBeOn != nullptr)
-		*ShouldAlarmBeOn = fn_params.ShouldAlarmBeOn;
+	if (shouldAlarmBeOn != nullptr)
+		*shouldAlarmBeOn = fn_params.shouldAlarmBeOn;
 }
 
 

@@ -223,14 +223,14 @@ void UUI_SpawnScreenWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaT
 // Function UI_SpawnScreenWidget.UI_SpawnScreenWidget_C.EnableRespawnOption
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// ERespawnOption*                option                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ERespawnOption*                Option                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_SpawnScreenWidget_C::EnableRespawnOption(ERespawnOption* option)
+void UUI_SpawnScreenWidget_C::EnableRespawnOption(ERespawnOption* Option)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnScreenWidget.UI_SpawnScreenWidget_C.EnableRespawnOption");
 
 	UUI_SpawnScreenWidget_C_EnableRespawnOption_Params fn_params;
-	fn_params.option = option;
+	fn_params.Option = Option;
 
 	auto flags = fn->FunctionFlags;
 

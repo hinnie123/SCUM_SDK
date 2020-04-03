@@ -39,7 +39,7 @@ public:
 	}
 
 
-	void ShouldAlarmBeOn(bool* ShouldAlarmBeOn);
+	void shouldAlarmBeOn(bool* shouldAlarmBeOn);
 	void Init();
 	void SetPrisonerAndLifeComponentToMonitor(class APrisoner* Prisoner, bool* Success);
 	struct FText GetHeartRateBPM();

@@ -1309,7 +1309,7 @@ struct APlayerController_PlayDynamicForceFeedback_Params
 	bool                                               bAffectsLeftSmall;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bAffectsRightLarge;                                       // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bAffectsRightSmall;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EDynamicForceFeedbackAction>           Action;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EDynamicForceFeedbackAction>           action;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FLatentActionInfo                           LatentInfo;                                               // (Parm)
 };
 
@@ -6287,198 +6287,6 @@ struct UAnimNotifyState_GetNotifyName_Params
 	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
-// Function Engine.PlayerCameraManager.StopCameraShake
-struct APlayerCameraManager_StopCameraShake_Params
-{
-	class UCameraShake*                                ShakeInstance;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bImmediately;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.PlayerCameraManager.StopCameraFade
-struct APlayerCameraManager_StopCameraFade_Params
-{
-};
-
-// Function Engine.PlayerCameraManager.StopCameraAnimInst
-struct APlayerCameraManager_StopCameraAnimInst_Params
-{
-	class UCameraAnimInst*                             AnimInst;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bImmediate;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.PlayerCameraManager.StopAllInstancesOfCameraShake
-struct APlayerCameraManager_StopAllInstancesOfCameraShake_Params
-{
-	class UClass*                                      Shake;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bImmediately;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.PlayerCameraManager.StopAllInstancesOfCameraAnim
-struct APlayerCameraManager_StopAllInstancesOfCameraAnim_Params
-{
-	class UCameraAnim*                                 Anim;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bImmediate;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.PlayerCameraManager.StopAllCameraShakes
-struct APlayerCameraManager_StopAllCameraShakes_Params
-{
-	bool                                               bImmediately;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.PlayerCameraManager.StopAllCameraAnims
-struct APlayerCameraManager_StopAllCameraAnims_Params
-{
-	bool                                               bImmediate;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.PlayerCameraManager.StartCameraFade
-struct APlayerCameraManager_StartCameraFade_Params
-{
-	float                                              FromAlpha;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              ToAlpha;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FLinearColor                                Color;                                                    // (Parm, IsPlainOldData)
-	bool                                               bShouldFadeAudio;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bHoldWhenFinished;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.PlayerCameraManager.SetManualCameraFade
-struct APlayerCameraManager_SetManualCameraFade_Params
-{
-	float                                              InFadeAmount;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FLinearColor                                Color;                                                    // (Parm, IsPlainOldData)
-	bool                                               bInFadeAudio;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.PlayerCameraManager.RemoveCameraModifier
-struct APlayerCameraManager_RemoveCameraModifier_Params
-{
-	class UCameraModifier*                             ModifierToRemove;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.PlayerCameraManager.RemoveCameraLensEffect
-struct APlayerCameraManager_RemoveCameraLensEffect_Params
-{
-	class AEmitterCameraLensEffectBase*                Emitter;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.PlayerCameraManager.PlayCameraShake
-struct APlayerCameraManager_PlayCameraShake_Params
-{
-	class UClass*                                      ShakeClass;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              Scale;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ECameraAnimPlaySpace>                  PlaySpace;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    UserPlaySpaceRot;                                         // (Parm, IsPlainOldData)
-	class UCameraShake*                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.PlayerCameraManager.PlayCameraAnim
-struct APlayerCameraManager_PlayCameraAnim_Params
-{
-	class UCameraAnim*                                 Anim;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              Rate;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              Scale;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              BlendInTime;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              BlendOutTime;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bLoop;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bRandomStartTime;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ECameraAnimPlaySpace>                  PlaySpace;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    UserPlaySpaceRot;                                         // (Parm, IsPlainOldData)
-	class UCameraAnimInst*                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.PlayerCameraManager.PhotographyCameraModify
-struct APlayerCameraManager_PhotographyCameraModify_Params
-{
-	struct FVector                                     NewCameraLocation;                                        // (ConstParm, Parm, IsPlainOldData)
-	struct FVector                                     PreviousCameraLocation;                                   // (ConstParm, Parm, IsPlainOldData)
-	struct FVector                                     OriginalCameraLocation;                                   // (ConstParm, Parm, IsPlainOldData)
-	struct FVector                                     ResultCameraLocation;                                     // (Parm, OutParm, IsPlainOldData)
-};
-
-// Function Engine.PlayerCameraManager.OnPhotographySessionStart
-struct APlayerCameraManager_OnPhotographySessionStart_Params
-{
-};
-
-// Function Engine.PlayerCameraManager.OnPhotographySessionEnd
-struct APlayerCameraManager_OnPhotographySessionEnd_Params
-{
-};
-
-// Function Engine.PlayerCameraManager.OnPhotographyMultiPartCaptureStart
-struct APlayerCameraManager_OnPhotographyMultiPartCaptureStart_Params
-{
-};
-
-// Function Engine.PlayerCameraManager.OnPhotographyMultiPartCaptureEnd
-struct APlayerCameraManager_OnPhotographyMultiPartCaptureEnd_Params
-{
-};
-
-// Function Engine.PlayerCameraManager.GetOwningPlayerController
-struct APlayerCameraManager_GetOwningPlayerController_Params
-{
-	class APlayerController*                           ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.PlayerCameraManager.GetFOVAngle
-struct APlayerCameraManager_GetFOVAngle_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.PlayerCameraManager.GetCameraRotation
-struct APlayerCameraManager_GetCameraRotation_Params
-{
-	struct FRotator                                    ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.PlayerCameraManager.GetCameraLocation
-struct APlayerCameraManager_GetCameraLocation_Params
-{
-	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.PlayerCameraManager.FindCameraModifierByClass
-struct APlayerCameraManager_FindCameraModifierByClass_Params
-{
-	class UClass*                                      ModifierClass;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	class UCameraModifier*                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.PlayerCameraManager.ClearCameraLensEffects
-struct APlayerCameraManager_ClearCameraLensEffects_Params
-{
-};
-
-// Function Engine.PlayerCameraManager.BlueprintUpdateCamera
-struct APlayerCameraManager_BlueprintUpdateCamera_Params
-{
-	class AActor*                                      CameraTarget;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     NewCameraLocation;                                        // (Parm, OutParm, IsPlainOldData)
-	struct FRotator                                    NewCameraRotation;                                        // (Parm, OutParm, IsPlainOldData)
-	float                                              NewCameraFOV;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.PlayerCameraManager.AddNewCameraModifier
-struct APlayerCameraManager_AddNewCameraModifier_Params
-{
-	class UClass*                                      ModifierClass;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	class UCameraModifier*                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.PlayerCameraManager.AddCameraLensEffect
-struct APlayerCameraManager_AddCameraLensEffect_Params
-{
-	class UClass*                                      LensEffectEmitterClass;                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	class AEmitterCameraLensEffectBase*                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function Engine.GameInstance.ReceiveShutdown
 struct UGameInstance_ReceiveShutdown_Params
 {
@@ -7326,6 +7134,198 @@ struct UCapsuleComponent_GetScaledCapsuleHalfHeight_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Engine.PlayerCameraManager.StopCameraShake
+struct APlayerCameraManager_StopCameraShake_Params
+{
+	class UCameraShake*                                ShakeInstance;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bImmediately;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.PlayerCameraManager.StopCameraFade
+struct APlayerCameraManager_StopCameraFade_Params
+{
+};
+
+// Function Engine.PlayerCameraManager.StopCameraAnimInst
+struct APlayerCameraManager_StopCameraAnimInst_Params
+{
+	class UCameraAnimInst*                             AnimInst;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bImmediate;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.PlayerCameraManager.StopAllInstancesOfCameraShake
+struct APlayerCameraManager_StopAllInstancesOfCameraShake_Params
+{
+	class UClass*                                      Shake;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bImmediately;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.PlayerCameraManager.StopAllInstancesOfCameraAnim
+struct APlayerCameraManager_StopAllInstancesOfCameraAnim_Params
+{
+	class UCameraAnim*                                 Anim;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bImmediate;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.PlayerCameraManager.StopAllCameraShakes
+struct APlayerCameraManager_StopAllCameraShakes_Params
+{
+	bool                                               bImmediately;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.PlayerCameraManager.StopAllCameraAnims
+struct APlayerCameraManager_StopAllCameraAnims_Params
+{
+	bool                                               bImmediate;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.PlayerCameraManager.StartCameraFade
+struct APlayerCameraManager_StartCameraFade_Params
+{
+	float                                              FromAlpha;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ToAlpha;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                Color;                                                    // (Parm, IsPlainOldData)
+	bool                                               bShouldFadeAudio;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bHoldWhenFinished;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.PlayerCameraManager.SetManualCameraFade
+struct APlayerCameraManager_SetManualCameraFade_Params
+{
+	float                                              InFadeAmount;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                Color;                                                    // (Parm, IsPlainOldData)
+	bool                                               bInFadeAudio;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.PlayerCameraManager.RemoveCameraModifier
+struct APlayerCameraManager_RemoveCameraModifier_Params
+{
+	class UCameraModifier*                             ModifierToRemove;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.PlayerCameraManager.RemoveCameraLensEffect
+struct APlayerCameraManager_RemoveCameraLensEffect_Params
+{
+	class AEmitterCameraLensEffectBase*                Emitter;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.PlayerCameraManager.PlayCameraShake
+struct APlayerCameraManager_PlayCameraShake_Params
+{
+	class UClass*                                      ShakeClass;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Scale;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECameraAnimPlaySpace>                  PlaySpace;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    UserPlaySpaceRot;                                         // (Parm, IsPlainOldData)
+	class UCameraShake*                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.PlayerCameraManager.PlayCameraAnim
+struct APlayerCameraManager_PlayCameraAnim_Params
+{
+	class UCameraAnim*                                 Anim;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Rate;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Scale;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              BlendInTime;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              BlendOutTime;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bLoop;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bRandomStartTime;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECameraAnimPlaySpace>                  PlaySpace;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    UserPlaySpaceRot;                                         // (Parm, IsPlainOldData)
+	class UCameraAnimInst*                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.PlayerCameraManager.PhotographyCameraModify
+struct APlayerCameraManager_PhotographyCameraModify_Params
+{
+	struct FVector                                     NewCameraLocation;                                        // (ConstParm, Parm, IsPlainOldData)
+	struct FVector                                     PreviousCameraLocation;                                   // (ConstParm, Parm, IsPlainOldData)
+	struct FVector                                     OriginalCameraLocation;                                   // (ConstParm, Parm, IsPlainOldData)
+	struct FVector                                     ResultCameraLocation;                                     // (Parm, OutParm, IsPlainOldData)
+};
+
+// Function Engine.PlayerCameraManager.OnPhotographySessionStart
+struct APlayerCameraManager_OnPhotographySessionStart_Params
+{
+};
+
+// Function Engine.PlayerCameraManager.OnPhotographySessionEnd
+struct APlayerCameraManager_OnPhotographySessionEnd_Params
+{
+};
+
+// Function Engine.PlayerCameraManager.OnPhotographyMultiPartCaptureStart
+struct APlayerCameraManager_OnPhotographyMultiPartCaptureStart_Params
+{
+};
+
+// Function Engine.PlayerCameraManager.OnPhotographyMultiPartCaptureEnd
+struct APlayerCameraManager_OnPhotographyMultiPartCaptureEnd_Params
+{
+};
+
+// Function Engine.PlayerCameraManager.GetOwningPlayerController
+struct APlayerCameraManager_GetOwningPlayerController_Params
+{
+	class APlayerController*                           ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.PlayerCameraManager.GetFOVAngle
+struct APlayerCameraManager_GetFOVAngle_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.PlayerCameraManager.GetCameraRotation
+struct APlayerCameraManager_GetCameraRotation_Params
+{
+	struct FRotator                                    ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.PlayerCameraManager.GetCameraLocation
+struct APlayerCameraManager_GetCameraLocation_Params
+{
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.PlayerCameraManager.FindCameraModifierByClass
+struct APlayerCameraManager_FindCameraModifierByClass_Params
+{
+	class UClass*                                      ModifierClass;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	class UCameraModifier*                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.PlayerCameraManager.ClearCameraLensEffects
+struct APlayerCameraManager_ClearCameraLensEffects_Params
+{
+};
+
+// Function Engine.PlayerCameraManager.BlueprintUpdateCamera
+struct APlayerCameraManager_BlueprintUpdateCamera_Params
+{
+	class AActor*                                      CameraTarget;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     NewCameraLocation;                                        // (Parm, OutParm, IsPlainOldData)
+	struct FRotator                                    NewCameraRotation;                                        // (Parm, OutParm, IsPlainOldData)
+	float                                              NewCameraFOV;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.PlayerCameraManager.AddNewCameraModifier
+struct APlayerCameraManager_AddNewCameraModifier_Params
+{
+	class UClass*                                      ModifierClass;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	class UCameraModifier*                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.PlayerCameraManager.AddCameraLensEffect
+struct APlayerCameraManager_AddCameraLensEffect_Params
+{
+	class UClass*                                      LensEffectEmitterClass;                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	class AEmitterCameraLensEffectBase*                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Engine.CameraComponent.SetUseFieldOfViewForLOD
 struct UCameraComponent_SetUseFieldOfViewForLOD_Params
 {
@@ -7430,82 +7430,6 @@ struct UProjectileMovementComponent_LimitVelocity_Params
 {
 	struct FVector                                     NewVelocity;                                              // (Parm, IsPlainOldData)
 	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.Light.ToggleEnabled
-struct ALight_ToggleEnabled_Params
-{
-};
-
-// Function Engine.Light.SetLightFunctionScale
-struct ALight_SetLightFunctionScale_Params
-{
-	struct FVector                                     NewLightFunctionScale;                                    // (Parm, IsPlainOldData)
-};
-
-// Function Engine.Light.SetLightFunctionMaterial
-struct ALight_SetLightFunctionMaterial_Params
-{
-	class UMaterialInterface*                          NewLightFunctionMaterial;                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.Light.SetLightFunctionFadeDistance
-struct ALight_SetLightFunctionFadeDistance_Params
-{
-	float                                              NewLightFunctionFadeDistance;                             // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.Light.SetLightColor
-struct ALight_SetLightColor_Params
-{
-	struct FLinearColor                                NewLightColor;                                            // (Parm, IsPlainOldData)
-};
-
-// Function Engine.Light.SetEnabled
-struct ALight_SetEnabled_Params
-{
-	bool                                               bSetEnabled;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.Light.SetCastShadows
-struct ALight_SetCastShadows_Params
-{
-	bool                                               bNewValue;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.Light.SetBrightness
-struct ALight_SetBrightness_Params
-{
-	float                                              NewBrightness;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.Light.SetAffectTranslucentLighting
-struct ALight_SetAffectTranslucentLighting_Params
-{
-	bool                                               bNewValue;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.Light.OnRep_bEnabled
-struct ALight_OnRep_bEnabled_Params
-{
-};
-
-// Function Engine.Light.IsEnabled
-struct ALight_IsEnabled_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.Light.GetLightColor
-struct ALight_GetLightColor_Params
-{
-	struct FLinearColor                                ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.Light.GetBrightness
-struct ALight_GetBrightness_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Engine.PostProcessVolume.AddOrUpdateBlendable
@@ -8021,7 +7945,7 @@ struct UBlueprintPlatformLibrary_ScheduleLocalNotificationFromNow_Params
 	int                                                inSecondsFromNow;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       Title;                                                    // (ConstParm, Parm, OutParm, ReferenceParm)
 	struct FText                                       Body;                                                     // (ConstParm, Parm, OutParm, ReferenceParm)
-	struct FText                                       Action;                                                   // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FText                                       action;                                                   // (ConstParm, Parm, OutParm, ReferenceParm)
 	struct FString                                     ActivationEvent;                                          // (Parm, ZeroConstructor)
 };
 
@@ -8047,7 +7971,7 @@ struct UBlueprintPlatformLibrary_ScheduleLocalNotificationAtTime_Params
 	bool                                               LocalTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       Title;                                                    // (ConstParm, Parm, OutParm, ReferenceParm)
 	struct FText                                       Body;                                                     // (ConstParm, Parm, OutParm, ReferenceParm)
-	struct FText                                       Action;                                                   // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FText                                       action;                                                   // (ConstParm, Parm, OutParm, ReferenceParm)
 	struct FString                                     ActivationEvent;                                          // (Parm, ZeroConstructor)
 };
 
@@ -8948,6 +8872,82 @@ struct UDecalComponent_GetDecalMaterial_Params
 struct UDecalComponent_CreateDynamicMaterialInstance_Params
 {
 	class UMaterialInstanceDynamic*                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.Light.ToggleEnabled
+struct ALight_ToggleEnabled_Params
+{
+};
+
+// Function Engine.Light.SetLightFunctionScale
+struct ALight_SetLightFunctionScale_Params
+{
+	struct FVector                                     NewLightFunctionScale;                                    // (Parm, IsPlainOldData)
+};
+
+// Function Engine.Light.SetLightFunctionMaterial
+struct ALight_SetLightFunctionMaterial_Params
+{
+	class UMaterialInterface*                          NewLightFunctionMaterial;                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.Light.SetLightFunctionFadeDistance
+struct ALight_SetLightFunctionFadeDistance_Params
+{
+	float                                              NewLightFunctionFadeDistance;                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.Light.SetLightColor
+struct ALight_SetLightColor_Params
+{
+	struct FLinearColor                                NewLightColor;                                            // (Parm, IsPlainOldData)
+};
+
+// Function Engine.Light.SetEnabled
+struct ALight_SetEnabled_Params
+{
+	bool                                               bSetEnabled;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.Light.SetCastShadows
+struct ALight_SetCastShadows_Params
+{
+	bool                                               bNewValue;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.Light.SetBrightness
+struct ALight_SetBrightness_Params
+{
+	float                                              NewBrightness;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.Light.SetAffectTranslucentLighting
+struct ALight_SetAffectTranslucentLighting_Params
+{
+	bool                                               bNewValue;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.Light.OnRep_bEnabled
+struct ALight_OnRep_bEnabled_Params
+{
+};
+
+// Function Engine.Light.IsEnabled
+struct ALight_IsEnabled_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.Light.GetLightColor
+struct ALight_GetLightColor_Params
+{
+	struct FLinearColor                                ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.Light.GetBrightness
+struct ALight_GetBrightness_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Engine.LightComponentBase.SetCastVolumetricShadow

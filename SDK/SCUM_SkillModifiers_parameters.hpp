@@ -19,10 +19,10 @@ struct USkillModifiers_C_SetParentsForChildren_Params
 {
 };
 
-// Function SkillModifiers.SkillModifiers_C.ShouldAlarmBeOn
-struct USkillModifiers_C_ShouldAlarmBeOn_Params
+// Function SkillModifiers.SkillModifiers_C.shouldAlarmBeOn
+struct USkillModifiers_C_shouldAlarmBeOn_Params
 {
-	bool                                               ShouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               shouldAlarmBeOn;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function SkillModifiers.SkillModifiers_C.UpdateParameterLines

@@ -17,7 +17,7 @@ namespace SDK
 // Function UI_VitalsMonitor.UI_VitalsMonitor_C.GetOxygenSaturationExtremesText
 struct UUI_VitalsMonitor_C_GetOxygenSaturationExtremesText_Params
 {
-	struct FText                                       oxygenSaturationExtremes;                                 // (Parm, OutParm)
+	struct FText                                       OxygenSaturationExtremes;                                 // (Parm, OutParm)
 };
 
 // Function UI_VitalsMonitor.UI_VitalsMonitor_C.GetTemperatureExtremesText

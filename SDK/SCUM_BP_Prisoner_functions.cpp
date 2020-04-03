@@ -120,26 +120,6 @@ void ABP_Prisoner_C::UserConstructionScript()
 }
 
 
-// Function BP_Prisoner.BP_Prisoner_C.DrawFootstep
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                           flip                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void ABP_Prisoner_C::DrawFootstep(bool flip)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.DrawFootstep");
-
-	ABP_Prisoner_C_DrawFootstep_Params fn_params;
-	fn_params.flip = flip;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &fn_params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_Prisoner.BP_Prisoner_C.InitTextMeshFromName
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -273,6 +253,26 @@ void ABP_Prisoner_C::BndEvt__VoiceChat_K2Node_ComponentBoundEvent_1_VoiceChatSta
 }
 
 
+// Function BP_Prisoner.BP_Prisoner_C.DrawFootstep
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           flip                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_Prisoner_C::DrawFootstep(bool flip)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.DrawFootstep");
+
+	ABP_Prisoner_C_DrawFootstep_Params fn_params;
+	fn_params.flip = flip;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_Prisoner.BP_Prisoner_C.UpdateHairVisuals
 // (Event, Protected, BlueprintEvent)
 
@@ -281,6 +281,23 @@ void ABP_Prisoner_C::UpdateHairVisuals()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.UpdateHairVisuals");
 
 	ABP_Prisoner_C_UpdateHairVisuals_Params fn_params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &fn_params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Prisoner.BP_Prisoner_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_Prisoner_C::ReceiveBeginPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.ReceiveBeginPlay");
+
+	ABP_Prisoner_C_ReceiveBeginPlay_Params fn_params;
 
 	auto flags = fn->FunctionFlags;
 

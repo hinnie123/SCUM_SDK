@@ -32,13 +32,13 @@ struct UResizableWindow_C_SaveHUDLayout_Params
 // Function ResizableWindow.ResizableWindow_C.GetParentHUD
 struct UResizableWindow_C_GetParentHUD_Params
 {
-	class UHUD_C*                                      ParentHUD;                                                // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UHUD_C*                                      parentHUD;                                                // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function ResizableWindow.ResizableWindow_C.SetParentHUD
 struct UResizableWindow_C_SetParentHUD_Params
 {
-	class UHUD_C*                                      ParentHUD;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UHUD_C*                                      parentHUD;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // Function ResizableWindow.ResizableWindow_C.GetSize
@@ -53,8 +53,8 @@ struct UResizableWindow_C_GetPosition_Params
 	struct FVector2D                                   ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
 };
 
-// Function ResizableWindow.ResizableWindow_C.AdjustPosition
-struct UResizableWindow_C_AdjustPosition_Params
+// Function ResizableWindow.ResizableWindow_C.adjustPosition
+struct UResizableWindow_C_adjustPosition_Params
 {
 	struct FVector2D                                   positionToAdjust;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 	struct FGeometry                                   localGeometry;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)

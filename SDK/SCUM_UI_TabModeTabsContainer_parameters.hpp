@@ -71,11 +71,6 @@ struct UUI_TabModeTabsContainer_C_BndEvt__JournalTab_K2Node_ComponentBoundEvent_
 {
 };
 
-// Function UI_TabModeTabsContainer.UI_TabModeTabsContainer_C.BndEvt__SquadTab_K2Node_ComponentBoundEvent_5_Clicked__DelegateSignature
-struct UUI_TabModeTabsContainer_C_BndEvt__SquadTab_K2Node_ComponentBoundEvent_5_Clicked__DelegateSignature_Params
-{
-};
-
 // Function UI_TabModeTabsContainer.UI_TabModeTabsContainer_C.ExecuteUbergraph_UI_TabModeTabsContainer
 struct UUI_TabModeTabsContainer_C_ExecuteUbergraph_UI_TabModeTabsContainer_Params
 {
